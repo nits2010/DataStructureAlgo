@@ -1,5 +1,3 @@
-package DataStructureAlgo.Java;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 11/12/18
