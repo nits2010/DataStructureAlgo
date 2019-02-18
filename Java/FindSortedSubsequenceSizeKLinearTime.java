@@ -17,11 +17,11 @@ space complexity : O(1) {Ans array is not count in space complexity of program)
 Answer is store in "Ans" array
   */
  
-class FindSortedSubsequenceSizeKLinearTime {
+class FindSortedSubsequenceSizeKLinearTimeHelper {
 	private int solution[] = null;
 	private int k;
 
-	FindSortedSubsequenceSizeKLinearTime(int k){
+	FindSortedSubsequenceSizeKLinearTimeHelper(int k){
 		this.k = k;
 		solution = new int[k];
 	}
@@ -89,7 +89,7 @@ class FindSortedSubsequenceSizeKLinearTime {
 	}
 }
 /* Name of the class has to be "Main" only if the class is public. */
-class Ideone
+class FindSortedSubsequenceSizeKLinearTime
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
@@ -100,7 +100,7 @@ class Ideone
 		int arr5[] = {5,13,6,10,3,7,2};
 		int arr6[] = {12, 11, 10, 5, 6, 2, 30,5,3,32,2,40};
 
-		FindSortedSubsequenceSizeKLinearTime s3 = new FindSortedSubsequenceSizeKLinearTime(3);
+		FindSortedSubsequenceSizeKLinearTimeHelper s3 = new FindSortedSubsequenceSizeKLinearTimeHelper(3);
 		s3.inputPrint(arr1);
 		if (s3.findSequenceFoKSize(arr1,3) ) {
 			
@@ -154,7 +154,7 @@ class Ideone
 
 
 
-		FindSortedSubsequenceSizeKLinearTime s4 = new FindSortedSubsequenceSizeKLinearTime(4);
+		FindSortedSubsequenceSizeKLinearTimeHelper s4 = new FindSortedSubsequenceSizeKLinearTimeHelper(4);
 
 		System.out.println("\nSize 4 \n");
 			s4.inputPrint(arr1);
