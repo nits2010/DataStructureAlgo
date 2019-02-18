@@ -1,10 +1,9 @@
-package Java;/* package whatever; // don't place package name! */
-
+package Java;
 /*
 Logic:
 Logic is very simple
 actuallY we have first find the minimum value that will be our first element in sequence.
-Once we encounter minimum value at index i we need to find greater values for next itmes
+Once we encounter minimum value at index i we need to find greater values for next items
 greater than previous value
     {12, 11, 10, 5, 6, 2, 30,5,3,32,2,40};
 first we found minimum value: 11 then 10 then 5 (since 6 > 5 ); now that will be our first item in sequence
@@ -38,34 +37,34 @@ class FindSortedSubsequenceSizeKLinearTimeHelper {
 	}
 	
 	private boolean findSortedSequenceFoKSize(int arr[], int k){
-		int Ans_index = 0 ;
+		int ans_index = 0 ;
 		
-        this.solution[Ans_index++] = arr[0] ; // by default we assuming that we need n=1 so ans will be arr[0]
+        this.solution[ans_index++] = arr[0] ; // by default we assuming that we need n=1 so ans will be arr[0]
 
-        if ( Ans_index == k)
+        if ( ans_index == k)
         return true ;
 
         // if n > 1 then we proceed as below from index 1 to size
         for (int i = 1 ; i<arr.length ; i++)
-        { //System.out.println("h: "+Ans_index);
-            if ( Ans_index-1 == 0 )// untill at 0th index correct value not inserted we have to insert all element at 0th index
+        {
+            if ( ans_index-1 == 0 )// untill at 0th index correct value not inserted we have to insert all element at 0th index
             {
-                if ( arr[i]<this.solution[Ans_index-1])
-                this.solution[Ans_index-1] = arr[i] ;
+                if ( arr[i]<this.solution[ans_index-1])
+                this.solution[ans_index-1] = arr[i] ;
                 
                
             }
-            if ( arr[i] > this.solution[Ans_index-1]) // since at 0th index we have correct value
+            if ( arr[i] > this.solution[ans_index-1]) // since at 0th index we have correct value
             {                                   // means we have sorted sequence from 0th to Ans_index-1 so we need to think about
                                             // only element for Ans_index not at Ans_index-1 or below
-                this.solution[Ans_index] = arr[i] ;
-                 Ans_index++;
-              if (Ans_index == k)   // it Ans_index reach to required element then stops
+                this.solution[ans_index] = arr[i] ;
+                 ans_index++;
+              if (ans_index == k)   // it Ans_index reach to required element then stops
                 return true ;
             }
 
         }
-        if ( Ans_index !=k)
+        if ( ans_index !=k)
         {
             return false ;
         }
