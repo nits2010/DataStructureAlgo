@@ -3,7 +3,7 @@ package Java;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 20/12/18
- * Description:
+ * Description: https://www.geeksforgeeks.org/check-given-string-sum-string/
  */
 public class SumString {
 
