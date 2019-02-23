@@ -1,7 +1,7 @@
 package Java.Design.parkingLot.parkingLot;
 
-import parkingLot.slots.Slot;
-import parkingLot.vehicle.VehicleType;
+import Java.Design.parkingLot.slots.Slot;
+import Java.Design.parkingLot.vehicle.VehicleType;
 
 import java.util.ArrayList;
 import java.util.List;

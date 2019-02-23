@@ -1,12 +1,12 @@
 package Java.Design.parkingLot.drivers;
 
-import parkingLot.ParkingLot;
-import parkingLot.constants.Color;
-import parkingLot.parking.services.IParks;
-import parkingLot.parking.services.ParksBottomToUp;
-import parkingLot.slots.Slot;
-import parkingLot.vehicle.Car;
-import parkingLot.vehicle.Vehicle;
+import Java.Design.parkingLot.constants.Color;
+import Java.Design.parkingLot.parkingLot.ParkingLot;
+import Java.Design.parkingLot.services.IParks;
+import Java.Design.parkingLot.services.ParksBottomToUp;
+import Java.Design.parkingLot.slots.Slot;
+import Java.Design.parkingLot.vehicle.Car;
+import Java.Design.parkingLot.vehicle.Vehicle;
 
 import java.util.*;
 
