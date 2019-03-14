@@ -51,7 +51,8 @@ class Permutation  {
 			p[i]--;
 			j = getJ(p,i);
 			String item = getNextPermutation(input,i,j);
-			Permutation .add(item);
+			Permutation.add(item);
+			input=item;
 			
 			i = 1 ; 
 			while ( p[i] == 0){

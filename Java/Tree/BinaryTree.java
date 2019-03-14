@@ -447,10 +447,10 @@ public class BinaryTree implements IBinaryTree {
             //this binary tree is bst rooted at root
             helper.isBST = true;
 
-            //the maximum value for above tree would maximum of all
+            //the maximum value for above tree would minimum of all maximum
             helper.max = Math.min(rHelper.max, Math.min(lHelper.max, root.getData()));
 
-            //the minimum value for above tree would minimum of all
+            //the minimum value for above tree would maximum of all minimum
             helper.min = Math.max(rHelper.min, Math.max(lHelper.min, root.getData()));
             return helper;
         }
