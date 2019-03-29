@@ -89,12 +89,10 @@ public class ConvertNumberToWords {
             return "zero";
         }
 
-        String snumber = Long.toString(number);
-
         // pad with "0"
         String mask = "000000000000";
         DecimalFormat df = new DecimalFormat(mask);
-        snumber = df.format(number);
+        String snumber = df.format(number);
 
         // XXXnnnnnnnnn
         int billions = Integer.parseInt(snumber.substring(0, 3));
@@ -110,10 +108,6 @@ public class ConvertNumberToWords {
             case 0:
                 tradBillions = "";
                 break;
-            case 1:
-                tradBillions = convertLessThanOneThousand(billions)
-                        + " billion ";
-                break;
             default:
                 tradBillions = convertLessThanOneThousand(billions)
                         + " billion ";
@@ -124,10 +118,6 @@ public class ConvertNumberToWords {
         switch (millions) {
             case 0:
                 tradMillions = "";
-                break;
-            case 1:
-                tradMillions = convertLessThanOneThousand(millions)
-                        + " million ";
                 break;
             default:
                 tradMillions = convertLessThanOneThousand(millions)

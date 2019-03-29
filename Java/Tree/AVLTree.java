@@ -13,12 +13,10 @@ public class AVLTree extends BinarySearchTree {
         if (null == root)
             return new AVLTreeNode<>(data);
 
-        if (data.compareTo(root.getData()) < 0) {
-            TreeNode left = insert(data, root.getLeft());
-            root.setLeft(left);
-        } else if (data.compareTo(root.getData()) > 0) {
-            TreeNode right = insert(data, root.getRight());
-            root.setRight(right);
+        if (root.getData() > data) {
+            root.setLeft(insert(data, root.getLeft()));
+        } else if (root.getData() < data) {
+            root.setRight(insert(data, root.getRight()));
         } else  //Duplicate key not allowed
             return root;
 

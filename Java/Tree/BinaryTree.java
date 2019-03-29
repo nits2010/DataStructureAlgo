@@ -332,7 +332,7 @@ public class BinaryTree implements IBinaryTree {
         if (root.getData() == node.getData())
             return root;
 
-        TreeNode temp = null;
+        TreeNode temp;
 
         if (((temp = postOrderSuccessor(root.getLeft(), node, successor)) != null || (temp = postOrderSuccessor(root.getRight(), node, successor)) != null)
                 && (successor.getData() == null)) {
@@ -440,7 +440,6 @@ public class BinaryTree implements IBinaryTree {
         LargestBSTHelper rHelper = largestBSTSizeUtil(root.getRight());
 
         LargestBSTHelper helper = new LargestBSTHelper();
-        helper.size = lHelper.size + rHelper.size + 1;
 
         //If left and right is a bst, then update the values
         if (lHelper.isBST && rHelper.isBST && root.getData() > lHelper.min && root.getData() < rHelper.max) {
@@ -452,6 +451,9 @@ public class BinaryTree implements IBinaryTree {
 
             //the minimum value for above tree would maximum of all minimum
             helper.min = Math.max(rHelper.min, Math.max(lHelper.min, root.getData()));
+
+            helper.size = lHelper.size + rHelper.size + 1;
+
             return helper;
         }
 
@@ -498,7 +500,7 @@ public class BinaryTree implements IBinaryTree {
             return true;
 
 
-        if (min.compareTo(root.getData()) > 0 || max.compareTo(root.getData()) < 0)
+        if (root.getData() < min || root.getData() > max)
             return false;
 
 

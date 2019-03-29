@@ -377,10 +377,10 @@ public interface IBinaryTree {
     /****************** PreOrder Mories algorithm for Java.Tree Traversal- without stack *******************/
 
     default List<Integer> preOrderMories(TreeNode<Integer> root) {
-        List<Integer> inOrder = new LinkedList<>();
+        List<Integer> preOrder = new LinkedList<>();
 
         if (null == root)
-            return inOrder;
+            return preOrder;
 
 
         TreeNode<Integer> temp = null;
@@ -389,7 +389,7 @@ public interface IBinaryTree {
 
             //see if no left then process it and move to right child
             if (root.getLeft() == null) {
-                inOrder.add(root.getData());
+                preOrder.add(root.getData());
                 root = root.getRight();
 
             } else {
@@ -406,7 +406,7 @@ public interface IBinaryTree {
 
                 //If this is rightmost node, then make current root as right subtree of temp; transforming to right skew tree
                 if (temp.getRight() == null) {
-                    inOrder.add(root.getData());
+                    preOrder.add(root.getData());
                     temp.setRight(root);
 
                     //move to the new left subtree
@@ -423,7 +423,7 @@ public interface IBinaryTree {
 
             }
         }
-        return inOrder;
+        return preOrder;
 
     }
 

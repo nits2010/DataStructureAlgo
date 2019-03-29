@@ -32,9 +32,9 @@ public class BinarySearchTree implements IBinarySearchTree {
             return node;
         }
 
-        if (data.compareTo(root.getData()) < 0) {
+        if (root.getData() > data) {
             root.setLeft(insert(data, root.getLeft()));
-        } else if (data.compareTo(root.getData()) > 0) {
+        } else if (data > root.getData()) {
             root.setRight(insert(data, root.getRight()));
         }  //Duplicate key not allowed
         return root;
