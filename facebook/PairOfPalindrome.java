@@ -34,7 +34,7 @@ public class PairOfPalindrome {
 
         public boolean isLeaf = false;
         public Map<Character, TrieNode> children = new HashMap<>();
-        public List<Integer> palindromsWithinString = new ArrayList<>();
+        public List<Integer> palindromesWithinStringIndexes = new ArrayList<>();
         public int idOfThisString = -1;
     }
 
@@ -42,7 +42,7 @@ public class PairOfPalindrome {
 
         TrieNode root;
 
-        void insert(String toInsert, int myId) {
+        void insert(String toInsert, int myIndex) {
             if (root == null)
                 root = new TrieNode();
 
@@ -57,14 +57,14 @@ public class PairOfPalindrome {
 
 
                 if (isPalindrome(toInsert, 0, i))
-                    pCrawl.palindromsWithinString.add(myId);
+                    pCrawl.palindromesWithinStringIndexes.add(myIndex);
 
                 pCrawl = pCrawl.children.get(currentChar);
 
 
             }
             pCrawl.isLeaf = true;
-            pCrawl.idOfThisString = myId;
+            pCrawl.idOfThisString = myIndex;
 
 
         }
@@ -91,7 +91,7 @@ public class PairOfPalindrome {
 
         }
 
-        private boolean search(String toSearch, int myId, List<ResultHelper> resultHelpers) {
+        private boolean search(String toSearch, int myIndex, List<ResultHelper> resultHelpers) {
             if (null == root)
                 return false;
 
@@ -107,17 +107,18 @@ public class PairOfPalindrome {
 
                 pCrawl = pCrawl.children.get(currentChar);
 
-                if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myId
+                if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myIndex
                         && isPalindrome(toSearch, i, toSearch.length() - 1)) {
-                    resultHelpers.add(new ResultHelper(myId, pCrawl.idOfThisString));
+                    resultHelpers.add(new ResultHelper(myIndex, pCrawl.idOfThisString));
 
                 }
 
 
             }
 
-            for (int rem : pCrawl.palindromsWithinString) {
-                resultHelpers.add(new ResultHelper(myId, rem));
+            for (int rem : pCrawl.palindromesWithinStringIndexes) {
+                if (rem != myIndex)
+                    resultHelpers.add(new ResultHelper(myIndex, rem));
             }
 
             return true;
