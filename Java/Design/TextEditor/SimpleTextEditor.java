@@ -11,7 +11,7 @@ import java.util.Stack;
  */
 public class SimpleTextEditor implements ITextEditor {
 
-    private Stack<EditAction> undoStack; //holds the last action
+    private Stack<Revision> undoStack; //holds the last action
     private CharacterNode cursor; //holds the current cursor position
     private CharacterNode start; //to print
     int totalSize = 0;
@@ -26,14 +26,14 @@ public class SimpleTextEditor implements ITextEditor {
     public void moveLeft() {
         if (cursor.getPrev() == null) return;
         cursor = cursor.getPrev();
-        undoStack.push(new EditAction(Action.RIGHT, null));
+        undoStack.push(new Revision(Action.RIGHT, null));
     }
 
     @Override
     public void moveRight() {
         if (cursor.getNext() == null) return;
         cursor = cursor.getNext();
-        undoStack.push(new EditAction(Action.LEFT, null));
+        undoStack.push(new Revision(Action.LEFT, null));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class SimpleTextEditor implements ITextEditor {
         if (cursor.getPrev() == null) return; //No data to delete
         totalSize--;
         CharacterNode deleted = delete(cursor.getPrev());
-        undoStack.push(new EditAction(Action.INSERT, deleted));
+        undoStack.push(new Revision(Action.INSERT, deleted));
         if (totalSize == 0)
             start = null;
 
@@ -99,7 +99,7 @@ public class SimpleTextEditor implements ITextEditor {
             start = node;
 
 
-        undoStack.push(new EditAction(Action.DELETE, node));
+        undoStack.push(new Revision(Action.DELETE, node));
         totalSize++;
 
     }
@@ -109,7 +109,7 @@ public class SimpleTextEditor implements ITextEditor {
 
         if (undoStack.isEmpty()) return;
 
-        EditAction action = undoStack.pop();
+        Revision action = undoStack.pop();
 
         switch (action.getAction()) {
             case LEFT:

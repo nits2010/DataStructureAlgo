@@ -5,13 +5,13 @@ package Java.Design.TextEditor;
  * Date: 11/04/19
  * Description:
  */
-public class EditAction {
+public class Revision {
 
     private Action action;
     private CharacterNode data;
 
 
-    public EditAction(Action action, CharacterNode data) {
+    public Revision(Action action, CharacterNode data) {
         this.action = action;
         this.data = data;
     }
@@ -27,7 +27,7 @@ public class EditAction {
 
     @Override
     public String toString() {
-        return "EditAction{" +
+        return "Revision{" +
                 "action=" + action +
                 ", data=" + data +
                 '}';
