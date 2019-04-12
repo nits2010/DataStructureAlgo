@@ -37,7 +37,7 @@ public class AlienLanguageOrder {
 
     private static void findOrder(String[] words, int character) {
 
-        final IGraph undirectedGrap = new UndirectedGraph(character);
+        final IGraph graph = new DirectedGraph(character);
 
         //Push all edges
         for (int i = 0; i < words.length - 1; i++) {
@@ -49,12 +49,12 @@ public class AlienLanguageOrder {
 
                 //create edges for mismatch chars
                 if (word1.charAt(j) != word2.charAt(j)) {
-                    undirectedGrap.addEdge(word1.charAt(j) - 'a', word2.charAt(j) - 'a');
+                    graph.addEdge(word1.charAt(j) - 'a', word2.charAt(j) - 'a');
                     break;
                 }
             }
         }
-        List<Integer> integers = undirectedGrap.topologicalSortKhanAlgo();
+        List<Integer> integers = graph.topologicalSortKhanAlgo();
         if (integers.isEmpty()) {
             System.out.println("No order possible");
         } else

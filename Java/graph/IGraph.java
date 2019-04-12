@@ -4,12 +4,12 @@ import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
- * Date: 20/02/19
+ * Date: 12/04/19
  * Description:
  */
-public interface IGraph {
+public interface IGraph extends IGraphBase {
 
-    void addEdge(int source, int destination);
+
 
     List<Integer> topologicalSort();
 

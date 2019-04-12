@@ -8,7 +8,7 @@ import java.util.stream.Stream;
  * Date: 20/02/19
  * Description:
  */
-public class UndirectedGraph implements IGraph {
+public class DirectedGraph implements IGraph {
 
 
     //To hold the edges
@@ -16,7 +16,7 @@ public class UndirectedGraph implements IGraph {
     private final int vertices;
 
     //initiate the graph
-    public UndirectedGraph(int vertices) {
+    public DirectedGraph(int vertices) {
 
         adjancyList = new LinkedList[vertices];
         for (int i = 0; i < vertices; i++)
@@ -25,8 +25,20 @@ public class UndirectedGraph implements IGraph {
         this.vertices = vertices;
     }
 
+    @Override
     public void addEdge(int source, int destination) {
         adjancyList[source].add(destination);
+
+    }
+
+    @Override
+    public List<Integer>[] getAdjList() {
+        return this.adjancyList;
+    }
+
+    @Override
+    public int getVertices() {
+        return this.vertices;
     }
 
     @Override
