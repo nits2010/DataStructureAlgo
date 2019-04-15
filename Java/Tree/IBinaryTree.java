@@ -9,6 +9,9 @@ import java.util.Stack;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 26/12/18
  * Description:
+ *
+ * Iterator implementations:
+ * http://n00tc0d3r.blogspot.com/2013/08/implement-iterator-for-binarytree-i-in.html
  */
 public interface IBinaryTree {
 

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Description:
  */
 
-class GFG
+class GFGkthSmallest
 {
 
 // int partition(int arr[], int l, int r, int k);

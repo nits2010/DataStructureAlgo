@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class NestedIntegerValues implements NestedInteger {
 
-    List<NestedInteger> values = new ArrayList<>();
+    List<NestedInteger> values;
 
 
     public NestedIntegerValues(NestedInteger... values) {
