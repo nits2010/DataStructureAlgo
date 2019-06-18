@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
  * <p>
  * swapOdd:swap a character at an odd-numbered index with a character at another odd-numbered index
  * <p>
- * Given : s="cdab" , x="abcd"
- * s -> cdab ->swap a and c ->adcb (swapEven)-> swap b and d (swapOdd) -> s="abcd" = x="abcd"
+ * Given : MinStepsInfiniteGrid="cdab" , x="abcd"
+ * MinStepsInfiniteGrid -> cdab ->swap a and c ->adcb (swapEven)-> swap b and d (swapOdd) -> MinStepsInfiniteGrid="abcd" = x="abcd"
  * <p>
- * Given: s="dcba" , x="abcd"
+ * Given: MinStepsInfiniteGrid="dcba" , x="abcd"
  * no amount of operation will move character from an odd index to even index, so the two string will never be equals
  * <p>
- * Given: s="abcd" ,x="abcdcd"
+ * Given: MinStepsInfiniteGrid="abcd" ,x="abcdcd"
  * x length to big so will never be equals
  */
 public class StringToStringTransformEvenOdd {

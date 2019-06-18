@@ -7,7 +7,7 @@ actuall we have first find the minimum value .once we encounter minimum value at
 greater than previous value
     {12, 11, 10, 5, 6, 2, 30,5,3,32,2,40};
 first we found minimum value 11 then 10 then 5 (since 6 > 5 )
-now we find greater value's which is greater to previous one
+now we find greater value'MinStepsInfiniteGrid which is greater to previous one
 we have 5 now next is 6 next is 30 next is 32 and 40
 
 another Logic:

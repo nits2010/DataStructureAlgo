@@ -42,7 +42,7 @@ int FindIndex(int *A , int &s , int &e , int start , int end)
     if (e==start)
         return -1 ;
 
-    //cout << "s " << s << " e " << e ;
+    //cout << "MinStepsInfiniteGrid " << MinStepsInfiniteGrid << " e " << e ;
 
     //find max and min
     int max = A[s] , min = A[s] ;
@@ -61,7 +61,7 @@ int main ()
   if ( (f= FindIndex(A,s,e,0,arr_size)) ==-1)
     cout <<"No such value" ;
   if ( f ==0)
-    cout <<"s="<<s << " e= "<<e ;
+    cout <<"MinStepsInfiniteGrid="<<s << " e= "<<e ;
 
 
 }

@@ -65,11 +65,11 @@ public class PrimeSum {
         }
 
 
-        //include this number to our set to try if it make sum=s
+        //include this number to our set to try if it make sum=MinStepsInfiniteGrid
         numbers.add(allPrimes.get(index));
         primeSum(totalSum + allPrimes.get(index), n, index + 1, s, numbers, allPrimes, result);
 
-        //exclude this number to our set to try if it make sum=s
+        //exclude this number to our set to try if it make sum=MinStepsInfiniteGrid
         numbers.remove(allPrimes.get(index));
         primeSum(totalSum, n, index + 1, s, numbers, allPrimes, result);
 

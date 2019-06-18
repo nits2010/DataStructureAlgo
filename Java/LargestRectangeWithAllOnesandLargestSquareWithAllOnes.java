@@ -278,7 +278,7 @@ class LargestSquareWithAllOnes{
 		// get Auxilary Arra yWith First Row & Col data 
 		int auxilaryArray[][] = getAuxilaryArrayWithFirstRowCol(input) ; 
 		
-		// for rest of rows and column's
+		// for rest of rows and column'MinStepsInfiniteGrid
 		for ( int i = 1; i<input.length; i++){
 			for ( int j = 1; j<input[0].length; j++){
 				

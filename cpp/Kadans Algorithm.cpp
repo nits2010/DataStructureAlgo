@@ -1,5 +1,5 @@
 // for 1D and 2D array
-//Finding Maximum Sum in Array's
+//Finding Maximum Sum in Array'MinStepsInfiniteGrid
 #include <iostream>
 #include <cstdlib>
 using namespace std ;

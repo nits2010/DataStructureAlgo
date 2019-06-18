@@ -9,7 +9,7 @@ import java.util.Stack;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 26/12/18
  * Description:
- *
+ * <p>
  * Iterator implementations:
  * http://n00tc0d3r.blogspot.com/2013/08/implement-iterator-for-binarytree-i-in.html
  */
@@ -333,7 +333,7 @@ public interface IBinaryTree {
             return inOrder;
 
 
-        TreeNode<Integer> temp = null;
+        TreeNode<Integer> temp;
 
         while (root != null) {
 
@@ -625,6 +625,19 @@ public interface IBinaryTree {
 
 
     /****************** Successors and predecessors *******************/
+    Integer inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+
+    Integer inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
+
+    Integer preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+
+    Integer preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
+
+    Integer postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+
+
+    //TODO: need to implement
+    Integer postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
 
     /****************** Default implementation of level order Successors and predecessors *******************/
 
@@ -696,20 +709,6 @@ public interface IBinaryTree {
         return null;
     }
 
-
-    Integer inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
-
-    Integer inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
-
-    Integer preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
-
-    Integer preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
-
-    Integer postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
-
-
-    //TODO: need to implement
-    Integer postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
 
     TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta);
 

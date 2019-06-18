@@ -4,7 +4,7 @@
 this logic use either array or stack
 we use array .
 Logic:
-we travers the main array from right to left and keep inserting the current element in the temp array s.t temp array always a sorted one
+we travers the main array from right to left and keep inserting the current element in the temp array MinStepsInfiniteGrid.t temp array always a sorted one
 ex.
 index         0  1 2 3 4 5
 main array    12 1 3 0 11 1
@@ -24,7 +24,7 @@ main array    12 1 3 0 11 1
 temp array    1  11
 Ans. array                    1 0
 
-i = 3 ele = 0 compair it wiht index k=2-1 = 1 so 11 > 0(ele) shift 11 to right and put 0 at his previous place s.t
+i = 3 ele = 0 compair it wiht index k=2-1 = 1 so 11 > 0(ele) shift 11 to right and put 0 at his previous place MinStepsInfiniteGrid.t
 temp array:  1 0 11
 now again compair 0 with its previous index means with 1 and 1> 0  so shift 1 to right and put 0 at his place
 temp array:  0 1 11  anc comparision over  hence 0

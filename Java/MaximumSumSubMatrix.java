@@ -41,7 +41,7 @@ class MaximumSumSubMatrixSolutionSet {
             reset(sum);
             reset(pos);
             localMax = 0;
-            //we keep track of the position of the max value over each Kandane's execution
+            //we keep track of the position of the max value over each Kandane'MinStepsInfiniteGrid execution
             // notice that we do not keep track of the max value, but only its position
             sum[0] = ps[k][0] - (i==0 ? 0 : ps[i-1][0]);
             for (int j = 1; j < dim; j++) {                    

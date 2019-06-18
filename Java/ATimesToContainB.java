@@ -5,9 +5,7 @@ package Java;
  * Date: 11/04/19
  * Description:
  * https://stackoverflow.com/questions/46832383/algorithm-to-find-how-many-times-a-string-a-needs-to-be-stated-such-that-it-cont
- * <p>
- * I haven't been able to come up with a bullet proof answer to this question. My solution fails few cases. I would appreciate some insights.
- * <p>
+ *
  * Question:
  * <p>
  * Given two strings A and B, return the number of times A needs to be stated such that it contains string B?
@@ -89,7 +87,6 @@ public class ATimesToContainB {
     //O(n*m^2)
     private static int atimesbBruteForce(String a, String b) {
 
-        int n = a.length();
         int m = b.length();
         String tempA = a;
 
@@ -109,9 +106,9 @@ public class ATimesToContainB {
     //Idea take from above stack overflow
 
     /**
-     * If |B| > 2|A| - 2 and B occurs in A^n, then A occurs in B. Count and remove all complete instances of A in B, and then the solution is this count plus the solution to the same problem with A's removed from B.
+     * If |B| > 2|A| - 2 and B occurs in A^n, then A occurs in B. Count and remove all complete instances of A in B, and then the solution is this count plus the solution to the same problem with A'MinStepsInfiniteGrid removed from B.
      * <p>
-     * Otherwise, it is guaranteed that if B appears in A^n, it appears in A^3. Construct A^3 and find the first occurrence of B in it. Find and remove any complete instances of A appearing after the end of B's appearance in A^3. Return 3 minus the number of removed instances.
+     * Otherwise, it is guaranteed that if B appears in A^n, it appears in A^3. Construct A^3 and find the first occurrence of B in it. Find and remove any complete instances of A appearing after the end of B'MinStepsInfiniteGrid appearance in A^3. Return 3 minus the number of removed instances.
      * <p>
      * Examples:
      * <p>

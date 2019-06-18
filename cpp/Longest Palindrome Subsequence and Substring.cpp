@@ -35,20 +35,20 @@ class Longest_Palindrome
                 cout << "\nInput String: " << String <<"\n Length = " << Length ;
             }
 
-// T/S-------->             O(n^2)  / O(n^2 ) Solution's
+// T/S-------->             O(n^2)  / O(n^2 ) Solution'MinStepsInfiniteGrid
             // Longest Palindrome Subsequence
             void Longest_Palindrome_Subsequence ( ) ;
 
             // Longest Palindrome Substring
             void Longest_Palindrome_Substring ( ) ;
 
-// T / S  --------> O(n^2 ) / O(1) solution's
+// T / S  --------> O(n^2 ) / O(1) solution'MinStepsInfiniteGrid
 
             // Longest Palindrome Substring
             void Center_Check ( int &l , int &r) ;
             void Longest_Palindrome_Substring_Space_Optimized ( ) ;
 
-// T / S  --------> O(n ) / O(n) solution's
+// T / S  --------> O(n ) / O(n) solution'MinStepsInfiniteGrid
 
             // Longest Palindrome Substring
             void Longest_Palindrome_Substring_SpaceAndTime_Optimized ( ) ;
@@ -210,7 +210,7 @@ cout <<"\nLongest_Palindrome_Substring  lenght : " <<maxLen << " starting from i
 }
 
 
-// T / S  --------> O(n^2 ) / O(1) solution's
+// T / S  --------> O(n^2 ) / O(1) solution'MinStepsInfiniteGrid
 
 // Longest Palindrome Substring
 void Longest_Palindrome ::Center_Check ( int &l , int &r)

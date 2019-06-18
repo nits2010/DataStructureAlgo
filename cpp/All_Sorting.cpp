@@ -299,7 +299,7 @@ void Counting_Sort ( T *A , size_t size , int Range)
 {
 
     //Assumtion of this Algo is : Every no. in A should be in Range of 1 to K where K = O(n)
-    //creating Two Array's of Size K+1 and size
+    //creating Two Array'MinStepsInfiniteGrid of Size K+1 and size
     T *Temp = new T[Range] ;
     T *Sorted_Array = new T [size] ;
 
@@ -338,7 +338,7 @@ void Bucket_Sort ( T *A , size_t size , int Bucket_Size)
 {
     T *Bucket = new T [Bucket_Size] ;  // this is the bucket
 
-    //First Fill all the Bucket with Zero's : O(n)
+    //First Fill all the Bucket with Zero'MinStepsInfiniteGrid : O(n)
     for ( int i = 0 ; i<Bucket_Size ; i++)
             Bucket[i] = 0 ;
 

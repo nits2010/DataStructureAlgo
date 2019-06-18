@@ -34,8 +34,6 @@ public class BinaryTree implements IBinaryTree {
 
             if (null != node.getLeft())
                 queue.add(node.getLeft());
-
-
             else {
                 //Left node is not exist, then add a new node at left
                 node.setLeft(newNode);
@@ -44,8 +42,6 @@ public class BinaryTree implements IBinaryTree {
 
             if (null != node.getRight())
                 queue.add(node.getRight());
-
-
             else {
                 //right node is not exist, then add a new node at right
                 node.setRight(newNode);

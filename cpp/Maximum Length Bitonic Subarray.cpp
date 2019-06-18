@@ -43,7 +43,7 @@ bool Maximum_Length_of_Bitonic_Subarray(int *A , int size , int &start , int &en
                     if ( sign == 1) // calcuating Bitonic_point
                     {
                         Bitonic_Point = i - 1 ;
-                        flag = 1 ; // flag = 1 shows that now we have to find for > s.t. A[i-1] > A[i]
+                        flag = 1 ; // flag = 1 shows that now we have to find for > MinStepsInfiniteGrid.t. A[i-1] > A[i]
                         i = i - 1; // i reduce to balance
                     }
                 }
