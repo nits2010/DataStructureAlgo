@@ -62,7 +62,7 @@ public class TraverseTreeWithKJump {
         addEdge(tree, 9, 11);
         addEdge(tree, 11, 12);
 
-        int containFruits[] = {2, 4, 5, 7, 8, 9, 11, 12};
+        int containFruits[] = {2, 5, 7, 9, 11, 12};// {2, 4, 5, 7, 8, 9, 11, 12};
 
         System.out.println(traverseTreeWithKJump(tree, containFruits, 2, 20));
 
@@ -86,12 +86,13 @@ public class TraverseTreeWithKJump {
         for (int i = 0; i < containFruits.length; i++)
             fruits[containFruits[i]] = 1;
 
-        return collectFruitsWithJump(heights, parents, tree, fruits, jump, dp, 1, 0, 1);
+        Set<Integer> fruitsObtained = new HashSet<>();
+        return collectFruitsWithJump(heights, parents, tree, fruits, jump, dp, 1, 0, 1, fruitsObtained);
 
     }
 
     private static int collectFruitsWithJump(Map<Integer, List<Integer>> heights, Map<Integer, Integer> parents, List<List<Integer>> tree, int[] fruits,
-                                             int jump, int dp[][], int root, int parent, int height) {
+                                             int jump, int dp[][], int root, int parent, int height, Set<Integer> fruitsObtained) {
 
         if (dp[root][jump] != -1)
             return dp[root][jump];
@@ -105,7 +106,7 @@ public class TraverseTreeWithKJump {
 
                 if (v != parent) {
 
-                    ans = Math.max(ans, collectFruitsWithJump(heights, parents, tree, fruits, jump - 1, dp, v, root, height));
+                    ans = Math.max(ans, collectFruitsWithJump(heights, parents, tree, fruits, jump - 1, dp, v, root, height, fruitsObtained));
                 }
             }
         }
@@ -114,12 +115,13 @@ public class TraverseTreeWithKJump {
         for (Integer v : tree.get(root)) {
 
             if (v != parent) {
-                ans = Math.max(ans, collectFruitsWithJump(heights, parents, tree, fruits, jump, dp, v, root, height + 1));
+                ans = Math.max(ans, collectFruitsWithJump(heights, parents, tree, fruits, jump, dp, v, root, height + 1, fruitsObtained));
             }
         }
 
-        if (fruits[root] == 1) {
+        if (fruits[root] == 1 && !fruitsObtained.contains(root)) {
             ans++;
+            fruitsObtained.add(root);
         }
         dp[root][jump] = ans;
 
