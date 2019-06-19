@@ -88,10 +88,11 @@ public class ReadNCharactersGivenRead4 {
                 bufferLength = read4(buffer);
                 bufferIndex = 0;
             }
-
+            //no data available neither in temp buffer nor returned by read4 api
             if (bufferLength == 0)
                 break;
-
+            
+            //copy data from buffer
             if (bufferIndex < bufferLength)
                 buf[i++] = buffer[bufferIndex++];
 
