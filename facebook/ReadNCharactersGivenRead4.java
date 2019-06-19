@@ -1,4 +1,4 @@
-package Java.facebook;
+package facebook;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
