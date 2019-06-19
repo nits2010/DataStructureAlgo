@@ -1,7 +1,6 @@
 package Java.graph;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -13,6 +12,7 @@ public class UnDirectedGraph implements IGraphBase {
     //To hold the edges
     private final List<Integer>[] adjancyList;
     private final int vertices;
+    private  int val ;
 
     //initiate the graph
     public UnDirectedGraph(int vertices) {
@@ -40,4 +40,10 @@ public class UnDirectedGraph implements IGraphBase {
         adjancyList[destination].add(source);
 
     }
+
+    public void setVal(int _val){
+        this.val = _val;
+    }
+
+
 }
