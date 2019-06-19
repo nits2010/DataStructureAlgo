@@ -84,7 +84,7 @@ public class ReadNCharactersGivenRead4 {
         while (i < n) {
             // no character in own buffer
             if (bufferIndex == 0 || bufferIndex == bufferLength) {
-                buffer = new char[4];
+               // buffer = new char[4];
                 bufferLength = read4(buffer);
                 bufferIndex = 0;
             }
