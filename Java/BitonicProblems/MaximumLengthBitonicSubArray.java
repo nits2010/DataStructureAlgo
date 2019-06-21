@@ -1,4 +1,4 @@
-package Java;/* package whatever; // don't place package name! */
+package Java.BitonicProblems;/* package whatever; // don't place package name! */
 
 //MaximumLengthBitonicSubarray
 class MaximumLengthBitonicSubArrayHelper {

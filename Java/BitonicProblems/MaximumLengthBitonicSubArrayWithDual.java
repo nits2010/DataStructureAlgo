@@ -1,4 +1,4 @@
-package Java;/* package whatever; // don't place package name! */
+package Java.BitonicProblems;/* package whatever; // don't place package name! */
 
 //Dual {20,4,5,6,7,6,3,2,20,30,40,50,30,20,10,5,4} either start with increasing or decreasing
 //non-dual:  {20, 4, 1, 2, 3, 4, 2, 10} : start with increasing only
