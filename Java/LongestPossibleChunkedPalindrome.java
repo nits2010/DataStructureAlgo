@@ -59,7 +59,7 @@ public class LongestPossibleChunkedPalindrome {
 
                 //if palindrome then make a cut here;
                 // take the substring out excluding both end palindrome string, since there will be two palindrome so count+=2
-                // the lenght of that palindrome would be len (of previous) + lenght of current
+                // the length of that palindrome would be len (of previous) + length of current
                 return longestPossibleChunkedPalindrome(current.substring(i + 1, n - i - 1), count + 2);
             }
         }

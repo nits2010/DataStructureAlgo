@@ -1,20 +1,5 @@
 package Java;
 
-/**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
- * Date: 11/04/19
- * Description:
- */
-/* -----------------------------------
- *  WARNING:
- * -----------------------------------
- *  Your code may fail to compile
- *  because it contains public class
- *  declarations.
- *  To fix this, please remove the
- *  "public" keyword from your class
- *  declarations.
- */
 
 import Java.Tree.BinaryTreeNode;
 import Java.Tree.TreeNode;
@@ -26,6 +11,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * * Date: 11/04/19
+ * * Description:
  * Definition for a binary tree node.
  * public class TreeNode {
  * int val;
