@@ -13,8 +13,7 @@ public class MatrixChainMultiplication {
 
     public static void main(String args[]) {
         List<Integer> dime = new ArrayList<>();
-String s = "sd";
-s.
+
         dime.add(40);
         dime.add(20);
         dime.add(30);

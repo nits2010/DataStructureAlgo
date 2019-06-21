@@ -26,7 +26,7 @@ public class LongestIncreasingSubSequence {
     }
 
 
-    private static int lengthOfLIS(int nums[]) {
+    public static int lengthOfLIS(int nums[]) {
         System.out.println("\n input ");
         for (int i = 0; i < nums.length; i++)
             System.out.print(" " + nums[i]);
@@ -76,7 +76,7 @@ public class LongestIncreasingSubSequence {
 
     }
 
-    private static int ceilIndex(int a[], int l, int r, int item) {
+    public static int ceilIndex(int a[], int l, int r, int item) {
         while (l < r) {
             int mid = (l + r) >> 1;
 
