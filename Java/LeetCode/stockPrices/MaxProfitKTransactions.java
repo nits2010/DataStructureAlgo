@@ -19,7 +19,7 @@ public class MaxProfitKTransactions {
     }
 
     public static int maxProfit(int k, int[] prices) {
-        return maxProfitPolynomialFasterSpaceOptimizedFaster(k, prices);
+        return maxProfitPolynomialSpaceOptimizedFastest(k, prices);
     }
 
 
@@ -207,7 +207,7 @@ public class MaxProfitKTransactions {
      * @return
      */
     //O(t*n)/O(n)
-    public static int maxProfitPolynomialFasterSpaceOptimizedFaster(int t, int[] prices) {
+    public static int maxProfitPolynomialSpaceOptimizedFastest(int t, int[] prices) {
 
         if (prices.length == 0)
             return 0;
