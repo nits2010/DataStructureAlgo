@@ -6,6 +6,7 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-19
  * Description: https://leetcode.com/problems/subsets/
+ * Power set
  */
 public class SubSet {
 

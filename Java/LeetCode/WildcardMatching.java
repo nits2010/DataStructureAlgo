@@ -4,21 +4,31 @@ package Java.LeetCode;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-23
  * Description:
+ * https://www.geeksforgeeks.org/wildcard-pattern-matching/
+ * https://www.geeksforgeeks.org/dynamic-programming-wildcard-pattern-matching-linear-time-constant-space/
  */
 public class WildcardMatching {
 
 
-    public static void main (String args[]){
+    public static void main(String args[]) {
         System.out.println(isMatch("aa", "*"));
         System.out.println(isMatch("cb", "?a"));
         System.out.println(isMatch("adceb", "*a*b"));
         System.out.println(isMatch("acdcb", "a*c?b"));
     }
+
     public static boolean isMatch(String s, String p) {
-        return isMatchLiner(s,p);
+        return isMatchLiner(s, p);
     }
 
-    public static boolean isMatchSlower(String str, String pattern) {
+    /**
+     * https://www.geeksforgeeks.org/wildcard-pattern-matching/
+     *
+     * @param str
+     * @param pattern
+     * @return
+     */
+    public static boolean isMatchPolynomial(String str, String pattern) {
 
         if ((null == str && null == pattern) || (str.isEmpty() && pattern.isEmpty()))
             return true;
@@ -47,10 +57,8 @@ public class WildcardMatching {
                 lookup[0][j] = lookup[0][j - 1];
 
         // fill the table in bottom-up fashion
-        for (int i = 1; i <= n; i++)
-        {
-            for (int j = 1; j <= m; j++)
-            {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
                 // Two cases if we see a '*'
                 // a) We ignore '*'' character and move
                 //    to next  character in the pattern,
@@ -76,6 +84,14 @@ public class WildcardMatching {
 
         return lookup[n][m];
     }
+
+    /**
+     * https://www.geeksforgeeks.org/dynamic-programming-wildcard-pattern-matching-linear-time-constant-space/
+     *
+     * @param s
+     * @param p
+     * @return
+     */
     public static boolean isMatchLiner(String s, String p) {
 
         if ((null == s && null == p) || (s.isEmpty() && p.isEmpty()))
@@ -100,7 +116,7 @@ public class WildcardMatching {
                 textPreviousStarIndex = textIndex;
                 patPreviousStarIndex = patIndex;
                 patIndex++;
-            } else if (patIndex < patL && ((str[textIndex] == pat[patIndex]) ||(pat[patIndex] == '?'))) {
+            } else if (patIndex < patL && ((str[textIndex] == pat[patIndex]) || (pat[patIndex] == '?'))) {
                 textIndex++;
                 patIndex++;
             } else if (patPreviousStarIndex != -1) {
@@ -116,7 +132,9 @@ public class WildcardMatching {
         }
 
         //if pattern is bigger then text, then only permissible char is *
-        while (patIndex < patL && pat[patIndex] == '*') {patIndex++;}
+        while (patIndex < patL && pat[patIndex] == '*') {
+            patIndex++;
+        }
 
         return patIndex == patL;
 
