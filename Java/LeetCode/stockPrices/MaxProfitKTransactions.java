@@ -199,7 +199,8 @@ public class MaxProfitKTransactions {
 
     /**
      * even more optimization,
-     * on closer look of the table Profit table, we an see that if t >= n/2 then its a similiar copy of above and below this point.
+     * on closer look of the table Profit table, we an see that if t > n/2 then its just we can't buy and sell since the
+     * available data points (stocks) are not enough give comparing to transaction need to make [ we can't make three trasnaction of stock price for 2 days ]
      * hence if t>=n/2 then t = n/2
      *
      * @param t
