@@ -1,9 +1,8 @@
-package Java;/* package whatever; // don't place package name! */
+package Java.LargetstRectangle;/* package whatever; // don't place package name! */
 
 //source https://www.youtube.com/watch?v=E5C5W6waHlo
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 class HightWidth{
 	private int i=-1, j=-1; 
@@ -103,10 +102,10 @@ class LargestRectangeWithAllOnes{
 	public HightWidth histoArea(int input[], int row){
 		HightWidth hw = new HightWidth();
 		Stack<Integer> hights = new Stack<Integer> ();
-		Stack<Integer> indexs = new Stack<Integer> ();
+		Stack<Integer> indexes = new Stack<Integer> ();
 		
 		hights.push(input[0]);
-		indexs.push(0);
+		indexes.push(0);
 		
 		
 		int lastindex = 0;
@@ -118,11 +117,11 @@ class LargestRectangeWithAllOnes{
 			//case 1: The current element hight is more than top element hight of stack, push it
 			if (hights.isEmpty() || hights.peek() < input[i] ){
 				hights.push(input[i]);
-				indexs.push(i);
+				indexes.push(i);
 			}else if(hights.peek() > input[i] ) {  //case 3: if the current element hight is less then the top element hight, calculate histogram
 				lastindex = 0; 
 				while ( !hights.isEmpty()  && hights.peek() > input[i]){
-					lastindex = indexs.pop();
+					lastindex = indexes.pop();
 					hight = hights.pop();
 					width =  i - lastindex;
 					carea = hight * width;
@@ -130,14 +129,14 @@ class LargestRectangeWithAllOnes{
 				} 
 				
 				hights.push(input[i]);
-				indexs.push(lastindex);
+				indexes.push(lastindex);
 			}
 			
 		}
 		
 		//process left itmes 
 		while (!hights.isEmpty() ){
-			lastindex = indexs.pop();
+			lastindex = indexes.pop();
 			hight = hights.pop();
 			width = input.length - lastindex;
 			carea = hight*width;
@@ -307,7 +306,6 @@ class LargestSquareWithAllOnes{
 }
 
 
-/* Name of the class has to be "Main" only if the class is public. */
 class LargestRectangeWithAllOnesandLargestSquareWithAllOnes
 {
 	private static void largestSquare(int input[][]){

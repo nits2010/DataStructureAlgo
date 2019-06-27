@@ -16,7 +16,7 @@ public class CoinChangeProblemNumberOfWays {
     //total[i][j] = total[i][j-1] + total[i-coins[j]][j]
     // total[i][j-1] we dont take the coin
     //total[i-coin[j]][j] we take the coin j then we need to find the sum of i-coin[j]
-    //total[0][j(0...coins.lenght-1)] = 1
+    //total[0][j(0...coins.length-1)] = 1
 
     public  static int change(int amount, int[] coins) {
 
