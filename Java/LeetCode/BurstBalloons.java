@@ -3,7 +3,8 @@ package Java.LeetCode;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-28
- * Description:https://leetcode.com/problems/burst-balloons/
+ * Description:
+ * https://leetcode.com/problems/burst-balloons/
  * Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.
  * <p>
  * Find the maximum coins you can collect by bursting the balloons wisely.
@@ -18,6 +19,8 @@ package Java.LeetCode;
  * Output: 167
  * Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
  * coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
+ * <p>
+ * Video help:https://www.youtube.com/watch?v=IFNibRVgFBo
  */
 public class BurstBalloons {
 
@@ -84,8 +87,8 @@ public class BurstBalloons {
      * dp[i][j] = Max ( (bursting on left side + bursting on right side + bursting it self) for all k between i<=k<=j )
      * <p>
      * dp[i][j] = Max ( (dp[i][k-1] + dp[k+1][j]+ (a[i-1] * a[i] * a[j+1])) for all k between i<=k<=j )
-     *
-     *
+     * <p>
+     * <p>
      * closely look into the solution, its a matrix chain multiplication derivation.
      * Complexity O(n^3)
      *
