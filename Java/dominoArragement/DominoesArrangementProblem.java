@@ -45,10 +45,11 @@ public class DominoesArrangementProblem {
 
         }
 
-        if (three != 2 && two != 2 && one != 2)
+        if (three != 3 && two != 2 && one != 2)
             return false;
 
         return true;
+
     }
 
 

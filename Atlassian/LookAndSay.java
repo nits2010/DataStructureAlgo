@@ -27,8 +27,8 @@ public class LookAndSay {
 
     }
 
-    private static String lookAndSay(String start) {
-        List<Integer> lookAndSay = lookAndSayBreaks(start);
+    public static String lookAndSay(String start) {
+        List<Integer> lookAndSay = lookAndSayBreaksEasy(start);
 
         StringBuilder result = new StringBuilder();
 
@@ -47,6 +47,15 @@ public class LookAndSay {
 
     }
 
+    public static List<Integer> lookAndSayBreaksEasy(String start) {
+        char chars[] = start.toCharArray();
+        List<Integer> lookAndSay = new ArrayList<>();
+        for (int i=0; i<chars.length; i++){
+            lookAndSay.add(chars[i]-'0');
+        }
+        return lookAndSay;
+    }
+
     private static List<Integer> lookAndSayBreaks(String start) {
 
         List<Integer> lookAndSay = new ArrayList<>();
@@ -54,11 +63,11 @@ public class LookAndSay {
         String x = start;
 
         while (!x.isEmpty()) {
-            char last = x.charAt(x.length()-1);
+            char last = x.charAt(x.length() - 1);
 
             int r = last - '0';
             lookAndSay.add(r);
-            x = x.substring(0, x.length()-1);
+            x = x.substring(0, x.length() - 1);
         }
         Collections.reverse(lookAndSay);
         return lookAndSay;
