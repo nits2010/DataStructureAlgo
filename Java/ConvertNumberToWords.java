@@ -80,6 +80,8 @@ public class ConvertNumberToWords {
         if (!soFar.isEmpty())
             return numNames[number] + " hundred and " + soFar;
         return numNames[number] + " hundred" + soFar;
+
+
     }
 
 
@@ -89,19 +91,19 @@ public class ConvertNumberToWords {
             return "zero";
         }
 
-        // pad with "0"
+        // pad with "0" 12
         String mask = "000000000000";
         DecimalFormat df = new DecimalFormat(mask);
-        String snumber = df.format(number);
+        String sNumber = df.format(number);
 
         // XXXnnnnnnnnn
-        int billions = Integer.parseInt(snumber.substring(0, 3));
+        int billions = Integer.parseInt(sNumber.substring(0, 3));
         // nnnXXXnnnnnn
-        int millions = Integer.parseInt(snumber.substring(3, 6));
+        int millions = Integer.parseInt(sNumber.substring(3, 6));
         // nnnnnnXXXnnn
-        int hundredThousands = Integer.parseInt(snumber.substring(6, 9));
+        int hundredThousands = Integer.parseInt(sNumber.substring(6, 9));
         // nnnnnnnnnXXX
-        int thousands = Integer.parseInt(snumber.substring(9, 12));
+        int thousands = Integer.parseInt(sNumber.substring(9, 12));
 
         String tradBillions;
         switch (billions) {

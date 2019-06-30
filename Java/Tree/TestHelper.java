@@ -9,6 +9,13 @@ import java.util.List;
  */
 public class TestHelper {
 
+
+    public static void runFlipedTreeTest(IBinaryTree binaryTree, TreeNode root) {
+        System.out.println(binaryTree.inOrder(root));
+        TreeNode newRoot = binaryTree.flipTreeUpSideDown(root);
+        System.out.println(binaryTree.inOrder(newRoot));
+    }
+
     public static void runPreSucTest(List<TreeNode<Integer>> nodes, IBinaryTree binaryTree, TreeNode<Integer> root) {
 
 

@@ -713,4 +713,85 @@ public interface IBinaryTree {
     TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta);
 
 
+    default boolean isLeaf(TreeNode root) {
+        if (root == null || (root.getLeft() == null && root.getRight() == null))
+            return true;
+        return false;
+    }
+
+    /**
+     * https://www.geeksforgeeks.org/flip-binary-tree/
+     * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
+     *
+     * @param root
+     * @return
+     */
+    default TreeNode flipTreeUpSideDown(TreeNode root) {
+
+        return flipTreeUpSideDownIterative(root);
+    }
+
+    default TreeNode flipTreeUpSideDownRecursive(TreeNode root) {
+
+        if (root == null || isLeaf(root))
+            return root;
+
+        TreeNode flipedRoot = flipTreeUpSideDownRecursive(root.getLeft());
+
+
+        TreeNode right = root.getLeft();
+        while (right.getRight() != null)
+            right = right.getRight();
+
+        right.setRight(root);
+        root.getLeft().setLeft(root.getRight());
+        root.setLeft(null);
+        root.setRight(null);
+
+        return flipedRoot;
+    }
+
+    /**
+     * In the flip operation,
+     * 1. left most node becomes the root of flipped tree and its parent become its right child
+     * 2. and the right sibling become its left child
+     * recursively.
+     *
+     * @param root
+     * @return
+     */
+    default TreeNode flipTreeUpSideDownIterative(TreeNode root) {
+        if (root == null)
+            return root;
+
+        TreeNode parent = null;
+        TreeNode current = root;
+        TreeNode right = null;
+        TreeNode left = null;
+
+        while (current != null) {
+
+            //left most node becomes the root of flipped tree
+            left = current.getLeft();
+
+
+            //the right sibling become its left child
+            current.setLeft(right);
+
+            right = current.getRight();
+
+            // and its parent become its right child
+            current.setRight(parent);
+
+
+            parent = current;
+            current = left;
+
+
+        }
+
+        return parent;
+    }
+
+
 }

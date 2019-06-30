@@ -27,11 +27,14 @@ public class DriverProgramBinaryTree {
         nodes.add(binaryTree.insert(5, bt));
         nodes.add(binaryTree.insert(6, bt));
         nodes.add(binaryTree.insert(7, bt));
-//        nodes.add(binaryTree.insert(8, bt));
+
 
         TestHelper.runTraversal(binaryTree, bt);
 
+
         TestHelper.runPreSucTest(nodes, binaryTree, bt);
+
+
 
         System.out.println("Height of Java.Tree: " + binaryTree.height(bt));
         System.out.println("diameter of Java.Tree: " + binaryTree.diameter(bt));
@@ -45,6 +48,10 @@ public class DriverProgramBinaryTree {
         System.out.println("Level of " + beta.getData() + " Java.Tree: " + binaryTree.level(bt, beta));
         System.out.println("Distance between " + alpha.getData() + "and " + beta.getData() + " Java.Tree: " + distance);
 
+
+        /** Flipped tree test ***/
+        System.out.println("***********Flipped tree***************");
+        TestHelper.runFlipedTreeTest(binaryTree, bt);
 
         System.out.println("***********BST***************");
 
