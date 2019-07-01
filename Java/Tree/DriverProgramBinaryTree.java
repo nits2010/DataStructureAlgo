@@ -28,6 +28,9 @@ public class DriverProgramBinaryTree {
         nodes.add(binaryTree.insert(6, bt));
         nodes.add(binaryTree.insert(7, bt));
 
+        System.out.println("***********Boundary Traversal***************");
+        TestHelper.boundaryTraversal(binaryTree, bt);
+        System.out.println("***********Boundary Traversal***************\n");
 
         TestHelper.runTraversal(binaryTree, bt);
 

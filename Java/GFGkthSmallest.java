@@ -88,20 +88,20 @@ class GFGkthSmallest
     // It searches for x in arr[l..r], and
 // partitions the array around x.
     static int partition(int arr[], int l,
-                         int r, int x)
+                         int r, int pivot)
     {
-        // Search for x in arr[l..r] and move it to end
+        // Search for pivot in arr[l..r] and move it to end
         int i;
         for (i = l; i < r; i++)
-            if (arr[i] == x)
+            if (arr[i] == pivot)
                 break;
         swap(arr, i, r);
 
         // Standard partition algorithm
         i = l;
-        for (int j = l; j <= r - 1; j++)
+        for (int j = l; j < r; j++)
         {
-            if (arr[j] <= x)
+            if (arr[j] <= pivot)
             {
                 swap(arr, i, j);
                 i++;

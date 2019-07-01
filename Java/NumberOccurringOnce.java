@@ -21,19 +21,22 @@ public class NumberOccurringOnce {
     public static void main(String args[]) {
         int arr[] = {12, 1, 12, 3, 12, 1, 1, 2, 3, 3};
         System.out.println(numberOccurringOnce(arr, 3));
+        System.out.println(numberOccurringOnceFaster(arr, 3));
 
         int arr2[] =  {10, 20, 10, 30, 10, 30, 30};
         System.out.println(numberOccurringOnce(arr2, 3));
+        System.out.println(numberOccurringOnceFaster(arr2, 3));
 
         int arr3[] =  {5,5,5,8};
         System.out.println(numberOccurringOnce(arr3, 3));
+        System.out.println(numberOccurringOnceFaster(arr3, 3));
 
     }
 
     private static int numberOccurringOnce(int[] arr, int n) {
 
         int result = 0;
-        int sum = 0;
+        int sum ;
 
         for (int i = 0; i < 32; i++) {
 
@@ -51,5 +54,19 @@ public class NumberOccurringOnce {
         }
 
         return result;
+    }
+
+    private static int  numberOccurringOnceFaster(int[] arr, int n){
+
+        int occurringOnce = 0;
+        int occurringTwice = 0;
+
+        for (int i = 0; i<arr.length; i++){
+
+            occurringOnce = occurringOnce^arr[i] & ~occurringTwice;
+            occurringTwice = occurringTwice^arr[i] & ~occurringOnce;
+
+        }
+        return occurringOnce;
     }
 }

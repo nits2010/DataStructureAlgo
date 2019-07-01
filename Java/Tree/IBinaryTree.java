@@ -794,4 +794,70 @@ public interface IBinaryTree {
     }
 
 
+    default List<TreeNode> boundaryTraversal(TreeNode root) {
+
+        List<TreeNode> traversal = new LinkedList<>();
+
+        if (root == null)
+            return traversal;
+
+        traversal.add(root);
+        boundaryTraversalLeft(root.getLeft(), traversal);
+        boundaryTraversalLeaves(root.getLeft(), traversal);
+        boundaryTraversalLeaves(root.getRight(), traversal);
+        boundaryTraversalRight(root.getRight(), traversal);
+        return traversal;
+    }
+
+    default void boundaryTraversalRight(TreeNode root, List<TreeNode> traversal) {
+
+        if (root == null)
+            return;
+
+        if (root.getRight() != null) {
+            boundaryTraversalRight(root.getRight(), traversal);
+
+            traversal.add(root);
+        } else if (root.getLeft() != null) {
+            boundaryTraversalRight(root.getLeft(), traversal);
+
+            traversal.add(root);
+        }
+    }
+
+    default void boundaryTraversalLeaves(TreeNode root, List<TreeNode> traversal) {
+
+        if (root == null)
+            return;
+
+
+        boundaryTraversalLeaves(root.getLeft(), traversal);
+
+        if (isLeaf(root)) {
+            traversal.add(root);
+        }
+
+        boundaryTraversalLeaves(root.getRight(), traversal);
+
+
+    }
+
+    default void boundaryTraversalLeft(TreeNode root, List<TreeNode> traversal) {
+
+        if (root == null)
+            return;
+
+        if (root.getLeft() != null) {
+            traversal.add(root);
+            boundaryTraversalRight(root.getLeft(), traversal);
+
+
+        } else if (root.getRight() != null) {
+            traversal.add(root);
+            boundaryTraversalRight(root.getRight(), traversal);
+
+
+        }
+    }
+
 }

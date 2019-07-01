@@ -122,5 +122,13 @@ public class TestHelper {
 
     }
 
+    public static void boundaryTraversal(IBinaryTree binaryTree, TreeNode<Integer> root) {
+
+
+        List<TreeNode> traversal = binaryTree.boundaryTraversal(root);
+        traversal.stream().forEach(n -> System.out.print(n.getData() + " "));
+
+    }
+
 
 }
