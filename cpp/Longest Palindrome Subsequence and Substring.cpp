@@ -35,7 +35,7 @@ class Longest_Palindrome
                 cout << "\nInput String: " << String <<"\n Length = " << Length ;
             }
 
-// T/S-------->             O(n^2)  / O(n^2 ) Solution'MinStepsInfiniteGrid
+// T/S-------->             O(n^2)  / O(n^2 ) LongestUniformSubString'MinStepsInfiniteGrid
             // Longest Palindrome Subsequence
             void Longest_Palindrome_Subsequence ( ) ;
 

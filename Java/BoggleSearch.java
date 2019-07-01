@@ -18,7 +18,7 @@ public class BoggleSearch {
 
         public boolean isLeaf = false;
         public char value;
-        public Map<Character, TrieNode> childerens = new HashMap<>();
+        public Map<Character, TrieNode> children = new HashMap<>(256);
 
         public TrieNode(char v) {
             this.value = v;
@@ -27,6 +27,8 @@ public class BoggleSearch {
         public TrieNode() {
 
         }
+
+
     }
 
     static class Trie {
@@ -44,10 +46,10 @@ public class BoggleSearch {
             for (int i = 0; i < toInsert.length(); i++) {
                 char current = toInsert.charAt(i);
 
-                if (!pCrawl.childerens.containsKey(current))
-                    pCrawl.childerens.put(current, new TrieNode(current));
+                if (!pCrawl.children.containsKey(current))
+                    pCrawl.children.put(current, new TrieNode(current));
 
-                pCrawl = pCrawl.childerens.get(current);
+                pCrawl = pCrawl.children.get(current);
 
             }
 
@@ -70,9 +72,9 @@ public class BoggleSearch {
 
                 char current = boggle[i][j];
 
-                if (root.childerens.containsKey(current)) {
+                if (root.children.containsKey(current)) {
                     String temp = "" + current;
-                    search(boggle, visited, i, j, root.childerens.get(current), temp, n, m, boggleInDic);
+                    search(boggle, visited, i, j, root.children.get(current), temp, n, m, boggleInDic);
                 }
 
             }
@@ -99,10 +101,10 @@ public class BoggleSearch {
             if (isSafe(rowV, colV, visited, n, m)) {
 
                 char current = boggle[rowV][colV];
-                if (pCrawl.childerens.containsKey(current)) {
+                if (pCrawl.children.containsKey(current)) {
 
                     temp += current;
-                    search(boggle, visited, rowV, colV, pCrawl.childerens.get(current), temp, n, m, boggleInDic);
+                    search(boggle, visited, rowV, colV, pCrawl.children.get(current), temp, n, m, boggleInDic);
 
                 }
             }
