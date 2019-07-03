@@ -1,4 +1,4 @@
-package LinkedIn;
+package LinkedIn.depthSumNestedInteger;
 
 import java.util.Arrays;
 import java.util.List;

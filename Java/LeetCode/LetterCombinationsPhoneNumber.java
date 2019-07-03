@@ -43,9 +43,10 @@ public class LetterCombinationsPhoneNumber {
                 output.add(str);
             else {
 
-                String string = map[digits.charAt(str.length())-'0'];
-                for ( int i=0 ; i< string.length(); i++){
-                    queue.add(str+string.charAt(i));
+                int n = str.length();
+                String charsOnThisDigit = map[digits.charAt(n)-'0'];
+                for ( int i=0 ; i< charsOnThisDigit.length(); i++){
+                    queue.add(str+charsOnThisDigit.charAt(i));
                 }
             }
         }

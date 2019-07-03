@@ -860,4 +860,71 @@ public interface IBinaryTree {
         }
     }
 
+    //https://leetcode.com/problems/binary-tree-maximum-path-sum/
+    default int maximumPathSumAnyNode(TreeNode root) {
+        if (root == null)
+            return 0;
+
+        MinMaxObject<Integer> max = new MinMaxObject();
+        max.data = Integer.MIN_VALUE;
+        maximumPathSumAnyNode(root);
+        return max.data;
+    }
+
+    default int maxPathSumHelper(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+        if (root == null) {
+            return 0;
+        }
+
+        int l = maxPathSumHelper(root.getLeft(), max);
+        int r = maxPathSumHelper(root.getRight(), max);
+
+        // compare leftSum + root val or rightSum + root val to select which value to send further
+        int oneChildMax = Math.max(l, r) + root.getData();
+
+        // if the root value is greater than any of the path
+        int toReturn = Math.max(oneChildMax, root.getData());
+
+        // if root + leftSum + rightSum is greater than any of the max till now, update the final max (though we are updating the final max, we shouldn't be propagating this further as only one of left or right path is the valid selection)
+        int bothChildMax = Math.max(toReturn, root.getData() + l + r);
+        max.data = Math.max(bothChildMax, max.data);
+
+        // return the max sum till the current node that can be processed further
+        return toReturn;
+    }
+
+
+    default int maximumPathSumLeafToLeaf(TreeNode root) {
+
+        if (null == root)
+            return 0;
+
+        MinMaxObject<Integer> max = new MinMaxObject<>();
+        max.data = Integer.MIN_VALUE;
+
+        maximumPathSumLeafToLeaf(root, max);
+
+        return max.data;
+    }
+
+    default int maximumPathSumLeafToLeaf(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+
+        if (root == null)
+            return 0;
+
+        if (isLeaf(root))
+            return root.getData();
+
+        int mL = maximumPathSumLeafToLeaf(root.getLeft(), max);
+        int mR = maximumPathSumLeafToLeaf(root.getRight(), max);
+
+
+        max.data = Math.max(max.data, mL + mR + root.getData());
+
+        return Math.max(mL, mR) + root.getData();
+
+
+    }
+
+
 }

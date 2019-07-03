@@ -1,4 +1,4 @@
-package LinkedIn;
+package LinkedIn.depthSumNestedInteger;
 
 import java.util.List;
 
@@ -24,6 +24,7 @@ public class DepthSum implements IDepthSum {
     }
 
 
+    //https://www.careercup.com/question?id=5637861714952192
     @Override
     public int reversDepthSum(List<NestedInteger> input) {
 
@@ -48,6 +49,7 @@ public class DepthSum implements IDepthSum {
         return sum;
     }
 
+    //https://www.programcreek.com/2014/05/leetcode-nested-list-weight-sum-java/
     @Override
     public int forwardDepthSum(List<NestedInteger> input) {
         return forwardDepthSum(input, 1);
