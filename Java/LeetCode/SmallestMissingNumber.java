@@ -81,7 +81,7 @@ public class SmallestMissingNumber {
 
         for (int i = 0; i < temp.length; i++) {
             int index = Math.abs(temp[i]);
-            if (index - 1 < temp.length && temp[index - 1] > 0) {
+            if (index - 1 >= 0 && index - 1 < temp.length && temp[index - 1] > 0) {
 
                 temp[index - 1] = -temp[index - 1];
 
