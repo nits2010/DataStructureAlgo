@@ -62,8 +62,8 @@ public class LongestIncreasingPath {
         if (dp[i][j] != -1)
             return dp[i][j];
         /*
-        int row[] = {0, 0, -1, 1};
-    int col[] = {-1, 1, 0, 0};
+        int row8[] = {0, 0, -1, 1};
+    int col8[] = {-1, 1, 0, 0};
         */
         int max = 1;
         int previousItem = mat[i][j];

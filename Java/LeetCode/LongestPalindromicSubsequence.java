@@ -17,12 +17,12 @@ public class LongestPalindromicSubsequence {
      * Lets translate it to 1D array
      * lps[i] length of longest palindrome subsequence from till i
      * we can note that in above equation when we say
-     * lps[i+1][j] -> is just a below row of current
-     * lps[i][j] -> is the same row but previous column
-     * lps[i+1][j-1] -> is the below row with previous column.
+     * lps[i+1][j] -> is just a below row8 of current
+     * lps[i][j] -> is the same row8 but previous column
+     * lps[i+1][j-1] -> is the below row8 with previous column.
      * <p>
-     * Aparently we are dealing with only, current row ( current column, previous column)
-     * and below row as defined above. so we just need this.
+     * Aparently we are dealing with only, current row8 ( current column, previous column)
+     * and below row8 as defined above. so we just need this.
      * <p>
      * lps[i+1][j] = lps[j]
      * lps[i+1][j-1] = lps[j-1]
