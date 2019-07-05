@@ -50,8 +50,8 @@ public class MaxProfitKTransactions {
 
         profit[t][i] will be maximum of –
 
-        profit[t][i-1] which represents not doing any transaction on the ith day.
-        Maximum profit gained by selling on ith day. In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days. If we buy shares on jth day          and sell it on ith day, max profit will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1. Here profit[t-1][j] is best we could have done with one       less transaction till jth day.
+        profit[t][i-1]: which represents not doing any transaction on the ith day.
+        max(price[i] – price[j] + profit[t-1][j]): Maximum profit gained by selling on ith day. In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days. If we buy shares on jth day          and sell it on ith day, max profit will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1. Here profit[t-1][j] is best we could have done with one       less transaction till jth day.
 
         */
 
