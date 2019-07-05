@@ -164,7 +164,12 @@ public class MaxProfitKTransactions {
      * So instead of storing whole transaction history, we can keep only last two transaction history;
      * <p>
      * we just keep rotating the arrays for rows to rows
-     *
+     * profit[1][....] represent the current transaction 
+     * profit[1][....] represent the previous day transaction
+     
+     
+     * Note: we can keep two seperate variable for current & previous day transaction. and then keep interchanging them.
+     * this way we can avoid Arrays.copyOf
      * @param t
      * @param prices
      * @return
