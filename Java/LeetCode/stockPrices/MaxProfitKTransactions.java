@@ -51,8 +51,11 @@ public class MaxProfitKTransactions {
         profit[t][i] will be maximum of –
 
         profit[t][i-1]: which represents not doing any transaction on the ith day.
-        max(price[i] – price[j] + profit[t-1][j]): Maximum profit gained by selling on ith day. In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days. If we buy shares on jth day          and sell it on ith day, max profit will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1. Here profit[t-1][j] is best we could have done with one       less transaction till jth day.
-
+        max(price[i] – price[j] + profit[t-1][j]): Maximum profit gained by selling on ith day.
+        In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days.
+        If we buy shares on jth day and sell it on ith day, then profit would be price[i] - price [j]
+        Here at jth day, profit[t-1][j] is best we could have done with one less transaction.
+        hence max profit, will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1.
         */
 
         for (int trans = 1; trans <= t; trans++) {
@@ -85,20 +88,20 @@ public class MaxProfitKTransactions {
      * <p>
      * profit[t][i] will be maximum of –
      * <p>
-     * profit[t][i-1] which represents not doing any transaction on the ith day.
-     * Maximum profit gained by selling on ith day. In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days. If we buy shares on jth day          and sell it on ith day, max profit will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1. Here profit[t-1][j] is best we could have done with one       less transaction till jth day.
+     * profit[t][i-1] :which represents not doing any transaction on the ith day.
+     * max(profit[t-1][j] + price[i] – price[j]  ):Maximum profit gained by selling on ith day. In order to sell shares on ith day, we need to purchase it on any one of [0, i – 1] days. If we buy shares on jth day          and sell it on ith day, max profit will be price[i] – price[j] + profit[t-1][j] where j varies from 0 to i-1. Here profit[t-1][j] is best we could have done with one       less transaction till jth day.
      * <p>
      * <p>
      * if we take the closer look at
      * max(profit[t-1][j] + price[i] – price[j]  ) for all j in range [0, i-1]
-     * here price[i] is constant for all i; hence we can write this as
+     * here price[i] is constant for all j; hence we can write this as
      * <p>
      * max(profit[t-1][j] – price[j]  ) + price[i] for all j in range [0, i-1]
      * <p>
      * Take a look at this;
-     * max(profit[t-1][j] – price[j]  ) this is just finding the max of all j from 0 to i only;
-     * so if we know the max of j-1 th point, we can calculate the jth point as
-     * <p>
+     * max(profit[t-1][j] – price[j]  ) this is just finding the max profit 
+     * on jth day s.t. j from 0 to i only;
+     * so if we know the max of j-1 th day, we can calculate the jth point as
      * max ( previousMax , (profit[t-1][j] - price[j] ) in constant time
      *
      * @param t
@@ -200,8 +203,13 @@ public class MaxProfitKTransactions {
     /**
      * even more optimization,
      * on closer look of the table Profit table, we an see that if t > n/2 then its just we can't buy and sell since the
-     * available data points (stocks) are not enough give comparing to transaction need to make [ we can't make three trasnaction of stock price for 2 days ]
-     * hence if t>=n/2 then t = n/2
+     * available data points (stocks) are not enough as compare to transaction that we need to make [ we can't make three trasnaction of stock price for 2 days ]
+     * By saying this, if we have n days stocks then at most we can perform n/2 trasaction (
+     * e.x. say we have stocks of n = 4 days as below
+     * [1,4,3,6] then at most we can do 2 transaction,
+     ******** buy at 1 and sell at 4 and buy at 3 sell at 6. OR buy at 1 and sell at 6 ( we will choose 2 transaction aa it gives better profit).
+     ****
+     **** hence if t>=n/2 then t = n/2
      *
      * @param t
      * @param prices
