@@ -1,37 +1,12 @@
-package facebook;
+package facebook.serializeDeserializeBinaryTree;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
- * Date: 04/04/19
+ * Date: 2019-07-04
  * Description:
  */
-public class SerializeDeSerialize {
 
-    static class Node {
-        int value;
-        Node left = null, right = null;
-
-        public Node(int value) {
-            this.value = value;
-        }
-    }
-
-    static class Helper {
-        String str = "";
-        int index = 0;
-        String[] toDeserialize = {};
-    }
-
-    static void inOrder(Node root) {
-        if (null == root)
-            return;
-
-        inOrder(root.left);
-        System.out.print(root.value + " ");
-        inOrder(root.right);
-
-    }
-
+class SerializeDeSerializePreOrder {
 
     static String serialize(Node root) {
 
@@ -53,7 +28,7 @@ public class SerializeDeSerialize {
 
         }
 
-        helper.str += String.valueOf(root.value) + ",";
+        helper.str += root.value + ",";
         serializer(root.left, helper);
         serializer(root.right, helper);
 
@@ -65,7 +40,6 @@ public class SerializeDeSerialize {
         if (encodedBT.isEmpty())
             return null;
 
-        Node root = null;
         Helper index = new Helper();
         index.str = encodedBT;
         index.toDeserialize = index.str.split(",");
@@ -87,29 +61,5 @@ public class SerializeDeSerialize {
         root.right = deserialize(index);
 
         return root;
-    }
-
-    public static void main(String args[]) {
-
-        Node root = new Node(2);
-
-        root.left = new Node(3);
-        root.right = new Node(5);
-
-        root.left.left = new Node(11);
-        root.left.right = new Node(4);
-
-        root.right.left = null;
-        root.right.right = new Node(9);
-        inOrder(root);
-        System.out.println();
-
-        String vv = serialize(root);
-        System.out.println(vv);
-
-        Node r = deserialize(vv);
-        inOrder(r);
-
-
     }
 }
