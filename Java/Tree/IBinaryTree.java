@@ -926,5 +926,41 @@ public interface IBinaryTree {
 
     }
 
+    /**
+     *https://www.careercup.com/question?id=5074469692375040
+     *
+     * It should be post order traversal with below way of cal
+     *
+     * If leaf
+     * =>Item: odd
+     * .      Return ( 0, value)
+     * => item : even
+     * .      Return ( value, 0)
+     *
+     * If not leaf
+     * => item even
+     *     // through both child's creating max subtree
+     * .    max = MAX ( max, MAX(left.even+ right.even, left.odd+ right.odd) + value)
+     *
+     *       return (
+     *        even-> MAX ( MAX ( left.even, right.even) + value, value),
+     * 	odd -> MAX ( left.odd, right.odd) + value, value )
+     *        )
+     *
+     * => item odd
+     *     // through both child's creating max subtree
+     * .    max = MAX ( max, left.odd +  right.odd + value)
+     *
+     *       return (
+     *        even-> MAX ( left.odd, right.odd) + value, value),
+     * 	odd -> MAX ( left.even, right.eve) + value, value )
+     *        )
+     *
+     * if any situation the value at odd position is even, then put 0 instead
+     * Like tree
+     *   6 here even sum is not possible (6+2 = even, 6+4= even, 2+4+6 = even) not possible odd sum( 10,0)
+     * 2  4
+     */
+
 
 }

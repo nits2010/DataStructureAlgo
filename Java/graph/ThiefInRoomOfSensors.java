@@ -7,7 +7,10 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 13/04/19
- * Description:
+ * Description: https://www.careercup.com/question?id=6266160824188928
+ * Given a room with thief on left side of the room with finite number of sensors.
+ * He has to reach on right side missing the sensors. Each sensor is placed at any random point in the room and has its coverage in the radius r.
+ * Find out if the thief can reach to the right side without touching the range of any sensor.?
  */
 public class ThiefInRoomOfSensors {
 
@@ -67,7 +70,7 @@ public class ThiefInRoomOfSensors {
 
 
     static class Sensors {
-        int id = 0;
+        int id ;
         double x, y;
         double r;
 
@@ -140,10 +143,11 @@ public class ThiefInRoomOfSensors {
         for (int i = 0; i < sensors.size(); i++) {
             Sensors s = sensors.get(i);
 
-            if (s.y + s.r >= roomH) // overlap top
+            if (s.y + s.r >= roomH) // overlap top; from the center of the sensors, if we add radius to its height(y) and its beyond or touch room height
                 sensorsCoveringTop.add(s);
 
-            if (s.y <= s.r) //overlap bottom
+            if (s.y <= s.r) //overlap bottom; as y is the y-th coordinates, r is radius (as height) ; lets suppose height of room is H; then height of y coordinate is (H-y)
+                            // remaining height is (H-(H-y)= y, hence y<=r then touches
                 sensorsCoveringBottom.add(s);
         }
 
@@ -176,7 +180,7 @@ public class ThiefInRoomOfSensors {
                 Sensors x = sensors.get(i);
                 Sensors y = sensors.get(j);
 
-                if ((Math.pow((x.x - y.x), 2) + Math.pow((x.y - y.y), 2)) <= 4 * Math.pow(x.r, 2)) {
+                if ((Math.pow((x.x - y.x), 2) + Math.pow((x.y - y.y), 2)) <= 4 * Math.pow(x.r, 2)) { //x^2 + y^2 <= 4*r^2
                     graphUnionFind.union(x.id, y.id);
                 }
             }
