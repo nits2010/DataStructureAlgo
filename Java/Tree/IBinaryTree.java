@@ -1,5 +1,7 @@
 package Java.Tree;
 
+import javafx.util.Pair;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -926,41 +928,131 @@ public interface IBinaryTree {
 
     }
 
+
     /**
-     *https://www.careercup.com/question?id=5074469692375040
-     *
+     * https://www.careercup.com/question?id=5074469692375040
+     * {{{
      * It should be post order traversal with below way of cal
-     *
+     * <p>
      * If leaf
      * =>Item: odd
      * .      Return ( 0, value)
      * => item : even
      * .      Return ( value, 0)
-     *
+     * <p>
      * If not leaf
      * => item even
-     *     // through both child's creating max subtree
+     * // through both child's creating max subtree
      * .    max = MAX ( max, MAX(left.even+ right.even, left.odd+ right.odd) + value)
-     *
-     *       return (
-     *        even-> MAX ( MAX ( left.even, right.even) + value, value),
-     * 	odd -> MAX ( left.odd, right.odd) + value, value )
-     *        )
-     *
+     * <p>
+     * return (
+     * even-> MAX ( MAX ( left.even, right.even) + value, value),
+     * odd ->( left.odd, right.odd) + value )
+     * )
+     * <p>
      * => item odd
-     *     // through both child's creating max subtree
+     * // through both child's creating max subtree
      * .    max = MAX ( max, left.odd +  right.odd + value)
-     *
-     *       return (
-     *        even-> MAX ( left.odd, right.odd) + value, value),
-     * 	odd -> MAX ( left.even, right.eve) + value, value )
-     *        )
-     *
+     * <p>
+     * return (
+     * even-> ( left.odd, right.odd) + value),
+     * odd -> MAX ( left.even, right.eve) + value, value )
+     * )
+     * <p>
      * if any situation the value at odd position is even, then put 0 instead
      * Like tree
-     *   6 here even sum is not possible (6+2 = even, 6+4= even, 2+4+6 = even) not possible odd sum( 10,0)
+     * 6 here even sum is not possible (6+2 = even, 6+4= even, 2+4+6 = even) not possible odd sum( 10,0)
      * 2  4
+     * <p>
+     * }}}
      */
 
+    default int maximumEvenPathSum(TreeNode<Integer> root) {
+
+        MinMaxObject<Integer> max = new MinMaxObject<>(Integer.MIN_VALUE);
+
+        maximumEvenPathSum(root, max);
+
+        return max.data;
+    }
+
+    //Pair <even, odd>
+    default Pair<Integer, Integer> maximumEvenPathSum(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+
+        //its null
+        if (root == null) {
+            return new Pair<>(0, 0);
+        }
+
+        if (isLeaf(root)) {
+
+            //if odd
+            if (root.getData() % 2 != 0) {
+                return new Pair<>(0, root.getData());
+            } else //if even
+                return new Pair<>(root.getData(), 0);
+        }
+
+        Pair<Integer, Integer> left = maximumEvenPathSum(root.getLeft(), max);
+        Pair<Integer, Integer> right = maximumEvenPathSum(root.getRight(), max);
+
+        //if parent is Even
+        if (root.getData() % 2 == 0) {
+            /**
+             * * => item even
+             *      * // through both child's creating max subtree
+             *      * .    max = MAX ( max, MAX(left.even+ right.even, left.odd+ right.odd) + value)
+             *      * <p>
+             *      * return (
+             *      * even-> MAX ( MAX ( left.even, right.even) + value, value),
+             *      * odd ->( left.odd, right.odd) + value )
+             *      * )
+             *      * <p>
+
+             */
+
+
+            max.data = Math.max(max.data, Math.max(left.getKey() + right.getKey(), left.getValue() + right.getValue()) + root.getData());
+
+            int even = Math.max(Math.max(left.getKey(), right.getKey()) + root.getData(), root.getData());
+            int odd = Math.max(left.getValue(), right.getValue()) + root.getData();
+
+            if (odd % 2 == 0)
+                odd = 0;
+
+            if (even % 2 != 0)
+                even = 0;
+
+            return new Pair<>(even, odd);
+
+        } else {
+
+            /**
+             *      * => item odd
+             *      * // through both child's creating max subtree
+             *      * .    max = MAX ( max, left.odd +  right.odd + value)
+             *      * <p>
+             *      * return (
+             *      * even-> ( left.odd, right.odd) + value),
+             *      * odd -> MAX ( left.even, right.eve) + value, value )
+             *      * )
+             */
+
+
+            max.data = Math.max(max.data, left.getValue() + right.getValue() + root.getData());
+
+            int even = root.getData() + Math.max(left.getValue(), right.getValue());
+            int odd = Math.max(root.getData(), Math.max(left.getKey(), right.getKey()) + root.getData());
+
+            if (odd % 2 == 0)
+                odd = 0;
+            if (even % 2 != 0)
+                even = 0;
+
+            return new Pair<>(even, odd);
+
+        }
+
+    }
 
 }
