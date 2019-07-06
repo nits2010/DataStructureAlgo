@@ -31,7 +31,7 @@ public class MaxProfitMultiTransactions {
     public static int maxProfit(int[] prices, int n) {
         int maxProfit = 0;
         for (int i = 1; i < n; i++)
-            if (prices[i] >= prices[i - 1])
+            if (prices[i] > prices[i - 1])
                 maxProfit += prices[i] - prices[i - 1];
 
         return maxProfit;

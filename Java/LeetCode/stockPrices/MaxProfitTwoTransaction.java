@@ -22,7 +22,8 @@ public class MaxProfitTwoTransaction {
 
     /*
    profit[i] represent the max profit to gain if we buy from any of 0 to i-1 and sell at i;
-   since we have to do max two transaction (or at least 1) then we need to do it max twice these transactions;
+   we have to do max two transaction (or at least 1), we calculate by doing twice the above transactios.
+   
 
    now;
    [ 1st trasnaction]
