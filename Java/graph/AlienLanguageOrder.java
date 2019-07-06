@@ -6,6 +6,18 @@ import java.util.List;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 20/02/19
  * Description: https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/
+ * <p>
+ * Given a sorted dictionary (array of words) of an alien language, find order of characters in the language.
+ * Examples:
+ * <p>
+ * Input:  words[] = {"baa", "abcd", "abca", "cab", "cad"}
+ * Output: Order of characters is 'b', 'd', 'a', 'c'
+ * Note that words are sorted and in the given language "baa"
+ * comes before "abcd", therefore 'b' is before 'a' in output.
+ * Similarly we can find other orders.
+ * <p>
+ * Input:  words[] = {"caa", "aaa", "aab"}
+ * Output: Order of characters is 'c', 'a', 'b'
  */
 public class AlienLanguageOrder {
 

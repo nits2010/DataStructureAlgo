@@ -41,6 +41,11 @@ public class DirectedGraph implements IGraph {
         return this.vertices;
     }
 
+    /**
+     * This works for both, Directed Graph
+     * and Un-Directed Graph
+     * @return
+     */
     @Override
     public List<Integer> topologicalSort() {
 
@@ -82,7 +87,11 @@ public class DirectedGraph implements IGraph {
         stack.push(x);
 
     }
-
+    /**
+     * This works for only, Directed Graph
+     * because A DAG G has at least one vertex with in-degree 0 and one vertex with out-degree 0.
+     * @return
+     */
     @Override
     public List<Integer> topologicalSortKhanAlgo() {
         List<Integer> top = new ArrayList<>(this.vertices);
