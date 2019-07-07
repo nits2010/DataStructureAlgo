@@ -1,7 +1,5 @@
 package facebook;
 
-import Java.Design.parkingLot.parkingLot.ParkingLot;
-
 import java.util.*;
 
 /**
