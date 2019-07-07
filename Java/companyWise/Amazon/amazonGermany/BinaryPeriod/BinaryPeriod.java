@@ -47,7 +47,7 @@ class SolutionBinaryPeriod {
         return -1;
     }
 
-    //wrong
+    
     int binaryPeriodBiggest(int n) {
         int[] d = new int[30];
         int l = 0, res = -1;
