@@ -27,4 +27,6 @@ public interface IBinarySearchTree extends IBinaryTree {
     boolean checkForIdenticalBST(List<Integer> input1, List<Integer> inpput2);
 
 
+    double medianO1(TreeNode<Integer> root);
+
 }

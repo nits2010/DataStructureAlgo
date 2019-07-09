@@ -130,5 +130,12 @@ public class TestHelper {
 
     }
 
+    public static void medianTest(IBinaryTree binaryTree, TreeNode<Integer> root) {
+        System.out.println("********** Median Test********");
+        List<Integer> inOrder = binaryTree.inOrder(root);
+        System.out.println("inorder " + inOrder);
+        System.out.println("Median: " + ((BinarySearchTree) binaryTree).medianO1(root));
+    }
+
 
 }
