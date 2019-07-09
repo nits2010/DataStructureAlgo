@@ -862,7 +862,11 @@ public interface IBinaryTree {
         }
     }
 
-    //https://leetcode.com/problems/binary-tree-maximum-path-sum/
+    /**
+     * //https://leetcode.com/problems/binary-tree-maximum-path-sum/
+     * @param root
+     * @return
+     */
     default int maximumPathSumAnyNode(TreeNode root) {
         if (root == null)
             return 0;
@@ -896,6 +900,11 @@ public interface IBinaryTree {
     }
 
 
+    /**
+     * https://www.geeksforgeeks.org/find-maximum-path-sum-two-leaves-binary-tree/
+     * @param root
+     * @return
+     */
     default int maximumPathSumLeafToLeaf(TreeNode root) {
 
         if (null == root)

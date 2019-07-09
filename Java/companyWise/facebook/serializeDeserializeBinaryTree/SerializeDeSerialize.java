@@ -10,12 +10,12 @@ package Java.companyWise.facebook.serializeDeserializeBinaryTree;
 public class SerializeDeSerialize {
 
 
-    static void inOrder(Node root) {
+    static void inOrder(TreeNode root) {
         if (null == root)
             return;
 
         inOrder(root.left);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         inOrder(root.right);
 
     }
@@ -31,16 +31,16 @@ public class SerializeDeSerialize {
 
     private static void preOrder() {
 
-        Node root = new Node(2);
+        TreeNode root = new TreeNode(2);
 
-        root.left = new Node(3);
-        root.right = new Node(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(5);
 
-        root.left.left = new Node(11);
-        root.left.right = new Node(4);
+        root.left.left = new TreeNode(11);
+        root.left.right = new TreeNode(4);
 
         root.right.left = null;
-        root.right.right = new Node(9);
+        root.right.right = new TreeNode(9);
         inOrder(root);
         System.out.println();
 
@@ -50,7 +50,7 @@ public class SerializeDeSerialize {
         String vv = serializeDeSerializePreOrder.serialize(root);
         System.out.println(vv);
 
-        Node r = serializeDeSerializePreOrder.deserialize(vv);
+        TreeNode r = serializeDeSerializePreOrder.deserialize(vv);
         inOrder(r);
 
 

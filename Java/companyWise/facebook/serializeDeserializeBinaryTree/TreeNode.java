@@ -5,11 +5,11 @@ package Java.companyWise.facebook.serializeDeserializeBinaryTree;
  * Date: 2019-07-04
  * Description:
  */
-class Node {
-    int value;
-    Node left = null, right = null;
+class TreeNode {
+    int val;
+    TreeNode left = null, right = null;
 
-    public Node(int value) {
-        this.value = value;
+    public TreeNode(int value) {
+        this.val = value;
     }
 }

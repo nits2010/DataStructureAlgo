@@ -8,7 +8,7 @@ package Java.companyWise.facebook.serializeDeserializeBinaryTree;
 
 class SerializeDeSerializePreOrder {
 
-    static String serialize(Node root) {
+    static String serialize(TreeNode root) {
 
         if (null == root)
             return "";
@@ -20,7 +20,7 @@ class SerializeDeSerializePreOrder {
         return helper.str.substring(0, helper.str.length() - 1);
     }
 
-    static void serializer(Node root, Helper helper) {
+    static void serializer(TreeNode root, Helper helper) {
 
         if (null == root) {
             helper.str += "$,";
@@ -28,7 +28,7 @@ class SerializeDeSerializePreOrder {
 
         }
 
-        helper.str += root.value + ",";
+        helper.str += root.val + ",";
         serializer(root.left, helper);
         serializer(root.right, helper);
 
@@ -36,7 +36,7 @@ class SerializeDeSerializePreOrder {
     }
 
 
-    static Node deserialize(String encodedBT) {
+    static TreeNode deserialize(String encodedBT) {
         if (encodedBT.isEmpty())
             return null;
 
@@ -48,13 +48,13 @@ class SerializeDeSerializePreOrder {
     }
 
     //PreOrder = 2 3 1 $ $ 10 $ $ 5 $ 12 $ $
-    static Node deserialize(Helper index) {
+    static TreeNode deserialize(Helper index) {
 
 
         if (index.toDeserialize[index.index].equals("$"))
             return null;
 
-        Node root = new Node(Integer.parseInt(index.toDeserialize[index.index]));
+        TreeNode root = new TreeNode(Integer.parseInt(index.toDeserialize[index.index]));
         index.index++;
         root.left = deserialize(index);
         index.index++;
