@@ -21,7 +21,6 @@ public class LongestPossibleChunkedPalindrome {
         System.out.println("input :" + input3 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input3));
         System.out.println("input :" + input4 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input4));
         System.out.println("input :" + input5 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input5));
-
     }
 
     private static int longestPossibleChunkedPalindrome(String input) {
@@ -42,14 +41,13 @@ public class LongestPossibleChunkedPalindrome {
         if (current.length() == 1) {
 
 
-
-                return (1);
+            return (1);
 
         }
 
 
         int n = current.length();
-        
+
 
         //Check for palindrome; only half is sufficient since palindrome is mirror from the middle
         for (int i = 0; i < n / 2; i++) {
@@ -67,4 +65,6 @@ public class LongestPossibleChunkedPalindrome {
 
         return count + 1;
     }
+
+
 }

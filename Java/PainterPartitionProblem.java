@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-06
- * Description:
+ * Description: https://www.geeksforgeeks.org/painters-partition-problem/
  */
 public class PainterPartitionProblem {
 
@@ -14,12 +14,12 @@ public class PainterPartitionProblem {
         int boards[] = {10, 20, 30, 40};
         int k = 2;
 
-        System.out.println(sol.miinCostOptimized(boards, k));
+        System.out.println(sol.minCostOptimized(boards, k));
 
         int boards2[] = {10, 10, 10, 10};
         int k2 = 2;
 
-        System.out.println(sol.miinCostOptimized(boards2, k2));
+        System.out.println(sol.minCostOptimized(boards2, k2));
 
 
     }
@@ -128,7 +128,7 @@ class SolutionPainterPartitionProblem {
             for (int i = 2; i <= n; i++) {
 
                 int best = Integer.MAX_VALUE;
-                int max = 0;
+                int max ;
                 for (int j = 1; j <= i; j++) {
                     max = Math.max(cost[j][k - 1], sum[i] - sum[j]);
 
@@ -170,7 +170,7 @@ class SolutionPainterPartitionProblem {
      * @param painters
      * @return
      */
-    int miinCostOptimized(int board[], int painters) {
+    int minCostOptimized(int board[], int painters) {
 
         if (null == board || board.length == 0)
             return 0;
@@ -190,7 +190,7 @@ class SolutionPainterPartitionProblem {
 
             int requiredPainter = paintersRequired(board, mid, painters);
             if (requiredPainter > painters) {
-                low = mid+1;
+                low = mid + 1;
             } else if (requiredPainter == painters) {
                 high = mid;
                 potentialSolution = mid;

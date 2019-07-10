@@ -669,6 +669,69 @@ public class BinarySearchTree implements IBinarySearchTree {
 
     }
 
+    @Override
+    public double medianO1(TreeNode<Integer> root) {
+
+        if (null == root)
+            return 0.0;
+
+        int size = size(root);
+
+        int limit = size / 2;
+
+        TreeNode<Integer> current = root, prev = null;
+        int count = 0;
+
+        double median = 0.0;
+        boolean found = false;
+        while (current != null) {
+
+
+            if (current.getLeft() == null) {
+                count++;
+
+                if (count > limit && !found) {
+
+                    if (size % 2 == 0)
+                        median = (prev.getData() + current.getData()) / 2;
+                    else
+                        median = current.getData();
+                    found = true;
+                }
+                prev = current;
+                current = current.getRight();
+
+            } else {
+                TreeNode<Integer> temp = current.getLeft();
+
+                while (temp.getRight() != null && temp.getRight() != current)
+                    temp = temp.getRight();
+
+                if (temp.getRight() == null) {
+                    temp.setRight(current);
+                    current = current.getLeft();
+                } else {
+                    temp.setRight(null);
+                    count++;
+                    if (count > limit && !found) {
+
+                        if (size % 2 == 0)
+                            median = (prev.getData() + current.getData()) / 2;
+                        else
+                            median = current.getData();
+
+                        found = true;
+                    }
+                    prev = current;
+                    current = current.getRight();
+                }
+            }
+        }
+
+
+        return median;
+    }
+
     //O(n^2)
     private boolean checkForIdenticalBST(List<Integer> input1, List<Integer> input2, int index1, int index2, int min, int max) {
 

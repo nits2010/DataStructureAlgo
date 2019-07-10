@@ -28,6 +28,8 @@ public class DriverProgramBinarySearchTree {
         binaryTree.insert(7, bt);
 
 
+        TestHelper.medianTest(binaryTree, bt);
+
         TestHelper.runPreSucTest(((BinarySearchTree) binaryTree).nodes, binaryTree, bt);
 
         TestHelper.fromOrderToOrderTest(binaryTree, bt);
@@ -55,7 +57,10 @@ public class DriverProgramBinarySearchTree {
         binaryTree.insert(1, bst);
         binaryTree.insert(3, bst);
 
+
+        TestHelper.medianTest(binaryTree, bst);
         TestHelper.runTraversal(binaryTree, bst);
+
 
 
         System.out.println("\n is BST: " + binaryTree.isBST(bst));
