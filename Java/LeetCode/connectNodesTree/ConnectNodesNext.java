@@ -11,6 +11,8 @@ import java.util.Queue;
  * 2. General tree:  https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
  * <p>
  * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/discuss/331784/A-intersting-solution%3A-iterative-simple-JAVA
+ *
+ * https://www.geeksforgeeks.org/connect-nodes-at-same-level-with-o1-extra-space/
  */
 
 class Node {
@@ -68,6 +70,7 @@ public class ConnectNodesNext {
 //        return UsingTraversal.connectLevelOrderTraversalIterative(root);
 //        return UsingNext.connectNodesUsingNextRecursive (root);
 //        return UsingNext.connectNodesUsingNextIterative(root);
+        return UsingDummyNode.connectUsingDummy(root);
 
     }
 
