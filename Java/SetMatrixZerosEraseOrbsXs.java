@@ -229,7 +229,7 @@ public class SetMatrixZerosEraseOrbsXs {
 
             //if it has more degree, then push it to process further
             if (node.degree == 0)
-                priorityQueue.remove(node);
+                priorityQueue.poll();
             else {
                 //If all other node degree is 0? in that case only one node has more than 0 degree
                 if (priorityQueue.size() <= 1) {
