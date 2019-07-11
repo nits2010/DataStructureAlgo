@@ -1,9 +1,6 @@
 package Java.Tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -730,6 +727,76 @@ public class BinarySearchTree implements IBinarySearchTree {
 
 
         return median;
+    }
+
+    @Override
+    public List<Integer> mergeInSorted(TreeNode<Integer> root1, TreeNode<Integer> root2) {
+
+        if (root1 == null)
+            return inOrder(root2);
+
+        if (root2 == null)
+            return inOrder(root1);
+
+
+        TreeNode<Integer> current1 = root1;
+        TreeNode<Integer> current2 = root2;
+        Stack<TreeNode<Integer>> stack1 = new Stack<>();
+        Stack<TreeNode<Integer>> stack2 = new Stack<>();
+
+        List<Integer> values = new LinkedList<>();
+        while (current1 != null || current2 != null) {
+
+            if (current1 != null || current2 != null) {
+
+                while (current1 != null) {
+                    stack1.push(current1);
+                    current1 = current1.getLeft();
+
+                }
+
+                while (current2 != null) {
+                    stack2.push(current2);
+                    current2 = current2.getLeft();
+
+                }
+            } else {
+
+                if (stack1.isEmpty()) {
+
+                    while (!stack2.isEmpty()) {
+
+                        current2 = stack2.pop();
+                        current2.setLeft(null);
+                        values.addAll(inOrder(current2));
+                        return values;
+                    }
+                }
+                if (stack2.isEmpty()) {
+
+                    while (!stack1.isEmpty()) {
+
+                        current1 = stack1.pop();
+                        current1.setLeft(null);
+                        values.addAll(inOrder(current1));
+                        return values;
+                    }
+                }
+
+                if (stack1.peek().getData() < stack2.peek().getData()) {
+                    current1 = stack1.pop();
+                    values.add(current1.getData());
+                    current2 = null;
+                } else {
+                    current2 = stack2.pop();
+                    values.add(current2.getData());
+                    current1 = null;
+                }
+            }
+        }
+
+
+        return values;
     }
 
     //O(n^2)

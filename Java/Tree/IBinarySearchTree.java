@@ -1,6 +1,6 @@
 package Java.Tree;
 
-        import java.util.List;
+import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -28,5 +28,7 @@ public interface IBinarySearchTree extends IBinaryTree {
 
 
     double medianO1(TreeNode<Integer> root);
+
+    List<Integer> mergeInSorted(TreeNode<Integer> root1, TreeNode<Integer> root2);
 
 }

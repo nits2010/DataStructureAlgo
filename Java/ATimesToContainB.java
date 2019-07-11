@@ -1,11 +1,14 @@
 package Java;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 11/04/19
  * Description:
  * https://stackoverflow.com/questions/46832383/algorithm-to-find-how-many-times-a-string-a-needs-to-be-stated-such-that-it-cont
- *
+ * <p>
  * Question:
  * <p>
  * Given two strings A and B, return the number of times A needs to be stated such that it contains string B?
@@ -88,27 +91,30 @@ public class ATimesToContainB {
     private static int atimesbBruteForce(String a, String b) {
 
         int m = b.length();
-        String tempA = a;
+        StringBuilder tempA = new StringBuilder(a);
 
-        if (tempA.contains(b))
+        if (tempA.toString().contains(b))
             return 1;
 
         for (int i = 1; i < m; i++) { // O(m)
 
-            tempA = tempA + a;
-            if (tempA.contains(b)) //O(n*m); since temp A length could be max "m" times a length which is "n", for checking contains it take O(textLength); O(m*n)
+            tempA.append(a);
+            if (tempA.toString().contains(b)) //O(n*m); since temp A length could be max "m" times 'a' length's, which is "n", for checking contains it take O(textLength); O(m*n)
                 return i + 1;
         }
         return Integer.MIN_VALUE;
 
     }
 
+
     //Idea take from above stack overflow
 
     /**
-     * If |B| > 2|A| - 2 and B occurs in A^n, then A occurs in B. Count and remove all complete instances of A in B, and then the solution is this count plus the solution to the same problem with A'MinStepsInfiniteGrid removed from B.
+     * If |B| > 2|A| - 2 and B occurs in A^n, then A occurs in B. Count and remove all complete instances of A in B, and
+     * then the solution is this count plus the solution to the same problem with A'MinStepsInfiniteGrid removed from B.
      * <p>
-     * Otherwise, it is guaranteed that if B appears in A^n, it appears in A^3. Construct A^3 and find the first occurrence of B in it. Find and remove any complete instances of A appearing after the end of B'MinStepsInfiniteGrid appearance in A^3. Return 3 minus the number of removed instances.
+     * Otherwise, it is guaranteed that if B appears in A^n, it appears in A^3. Construct A^3 and find the first occurrence of B in it.
+     * Find and remove any complete instances of A appearing after the end of B'MinStepsInfiniteGrid appearance in A^3. Return 3 minus the number of removed instances.
      * <p>
      * Examples:
      * <p>
@@ -119,19 +125,19 @@ public class ATimesToContainB {
      * f(cdab, abcd)
      * |cdab| < 2|abcd| - 2 since 4 < 2*4 - 2
      * abcdabcdabcd
-     * ^^^^
+     *   ^^^^
      * first instance of B in A; one instance of A after B, so return 3 - 1 = 2.
      * <p>
      * f(d, abcd)
      * |d| < 2|abcd| - 2, since 1 < 2*4 - 2
      * abcdabcdabcd
-     * ^
+     *    ^
      * first instance of B in A; two instances of A after B, so return 3 - 2 = 1.
      * <p>
      * f(cda, abcd)
      * |cda| = 2|abcd| - 2 since 3 = 2*4 - 2
      * abcdabcdabcd
-     * ^^^
+     *   ^^^
      * first instance of B in A; one instance of A after B, so return 3 - 1 = 2.
      * <p>
      * f(cdb, abcd)
@@ -146,9 +152,7 @@ public class ATimesToContainB {
      *
      * @param a
      * @param b
-     * @return
-     *
-     * O((m^2)/n)
+     * @return O(( m ^ 2)/n)
      */
     private static int atimesb(String a, String b) {
         int n = a.length();
@@ -194,7 +198,7 @@ public class ATimesToContainB {
     }
 
     /**
-     * It will count how many times "toCount" is occur in "fromCount" if occures at all
+     * It will count how many times "toCount" is occur in "fromCount" if occurs at all
      *
      * @param fromToCount
      * @param toCount
