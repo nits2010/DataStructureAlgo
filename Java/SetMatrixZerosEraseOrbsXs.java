@@ -78,11 +78,9 @@ public class SetMatrixZerosEraseOrbsXs {
     private static int count(char result[][]) {
         int count = 0;
         for (int i = 0; i < result.length; i++) {
-            System.out.println();
             for (int j = 0; j < result[0].length; j++) {
                 if (result[i][j] == 'O')
                     count++;
-                System.out.print(result[i][j] + " ");
             }
         }
         return count;
@@ -90,6 +88,7 @@ public class SetMatrixZerosEraseOrbsXs {
 
     public static void test(char matrix[][]) {
 
+        System.out.println("Testing...");
         print(matrix);
         System.out.println("\n\noutput");
 
@@ -178,22 +177,22 @@ public class SetMatrixZerosEraseOrbsXs {
         PriorityQueue<DegreeNode> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o.degree));
 
         //Count degree
-//        for (int i = 0; i < rows; i++) {
-//            for (Integer r : row.getOrDefault(i, new HashSet<>())) {
-//                int degree = row.get(i).size() + col.getOrDefault(r, new HashSet<>()).size() - 2;
-//                if (degree > 0)
-//                    priorityQueue.offer(new DegreeNode(i, r, degree));
-//            }
-//        }
-
-
-        for (Integer i : row.keySet()) {
-            for (Integer j : row.get(i)) {
-                int degree = row.get(i).size() + col.getOrDefault(j, new HashSet<>()).size() - 2;
+        for (int i = 0; i < rows; i++) {
+            for (Integer r : row.getOrDefault(i, new HashSet<>())) {
+                int degree = row.get(i).size() + col.getOrDefault(r, new HashSet<>()).size() - 2;
                 if (degree > 0)
-                    priorityQueue.offer(new DegreeNode(i, j, degree));
+                    priorityQueue.offer(new DegreeNode(i, r, degree));
             }
         }
+
+
+//        for (Integer i : row.keySet()) {
+//            for (Integer j : row.get(i)) {
+//                int degree = row.get(i).size() + col.getOrDefault(j, new HashSet<>()).size() - 2;
+//                if (degree > 0)
+//                    priorityQueue.offer(new DegreeNode(i, j, degree));
+//            }
+//        }
 
 
         return priorityQueue;
@@ -221,16 +220,16 @@ public class SetMatrixZerosEraseOrbsXs {
 
 
         //Delete till every node has zero degree except last node
-        while (true) {
+        while (!priorityQueue.isEmpty()) {
 
-            DegreeNode node = priorityQueue.poll();
+            DegreeNode node = priorityQueue.peek();
 
             //decrease the degree
             node.degree--;
 
             //if it has more degree, then push it to process further
-            if (node.degree != 0)
-                priorityQueue.offer(node);
+            if (node.degree == 0)
+                priorityQueue.remove(node);
             else {
                 //If all other node degree is 0? in that case only one node has more than 0 degree
                 if (priorityQueue.size() <= 1) {
