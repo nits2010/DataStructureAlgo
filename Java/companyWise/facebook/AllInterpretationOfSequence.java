@@ -33,6 +33,7 @@ public class AllInterpretationOfSequence {
         out = allInterpretationOfSequence(arr);
         System.out.println("input: " + arr + " output: " + out);
 
+
         // aaa(1,1,1) ak(1,11) ka(11,1)
         int[] arr2 = {1, 1, 1};
         out = allInterpretationOfSequence(arr2);
@@ -67,7 +68,8 @@ public class AllInterpretationOfSequence {
     }
 
     private static List<String> allInterpretationOfSequence(int[] arr) {
-        Node root = allInterpretationOfSequence(0, "", arr);
+        List<String> output = new ArrayList<>();
+        Node root = allInterpretationOfSequence(0, "", arr, output);
 
         return show(root);
 
@@ -96,7 +98,7 @@ public class AllInterpretationOfSequence {
         show(root.right, output);
     }
 
-    private static Node allInterpretationOfSequence(int index, String soFar, int[] arr) {
+    private static Node allInterpretationOfSequence(int index, String soFar, int[] arr,  List<String> output) {
 
         if (index > 26)
             return null;
@@ -109,11 +111,11 @@ public class AllInterpretationOfSequence {
         if (arr.length > 0) {
             index = arr[0];
 
-            root.left = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 1, arr.length));
+            root.left = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 1, arr.length),output);
 
             if (arr.length > 1) {
                 index = arr[0] * 10 + arr[1];
-                root.right = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 2, arr.length));
+                root.right = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 2, arr.length),output);
 
             }
 
@@ -121,4 +123,6 @@ public class AllInterpretationOfSequence {
         }
         return root;
     }
+
+
 }
