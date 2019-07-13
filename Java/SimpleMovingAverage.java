@@ -1,15 +1,23 @@
-package Java.companyWise.facebook;
+package Java;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
- * Date: 03/04/19
- * Description: https://www.careercup.com/question?id=6313643925831680
- * Calculate a moving average that considers the last N values.
- * Circular Queue (Interviewer didn't agree with the linked list queue that I suggested at first. Said the pointers took space)
+ * Date: 2019-07-14
+ * Description: https://www.geeksforgeeks.org/program-find-simple-moving-average/
  * <p>
+ * Simple Moving Average is the average obtained from the data for some t period of time . In normal mean, it’s value get changed with the changing data but in this type of mean it also changes with the time interval . We get the mean for some period t and then we remove some previous data . Again we get new mean and this process continues . This is why it is moving average . This have a great application in financial market .
+ * * <p>
+ * * Examples:
+ * * <p>
+ * * Input : { 1, 3, 5, 6, 8 }
+ * * Period = 3
+ * * Output :New number added is 1.0, SMA = 0.3333333333333333
+ * * New number added is 3.0, SMA = 1.3333333333333333
+ * * New number added is 5.0, SMA = 3.0
+ * * New number added is 6.0, SMA = 4.666666666666667
+ * * New number added is 8.0, SMA = 6.333333333333333
  */
-public class MovingAverage {
-
+public class SimpleMovingAverage {
     static class MovingAverageHolder {
 
         int circularQueue[];
@@ -25,7 +33,7 @@ public class MovingAverage {
         }
 
         //O(1)
-        public double getAverage(int item) {
+        public double getSimpleAverage(int item) {
 
             this.sum += item;
 
@@ -45,19 +53,9 @@ public class MovingAverage {
             circularQueue[tail] = item;
             tail = (tail + 1) % this.maxSize;
 
-            /**
-             *  considers the last N values.
-             */
-//            if (this.size < this.maxSize)
-//                return ((double) sum / this.size); //Note here we divide by the current size of array
-//            else
-//                return ((double) sum / this.maxSize); //Note here we divide by the max size of array
+            return ((double) sum / this.maxSize); //Note: this distinguish this question to actual moving average question
 
-            //considers the last N values.
-            return (double) sum / (this.size % (this.maxSize + 1));
         }
-
-
     }
 
     public static void main(String args[]) {
@@ -75,9 +73,9 @@ public class MovingAverage {
 
     private static void movingAverage(int arr[], int n) {
 
-        MovingAverageHolder movingAverageHolder = new MovingAverageHolder(n);
+        SimpleMovingAverage.MovingAverageHolder movingAverageHolder = new SimpleMovingAverage.MovingAverageHolder(n);
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(movingAverageHolder.getAverage(arr[i]));
+            System.out.println(movingAverageHolder.getSimpleAverage(arr[i]));
 
         }
     }
