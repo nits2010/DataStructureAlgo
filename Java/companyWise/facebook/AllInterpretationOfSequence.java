@@ -68,8 +68,7 @@ public class AllInterpretationOfSequence {
     }
 
     private static List<String> allInterpretationOfSequence(int[] arr) {
-        List<String> output = new ArrayList<>();
-        Node root = allInterpretationOfSequence(0, "", arr, output);
+        Node root = allInterpretationOfSequence(0, "", arr);
 
         return show(root);
 
@@ -98,7 +97,7 @@ public class AllInterpretationOfSequence {
         show(root.right, output);
     }
 
-    private static Node allInterpretationOfSequence(int index, String soFar, int[] arr,  List<String> output) {
+    private static Node allInterpretationOfSequence(int index, String soFar, int[] arr) {
 
         if (index > 26)
             return null;
@@ -111,11 +110,11 @@ public class AllInterpretationOfSequence {
         if (arr.length > 0) {
             index = arr[0];
 
-            root.left = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 1, arr.length),output);
+            root.left = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 1, arr.length));
 
             if (arr.length > 1) {
                 index = arr[0] * 10 + arr[1];
-                root.right = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 2, arr.length),output);
+                root.right = allInterpretationOfSequence(index, currentString, Arrays.copyOfRange(arr, 2, arr.length));
 
             }
 

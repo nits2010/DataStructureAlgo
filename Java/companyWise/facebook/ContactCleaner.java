@@ -5,67 +5,121 @@ import java.util.*;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 01/04/19
- * Description:
+ * Description: https://www.careercup.com/question?id=5630954857562112
+ * Given a list of Contacts, where each contact consists of a contact ID and a list of email IDs.
+ * Output a unique list of contacts by removing duplicates.
+ * Two contacts are considered to be the same, if they share at least one email ID.
+ * <p>
+ * https://www.geeksforgeeks.org/find-same-contacts-in-a-list-of-contacts/
+ * <p>
+ * <p>
+ * Given a list of contacts containing username, email and phone number in any order. Identify the same contacts (i.e., same person having many different contacts) and output the same contacts together.
+ * Notes:
+ * 1) A contact can store its three fields in any order, i.e., phone number can appear before username or username can appear before phone number.
+ * <p>
+ * 2) Two contacts are same if they have either same username or email or phone number.
+ * <p>
+ * Example:
+ * <p>
+ * Input: contact[] =
+ * { {"Gaurav", "gaurav@gmail.com", "gaurav@gfgQA.com"},
+ * { "Lucky", "lucky@gmail.com", "+1234567"},
+ * { "gaurav123", "+5412312", "gaurav123@skype.com"}.
+ * { "gaurav1993", "+5412312", "gaurav@gfgQA.com"}
+ * }
+ * Output:
+ * 0 2 3
+ * 1
+ * contact[2] is same as contact[3] because they both have same
+ * contact number.
+ * contact[0] is same as contact[3] because they both have same
+ * e-mail address.
+ * Therefore, contact[0] and contact[2] are also same.
  */
 public class ContactCleaner {
 
 
-    static class Contact {
-        String userName;
-
-        Set<String> contacts;
-
-        boolean isVisited = false;
-
-        int index = -1;
-
-
-        public Contact(String name, Set<String> set, int index) {
-            userName = name;
-            contacts = new HashSet<>(set);
-            this.index = index;
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(index);
-        }
-    }
-
     public static void main(String args[]) {
 
-        String [][]contacts =  {{"John", "john@gmail.com", "john@fb.com"},
+        String[][] contacts = {{"John", "john@gmail.com", "john@fb.com"},
                 {"Dan", "dan@gmail.com", "+1234567"},
                 {"john123", "5412312", "john123@skype.com"},
                 {"john1985", "5412312", "john@fb.com"},
                 {"john19856", "john123@skype.com", "john@fb1.com"},
-                {"Dan2", "dan123@gmail.com", "+1234567"},{"Dan3", "dan@gmail.com", "+123456712312"},
-                {"Sandy", "sandy@gmail.com", "+123456712"},{"sandy4", "sandy@fb.com", "sandy@gmail.com"}};
+                {"Dan2", "dan123@gmail.com", "+1234567"}, {"Dan3", "dan@gmail.com", "+123456712312"},
+                {"Sandy", "sandy@gmail.com", "+123456712"}, {"sandy4", "sandy@fb.com", "sandy@gmail.com"}};
 
-        List<Contact> contactList = buildContactList(contacts);
-        List<Set<Contact>> result = buildContactGraph(contactList);
-
+        List<Set<Contact>> result = ContactCleaner1.clean(contacts);
 
         System.out.println(result);
     }
 
-    private static List<Set<Contact>> buildContactGraph(List<Contact> contactList) {
+}
 
-        Map<String, List<Contact>> map = buildContactMap(contactList);
+
+class Contact {
+    String userName;
+
+    Set<String> contacts;
+
+    boolean isVisited = false;
+
+    int index;
+
+
+    public Contact(String name, Set<String> set, int index) {
+        userName = name;
+        contacts = new HashSet<>(set);
+        this.index = index;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return index == contact.index;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(index);
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(index);
+    }
+}
+
+
+class ContactCleaner1 {
+
+
+    public static List<Set<Contact>> clean(String[][] contacts) {
+
+        List<Contact> contactList = buildContactList(contacts);
+        List<Set<Contact>> result = clean(contactList);
+        return result;
+    }
+
+    private static List<Set<Contact>> clean(List<Contact> contactList) {
+
+        Map<String, List<Contact>> map = buildContactGraphAdjList(contactList);
 
         List<Set<Contact>> result = new ArrayList<>();
 
 
         for (List<Contact> contacts : map.values()) {
-            Set<Contact> uniques = null;
+            Set<Contact> uniques = new HashSet<>();
             for (Contact con : contacts) {
 
                 if (!con.isVisited) {
-                    uniques = dfs(map, con, new HashSet<>());
+                    dfs(map, con, uniques);
                 }
 
             }
-            if (uniques != null)
+            if (!uniques.isEmpty())
                 result.add(uniques);
 
 
@@ -76,7 +130,7 @@ public class ContactCleaner {
 
     }
 
-    private static Set<Contact> dfs(Map<String, List<Contact>> map, Contact con, Set<Contact> uniques) {
+    private static void dfs(Map<String, List<Contact>> map, Contact con, Set<Contact> uniques) {
 
         if (!con.isVisited) {
             con.isVisited = true;
@@ -95,11 +149,15 @@ public class ContactCleaner {
         }
 
 
-        return uniques;
     }
 
-
-    private static Map<String, List<Contact>> buildContactMap(List<Contact> contactList) {
+    /**
+     * with given contact list, build graph from each node may have any contact
+     *
+     * @param contactList
+     * @return
+     */
+    private static Map<String, List<Contact>> buildContactGraphAdjList(List<Contact> contactList) {
 
         Map<String, List<Contact>> map = new HashMap<>();
 
@@ -121,20 +179,50 @@ public class ContactCleaner {
 
     }
 
+    /**
+     * Build contact list contains user name vs list of contact this user has
+     *
+     * @param contacts
+     * @return
+     */
     private static List<Contact> buildContactList(String[][] contacts) {
-
-        List<Contact> contactList = new LinkedList<>();
+        List<Contact> response = new ArrayList<>(contacts.length);
 
         for (int i = 0; i < contacts.length; i++) {
-            Set<String> conts = new HashSet<>();
-            for (int j = 1; j < contacts[0].length; j++) {
-                conts.add(contacts[i][j]);
+
+            Set<String> set = new HashSet<>();
+            String username = null;
+            for (int j = 0; j < contacts[0].length; j++) {
+
+                if (isUserName(contacts[i][j])) {
+                    username = contacts[i][j];
+                    continue;
+                }
+                set.add(contacts[i][j]);
+
             }
-
-            contactList.add(new Contact(contacts[i][0], conts, i));
-
+            response.add(new Contact(username, set, i));
         }
 
-        return contactList;
+        return response;
     }
+
+    /**
+     * check given string is simple string (username)
+     *
+     * @param s
+     * @return
+     */
+    private static boolean isUserName(String s) {
+
+        if (s.contains("@"))
+            return false;
+        if (s.contains("+"))
+            return false;
+        if (s.matches(".*[0-9].*"))
+            return false;
+
+        return true;
+    }
+
 }

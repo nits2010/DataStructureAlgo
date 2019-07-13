@@ -8,6 +8,20 @@ import java.util.*;
  * Description:
  * https://www.geeksforgeeks.org/palindrome-pair-in-an-array-of-words-or-strings/
  * Explanation: https://fizzbuzzed.com/top-interview-questions-5/
+ *
+ * Given a list of words, find if any of the two words can be joined to form a palindrome.
+ *
+ * Examples:
+ *
+ * Input  : list[] = {"geekf", "geeks", "or",
+ *                             "keeg", "abc", "bc"}
+ * Output : Yes
+ * There is a pair "geekf" and "keeg"
+ *
+ * Input : list[] =  {"abc", "xyxcba", "geekst", "or",
+ *                                       "keeg", "bc"}
+ * Output : Yes
+ * There is a pair "abc" and "xyxcba"
  */
 
 public class PairOfPalindrome {

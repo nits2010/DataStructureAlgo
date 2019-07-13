@@ -83,8 +83,7 @@ public class ListCombination {
                 continue;
 
             //process for current key array
-            char[] current = input.get(key);
-            subListsToConsider.add(new String(current));
+            subListsToConsider.add(new String(input.get(key)));
 
             //Take the remaining length to consider
             //example key = 1, pattern=123, then remaining is = 23 which we'll consider one by one
@@ -95,12 +94,12 @@ public class ListCombination {
             //process remaining
             for (int i = 0; i < remainingPattern.length(); i++) {
 
+                String testThis = String.valueOf(remainingPattern.charAt(i));
                 //if this does not present in input; input is corrupt
-                if (!input.containsKey(String.valueOf(remainingPattern.charAt(i))))
+                if (!input.containsKey(testThis))
                     throw new InvalidArgument("Input " + pattern + "is invalid");
 
-                char[] temp = input.get(String.valueOf(remainingPattern.charAt(i)));
-                subListsToConsider.add(new String(temp));
+                subListsToConsider.add(new String(input.get(testThis)));
 
 
             }
