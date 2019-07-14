@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  * Date: 03/04/19
  * Description:
  */
-public class WordOdering {
+public class WordOrdering {
 
     public static void main(String args[]) {
 
@@ -36,6 +36,9 @@ public class WordOdering {
 
         Map<Character, Integer> characterOrderIndexMap = new HashMap<>();
 
+        /**
+         * Build char vs order in map
+         */
         for (int i = 0; i < ordering.length; i++) {
             if (characterOrderIndexMap.containsKey(ordering[i]))
                 throw new InvalidArgument("Can't have order duplicated");
@@ -46,12 +49,17 @@ public class WordOdering {
 
     }
 
+    //O(n*m)
     private static boolean checkForOrder(String[] words, Map<Character, Integer> characterOrderIndexMap) {
 
-        for (int i = 0; i < words.length - 1; i++) {
+        //Check for each words, are the follow order or not, if the apparently whole string does
+        for (int i = 0; i < words.length - 1; i++) { //O(n)
             String fromWord = words[i];
             String toWord = words[i + 1];
 
+            //Get the first character where this two word are uncommon
+
+            //O(m) where m is the second highest string size
             int firstMisMatchCharIndex = IntStream.range(0, Math.min(fromWord.length(), toWord.length())).filter(x -> fromWord.charAt(x) != toWord.charAt(x)).findFirst().orElse(-1);
 
             //if any char mismatch, if so then they should be in order
@@ -59,6 +67,7 @@ public class WordOdering {
                 char charAtMismatchIndexFrom = fromWord.charAt(firstMisMatchCharIndex);
                 char charAtMismatchIndexTo = toWord.charAt(firstMisMatchCharIndex);
 
+                //are this character are in order defined by order[]
                 if (characterOrderIndexMap.get(charAtMismatchIndexFrom) > characterOrderIndexMap.get(charAtMismatchIndexTo))
                     return false;
             }

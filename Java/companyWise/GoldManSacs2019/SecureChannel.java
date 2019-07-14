@@ -4,7 +4,9 @@ package Java.companyWise.GoldManSacs2019;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 18/04/19
  * Description:
- * Carer cup Persons A and B uses an encryption based system for their conversation. Each conversation message is encoded from the source and decoded in the destination using a shared private positive number key known to each other.
+ * Carer cup Persons A and B uses an encryption based system for their conversation.
+ * Each conversation message is encoded from the source and decoded in
+ * the destination using a shared private positive number key known to each other.
  * The algorithm is illustrated with an example.
  * Input Format with explanation:
  * 1. Operation (1 for Encoding and 2 for Decoding)
@@ -102,12 +104,12 @@ public class SecureChannel {
                 if (Character.isDigit(keys[i])) {
                     int keyV = keys[i] - '0';
                     int x = 1;
-                    while (x + index < message.length() && message.charAt(x + index) == current) {
 
+                    while (x + index < message.length() && message.charAt(x + index) == current)
                         x++;
-                    }
 
-                    if (x == keyV) { //this is correct
+
+                    if (x == keyV) { //this is correctly encoded
                         res.append(current);
                     } else
                         return negResponse;

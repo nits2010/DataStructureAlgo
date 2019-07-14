@@ -6,11 +6,9 @@ package Java.companyWise.facebook;
  * Description:https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/
  * Problem:
  * The API: int read4(char *buf) reads 4 characters at a time from a file.
- * <p>
- * The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
- * <p>
+ * The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters
+ * left in the file.
  * By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
- * <p>
  * Note:
  * The read function may be called multiple times.
  * <p>
@@ -48,7 +46,7 @@ public class ReadNCharactersGivenRead4 {
 
     static int read4Pointer = 0;
     static char[] buffer = new char[4];
-    static int bufferIndex = 0;
+    static int bufferIndex = -1;
     static int bufferLength = 0;
 
 
@@ -78,12 +76,11 @@ public class ReadNCharactersGivenRead4 {
     }
 
     public static int read(char buf[], int n) {
-        StringBuilder output = new StringBuilder();
 
         int i = 0;
         while (i < n) {
             // no character in own buffer
-            if (bufferIndex == 0 || bufferIndex == bufferLength) {
+            if (bufferIndex == -1 || bufferIndex == bufferLength) {
                // buffer = new char[4];
                 bufferLength = read4(buffer);
                 bufferIndex = 0;

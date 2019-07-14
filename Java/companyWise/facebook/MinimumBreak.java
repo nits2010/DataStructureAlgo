@@ -7,6 +7,8 @@ import java.util.*;
  * Date: 04/04/19
  * Description: https://www.geeksforgeeks.org/minimum-word-break/
  * <p>
+ * Given a string s, break s such that every substring of the partition can be found in the dictionary. Return the minimum break needed.
+ * <p>
  * Given a dictionary ["Cat", "Mat", "Ca",
  * "tM", "at", "C", "Dog", "og", "Do"]
  * <p>
@@ -14,9 +16,9 @@ import java.util.*;
  * Output : 1
  * Explanation: we can break the sentences
  * in three ways, as follows:
- * CatMat = [ Cat Mat ]  break 1
- * CatMat = [ Ca tM at ] break 2
- * CatMat = [ C at Mat ] break 2  so the
+ * CatMat = [ Cat Mat ]  break in 1
+ * CatMat = [ Ca tM at ] break in 2
+ * CatMat = [ C at Mat ] break in 2 so the
  * output is: 1
  * <p>
  * <p>
@@ -99,6 +101,8 @@ public class MinimumBreak {
 
 
         }
+
+
     }
 
 
@@ -133,15 +137,63 @@ public class MinimumBreak {
 
     }
 
+    public static int minimumCutWay2(String pattern, Trie trie) {
+
+        TrieNode pCrawl = trie.root;
+        String temp = "", breaked = "";
+        int mincut = 0;
+
+        for (int i = 0; i < pattern.length(); i++) {
+
+            char c = pattern.charAt(i);
+
+            if (pCrawl.childrens.containsKey(c)) {
+
+                if (pCrawl.childrens.get(c).isLeaf)
+                    breaked = temp + c;
+
+                temp = temp + c;
+                pCrawl = pCrawl.childrens.get(c);
+
+            } else {
+                if (breaked.isEmpty())
+                    return -1;
+
+                mincut++;
+                i--;
+                breaked = temp = "";
+                pCrawl = trie.root;
+            }
+        }
+
+        if (breaked.isEmpty())
+            return -1;
+        return mincut;
+
+
+    }
+
+
     public static void main(String args[]) {
-        String dictionary[] = {"Cat", "Mat", "Ca", "tM", "at", "C", "Dog", "og", "Do"};
+        String dictionary[] = {"Cat", "Mat", "Ca", "tM", "at", "C", "Dog", "og", "Do", "DogYat"};
 
         Trie trie = new Trie();
         Arrays.stream(dictionary).forEach(x -> trie.insert(x));
+
         System.out.println(minimumCut("Dogcat", trie));
+        System.out.println(minimumCutWay2("Dogcat", trie));
+
         System.out.println(minimumCut("DogCat", trie));
+        System.out.println(minimumCutWay2("DogCat", trie));
+
         System.out.println(minimumCut("CtMMat", trie));
+        System.out.println(minimumCutWay2("CtMMat", trie));
+
         System.out.println(minimumCut("CatMat", trie));
+        System.out.println(minimumCutWay2("CatMat", trie));
+
+        System.out.println(minimumCut("DogYat", trie));
+        System.out.println(minimumCutWay2("DogYat", trie));
 
 
     }
