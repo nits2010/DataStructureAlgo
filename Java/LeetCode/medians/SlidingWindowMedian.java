@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.medians;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -144,9 +144,15 @@ class SolutionSlidingWindowMedian {
 
         private void balance() {
 
+            /**
+             * if max heap has more than 1 element as unbalanced
+             */
             while (maxHeap.size() - minHeap.size() > 1)
                 minHeap.offer(maxHeap.poll());
 
+            /**
+             * if max heap has less element then min
+             */
             while (maxHeap.size() < minHeap.size())
                 maxHeap.offer(minHeap.poll());
         }

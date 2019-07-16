@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.medians;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -42,7 +42,7 @@ import java.util.PriorityQueue;
  *
  * In this case, we need an integer array of length 100 and a hashmap for these numbers that are not in [0,100].
  */
-public class MedianFinder {
+public class MedianOfStream {
 
     public static void main(String args[]) {
         SolutionMedianFinder obj = new SolutionMedianFinder();
@@ -56,14 +56,14 @@ public class MedianFinder {
 
 }
 
-class MedianDataStructure<E> {
+class MedianOfStreamDataStructure<E> {
 
     double median = 0.0;
     PriorityQueue<E> minHeap;
     PriorityQueue<E> maxHeap;
 
 
-    public MedianDataStructure() {
+    public MedianOfStreamDataStructure() {
         minHeap = new PriorityQueue<>();
         maxHeap = new PriorityQueue<>(Collections.reverseOrder());
     }
@@ -73,7 +73,7 @@ class MedianDataStructure<E> {
 
 class SolutionMedianFinder {
 
-       private MedianDataStructure<Integer> median = new MedianDataStructure<>();
+       private MedianOfStreamDataStructure<Integer> median = new MedianOfStreamDataStructure<>();
 
     public void addNum(int num) {
 

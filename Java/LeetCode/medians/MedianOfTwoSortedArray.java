@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.medians;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

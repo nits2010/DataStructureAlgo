@@ -150,7 +150,7 @@ class Decode {
                 i = --j;
             } else {
 
-                if (current != ']')
+                if (current == '[')
                     stringStack.push(String.valueOf(current));
                 else {
                     String temp = "";
