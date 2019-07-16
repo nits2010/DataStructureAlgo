@@ -33,6 +33,7 @@ public class WallsGates {
     public static void main(String args[]) {
         testBFS();
         testDFS();
+
     }
 
     private static void testDFS() {
