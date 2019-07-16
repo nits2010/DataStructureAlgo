@@ -6,12 +6,38 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 04/04/19
  * Description: https://leetcode.com/problems/word-search-ii/
+ * <p>
+ * Given a 2D board and a list of words from the dictionary, find all words in the board.
+ * <p>
+ * Each word must be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring.
+ * The same letter cell may not be used more than once in a word.
+ * <p>
+ * <p>
+ * <p>
+ * Example:
+ * <p>
+ * Input:
+ * board = [
+ * ['o','a','a','n'],
+ * ['e','t','a','e'],
+ * ['i','h','k','r'],
+ * ['i','f','l','v']
+ * ]
+ * words = ["oath","pea","eat","rain"]
+ * <p>
+ * Output: ["eat","oath"]
+ * <p>
+ * <p>
+ * Note:
+ * <p>
+ * All inputs are consist of lowercase letters a-z.
+ * The values of words are distinct.
  */
 public class BoggleSearchWordSearchII {
 
     public static void main(String args[]) {
 
-        // test1();
+         test1();
         test2();
         test3();
     }

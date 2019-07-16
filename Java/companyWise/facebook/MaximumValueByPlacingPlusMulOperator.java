@@ -63,7 +63,7 @@ public class MaximumValueByPlacingPlusMulOperator {
             else if (runnerMax <= 1) //if the current runner max is less than 1,then you need make + only
                 runnerMax += str[i] - '0';
             else
-                runnerMax *= str[i] - '0'; //otherwise multiply
+                runnerMax *= str[i] - '0'; //otherwise multiplyReverse
         }
 
 
