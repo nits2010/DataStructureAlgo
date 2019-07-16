@@ -1,4 +1,4 @@
-package Java;
+package Java.companyWise.facebook;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
