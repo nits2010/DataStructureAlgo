@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class LookAndSay {
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -50,26 +50,9 @@ public class LookAndSay {
     public static List<Integer> lookAndSayBreaksEasy(String start) {
         char chars[] = start.toCharArray();
         List<Integer> lookAndSay = new ArrayList<>();
-        for (int i=0; i<chars.length; i++){
-            lookAndSay.add(chars[i]-'0');
+        for (int i = 0; i < chars.length; i++) {
+            lookAndSay.add(chars[i] - '0');
         }
-        return lookAndSay;
-    }
-
-    private static List<Integer> lookAndSayBreaks(String start) {
-
-        List<Integer> lookAndSay = new ArrayList<>();
-
-        String x = start;
-
-        while (!x.isEmpty()) {
-            char last = x.charAt(x.length() - 1);
-
-            int r = last - '0';
-            lookAndSay.add(r);
-            x = x.substring(0, x.length() - 1);
-        }
-        Collections.reverse(lookAndSay);
         return lookAndSay;
     }
 
