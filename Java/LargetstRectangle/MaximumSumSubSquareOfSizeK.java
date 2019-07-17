@@ -4,8 +4,14 @@ package Java.LargetstRectangle;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-26
  * Description:https://www.geeksforgeeks.org/print-maximum-sum-square-sub-matrix-of-given-size/
+ * <p>
+ * Given an N x N matrix, find a k x k submatrix where k <= N and k >= 1, such that sum of all the elements in
+ * submatrix is maximum. The input matrix can contain zero, positive and negative numbers.
+ * <p>
+ * For example consider below matrix, if k = 3, then output should print the sub-matrix enclosed in blue.
+ * rectangle
  */
-public class MaximumSumSubSqaureOfSizeK {
+public class MaximumSumSubSquareOfSizeK {
     public static void main(String args[]) {
 
         int[][] mat = {{1, 1, 1, 1, 1},

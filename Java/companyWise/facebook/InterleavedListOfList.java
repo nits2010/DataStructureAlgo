@@ -61,7 +61,7 @@ public class InterleavedListOfList {
         input.add(four);
 
         System.out.println(interleavedList(input));
-        System.out.println(interleavedUsingdDlegatingInexing(input));
+        System.out.println(interleavedUsingDelegatingIndexing(input));
     }
 
     private static void test4() {
@@ -85,7 +85,7 @@ public class InterleavedListOfList {
         input.add(four);
 
         System.out.println(interleavedList(input));
-        System.out.println(interleavedUsingdDlegatingInexing(input));
+        System.out.println(interleavedUsingDelegatingIndexing(input));
 
     }
 
@@ -111,7 +111,7 @@ public class InterleavedListOfList {
         input.add(four);
 
         System.out.println(interleavedList(input));
-        System.out.println(interleavedUsingdDlegatingInexing(input));
+        System.out.println(interleavedUsingDelegatingIndexing(input));
 
     }
 
@@ -142,7 +142,7 @@ public class InterleavedListOfList {
         input.add(four);
 
         System.out.println(interleavedList(input));
-        System.out.println(interleavedUsingdDlegatingInexing(input));
+        System.out.println(interleavedUsingDelegatingIndexing(input));
     }
 
     private static void test1() {
@@ -176,7 +176,7 @@ public class InterleavedListOfList {
 
 
         System.out.println(interleavedList(input));
-        System.out.println(interleavedUsingdDlegatingInexing(input));
+        System.out.println(interleavedUsingDelegatingIndexing(input));
     }
 
     /**
@@ -218,7 +218,7 @@ public class InterleavedListOfList {
      * @param input
      * @return
      */
-    private static List<Integer> interleavedUsingdDlegatingInexing(List<List<Integer>> input) {
+    private static List<Integer> interleavedUsingDelegatingIndexing(List<List<Integer>> input) {
 
         int totalLists = input.size();
 

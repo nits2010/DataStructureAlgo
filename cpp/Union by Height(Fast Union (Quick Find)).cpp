@@ -78,7 +78,7 @@ void UNION(int S[] , int size ,int *Height_of_Tree , int a , int b ) // a and b 
        {
            S[Root2] = Root1; // making root2 as Sub tree of Root1
 
-           Height_of_Tree[Root1] ++ ; // Increment the hight of Tree rooted at Root1
+           Height_of_Tree[Root1] ++ ; // Increment the height of Tree rooted at Root1
        }
 
        else if ( Height_of_Tree[Root1] > 1 ||  Height_of_Tree[Root2] > 1) // if the Height of Both the Tree are  > 1

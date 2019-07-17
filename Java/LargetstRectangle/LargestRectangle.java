@@ -19,7 +19,7 @@ import java.util.Stack;
  * ]
  * Output: 6
  */
-public class LargetRectangle {
+public class LargestRectangle {
 
     public static void main(String args[]) {
         char[][] input =

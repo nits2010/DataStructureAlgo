@@ -1,9 +1,38 @@
 package Java.companyWise.facebook;
 
-import java.util.*;
-import java.lang.*;
+import java.util.Arrays;
 
-class MultiplyTwoBigNumbersStringFormat {
+/**
+ * https://leetcode.com/problems/multiply-strings/
+ * Given two non-negative integers num1 and num2 represented as strings,
+ * return the product of num1 and num2, also represented as a string.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: num1 = "2", num2 = "3"
+ * Output: "6"
+ * Example 2:
+ * <p>
+ * Input: num1 = "123", num2 = "456"
+ * Output: "56088"
+ * Note:
+ * <p>
+ * The length of both num1 and num2 is < 110.
+ * Both num1 and num2 contain only digits 0-9.
+ * Both num1 and num2 do not contain any leading zero, except the number 0 itself.
+ * You must not use any built-in BigInteger library or convert the inputs to integer directly.
+ */
+class MultiplyTwoNumbersStringFormat {
+
+    public static void main(String[] args) {
+        System.out.println(multiplyReverse("123456", "123456"));
+        System.out.println(multiplyReverse("999", "999"));
+        System.out.println(multiplyReverse("0", "0"));
+
+        System.out.println(multiplyForward("123456", "123456"));
+        System.out.println(multiplyForward("999", "999"));
+        System.out.println(multiplyForward("0", "0"));
+    }
 
     public static String multiplyReverse(String num1, String num2) {
 
@@ -67,27 +96,27 @@ class MultiplyTwoBigNumbersStringFormat {
 
         Arrays.fill(c, '0');
 
-        for (int i = c2.length-1; i >=0; i--) {
+        for (int i = c2.length - 1; i >= 0; i--) {
 
             int dig2 = c2[i] - '0';
 
             int carry = 0;
 
-            for (int j = c1.length-1; j >=0; j--) {
+            for (int j = c1.length - 1; j >= 0; j--) {
 
                 int dig1 = c1[j] - '0';
 
-                int temp = c[i + j+2] - '0';
+                int temp = c[i + j + 2] - '0';
 
                 int cur = dig1 * dig2 + temp + carry;
 
-                c[i + j+2] = (char) (cur % 10 + '0');
+                c[i + j + 2] = (char) (cur % 10 + '0');
 
                 carry = cur / 10;
 
 
             }
-            c[i+1] = (char) (carry + '0');
+            c[i + 1] = (char) (carry + '0');
         }
 
         String ret = new String(c);
@@ -99,13 +128,4 @@ class MultiplyTwoBigNumbersStringFormat {
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(multiplyReverse("123456", "123456"));
-        System.out.println(multiplyReverse("999", "999"));
-        System.out.println(multiplyReverse("0", "0"));
-
-        System.out.println(multiplyForward("123456", "123456"));
-        System.out.println(multiplyForward("999", "999"));
-        System.out.println(multiplyForward("0", "0"));
-    }
 }
