@@ -92,7 +92,11 @@ public class ShortestSubArraySumGreaterThenN {
         }
     }
 
-
+    /**
+     * @param a
+     * @param sum
+     * @return The indexes of the shortest sub-array
+     */
     private static int[] smallestSubArraySumGreaterThenM(int a[], int sum) {
 
         if (a == null || a.length == 0)
@@ -161,6 +165,11 @@ public class ShortestSubArraySumGreaterThenN {
     }
 
 
+    /**
+     * @param a
+     * @param sum
+     * @return The length of the shortest sub-array
+     */
     private static int shortest(int a[], int sum) {
 
         if (a == null || a.length == 0)
