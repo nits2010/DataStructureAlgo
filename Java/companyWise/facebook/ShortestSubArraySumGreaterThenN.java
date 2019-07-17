@@ -28,7 +28,7 @@ package Java.companyWise.facebook;
  * Output : Not Possible
  * Whole array sum is smaller than 8.
  */
-public class SmallestSubArraySumGreaterThenN {
+public class ShortestSubArraySumGreaterThenN {
 
     public static void main(String args[]) {
 
@@ -67,6 +67,9 @@ public class SmallestSubArraySumGreaterThenN {
 
         int arr12[] = {84, -37, 32, 40, 95};
         test(arr12, 214);
+
+        int arr13[] = {1};
+        test(arr13, 1);
 
 
     }
@@ -154,6 +157,69 @@ public class SmallestSubArraySumGreaterThenN {
         }
 
         return sol;
+
+    }
+
+
+    private static int shortest(int a[], int sum) {
+
+        if (a == null || a.length == 0)
+            return -1;
+
+        /**
+         * if Sum is negative required, then change the sign of array and find positive sum
+         */
+        if (sum < 0) {
+            int b[] = new int[a.length];
+            for (int i = 0; i < a.length; i++)
+                b[i] = -a[i];
+
+            sum = Math.abs(sum);
+            return shortest(b, sum);
+        }
+
+        int currSum = 0; //defined the current sum in the window
+        int minLength = Integer.MAX_VALUE; //defined the minimum sum > n
+        int start = 0; //start of the sub-array
+        int end; //end of the sub-array
+
+        int i = 0;
+        while (i < a.length) {
+
+
+            //Add all values for current sum till it reaches at least n
+            while (currSum <= sum && i < a.length) {
+
+
+                //if we want positive sum only, and current gives negative sum, then reset
+                if (currSum < 0 && sum > 0) {
+                    start = i;
+                    currSum = 0;
+
+                }
+
+                currSum += a[i++];
+            }
+
+            end = i;
+
+            while (currSum > sum && start <= end) {
+
+
+                //obtain the current sub-array
+                if (end - start + 1 < minLength) {
+                    minLength = end - start + 1;
+                }
+
+                currSum -= a[start++];
+
+            }
+
+            i++;
+
+        }
+
+        return minLength;
 
     }
 
