@@ -46,12 +46,12 @@ class HeightWidth {
 
 }
 
-class LargestRectangeWithAllOnes{
+class LargestRectangleWithAllOnes {
 	
 	private int area = 0;
 	private int result[][]= null;
 	private int width;
-	private int hight;
+	private int height;
 	private int startI, startJ; 
 	private int endI, endJ;
 	
@@ -196,7 +196,7 @@ class LargestRectangeWithAllOnes{
 		this.endI = i;
 		this.endJ = j + width -1; 
 		this.width = width;
-		this.hight = hight;
+		this.height = hight;
 	
 		createResultMatrix(temp);
 	}
@@ -204,7 +204,7 @@ class LargestRectangeWithAllOnes{
 	public void createResultMatrix(int input[][]){
 	
 		if ( this.area!=0){
-			this.result = new int [this.hight][this.width];
+			this.result = new int [this.height][this.width];
 			for ( int t=startI; t<=endI; t++)
 				for ( int p = startJ; p<=endJ; p++)
 					this.result[t-startI][p-startJ] = input[t][p];
@@ -238,7 +238,7 @@ class LargestSquareWithAllOnes{
 	}
 	
 	private int [][] getAuxilaryArrayWithFirstRowCol(int input[][]){
-		int auxilaryArray[][] = new int [input.length][input[0].length] ; 
+		int auxilaryArray[][] = new int [input.length][input[0].length] ;
 		
 		for (int i=0; i<input[0].length; i++ ) 
 			auxilaryArray[0][i] = input[0][i];
@@ -321,7 +321,7 @@ class LargestRectangeWithAllOnesandLargestSquareWithAllOnes
 	}
 	
 	private static void largestRectangle(int input[][]){
-		 LargestRectangeWithAllOnes rectangle = new LargestRectangeWithAllOnes();
+		 LargestRectangleWithAllOnes rectangle = new LargestRectangleWithAllOnes();
     	 rectangle.getRectangleWithAllOnes(input);
          System.out.println("area : "+rectangle.getArea());
        	 rectangle.print(rectangle.getResult());

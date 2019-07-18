@@ -120,6 +120,12 @@ public class LargestRectangle {
     }
 
 
+    /**
+     * Int matrix
+     *
+     * @param matrix
+     * @return
+     */
     public static int maximalRectangle(int[][] matrix) {
 
         if (null == matrix || matrix.length == 0 || matrix[0].length == 0)
@@ -129,7 +135,7 @@ public class LargestRectangle {
         int m = matrix[0].length;
 
         if (n == 1 && m == 1) {
-            return matrix[0][0] == '1' ? 1 : 0;
+            return matrix[0][0] == 1 ? 1 : 0;
         }
 
         int maxArea = 0;
@@ -151,7 +157,7 @@ public class LargestRectangle {
 
         int n = heights.length;
         if (n == 1)
-            return heights[0] % '0';
+            return heights[0];
 
         Stack<Integer> histogram = new Stack<>();
         int maxArea = Integer.MIN_VALUE;

@@ -36,7 +36,7 @@ public class LargestHistogram {
 
         Stack<Integer> histogram = new Stack<>();
         int maxArea = Integer.MIN_VALUE;
-        int area = 0;
+        int area ;
         histogram.push(0); //contains indexes
 
         int i = 1;
