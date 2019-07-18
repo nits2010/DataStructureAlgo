@@ -26,6 +26,8 @@ package Java.LeetCode;
  * S has length at most 26, and no character is repeated in S.
  * T has length at most 200.
  * S and T consist of lowercase letters only.
+ *
+ * [FACEBOOK]
  */
 public class CustomSortString {
 
