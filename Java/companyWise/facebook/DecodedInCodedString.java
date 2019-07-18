@@ -27,8 +27,10 @@ import java.util.stream.Collectors;
  * <p>
  * Input : str[] = "3[b2[ca]]"
  * Output : bcacabcacabcaca
+ *
+ * https://aonecode.com/facebook-phone-interview-questions-2019
  */
-public class DecodedIncodedString {
+public class DecodedInCodedString {
 
     public static void main(String args[]) {
 
