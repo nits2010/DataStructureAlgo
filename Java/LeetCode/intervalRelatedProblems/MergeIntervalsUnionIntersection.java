@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.intervalRelatedProblems;
 
 import java.util.Arrays;
 import java.util.Comparator;
