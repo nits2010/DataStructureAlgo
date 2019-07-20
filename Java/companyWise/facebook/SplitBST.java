@@ -52,7 +52,7 @@ class BSTNode {
     }
 }
 
-public class SplitBSTByValue {
+public class SplitBST {
 
 
     public static void main(String args[]) {

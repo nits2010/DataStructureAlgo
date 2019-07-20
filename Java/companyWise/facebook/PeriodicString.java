@@ -1,5 +1,7 @@
 package Java.companyWise.facebook;
 
+import javafx.util.Pair;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-20
@@ -37,14 +39,6 @@ package Java.companyWise.facebook;
  * Given string S, find out the P (repetitive pattern) of S.
  * <p>
  * [FACEBOOK] [GOOGLE]
- * <p>
- * True
- * True
- * True
- * False
- * True
- * True
- * False
  */
 public class PeriodicString {
 
@@ -56,8 +50,10 @@ public class PeriodicString {
 
         StringNTimesRepeat periodicString = new StringNTimesRepeat();
 
-        for (int i = 0; i < text.length; i++)
-            System.out.println(" String : " + text[i] + " ;Expected " + ans[i] + " obtained: " + periodicString.isPeriodicString(text[i]));
+        for (int i = 0; i < text.length; i++) {
+            Pair<Boolean, String> sol = periodicString.isPeriodicString(text[i]);
+            System.out.println(" String : " + text[i] + " ;Expected " + ans[i] + " obtained: " + sol.getKey() + " Repetitive pattern : " + sol.getValue());
+        }
     }
 
 
@@ -97,10 +93,10 @@ class StringNTimesRepeat {
      * @param str
      * @return
      */
-    public boolean isPeriodicString(String str) {
+    public Pair<Boolean, String> isPeriodicString(String str) {
 
         if (str == null || str.isEmpty())
-            return true;
+            return new Pair<>(true, str);
 
         int n = str.length();
 
@@ -110,12 +106,15 @@ class StringNTimesRepeat {
 
         //has any string repeats at all
         if (len <= 0)
-            return false;
+            return new Pair<>(false, null);
 
-        if (n % (n - len) == 0)
-            return true;
+        int lengthOfRepetitivePattern = n - len;
+
+        if (n % lengthOfRepetitivePattern == 0)
+            return new Pair<>(true, str.substring(0, lengthOfRepetitivePattern)); //follow up: Given string S, find out the P (repetitive pattern) of S.
+
         else
-            return false;
+            return new Pair<>(false, null);
 
 
     }
@@ -158,4 +157,6 @@ class StringNTimesRepeat {
 
         return prefixAlsoSuffixLength;
     }
+
+
 }
