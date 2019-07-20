@@ -48,13 +48,13 @@ import java.util.List;
 
 
 //  Definition for a binary tree node.
-class TreeBSTNode {
-    int v;
-    TreeBSTNode left;
-    TreeBSTNode right;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-    TreeBSTNode(int x) {
-        v = x;
+    TreeNode(int x) {
+        val = x;
     }
 }
 
@@ -66,67 +66,67 @@ public class TrimBinarySearchTree {
         test(getBST2(), 18, 31);
     }
 
-    private static List<Integer> inorder(TreeBSTNode root) {
+    private static List<Integer> inorder(TreeNode root) {
         List<Integer> inorder = new ArrayList<>();
         inorder(root, inorder);
         return inorder;
     }
 
-    private static void inorder(TreeBSTNode root, List<Integer> inorder) {
+    private static void inorder(TreeNode root, List<Integer> inorder) {
         if (null == root)
             return;
 
         inorder(root.left, inorder);
-        inorder.add(root.v);
+        inorder.add(root.val);
         inorder(root.right, inorder);
 
     }
 
-    private static void test(TreeBSTNode root, int low, int high) {
+    private static void test(TreeNode root, int low, int high) {
         if (low > high)
             return;
 
         System.out.println("Inorder of bst : " + inorder(root) + " trim range [ " + low + " , " + high + "]");
 
         SolutionTrimBinarySearchTree trim = new SolutionTrimBinarySearchTree();
-        TreeBSTNode trimmed = trim.trim(root, low, high);
+        TreeNode trimmed = trim.trim(root, low, high);
         System.out.println("Trim tree " + inorder(trimmed));
 
 
     }
 
-    private static TreeBSTNode getBST1() {
+    private static TreeNode getBST1() {
 
-        TreeBSTNode root = new TreeBSTNode(4);
-        root.left = new TreeBSTNode(2);
-        root.left.left = new TreeBSTNode(1);
-        root.left.right = new TreeBSTNode(3);
-        root.right = new TreeBSTNode(6);
-        root.right.left = new TreeBSTNode(5);
-        root.right.right = new TreeBSTNode(7);
+        TreeNode root = new TreeNode(4);
+        root.left = new TreeNode(2);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
+        root.right = new TreeNode(6);
+        root.right.left = new TreeNode(5);
+        root.right.right = new TreeNode(7);
 
         return root;
     }
 
 
-    private static TreeBSTNode getBST2() {
+    private static TreeNode getBST2() {
 
-        TreeBSTNode root = new TreeBSTNode(28);
+        TreeNode root = new TreeNode(28);
 
-        root.left = new TreeBSTNode(16);
+        root.left = new TreeNode(16);
 
-        root.left.left = new TreeBSTNode(14);
-        root.left.left.left = new TreeBSTNode(12);
-        root.left.left.right = new TreeBSTNode(15);
+        root.left.left = new TreeNode(14);
+        root.left.left.left = new TreeNode(12);
+        root.left.left.right = new TreeNode(15);
 
-        root.left.right = new TreeBSTNode(22);
-        root.left.right.left = new TreeBSTNode(18);
-        root.left.right.right = new TreeBSTNode(25);
+        root.left.right = new TreeNode(22);
+        root.left.right.left = new TreeNode(18);
+        root.left.right.right = new TreeNode(25);
 
 
-        root.right = new TreeBSTNode(32);
-        root.right.left = new TreeBSTNode(31);
-        root.right.right = new TreeBSTNode(35);
+        root.right = new TreeNode(32);
+        root.right.left = new TreeNode(31);
+        root.right.right = new TreeNode(35);
 
         return root;
     }
@@ -146,19 +146,19 @@ class SolutionTrimBinarySearchTree {
      * @param high
      * @return
      */
-    public TreeBSTNode trim(TreeBSTNode root, int low, int high) {
+    public TreeNode trim(TreeNode root, int low, int high) {
 
         if (null == root)
             return null;
 
         //if this node is out of  range
-        if (root.v < low) {
+        if (root.val < low) {
             //discard all left sub-tree
             root.left = null;
             return trim(root.right, low, high);
         }
 
-        if (root.v > high) {
+        if (root.val > high) {
             //discard all right sub-tree
             return trim(root.left, low, high);
         }
