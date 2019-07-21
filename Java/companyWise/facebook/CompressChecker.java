@@ -8,6 +8,8 @@ package Java.companyWise.facebook;
  * FACEBOOK -> F2E2OK or INTERNATIONALIZATION -> I18N. The compression mechanism can delete arbitrarily
  * many characters and replace them with the deleted character count. Write a function that takes
  * a compressed string and a plaintext string and determines if the compressed string is valid for the plaintext string
+ *
+ * [FACEBOOK]
  */
 public class CompressChecker {
 
