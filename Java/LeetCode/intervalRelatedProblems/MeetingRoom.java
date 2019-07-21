@@ -1,10 +1,7 @@
 package Java.LeetCode.intervalRelatedProblems;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -49,8 +46,14 @@ public class MeetingRoom {
 
     }
 
+    private static void testMeetingRoomI(MeetingRoomI meetingRoom, List<Interval> intervals) {
+
+        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.personCanAttendAllMetings(intervals));
+
+    }
+
     private static void testMeetingRoomII() {
-        System.out.println("Meeting Room II tests");
+        System.out.println("\n\nMeeting Room II tests");
         MeetingRoomII meetingRoomI = new MeetingRoomII();
 
         /**
@@ -85,15 +88,11 @@ public class MeetingRoom {
         testMeetingRoomII(meetingRoomI, Arrays.asList(new Interval(0, 10)));
     }
 
+
     private static void testMeetingRoomII(MeetingRoomII meetingRoom, List<Interval> intervals) {
-        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumRooms(intervals));
+        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumMeetingRooms(intervals));
 
-    }
-
-
-    private static void testMeetingRoomI(MeetingRoomI meetingRoom, List<Interval> intervals) {
-
-        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.personCanAttendAllMetings(intervals));
+        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumMeetingRoomUsingList(intervals));
 
     }
 }
@@ -120,7 +119,7 @@ class MeetingRoomI {
      * if e1 > s2 or s1<=s2 && e1>=e2
      *
      * @param intervals
-     * @return
+     * @return O(nlogn)
      */
 
     public boolean personCanAttendAllMetings(final List<Interval> intervals) {
@@ -167,6 +166,7 @@ class MeetingRoomI {
  * <p>
  * Input intervals = [[0,10], [11,30], [5,15]
  * output : 3
+ * http://www.learn4master.com/algorithms/leetcode-meeting-rooms-ii-java
  */
 class MeetingRoomII {
 
@@ -182,11 +182,14 @@ class MeetingRoomII {
      * <p>
      * Overlapping: [s1,e1] , [s2,e2]
      * if e1 > s2 or s1<=s2 && e1>=e2
+     * <p>
+     * we'll have a min heap of end times only for end time find
      *
      * @param intervals
-     * @return
+     * @return O(nlogn)
      */
-    public int minimumRooms(final List<Interval> intervals) {
+
+    public int minimumMeetingRooms(List<Interval> intervals) {
 
         if (intervals == null || intervals.isEmpty())
             return 0;
@@ -201,32 +204,86 @@ class MeetingRoomII {
         }));
 
 
-        List<Interval> overlappingInvervals = new ArrayList<>();
-        overlappingInvervals.add(new Interval(intervals.get(0).start, intervals.get(0).end));
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        minHeap.offer(intervals.get(0).end);
 
         for (int i = 1; i < intervals.size(); i++) {
-            Interval lastInterval = overlappingInvervals.get(overlappingInvervals.size() - 1);
-            Interval current = intervals.get(i);
 
-            if (overlap(lastInterval, current)) {
-                //if they overlap then we can't have single meeting room
-                overlappingInvervals.add(new Interval(current.start, current.end));
-            } else {
-                //if the don't overlap i.e. we can have a single meeting room for both meeting.
-                lastInterval.start = Math.min(lastInterval.start, current.start);
-                lastInterval.end = Math.max(lastInterval.end, current.end);
+            int lastEnd = minHeap.peek();
+            int currentStart = intervals.get(i).start;
+
+            if (overlap(lastEnd, currentStart))
+                minHeap.offer(intervals.get(i).end);
+            else {
+                minHeap.poll();
+                minHeap.offer(intervals.get(i).end);
+
             }
 
         }
 
-        return overlappingInvervals.size();
+        return minHeap.size();
     }
 
-    private boolean overlap(Interval a, Interval b) {
-        if (a.end > b.start)
+
+    /**
+     * Since we need to find the "minimum" rooms for meeting. For that we need to find how many are overlapping to each other,
+     * if they overlap then we need another room but if don't then we can have same room running two meeting at different time.
+     * <p>
+     * Algo:
+     * 1. Sort by start time
+     * 2. Find no. of overlapping intervals
+     * 3. that will be your output
+     * <p>
+     * Overlapping: [s1,e1] , [s2,e2]
+     * if e1 > s2 or s1<=s2 && e1>=e2
+     * <p>
+     * we'll have a List of intervals and iterate over it to find what was the last room we can assign
+     *
+     * @param intervals
+     * @return O(n * n)
+     */
+    public int minimumMeetingRoomUsingList(final List<Interval> intervals) {
+        if (intervals == null || intervals.isEmpty())
+            return 0;
+
+        /**
+         * Sort the interval by start time
+         */
+        Collections.sort(intervals, ((o1, o2) -> {
+            if (o1.start == o2.start)
+                return o1.end - o2.end;
+            return o1.start - o2.start;
+        }));
+
+        List<Interval> lastIntervals = new ArrayList<>();
+        lastIntervals.add(new Interval(intervals.get(0).start, intervals.get(0).end));
+
+        for (int i = 1; i < intervals.size(); i++) {
+            int idx = findOverLappingInterval(lastIntervals, intervals.get(i));
+
+            if (idx < 0)
+                lastIntervals.add(new Interval(intervals.get(i).start, intervals.get(i).end));
+            else
+                lastIntervals.get(idx).end = intervals.get(i).end;
+        }
+
+        return lastIntervals.size();
+    }
+
+    //O(n)
+    private int findOverLappingInterval(List<Interval> lastIntervals, Interval interval) {
+
+        for (int i = 0; i < lastIntervals.size(); i++)
+            if (lastIntervals.get(i).end <= interval.start)
+                return i;
+
+        return -1;
+    }
+
+    private boolean overlap(int end, int start) {
+        if (end > start)
             return true;
         return false;
     }
-
-
 }
