@@ -90,9 +90,12 @@ public class MeetingRoom {
 
 
     private static void testMeetingRoomII(MeetingRoomII meetingRoom, List<Interval> intervals) {
+        System.out.println("Using List: ");
+        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumMeetingRoomUsingList(intervals));
+
+        System.out.println("\n Using heap [optimized]: ");
         System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumMeetingRooms(intervals));
 
-        System.out.println("Testing intervals : " + intervals + " Person can attend all meeting :" + meetingRoom.minimumMeetingRoomUsingList(intervals));
 
     }
 }
