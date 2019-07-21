@@ -22,6 +22,8 @@ package Java.companyWise.facebook;
  * All inputs and outputs should use lowercase letters, and the output is 7 characters.
  * <p>
  * LeetCode 800. Similar RGB Color
+ *
+ * [GOOGLE] [FACEBOOK]
  */
 public class SimilarRGBColor {
 

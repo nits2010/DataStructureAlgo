@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.intervalRelatedProblems;
 
 import java.util.*;
 import java.util.stream.Collectors;
