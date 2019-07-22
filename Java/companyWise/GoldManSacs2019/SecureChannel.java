@@ -5,7 +5,7 @@ package Java.companyWise.GoldManSacs2019;
  * Date: 18/04/19
  * Description:
  * Carer cup Persons A and B uses an encryption based system for their conversation.
- * Each conversation message is encoded from the source and decoded in
+ * Each conversation message is encoded from the source and decode in
  * the destination using a shared private positive number key known to each other.
  * The algorithm is illustrated with an example.
  * Input Format with explanation:

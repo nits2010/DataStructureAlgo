@@ -241,7 +241,7 @@ class JobSchedulingMinimizeLoss {
         int al = a.lossInTime;
         int bl = b.lossInTime;
 
-        //al/at < bl<bt = al*bt < bl*at
+        //al/at < bl<bt => al*bt < bl*at
 
         return Integer.compare((al * bt), (bl * at));
 
@@ -328,11 +328,11 @@ class JobSchedulingDisJointSet {
                 return;
 
             if (parent[pi].rank < parent[pj].rank) {
-                parent[pi].id = pj; //make pj as parent of pi, this will make pj size always same as we added one more child only
+                parent[pj].id = pi; //make pj as parent of pi, this will make pj size always same as we added one more child only
             } else if (parent[pi].rank > parent[pj].rank)
-                parent[pj].id = pi; //make pi as parent of pj, this will make pi size always same as we added one more child only
+                parent[pi].id = pj; //make pi as parent of pj, this will make pi size always same as we added one more child only
             else {
-                parent[pj].id = pi; //make pi as parent of pj, this will make pi size always same as we added one more child only
+                parent[pj].id = pi; //make pi as parent of pj, and increase its rank(size)
                 parent[pj].rank++;
             }
 
@@ -433,8 +433,9 @@ class JobSchedulingGreedy {
 
             int deadline = jobs.get(i).deadline;
 
-            //Find the max slot where this job can fit, finding max will ensure the other jobs won't starve for slot
             /**
+             * Find the max slot where this job can fit, finding max will ensure the other jobs won't starve for slot
+             *
              * Suppose that a job J1 has a deadline of time t = 5. We assign the greatest
              * time slot which is free and less than the deadline i.e 4-5 for this job. Now another job J2 with deadline of 5 comes in,
              * so the time slot allotted will be 3-4 since 4-5 has already been allotted to job J1.

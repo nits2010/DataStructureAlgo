@@ -1,5 +1,7 @@
 package Java.companyWise.GoldManSacs2019;
 
+import Java.LeetCode.medians.MedianOfTwoSortedArray;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-01
@@ -32,49 +34,7 @@ public class MedianOfTwoSortedArrayMergeProcedure {
 
 
     public static double findMedianSortedArrays(int[] A, int[] B) {
-
-        if ((null == A || A.length == 0) && (null == B || B.length == 0))
-            return -(double) Integer.MAX_VALUE;
-
-
-        int x = A.length;
-        int y = B.length;
-
-        int temp[] = new int[x + y];
-        int t = 0;
-        int i = 0, j = 0;
-
-        while (i < x && j < y) {
-
-            int e1 = A[i];
-            int e2 = B[j];
-
-            if (e1 <= e2) {
-
-                temp[t++] = e1;
-                i++;
-            } else {
-                temp[t++] = e2;
-                j++;
-            }
-
-        }
-
-        while (i < x) {
-            temp[t++] = A[i++];
-        }
-
-        while (j < y) {
-            temp[t++] = B[j++];
-        }
-
-        if ((x + y) % 2 == 0) {
-            int mid = (x + y) / 2;
-            return (double) (temp[mid - 1] + temp[mid]) / 2;
-        } else {
-            return temp[(x + y) / 2];
-        }
-
+        return MedianOfTwoSortedArray.findMedianSortedArraysUsingMergeProcedure(A, B);
 
     }
 
