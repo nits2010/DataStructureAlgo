@@ -4,6 +4,7 @@ package Java.LeetCode;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-22
  * Description:
+ *
  * https://leetcode.com/problems/copy-list-with-random-pointer/
  * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
  * <p>
@@ -12,6 +13,10 @@ package Java.LeetCode;
  * https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
  * https://www.geeksforgeeks.org/clone-linked-list-next-arbit-pointer-set-2/
  * https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/
+ *
+ *
+ * All
+ * https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree
  */
 
 class Node {
@@ -29,7 +34,7 @@ class Node {
     }
 }
 
-public class CopyListRandomPointer {
+public class CloneListRandomPointer {
 }
 
 /**
