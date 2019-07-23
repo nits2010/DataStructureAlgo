@@ -165,7 +165,7 @@ public class MaxProfitKTransactions {
      * <p>
      * we just keep rotating the arrays for rows to rows
      * profit[1][....] represent the current transaction 
-     * profit[1][....] represent the previous day transaction
+     * profit[0][....] represent the previous day transaction
      
      
      * Note: we can keep two seperate variable for current & previous day transaction. and then keep interchanging them.
@@ -212,7 +212,7 @@ public class MaxProfitKTransactions {
      * By saying this, if we have n days stocks then at most we can perform n/2 trasaction (
      * e.x. say we have stocks of n = 4 days as below
      * [1,4,3,6] then at most we can do 2 transaction,
-     ******** buy at 1 and sell at 4 and buy at 3 sell at 6. OR buy at 1 and sell at 6 ( we will choose 2 transaction aa it gives better profit).
+     ******** buy at 1 and sell at 4 and buy at 3 sell at 6. OR buy at 1 and sell at 6 ( we will choose 2 transaction as it gives more profit).
      ****
      **** hence if t>=n/2 then t = n/2
      *
