@@ -3,7 +3,10 @@ package Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 03/04/19
- * Description:
+ * Description: https://www.careercup.com/question?id=6313643925831680
+ * Calculate a moving average that considers the last N values.
+ * Circular Queue (Interviewer didn't agree with the linked list queue that I suggested at first. Said the pointers took space)
+ * <p>
  */
 public class MovingAverage {
 
@@ -14,8 +17,7 @@ public class MovingAverage {
         int head = 0;
         int tail = 0;
         int sum = 0;
-        double average = 0.0;
-        int maxSize = 0;
+        int maxSize;
 
         public MovingAverageHolder(int n) {
             this.circularQueue = new int[n];
@@ -43,17 +45,32 @@ public class MovingAverage {
             circularQueue[tail] = item;
             tail = (tail + 1) % this.maxSize;
 
-            return ((double) sum / this.size);
+            /**
+             *  considers the last N values.
+             */
+//            if (this.size < this.maxSize)
+//                return ((double) sum / this.size); //Note here we divide by the current size of array
+//            else
+//                return ((double) sum / this.maxSize); //Note here we divide by the max size of array
 
+            //considers the last N values.
+            return (double) sum / (this.size % (this.maxSize + 1));
         }
+
+
     }
 
     public static void main(String args[]) {
 
         int arr[] = {1, 2, 35, 343, 1, 21, 212, 324};
         int n = 3;
+        int arr2[] = {1, 3, 5, 6, 8};
 
+        System.out.println("\n\n\narr1");
         movingAverage(arr, n);
+
+        System.out.println("\n\narr2");
+        movingAverage(arr2, n);
     }
 
     private static void movingAverage(int arr[], int n) {

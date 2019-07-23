@@ -4,25 +4,25 @@ package Java.LargetstRectangle;/* package whatever; // don't place package name!
 import java.util.*;
 import java.lang.*;
 
-class HightWidth{
+class HeightWidth {
 	private int i=-1, j=-1; 
 	private int width = 0;
-	private int hight = 0;
+	private int height = 0;
 	
 	public void setWidth(int width){
 		this.width = width;
 	}
 
-	public void setHight(int hight){
-		this.hight = hight;
+	public void setHeight(int height){
+		this.height = height;
 	}
 	
 	public int getWidth(){
 		return width;
 	}
 
-	public int getHight(){
-		return hight;
+	public int getHeight(){
+		return height;
 	}
 	
 	public void setI(int i){
@@ -46,12 +46,12 @@ class HightWidth{
 
 }
 
-class LargestRectangeWithAllOnes{
+class LargestRectangleWithAllOnes {
 	
 	private int area = 0;
 	private int result[][]= null;
 	private int width;
-	private int hight;
+	private int height;
 	private int startI, startJ; 
 	private int endI, endJ;
 	
@@ -99,8 +99,8 @@ class LargestRectangeWithAllOnes{
 	}
 	
 	//https://www.youtube.com/watch?v=E5C5W6waHlo
-	public HightWidth histoArea(int input[], int row){
-		HightWidth hw = new HightWidth();
+	public HeightWidth histoArea(int input[], int row){
+		HeightWidth hw = new HeightWidth();
 		Stack<Integer> hights = new Stack<Integer> ();
 		Stack<Integer> indexes = new Stack<Integer> ();
 		
@@ -114,11 +114,11 @@ class LargestRectangeWithAllOnes{
 		int hight,width;
 		for ( int i = 1; i<input.length; i++){
 			
-			//case 1: The current element hight is more than top element hight of stack, push it
+			//case 1: The current element height is more than top element height of stack, push it
 			if (hights.isEmpty() || hights.peek() < input[i] ){
 				hights.push(input[i]);
 				indexes.push(i);
-			}else if(hights.peek() > input[i] ) {  //case 3: if the current element hight is less then the top element hight, calculate histogram
+			}else if(hights.peek() > input[i] ) {  //case 3: if the current element height is less then the top element height, calculate histogram
 				lastindex = 0; 
 				while ( !hights.isEmpty()  && hights.peek() > input[i]){
 					lastindex = indexes.pop();
@@ -148,13 +148,13 @@ class LargestRectangeWithAllOnes{
 		return hw;
 	}
 
-	private int getMaxArea(int row, HightWidth hw, int lastindex, int carea, int maxArea, int hight, int width) {
+	private int getMaxArea(int row, HeightWidth hw, int lastindex, int carea, int maxArea, int hight, int width) {
 		if ( carea > maxArea){
 				maxArea = carea;
 				hw.setI(row);
 				hw.setJ(lastindex);
 				hw.setWidth(width);
-				hw.setHight(hight);
+				hw.setHeight(hight);
 		}
 		return maxArea;
 	}
@@ -173,19 +173,19 @@ class LargestRectangeWithAllOnes{
 		int temp[][] = getCopy(input);
 		//print(temp);
 		createHistogram(input);
-		HightWidth hw = null;
+		HeightWidth hw = null;
 		for (int k=0; k<input.length; k++){
 			hw = histoArea(input[k], k);
 		
-			if ( this.area < hw.getWidth()*hw.getHight()){
+			if ( this.area < hw.getWidth()*hw.getHeight()){
 				i = hw.getI();
 				j = hw.getJ();
 				width = hw.getWidth();
-				hight = hw.getHight();
+				hight = hw.getHeight();
 				
 				this.area = width*hight;
 				
-				//System.out.println (" i: " +i + " j " + j + " width " + width + " hight " + hight + " area " + this.area ); 
+				//System.out.println (" i: " +i + " j " + j + " width " + width + " height " + height + " area " + this.area );
 			}
 			
 			
@@ -196,7 +196,7 @@ class LargestRectangeWithAllOnes{
 		this.endI = i;
 		this.endJ = j + width -1; 
 		this.width = width;
-		this.hight = hight;
+		this.height = hight;
 	
 		createResultMatrix(temp);
 	}
@@ -204,7 +204,7 @@ class LargestRectangeWithAllOnes{
 	public void createResultMatrix(int input[][]){
 	
 		if ( this.area!=0){
-			this.result = new int [this.hight][this.width];
+			this.result = new int [this.height][this.width];
 			for ( int t=startI; t<=endI; t++)
 				for ( int p = startJ; p<=endJ; p++)
 					this.result[t-startI][p-startJ] = input[t][p];
@@ -238,7 +238,7 @@ class LargestSquareWithAllOnes{
 	}
 	
 	private int [][] getAuxilaryArrayWithFirstRowCol(int input[][]){
-		int auxilaryArray[][] = new int [input.length][input[0].length] ; 
+		int auxilaryArray[][] = new int [input.length][input[0].length] ;
 		
 		for (int i=0; i<input[0].length; i++ ) 
 			auxilaryArray[0][i] = input[0][i];
@@ -321,7 +321,7 @@ class LargestRectangeWithAllOnesandLargestSquareWithAllOnes
 	}
 	
 	private static void largestRectangle(int input[][]){
-		 LargestRectangeWithAllOnes rectangle = new LargestRectangeWithAllOnes();
+		 LargestRectangleWithAllOnes rectangle = new LargestRectangleWithAllOnes();
     	 rectangle.getRectangleWithAllOnes(input);
          System.out.println("area : "+rectangle.getArea());
        	 rectangle.print(rectangle.getResult());

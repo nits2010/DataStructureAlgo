@@ -15,14 +15,14 @@ public class LongestPalindromicSubsequence {
      * = 2 if S[i] == S[i+1]
      * <p>
      * Lets translate it to 1D array
-     * lps[i] length of longest palindrome subsequence from till i
+     * lps[i] length of longest palindrome sub-sequence from till i
      * we can note that in above equation when we say
-     * lps[i+1][j] -> is just a below row8 of current
-     * lps[i][j] -> is the same row8 but previous column
-     * lps[i+1][j-1] -> is the below row8 with previous column.
+     * lps[i+1][j] -> is just a below row of current
+     * lps[i][j-1] -> is the same row but previous column
+     * lps[i+1][j-1] -> is the below row with previous column.
      * <p>
-     * Aparently we are dealing with only, current row8 ( current column, previous column)
-     * and below row8 as defined above. so we just need this.
+     * Apparently we are dealing with only, current row ( current column, previous column)
+     * and below row as defined above. so we just need this.
      * <p>
      * lps[i+1][j] = lps[j]
      * lps[i+1][j-1] = lps[j-1]
@@ -89,11 +89,13 @@ public class LongestPalindromicSubsequence {
 
                 int j = i + length - 1;
 
-                if (length == 2 && s.charAt(i) == s.charAt(j))
+                boolean isEqual = s.charAt(i) == s.charAt(j);
+
+                if (length == 2 && isEqual)
                     lps[i][j] = 2;
                 else {
 
-                    if (s.charAt(i) == s.charAt(j))
+                    if (isEqual)
                         lps[i][j] = 2 + lps[i + 1][j - 1];
                     else
                         lps[i][j] = Math.max(lps[i + 1][j], lps[i][j - 1]);
@@ -109,7 +111,7 @@ public class LongestPalindromicSubsequence {
 
     /** Cleaner version
      * O(n^2)/O(n^2)
-     * Lps[i][j] length of longest palindrome subsequence from i to j
+     * Lps[i][j] length of longest palindrome sub-sequence from i to j
      * Lps[i][j] = Lps[i+1][j-1] + 2 ; if S[i] == S[j]
      * = max (Lps[i+1][j], Lps[i][j-1]) ; if S[i] != S[j]
      * = 1 if i == j

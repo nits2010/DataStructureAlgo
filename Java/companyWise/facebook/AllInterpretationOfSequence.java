@@ -33,6 +33,7 @@ public class AllInterpretationOfSequence {
         out = allInterpretationOfSequence(arr);
         System.out.println("input: " + arr + " output: " + out);
 
+
         // aaa(1,1,1) ak(1,11) ka(11,1)
         int[] arr2 = {1, 1, 1};
         out = allInterpretationOfSequence(arr2);
@@ -121,4 +122,6 @@ public class AllInterpretationOfSequence {
         }
         return root;
     }
+
+
 }

@@ -5,6 +5,7 @@ import com.sun.tools.corba.se.idl.InvalidArgument;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 03/04/19
@@ -25,17 +26,25 @@ public class ListCombination {
     public static void main(String args[]) {
 
 
-        Map<String, Character[]> input = new HashMap<>();
+        Map<String, char[]> input = new HashMap<>();
 
-        input.put("1", new Character[]{'A', 'B', 'C'});
-        input.put("2", new Character[]{'D', 'E'});
-        input.put("12", new Character[]{'X'});
-        input.put("3", new Character[]{'P', 'Q'});
+        input.put("1", new char[]{'A', 'B', 'C'});
+        input.put("2", new char[]{'D', 'E'});
+        input.put("3", new char[]{'P', 'Q'});
+        input.put("12", new char[]{'X'});
+        input.put("4", new char[]{'T', 'S'});
+        input.put("23", new char[]{'Z', 'N'});
+        input.put("34", new char[]{'O', 'M'});
+        input.put("234", new char[]{'W', 'Y'});
+        input.put("1234", new char[]{'@', '#'});
 
-        String test = "123";
+        String test = "1234";
         try {
             List<String> output = generateCombination(input, test);
             System.out.println(output);
+
+
+
         } catch (InvalidArgument invalidArgument) {
             invalidArgument.printStackTrace();
         }
@@ -43,7 +52,7 @@ public class ListCombination {
 
     }
 
-    private static List<String> generateCombination(Map<String, Character[]> input, String test) throws InvalidArgument {
+    private static List<String> generateCombination(Map<String, char[]> input, String test) throws InvalidArgument {
 
         if (null == input || input.isEmpty() || null == test || test.isEmpty())
             return Collections.EMPTY_LIST;
@@ -55,12 +64,12 @@ public class ListCombination {
 
     }
 
-    private static List<List<String>> buildConsiderList(Map<String, Character[]> input, String pattern) throws InvalidArgument {
+    private static List<List<String>> buildConsiderList(Map<String, char[]> input, String pattern) throws InvalidArgument {
 
         List<List<String>> toConsider = new LinkedList<>();
 
-        //Consider of key;
         /**
+         * Consider of key;
          * Here we use key a loop runner because we could have case where from pattern multiple (off different size) string present in input map,
          * then if we traverse over pattern then we need to generate n^2 sub string and check all of them in map, that corresponding list present or not
          */
@@ -72,30 +81,41 @@ public class ListCombination {
             //Example: Key = 2, pattern=123 -> since 123 does not start with 2, which means all the list by 2 we can't consider since it has to be like 123
             if (!pattern.startsWith(key))
                 continue;
-//
-            //     String.valueOf(Arrays.stream(current).map(Objects::toString).collect(Collectors.joining()));
 
             //process for current key array
-            Character[] current = input.get(key);
-            subListsToConsider.add(toString(current));
+            subListsToConsider.add(new String(input.get(key)));
 
             //Take the remaining length to consider
             //example key = 1, pattern=123, then remaining is = 23 which we'll consider one by one
-            String remainingTest = pattern.substring(key.length());
+            String remainingPattern = pattern.substring(key.length());
 
 
+            //Case 1: character by character
             //process remaining
-            for (int i = 0; i < remainingTest.length(); i++) {
+            for (int i = 0; i < remainingPattern.length(); i++) {
 
+                String testThis = String.valueOf(remainingPattern.charAt(i));
                 //if this does not present in input; input is corrupt
-                if (!input.containsKey(String.valueOf(remainingTest.charAt(i))))
+                if (!input.containsKey(testThis))
                     throw new InvalidArgument("Input " + pattern + "is invalid");
 
-                Character[] temp = input.get(String.valueOf(remainingTest.charAt(i)));
-                subListsToConsider.add(toString(temp));
+                subListsToConsider.add(new String(input.get(testThis)));
 
 
             }
+
+
+            //case 2: whole remaining list
+            if (remainingPattern.length() > 1 && input.containsKey(remainingPattern)) {
+                List<List<String>> withRemaining = new ArrayList<>();
+                List<String> rem = new ArrayList<>();
+                rem.add(new String(input.get(key)));
+                rem.add(new String(input.get(remainingPattern)));
+
+                withRemaining.add(rem);
+                toConsider.addAll(withRemaining);
+            }
+
             toConsider.add(subListsToConsider);
 
 
@@ -129,12 +149,5 @@ public class ListCombination {
     }
 
 
-    private static String toString(Character[] characters) {
-        StringBuilder str = new StringBuilder(characters.length);
-        for (Character c : characters)
-            str.append(c);
-
-        return str.toString();
-    }
 
 }

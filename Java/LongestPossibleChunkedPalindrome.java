@@ -21,8 +21,22 @@ public class LongestPossibleChunkedPalindrome {
         System.out.println("input :" + input3 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input3));
         System.out.println("input :" + input4 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input4));
         System.out.println("input :" + input5 + " longest Possible Chunked Palindromes :" + longestPossibleChunkedPalindrome(input5));
+
+        System.out.println("Iterative solutions");
+
+        System.out.println("input :" + input1 + " longest Possible Chunked Palindromes :" + chunkedPalindrome(input1));
+        System.out.println("input :" + input2 + " longest Possible Chunked Palindromes :" + chunkedPalindrome(input2));
+        System.out.println("input :" + input3 + " longest Possible Chunked Palindromes :" + chunkedPalindrome(input3));
+        System.out.println("input :" + input4 + " longest Possible Chunked Palindromes :" + chunkedPalindrome(input4));
+        System.out.println("input :" + input5 + " longest Possible Chunked Palindromes :" + chunkedPalindrome(input5));
     }
 
+
+    /**
+     * Recursive solutions
+     * @param input
+     * @return
+     */
     private static int longestPossibleChunkedPalindrome(String input) {
 
         String current = input;
@@ -64,6 +78,52 @@ public class LongestPossibleChunkedPalindrome {
 
 
         return count + 1;
+    }
+
+    /**
+     * This is iterative solution
+     * @param str
+     * @return
+     */
+    private static int chunkedPalindrome(String str) {
+        int count = 0;
+
+        int from, too, till, length;
+        from = 0;
+        too = 1;
+        length = str.length();
+        till = length - 1;
+
+        while (from <= till) {
+            if (from == till) {
+                count++;
+                break;
+            }
+
+            String s1 = str.substring(from, too);
+            String s2 = str.substring(till, length);
+
+            //If both of the string are equal then they will form palindrome.
+            if (s1.equals(s2)) {
+                //increase the count
+                count += 2;
+
+                //move left index ahead
+                from = too;
+
+                //increse the length of right index of left side
+                too++;
+
+                //reduce the length
+                length = till;
+                till--;
+
+            } else {
+                too++;
+                till--;
+            }
+        }
+        return count;
     }
 
 

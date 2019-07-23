@@ -44,7 +44,7 @@ public class WildcardMatching {
             return (n == 0);
 
         // lookup table for storing results of
-        // subproblems
+        // sub problems
         boolean[][] lookup = new boolean[n + 1][m + 1];
 
 
@@ -59,6 +59,7 @@ public class WildcardMatching {
         // fill the table in bottom-up fashion
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
+
                 // Two cases if we see a '*'
                 // a) We ignore '*'' character and move
                 //    to next  character in the pattern,
@@ -112,6 +113,7 @@ public class WildcardMatching {
 
 
         while (textIndex < txtL) {
+
             if (patIndex < patL && pat[patIndex] == '*') {
                 textPreviousStarIndex = textIndex;
                 patPreviousStarIndex = patIndex;
@@ -122,10 +124,13 @@ public class WildcardMatching {
             } else if (patPreviousStarIndex != -1) {
                 // means current char is not * or ? but a char which is not matching,
                 // then we have to back track to previous * of pattern and text and
+
                 // assume the text (at previous * index) is now matched to this, and move forward in text from that index
-                textIndex = textPreviousStarIndex + 1;
-                patIndex = patPreviousStarIndex + 1;
                 textPreviousStarIndex++;
+                textIndex = textPreviousStarIndex;
+
+                patIndex = patPreviousStarIndex + 1;
+
 
             } else
                 return false;

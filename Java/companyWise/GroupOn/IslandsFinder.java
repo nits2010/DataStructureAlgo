@@ -27,7 +27,13 @@ public class IslandsFinder {
     }
 
     public static void main(String args[]) {
-        int mat[][] = {{1, 0, 0, 0, 1, 0}, {0, 1, 0, 0, 1, 0}, {0, 0, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 1}, {0, 1, 1, 0, 1, 0}};
+        int mat[][] = {{1, 0, 0, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0},
+                {0, 0, 1, 1, 0, 0},
+                {0, 0, 0, 0, 0, 1},
+                {0, 0, 0, 0, 0, 1},
+                {0, 1, 1, 0, 1, 0}};
+
         Islands islands = islands(mat);
         System.out.println(islands);
     }
@@ -58,7 +64,11 @@ public class IslandsFinder {
 
                     islands.currentSize = 1;
                     countIslands(mat, n, m, i, j, islands, marked);
+
+                    //count how many are there
                     islands.count++;
+
+                    //find the max size
                     int max = Math.max(islands.currentSize, islands.size);
                     islands.size = max;
                 }
@@ -70,6 +80,17 @@ public class IslandsFinder {
     }
 
 
+    /**
+     * find all the connected island, and its size from given island point r and c
+     *
+     * @param mat
+     * @param n
+     * @param m
+     * @param r
+     * @param c
+     * @param islands
+     * @param marked
+     */
     private static void countIslands(int[][] mat, int n, int m, int r, int c, Islands islands, boolean marked[][]) {
 
 

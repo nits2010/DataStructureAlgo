@@ -14,57 +14,67 @@ class Graph {
 
     // Constructor to create an empty ArrayList
     // to store the nodes of the graph
-    public Graph()
-    {
+    public Graph() {
         this.nodes = new ArrayList<>();
     }
 
     // Constructor to set the graph's nodes
-    public Graph(List<GraphNode> nodes)
-    {
+    public Graph(List<GraphNode> nodes) {
         this.nodes = nodes;
         this.nodes = new ArrayList<>();
     }
 
     // Function to add a node to the graph
-    public void addNode(GraphNode node)
-    {
+    public void addNode(GraphNode node) {
         this.nodes.add(node);
     }
 
     // Function to return the list of nodes
     // for the graph
-    public List<GraphNode> getNodes()
-    {
+    public List<GraphNode> getNodes() {
         return this.nodes;
     }
 
+
+    /**
+     * This clone a graph where it has multiple components
+     *
+     * @param gNode
+     * @return
+     */
     public Graph cloneGraphDisConnectedUndirected(Graph gNode) {
 
+        //Node to clone node
         Map<GraphNode, GraphNode> map = new HashMap<>();
-
-        for (GraphNode node : gNode.getNodes()) {
-            if (!map.containsKey(node))
-                cloneConnectedComponent(node, map);
-        }
 
         Graph cloned = new Graph();
         for (GraphNode node : gNode.getNodes()) {
-            cloned.getNodes().add(map.get(node));
+            if (!map.containsKey(node)) {
+                //clone the connected component
+                cloneConnectedComponent(node, map);
+
+                //attache the cloned connected components
+                cloned.getNodes().add(map.get(node));
+            }
         }
+
         return cloned;
 
 
     }
 
+    /******* https://leetcode.com/problems/clone-graph/ ******/
+    //https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree
     public Graph cloneConnectedComponent(Graph gNode) {
 
         Map<GraphNode, GraphNode> map = new HashMap<>();
+
         return cloneConnectedComponent(gNode.getNodes().get(0), map);
 
     }
 
 
+    //Do BFS and keep cloning
     private Graph cloneConnectedComponent(GraphNode node, Map<GraphNode, GraphNode> map) {
         Queue<GraphNode> queue = new LinkedList<>();
 
@@ -99,10 +109,14 @@ class Graph {
             }
         }
 
-        GraphNode graphNode = map.get(node);
+        //For To Build a graph
+        GraphNode cloneGraphNode = clone;
+
         Graph cloned = new Graph();
-        cloned.addNode(graphNode);
+        cloned.addNode(cloneGraphNode);
+
         return cloned;
     }
 
+    /******* https://leetcode.com/problems/clone-graph/ ******/
 }
