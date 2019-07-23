@@ -12,12 +12,9 @@ import java.util.Arrays;
  * Weight of a sting is calculated using below formula.
  * <p>
  * <p>
- * Weight of string = Weight of total pairs +
- * weight of single characters -
- * Total number of toggles.
+ * Weight of string = Weight of total pairs +weight of single characters -Total number of toggles.
  * <p>
- * Two consecutive characters are considered as pair only if they
- * are different.
+ * Two consecutive characters are considered as pair only if they are different.
  * Weight of a single pair (both character are different) = 4
  * Weight of a single character = 1
  * Examples :
@@ -59,7 +56,7 @@ public class MaximumWeightTransformation {
      * <p>
      * W[i] = if (str[i] == str[i+1] ) then
      * *         either we check the current character separately -> 1+ W[i+1]
-     * *         or we toggle a char and make a pair and then repeat it  -> (4-1) + W[i+2]  *
+     * *         or we toggle a char and make a pair and then repeat it  -> (4-1) + W[i+2] 
      *
      * @param str
      * @param i

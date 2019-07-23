@@ -175,7 +175,7 @@ public class PartitionSetInKSubset {
      * * if this is not first column, then its a sum of previous column + (previous row, column)
      * * <p>
      * * Bell(i,j) = Bell (i-1, j-1) if j = 1
-     * * *          = Bell(i, j-1) Bell ( i-1,j-1 )
+     * * *          = Bell(i, j-1) +Bell ( i-1,j-1 )
      * * <p>
      *
      * @param n
