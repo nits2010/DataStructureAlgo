@@ -100,7 +100,7 @@ public class MaxA {
                 // at b'th keystroke then
                 // the optimal string would
                 // have length
-                // (n-b-1)*screen[b-1];
+                // (n-b-1)*screen[b]
                 int curr = (n - b - 1) * screen[b];
                 if (curr > screen[n])
                     screen[n] = curr;
