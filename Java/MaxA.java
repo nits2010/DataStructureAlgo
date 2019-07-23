@@ -121,8 +121,6 @@ public class MaxA {
         // of subproblems
         int screen[] = new int[N + 1];
 
-        int b; // To pick a breakpoint
-
         // Initializing the optimal lengths
         // array for uptil 6 input strokes
         int n;
