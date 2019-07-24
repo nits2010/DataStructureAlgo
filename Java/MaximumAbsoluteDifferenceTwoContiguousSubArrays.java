@@ -1,5 +1,7 @@
 package Java;
 
+import Java.HelpersToPrint.HelperToPrint;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-06
@@ -17,48 +19,59 @@ package Java;
  * Output: 16
  * Two subarrays are [-1, -2, 1, -4] and [2, 8]
  */
-public class MaximumAbsoluteDifferenceTwoContigeousSubArrays {
+public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public static void main(String args[]) {
         int i1[] = {-2, -3, 4, -1, -2, 1, 5, -3};
         int i2[] = {2, -1, -2, 1, -4, 2, 8};
 
-        SolutionMaximumAbsoluteDifferenceTwoContigeousSubArrays sol= new SolutionMaximumAbsoluteDifferenceTwoContigeousSubArrays();
+        SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays sol = new SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays();
 
-        System.out.println(sol.maximumAbsoluteDifferenceTwoContigeousSubArrays(i1));
-        System.out.println(sol.maximumAbsoluteDifferenceTwoContigeousSubArrays(i2));
+        System.out.println(sol.maximumAbsoluteDifferenceTwoContiguousSubArrays(i1));
+        System.out.println(sol.maximumAbsoluteDifferenceTwoContiguousSubArrays(i2));
 
     }
 }
 
-class SolutionMaximumAbsoluteDifferenceTwoContigeousSubArrays {
+class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
-    public int maximumAbsoluteDifferenceTwoContigeousSubArrays(int a[]) {
+    public int maximumAbsoluteDifferenceTwoContiguousSubArrays(int a[]) {
+        HelperToPrint.printArray(a);
+
 
         if (a == null || a.length == 0)
             return Integer.MIN_VALUE;
 
         int n = a.length;
 
-        int leftMax[] = maximumSumSubArrayKadensFromLeft(a);
+        /**
+         * LeftMax[i] is the maximum value in the arr[0..i]
+         * RightMax[i] is the maximum value in the arr[i+1..n-1]
+         */
+        int leftMax[] = maximumSumSubArrayKadansFromLeft(a);
         int rightMax[] = maximumSumSubArrayKadensFromRight(a);
 
         invert(a);
 
-        int leftMin[] = maximumSumSubArrayKadensFromLeft(a);
+        /**
+         * LeftMin[i] is the minimum value in the arr[0..i]
+         * RightMin[i] is the minimum value in the arr[i+1..n-1]
+         */
+        int leftMin[] = maximumSumSubArrayKadansFromLeft(a);
         invert(leftMin);
 
         int rightMin[] = maximumSumSubArrayKadensFromRight(a);
         invert(rightMin);
 
+        //reset a
         invert(a);
 
 
         int max = Integer.MIN_VALUE;
 
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n - 1; i++) {
 
-            max = Math.max(max, Math.max(Math.abs(leftMax[i] - rightMin[i]), Math.abs(leftMin[i] - rightMax[i + 1])));
+            max = Math.max(max, Math.max(Math.abs(leftMax[i] - rightMin[i + 1]), Math.abs(leftMin[i] - rightMax[i + 1])));
         }
 
 
@@ -70,7 +83,7 @@ class SolutionMaximumAbsoluteDifferenceTwoContigeousSubArrays {
             a[i] = -a[i];
     }
 
-    private int[] maximumSumSubArrayKadensFromLeft(int a[]) {
+    private int[] maximumSumSubArrayKadansFromLeft(int a[]) {
         int n = a.length;
         int res[] = new int[n];
 
