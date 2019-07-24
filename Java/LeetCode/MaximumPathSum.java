@@ -1,6 +1,5 @@
 package Java.LeetCode;
 
-import Java.Tree.MinMaxObject;
 import Java.Tree.TreeNode;
 import javafx.util.Pair;
 
@@ -72,15 +71,16 @@ class MaximumEvenPathSum {
 
     int maximumEvenPathSum(TreeNode<Integer> root) {
 
-        MinMaxObject<Integer> max = new MinMaxObject<>(Integer.MIN_VALUE);
+        int max[] = new int[1];
+        max[0] = Integer.MIN_VALUE;
 
         maximumEvenPathSum(root, max);
 
-        return max.data;
+        return max[0];
     }
 
     //Pair <even, odd>
-    private Pair<Integer, Integer> maximumEvenPathSum(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+    private Pair<Integer, Integer> maximumEvenPathSum(TreeNode<Integer> root, int[] max) {
 
         //its null
         if (root == null) {
@@ -115,16 +115,21 @@ class MaximumEvenPathSum {
              */
 
 
-            max.data = Math.max(max.data, Math.max(left.getKey() + right.getKey(), left.getValue() + right.getValue()) + root.getData());
+            // max = MAX ( max, MAX(left.even+ right.even, left.odd+ right.odd) + value)
+            max[0] = Math.max(max[0], Math.max(left.getKey() + right.getKey(), left.getValue() + right.getValue()) + root.getData());
 
+            //even-> MAX ( MAX ( left.even, right.even) + value, value),
             int even = Math.max(Math.max(left.getKey(), right.getKey()) + root.getData(), root.getData());
+
+            //odd ->( left.odd, right.odd) + value )
             int odd = Math.max(left.getValue(), right.getValue()) + root.getData();
 
+            //if odd become even, means this sub-tree has only even nodes
             if (odd % 2 == 0)
                 odd = 0;
 
-            if (even % 2 != 0)
-                even = 0;
+//            if (even % 2 != 0)
+//                even = 0;
 
             return new Pair<>(even, odd);
 
@@ -142,13 +147,17 @@ class MaximumEvenPathSum {
              */
 
 
-            max.data = Math.max(max.data, left.getValue() + right.getValue() + root.getData());
+            // max = MAX ( max, (left.odd +  right.odd + value))
+            max[0] = Math.max(max[0], left.getValue() + right.getValue() + root.getData());
 
             int even = root.getData() + Math.max(left.getValue(), right.getValue());
             int odd = Math.max(root.getData(), Math.max(left.getKey(), right.getKey()) + root.getData());
 
-            if (odd % 2 == 0)
-                odd = 0;
+            //Not require
+//            if (odd % 2 == 0)
+//                odd = 0;
+
+            //if even become odd, means this sub-tree has only 0 value nodes
             if (even % 2 != 0)
                 even = 0;
 
@@ -187,15 +196,15 @@ class MaximumPathSumLeafToLeaf {
         if (null == root)
             return 0;
 
-        MinMaxObject<Integer> max = new MinMaxObject<>();
-        max.data = Integer.MIN_VALUE;
+        int max[] = new int[1];
+        max[0] = Integer.MIN_VALUE;
 
         maximumPathSumLeafToLeaf(root, max);
 
-        return max.data;
+        return max[0];
     }
 
-    int maximumPathSumLeafToLeaf(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+    int maximumPathSumLeafToLeaf(TreeNode<Integer> root, int max[]) {
 
         if (root == null)
             return 0;
@@ -207,7 +216,7 @@ class MaximumPathSumLeafToLeaf {
         int mR = maximumPathSumLeafToLeaf(root.getRight(), max);
 
 
-        max.data = Math.max(max.data, mL + mR + root.getData());
+        max[0] = Math.max(max[0], mL + mR + root.getData());
 
         return Math.max(mL, mR) + root.getData();
 
