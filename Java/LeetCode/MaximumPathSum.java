@@ -166,7 +166,17 @@ class MaximumEvenPathSum {
 
 }
 
-//https://www.geeksforgeeks.org/find-maximum-path-sum-two-leaves-binary-tree/
+
+/**
+ * https://www.geeksforgeeks.org/find-maximum-path-sum-two-leaves-binary-tree/
+ * Given a binary tree in which each node element contains a number. Find the maximum possible sum from one leaf node to another.
+ * The maximum sum path may or may not go through root. For example, in the following binary tree,
+ * the maximum sum is 27(3 + 6 + 9 + 0 – 1 + 10). Expected time complexity is O(n).
+ * <p>
+ * If one side of root is empty, then function should return minus infinite (INT_MIN in case of C/C++)
+ * <p>
+ * tree
+ */
 class MaximumPathSumLeafToLeaf {
     /**
      * @param root
@@ -212,26 +222,52 @@ class MaximumPathSumLeafToLeaf {
     }
 }
 
-//https://leetcode.com/problems/binary-tree-maximum-path-sum/
+/**
+ * https://leetcode.com/problems/binary-tree-maximum-path-sum/
+ * Given a non-empty binary tree, find the maximum path sum.
+ * <p>
+ * For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: [1,2,3]
+ * <p>
+ * 1
+ * / \
+ * 2   3
+ * <p>
+ * Output: 6
+ * Example 2:
+ * <p>
+ * Input: [-10,9,20,null,null,15,7]
+ * <p>
+ * -10
+ * / \
+ * 9  20
+ * /  \
+ * 15   7
+ * <p>
+ * Output: 42
+ */
 class MaximumPathSumAnyNode {
 
     int maximumPathSumAnyNode(Java.Tree.TreeNode root) {
         if (root == null)
             return 0;
 
-        MinMaxObject<Integer> max = new MinMaxObject();
-        max.data = Integer.MIN_VALUE;
-        maxPathSumHelper(root, max);
-        return max.data;
+        int max[] = new int[1];
+        max[0] = Integer.MIN_VALUE;
+        maximumPathSumAnyNode(root, max);
+        return max[0];
     }
 
-    private int maxPathSumHelper(TreeNode<Integer> root, MinMaxObject<Integer> max) {
+    private int maximumPathSumAnyNode(TreeNode<Integer> root, int max[]) {
         if (root == null) {
             return 0;
         }
 
-        int l = maxPathSumHelper(root.getLeft(), max);
-        int r = maxPathSumHelper(root.getRight(), max);
+        int l = maximumPathSumAnyNode(root.getLeft(), max);
+        int r = maximumPathSumAnyNode(root.getRight(), max);
 
         // compare leftSum + root val or rightSum + root val to select which value to send further
         int oneChildMax = Math.max(l, r) + root.getData();
@@ -241,7 +277,7 @@ class MaximumPathSumAnyNode {
 
         // if root + leftSum + rightSum is greater than any of the max till now, update the final max (though we are updating the final max, we shouldn't be propagating this further as only one of left or right path is the valid selection)
         int bothChildMax = Math.max(toReturn, root.getData() + l + r);
-        max.data = Math.max(bothChildMax, max.data);
+        max[0] = Math.max(bothChildMax, max[0]);
 
         // return the max sum till the current node that can be processed further
         return toReturn;
