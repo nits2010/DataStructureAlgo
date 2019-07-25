@@ -1,6 +1,7 @@
 package Java.companyWise.facebook;
 
 import java.util.*;
+import java.util.Map;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -34,7 +35,7 @@ import java.util.*;
  * recursively apply this on rest of the pattern
  * 2.2 if it hit the leaf node in trie and pattern is exhaust then return the min cut so far.
  */
-public class MinimumBreak {
+public class MinimumWordBreak {
 
 
     static class TrieNode {
