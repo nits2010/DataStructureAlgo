@@ -1,8 +1,5 @@
 package Java;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 11/04/19
@@ -48,47 +45,47 @@ public class ATimesToContainB {
         System.out.println();
         String a = "abcd";
         String b = "cdabcdabcdabcdab";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
 
         System.out.println();
         a = "abcd";
         b = "cdabcdabcdabcdabab";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
 
         System.out.println();
         a = "abcd";
         b = "cdabcdab";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
         System.out.println();
         a = "abcd";
         b = "d";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
         System.out.println();
         a = "abcd";
         b = "cda";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
         System.out.println();
         a = "abcd";
         b = "cdb";
-        System.out.println("Brute Force Multiply A :" + a + " n= " + atimesbBruteForce(a, b) + " to contain B " + b);
-        System.out.println("Optimized Multiply A :" + a + " n= " + atimesb(a, b) + " to contain B " + b);
+        System.out.println("Brute Force Multiply A :" + a + " n= " + aTimesBBruteForce(a, b) + " to contain B " + b);
+        System.out.println("Optimized Multiply A :" + a + " n= " + ATimesB(a, b) + " to contain B " + b);
 
 
     }
 
 
     //O(n*m^2)
-    private static int atimesbBruteForce(String a, String b) {
+    private static int aTimesBBruteForce(String a, String b) {
 
         int m = b.length();
         StringBuilder tempA = new StringBuilder(a);
@@ -120,24 +117,24 @@ public class ATimesToContainB {
      * <p>
      * f(abcd, cdabcdab)
      * |cdabcdab| > 2|abcd| - 2 since 8 > 2*4 - 2
-     * ^^^^
+     **   ^^^^
      * first instance of A in B; no more, so return 1 + f(cdab, abcd) = 3
      * f(cdab, abcd)
      * |cdab| < 2|abcd| - 2 since 4 < 2*4 - 2
      * abcdabcdabcd
-     *   ^^^^
+     **  ^^^^
      * first instance of B in A; one instance of A after B, so return 3 - 1 = 2.
      * <p>
      * f(d, abcd)
      * |d| < 2|abcd| - 2, since 1 < 2*4 - 2
      * abcdabcdabcd
-     *    ^
+     * ^
      * first instance of B in A; two instances of A after B, so return 3 - 2 = 1.
      * <p>
      * f(cda, abcd)
      * |cda| = 2|abcd| - 2 since 3 = 2*4 - 2
      * abcdabcdabcd
-     *   ^^^
+     * ^^^
      * first instance of B in A; one instance of A after B, so return 3 - 1 = 2.
      * <p>
      * f(cdb, abcd)
@@ -154,26 +151,27 @@ public class ATimesToContainB {
      * @param b
      * @return O(( m ^ 2)/n)
      */
-    private static int atimesb(String a, String b) {
-        int n = a.length();
-        int m = b.length();
+    private static int ATimesB(String a, String b) {
+        int aLength = a.length();
+        int bLength = b.length();
 
 
-        if (m == 0)
+        if (bLength == 0)
             return 0;
 
-        if (m == 1)
+        if (bLength == 1)
             return (a.contains(b) ? 1 : -1);
 
         int count;
-        if (m > 2 * n - 2) {
+
+        if (bLength > 2 * aLength - 2) {
             count = countTimes(b, a);  // O(m/n)
 
             if (count > 0) {
-                return count + atimesb(a, removeByTimes(b, a)); // O(m)
+                return count + ATimesB(a, removeByTimes(b, a)); // O(m)
             } else
                 return count;
-        } else if (m < n + 2) {
+        } else if (bLength < aLength + 2) {
             a = a + a;
             count = countTimes(a, b); // O(m)
 
