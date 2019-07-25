@@ -328,9 +328,9 @@ class JobSchedulingDisJointSet {
                 return;
 
             if (parent[pi].rank < parent[pj].rank) {
-                parent[pj].id = pi; //make pj as parent of pi, this will make pj size always same as we added one more child only
+                parent[pi].id = pj; //make pj as parent of pi, this will make pj size always same as we added one more child only
             } else if (parent[pi].rank > parent[pj].rank)
-                parent[pi].id = pj; //make pi as parent of pj, this will make pi size always same as we added one more child only
+                parent[pj].id = pi; //make pi as parent of pj, this will make pi size always same as we added one more child only
             else {
                 parent[pj].id = pi; //make pi as parent of pj, and increase its rank(size)
                 parent[pj].rank++;
