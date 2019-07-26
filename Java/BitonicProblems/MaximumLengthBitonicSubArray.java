@@ -1,5 +1,7 @@
 package Java.BitonicProblems;/* package whatever; // don't place package name! */
 
+import Java.HelpersToPrint.HelperToPrint;
+
 //MaximumLengthBitonicSubarray
 class MaximumLengthBitonicSubArrayHelper {
     private int i;
@@ -32,25 +34,19 @@ class MaximumLengthBitonicSubArrayHelper {
     }
 
     public void print() {
-        System.out.print("\n");
-        for (int i = 0; i < input.length; i++)
-            System.out.print(input[i] + " ");
+        HelperToPrint.printArray(input);
     }
 
     //false if no subarray exist otherwise true
     private boolean calculateMaximumLengthBitonicSubarray() {
-        boolean found = false; // does any BSA found
-        boolean directionChange = false; //does direction change increase to decrease
-        int countOfChange = 0;
-        int i = 0;
-        //find the first point from where BSA can start
-        // for (  i=0; i<input.length-1; i++){
-        // 	if ( input[i+1] > input[i])
-        // 		break;
-        // }
-        if (i == input.length - 1)
-            return false;
 
+        boolean found = false; // does any BSA found
+
+        boolean directionChange = false; //does direction change increase to decrease
+
+        int countOfChange = 0;
+
+        int i = 0;
         directionChange = false;
         int start = i;
         i++;
@@ -98,9 +94,8 @@ class MaximumLengthBitonicSubArrayHelper {
     }
 }
 
-/* Name of the class has to be "Main" only if the class is public. */
 class MaximumLengthBitonicSubArray {
-    public static void main(String[] args) throws java.lang.Exception {
+    public static void main(String[] args) {
         MaximumLengthBitonicSubArrayHelper item = new MaximumLengthBitonicSubArrayHelper();
         int input[] = {12, 4, 78, 90, 45, 23, 78, 122, 136, 24, 22, 27, 29, 34, 85, 65, 12, 10, 1};
         int input2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};

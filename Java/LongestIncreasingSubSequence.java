@@ -114,6 +114,7 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
 
         System.out.println("\n LIS -> ");
         LIS lis = lengthOfLISHelper(nums);
+
         HelperToPrint.printArray(lis.lis);
 
         return lis.length;

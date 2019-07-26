@@ -34,7 +34,14 @@ public class LongestBitnoicSubsequence {
 
     }
 
-    //O(n^2)
+
+
+    /**
+     * {@link Java.LongestIncreasingSubSequence}
+     * @param arr
+     * @return
+     * O(n^2)
+     */
     private static int longestBitnoicSubsequence(int[] arr) {
 
         int n = arr.length;
@@ -72,13 +79,19 @@ public class LongestBitnoicSubsequence {
         return max;
     }
 
-    //O(nlogn)
+    /**
+     * {@link Java.LongestIncreasingSubSequence}
+     * @param arr
+     * @return
+     * O(nlogn)
+     */
+
     private static int longestBitnoicSubsequenceNlogN(int[] arr) {
 
         int n = arr.length;
 
         int increasing[] = new int[n];
-        int increasingTail[] = new int[n];
+        int increasingTail[] = new int[n];//contains length of LBS at i index
 
         int decreasing[] = new int[n];
         int decreasingTail[] = new int[n];
@@ -86,10 +99,10 @@ public class LongestBitnoicSubsequence {
 
         buildTail(arr, increasing, increasingTail, n);
 
-        revereseArr(arr);
+        reveresArr(arr);
         buildTail(arr, decreasing, decreasingTail, n);
 
-        revereseArr(arr);
+        reveresArr(arr);
 
         //find max cut point
         int max = Integer.MIN_VALUE;
@@ -102,7 +115,7 @@ public class LongestBitnoicSubsequence {
     }
 
     // function to reverse an array
-    public static void revereseArr(int arr[]) {
+    public static void reveresArr(int arr[]) {
         int i = 0;
         int j = arr.length - 1;
         while (i < j) {
@@ -113,6 +126,14 @@ public class LongestBitnoicSubsequence {
         }
     }
 
+    /**
+     * {@link Java.LongestIncreasingSubSequence}
+     *
+     * @param nums
+     * @param lis
+     * @param tail
+     * @param n
+     */
     private static void buildTail(int[] nums, int lis[], int tail[], int n) {
         if (nums == null || nums.length == 0)
             return;
