@@ -1,7 +1,5 @@
 package Java.BitonicProblems;
 
-import Java.LongestIncreasingSubSequence;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-22
@@ -135,11 +133,24 @@ public class LongestBitnoicSubsequence {
                 lis[lisLength++] = item;
                 tail[i] = lisLength;
             } else if (item < lis[lisLength - 1]) {
-                int index = LongestIncreasingSubSequence.ceilIndex(lis, 0, lisLength - 1, item);
+                int index = ceilIndex(lis, 0, lisLength - 1, item);
                 lis[index] = item;
                 tail[i] = index + 1;
             }
         }
 
+    }
+
+
+    public static int ceilIndex(int a[], int l, int r, int item) {
+        while (l < r) {
+            int mid = (l + r) >> 1;
+
+            if (a[mid] >= item)
+                r = mid;
+            else
+                l = mid + 1;
+        }
+        return r;
     }
 }

@@ -2,6 +2,7 @@ package Java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  * Date: 2019-07-24
  * Description: https://www.geeksforgeeks.org/longest-common-increasing-subsequence-lcs-lis/
  * <p>
- * Given two arrays, find length of the longest common increasing subsequence [LCIS] and
+ * Given two arrays, find length of the longest common increasing sub sequence [LCIS] and
  * print one of such sequences (multiple sequences may exist)
  * <p>
  * Suppose we consider two arrays –
@@ -22,7 +23,7 @@ public class LongestCommonIncreasingSubSequence {
 
     public static void main(String[] args) {
         ILongestCommonIncreasingSubSequence twoD = new LongestCommonIncreasingSubSequence2D();
-        ILongestCommonIncreasingSubSequence oneD = new LongestCommonIncreasingSubSequence2D();
+        ILongestCommonIncreasingSubSequence oneD = new LongestCommonIncreasingSubSequence1D();
 
         test(new int[]{3, 4, 9, 1}, new int[]{5, 3, 8, 9, 10, 2, 1}, twoD, oneD);
 
@@ -77,7 +78,7 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
      * Let i is use to iterate over A and j is for B.
      * <p>
      * LCIS(i,j) can be defined as
-     * Length of longest increasing subsequence which ends on A's, "i" the char and B's "j"th char
+     * Length of longest increasing sub-sequence which ends on A's, "i" the char and B's "j"th char
      * <p>
      * Now,
      * If both are not same, i.e. A(i) > B( j) then we can extend last solution LCIS(i-1,j)
@@ -109,7 +110,7 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
         lcis[0][0] = 0;  //empty sequence
         List<Integer> sequence = new ArrayList<>();
 
-        int last = -1;
+        int last;
         int max = Integer.MIN_VALUE;
         for (int i = 0; i <= n; i++) {
 
@@ -127,7 +128,8 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
 
                     int x = a[i - 1];
                     int y = b[j - 1];
-                    //if they are same, then extend prvious
+
+                    //if they are same, then extend previous
                     if (x == y) {
 
                         if (lcis[i][j] < 1 + maxL)
@@ -186,13 +188,14 @@ class LongestCommonIncreasingSubSequence1D implements ILongestCommonIncreasingSu
          * Length of lcis start from ith element of a for all elements of b
          *
          */
-        int lcis[] = new int[n];
+        int lcis[] = new int[m];
         List<Integer> seq = new ArrayList<>();
+        int parent[] = new int[m];
 
         for (int i = 0; i < n; i++) {
 
             int max = 0;
-            int last = 0;
+            int last = -1;
 
             for (int j = 0; j < m; j++) {
 
@@ -201,17 +204,21 @@ class LongestCommonIncreasingSubSequence1D implements ILongestCommonIncreasingSu
 
                 if (x == y) {
 
-                    if (max + 1 < lcis[j]) {
+                    if (lcis[j] < 1 + max)
                         lcis[j] = max + 1;
-                        seq.add(a[last]);
 
+                    if (max < lcis[j]) {
+                        max = Math.max(max, lcis[j]);
+                        parent[j] = last;
                     }
+
+
                 } else {
                     if (x > y) {
 
                         if (max < lcis[j]) {
                             max = lcis[j];
-                            last = i;
+                            last = j;
                         }
                     }
                 }
@@ -220,6 +227,23 @@ class LongestCommonIncreasingSubSequence1D implements ILongestCommonIncreasingSu
 
         }
 
+        // The maximum value in table[] is out
+        // result
+        int result = 0, index = -1;
+        for (int i = 0; i < m; i++) {
+            if (lcis[i] > result) {
+                result = lcis[i];
+                index = i;
+            }
+        }
+
+        while (index != -1) {
+            seq.add(b[index]);
+            index = parent[index];
+        }
+
+
+        Collections.reverse(seq);
         return seq;
     }
 }
