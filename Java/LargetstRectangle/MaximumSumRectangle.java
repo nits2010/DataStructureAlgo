@@ -8,19 +8,21 @@ import java.util.Arrays;
  * Description: https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/
  * Given a 2D array, find the maximum sum subarray in it. For example, in the following 2D array,
  * the maximum sum subarray is highlighted with blue rectangle and sum of this subarray is 29.
- *
- *
+ * <p>
+ * <p>
  * This problem is mainly an extension of Largest Sum Contiguous Subarray for 1D array.
  */
 public class MaximumSumRectangle {
 
     public static void main(String args[]) {
-        int matrix[][] = {{1, 2, -1, -4, -20},
+        int matrix[][] = {
+                {1, 2, -1, -4, -20},
                 {-8, -3, 4, 2, 1},
                 {3, 8, 10, 1, 3},
                 {-4, -1, 1, 7, -6}};
 
         int[] points = maximumSumRectangle(matrix);
+
         //(top,left) to (bottom,right)
         int sum = 0;
         for (int row = points[0]; row <= points[2]; row++) {
@@ -100,10 +102,10 @@ public class MaximumSumRectangle {
 
             if (currentSum < 0) {
                 currentSum = 0;
-                start = i+1 ;
+                start = i + 1;
             }
 
-            if (maxNeg < temp[i] && temp[i] < 0) {
+            if ( temp[i] < 0 && maxNeg < temp[i] ) {
                 maxNeg = temp[i];
                 maxNegIndex = i;
             }

@@ -40,7 +40,7 @@ public class MedianOfTwoSortedArray {
             int partitionX = (start + end) >> 1; //median of smaller array
 
             //Find where we should partition array Y such that both partition elements (partition of X + partition of Y) are equal or 1 more on left side
-            // (x + y + 1) / 2 gives you the middle point when we combine both the array and since we already too 0 to partitionX element, then remove those to make them equal
+            // (x + y + 1) / 2 gives you the middle point when we combine both the array and since we already have 0 to partitionX element, then remove those to make them equal
             int partitionY = (x + y + 1) / 2 - partitionX;
 
 

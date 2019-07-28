@@ -31,6 +31,8 @@ import java.util.PriorityQueue;
  * <p>
  * Note:
  * You may assume k is always valid, ie: k is always smaller than input array's size for non-empty array.
+ * <p>
+ * {@link Java.LeetCode.SlidingWindowMaximum}
  */
 public class SlidingWindowMedian {
 
@@ -81,11 +83,15 @@ public class SlidingWindowMedian {
 
 }
 
+/**
+ *   //TODO: Use Tree map instead to achieve O(n.Logk)
+ */
 
 class SolutionSlidingWindowMedian {
 
 
     private class MedianDataStructure {
+        //TODO: Use Tree map instead to achieve O(n.Logk)
 
         private final PriorityQueue<Integer> maxHeap; //left //contains all elements which are lesser than median
         private final PriorityQueue<Integer> minHeap; //right  //contains all elements which are bigger/equal than median
@@ -110,7 +116,7 @@ class SolutionSlidingWindowMedian {
         public void offer(int num) {
 
             //O(logK)
-            if (!maxHeap.isEmpty() && maxHeap.peek() > num)//goes left
+            if (!maxHeap.isEmpty() && num < maxHeap.peek())//goes left
                 maxHeap.offer(num);
             else
                 minHeap.offer(num);
@@ -160,14 +166,16 @@ class SolutionSlidingWindowMedian {
 
         /**
          * if any number is
+         * O(n)
          *
          * @param num
          */
         public void remove(int num) {
 
-            if (num > maxHeap.peek())
+            if (num <= maxHeap.peek())
+                maxHeap.remove(num);
+            else
                 minHeap.remove(num);
-            else maxHeap.remove(num);
         }
     }
 
@@ -223,12 +231,12 @@ class SolutionSlidingWindowMedian {
             median.offer(nums[i]);
         }
 
-        //O(n.logK)
+        //O(n.logK) => O(n.n)
         for (int i = k; i < n; i++) {
 
             res[r++] = median.findMedian();
             int remove = nums[i - k];
-            median.remove(remove);
+            median.remove(remove); // this could be O(n/2) time ...
             median.offer(nums[i]);
         }
         res[r] = median.findMedian();
