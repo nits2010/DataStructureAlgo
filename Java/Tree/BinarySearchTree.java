@@ -40,6 +40,78 @@ public class BinarySearchTree implements IBinarySearchTree {
 
 
     @Override
+    public TreeNode<Integer> delete(Integer data, TreeNode<Integer> root) {
+
+        if (null == root || null == data)
+            return null;
+
+
+        //If lies in left
+        if (data.compareTo(root.getData()) < 0) {
+            root.setLeft(delete(data, root.getLeft()));
+            return root;
+        }
+
+        //If lies in right
+        else if (data.compareTo(root.getData()) > 0) {
+            root.setRight(delete(data, root.getRight()));
+
+            return root;
+        } else {
+
+            //if this is to delete
+
+            /**
+             * Case 1: if its a leaf node
+             */
+            if (null == root.getLeft() && null == root.getRight())
+                //delete it by resetting the parent pointer to null (left or right)
+                return null;
+
+
+            /**
+             * Case 2: if this is a single child node
+             */
+
+            //If left child null, then carry the right child to parent
+            if (null == root.getLeft()) {
+                return root.getRight();
+            }
+
+            //If right child null, then carry the left child to parent
+            if (null == root.getRight())
+                return root.getLeft();
+
+
+            /**
+             * Case 3: if this is a double child node
+             */
+
+            TreeNode<Integer> successor = root.getRight();
+            TreeNode<Integer> successorParent = root.getRight();
+
+            //find successor of root, that lies in right subtree, left most child
+            while (null != successor.getLeft()) {
+                successorParent = successor;
+                successor = successor.getLeft();
+            }
+
+            //Since the successor is always as left child of successorParent (because of above loop),
+            // the reset the left child only, carry the successor right child
+            successorParent.setLeft(successor.getRight());
+
+            //update the value of root from successor
+            root.setData(successor.getData());
+
+            //carry root to its parent
+            return root;
+        }
+
+
+    }
+
+
+    @Override
     public boolean search(TreeNode<Integer> root, Integer data) {
 
         if (null == root)
@@ -240,30 +312,30 @@ public class BinarySearchTree implements IBinarySearchTree {
 
             //Case 2: if this node is left node of root then root is predecessor
             if (temp == root.getLeft()) {
-                if (predecessor.getData() == null) {
-                    ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                    return null;
-                }
+
+                ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
+                return null;
+            }
 
 
-            }//Case 3: if this node is MAY be right node of root or any subtree of root, then search recursively
+            //Case 3: if this node is MAY be right node of root or any subtree of root, then search recursively
             else //if this node is right child of root node then predecessor must be in left subtree of root, the right aligned node; Check with example what right aligned node mean
                 if (root.getRight() == temp) {
 
                     //If there is no left subtree of root, then root is predecessor
                     if (root.getLeft() == null) {
-                        if (predecessor.getData() == null) {
-                            ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                            return null;
-                        }
+
+                        ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
+                        return null;
+
 
                     } else {
                         // must be in left subtree of root, the right aligned node; Check with example what right aligned node mean
                         TreeNode rightAlignedNode = rightAlignedNode(root.getLeft());
-                        if (predecessor.getData() == null) {
-                            ((BinaryTreeNode) predecessor).buildNode(rightAlignedNode.getData(), rightAlignedNode.getLeft(), rightAlignedNode.getRight());
-                            return null;
-                        }
+
+                        ((BinaryTreeNode) predecessor).buildNode(rightAlignedNode.getData(), rightAlignedNode.getLeft(), rightAlignedNode.getRight());
+                        return null;
+
                     }
                 }
 
@@ -409,7 +481,7 @@ public class BinarySearchTree implements IBinarySearchTree {
             return null;
 
         //If this element is in between alpha and beta then this is LCA
-        if (alpha.getData().compareTo(root.getData()) < 0 && beta.getData().compareTo(root.getData()) > 0)
+        if (alpha.getData().compareTo(root.getData()) <= 0 && beta.getData().compareTo(root.getData()) >= 0)
             return root;
 
         if (alpha.getData().compareTo(root.getData()) < 0)
@@ -665,6 +737,48 @@ public class BinarySearchTree implements IBinarySearchTree {
         return checkForIdenticalBST(input1, input2, index1, index2, min, max);
 
     }
+    //O(n^2)
+    private boolean checkForIdenticalBST(List<Integer> input1, List<Integer> input2, int index1, int index2, int min, int max) {
+
+        //Out of bound check
+        if (index1 >= input1.size() && index2 >= input2.size())
+            return false;
+
+        //find the left and right element that satisfy the min max condition
+        int j = findInRange(input1, index1, min, max); //O(n)
+        int k = findInRange(input2, index2, min, max); //O(n)
+
+
+        //if both of them are leaf node, then they have same identical bst
+        if (j == input1.size() && k == input2.size())
+            return true;
+
+
+        //If either of them is not a leaf node but one of them is  Or both are not same element then they don't form identical bst
+        if (((j == input1.size() && k != input2.size())
+                || (j != input1.size() && k == input2.size()))
+                || (input1.get(j) != input2.get(k)))
+
+            return false;
+
+        // otherwise check for both left and right
+        int element = input1.get(j); // since both element are same, this is does not matter
+        return checkForIdenticalBST(input1, input2, index1 + 1, index2 + 1, min, element) && // Move left O(n)
+                checkForIdenticalBST(input1, input2, index1 + 1, index2 + 1, element, max); //Move right O(n)
+    }
+
+    private int findInRange(List<Integer> input, int startIndex, int min, int max) {
+        int i = startIndex;
+        for (; i < input.size(); i++) {
+            int ele = input.get(i);
+            if (ele > min && ele < max)
+                break;
+        }
+        return i;
+
+    }
+
+
 
     @Override
     public double medianO1(TreeNode<Integer> root) {
@@ -680,9 +794,10 @@ public class BinarySearchTree implements IBinarySearchTree {
         int count = 0;
 
         double median = 0.0;
-        boolean found = false;
-        while (current != null) {
+        boolean found = false; //We don't break the loop once median find, so that we can correct the tree back ; Mories traversal
 
+
+        while (current != null) {
 
             if (current.getLeft() == null) {
                 count++;
@@ -693,8 +808,10 @@ public class BinarySearchTree implements IBinarySearchTree {
                         median = (prev.getData() + current.getData()) / 2;
                     else
                         median = current.getData();
+
                     found = true;
                 }
+
                 prev = current;
                 current = current.getRight();
 
@@ -707,9 +824,12 @@ public class BinarySearchTree implements IBinarySearchTree {
                 if (temp.getRight() == null) {
                     temp.setRight(current);
                     current = current.getLeft();
+
                 } else {
+
                     temp.setRight(null);
                     count++;
+
                     if (count > limit && !found) {
 
                         if (size % 2 == 0)
@@ -799,46 +919,8 @@ public class BinarySearchTree implements IBinarySearchTree {
         return values;
     }
 
-    //O(n^2)
-    private boolean checkForIdenticalBST(List<Integer> input1, List<Integer> input2, int index1, int index2, int min, int max) {
-
-        //Out of bound check
-        if (index1 >= input1.size() && index2 >= input2.size())
-            return false;
-
-        //find the left and right element that satisfy the min max condition
-        int j = findInRange(input1, index1, min, max); //O(n)
-        int k = findInRange(input2, index2, min, max); //O(n)
 
 
-        //if both of them are leaf node, then they have same identical bst
-        if (j == input1.size() && k == input2.size())
-            return true;
-
-
-        //If either of them is not a leaf node but one of them is  Or both are not same element then they don't form identical bst
-        if (((j == input1.size() && k != input2.size())
-                || (j != input1.size() && k == input2.size()))
-                || (input1.get(j) != input2.get(k)))
-
-            return false;
-
-        // otherwise check for both left and right
-        int element = input1.get(j); // since both element are same, this is does not matter
-        return checkForIdenticalBST(input1, input2, index1 + 1, index2 + 1, min, element) && // Move left O(n)
-                checkForIdenticalBST(input1, input2, index1 + 1, index2 + 1, element, max); //Move right O(n)
-    }
-
-    private int findInRange(List<Integer> input, int startIndex, int min, int max) {
-        int i = startIndex;
-        for (; i < input.size(); i++) {
-            int ele = input.get(i);
-            if (ele > min && ele < max)
-                break;
-        }
-        return i;
-
-    }
 
 
     class Wrapper {

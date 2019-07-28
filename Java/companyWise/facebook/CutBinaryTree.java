@@ -67,6 +67,12 @@ public class CutBinaryTree {
 
     }
 
+    /**
+     * Similar to Size of binary tree
+     * @param root
+     * @param sumList
+     * @return
+     */
     private static int sumArray(Node root, List<Integer> sumList) {
         if (root == null)
             return 0;

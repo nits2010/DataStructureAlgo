@@ -27,75 +27,7 @@ public interface IBinaryTree {
      */
     TreeNode<Integer> insert(Integer data, TreeNode<Integer> root);
 
-    default TreeNode<Integer> delete(Integer data, TreeNode<Integer> root) {
-
-        if (null == root || null == data)
-            return null;
-
-
-        //If lies in left
-        if (data.compareTo(root.getData()) < 0) {
-            root.setLeft(delete(data, root.getLeft()));
-            return root;
-        }
-
-        //If lies in right
-        else if (data.compareTo(root.getData()) > 0) {
-            root.setRight(delete(data, root.getRight()));
-
-            return root;
-        } else {
-
-            //if this is to delete
-
-            /**
-             * Case 1: if its a leaf node
-             */
-            if (null == root.getLeft() && null == root.getRight())
-                //delete it by resetting the parent pointer to null (left or right)
-                return null;
-
-
-            /**
-             * Case 2: if this is a single child node
-             */
-
-            //If left child null, then carry the right child to parent
-            if (null == root.getLeft()) {
-                return root.getRight();
-            }
-
-            //If right child null, then carry the left child to parent
-            if (null == root.getRight())
-                return root.getLeft();
-
-
-            /**
-             * Case 3: if this is a double child node
-             */
-
-            TreeNode<Integer> successor = root.getRight();
-            TreeNode<Integer> successorParent = root.getRight();
-
-            //find successor of root, that lies in right subtree, left most child
-            while (null != successor.getLeft()) {
-                successorParent = successor;
-                successor = successor.getLeft();
-            }
-
-            //Since the successor is always as left child of successorParent (because of above loop),
-            // the reset the left child only, carry the successor right child
-            successorParent.setLeft(successor.getRight());
-
-            //update the value of root from successor
-            root.setData(successor.getData());
-
-            //carry root to its parent
-            return root;
-        }
-
-
-    }
+    TreeNode<Integer> delete(Integer data, TreeNode<Integer> root);
 
 
     /****************** default implementation Traversal *******************/
@@ -389,7 +321,7 @@ public interface IBinaryTree {
             return preOrder;
 
 
-        TreeNode<Integer> temp = null;
+        TreeNode<Integer> temp;
 
         while (root != null) {
 
@@ -726,32 +658,30 @@ public interface IBinaryTree {
      * https://www.geeksforgeeks.org/flip-binary-tree/
      * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
      *
+     * CODE is wrong if the left most node has right child then it is wrong
      * @param root
      * @return
      */
     default TreeNode flipTreeUpSideDown(TreeNode root) {
 
-        return flipTreeUpSideDownIterative(root);
+        return flipTreeUpSideDownRecursive(root);
     }
 
     default TreeNode flipTreeUpSideDownRecursive(TreeNode root) {
 
-        if (root == null || isLeaf(root))
+        if (root == null | root.getLeft() == null)
             return root;
 
-        TreeNode flipedRoot = flipTreeUpSideDownRecursive(root.getLeft());
+        TreeNode flipped = flipTreeUpSideDownRecursive(root.getLeft());
 
-
-        TreeNode right = root.getLeft();
-        while (right.getRight() != null)
-            right = right.getRight();
-
-        right.setRight(root);
         root.getLeft().setLeft(root.getRight());
+        root.getLeft().setRight(root);
         root.setLeft(null);
         root.setRight(null);
 
-        return flipedRoot;
+        return flipped;
+
+
     }
 
     /**
@@ -764,13 +694,13 @@ public interface IBinaryTree {
      * @return
      */
     default TreeNode flipTreeUpSideDownIterative(TreeNode root) {
-        if (root == null)
+        if (root == null || root.getLeft() == null)
             return root;
 
         TreeNode parent = null;
         TreeNode current = root;
         TreeNode right = null;
-        TreeNode left = null;
+        TreeNode left;
 
         while (current != null) {
 
@@ -797,6 +727,12 @@ public interface IBinaryTree {
     }
 
 
+    /**
+     * Boundary traversal
+     *
+     * @param root
+     * @return
+     */
     default List<TreeNode> boundaryTraversal(TreeNode root) {
 
         List<TreeNode> traversal = new LinkedList<>();
@@ -812,19 +748,22 @@ public interface IBinaryTree {
         return traversal;
     }
 
-    default void boundaryTraversalRight(TreeNode root, List<TreeNode> traversal) {
+
+    default void boundaryTraversalLeft(TreeNode root, List<TreeNode> traversal) {
 
         if (root == null)
             return;
 
-        if (root.getRight() != null) {
-            boundaryTraversalRight(root.getRight(), traversal);
-
+        if (root.getLeft() != null) {
             traversal.add(root);
-        } else if (root.getLeft() != null) {
-            boundaryTraversalRight(root.getLeft(), traversal);
+            boundaryTraversalLeft(root.getLeft(), traversal);
 
+
+        } else if (root.getRight() != null) {
             traversal.add(root);
+            boundaryTraversalLeft(root.getRight(), traversal);
+
+
         }
     }
 
@@ -844,24 +783,24 @@ public interface IBinaryTree {
 
 
     }
-
-    default void boundaryTraversalLeft(TreeNode root, List<TreeNode> traversal) {
+    default void boundaryTraversalRight(TreeNode root, List<TreeNode> traversal) {
 
         if (root == null)
             return;
 
-        if (root.getLeft() != null) {
-            traversal.add(root);
-            boundaryTraversalRight(root.getLeft(), traversal);
-
-
-        } else if (root.getRight() != null) {
-            traversal.add(root);
+        if (root.getRight() != null) {
             boundaryTraversalRight(root.getRight(), traversal);
 
+            traversal.add(root);
+        } else if (root.getLeft() != null) {
+            boundaryTraversalRight(root.getLeft(), traversal);
 
+            traversal.add(root);
         }
     }
+
+
+
 
     /**
      * //https://leetcode.com/problems/binary-tree-maximum-path-sum/

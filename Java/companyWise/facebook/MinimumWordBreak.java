@@ -41,7 +41,7 @@ public class MinimumWordBreak {
     static class TrieNode {
 
         char value;
-        Map<Character, TrieNode> childrens = new HashMap<>();
+        Map<Character, TrieNode> children = new HashMap<>();
         boolean isLeaf = false;
 
         public TrieNode() {
@@ -66,10 +66,10 @@ public class MinimumWordBreak {
             for (int i = 0; i < toInsert.length(); i++) {
                 char current = toInsert.charAt(i);
 
-                if (!pCrawl.childrens.containsKey(current))
-                    pCrawl.childrens.put(current, new TrieNode(current));
+                if (!pCrawl.children.containsKey(current))
+                    pCrawl.children.put(current, new TrieNode(current));
 
-                pCrawl = pCrawl.childrens.get(current);
+                pCrawl = pCrawl.children.get(current);
             }
 
             pCrawl.isLeaf = true;
@@ -83,8 +83,8 @@ public class MinimumWordBreak {
                 char current = toSearch.charAt(i);
 
 
-                if (pCrawl.childrens.containsKey(current))
-                    pCrawl = pCrawl.childrens.get(current);
+                if (pCrawl.children.containsKey(current))
+                    pCrawl = pCrawl.children.get(current);
                 else
                     break;
 
@@ -148,13 +148,13 @@ public class MinimumWordBreak {
 
             char c = pattern.charAt(i);
 
-            if (pCrawl.childrens.containsKey(c)) {
+            if (pCrawl.children.containsKey(c)) {
 
-                if (pCrawl.childrens.get(c).isLeaf)
+                if (pCrawl.children.get(c).isLeaf)
                     breaked = temp + c;
 
                 temp = temp + c;
-                pCrawl = pCrawl.childrens.get(c);
+                pCrawl = pCrawl.children.get(c);
 
             } else {
                 if (breaked.isEmpty())

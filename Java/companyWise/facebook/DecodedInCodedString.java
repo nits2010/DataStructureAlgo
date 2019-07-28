@@ -14,8 +14,7 @@ import java.util.stream.Collectors;
  * <p>
  * An encoded string (s) is given, the task is to decode it. The pattern in which the strings are encoded is as follows.
  *
- * <count>[sub_str] ==> The substring 'sub_str'
- * appears count times.
+ * <count>[sub_str] ==> The substring 'sub_str' appears 'count' times.
  * <p>
  * Input : str[] = "1[b]"
  * Output : b
@@ -242,7 +241,9 @@ class Decode implements IDecode {
 
                 if (current == '[')
                     stringStack.push(String.valueOf(current));
+
                 else if (current == ']') {
+
                     String temp = "";
 
                     //Pop till '[' found and create a string of that so fart

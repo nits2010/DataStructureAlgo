@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-26
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/602
- * Question: Given an integer array, output all combinations of cell phone texting letters with the given numbers.
+ * Question: Given an integer array, output all combinations of cell phone text-ing letters with the given numbers.
  */
 public class PrintLetterCombinationPhoneArray {
     static String[] map = {"", "", "abc", "def", "ghi", "jkl",
@@ -129,6 +129,7 @@ public class PrintLetterCombinationPhoneArray {
         return Arrays.stream(nums)
                 .mapToObj(i -> String.valueOf(i))
                 .map(s -> LetterCombinationsPhoneNumber.letterCombinationsRecursiveStringBuilder(s))
-                .flatMap(Collection::stream).collect(Collectors.toList());
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 }

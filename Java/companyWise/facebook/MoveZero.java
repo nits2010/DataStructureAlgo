@@ -143,9 +143,9 @@ class Sol2 {
  * <p>
  * Therefore, when we encounter a non-zero element, we need to swap elements pointed by current and slow pointer,
  * then advance both pointers. If it's zero element, we just advance current pointer.
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * However, the total number of operations are optimal. The total operations (array writes) that code does is Number of non-0 elements.
  * This gives us a much better best-case (when most of the elements are 0) complexity than last solution.
  * However, the worst-case (when all elements are non-0) complexity for both the algorithms is same.
@@ -159,7 +159,7 @@ class Sol3 {
         int indexOfZero = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0)
-                swap(nums, indexOfZero++, i);
+                swap(nums, i, indexOfZero++);
 
         }
     }

@@ -42,7 +42,7 @@ class MaximumLengthBitonicSubArrayHelper {
 
         boolean found = false; // does any BSA found
 
-        boolean directionChange = false; //does direction change increase to decrease
+        boolean directionChange = false; //does direction numberOfWays increase to decrease
 
         int countOfChange = 0;
 

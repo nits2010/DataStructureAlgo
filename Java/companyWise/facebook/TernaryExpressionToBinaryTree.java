@@ -86,7 +86,7 @@ class TernaryExpressionToBinaryTreeSolution {
             return null;
 
         int iterator[] = new int[1];
-        iterator[0] = 0;
+        iterator[0] = 0;//index for s
 
         return ternaryToBinaryTreeRecursive(s, iterator);
 
@@ -94,6 +94,7 @@ class TernaryExpressionToBinaryTreeSolution {
 
     private Node ternaryToBinaryTreeRecursive(String s, int[] iterator) {
 
+        //expression is complete
         if (iterator[0] >= s.length())
             return null;
 
@@ -106,8 +107,7 @@ class TernaryExpressionToBinaryTreeSolution {
             root.left = ternaryToBinaryTreeRecursive(s, iterator);
         } else if (iterator[0] < s.length() && s.charAt(iterator[0]) == ':') {
             iterator[0]++;
-            Node right = ternaryToBinaryTreeRecursive(s, iterator);
-            root.right = right;
+            root.right  = ternaryToBinaryTreeRecursive(s, iterator);
         }
 
 

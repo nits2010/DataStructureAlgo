@@ -49,10 +49,10 @@ public class LetterCombinationsPhoneNumber {
     }
 
 
-    //Using Strinbuilder
+    //Using String builder
     public static List<String> letterCombinationsRecursiveStringBuilder(String digits) {
         List<String> output = new LinkedList<>();
-        CombinationIterative.letterCombinationsRecursive(digits, 0, output, new StringBuilder());
+        CombinationIterativeRecursive.letterCombinationsRecursive(digits, 0, output, new StringBuilder());
         return output;
     }
 
@@ -66,6 +66,13 @@ interface Combination {
 class CombinationIterativeRecursive implements Combination {
 
 
+    /**
+     * Using normal string
+     * @param digits
+     * @param n
+     * @param output
+     * @param current
+     */
     public static void letterCombinationsRecursive(String digits, int n, List<String> output, String current) {
 
         if (n == digits.length()) {
@@ -78,6 +85,30 @@ class CombinationIterativeRecursive implements Combination {
             current = current + string.charAt(i);
             letterCombinationsRecursive(digits, n + 1, output, current);
             current = current.substring(0, current.length() - 1);
+
+        }
+    }
+
+    /**
+     * Using string builder
+     * @param digits
+     * @param index
+     * @param output
+     * @param current
+     */
+
+    public static void letterCombinationsRecursive(String digits, int index, List<String> output, StringBuilder current) {
+
+        if (index == digits.length()) {
+            output.add(current.toString());
+            return;
+        }
+
+        String string = map[digits.charAt(index) - '0'];
+        for (int i = 0; i < string.length(); i++) {
+            current.append(string.charAt(i));
+            letterCombinationsRecursive(digits, index + 1, output, current);
+            current.deleteCharAt(current.length() - 1);
 
         }
     }
@@ -111,19 +142,4 @@ class CombinationIterative implements Combination {
     }
 
 
-    public static void letterCombinationsRecursive(String digits, int n, List<String> output, StringBuilder current) {
-
-        if (n == digits.length()) {
-            output.add(current.toString());
-            return;
-        }
-
-        String string = map[digits.charAt(n) - '0'];
-        for (int i = 0; i < string.length(); i++) {
-            current.append(string.charAt(i));
-            letterCombinationsRecursive(digits, n + 1, output, current);
-            current.deleteCharAt(current.length() - 1);
-
-        }
-    }
 }

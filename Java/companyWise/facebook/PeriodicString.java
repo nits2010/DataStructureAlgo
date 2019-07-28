@@ -64,7 +64,8 @@ class StringNTimesRepeat {
     /**
      * Let the given string be ‘str’ and length of given string be ‘n’.
      * <p>
-     * 1) Find length of the longest proper prefix of ‘str’ which is also a suffix. Let the length of the longest proper prefix suffix be ‘len’. This can be computed in O(n) time using pre-processing step of KMP string matching algorithm.
+     * 1) Find length of the longest proper prefix of ‘str’ which is also a suffix. Let the length of the longest proper prefix suffix be ‘len’.
+     * This can be computed in O(n) time using pre-processing step of KMP string matching algorithm.
      * <p>
      * 2) If value of ‘n – len’ divides n (or ‘n % (n-len)’ is 0), then return true, else return false.
      * <p>
@@ -78,7 +79,7 @@ class StringNTimesRepeat {
      * <p>
      * Input: str = “ABCDABC”, n = 7 (Number of characters in ‘str’)
      * The value of len is 3 (“ABC” is the longest substring which is both prefix and suffix)
-     * Since (n-len) doesn’t divides n, the answer is false.
+     * Since (n-len) does not divides n, the answer is false.
      * <p>
      * Input: str = “ABCABCABCABCABC”, n = 15 (Number of characters in ‘str’)
      * The value of len is 12 (“ABCABCABCABC” is the longest substring which is both prefix and suffix)

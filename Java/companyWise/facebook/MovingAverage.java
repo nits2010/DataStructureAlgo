@@ -5,8 +5,6 @@ package Java.companyWise.facebook;
  * Date: 03/04/19
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.
- * Circular Queue (Interviewer didn't agree with the linked list queue that I suggested at first. Said the pointers took space)
- * <p>
  */
 public class MovingAverage {
 

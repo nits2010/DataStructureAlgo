@@ -64,7 +64,7 @@ public class ListCombination {
 
     }
 
-    private static List<List<String>> buildConsiderList(Map<String, char[]> input, String pattern) throws InvalidArgument {
+    private static List<List<String>> buildConsiderList(Map<String, char[]> map, String pattern) throws InvalidArgument {
 
         List<List<String>> toConsider = new LinkedList<>();
 
@@ -73,7 +73,7 @@ public class ListCombination {
          * Here we use key a loop runner because we could have case where from pattern multiple (off different size) string present in input map,
          * then if we traverse over pattern then we need to generate n^2 sub string and check all of them in map, that corresponding list present or not
          */
-        for (String key : input.keySet()) {
+        for (String key : map.keySet()) {
 
             List<String> subListsToConsider = new ArrayList<>();
 
@@ -83,7 +83,7 @@ public class ListCombination {
                 continue;
 
             //process for current key array
-            subListsToConsider.add(new String(input.get(key)));
+            subListsToConsider.add(new String(map.get(key)));
 
             //Take the remaining length to consider
             //example key = 1, pattern=123, then remaining is = 23 which we'll consider one by one
@@ -95,22 +95,23 @@ public class ListCombination {
             for (int i = 0; i < remainingPattern.length(); i++) {
 
                 String testThis = String.valueOf(remainingPattern.charAt(i));
-                //if this does not present in input; input is corrupt
-                if (!input.containsKey(testThis))
+                //if this does not present in map; map is corrupt
+                if (!map.containsKey(testThis))
                     throw new InvalidArgument("Input " + pattern + "is invalid");
 
-                subListsToConsider.add(new String(input.get(testThis)));
+                subListsToConsider.add(new String(map.get(testThis)));
 
 
             }
 
 
             //case 2: whole remaining list
-            if (remainingPattern.length() > 1 && input.containsKey(remainingPattern)) {
+            if (remainingPattern.length() > 1 && map.containsKey(remainingPattern)) {
                 List<List<String>> withRemaining = new ArrayList<>();
                 List<String> rem = new ArrayList<>();
-                rem.add(new String(input.get(key)));
-                rem.add(new String(input.get(remainingPattern)));
+
+                rem.add(new String(map.get(key)));
+                rem.add(new String(map.get(remainingPattern)));
 
                 withRemaining.add(rem);
                 toConsider.addAll(withRemaining);

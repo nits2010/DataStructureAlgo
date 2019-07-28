@@ -30,7 +30,7 @@ class FlipGameI {
 
         for (int i = 0; i < str.length - 1; i++) {
 
-            //if this is ++ then change it
+            //if this is ++ then numberOfWays it
             if (str[i] == '+' && str[i + 1] == '+') {
 
                 str[i] = '-';

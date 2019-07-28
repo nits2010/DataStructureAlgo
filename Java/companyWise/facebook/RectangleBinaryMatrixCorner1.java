@@ -17,10 +17,10 @@ import java.util.Set;
  * Examples:
  * <p>
  * Input :
- * mat[][] = { 1 0 0 1 0
- * 0 0 1 0 1
- * 0 0 0 1 0
- * 1 0 1 0 1}
+ * mat[][] = {   1 0 0 1 0
+ * *             0 0 1 0 1
+ * *             0 0 0 1 0
+ * *             1 0 1 0 1}
  * Output : Yes
  * as there exists-
  * 1 0 1

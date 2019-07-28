@@ -35,8 +35,10 @@ public class FractionRecurringDecimal {
 
 
     public static String fractionToDecimal(int numerator, int denominator) {
+
         if (numerator == 0)
             return "0";
+
         if (denominator == 0)
             return "";
 

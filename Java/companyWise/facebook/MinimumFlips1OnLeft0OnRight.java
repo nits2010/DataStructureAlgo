@@ -35,14 +35,14 @@ public class MinimumFlips1OnLeft0OnRight {
      * bits: 1011000
      * <p>
      * we have 3 -> 1 and 4 -> 0
-     * if we change the second bit from right to 1, then all one be on one side
+     * if we flip the second bit from left to 1, then all one be on one side
      * 1011000 -> 1111000
      * that require only 1 flip
      * <p>
      * bits: 000001
      * we have 1->1 and 5 -> 0
      * <p>
-     * if we flip first bit on right side and 1 bit on left side
+     * if we flip first bit on right side and first bit on left side
      * 000001 -> 100000
      * ans= 2
      * <p>

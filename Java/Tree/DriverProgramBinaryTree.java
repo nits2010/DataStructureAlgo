@@ -46,9 +46,6 @@ public class DriverProgramBinaryTree {
         System.out.println(binaryTree.maximumEvenPathSum(evenPathSumRoot2));
 
 
-
-
-
         BinaryTreeNode<Integer> evenPathSumRoot = new BinaryTreeNode<>(10);
         binaryTree.insert(2, evenPathSumRoot);
         binaryTree.insert(5, evenPathSumRoot);
@@ -57,10 +54,6 @@ public class DriverProgramBinaryTree {
         binaryTree.insert(13, evenPathSumRoot);
 
         System.out.println(binaryTree.maximumEvenPathSum(evenPathSumRoot));
-
-
-
-
 
 
         List<TreeNode<Integer>> nodes = new LinkedList<>();
@@ -100,7 +93,17 @@ public class DriverProgramBinaryTree {
 
         /** Flipped tree test ***/
         System.out.println("***********Flipped tree***************");
-        TestHelper.runFlipedTreeTest(binaryTree, bt);
+        BinaryTreeNode<Integer> bt2 = new BinaryTreeNode<>(1);
+
+        binaryTree.insert(2, bt2);
+        binaryTree.insert(3, bt2);
+        TreeNode<Integer> test = binaryTree.insert(4, bt2);
+        binaryTree.insert(5, bt2);
+        binaryTree.insert(6, bt2);
+        binaryTree.insert(7, bt2);
+        test.setLeft(null);
+        test.setRight( new BinaryTreeNode<>(8));
+        TestHelper.runFlipedTreeTest(binaryTree, bt2);
 
         System.out.println("***********BST***************");
 
@@ -128,8 +131,6 @@ public class DriverProgramBinaryTree {
         System.out.println(binaryTree.inOrder(largestBST));
         System.out.println(binaryTree.isBST(largestBST));
         System.out.println(binaryTree.largestBSTSize(largestBST));
-
-
 
 
     }

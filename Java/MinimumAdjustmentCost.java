@@ -62,7 +62,7 @@ class SolutionMinimumAdjustmentCost {
      * <p>
      * Approach:
      * Lets approach this problem, as we can see that picking element from left to right, if we see element at a[i] and element at a[j] have difference more than target, then one
-     * of them has to transform to "nearest" integer s.t. ( say we change ith element)
+     * of them has to transform to "nearest" integer s.t. ( say we numberOfWays ith element)
      * Abs(a[i]new - a[i]old) is minimum. and Abs(a[i]new - a[j])<=target.
      * <p>
      * Brute force:
@@ -74,7 +74,7 @@ class SolutionMinimumAdjustmentCost {
      * <p>
      * and find the minimum cost of each for all element and then take minimum of them.
      * <p>
-     * This is exponential, as we need to change every element and it has two possible path, each path lead to n possible combinations; Hence n*2^n
+     * This is exponential, as we need to numberOfWays every element and it has two possible path, each path lead to n possible combinations; Hence n*2^n
      * <p>
      * <p>
      * Dynamic Programming approach:
@@ -83,14 +83,14 @@ class SolutionMinimumAdjustmentCost {
      * <p>
      * Lets say at any moment we are at i-the element.
      * in order to transform this i-the element, we need to look previous (i-1)-th element, this current element can be in the range of
-     * [(i-1) element - target] to [(i-1) element + target ], Why because if we want to change i-th element we need to change it to "nearest" element which gives Abs(a[i]new - a[i]old) is minimum
+     * [(i-1) element - target] to [(i-1) element + target ], Why because if we want to numberOfWays i-th element we need to numberOfWays it to "nearest" element which gives Abs(a[i]new - a[i]old) is minimum
      * <p>
-     * this gives a intuition that we need to try all the possibilities. Hence we need to look back all the range possibilities for previous element in order to make current element change.
+     * this gives a intuition that we need to try all the possibilities. Hence we need to look back all the range possibilities for previous element in order to make current element numberOfWays.
      * <p>
      * Hence, we need to store solution for previous element for all the ranges.
      * <p>
      * How to find a range ?
-     * lets suppose, we want to change i-the element to some element "j" [j varies from 1 to M] then, we need to see the range of i-1 the element s.t.
+     * lets suppose, we want to numberOfWays i-the element to some element "j" [j varies from 1 to M] then, we need to see the range of i-1 the element s.t.
      * [ j-target, j+target ] is minimum
      * Re-writing range as below
      * [ Math.max(0, j-target), Math.min( M-1, j+target) ] ; as we don't want the range form negetive number or goes beyond the possible range of a number M
@@ -131,7 +131,7 @@ class SolutionMinimumAdjustmentCost {
             dp[0][j] = Math.abs(j - a[0]);
 
 
-        //start change the second element onwards using first element range possibilities
+        //start numberOfWays the second element onwards using first element range possibilities
         for (int i = 1; i < n; i++) {
 
             for (int j = 0; j <= M; j++) {

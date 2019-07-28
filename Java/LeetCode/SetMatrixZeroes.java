@@ -295,7 +295,7 @@ class SetMatrixZeroes2 {
 /**
  * A straight forward solution using O(mn) space is probably a bad idea.
  * <p>
- * Find the zeros, and change each row and column. Use queue to store those zeros
+ * Find the zeros, and numberOfWays each row and column. Use queue to store those zeros
  * In worst case all are zero and queue will have m*n entries
  * <p>
  * O(mn)/ O(mn)

@@ -46,7 +46,7 @@ class SolutionHammingDistance {
     }
     public int hammingDistance(int x, int y) {
 
-        int hammer = x ^ y; // using this, it will change the bits where they are change
+        int hammer = x ^ y; // using this, it will numberOfWays the bits where they are numberOfWays
 
         int count = 0;
 

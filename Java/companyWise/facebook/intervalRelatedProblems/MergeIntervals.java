@@ -69,11 +69,6 @@ public class MergeIntervals {
 
     private static List<Interval> union(List<Interval> intervals) {
 
-        Collections.sort(intervals, (o1, o2) -> {
-            if (o1.start == o2.start)
-                return o1.end - o2.end;
-            return o1.start - o2.start;
-        });
 
 
         List<Interval> mergedInterval = new ArrayList<>();

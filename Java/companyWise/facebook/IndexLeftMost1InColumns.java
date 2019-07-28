@@ -8,7 +8,7 @@ import java.util.List;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-18
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
- * Question 1.2 Given a 2d array sorted row and column of 0 and 1, find the indexes of left most 1 in cloumns
+ * Question 1.2 Given a 2d array sorted row and column of 0 and 1, find the indexes of left most 1 in columns
  */
 public class IndexLeftMost1InColumns {
 
@@ -86,14 +86,14 @@ class SolutionIndexLeftMost1InColumns {
         int m = mat[0].length;
 
 
-        int[] indexOfleftMost = indexOfLeftMost1s(mat, n, m);
-        if (indexOfleftMost[0] != -1) {
+        int[] indexOfLeftMost = indexOfLeftMost1s(mat, n, m);
+        if (indexOfLeftMost[0] != -1) {
             List<int[]> output = new ArrayList<>();
 
-            int r = indexOfleftMost[0];
-            int c = indexOfleftMost[1];
+            int r = indexOfLeftMost[0];
+            int c = indexOfLeftMost[1];
 
-            output.add(indexOfleftMost);
+            output.add(indexOfLeftMost);
 
             for (int row = r + 1; row < n; row++) {
                 if (mat[row][c] == 1) {

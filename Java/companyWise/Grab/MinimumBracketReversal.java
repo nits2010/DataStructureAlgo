@@ -15,7 +15,7 @@ import java.util.Stack;
  * <p>
  * Input:  exp = "}{"
  * Output: 2
- * We need to change '}' to '{' and '{' to
+ * We need to numberOfWays '}' to '{' and '{' to
  * '}' so that the expression becomes balanced,
  * the balanced expression is '{}'
  * <p>

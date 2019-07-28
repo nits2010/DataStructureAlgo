@@ -37,7 +37,7 @@ public class LongestConsecutiveSequence {
 
     public static void test(int nums[]) {
         Sort sort = new Sort();
-        Map map = new Map();
+        UsingMap map = new UsingMap();
 
         HelperToPrint.printArray(nums);
         System.out.println("Sort" + sort.longestConsecutive(nums));
@@ -75,7 +75,7 @@ class Sort {
 
 }
 
-class Map {
+class UsingMap {
 
 
     public int longestConsecutive(int[] nums) {

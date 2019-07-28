@@ -11,8 +11,7 @@ package Java.companyWise.facebook;
  * <p>
  * Input : String - abcdecba, k = 1
  * Output : Yes
- * String can become palindrome by remo-
- * -ving 1 character i.e. either d or e)
+ * String can become palindrome by removing 1 character i.e. either d or e)
  * <p>
  * <p>
  * Input  : String - abcdeca, K = 2
@@ -80,7 +79,7 @@ class KPalindromeStringUsingLPS {
     }
 
     /**
-     * Lps[i][j] length of longest palindrome subsequence from i to j
+     * Lps[i][j] length of longest palindrome sub-sequence from i to j
      * Lps[i][j] = Lps[i+1][j-1] + 2 ; if S[i] == S[j]
      * = max (Lps[i+1][j], Lps[i][j-1]) ; if S[i] != S[j]
      * = 1 if i == j
@@ -220,7 +219,7 @@ class KPalindromeStringUsingEditDistance {
      * * <p>
      * * ED[i][j] = ED[i-1][j-1] if s1(i) == s2(j)
      * * *        =
-     * * *          Min (              if s1(i) != s2(j) and we delete from "S"
+     * * *          Min (              if s1(i) != s2(j) and we delete from "S" or "rs"
      * * *                1 + ED[i-1][j],        we delete from "S"
      * *                  1 + ED[i][j-1]       we delete from "RS"
      * * *
@@ -320,7 +319,7 @@ class KPalindromeStringUsingLongestCommonSubSequence {
      * <p>
      * *     lcs[i][j] = 0 if i=0 or j=0 since if either of one string is empty then lcs is not possible
      * <p>
-     * Since we can observe that any any moment we are only bother about above row8 only;
+     * Since we can observe that any any moment we are only bother about above row only;
      * we can translate it to below optimized solution
      *
      * @param word1
