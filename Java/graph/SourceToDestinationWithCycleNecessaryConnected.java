@@ -68,27 +68,27 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         return true;
     }
 
-    private static boolean dfs(IGraph directedGraph, Set<Integer> visted, boolean[] path, int source, int destination, int current) {
+    private static boolean dfs(IGraph directedGraph, Set<Integer> visited, boolean[] path, int source, int destination, int current) {
 
         //if this path already been computed
         if (path[current])
             return true;
 
         for (int node : directedGraph.getAdjList()[current]) {
-            if (!visted.contains(node)) {
+            if (!visited.contains(node)) {
 
                 //add this node so that we won't visit again (to avoid cycle)
-                visted.add(node);
+                visited.add(node);
 
                 if (node == destination)
                     path[node] = true;
 
-                if (dfs(directedGraph, visted, path, source, destination, node)) {
+                if (dfs(directedGraph, visited, path, source, destination, node)) {
                     path[current] = true;
                     return true;
                 }
 
-                visted.remove(node);
+                visited.remove(node);
             }
         }
 

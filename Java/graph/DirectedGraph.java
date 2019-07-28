@@ -97,14 +97,14 @@ public class DirectedGraph implements IGraph {
         List<Integer> top = new ArrayList<>(this.vertices);
 
 
-        //count indegree
-        int[] indegree = new int[this.vertices];
+        //count inDegree
+        int[] inDegree = new int[this.vertices];
 
 
         for (int i = 0; i < this.vertices; i++) {
 
             for (Integer adj : adjancyList[i]) {
-                indegree[adj]++;
+                inDegree[adj]++;
             }
         }
 
@@ -113,7 +113,7 @@ public class DirectedGraph implements IGraph {
 
         //push all 0 degree elements
         for (int i = 0; i < this.vertices; i++)
-            if (indegree[i] == 0)
+            if (inDegree[i] == 0)
                 queue.offer(i);
 
 
@@ -124,8 +124,8 @@ public class DirectedGraph implements IGraph {
             top.add(current);
 
             for (Integer adj : adjancyList[current]) {
-                indegree[adj]--;
-                if (indegree[adj] == 0)
+                inDegree[adj]--;
+                if (inDegree[adj] == 0)
                     queue.offer(adj);
 
             }

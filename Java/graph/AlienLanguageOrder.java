@@ -47,9 +47,9 @@ public class AlienLanguageOrder {
 
     }
 
-    private static void findOrder(String[] words, int character) {
+    private static void findOrder(String[] words, int characters) {
 
-        final IGraph graph = new DirectedGraph(character);
+        final IGraph graph = new DirectedGraph(characters);
 
         //Push all edges
         for (int i = 0; i < words.length - 1; i++) {
@@ -66,6 +66,7 @@ public class AlienLanguageOrder {
                 }
             }
         }
+
         List<Integer> integers = graph.topologicalSortKhanAlgo();
         if (integers.isEmpty()) {
             System.out.println("No order possible");
