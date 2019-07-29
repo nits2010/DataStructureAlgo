@@ -20,17 +20,19 @@ public class SerializeDeSerialize {
 
     }
 
+
+
+
     public static void main(String args[]) {
 
 
         preOrder();
+        levelOrder();
 
 
     }
 
-
-    private static void preOrder() {
-
+    private static TreeNode getTree() {
         TreeNode root = new TreeNode(2);
 
         root.left = new TreeNode(3);
@@ -41,16 +43,49 @@ public class SerializeDeSerialize {
 
         root.right.left = null;
         root.right.right = new TreeNode(9);
+
+        return root;
+    }
+
+    private static void preOrder() {
+        System.out.println("\n\n Pre order ");
+        TreeNode root = getTree();
+
+        System.out.println("Original Tree Inorder");
         inOrder(root);
-        System.out.println();
 
 
-        SerializeDeSerializePreOrder serializeDeSerializePreOrder = new SerializeDeSerializePreOrder();
+        System.out.println("\nSerializing Tree");
+        ISerializeDeserialize serializeDeserialize = new SerializeDeSerializePreOrder();
 
-        String vv = serializeDeSerializePreOrder.serialize(root);
-        System.out.println(vv);
+        String vv = serializeDeserialize.serialize(root);
+        System.out.println(" Serialized tree " + vv);
 
-        TreeNode r = serializeDeSerializePreOrder.deserialize(vv);
+        TreeNode r = serializeDeserialize.deserialize(vv);
+        System.out.println("Deserialize tree , inorder");
+        inOrder(r);
+
+
+    }
+
+
+    private static void levelOrder() {
+
+        System.out.println("\n\n Level order ");
+        TreeNode root = getTree();
+
+        System.out.println("Original Tree Inorder");
+        inOrder(root);
+
+
+        System.out.println("Serializing Tree");
+        ISerializeDeserialize serializeDeserialize = new SerializeDeSerializeLevelOrder();
+
+        String vv = serializeDeserialize.serialize(root);
+        System.out.println(" Serialized tree " + vv);
+
+        TreeNode r = serializeDeserialize.deserialize(vv);
+        System.out.println("Deserialize tree , inorder");
         inOrder(r);
 
 

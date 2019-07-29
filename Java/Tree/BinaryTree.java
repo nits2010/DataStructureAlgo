@@ -54,6 +54,11 @@ public class BinaryTree implements IBinaryTree {
         return root;
     }
 
+    @Override
+    public TreeNode<Integer> delete(Integer data, TreeNode<Integer> root) {
+        return null;
+    }
+
 
     @Override
     public boolean search(TreeNode<Integer> root, Integer data) {
@@ -438,15 +443,15 @@ public class BinaryTree implements IBinaryTree {
         LargestBSTHelper helper = new LargestBSTHelper();
 
         //If left and right is a bst, then update the values
-        if (lHelper.isBST && rHelper.isBST && root.getData() > lHelper.min && root.getData() < rHelper.max) {
+        if (lHelper.isBST && rHelper.isBST && root.getData() > lHelper.max && root.getData() < rHelper.min) {
             //this binary tree is bst rooted at root
             helper.isBST = true;
 
             //the maximum value for above tree would minimum of all maximum
-            helper.max = Math.min(rHelper.max, Math.min(lHelper.max, root.getData()));
+            helper.max = Math.max(rHelper.max, Math.min(lHelper.max, root.getData()));
 
             //the minimum value for above tree would maximum of all minimum
-            helper.min = Math.max(rHelper.min, Math.max(lHelper.min, root.getData()));
+            helper.min = Math.min(rHelper.min, Math.max(lHelper.min, root.getData()));
 
             helper.size = lHelper.size + rHelper.size + 1;
 
@@ -500,10 +505,8 @@ public class BinaryTree implements IBinaryTree {
             return false;
 
 
-        if (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max))
-            return true;
+        return (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max));
 
-        return false;
     }
 
 

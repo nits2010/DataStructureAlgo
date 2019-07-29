@@ -7,9 +7,13 @@ import java.util.*;
  * Date: 2019-07-20
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/8713158291562499583
  * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
- * Given a Binary Search Tree (BST) with root node root, and a target value V, split the tree into two subtrees where one subtree has nodes that are all smaller or equal to the target value, while the other subtree has all nodes that are greater than the target value. It's not necessarily the case that the tree contains a node with value V.
+ * Given a Binary Search Tree (BST) with root node root, and a target value V, split the tree into two subtrees where one subtree has nodes
+ * that are all smaller or equal to the target value, while the other subtree has all nodes that are greater than the target value.
+ * It's not necessarily the case that the tree contains a node with value V.
  * <p>
- * Additionally, most of the structure of the original tree should remain. Formally, for any child C with parent P in the original tree, if they are both in the same subtree after the split, then node C should still have the parent P. You should output the root TreeNode of both subtrees after splitting, in any order.
+ * Additionally, most of the structure of the original tree should remain. Formally, for any child C with parent P in the original tree,
+ * if they are both in the same subtree after the split, then node C should still have the parent P. You should output the root TreeNode of
+ * both subtrees after splitting, in any order.
  * <p>
  * Example 1:
  * <p>
@@ -21,24 +25,27 @@ import java.util.*;
  * The given tree [4,2,6,1,3,5,7] is represented by the following diagram:
  *
  * <p>
- * 4
- * /   \
- * 2      6
- * / \    / \
- * 1   3  5   7
+ * *           4
+ * *         /   \
+ * *       2      6
+ * *      / \    / \
+ * *     1   3  5   7
  * <p>
  * while the diagrams for the outputs are:
  * <p>
- * 4
- * /   \
- * 3      6      and    2
- * / \          /
- * 5   7         1
+ * *       4
+ * *    /     \
+ * *    3      6      and    2
+ * *   / \                  /
+ * *  5   7                1
  * <p>
  * Note:
  * The size of the BST will not exceed 50.
  * The BST is always valid and each node's value is different.
  * <p>
+ * <p>
+ * {@link Java.LeetCode.TrimBinarySearchTree}
+ *
  * [FACEBOOK]
  */
 
@@ -159,7 +166,7 @@ class BinarySearchTreeBased {
      * Instead of having two ranges, we have only one range in this problem V. And we need to divide in smaller (<=V) and greater ( > V ) parts ; So;
      * Same;
      * 1. if this root is less or equal to V then all left sub-tree will satisfy the condition (since all <=V) but right sub-tree may not satisfy the condition. Split on right side
-     * 2. If this root is greater then V then all right sub-tree won't satisfy the condition (since all >V) but left sub-tree may satisfy the condition. Split on left side;
+     * 2. If this root is greater then V then all right sub-tree will satisfy the condition (since all >V) but left sub-tree may satisfy the condition. Split on left side;
      * <p>
      * Now, question is how to attach the tree back so that they follow what is asked in problem.
      * <p>

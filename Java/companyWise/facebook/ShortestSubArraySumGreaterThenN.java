@@ -103,7 +103,7 @@ public class ShortestSubArraySumGreaterThenN {
             return new int[0];
 
         /**
-         * if Sum is negative required, then change the sign of array and find positive sum
+         * if Sum is negative required, then numberOfWays the sign of array and find positive sum
          */
         if (sum < 0) {
             int b[] = new int[a.length];
@@ -176,7 +176,7 @@ public class ShortestSubArraySumGreaterThenN {
             return -1;
 
         /**
-         * if Sum is negative required, then change the sign of array and find positive sum
+         * if Sum is negative required, then numberOfWays the sign of array and find positive sum
          */
         if (sum < 0) {
             int b[] = new int[a.length];

@@ -8,7 +8,9 @@ import java.util.*;
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Sort the given sentence order defined by alphabet.
  * <p>
- * Note: if alphabat not found, then sort in there lexicographical manner
+ * Note: if alphabet not found, then sort in there lexicographical manner
+ *
+ * similar to this {@link WordOrdering}
  */
 public class SortStringsBasedCustomAlphabetOrder {
 

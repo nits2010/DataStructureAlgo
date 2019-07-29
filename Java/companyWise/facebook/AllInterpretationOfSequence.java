@@ -9,12 +9,28 @@ import java.util.List;
  * Date: 02/04/19
  * Description:
  * https://www.geeksforgeeks.org/find-all-possible-interpretations/
+ *
+ * Consider a coding system for alphabets to integers where ‘a’ is represented as 1, ‘b’ as 2, .. ‘z’ as 26.
+ * Given an array of digits (1 to 9) as input, write a function that prints all valid interpretations of input array.
+ * Examples
+ *
+ * Input: {1, 1}
+ * Output: ("aa", 'k")
+ * [2 interpretations: aa(1, 1), k(11)]
+ *
+ * Input: {1, 2, 1}
+ * Output: ("aba", "au", "la")
+ * [3 interpretations: aba(1,2,1), au(1,21), la(12,1)]
+ *
+ * Input: {9, 1, 8}
+ * Output: {"iah", "ir"}
+ * [2 interpretations: iah(9,1,8), ir(9,18)]
  */
 public class AllInterpretationOfSequence {
 
     private static final String[] alphabet = {"", "a", "b", "c", "d", "e",
             "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
-            "MinStepsInfiniteGrid", "t", "u", "v", "w", "x", "v", "z"};
+            "s", "t", "u", "v", "w", "x", "v", "z"};
 
 
     static class Node {
@@ -28,9 +44,8 @@ public class AllInterpretationOfSequence {
 
     public static void main(String args[]) {
 
-        List<String> out = null;
         int[] arr = {1, 1, 3, 4};
-        out = allInterpretationOfSequence(arr);
+        List<String> out = allInterpretationOfSequence(arr);
         System.out.println("input: " + arr + " output: " + out);
 
 
@@ -74,29 +89,6 @@ public class AllInterpretationOfSequence {
 
     }
 
-    private static List<String> show(Node root) {
-
-        List<String> output = new ArrayList<>();
-
-        show(root, output);
-        return output;
-
-    }
-
-    private static void show(Node root, List<String> output) {
-
-        if (null == root)
-            return;
-
-        if (root.left == null && root.right == null) {
-            output.add(root.s);
-            return;
-        }
-
-        show(root.left, output);
-        show(root.right, output);
-    }
-
     private static Node allInterpretationOfSequence(int index, String soFar, int[] arr) {
 
         if (index > 26)
@@ -121,6 +113,30 @@ public class AllInterpretationOfSequence {
 
         }
         return root;
+    }
+
+
+    private static List<String> show(Node root) {
+
+        List<String> output = new ArrayList<>();
+
+        show(root, output);
+        return output;
+
+    }
+
+    private static void show(Node root, List<String> output) {
+
+        if (null == root)
+            return;
+
+        if (root.left == null && root.right == null) {
+            output.add(root.s);
+            return;
+        }
+
+        show(root.left, output);
+        show(root.right, output);
     }
 
 

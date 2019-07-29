@@ -8,7 +8,7 @@ package Java.companyWise.facebook;
  * https://aonecode.com/aplusplus/interviewctrl/getInterview/7243247199135871999
  * We are given an array A of positive integers, and two positive integers L and R (L <= R).
  * <p>
- * Return the number of (contiguous, non-empty) subarrays such that the value of the maximum array element in that subarray is at least L and at most R.
+ * Return the number of (contiguous, non-empty) sub-arrays such that the value of the maximum array element in that subarray is at least L and at most R.
  * <p>
  * Example :
  * Input:
@@ -27,7 +27,7 @@ public class NumberSubArraysBoundedMaximum {
 
     public static void main(String args[]) {
 
-        SolutinNumberSubArraysBoundedMaximum sol = new SolutinNumberSubArraysBoundedMaximum();
+        SolutionNumberSubArraysBoundedMaximum sol = new SolutionNumberSubArraysBoundedMaximum();
         System.out.println(sol.countSubArrays(new int[]{2, 4, 3, 1, 8, 7, 6}, 2, 6));
         System.out.println(sol.countSubArrays(new int[]{2, 1, 4, 3}, 2, 3));
         System.out.println(sol.countSubArrays(new int[]{2, 1, 4, 3}, 2, 4));
@@ -37,7 +37,7 @@ public class NumberSubArraysBoundedMaximum {
 
 }
 
-class SolutinNumberSubArraysBoundedMaximum {
+class SolutionNumberSubArraysBoundedMaximum {
 
     /**
      * As we know we need to find the "sub-arrays", we need to keep track of it from where the sub-array start
@@ -45,12 +45,12 @@ class SolutinNumberSubArraysBoundedMaximum {
      * <p>
      * As element withing this range will be satisfy the condition, we can simply count by how many sub-arrays would be there
      * which is (end-start) = x => x + (x-1) + (x-2) .... 1 [ formula ]
-     * As from start to end, increasing start also gvie you another sub-array which follow condition.
+     * As from start to end, increasing start also give you another sub-array which follow condition.
      * <p>
      * But there is a catch.
      * <p>
      * if any element within sub-array is < low then there is two things happen
-     * 1. The whole sub-array will definitely make a sub-array following condition regardless the element index < l
+     * 1. The whole sub-array will definitely make a required sub-array following condition regardless the element index < l
      * 2. but sub-array at this index (element  < l) would not make any sub-array as this won't follow this condition. Hence we need
      * to discard those sub-arrays, in which the elements are < l.
      * <p>
@@ -64,7 +64,7 @@ class SolutinNumberSubArraysBoundedMaximum {
      * <p>
      * Otherwise element > r then we need to discard whole sub-array and start a new sub-array.
      * <p>
-     * Note: to simplify the case of [p..q] we can keep a indexer which tells where it see a element which was in the range [l,r], then we simply discard all before current index
+     * Note: to simplify the case of [p..q] we can keep a indexer which tells where it see a element which was not in the range [l,r], then we simply discard all before current index
      *
      * @param a
      * @param l

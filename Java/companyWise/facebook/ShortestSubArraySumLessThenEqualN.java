@@ -79,7 +79,7 @@ public class ShortestSubArraySumLessThenEqualN {
      * we found the potential window which start from left and end at current index. [ compute the length ]
      * <p>
      * Now since we need to shirk the window as much as possible ,for that we'll start removing element from left and keep shirking but
-     * doing that so, we may some sub-array within this window whose sum >= sum [ because array may contains negative numbers ].
+     * doing that so, we may miss some sub-array within this window whose sum >= sum [ because array may contains negative numbers ].
      * This means we need to efficiently find from which side we should shirk the array
      * either from left side (removing front element) or right side (removing back element) and in order to find, we need to
      * try both of them, and find the minLength.
@@ -108,27 +108,26 @@ public class ShortestSubArraySumLessThenEqualN {
      * <p>
      * Now above expression lets take an example and understand;
      * [2,1,3,4,-3,7] and sum = 7;
-     * prefix array would look like [0, 2, 3,6,10, 7, 14]
+     * prefix array would look like [0, 2, 3, 6, 10, 7, 14]
      * <p>
      * Now this is our array which need to consider;
-     * 0  1  2  3  4  5  6
-     * [0, 2, 3,6, 10, 7, 14]
+     * *  0  1  2  3  4  5  6
+     * * [0, 2, 3, 6, 10, 7, 14]
      * <p>
      * our queue = [] will contains indexes
      * let i = 0; i<prefix.length
      * <p>
      * at i = 0; our queue is empty, we'll push an element to start queue [0]
-     * at i = 1; prefix[1] = 2 and prefix[1] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1]
-     * at i = 2; prefix[2] = 3 and  prefix[1] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1,2]
-     * at i = 3; prefix[3] = 6 and  prefix[1] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1,2,3]
-     * at i = 4; prefix[4] = 10 and  prefix[1] - prefix[queue[front]]  = 10-0 > 7 which means our potential window is found (length=4-0=4) shirk the window till we can't make it, update queue-> [1,2,3]
-     * at i = 4; prefix[4] = 10 and  prefix[1] - prefix[queue[front]]  = 10-2 > 7 which means our potential window is found (length=4-1=3) shirk the window, update queue-> [2,3]
-     * at i = 4; prefix[4] = 10 and  prefix[1] - prefix[queue[front]]  = 10-2 > 7 which means our potential window is found (length=4-1=3) shirk the window, update queue-> [2,3]
-     * at i = 4; prefix[4] = 10 and  prefix[1] - prefix[queue[front]]  = 10-3 >= 7 which means our potential window is found (length=4-2=2) shirk the window, update queue-> [3]
-     * at i = 4; prefix[4] = 10 and  prefix[1] - prefix[queue[front]]  = 10-6 < 7 which means we can't shirk more and prefix[1] > prefix[queue[last]]  update queue-> [3,4]
-     * at i = 5; prefix[5] = 7 and  prefix[1] - prefix[queue[front]]  < 7 but this value got decrease since prefix[1] < prefix[queue[last]]  ; so shirk form right update queue-> [3,5] -> notice the current value in original array is negative
-     * at i = 6; prefix[6] = 14 and  prefix[1] - prefix[queue[front]] = 14-6  > 7 which means our potential window is found (length=6-3=3) shirk the window, update queue-> [5]
-     * at i = 6; prefix[6] = 14 and  prefix[1] - prefix[queue[front]] = 14-7  >= 7 which means our potential window is found (length=6-5=1*) shirk the window, update queue-> []
+     * at i = 1; prefix[1] = 2 and   prefix[1] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1]
+     * at i = 2; prefix[2] = 3 and   prefix[2] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1,2]
+     * at i = 3; prefix[3] = 6 and   prefix[3] - prefix[queue[front]] < 7 and prefix[1] > prefix[queue[last]] i.e. they are in increasing order; Push this in queue-> [0,1,2,3]
+     * at i = 4; prefix[4] = 10 and  prefix[4] - prefix[queue[front]]  = 10-0 > 7 which means our potential window is found (length=4-0=4) shirk the window till we can't make it, update queue-> [1,2,3]
+     * at i = 4; prefix[4] = 10 and  prefix[4] - prefix[queue[front]]  = 10-2 > 7 which means our potential window is found (length=4-1=3) shirk the window, update queue-> [2,3]
+     * at i = 4; prefix[4] = 10 and  prefix[4] - prefix[queue[front]]  = 10-3 >= 7 which means our potential window is found (length=4-2=2) shirk the window, update queue-> [3]
+     * at i = 4; prefix[4] = 10 and  prefix[4] - prefix[queue[front]]  = 10-6 < 7 which means we can't shirk more and prefix[4] > prefix[queue[last]]  update queue-> [3,4]
+     * at i = 5; prefix[5] = 7 and   prefix[5] - prefix[queue[front]]  < 7 but this value got decrease since prefix[5] < prefix[queue[last]]  ; so shirk form right update queue-> [3,5] -> notice the current value in original array is negative
+     * at i = 6; prefix[6] = 14 and  prefix[6] - prefix[queue[front]] = 14-6  > 7 which means our potential window is found (length=6-3=3) shirk the window, update queue-> [5]
+     * at i = 6; prefix[6] = 14 and  prefix[6] - prefix[queue[front]] = 14-7  >= 7 which means our potential window is found (length=6-5=1*) shirk the window, update queue-> []
      * <p>
      * ends answer is 1 :)
      * <p>

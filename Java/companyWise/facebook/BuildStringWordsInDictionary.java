@@ -54,7 +54,7 @@ public class BuildStringWordsInDictionary {
         System.out.println("\nGiven String : " + s + " Expected output :" + false);
         System.out.println("SolutionDFSByStringWords ->" + SolutionDFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords2 -> " + SolutionDFSByStringWords.wordBreak(s, new HashMap<>(wordCount)));
-        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
+//        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords -> " + SolutionDFSByMapWords.canBreak(s, new HashMap<>(wordCount)));
 
     }
@@ -69,7 +69,7 @@ public class BuildStringWordsInDictionary {
         System.out.println("\nGiven String : " + s + " Expected output :" + true);
         System.out.println("SolutionDFSByStringWords ->" + SolutionDFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords2 -> " + SolutionDFSByStringWords.wordBreak(s, new HashMap<>(wordCount)));
-        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
+//        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords -> " + SolutionDFSByMapWords.canBreak(s, new HashMap<>(wordCount)));
     }
 
@@ -84,7 +84,7 @@ public class BuildStringWordsInDictionary {
         System.out.println("\nGiven String : " + s + " Expected output :" + false);
         System.out.println("SolutionDFSByStringWords ->" + SolutionDFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords2 -> " + SolutionDFSByStringWords.wordBreak(s, new HashMap<>(wordCount)));
-        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
+//        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords -> " + SolutionDFSByMapWords.canBreak(s, new HashMap<>(wordCount)));
     }
 
@@ -100,7 +100,7 @@ public class BuildStringWordsInDictionary {
         System.out.println("\nGiven String : " + s + " Expected output :" + true);
         System.out.println("SolutionDFSByStringWords ->" + SolutionDFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords2 -> " + SolutionDFSByStringWords.wordBreak(s, new HashMap<>(wordCount)));
-        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
+//        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords -> " + SolutionDFSByMapWords.canBreak(s, new HashMap<>(wordCount)));
     }
 
@@ -117,7 +117,7 @@ public class BuildStringWordsInDictionary {
         System.out.println("\nGiven String : " + s + " Expected output :" + true);
         System.out.println("SolutionDFSByStringWords ->" + SolutionDFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords2 -> " + SolutionDFSByStringWords.wordBreak(s, new HashMap<>(wordCount)));
-        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
+//        System.out.println("SolutionBFSByStringWords -> " + SolutionBFSByStringWords.canBreak(s, new HashMap<>(wordCount)));
         System.out.println("SolutionDFSByMapWords -> " + SolutionDFSByMapWords.canBreak(s, new HashMap<>(wordCount)));
 
 
@@ -126,71 +126,71 @@ public class BuildStringWordsInDictionary {
 
 }
 
+//
+///**
+// * NOTE: Not working
+// */
+//class SolutionBFSByStringWords {
+//
+//
+//    public static boolean canBreak(String str, Map<String, Integer> wordCount) {
+//
+//        if (str.isEmpty())
+//            return true;
+//
+//        return canBreakBFS(str, wordCount);
+//
+//
+//    }
+//
+//    private static boolean canBreakBFS(String str, Map<String, Integer> wordCount) {
+//
+//        int n = str.length();
+//        final Queue<Integer> queue = new LinkedList<>();
+//
+//        final Map<String, Integer> visited = new HashMap<>();
+//
+//        queue.offer(0);
+//
+//        while (!queue.isEmpty()) {
+//
+//            int start = queue.poll();
+//
+//            for (int i = start ; i < str.length(); i++) {
+//
+//                //Try this word : forward ->
+//                String temp = str.substring(start, i + 1);
+//
+//                if (!visited.containsKey(temp))
+//                    visited.put(temp, 0);
+//
+//                //Check is this possible ?
+//                if (wordCount.containsKey(temp) && wordCount.get(temp) > visited.get(temp)) {
+//
+//                    visited.put(temp, visited.get(temp) + 1);
+//
+//                    //if possible,the remove this string and recurse for rest of the string;
+//                    wordCount.put(temp, wordCount.get(temp) - 1);
+//
+//                    //recurse for rest of the string;
+//                    queue.offer(i);
+//
+//                    if (i == str.length())
+//                        return true;
+//
+//
+//                }
+//            }
+//
+//        }
+//
+//
+//        return false;
+//    }
+//}
 
 /**
- * NOTE: Not working
- */
-class SolutionBFSByStringWords {
-
-
-    public static boolean canBreak(String str, Map<String, Integer> wordCount) {
-
-        if (str.isEmpty())
-            return true;
-
-        return canBreakBFS(str, wordCount);
-
-
-    }
-
-    private static boolean canBreakBFS(String str, Map<String, Integer> wordCount) {
-
-        int n = str.length();
-        final Queue<Integer> queue = new LinkedList<>();
-
-        final Map<String, Integer> visited = new HashMap<>();
-
-        queue.offer(0);
-
-        while (!queue.isEmpty()) {
-
-            int start = queue.poll();
-
-            for (int i = start ; i < str.length(); i++) {
-
-                //Try this word : forward ->
-                String temp = str.substring(start, i + 1);
-
-                if (!visited.containsKey(temp))
-                    visited.put(temp, 0);
-
-                //Check is this possible ?
-                if (wordCount.containsKey(temp) && wordCount.get(temp) > visited.get(temp)) {
-
-                    visited.put(temp, visited.get(temp) + 1);
-
-                    //if possible,the remove this string and recurse for rest of the string;
-                    wordCount.put(temp, wordCount.get(temp) - 1);
-
-                    //recurse for rest of the string;
-                    queue.offer(i);
-
-                    if (i == str.length())
-                        return true;
-
-
-                }
-            }
-
-        }
-
-
-        return false;
-    }
-}
-
-/**
- * This solution won't handle the cases when you can remove the word in-between and form a new workd by ends
+ * This solution won't handle the cases when you can remove the word in-between and form a new word by ends
  * Example:
  * s = "abcabcaabbc";
  * {"abc": 3, "ab": 1, "abca": 1}

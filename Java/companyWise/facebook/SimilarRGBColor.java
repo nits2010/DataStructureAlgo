@@ -92,7 +92,7 @@ class ClosestRGBColor {
 
     /**
      * Greedy: Find the closest string index [ index of choices] which is the nearest of this;
-     * If you see, after "99" in the choice, it change its pattern to "aa".
+     * If you see, after "99" in the choice, it changes its pattern to "aa".
      * and each number should be in range of [0,15] ; total 16 index; so take module by 17.
      *
      * @param color
@@ -121,7 +121,7 @@ class ClosestRGBColor {
 
     /**
      * Greedy: Find the closest string index [ index of choices] which is the nearest of this;
-     * If you see, after "99" in the choice, it change its pattern to "aa".
+     * If you see, after "99" in the choice, it changes its pattern to "aa".
      * and each number should be in range of [0,15] ; total 16 index; so take module by 17.
      *
      * @param p
@@ -134,7 +134,7 @@ class ClosestRGBColor {
             int x = Integer.parseInt(p, 16);
 
             int index1 = x / 17;// choices are 16, then x/17 will always under 0 to 16.
-            int index2 = (x % 17 >= 9 ? 1 : 0);  //index for that it change, since at 9 it change, if it equal take 1 otherwise index1 would have give the right pos
+            int index2 = (x % 17 >= 9 ? 1 : 0);  //index for that it changes, since at 9 it change, if it equal take 1 otherwise index1 would have give the right pos
             return choices[index1 + index2];
 
         }

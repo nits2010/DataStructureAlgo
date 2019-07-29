@@ -7,8 +7,25 @@ import java.util.*;
  * Date: 2019-07-19
  * Description: https://leetcode.com/problems/remove-invalid-parentheses/
  * https://www.geeksforgeeks.org/remove-invalid-parentheses/
+ * <p>
+ * Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+ * <p>
+ * Note: The input string may contain letters other than the parentheses ( and ).
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: "()())()"
+ * Output: ["()()()", "(())()"]
+ * Example 2:
+ * <p>
+ * Input: "(a)())()"
+ * Output: ["(a)()()", "(a())()"]
+ * Example 3:
+ * <p>
+ * Input: ")("
+ * Output: [""]
  */
-public class RemoveInvalidPrathensis {
+public class removeInvalidPretenses {
 
     public static void main(String args[]) {
 
@@ -82,22 +99,16 @@ class BackTrackingDFS {
 
     }
 
+    public List<String> removeInvalidParenthesesDFS(String s) {
 
-    private Set<String> validExpressions = new HashSet<>();
-    private int minimumRemoved;
-
-    private void reset() {
-        this.validExpressions.clear();
-        this.minimumRemoved = Integer.MAX_VALUE;
+        Set<String> validExpressions = new HashSet<>();
+        int minimumRemoved[] = {Integer.MAX_VALUE};
+        this.recurse(s, 0, 0, 0, new StringBuilder(), 0, validExpressions, minimumRemoved);
+        return new ArrayList(validExpressions);
     }
 
-    private void recurse(
-            String s,
-            int index,
-            int leftCount,
-            int rightCount,
-            StringBuilder expression,
-            int removedCount) {
+
+    private void recurse(String s, int index, int leftCount, int rightCount, StringBuilder expression, int removedCount, Set<String> validExpressions, int[] minimumRemoved) {
 
         // If we have reached the end of string.
         if (index == s.length()) {
@@ -106,18 +117,18 @@ class BackTrackingDFS {
             if (leftCount == rightCount) {
 
                 // If the current count of removed parentheses is <= the current minimum count
-                if (removedCount <= this.minimumRemoved) {
+                if (removedCount <= minimumRemoved[0]) {
 
                     // Convert StringBuilder to a String. This is an expensive operation.
                     // So we only perform this when needed.
                     String possibleAnswer = expression.toString();
 
                     // If the current count beats the overall minimum we have till now
-                    if (removedCount < this.minimumRemoved) {
-                        this.validExpressions.clear();
-                        this.minimumRemoved = removedCount;
+                    if (removedCount < minimumRemoved[0]) {
+                        validExpressions.clear();
+                        minimumRemoved[0] = removedCount;
                     }
-                    this.validExpressions.add(possibleAnswer);
+                    validExpressions.add(possibleAnswer);
                 }
             }
         } else {
@@ -129,20 +140,20 @@ class BackTrackingDFS {
             // simply recurse further by adding it to the expression StringBuilder
             if (currentCharacter != '(' && currentCharacter != ')') {
                 expression.append(currentCharacter);
-                this.recurse(s, index + 1, leftCount, rightCount, expression, removedCount);
+                this.recurse(s, index + 1, leftCount, rightCount, expression, removedCount, validExpressions, minimumRemoved);
                 expression.deleteCharAt(length);
             } else {
 
                 // Recursion where we delete the current character and move forward
-                this.recurse(s, index + 1, leftCount, rightCount, expression, removedCount + 1);
+                this.recurse(s, index + 1, leftCount, rightCount, expression, removedCount + 1, validExpressions, minimumRemoved);
                 expression.append(currentCharacter);
 
                 // If it's an opening parenthesis, consider it and recurse
                 if (currentCharacter == '(') {
-                    this.recurse(s, index + 1, leftCount + 1, rightCount, expression, removedCount);
+                    this.recurse(s, index + 1, leftCount + 1, rightCount, expression, removedCount, validExpressions, minimumRemoved);
                 } else if (rightCount < leftCount) {
                     // For a closing parenthesis, only recurse if right < left
-                    this.recurse(s, index + 1, leftCount, rightCount + 1, expression, removedCount);
+                    this.recurse(s, index + 1, leftCount, rightCount + 1, expression, removedCount, validExpressions, minimumRemoved);
                 }
 
                 // Undoing the append operation for other recursions.
@@ -151,102 +162,8 @@ class BackTrackingDFS {
         }
     }
 
-    public List<String> removeInvalidParenthesesDFS(String s) {
-
-        this.reset();
-        this.recurse(s, 0, 0, 0, new StringBuilder(), 0);
-        return new ArrayList(this.validExpressions);
-    }
-
 }
 
-class BackTrackingEfficientDFS {
-
-
-    private Set<String> validExpressions = new HashSet<String>();
-
-    private void recurse(
-            String s,
-            int index,
-            int leftCount,
-            int rightCount,
-            int leftRem,
-            int rightRem,
-            StringBuilder expression) {
-
-        // If we reached the end of the string, just check if the resulting expression is
-        // valid or not and also if we have removed the total number of left and right
-        // parentheses that we should have removed.
-        if (index == s.length()) {
-            if (leftRem == 0 && rightRem == 0) {
-                this.validExpressions.add(expression.toString());
-            }
-
-        } else {
-            char character = s.charAt(index);
-            int length = expression.length();
-
-            // The discard case. Note that here we have our pruning condition.
-            // We don't recurse if the remaining count for that parenthesis is == 0.
-            if ((character == '(' && leftRem > 0) || (character == ')' && rightRem > 0)) {
-                this.recurse(
-                        s,
-                        index + 1,
-                        leftCount,
-                        rightCount,
-                        leftRem - (character == '(' ? 1 : 0),
-                        rightRem - (character == ')' ? 1 : 0),
-                        expression);
-            }
-
-            expression.append(character);
-
-            // Simply recurse one step further if the current character is not a parenthesis.
-            if (character != '(' && character != ')') {
-
-                this.recurse(s, index + 1, leftCount, rightCount, leftRem, rightRem, expression);
-
-            } else if (character == '(') {
-
-                // Consider an opening bracket.
-                this.recurse(s, index + 1, leftCount + 1, rightCount, leftRem, rightRem, expression);
-
-            } else if (rightCount < leftCount) {
-
-                // Consider a closing bracket.
-                this.recurse(s, index + 1, leftCount, rightCount + 1, leftRem, rightRem, expression);
-            }
-
-            // Delete for backtracking.
-            expression.deleteCharAt(length);
-        }
-    }
-
-    public List<String> removeInvalidParentheses(String s) {
-
-        int left = 0, right = 0;
-
-        // First, we find out the number of misplaced left and right parentheses.
-        for (int i = 0; i < s.length(); i++) {
-
-            // Simply record the left one.
-            if (s.charAt(i) == '(') {
-                left++;
-            } else if (s.charAt(i) == ')') {
-                // If we don't have a matching left, then this is a misplaced right, record it.
-                right = left == 0 ? right + 1 : right;
-
-                // Decrement count of left parentheses because we have found a right
-                // which CAN be a matching one for a left.
-                left = left > 0 ? left - 1 : left;
-            }
-        }
-
-        this.recurse(s, 0, 0, 0, left, right, new StringBuilder());
-        return new ArrayList<>(this.validExpressions);
-    }
-
-}
 
 /**
  * Remove the minimum number of invalid parentheses
@@ -330,3 +247,83 @@ class BackTrackingBFS {
 
 
 }
+
+class BackTrackingEfficientDFS {
+
+
+    private void recurse(String s, int index, int leftCount, int rightCount, int leftRem, int rightRem, StringBuilder expression, Set<String> validExpressions) {
+
+        // If we reached the end of the string, just check if the resulting expression is
+        // valid or not and also if we have removed the total number of left and right
+        // parentheses that we should have removed.
+        if (index == s.length()) {
+            if (leftRem == 0 && rightRem == 0) {
+                validExpressions.add(expression.toString());
+            }
+
+        } else {
+            char character = s.charAt(index);
+            int length = expression.length();
+
+            // The discard case. Note that here we have our pruning condition.
+            // We don't recurse if the remaining count for that parenthesis is == 0.
+            if ((character == '(' && leftRem > 0) || (character == ')' && rightRem > 0)) {
+                this.recurse(s,
+                        index + 1,
+                        leftCount,
+                        rightCount,
+                        leftRem - (character == '(' ? 1 : 0),
+                        rightRem - (character == ')' ? 1 : 0),
+                        expression, validExpressions);
+            }
+
+            expression.append(character);
+
+            // Simply recurse one step further if the current character is not a parenthesis.
+            if (character != '(' && character != ')') {
+
+                this.recurse(s, index + 1, leftCount, rightCount, leftRem, rightRem, expression, validExpressions);
+
+            } else if (character == '(') {
+
+                // Consider an opening bracket.
+                this.recurse(s, index + 1, leftCount + 1, rightCount, leftRem, rightRem, expression, validExpressions);
+
+            } else if (rightCount < leftCount) {
+
+                // Consider a closing bracket.
+                this.recurse(s, index + 1, leftCount, rightCount + 1, leftRem, rightRem, expression, validExpressions);
+            }
+
+            // Delete for backtracking.
+            expression.deleteCharAt(length);
+        }
+    }
+
+    public List<String> removeInvalidParentheses(String s) {
+
+        int left = 0, right = 0;
+
+        // First, we find out the number of misplaced left and right parentheses.
+        for (int i = 0; i < s.length(); i++) {
+
+            // Simply record the left one.
+            if (s.charAt(i) == '(') {
+                left++;
+            } else if (s.charAt(i) == ')') {
+                // If we don't have a matching left, then this is a misplaced right, record it.
+                right = left == 0 ? right + 1 : right;
+
+                // Decrement count of left parentheses because we have found a right
+                // which CAN be a matching one for a left.
+                left = left > 0 ? left - 1 : left;
+            }
+        }
+
+        Set<String> validExpressions = new HashSet<String>();
+        this.recurse(s, 0, 0, 0, left, right, new StringBuilder(), validExpressions);
+        return new ArrayList<>(validExpressions);
+    }
+
+}
+

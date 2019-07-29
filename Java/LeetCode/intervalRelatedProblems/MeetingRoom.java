@@ -104,7 +104,8 @@ public class MeetingRoom {
 /**
  * https://leetcode.com/problems/meeting-rooms/
  * Meeting
- * * Question: Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+ * * Question: Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei),
+ * determine if a person could attend all meetings.
  * * For example,
  * * Given [[0, 30],[5, 10],[15, 20]],
  * * return false.
@@ -151,7 +152,8 @@ class MeetingRoomI {
 
 /**
  * https://leetcode.com/problems/meeting-rooms-ii/
- * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+ * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei),
+ * find the minimum number of conference rooms required.
  * Example1
  * <p>
  * Input: intervals = [(0,30),(5,10),(15,20)]

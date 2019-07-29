@@ -9,41 +9,42 @@ import java.util.List;
  * Description:  https://leetcode.com/problems/trim-a-binary-search-tree/
  * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
  * 2.3 Trim the tree
- * Given a binary search tree and the lowest and highest boundaries as L and R, trim the tree so that all its elements lies in [L, R] (R >= L). You might need to change the root of the tree, so the result should return the new root of the trimmed binary search tree.
+ * Given a binary search tree and the lowest and highest boundaries as L and R, trim the tree so that all its elements lies in [L, R] (R >= L).
+ * You might need to numberOfWays the root of the tree, so the result should return the new root of the trimmed binary search tree.
  * Example 1:
- *
+ * <p>
  * Input:
- *     1
- *    / \
- *   0   2
- *
- *   L = 1
- *   R = 2
- *
+ * *     1
+ * *    / \
+ * *   0   2
+ * *
+ * *   L = 1
+ * *   R = 2
+ * <p>
  * Output:
- *     1
- *       \
- *        2
+ * *     1
+ * *       \
+ * *        2
  * Example 2:
- *
+ * <p>
  * Input:
- *     3
- *    / \
- *   0   4
- *    \
- *     2
- *    /
- *   1
- *
- *   L = 1
- *   R = 3
- *
+ * *     3
+ * *    / \
+ * *   0   4
+ * *    \
+ * *     2
+ * *    /
+ * *   1
+ * <p>
+ * *   L = 1
+ * *   R = 3
+ * <p>
  * Output:
- *       3
- *      /
- *    2
- *   /
- *  1
+ * *       3
+ * *      /
+ * *    2
+ * *   /
+ * *  1
  */
 
 
@@ -159,6 +160,7 @@ class SolutionTrimBinarySearchTree {
         }
 
         if (root.val > high) {
+            root.right = null;
             //discard all right sub-tree
             return trim(root.left, low, high);
         }

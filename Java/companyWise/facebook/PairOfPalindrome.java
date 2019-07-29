@@ -135,6 +135,137 @@ public class PairOfPalindrome {
 }
 
 
+class SolutionPairOfPalindromeUsingTrie {
+
+    static class TrieNode {
+
+        public boolean isLeaf = false;
+        public Map<Character, TrieNode> children = new HashMap<>(26);
+        public List<Integer> palindromesWithInStringIndexes = new ArrayList<>();
+        public int idOfThisString = -1;
+    }
+
+    static class Trie {
+
+        TrieNode root;
+
+        private void insert(String toInsert, int myIndex) {
+            if (root == null)
+                root = new TrieNode();
+
+            TrieNode pCrawl = root;
+
+            for (int i = toInsert.length() - 1; i >= 0; i--) {
+
+                char currentChar = toInsert.charAt(i);
+
+                if (!pCrawl.children.containsKey(currentChar))
+                    pCrawl.children.put(currentChar, new TrieNode());
+
+
+                if (isPalindrome(toInsert, 0, i))
+                    pCrawl.palindromesWithInStringIndexes.add(myIndex);
+
+                pCrawl = pCrawl.children.get(currentChar);
+
+
+            }
+            pCrawl.isLeaf = true;
+            pCrawl.idOfThisString = myIndex;
+
+
+        }
+
+        private boolean isPalindrome(String toInsert, int from, int to) {
+
+            while (from < to && toInsert.charAt(from) == toInsert.charAt(to)) {
+                from++;
+                to--;
+            }
+
+            if (from >= to)
+                return true;
+            return false;
+        }
+
+        private List<List<Integer>> search(String toSearch, int myId) {
+
+            List<List<Integer>> ids = new ArrayList<>();
+            if (search(toSearch, myId, ids)) {
+                return ids;
+            } else
+                return Collections.EMPTY_LIST;
+
+        }
+
+        private boolean search(String toSearch, int myIndex, List<List<Integer>> ids) {
+            if (null == root)
+                return false;
+
+
+            TrieNode pCrawl = root;
+
+            for (int i = 0; i < toSearch.length(); i++) {
+
+                char currentChar = toSearch.charAt(i);
+
+                if (!pCrawl.children.containsKey(currentChar))
+                    return false;
+
+                pCrawl = pCrawl.children.get(currentChar);
+
+                //if the string at pCrawl is forming a string at this point, and this not same as the current word
+                //and the remaining word is palindrome, the collect the ids
+                if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myIndex
+                        && isPalindrome(toSearch, i, toSearch.length() - 1)) {
+
+                    ids.add(Arrays.asList(myIndex, pCrawl.idOfThisString));
+
+                }
+
+
+            }
+
+            //Collect all the ids, where the pCrawl says its palindrome
+            for (int id : pCrawl.palindromesWithInStringIndexes) {
+                if (id != myIndex) {
+                    ids.add(Arrays.asList(myIndex, id));
+                }
+            }
+
+            return true;
+        }
+
+
+    }
+
+    /**
+     * Build the trie of given words s.t. we insert the word in trie in reverse order as well as check does it contains a substring which is palindrome if so, note its id
+     * then search each word in same manner (without reverse)
+     *
+     * @param list
+     * @return
+     */
+    public static List<List<Integer>> palindromePairs(String[] list) {
+
+        List<List<Integer>> response = new ArrayList<>();
+
+        Trie trie = new Trie();
+        for (int i = 0; i < list.length; i++)
+            trie.insert(list[i], i);
+
+        for (int i = 0; i < list.length; i++) {
+            response.addAll(trie.search(list[i], i));
+        }
+
+        return response;
+
+    }
+
+}
+
+
+
 class SolutionUsingHash {
 
     /**
@@ -239,136 +370,6 @@ class SolutionUsingHash {
         if (from >= to)
             return true;
         return false;
-    }
-
-}
-
-
-class SolutionPairOfPalindromeUsingTrie {
-
-    static class TrieNode {
-
-        public boolean isLeaf = false;
-        public Map<Character, TrieNode> children = new HashMap<>(26);
-        public List<Integer> palindromesWithinStringIndexes = new ArrayList<>();
-        public int idOfThisString = -1;
-    }
-
-    static class Trie {
-
-        TrieNode root;
-
-        private void insert(String toInsert, int myIndex) {
-            if (root == null)
-                root = new TrieNode();
-
-            TrieNode pCrawl = root;
-
-            for (int i = toInsert.length() - 1; i >= 0; i--) {
-
-                char currentChar = toInsert.charAt(i);
-
-                if (!pCrawl.children.containsKey(currentChar))
-                    pCrawl.children.put(currentChar, new TrieNode());
-
-
-                if (isPalindrome(toInsert, 0, i))
-                    pCrawl.palindromesWithinStringIndexes.add(myIndex);
-
-                pCrawl = pCrawl.children.get(currentChar);
-
-
-            }
-            pCrawl.isLeaf = true;
-            pCrawl.idOfThisString = myIndex;
-
-
-        }
-
-        private boolean isPalindrome(String toInsert, int from, int to) {
-
-            while (from < to && toInsert.charAt(from) == toInsert.charAt(to)) {
-                from++;
-                to--;
-            }
-
-            if (from >= to)
-                return true;
-            return false;
-        }
-
-        private List<List<Integer>> search(String toSearch, int myId) {
-
-            List<List<Integer>> ids = new ArrayList<>();
-            if (search(toSearch, myId, ids)) {
-                return ids;
-            } else
-                return Collections.EMPTY_LIST;
-
-        }
-
-        private boolean search(String toSearch, int myIndex, List<List<Integer>> ids) {
-            if (null == root)
-                return false;
-
-
-            TrieNode pCrawl = root;
-
-            for (int i = 0; i < toSearch.length(); i++) {
-
-                char currentChar = toSearch.charAt(i);
-
-                if (!pCrawl.children.containsKey(currentChar))
-                    return false;
-
-                pCrawl = pCrawl.children.get(currentChar);
-
-                //if the string at pCrawl is forming a string at this point, and this not same as the current word
-                //and the remaining word is palindrome, the collect the ids
-                if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myIndex
-                        && isPalindrome(toSearch, i, toSearch.length() - 1)) {
-
-                    ids.add(Arrays.asList(myIndex, pCrawl.idOfThisString));
-
-                }
-
-
-            }
-
-            //Collect all the ids, where the pCrawl says its palindrome
-            for (int id : pCrawl.palindromesWithinStringIndexes) {
-                if (id != myIndex) {
-                    ids.add(Arrays.asList(myIndex, id));
-                }
-            }
-
-            return true;
-        }
-
-
-    }
-
-    /**
-     * Build the trie of given words s.t. we insert the word in trie in reverse order as well as check does it contains a substring which is palindrome if so, note its id
-     * then search each word in same manner (without reverse)
-     *
-     * @param list
-     * @return
-     */
-    public static List<List<Integer>> palindromePairs(String[] list) {
-
-        List<List<Integer>> response = new ArrayList<>();
-
-        Trie trie = new Trie();
-        for (int i = 0; i < list.length; i++)
-            trie.insert(list[i], i);
-
-        for (int i = 0; i < list.length; i++) {
-            response.addAll(trie.search(list[i], i));
-        }
-
-        return response;
-
     }
 
 }

@@ -8,7 +8,8 @@ import java.util.Map;
  * Date: 2019-06-30
  * Description:https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
  * <p>
- * Given a string you need to print longest possible substring that has exactly M unique characters. If there are more than one substring of longest possible length, then print any one of them.
+ * Given a string you need to print longest possible substring that has exactly M unique characters.
+ * If there are more than one substring of longest possible length, then print any one of them.
  * Examples:
  * <p>
  * "aabbcc", k = 1
@@ -56,18 +57,26 @@ public class LongestSubStringKUniqueChar {
             return subStr;
 
         string = string.trim();
+
         char str[] = string.toCharArray();
+
         Map<Character, Integer> map = new HashMap<>();
+
         int totalUnique = 0, countOfUnique = 0;
         int start = 0;
 
         for (int i = 0; i < str.length; i++) {
 
 
+            //this is unique char
             if (!map.containsKey(str[i])) {
+
                 countOfUnique++;
+
                 totalUnique++;
+
                 map.put(str[i], 1);
+
             } else
                 map.put(str[i], map.getOrDefault(str[i], 0) + 1);
 

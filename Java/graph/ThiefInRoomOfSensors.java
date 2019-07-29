@@ -146,13 +146,12 @@ public class ThiefInRoomOfSensors {
             if (s.y + s.r >= roomH) // overlap top; from the center of the sensors, if we add radius to its height(y) and its beyond or touch room height
                 sensorsCoveringTop.add(s);
 
-            if (s.y <= s.r) //overlap bottom; as y is the y-th coordinates, r is radius (as height) ; lets suppose height of room is H; then height of y coordinate is (H-y)
-                            // remaining height is (H-(H-y)= y, hence y<=r then touches
+            if (s.y <= s.r)
                 sensorsCoveringBottom.add(s);
         }
 
+        //nothing overlaps;
         if (sensorsCoveringBottom.isEmpty() || sensorsCoveringTop.isEmpty())
-            //nothing overlaps;
             return true;
 
         //means either of them overlap, find the overlaps and combine them
@@ -172,7 +171,7 @@ public class ThiefInRoomOfSensors {
             graphUnionFind.union(x.id, y.id);
         }
 
-        //Combine overlapping top & bottom sensors
+        //Combine overlapping sensors
         for (int i = 0; i < sensors.size(); i++) {
             for (int j = i + 1; j < sensors.size(); j++) {
 

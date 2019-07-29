@@ -1,5 +1,7 @@
 package Java.companyWise.facebook;
 
+import Java.LeetCode.CoinChangeProblem;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -38,7 +40,8 @@ public class CombinationalSum {
     /**
      * Observation: we have given coins arr[0...n-1] we can take any coin any number of time and we need to make the sum up to given Sum.
      * <p>
-     * One way to using dynamic programming, which tells you how many way you can make it (coin change problem)
+     * One way to using dynamic programming, which tells you how many way you can make it
+     * {@link CoinChangeProblem}
      * <p>
      * but here we need to find all.
      * <p>

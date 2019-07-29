@@ -103,6 +103,52 @@ class ContactCleaner1 {
         return result;
     }
 
+    /**
+     * Build contact list contains user name vs list of contact this user has
+     *
+     * @param contacts
+     * @return
+     */
+    private static List<Contact> buildContactList(String[][] contacts) {
+        List<Contact> response = new ArrayList<>(contacts.length);
+
+        for (int i = 0; i < contacts.length; i++) {
+
+            Set<String> set = new HashSet<>();
+            String username = null;
+            for (int j = 0; j < contacts[0].length; j++) {
+
+                if (isUserName(contacts[i][j])) {
+                    username = contacts[i][j];
+                    continue;
+                }
+                set.add(contacts[i][j]);
+
+            }
+            response.add(new Contact(username, set, i));
+        }
+
+        return response;
+    }
+
+    /**
+     * check given string is simple string (username)
+     *
+     * @param s
+     * @return
+     */
+    private static boolean isUserName(String s) {
+
+        if (s.contains("@"))
+            return false;
+        if (s.contains("+"))
+            return false;
+        if (s.matches(".*[0-9].*"))
+            return false;
+
+        return true;
+    }
+
     private static List<Set<Contact>> clean(List<Contact> contactList) {
 
         Map<String, List<Contact>> map = buildContactGraphAdjList(contactList);
@@ -179,50 +225,5 @@ class ContactCleaner1 {
 
     }
 
-    /**
-     * Build contact list contains user name vs list of contact this user has
-     *
-     * @param contacts
-     * @return
-     */
-    private static List<Contact> buildContactList(String[][] contacts) {
-        List<Contact> response = new ArrayList<>(contacts.length);
-
-        for (int i = 0; i < contacts.length; i++) {
-
-            Set<String> set = new HashSet<>();
-            String username = null;
-            for (int j = 0; j < contacts[0].length; j++) {
-
-                if (isUserName(contacts[i][j])) {
-                    username = contacts[i][j];
-                    continue;
-                }
-                set.add(contacts[i][j]);
-
-            }
-            response.add(new Contact(username, set, i));
-        }
-
-        return response;
-    }
-
-    /**
-     * check given string is simple string (username)
-     *
-     * @param s
-     * @return
-     */
-    private static boolean isUserName(String s) {
-
-        if (s.contains("@"))
-            return false;
-        if (s.contains("+"))
-            return false;
-        if (s.matches(".*[0-9].*"))
-            return false;
-
-        return true;
-    }
 
 }

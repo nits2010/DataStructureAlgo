@@ -10,27 +10,6 @@ import java.util.List;
  * Date: 2019-07-18
  * Description:
  * <p>
- * Given a set of n jobs where each job i has a deadline di >=1 and profit pi>=0. Only one job can be scheduled at a time. Each job takes 1 unit of time to complete. We earn the profit if and only if the job is completed by its deadline. The task is to find the subset of jobs that maximizes profit.
- * <p>
- * Examples:
- * <p>
- * Input: Four Jobs with following deadlines and profits
- * JobID Deadline Profit
- * a      4      20
- * b      1      10
- * c      1      40
- * d      1      30
- * Output: Following is maximum profit sequence of jobs:
- * c, a
- * Input: Five Jobs with following deadlines and profits
- * JobID Deadline Profit
- * a     2       100
- * b     1       19
- * c     2       27
- * d     1       25
- * e     3       15
- * Output: Following is maximum profit sequence of jobs:
- * c, a, e
  */
 
 class Job {
@@ -61,9 +40,6 @@ class Job {
         this.lossInTime = lossInTime;
     }
 
-
-    public Job() {
-    }
 
     @Override
     public String toString() {
@@ -157,6 +133,28 @@ public class JobScheduling {
 }
 
 
+/**
+ * You are given n activities with their start and finish times. Select the maximum number of activities that can be performed by a single person, assuming that a person can only work on a single activity at a time.
+ * Example:
+ * <p>
+ * Example 1 : Consider the following 3 activities sorted by
+ * by finish time.
+ * start[]  =  {10, 12, 20};
+ * finish[] =  {20, 25, 30};
+ * A person can perform at most two activities. The
+ * maximum set of activities that can be executed
+ * is {0, 2} [ These are indexes in start[] and
+ * finish[] ]
+ * <p>
+ * Example 2 : Consider the following 6 activities
+ * sorted by by finish time.
+ * start[]  =  {1, 3, 0, 5, 8, 5};
+ * finish[] =  {2, 4, 6, 7, 9, 9};
+ * A person can perform at most four activities. The
+ * maximum set of activities that can be executed
+ * is {0, 1, 3, 4} [ These are indexes in start[] and
+ * finish[] ]
+ */
 class ActivitySelection {
 
     public List<Job> activitySelection(List<Job> jobs) {
@@ -166,6 +164,9 @@ class ActivitySelection {
         if (jobs.size() == 1)
             return jobs;
 
+        /**
+         * Sort by deadline increasing order
+         */
         Collections.sort(jobs, Comparator.comparingDouble(o -> o.deadline));
 
         List<Job> selected = new ArrayList<>();
@@ -185,84 +186,98 @@ class ActivitySelection {
     }
 }
 
-/**
- * https://www.geeksforgeeks.org/job-selection-problem-loss-minimization-strategy-set-2/
- * We are given a sequence of N goods of production numbered from 1 to N.
- * Each good has a volume denoted by (Vi). The constraint is that once a good has been completed its volume starts decaying at a fixed percentage (P) per day.
- * All goods decay at the same rate and further each good take one day to complete.
- * We are required to find the order in which the goods should be produced so that overall volume of goods is maximized.
- * <p>
- * Example-1:
- * <p>
- * Input: 4, 2, 151, 15, 1, 52, 12 and P = 10%
- * Output: 222.503
- * Solution: In the optimum sequence of jobs, the total volume of goods left at the end of all jobs is 222.503
- * <p>
- * Example-2:
- * <p>
- * Input: 3, 1, 41, 52, 15, 4, 1, 63, 12 and P = 20%
- * Output: 145.742
- */
-
-class JobSchedulingMinimizeLossVolume {
-
-}
-
 
 /**
- * https://www.geeksforgeeks.org/job-sequencing-problem-loss-minimization/
- * O(nlgon)
- * We are given N jobs numbered 1 to N. For each activity, let Ti denotes the number of days required to complete the job. For each day of delay before starting to work for job i, a loss of Li is incurred.
- * We are required to find a sequence to complete the jobs so that overall loss is minimized. We can only work on one job at a time.
- * <p>
- * If multiple such solutions are possible, then we are required to give the lexicographically least permutation (i.e earliest in dictionary order).
+ *
+ * https://www.geeksforgeeks.org/job-sequencing-problem/
+ * Given a set of n jobs where each job i has a deadline di >=1 and profit pi>=0. Only one job can be scheduled at a time. Each job takes 1 unit of time to complete. We earn the profit
+ * if and only if the job is completed by its deadline. The task is to find the subset of jobs that maximizes profit.
  * <p>
  * Examples:
  * <p>
- * Input : L = {3, 1, 2, 4} and
- * T = {4, 1000, 2, 5}
- * Output : 3, 4, 1, 2
- * Explanation: We should first complete
- * job 3, then jobs 4, 1, 2 respectively.
- * <p>
- * Input : L = {1, 2, 3, 5, 6}
- * T = {2, 4, 1, 3, 2}
- * Output : 3, 5, 4, 1, 2
- * Explanation: We should complete jobs
- * 3, 5, 4, 1 and then 2 in this order.
+ * Input: Four Jobs with following deadlines and profits
+ * JobID Deadline Profit
+ * a      4      20
+ * b      1      10
+ * c      1      40
+ * d      1      30
+ * Output: Following is maximum profit sequence of jobs:
+ * c, a
+ * Input: Five Jobs with following deadlines and profits
+ * JobID Deadline Profit
+ * a     2       100
+ * b     1       19
+ * c     2       27
+ * d     1       25
+ * e     3       15
+ * Output: Following is maximum profit sequence of jobs:
+ * c, a, e
+ * Solution through Greedy approach
+ *  * O(n^2)
  */
-class JobSchedulingMinimizeLoss {
-
-    private int compareJobsByRationOfLossAndTime(Job a, Job b) {
-
-        int at = a.deadline;
-        int bt = b.deadline;
-
-        int al = a.lossInTime;
-        int bl = b.lossInTime;
-
-        //al/at < bl<bt => al*bt < bl*at
-
-        return Integer.compare((al * bt), (bl * at));
+class JobSchedulingGreedy {
 
 
-    }
+    public double maxProfitGreedy(List<Job> jobs) {
 
-    public List<Job> optimalSequenceOfJobs(final List<Job> jobs) {
         if (jobs == null || jobs.isEmpty())
-            return Collections.EMPTY_LIST;
+            return 0.0;
 
         if (jobs.size() == 1)
-            return jobs;
+            return jobs.get(0).profit;
 
-        //It sort by merge sort- stable sort
-        Collections.sort(jobs, (o1, o2) -> compareJobsByRationOfLossAndTime(o1, o2));
 
-        return jobs;
+        /**
+         * Sort by profit Decreasing Order
+         * O(nlogn)
+         */
+        Collections.sort(jobs, (o1, o2) -> Double.compare(o2.profit, o1.profit));
+
+
+        /**
+         * to assign slots; choose the max by time
+         */
+        boolean slots[] = new boolean[jobs.size()];
+        int jobId[] = new int[jobs.size()]; //to show the ids
+
+        double maxProfit = 0;
+
+        //O(n^2)
+        for (int i = 0; i < jobs.size(); i++) { //O(n)
+
+
+            int deadline = jobs.get(i).deadline;
+
+            /**
+             * Find the max slot where this job can fit, finding max will ensure the other jobs won't starve for slot
+             *
+             * Suppose that a job J1 has a deadline of time t = 5. We assign the greatest
+             * time slot which is free and less than the deadline i.e 4-5 for this job. Now another job J2 with deadline of 5 comes in,
+             * so the time slot allotted will be 3-4 since 4-5 has already been allotted to job J1.
+             */
+            //O(n)
+            for (int j = Math.min(deadline, jobs.size()) - 1; j >= 0; j--)
+
+                if (!slots[j]) {
+                    maxProfit += jobs.get(i).profit;
+                    jobId[j] = i;
+                    slots[j] = true;
+                    break;
+                }
+
+
+        }
+
+        for (int i = 0; i < jobId.length; i++)
+            if (slots[i])
+                System.out.print(jobs.get(jobId[i]) + " ");
+
+        return maxProfit;
 
     }
 
 }
+
 
 /**
  * https://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/
@@ -328,9 +343,9 @@ class JobSchedulingDisJointSet {
                 return;
 
             if (parent[pi].rank < parent[pj].rank) {
-                parent[pj].id = pi; //make pj as parent of pi, this will make pj size always same as we added one more child only
+                parent[pi].id = pj; //make pj as parent of pi, this will make pj size always same as we added one more child only
             } else if (parent[pi].rank > parent[pj].rank)
-                parent[pi].id = pj; //make pi as parent of pj, this will make pi size always same as we added one more child only
+                parent[pj].id = pi; //make pi as parent of pj, this will make pi size always same as we added one more child only
             else {
                 parent[pj].id = pi; //make pi as parent of pj, and increase its rank(size)
                 parent[pj].rank++;
@@ -359,7 +374,7 @@ class JobSchedulingDisJointSet {
         DisjointSet disjointSet = new DisjointSet(n);
 
         /**
-         * Sort by profit
+         * Sort by profit Decreasing order
          * O(nlogn)
          */
         Collections.sort(jobs, (o1, o2) -> Double.compare(o2.profit, o1.profit));
@@ -396,68 +411,80 @@ class JobSchedulingDisJointSet {
 }
 
 /**
- * Solution through Greedy approach
- * O(n^2)
- * https://www.geeksforgeeks.org/job-sequencing-problem/
+ * https://www.geeksforgeeks.org/job-selection-problem-loss-minimization-strategy-set-2/
+ * We are given a sequence of N goods of production numbered from 1 to N.
+ * Each good has a volume denoted by (Vi). The constraint is that once a good has been completed its volume starts decaying at a fixed percentage (P) per day.
+ * All goods decay at the same rate and further each good take one day to complete.
+ * We are required to find the order in which the goods should be produced so that overall volume of goods is maximized.
+ * <p>
+ * Example-1:
+ * <p>
+ * Input: 4, 2, 151, 15, 1, 52, 12 and P = 10%
+ * Output: 222.503
+ * Solution: In the optimum sequence of jobs, the total volume of goods left at the end of all jobs is 222.503
+ * <p>
+ * Example-2:
+ * <p>
+ * Input: 3, 1, 41, 52, 15, 4, 1, 63, 12 and P = 20%
+ * Output: 145.742
  */
-class JobSchedulingGreedy {
+
+class JobSchedulingMinimizeLossVolume {
+
+}
 
 
-    public double maxProfitGreedy(List<Job> jobs) {
+/**
+ * https://www.geeksforgeeks.org/job-sequencing-problem-loss-minimization/
+ * O(nlgon)
+ * We are given N jobs numbered 1 to N. For each activity, let Ti denotes the number of days required to complete the job.
+ * For each day of delay before starting to work for job i, a loss of Li is incurred.
+ * We are required to find a sequence to complete the jobs so that overall loss is minimized. We can only work on one job at a time.
+ * <p>
+ * If multiple such solutions are possible, then we are required to give the lexicographically least permutation (i.e earliest in dictionary order).
+ * <p>
+ * Examples:
+ * <p>
+ * Input : L = {3, 1, 2, 4} and
+ * T = {4, 1000, 2, 5}
+ * Output : 3, 4, 1, 2
+ * Explanation: We should first complete
+ * job 3, then jobs 4, 1, 2 respectively.
+ * <p>
+ * Input : L = {1, 2, 3, 5, 6}
+ * T = {2, 4, 1, 3, 2}
+ * Output : 3, 5, 4, 1, 2
+ * Explanation: We should complete jobs
+ * 3, 5, 4, 1 and then 2 in this order.
+ */
+class JobSchedulingMinimizeLoss {
 
+    private int compareJobsByRationOfLossAndTime(Job a, Job b) {
+
+        int at = a.deadline;
+        int bt = b.deadline;
+
+        int al = a.lossInTime;
+        int bl = b.lossInTime;
+
+        //al/at < bl<bt => al*bt < bl*at
+
+        return Integer.compare((al * bt), (bl * at));
+
+
+    }
+
+    public List<Job> optimalSequenceOfJobs(final List<Job> jobs) {
         if (jobs == null || jobs.isEmpty())
-            return 0.0;
+            return Collections.EMPTY_LIST;
 
         if (jobs.size() == 1)
-            return jobs.get(0).profit;
+            return jobs;
 
+        //It sort by merge sort- stable sort
+        Collections.sort(jobs, (o1, o2) -> compareJobsByRationOfLossAndTime(o1, o2));
 
-        /**
-         * Sort by profit
-         * O(nlogn)
-         */
-        Collections.sort(jobs, (o1, o2) -> Double.compare(o2.profit, o1.profit));
-
-
-        /**
-         * to assign slots; choose the max by time
-         */
-        boolean slots[] = new boolean[jobs.size()];
-        int jobId[] = new int[jobs.size()]; //to show the ids
-
-        double maxProfit = 0;
-
-        //O(n^2)
-        for (int i = 0; i < jobs.size(); i++) { //O(n)
-
-
-            int deadline = jobs.get(i).deadline;
-
-            /**
-             * Find the max slot where this job can fit, finding max will ensure the other jobs won't starve for slot
-             *
-             * Suppose that a job J1 has a deadline of time t = 5. We assign the greatest
-             * time slot which is free and less than the deadline i.e 4-5 for this job. Now another job J2 with deadline of 5 comes in,
-             * so the time slot allotted will be 3-4 since 4-5 has already been allotted to job J1.
-             */
-            //O(n)
-            for (int j = Math.min(deadline, jobs.size()) - 1; j >= 0; j--)
-
-                if (!slots[j]) {
-                    maxProfit += jobs.get(i).profit;
-                    jobId[j] = i;
-                    slots[j] = true;
-                    break;
-                }
-
-
-        }
-
-        for (int i = 0; i < jobId.length; i++)
-            if (slots[i])
-                System.out.print(jobs.get(jobId[i]) + " ");
-
-        return maxProfit;
+        return jobs;
 
     }
 

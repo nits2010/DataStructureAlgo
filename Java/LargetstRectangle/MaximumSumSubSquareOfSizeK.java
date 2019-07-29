@@ -35,6 +35,7 @@ public class MaximumSumSubSquareOfSizeK {
      * One way is to iterate on the given matrix for each row and column, then keep considering the sub-array of size kxk and sum them up
      * O(k^2 N*M )
      * or
+     * Optimized solution
      * <p>
      * Strip(i,j) represent the sum of elements from j to j+k-1 of ith row.
      * <p>
