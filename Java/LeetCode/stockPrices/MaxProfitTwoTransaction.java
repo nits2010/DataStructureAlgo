@@ -28,7 +28,7 @@ public class MaxProfitTwoTransaction {
    now;
    [ 1st trasnaction]
    profit[i] -> traverse from back
-           = MAX ( profit[i+1], maxPrices - profit [i]) if prices[i] < maxPrices; //means we buy at price[i] and sell at the maxPrices day or we have already a max profit made earlier
+           = MAX ( profit[i+1], maxPrices - prices [i]) if prices[i] < maxPrices; //means we buy at price[i] and sell at the maxPrices day or we have already a max profit made earlier
 
    [ 2nd trasnaction]
    profit[i] traverse from front
