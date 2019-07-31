@@ -9,7 +9,7 @@ public class ArithmeticPower {
     public static void main(String[] args) {
 
         System.out.printf("2^(-3) = " + AirthmaticPowerSimple.airthmaticPower(2, -3));
-        System.out.printf("2^(-3) = " + AirthmaticPowerSimple.airthmaticPower(2, -3));
+        System.out.printf("2^(-3) = " + AirthmaticPowerFastRecursive.airthmaticPower(2, -3));
     }
 }
 
