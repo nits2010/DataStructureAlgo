@@ -50,7 +50,7 @@ class AnagramSubstringSearch {
         int p = pattern.length();
 
 
-        if (n == p)
+        if(n==p)
             return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++)
