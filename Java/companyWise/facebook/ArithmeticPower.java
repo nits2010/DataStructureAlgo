@@ -8,15 +8,25 @@ package Java.companyWise.facebook;
 public class ArithmeticPower {
     public static void main(String[] args) {
 
-        System.out.printf("2^(-3) = " + AirthmaticPowerSimple.airthmaticPower(2, -3));
-        System.out.printf("2^(-3) = " + AirthmaticPowerFastRecursive.airthmaticPower(2, -3));
+        System.out.printf("2^(-3) = " + ArithmeticPowerSimple.arithmeticPower(2, -3));
+        System.out.printf("\n2^(-3) = " + ArithmeticPowerRecursive.arithmeticPower(2, -3));
+        System.out.printf("\n2^(-3) = " + ArithmeticPowerIterative.arithmeticPower(2, -3));
+
+
+        System.out.printf("\n2^(-3) = " + ArithmeticPowerSimple.arithmeticPower(2, 3));
+        System.out.printf("\n2^(-3) = " + ArithmeticPowerRecursive.arithmeticPower(2, 3));
+        System.out.printf("\n2^(-3) = " + ArithmeticPowerIterative.arithmeticPower(2, 3));
+
+        System.out.printf("\n-2^(-3) = " + ArithmeticPowerSimple.arithmeticPower(-2, 3));
+        System.out.printf("\n-2^(-3) = " + ArithmeticPowerRecursive.arithmeticPower(-2, 3));
+        System.out.printf("\n-2^(-3) = " + ArithmeticPowerIterative.arithmeticPower(-2, 3));
     }
 }
 
 //O(y)
-class AirthmaticPowerSimple {
+class ArithmeticPowerSimple {
 
-    public static double airthmaticPower(int x, int y) {
+    public static double arithmeticPower(int x, int y) {
 
         return (y > 0) ? power(x, Math.abs(y)) : (double) 1 / power(x, Math.abs(y));
     }
@@ -32,9 +42,9 @@ class AirthmaticPowerSimple {
     }
 }
 
-//O(logy)
-class AirthmaticPowerFastRecursive {
-    public static double airthmaticPower(int x, int y) {
+//O(logy) / O(logy)
+class ArithmeticPowerRecursive {
+    public static double arithmeticPower(int x, int y) {
 
         return (y > 0) ? power(x, Math.abs(y)) : (double) 1 / power(x, Math.abs(y));
     }
@@ -46,5 +56,31 @@ class AirthmaticPowerFastRecursive {
             return power(x, y / 2) * power(x, y / 2);
         else
             return x * power(x, y / 2) * power(x, y / 2);
+    }
+}
+
+//O(logy)/O(1)
+class ArithmeticPowerIterative {
+    public static double arithmeticPower(int x, int y) {
+
+        return (y > 0) ? power(x, Math.abs(y)) : (double) 1 / power(x, Math.abs(y));
+    }
+
+    private static int power(int x, int y) {
+        // Initialize result
+        int res = 1;
+
+        while (y > 0) {
+            // If y is odd,
+            // multiply
+            // x with result
+            if ((y & 1) == 1)
+                res = res * x;
+
+            // n must be even now
+            y = y >> 1; // y = y/2
+            x = x * x; // Change x to x^2
+        }
+        return res;
     }
 }
