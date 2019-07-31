@@ -41,25 +41,33 @@ class AnagramSubstringSearch {
         if (string == null || pattern == null || string.isEmpty() || pattern.isEmpty())
             return Collections.EMPTY_LIST;
 
-        if (string.equals(pattern))
-            return Arrays.asList(0);
 
         int patternC[] = patternCounter(pattern);
 
         int str[] = new int[26];
 
-        for (int i = 0; i < pattern.length(); i++)
+        int n = string.length();
+        int p = pattern.length();
+
+
+        if (n == p)
+            return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
+
+        for (int i = 0; i < p; i++)
             str[string.charAt(i) - '0']++;
 
         List<Integer> solution = new ArrayList<>();
+
+
         int s = 0;
-        for (int i = pattern.length(); i < string.length(); i++) {
+        for (int i = p; i < n; i++) {
 
             if (match(str, patternC))
                 solution.add(s);
 
             str[string.charAt(i) - '0']++;
             str[string.charAt(s++) - '0']--;
+
 
         }
 
