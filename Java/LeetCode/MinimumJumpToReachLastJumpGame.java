@@ -130,6 +130,16 @@ class CanJumpToReachLastBackTracking {
 }
 
 
+/**
+ * We can solve this problem using dynamic programming as you see we are unnecessary evaluating the same index again and again in above solution.
+ * <p>
+ * Lets
+ * Dp[i] is the minimum jump required to reach end from index i
+ * <p>
+ * Dp[i] = Min { 1+ Min { Dp[j] if nums[j] >= (i-j}}
+ * <p>
+ * Dp[n-1] will be our solution if its -1 then False otherwise true
+ */
 class CanJumpToReachLastDP {
 
 
@@ -168,13 +178,13 @@ class CanJumpToReachLastLinear {
 
     public static boolean canJump(int[] nums) {
         HelperToPrint.printArray(nums);
-        int lastPos = nums.length - 1;
+        int reachAble = nums.length - 1;
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (i + nums[i] >= lastPos) {
-                lastPos = i;
+            if (i + nums[i] >= reachAble) {
+                reachAble = i;
             }
         }
-        return lastPos == 0;
+        return reachAble == 0;
     }
 }
 
