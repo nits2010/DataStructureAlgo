@@ -208,6 +208,7 @@ class BipartiteGraphDFSBackTracking {
 
 
 /**
+ * https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
  * Motivation to the solution:
  * <p>
  * Given an undirected graph and a number m, determine if the graph can be colored with at most m colors such
@@ -317,6 +318,8 @@ class GraphColoringProblem {
 
 
 /**
+ * https://www.geeksforgeeks.org/bipartite-graph/
+ *
  * This problem can be solve using graph coloring problem.
  * In Graph coloring problem, we need to find that how many different color we require to provide a color to each vertex such that no two neighbour has same color.
  * <p>
