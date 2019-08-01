@@ -17,6 +17,8 @@ import java.util.*;
  * 2. DFS
  * 3. BFS
  * 4. Coloring Problem
+ * <p>
+ * {@link Java.LeetCode.IsGraphBipartite}
  */
 public class GraphDivideTwoSetsOrBipartiteGraph {
 
@@ -319,7 +321,7 @@ class GraphColoringProblem {
 
 /**
  * https://www.geeksforgeeks.org/bipartite-graph/
- *
+ * <p>
  * This problem can be solve using graph coloring problem.
  * In Graph coloring problem, we need to find that how many different color we require to provide a color to each vertex such that no two neighbour has same color.
  * <p>
