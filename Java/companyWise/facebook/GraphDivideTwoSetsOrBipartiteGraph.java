@@ -111,8 +111,7 @@ public class GraphDivideTwoSetsOrBipartiteGraph {
  * 2. Otherwise backtrack
  * <p>
  * <p>
- * Runtime:
- * O(V*V*2) = O(V^2)
+ * Runtime: Each vertex has two choices hence => O(2^v)
  */
 class BipartiteGraphDFSBackTracking {
 
