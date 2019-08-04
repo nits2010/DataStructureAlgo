@@ -7,7 +7,7 @@ import java.util.*;
  * Date: 2019-08-04
  * Description:
  */
-public class RemoveObstacleRobot {
+public class RemoveObstacleRobotMinimumDistance {
     public static void main(String[] args) {
 
         int numRows = 3, numColumns = 3;
