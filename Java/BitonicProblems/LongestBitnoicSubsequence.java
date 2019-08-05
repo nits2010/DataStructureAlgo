@@ -21,28 +21,27 @@ public class LongestBitnoicSubsequence {
         int arr3[] = {80, 60, 30, 40, 20, 10};
 
         int arr[] = arr1;
-        System.out.println(longestBitnoicSubsequence(arr));
-        System.out.println(longestBitnoicSubsequenceNlogN(arr));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
 
         arr = arr2;
-        System.out.println(longestBitnoicSubsequence(arr));
-        System.out.println(longestBitnoicSubsequenceNlogN(arr));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
 
         arr = arr3;
-        System.out.println(longestBitnoicSubsequence(arr));
-        System.out.println(longestBitnoicSubsequenceNlogN(arr));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
 
     }
 
 
-
     /**
      * {@link Java.LongestIncreasingSubSequence}
+     *
      * @param arr
-     * @return
-     * O(n^2)
+     * @return O(n ^ 2)
      */
-    private static int longestBitnoicSubsequence(int[] arr) {
+    private static int longestBitnoicSubSequence(int[] arr) {
 
         int n = arr.length;
 
@@ -81,28 +80,20 @@ public class LongestBitnoicSubsequence {
 
     /**
      * {@link Java.LongestIncreasingSubSequence}
+     *
      * @param arr
-     * @return
-     * O(nlogn)
+     * @return O(nlogn)
      */
 
-    private static int longestBitnoicSubsequenceNlogN(int[] arr) {
+    private static int longestBitnoicSubSequenceNlogN(int[] arr) {
 
         int n = arr.length;
 
-        int increasing[] = new int[n];
-        int increasingTail[] = new int[n];//contains length of LBS at i index
-
-        int decreasing[] = new int[n];
-        int decreasingTail[] = new int[n];
-
-
-        buildTail(arr, increasing, increasingTail, n);
-
+        int increasingTail[] = buildTail(arr, n);//contains length of LBS at i index
         reveresArr(arr);
-        buildTail(arr, decreasing, decreasingTail, n);
 
-        reveresArr(arr);
+        int decreasingTail[] = buildTail(arr, n);
+        reveresArr(arr); //reset the array
 
         //find max cut point
         int max = Integer.MIN_VALUE;
@@ -130,13 +121,22 @@ public class LongestBitnoicSubsequence {
      * {@link Java.LongestIncreasingSubSequence}
      *
      * @param nums
-     * @param lis
-     * @param tail
      * @param n
+     * @return
      */
-    private static void buildTail(int[] nums, int lis[], int tail[], int n) {
+    private static int[] buildTail(int[] nums, int n) {
         if (nums == null || nums.length == 0)
-            return;
+            return nums;
+
+        /**
+         * Represent the LIS at index i
+         */
+        int lis[] = new int[nums.length];
+
+        /**
+         * Represent the length of LIS at index i
+         */
+        int tail[] = new int[nums.length];
 
         int lisLength = 1;
 
@@ -159,6 +159,8 @@ public class LongestBitnoicSubsequence {
                 tail[i] = index + 1;
             }
         }
+
+        return tail;
 
     }
 

@@ -3,6 +3,24 @@ package Java.Palindroms;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * https://leetcode.com/problems/palindrome-partitioning/
+ * Given a string s, partition s such that every substring of the partition is a palindrome.
+ * <p>
+ * Return all possible palindrome partitioning of s.
+ * <p>
+ * Example:
+ * <p>
+ * Input: "aab"
+ * Output:
+ * [
+ * ["aa","b"],
+ * ["a","a","b"]
+ * ]
+ *
+ *
+ * {@link PalindromePartitioning}
+ */
 class PalindromePartitions {
 
     public static void main(String[] args) {
@@ -18,6 +36,16 @@ class PalindromePartitions {
         return result;
     }
 
+    /**
+     * Backtracking by caching
+     *
+     * @param result
+     * @param temp
+     * @param start
+     * @param n
+     * @param s
+     * @param palindrome
+     */
     private static void partition(List<List<String>> result, LinkedList<String> temp, int start, int n, String s, boolean palindrome[][]) {
         if (start == n) {
             result.add(new LinkedList<>(temp));
@@ -26,7 +54,7 @@ class PalindromePartitions {
         }
 
         for (int i = start; i < n; i++) {
-            if (palindrome[start][i]){
+            if (palindrome[start][i]) {
 
                 temp.add(s.substring(start, i + 1));
                 partition(result, temp, i + 1, n, s, palindrome);
@@ -67,7 +95,6 @@ class PalindromePartitions {
     }
 
 
-
     static boolean isPalindrome(final String str, int i, int j) {
         if (str == null)
             return true;
@@ -80,6 +107,17 @@ class PalindromePartitions {
 
         return true;
     }
+
+
+    /**
+     * Backtracking exhaustive
+     *
+     * @param result Empty list
+     * @param currL  Empty list
+     * @param start  0
+     * @param n      length of string
+     * @param s      actual string
+     */
     private static void partitionSlower(List<List<String>> result, LinkedList<String> currL, int start, int n, String s) {
 
         if (start >= n) {
@@ -99,7 +137,6 @@ class PalindromePartitions {
         }
 
     }
-
 
 
 }

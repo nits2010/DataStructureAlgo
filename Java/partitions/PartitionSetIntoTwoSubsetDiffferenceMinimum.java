@@ -24,43 +24,48 @@ public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
     public static void main(String args[]) {
 
         int nums[] = {3,1,4,2,2,1};
-        int difference = partitionSetIntoTwoSubsetMinimimDiffference(nums);
+        int difference = partitionSetIntoTwoSubsetMinimumDifference(nums);
         System.out.println(difference);
     }
 
-    private static int partitionSetIntoTwoSubsetMinimimDiffference(int[] nums) {
+    private static int partitionSetIntoTwoSubsetMinimumDifference(int[] nums) {
 
-        return partitionSetIntoTwoSubsetMinimimDiffferenceDP(nums);
+        return partitionSetIntoTwoSubsetMinimumDifferenceDP(nums);
     }
 
     //Complexity: Exponential
+    //-------------------------------------------------------------------------------------
     private static int partitionSetIntoTwoSubsetMinimimDiffferenceRecursive(int[] nums) {
 
         int sum = Arrays.stream(nums).sum();
-        return partitionSetIntoTwoSubsetMinimimDiffferenceRecursive(nums, 0, 0, sum);
+        return partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, 0, 0, sum);
     }
 
-    private static int partitionSetIntoTwoSubsetMinimimDiffferenceRecursive(int[] nums, int i, int sum1, int sum2) {
+    private static int partitionSetIntoTwoSubsetMinimumDifferenceRecursive(int[] nums, int i, int sum1, int sum2) {
         if (i > nums.length)
             return Integer.MAX_VALUE;
 
         if (i == nums.length)
             return Math.abs(sum1 - sum2);
 
-        return Math.min(partitionSetIntoTwoSubsetMinimimDiffferenceRecursive(nums, i + 1, sum1, sum2),
-                partitionSetIntoTwoSubsetMinimimDiffferenceRecursive(nums, i + 1, sum1 + nums[i], sum2 - nums[i]));
+        return Math.min(
+                partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, i + 1, sum1, sum2),
+                partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, i + 1, sum1 + nums[i], sum2 - nums[i]));
 
     }
+    //-------------------------------------------------------------------------------------
 
     /**
      * Same as partition the set with equal sum
      *
+     * {@link PartitionSetIntoTwoSubsetEqualSum}
+     *
      * @param nums
      * @return
+     * O(n*sum) / O(n*sum)
+     * //can be reduced to O(n*sum) / O(n)
      */
-    //O(n*sum) / O(n*sum)
-    //can be reduced to O(n*sum) / O(n)
-    private static int partitionSetIntoTwoSubsetMinimimDiffferenceDP(int nums[]) {
+    private static int partitionSetIntoTwoSubsetMinimumDifferenceDP(int nums[]) {
 
         int sum = Arrays.stream(nums).sum();
         int n = nums.length;

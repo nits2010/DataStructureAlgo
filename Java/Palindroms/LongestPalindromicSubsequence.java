@@ -1,14 +1,30 @@
-package Java.LeetCode;
+package Java.Palindroms;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-22
- * Description:
+ * Description: https://leetcode.com/problems/longest-palindromic-subsequence
+ * Given a string s, find the longest palindromic subsequence's length in s. You may assume that the maximum length of s is 1000.
+ *
+ * Example 1:
+ * Input:
+ *
+ * "bbbab"
+ * Output:
+ * 4
+ * One possible longest palindromic subsequence is "bbbb".
+ * Example 2:
+ * Input:
+ *
+ * "cbbd"
+ * Output:
+ * 2
+ * One possible longest palindromic subsequence is "bb".
  */
 public class LongestPalindromicSubsequence {
 
     /**
-     * Lps[i][j] length of longest palindrome subsequence from i to j
+     * Lps[i][j] length of longest palindrome sub-sequence from i to j
      * Lps[i][j] = Lps[i+1][j-1] + 2 ; if S[i] == S[j]
      * = max (Lps[i+1][j], Lps[i][j-1]) ; if S[i] != S[j]
      * = 1 if i == j

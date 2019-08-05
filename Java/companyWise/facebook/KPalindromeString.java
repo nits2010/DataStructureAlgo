@@ -60,6 +60,8 @@ public class KPalindromeString {
  * Find the longest palindrome sub-sequence say L
  * given string length is n and k
  * if (n-l-k)> 1 then its not possible
+ * <p>
+ * {@link Java.Palindroms.LongestPalindromicSubsequence}
  */
 class KPalindromeStringUsingLPS {
 
@@ -177,6 +179,8 @@ class KPalindromeStringUsingLPS {
  * Now we are allowed to do at most K character delete i.e.
  * if
  * 2*N <= 2*k then we can make k-palindrome string from "S"
+ *
+ * {@link Java.EditDistance}
  */
 class KPalindromeStringUsingEditDistance {
 
@@ -294,6 +298,9 @@ class KPalindromeStringUsingEditDistance {
 
 }
 
+/**
+ * {@link Java.LeetCode.longestCommon.LongestCommonSubSequence}
+ */
 class KPalindromeStringUsingLongestCommonSubSequence {
 
 
@@ -325,6 +332,7 @@ class KPalindromeStringUsingLongestCommonSubSequence {
      * @param word1
      * @param word2
      * @return
+     *
      */
     private static int longestCommonSubSequence(String word1, String word2) {
 

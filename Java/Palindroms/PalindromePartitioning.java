@@ -3,7 +3,15 @@ package Java.Palindroms;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-22
- * Description:
+ * Description:https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/
+ * <p>
+ * Given a string, a partitioning of the string is a palindrome partitioning if every substring of the partition is a palindrome.
+ * For example, “aba|b|bbabb|a|b|aba” is a palindrome partitioning of “ababbbabbababa”. Determine the fewest cuts needed for
+ * palindrome partitioning of a given string. For example, minimum 3 cuts are needed for “ababbbabbababa”.
+ * The three cuts are “a|babbbab|b|ababa”. If a string is palindrome, then minimum 0 cuts are needed.
+ * If a string of length n containing all different characters, then minimum n-1 cuts are needed.
+ * <p>
+ * {@link PalindromePartitions}
  */
 public class PalindromePartitioning {
 
@@ -45,7 +53,7 @@ public class PalindromePartitioning {
 
 
         for (int i = 0; i < n; i++) {
-            if (palindrome[0][i] == true) //means Str(0..i) is palindrome
+            if (palindrome[0][i]) //means Str(0..i) is palindrome
                 minCut[i] = 0;
             else {
                 minCut[i] = Integer.MAX_VALUE;

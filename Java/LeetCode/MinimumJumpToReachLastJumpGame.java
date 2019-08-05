@@ -138,7 +138,7 @@ class CanJumpToReachLastBackTracking {
  * <p>
  * Dp[i] = Min { 1+ Min { Dp[j] if nums[j] >= (i-j}}
  * <p>
- * Dp[n-1] will be our solution if its -1 then False otherwise true
+ * Dp[n-1] will be our solution
  */
 class CanJumpToReachLastDP {
 
