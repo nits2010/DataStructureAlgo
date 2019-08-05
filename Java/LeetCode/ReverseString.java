@@ -30,52 +30,27 @@ public class ReverseString {
 
 class ReverseStringII {
 
+    /**
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse String II.
+     * Memory Usage: 36 MB, less than 100.00% of Java online submissions for Reverse String II.
+     *
+     * @param s
+     * @param k
+     * @return
+     */
     public String reverseStr(String s, int k) {
+        char res[] = s.toCharArray();
 
-        if (null == s || s.isEmpty() || k <= 1)
-            return s;
+        for (int i = 0; i < s.length(); i += 2 * k) {
 
+            int low = i;
+            int high = Math.min(i + k - 1, s.length() - 1);
 
-        int i = 0;
-        int j = k - 1;
-        int p = k;
-
-        char reverse[] = s.toCharArray();
-        if (s.length() <= k) {
-            reverseStr(reverse, 0, s.length() - 1);
-            return new String(reverse);
+            reverseStr(res, low, high);
         }
-
-
-        while (true) {
-
-
-            //Characters are left to reverse
-
-            reverseStr(reverse, i, j);
-
-            //skip k character unchanged;
-            j = p;
-            int count = k;
-
-            while (j < s.length() && count-- > 0)
-                j++;
-
-            if (j >= s.length())
-                break;
-
-            i = j;
-            j = i + k - 1;
-            if (j >= s.length())
-                j = s.length() - 1;
-            p = i + k;
-
-
-        }
-
-        return new String(reverse);
-
+        return new String(res);
     }
+
 
     private void reverseStr(char reverse[], int i, int j) {
 
