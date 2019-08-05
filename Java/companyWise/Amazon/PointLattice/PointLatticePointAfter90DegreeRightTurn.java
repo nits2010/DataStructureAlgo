@@ -1,4 +1,4 @@
-package Java.companyWise.Amazon.amazonGermany.PointLattice;
+package Java.companyWise.Amazon.PointLattice;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

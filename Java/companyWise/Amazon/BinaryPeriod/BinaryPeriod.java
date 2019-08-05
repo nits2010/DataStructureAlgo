@@ -1,4 +1,4 @@
-package Java.companyWise.Amazon.amazonGermany.BinaryPeriod;
+package Java.companyWise.Amazon.BinaryPeriod;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

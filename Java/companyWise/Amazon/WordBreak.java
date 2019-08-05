@@ -1,4 +1,4 @@
-package Java.companyWise.Amazon.amazonGermany;
+package Java.companyWise.Amazon;
 
 import java.util.*;
 

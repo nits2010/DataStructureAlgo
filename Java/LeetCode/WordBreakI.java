@@ -1,6 +1,5 @@
 package Java.LeetCode;
 
-import Java.companyWise.Amazon.amazonGermany.WordBreak;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -28,7 +27,7 @@ import Java.companyWise.Amazon.amazonGermany.WordBreak;
  * Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
  * Output: false
  * <p>
- * {@link WordBreak}
+ * {@link Java.companyWise.Amazon.WordBreak}
  */
 public class WordBreakI {
 }

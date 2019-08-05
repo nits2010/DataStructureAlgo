@@ -1,6 +1,7 @@
 package Java.HelpersToPrint;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -24,5 +25,20 @@ public class HelperToPrint {
             Arrays.stream(a[i]).forEach(x -> System.out.print(x + " "));
         }
         System.out.println();
+    }
+
+    public static void printListWithArray(final List<int[]> list) {
+
+        System.out.println();
+        for (int i[] : list) {
+
+            System.out.print(" ( ");
+            for (int x = 0; x < i.length; x++) {
+                System.out.print(i[x]);
+                if (x != i.length - 1)
+                    System.out.print(" , ");
+            }
+            System.out.print(" ) ");
+        }
     }
 }
