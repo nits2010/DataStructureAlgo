@@ -33,6 +33,8 @@ import java.util.Map;
  * <p>
  * Input: arr[] = {0, 0, 1, 1, 0}
  * Output: 0 to 3 Or 1 to 4
+ *
+ * https://leetcode.com/articles/contiguous-array/
  */
 public class ContiguousArrayZeroOne {
     public static void main(String[] args) {
