@@ -6,6 +6,53 @@ package Java.LeetCode;
  * Description:
  * https://www.geeksforgeeks.org/wildcard-pattern-matching/
  * https://www.geeksforgeeks.org/dynamic-programming-wildcard-pattern-matching-linear-time-constant-space/
+ * <p>
+ * https://leetcode.com/problems/wildcard-matching/
+ * <p>
+ * Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*'.
+ * <p>
+ * '?' Matches any single character.
+ * '*' Matches any sequence of characters (including the empty sequence).
+ * The matching should cover the entire input string (not partial).
+ * <p>
+ * Note:
+ * <p>
+ * s could be empty and contains only lowercase letters a-z.
+ * p could be empty and contains only lowercase letters a-z, and characters like ? or *.
+ * Example 1:
+ * <p>
+ * Input:
+ * s = "aa"
+ * p = "a"
+ * Output: false
+ * Explanation: "a" does not match the entire string "aa".
+ * Example 2:
+ * <p>
+ * Input:
+ * s = "aa"
+ * p = "*"
+ * Output: true
+ * Explanation: '*' matches any sequence.
+ * Example 3:
+ * <p>
+ * Input:
+ * s = "cb"
+ * p = "?a"
+ * Output: false
+ * Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
+ * Example 4:
+ * <p>
+ * Input:
+ * s = "adceb"
+ * p = "*a*b"
+ * Output: true
+ * Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
+ * Example 5:
+ * <p>
+ * Input:
+ * s = "acdcb"
+ * p = "a*c?b"
+ * Output: false
  */
 public class WildcardMatching {
 
@@ -33,15 +80,13 @@ public class WildcardMatching {
         if ((null == str && null == pattern) || (str.isEmpty() && pattern.isEmpty()))
             return true;
 
+        // empty pattern can only match with
+        // empty string
         if (pattern.length() == 0)
             return str.length() == 0;
 
         int m = pattern.length();
         int n = str.length();
-        // empty pattern can only match with
-        // empty string
-        if (m == 0)
-            return (n == 0);
 
         // lookup table for storing results of
         // sub problems

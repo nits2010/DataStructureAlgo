@@ -64,7 +64,7 @@ public class WordBreak {
         System.out.println("DP 3 is possible ");
         System.out.println(DP1.wordBreakUsingDict(input, new ArrayList<>(dict)));
 
-        System.out.println("Triesolution  is possible ");
+        System.out.println("Trie Solution  is possible ");
         System.out.println(TrieSolution.wordBreak(input, dict));
 
         System.out.println();
@@ -139,10 +139,16 @@ class DP1 {
         if (input == null || input.length() == 0)
             return true;
 
-        LinkedList<String> vw = new LinkedList<>();
+
         boolean w[] = new boolean[input.length() + 1];
+
+        /**
+         * Empty string can always be break
+         */
         w[0] = true;
+
         for (int i = 1; i <= input.length(); i++) {
+
             // if wb[i] is false, then check if current prefix can make it true.
             // Current prefix is "str.substr(0, i)"
             if (w[i] == false && dict.contains(input.substring(0, i)))
@@ -151,12 +157,15 @@ class DP1 {
             // wb[i] is true, then check for all substrings starting from
             // (i+1)th character and store their results.
             if (w[i] == true) {
+
                 // If we reached the last prefix
                 if (i == input.length())
                     return true;
 
                 for (int j = i + 1; j <= input.length(); j++) {
+
                     String sub = input.substring(i, j);
+
                     // Update wb[j] if it is false and can be updated
                     // Note the parameter passed to dictionaryContains() is
                     // substring starting from index 'i' and length 'j-i'
@@ -293,8 +302,10 @@ class TrieSolution {
 
         if (input.isEmpty())
             return true;
+
         if (dict.isEmpty())
             return false;
+
         Trie trie = new Trie();
         dict.stream().forEach(d -> trie.insert(d));
 
@@ -307,7 +318,9 @@ class TrieSolution {
             return true;
 
         for (int i = 1; i <= input.length(); i++) {
+
             String current = input.substring(0, i);
+
             String next = (i == input.length()) ? "" : input.substring(i);
 
             if (trie.search(current) && wordBreak(next, dict)) {
