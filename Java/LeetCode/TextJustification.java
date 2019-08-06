@@ -102,7 +102,7 @@ class SolutionTextJustification {
         final List<String> lines = new ArrayList<>(words.length);
 
         /**
-         * As question says, we need to put the words "Greedly" until we can put. Once we run out of words or space in line we need to do justification.
+         * As question says, we need to put the words "Greedily" until we can put. Once we run out of words or space in line we need to do justification.
          * 1. If this is intermediate line,
          *  1.1 and there is more than 1 word then we need to distribute spaces in between
          *  1.2 if there is only one word then we need to be left justified means need to put all spaces after word.
@@ -169,13 +169,26 @@ class SolutionTextJustification {
 
     }
 
-    private String buildLine(List<String> currentLine) {
-        StringBuilder text = new StringBuilder();
+    private void alignWords(List<String> currentLine) {
 
-        for (String s : currentLine)
-            text.append(s);
+        for (int i = 0; i < currentLine.size() - 1; i++) { //we dnt want to put space after last word
+            currentLine.set(i, currentLine.get(i) + SPACE); //string is immutable in JAVA
+        }
+    }
 
-        return text.toString();
+
+    private void leftJustify(List<String> currentWords, int spaces) {
+
+        //till we have spaces, keep adding them to the current line word; notice at this point we'll have to put space only on last word
+        int index = currentWords.size() - 1;
+        String word = currentWords.get(index);
+
+        while (spaces > 0) {
+            word += SPACE;
+            spaces--;
+        }
+        currentWords.set(index, word);
+
     }
 
     //In order to distributed them EVENLY, we need to put a space after each word till we run out the spaces in Round robin fashion
@@ -199,33 +212,27 @@ class SolutionTextJustification {
         }
     }
 
-    private void leftJustify(List<String> currentWords, int spaces) {
 
-        //till we have spaces, keep adding them to the current line word; notice at this point we'll have to put space only on last word
-        int index = currentWords.size() - 1;
-        String word = currentWords.get(index);
 
-        while (spaces > 0) {
-            word += SPACE;
-            spaces--;
-        }
-        currentWords.set(index, word);
 
-    }
 
-    private void alignWords(List<String> currentLine) {
+    private String buildLine(List<String> currentLine) {
+        StringBuilder text = new StringBuilder();
 
-        for (int i = 0; i < currentLine.size() - 1; i++) { //we dnt want to put space after last word
-            currentLine.set(i, currentLine.get(i) + SPACE); //string is immutable in JAVA
-        }
+        for (String s : currentLine)
+            text.append(s);
+
+        return text.toString();
     }
 }
 
 //Copied from https://leetcode.com/problems/text-justification/discuss/337337/0-ms-faster-than-100.00
 class TextJusttificationUsingCharArray {
+
     public List<String> fullJustify(String[] words, int maxWidth) {
         int i = 0;
         List<String> fullChs = new ArrayList<>();
+
         while (i < words.length) {
             int curLen = 0;
             int start = i;

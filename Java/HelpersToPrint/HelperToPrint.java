@@ -27,6 +27,20 @@ public class HelperToPrint {
         System.out.println();
     }
 
+
+    public static void print2DArray(final char a[][]) {
+        System.out.println();
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.println();
+            for (int j = 0; j < a[0].length; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+
+        }
+        System.out.println();
+    }
+
     public static void printListWithArray(final List<int[]> list) {
 
         System.out.println();

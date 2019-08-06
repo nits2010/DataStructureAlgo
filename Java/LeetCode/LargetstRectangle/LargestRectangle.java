@@ -1,4 +1,6 @@
-package Java.LargetstRectangle;
+package Java.LeetCode.LargetstRectangle;
+
+import Java.HelpersToPrint.HelperToPrint;
 
 import java.util.Stack;
 
@@ -31,7 +33,9 @@ public class LargestRectangle {
                 };
 
 
-        // System.out.println(maximalRectangle(input));
+        System.out.println("Input");
+        HelperToPrint.print2DArray(input);
+        System.out.println(maximalRectangle(input));
 
 
         char[][] input2 =
@@ -39,7 +43,8 @@ public class LargestRectangle {
                         {'1'}, {'0'}, {'1'}, {'1'}, {'1'}, {'1'}, {'0'}
                 };
 
-
+        System.out.println("Input");
+        HelperToPrint.print2DArray(input2);
         System.out.println(maximalRectangle(input2));
     }
 
@@ -151,6 +156,22 @@ public class LargestRectangle {
         return maxArea;
     }
 
+    private static void buildHistogram(int[][] matrix) {
+
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 1)
+                    matrix[i][j] = (matrix[i][j] + matrix[i - 1][j]);
+
+            }
+        }
+    }
+
+    /**
+     * {@link LargestHistogram}
+     * @param heights
+     * @return
+     */
     private static int histogramArea(int[] heights) {
         if (heights == null || heights.length == 0)
             return 0;
@@ -161,7 +182,7 @@ public class LargestRectangle {
 
         Stack<Integer> histogram = new Stack<>();
         int maxArea = Integer.MIN_VALUE;
-        int area = 0;
+        int area ;
         histogram.push(0); //contains indexes
 
         int i = 1;
@@ -190,15 +211,5 @@ public class LargestRectangle {
         return maxArea;
     }
 
-    private static void buildHistogram(int[][] matrix) {
-
-        for (int i = 1; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] == 1)
-                    matrix[i][j] = (matrix[i][j] + matrix[i - 1][j]);
-
-            }
-        }
-    }
 
 }

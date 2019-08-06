@@ -19,6 +19,8 @@ package Java;
  * <p>
  * The total extra spaces in line 1, line 2 and line 3 are 0, 2 and 3 respectively.
  * So optimal value of total cost is 0 + 2*2 + 3*3 = 13
+ *
+ * Similar problem {@link Java.LeetCode.TextJustification}
  */
 public class WordWrapProblem {
 

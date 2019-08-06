@@ -1,4 +1,4 @@
-package Java.LargetstRectangle;
+package Java.LeetCode.LargetstRectangle;
 
 import java.util.Arrays;
 
@@ -45,7 +45,6 @@ public class MaximumSumRectangle {
         int cols = matrix[0].length;
 
         int temp[] = new int[rows];
-        Arrays.fill(temp, 0);
 
         int left = -1, right = -1, top = -1, bottom = -1;
         int maxSum = Integer.MIN_VALUE;

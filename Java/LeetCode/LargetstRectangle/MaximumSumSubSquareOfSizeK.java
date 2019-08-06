@@ -1,4 +1,4 @@
-package Java.LargetstRectangle;
+package Java.LeetCode.LargetstRectangle;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -43,7 +43,7 @@ public class MaximumSumSubSquareOfSizeK {
      * <p>
      * KSum(i,j) represent the sum of square KxK matrix
      * <p>
-     * KSum(i,j) = Ksum(i-1,j) - Strip[i-1][j] + Strip[i+k-1][j] ; 1<i<=n-k+1
+     * KSum(i,j) = KSum(i-1,j) - Strip[i-1][j] + Strip[i+k-1][j] ; 1<i<=n-k+1
      *
      * @param mat
      * @param k
@@ -57,21 +57,21 @@ public class MaximumSumSubSquareOfSizeK {
         int strip[][] = new int[n][m - k + 1];
         int kSum[][] = new int[n - k + 1][m - k + 1];
 
-        //get sum of first strip on first column
+        //get sum of first strip on first column  & for each row
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < k; j++) {
                 strip[i][0] += mat[i][j];
             }
         }
 
-        //build strip
+        //build strip second column & for each row
         for (int i = 0; i < n; i++) {
             for (int j = 1; j < m - k + 1; j++) {
                 strip[i][j] = strip[i][j - 1] - mat[i][j - 1] + mat[i][j + k - 1];
             }
         }
 
-//        //build first k sum using strip
+        //build first k sum using strip
         for (int j = 0; j < m - k + 1; j++) {
 
             for (int i = 0; i < k; i++) {
@@ -80,6 +80,7 @@ public class MaximumSumSubSquareOfSizeK {
         }
 
         int max = Integer.MIN_VALUE;
+
         //build kSum
         for (int i = 1; i < n - k + 1; i++) {
 

@@ -1,4 +1,4 @@
-package Java.LargetstRectangle;
+package Java.LeetCode.LargetstRectangle;
 
 import java.util.Stack;
 
