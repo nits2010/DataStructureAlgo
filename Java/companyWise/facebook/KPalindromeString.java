@@ -299,7 +299,7 @@ class KPalindromeStringUsingEditDistance {
 }
 
 /**
- * {@link Java.LeetCode.longestCommon.LongestCommonSubSequence}
+ * {@link Java.LeetCode.longestShortestCommon.LongestCommonSubSequence}
  */
 class KPalindromeStringUsingLongestCommonSubSequence {
 

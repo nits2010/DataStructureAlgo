@@ -98,7 +98,7 @@ public class DeleteOperationTwoStrings {
      * @param word1
      * @param word2
      * @return
-     * {@link Java.LeetCode.longestCommon.LongestCommonSubSequence}
+     * {@link Java.LeetCode.longestShortestCommon.LongestCommonSubSequence}
      */
     private static int longestCommonSubSequence(String word1, String word2) {
 

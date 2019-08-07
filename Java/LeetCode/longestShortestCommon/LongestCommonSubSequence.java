@@ -1,4 +1,4 @@
-package Java.LeetCode.longestCommon;
+package Java.LeetCode.longestShortestCommon;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
