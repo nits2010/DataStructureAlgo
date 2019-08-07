@@ -1,7 +1,5 @@
 package Java.sum.sub.array.problmes;
 
-import java.util.PriorityQueue;
-import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -46,7 +44,10 @@ public class LargestSumSubArraySumAtMostK {
         for (int i = 0; i < nums.length; i++) {
             sumj += nums[i];
             Integer gap = ts.ceiling(sumj - k);
-            if (gap != null) max = Math.max(max, sumj - gap);
+
+            if (gap != null)
+                max = Math.max(max, sumj - gap); //sum - k = sum - gap => gap = k
+
             ts.add(sumj);
         }
         return max;

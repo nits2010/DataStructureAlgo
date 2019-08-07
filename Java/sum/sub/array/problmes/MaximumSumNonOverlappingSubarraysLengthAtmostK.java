@@ -46,12 +46,12 @@ public class MaximumSumNonOverlappingSubarraysLengthAtmostK {
      * <p>
      * Since any sub-array size can not be more than k.Then each element has only few choices.
      * 1. Either the current element start its own sub-array
-     * 2. Or it is a part of some other sub-array ( only when this is the adjustent element of that sub-array)
+     * 2. Or it is a part of some other sub-array ( only when this is the adjustment element of that sub-array)
      * <p>
      * So;
      * 1. Either we reject the current element i and start a new sub-array from i+1
-     * 2. Either we take this i and include in our previous sub-array {i} and start a new sub-array from i+2
-     * 3. Either we take this i+1 and include in our previous sub-array {i, i+1} and start a new sub-array from i+3
+     * 2. Either we take this i and include in our previous sub-array{} as -> {i} and start a new sub-array from i+2
+     * 3. Either we take this i+1 and include in our previous sub-array{1} as -> {i, i+1} and start a new sub-array from i+3
      * <p>
      * ...'
      * select {i, i+1,....i+k-1} and start new from i+k+1 .
@@ -75,6 +75,7 @@ public class MaximumSumNonOverlappingSubarraysLengthAtmostK {
 
         if (i >= num.length)
             return 0;
+
         if (dp[i] != Integer.MIN_VALUE)
             return dp[i];
 

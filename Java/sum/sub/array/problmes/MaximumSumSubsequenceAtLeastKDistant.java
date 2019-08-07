@@ -36,7 +36,7 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
 
 
     /**
-     * We need to find all those element which are k distance away anf forming a sub-sequence which has maximum sum.
+     * We need to find all those element which are k distance away and forming a sub-sequence which has maximum sum.
      * This is closely related to the problem "Longest increasing sub-sequence ". Instead here we have two different thing
      * 1. Instead longest we need to put constraint as Maximum Sum
      * 2. instead of choosing element one after other in distance 0 we need to choose which has distance k.
@@ -53,20 +53,20 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
      * which is j = i+k+1;
      * <p>
      * now there is two possibilities of choosing j
-     * 1. if i+k+1 is outside the boundary means i+k+1 >=N ; then we cannot select any other element as part of the subsequence. Hence we need to decide whether to select this element or one of the elements after it.
+     * 1. if i+k+1 is outside the boundary means i+k+1 >=N ; then we cannot select any other element as part of the subsequence. '
+     * Hence we need to decide whether to select this element or one of the elements after it.
      * 2. if i+k+1 is in the boundary means i+k+1 <N ; Thus we need to decide whether to select these two elements, or move on to the next adjacent element
      * <p>
-     * As well as the condition instead of A[i] > A[j] it should be M[i]  = Max ( A[i] + M[i+k+1] , M[i+1]
+     * As well as the condition instead of A[i] > A[j] it should be M[i]  = Max (  M[i+1], A[i] + M[i+k+1]  )
      * <p>
      * Lets define
      * M[i] is the maximum sum sub-sequence ending at i
      * <p>
      * M[i] = { Max (a[i] , M[i+1] if i+k+1 >=N
      * *        Max ( a[i] + M[i+k+1] , M[i+1] if i+k+1<N
-     * <p>
-     * base
-     * M[N-1] = A[N-1];
-     * }
+     * *            base
+     * *            M[N-1] = A[N-1];
+     * *        }
      * <p>
      * Ans: M[0]
      *
@@ -85,9 +85,9 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
 
         for (int i = n - 2; i >= 0; i--) {
 
-            if (i + k + 1 >= n)
+            if (i + k + 1 >= n) //Out of boundary
                 m[i] = Math.max(nums[i], m[i + 1]);
-            else
+            else //within boundary
                 m[i] = Math.max(nums[i] + m[i + k + 1], m[i + 1]);
         }
 

@@ -23,5 +23,5 @@ package Java.sum.sub.array.problmes;
  *
  * {@link Java.companyWise.facebook.MaximumSumSubArrayAtLeastKElements}
  */
-public class MaximumSumSubArrayAtLeastKElements {
+public class LargestSumSubArrayAtLeastKElements {
 }
