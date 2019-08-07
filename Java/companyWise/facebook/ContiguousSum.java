@@ -14,6 +14,7 @@ public class ContiguousSum {
         System.out.println(contiguousSum(new int[]{3, 5, 6, 9}, 23));
         System.out.println(contiguousSum(new int[]{3, 5, 6, 9}, 24));
         System.out.println(contiguousSum(new int[]{3, 5, 6, 9}, 15));
+        System.out.println(contiguousSum(new int[]{1,2,3,7,-3,4}, 0));
     }
 
     private static boolean contiguousSum(int a[], int sum) {
