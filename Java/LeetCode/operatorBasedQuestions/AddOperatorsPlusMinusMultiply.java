@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.operatorBasedQuestions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,6 +32,8 @@ import java.util.List;
  * Output: []
  *
  * https://leetcode.com/problems/expression-add-operators/discuss/352605/Explanation-and-way-to-make-it-efficient-from-134-ms-to-11-ms
+ * http://codinghelmet.com/exercises/expression-from-numbers
+ * https://leetcode.com/discuss/interview-question/351147/google-onsite-arithmetic-expression-to-construct-a-value
  */
 public class AddOperatorsPlusMinusMultiply {
     public static void main(String[] args) {
