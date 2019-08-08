@@ -56,8 +56,8 @@ import Java.HelpersToPrint.HelperToPrint;
  */
 public class CellStateAfterNDays {
     public static void main(String[] args) {
-        HelperToPrint.printArray(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
-        HelperToPrint.printArray(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
+        HelperToPrint.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
+        HelperToPrint.print(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
     }
 
 
@@ -73,7 +73,7 @@ public class CellStateAfterNDays {
      */
     static int[] cellAfterNDays(int[] houses, int N) {
         System.out.println("Given N: " + N);
-        HelperToPrint.printArray(houses);
+        HelperToPrint.print(houses);
         N = (N - 1) % 14 + 1;
         final int houseSize = 8;
 

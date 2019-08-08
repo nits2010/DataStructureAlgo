@@ -43,7 +43,7 @@ public class LongestSubarraySumAtMostk {
 
 
         System.out.println("\n \n Input k: " + k);
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
         int maxSize = 0;
 
         int sum = 0;

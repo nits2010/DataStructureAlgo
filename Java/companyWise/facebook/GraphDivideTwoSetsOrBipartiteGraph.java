@@ -90,7 +90,7 @@ public class GraphDivideTwoSetsOrBipartiteGraph {
 
     private static void test(int[][] graph) {
         System.out.println("Given Graph");
-        HelperToPrint.print2DArray(graph);
+        HelperToPrint.print(graph);
 
         System.out.println(BipartiteGraphDFSBackTracking.isBipartiteGraph(graph));
 

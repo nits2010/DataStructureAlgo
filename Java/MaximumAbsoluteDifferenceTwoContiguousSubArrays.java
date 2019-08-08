@@ -36,7 +36,7 @@ public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public int maximumAbsoluteDifferenceTwoContiguousSubArrays(int a[]) {
-        HelperToPrint.printArray(a);
+        HelperToPrint.print(a);
 
 
         if (a == null || a.length == 0)

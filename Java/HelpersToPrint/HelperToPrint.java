@@ -10,14 +10,14 @@ import java.util.List;
  */
 public class HelperToPrint {
 
-    public static void printArray(final int a[]) {
+    public static void print(final int a[]) {
         System.out.println();
         Arrays.stream(a).forEach(i -> System.out.print(i + " "));
         System.out.println();
 
     }
 
-    public static void print2DArray(final int a[][]) {
+    public static void print(final int a[][]) {
         System.out.println();
 
         for (int i = 0; i < a.length; i++) {
@@ -28,7 +28,7 @@ public class HelperToPrint {
     }
 
 
-    public static void print2DArray(final char a[][]) {
+    public static void print(final char a[][]) {
         System.out.println();
 
         for (int i = 0; i < a.length; i++) {
@@ -41,7 +41,7 @@ public class HelperToPrint {
         System.out.println();
     }
 
-    public static void printListWithArray(final List<int[]> list) {
+    public static void print(final List<int[]> list) {
 
         System.out.println();
         for (int i[] : list) {

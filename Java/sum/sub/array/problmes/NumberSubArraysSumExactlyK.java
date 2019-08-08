@@ -50,7 +50,7 @@ public class NumberSubArraysSumExactlyK {
      */
     static int numberSubArraysSumExactlyK(int nums[], int sum) {
         System.out.println("Input sum :" + sum);
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
 
         if (nums == null || nums.length == 0)
             return 0;

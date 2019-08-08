@@ -36,7 +36,7 @@ public class LongestSubArraySumK {
         if (nums == null || nums.length == 0)
             return Collections.EMPTY_LIST;
 
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
         /**
          * This will tell at what index(value) we saw a sum(key)
          */

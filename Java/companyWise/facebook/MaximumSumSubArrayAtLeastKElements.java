@@ -34,7 +34,7 @@ public class MaximumSumSubArrayAtLeastKElements {
     static int maxSum(int num[], int k) {
         if (num == null || num.length == 0)
             return 0;
-        HelperToPrint.printArray(num);
+        HelperToPrint.print(num);
 
         int max = Integer.MIN_VALUE;
 

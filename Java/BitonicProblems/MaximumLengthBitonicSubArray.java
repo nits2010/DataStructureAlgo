@@ -34,7 +34,7 @@ class MaximumLengthBitonicSubArrayHelper {
     }
 
     public void print() {
-        HelperToPrint.printArray(input);
+        HelperToPrint.print(input);
     }
 
     //false if no subarray exist otherwise true

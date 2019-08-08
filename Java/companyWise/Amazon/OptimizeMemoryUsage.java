@@ -117,14 +117,14 @@ public class OptimizeMemoryUsage {
             System.out.println("Not found");
 
         System.out.println("\n\nForeground :");
-        HelperToPrint.printArray(foreground);
+        HelperToPrint.print(foreground);
         System.out.println("Background :");
-        HelperToPrint.printArray(background);
+        HelperToPrint.print(background);
 
 
         List<int[]> usages = OptimalMemoryUsage.optimizeMemoryUsage(foreground, background, memory);
         System.out.println("Optimal -> ");
-        HelperToPrint.printListWithArray(usages);
+        HelperToPrint.print(usages);
 
     }
 

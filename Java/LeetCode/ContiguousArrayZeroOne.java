@@ -51,7 +51,7 @@ public class ContiguousArrayZeroOne {
 
     private static void test(int[] nums, int expectedOutput) {
         System.out.print("Input: ");
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
 
         LargestSubArrayWithEqualZeroAndOneBruteForce bruteForce = new LargestSubArrayWithEqualZeroAndOneBruteForce();
         LargestSubArrayWithEqualZeroAndOneUsingArray usingArray = new LargestSubArrayWithEqualZeroAndOneUsingArray();

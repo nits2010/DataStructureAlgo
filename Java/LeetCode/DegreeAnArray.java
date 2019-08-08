@@ -44,7 +44,7 @@ public class DegreeAnArray {
     }
 
     private static void test(int[] nums) {
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
         System.out.println();
         System.out.println("Simple Count -> " + DegreeAnArraySimpleCount.findShortestSubArray(nums));
         System.out.println("Single scan -> " + DegreeAnArraySingleScan.findShortestSubArray(nums));

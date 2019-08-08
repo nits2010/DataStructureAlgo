@@ -36,9 +36,9 @@ public class MaximumSizeSquareMatrix {
 
 
         System.out.println("Input");
-        HelperToPrint.print2DArray(M);
+        HelperToPrint.print(M);
         System.out.println("Sub-Square");
-        HelperToPrint.print2DArray(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
+        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
         System.out.println("Area :" + MaximumSizeSqureSubMatrixArea.maximalSquare((M)));
 
         char N[][] =
@@ -49,9 +49,9 @@ public class MaximumSizeSquareMatrix {
                         {'1', '0', '0', '1', '0'}
                 };
         System.out.println("Input");
-        HelperToPrint.print2DArray(N);
+        HelperToPrint.print(N);
         System.out.println("Sub-Square");
-        HelperToPrint.print2DArray(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
+        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((N)));
 
         char O[][] =
@@ -60,9 +60,9 @@ public class MaximumSizeSquareMatrix {
 
                 };
         System.out.println("Input");
-        HelperToPrint.print2DArray(O);
+        HelperToPrint.print(O);
         System.out.println("Sub-Square");
-        HelperToPrint.print2DArray(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
+        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((O)));
 
     }

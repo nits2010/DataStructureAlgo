@@ -34,7 +34,7 @@ public class LargestRectangle {
 
 
         System.out.println("Input");
-        HelperToPrint.print2DArray(input);
+        HelperToPrint.print(input);
         System.out.println(maximalRectangle(input));
 
 
@@ -44,7 +44,7 @@ public class LargestRectangle {
                 };
 
         System.out.println("Input");
-        HelperToPrint.print2DArray(input2);
+        HelperToPrint.print(input2);
         System.out.println(maximalRectangle(input2));
     }
 

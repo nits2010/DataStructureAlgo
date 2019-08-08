@@ -3,7 +3,6 @@ package Java;
 import Java.HelpersToPrint.HelperToPrint;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -33,7 +32,7 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubSet(int[] nums, int k, SubSetNoPairSumDivisibleByK subset) {
         System.out.println("Input ");
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
         List<Integer> modulo = subset.maximumSizeSubSetNoPairSumDivisibleByKElements(nums, k);
         System.out.println("Size : " + modulo.size() + " array " + modulo);
     }
@@ -52,10 +51,10 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubArray(int[] nums, int k, SubArrayNoPairSumDivisibleByK array) {
         System.out.println("Input ");
-        HelperToPrint.printArray(nums);
+        HelperToPrint.print(nums);
         int[] modulo = array.maximumSizeSubSetNoPairSumDivisibleByK(nums, k);
         System.out.println("output ");
-        HelperToPrint.printArray(modulo);
+        HelperToPrint.print(modulo);
     }
 }
 

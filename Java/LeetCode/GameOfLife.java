@@ -86,36 +86,36 @@ public class GameOfLife {
         GameOfLifeUsingMemory sol1 = new GameOfLifeUsingMemory();
 
         System.out.println("Given Game\n");
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
 
 
         System.out.println("\n After one iteration\n");
         sol1.gameOfLife(game);
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
     }
 
     private static void testMemoryLessProcessingMore(int[][] game) {
         GameOfLifeMemoryLessMoreProcessing sol1 = new GameOfLifeMemoryLessMoreProcessing();
 
         System.out.println("Given Game\n");
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
 
 
         System.out.println("\n After one iteration\n");
         sol1.gameOfLife(game);
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
     }
 
     private static void testLessMemoryLessProcessingMore(int[][] game) {
         GameOfLifeLessMemoryLessLessProcessing sol1 = new GameOfLifeLessMemoryLessLessProcessing();
 
         System.out.println("Given Game\n");
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
 
 
         System.out.println("\n After one iteration\n");
         sol1.gameOfLife(game);
-        HelperToPrint.print2DArray(game);
+        HelperToPrint.print(game);
     }
 }
 

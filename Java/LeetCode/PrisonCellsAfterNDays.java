@@ -54,8 +54,8 @@ public class PrisonCellsAfterNDays {
 
     public static void main(String args[]) {
         SolutionPrisonCellsAfterNDays sol = new SolutionPrisonCellsAfterNDays();
-        HelperToPrint.printArray(sol.prisonAfterNDays(new int[]{0, 1, 0, 1, 1, 0, 0, 1}, 7));
-        HelperToPrint.printArray(sol.prisonAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
+        HelperToPrint.print(sol.prisonAfterNDays(new int[]{0, 1, 0, 1, 1, 0, 0, 1}, 7));
+        HelperToPrint.print(sol.prisonAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
 
 
     }
