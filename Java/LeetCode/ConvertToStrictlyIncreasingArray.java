@@ -24,7 +24,7 @@ import java.util.Map;
  * <p>
  * Similar to this {@link ConvertToNonDecreasingArray}
  */
-public class ConvertToStriclyIncreasingArray {
+public class ConvertToStrictlyIncreasingArray {
 
     public static void main(String[] args) {
         Solution sol = new Solution();
@@ -52,22 +52,12 @@ public class ConvertToStriclyIncreasingArray {
      * And N- len would be your answer as those element is not participating in SLIS.
      * <p>
      * Note: We can use both the algo O(n^2) and O(nlgon) of LIS to make it work.
+     * <p>
+     * O(n^2) and can be done to O(nlogn)
      */
     static class Solution {
 
         public int minimumChange(int nums[]) {
-
-            return minimumChangeUsingMap(nums);
-        }
-
-
-        /**
-         * O(n^2) and can be done to O(nlogn)
-         *
-         * @param nums
-         * @return
-         */
-        public int minimumChangeUsingLIS(int nums[]) {
 
             if (nums == null || nums.length == 0)
                 return 0;
@@ -95,50 +85,6 @@ public class ConvertToStriclyIncreasingArray {
             return n - max;
         }
 
-
-        /**
-         * We can take the advantage of making Strictly increasing sub-sequence.
-         * As we know that if the current element participate in 'Strictly increasing sub-sequence' and its the end element of that sequence
-         * then there must be a element previously to this which is just less than to this element ( previous+1 = current ).
-         * <p>
-         * We can use Map to store those values and find quickly
-         *
-         * @param nums
-         * @return
-         */
-        public int minimumChangeUsingMap(int nums[]) {
-            if (nums == null || nums.length == 0)
-                return 0;
-
-            int n = nums.length;
-
-            /**
-             * Key - element
-             * Value - index
-             */
-            final Map<Integer, Integer> map = new HashMap<>();
-            /**
-             * Length of sequence ending at this index
-             */
-            int dp[] = new int[n];
-
-            int maxL = 0;
-
-            for (int i = 0; i < n; i++) {
-
-                if (map.containsKey(nums[i] - 1))
-                    dp[i] = dp[map.get(nums[i] - 1)] + 1;
-                else
-                    dp[i] = 1;
-
-                map.put(nums[i], i);
-
-                maxL = Math.max(maxL, dp[i]);
-
-            }
-
-            return n - maxL;
-        }
 
     }
 }

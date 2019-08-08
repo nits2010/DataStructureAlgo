@@ -21,7 +21,7 @@ import Java.HelpersToPrint.HelperToPrint;
  * Input: holes = [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0], w = 5
  * Output: 6
  * Explanation: 0(10011)0(11001)0
- *
+ * <p>
  * {GOOGLE}
  */
 public class WhacAMole {
@@ -107,23 +107,41 @@ class WhacAMoleUsingMemory {
 
         leftPreSum[0] = holes[0];
         int maxLeft = leftPreSum[0];
-        for (int i = 1; i < n; i++) {
+        rightPreSum[n - 1] = holes[n - 1];
+        int maxRight = rightPreSum[n - 1];
+
+        for (int i = 1, j = n - 2; i < n && j >= 0; i++, j--) {
+
             leftPreSum[i] = leftPreSum[i - 1] + holes[i];
 
             if (i < w) {
                 maxLeft = Math.max(maxLeft, leftPreSum[i]);
             }
 
+
+            rightPreSum[j] = rightPreSum[j + 1] + holes[j];
+            if (j > n - w)
+                maxRight = Math.max(maxRight, rightPreSum[j]);
         }
 
-        rightPreSum[n - 1] = holes[n - 1];
-        int maxRight = rightPreSum[n - 1];
 
-        for (int i = n - 2; i >= 0; i--) {
-            rightPreSum[i] = rightPreSum[i + 1] + holes[i];
-            if (i > n - w)
-                maxRight = Math.max(maxRight, rightPreSum[i]);
-        }
+//        for (int i = 1; i < n; i++) {
+//            leftPreSum[i] = leftPreSum[i - 1] + holes[i];
+//
+//            if (i < w) {
+//                maxLeft = Math.max(maxLeft, leftPreSum[i]);
+//            }
+//
+//        }
+//
+//        rightPreSum[n - 1] = holes[n - 1];
+//        int maxRight = rightPreSum[n - 1];
+//
+//        for (int i = n - 2; i >= 0; i--) {
+//            rightPreSum[i] = rightPreSum[i + 1] + holes[i];
+//            if (i > n - w)
+//                maxRight = Math.max(maxRight, rightPreSum[i]);
+//        }
 
         int max = maxLeft + maxRight;
 
