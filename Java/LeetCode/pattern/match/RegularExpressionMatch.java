@@ -165,12 +165,12 @@ class RegularExpressionMatchDP {
      * <p>
      * [Please note, for simplicity I did not wrote all the paths, when ever we hit “*” we have two path.]
      * <p>
-     * Now lets come to more difficult path; where you have like this “**…*” or “.*” Or “..*” or “.**” … like this
+     * Now lets come to more difficult pattern; where you have like this “**…*” or “.*” Or “..*” or “.**” … like this
      * We can assume it same as “.*” -> “$*” where $ represent any character, now again your problem reduce to same, isn’t it 
      * <p>
      * Last but not least, there is one special case like
      * Text =”abc” and pattern =”*df”
-     * In this case we need to loop before what was the solution as there is no character previous to “*”.
+     * In this case we need to look before what was the solution as there is no character previous to “*”.
      * <p>
      * Let’s write a recurrence relation and base case.
      * <p>
