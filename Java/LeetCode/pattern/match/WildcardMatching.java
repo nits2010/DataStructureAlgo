@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.pattern.match;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
