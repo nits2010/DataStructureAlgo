@@ -201,6 +201,11 @@ class RegularExpressionMatchDP {
      * Pattern[j-1] == ‘.’ => M[i-1][j-1]
      * Pattern[j-1] == ‘*’ => M[i][j-2] | (if Pattern[j-2] == ‘.’ Or Pattern[j-2] == Text[i-1]) M[i-1][j]
      *
+     * 1   if p.charAt(j-1) != s.charAt(i) : dp[i][j] = dp[i][j-2]  //in this case, a* only counts as empty
+     *                2   if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
+     *                               dp[i][j] = dp[i-1][j]    //in this case, a* counts as multiple a
+     *                            or dp[i][j] = dp[i][j-1]   // in this case, a* counts as single a
+     *                            or dp[i][j] = dp[i][j-2]   // in this case, a* counts as empty
      * @param text
      * @param pattern
      * @return
