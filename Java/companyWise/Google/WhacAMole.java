@@ -36,6 +36,7 @@ public class WhacAMole {
         testMallet(new int[]{1, 1, 1, 1, 1}, 5);
         testMallet(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 5);
         testMallet(new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 5);
+        testMallet(new int[]{0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0}, 1);
     }
 
     private static void testMallet(int[] nums, int w) {
@@ -228,7 +229,7 @@ class WhacAMoleMemoryEfficient {
 
             if (j == n - w) {
                 rightMax = rightSum;
-            } else if (i >= w) {
+            } else if (j <= n - w) {
                 rightSum -= holes[j + w];
                 rightMax = Math.max(rightMax, rightSum);
             }
