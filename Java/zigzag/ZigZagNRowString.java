@@ -1,4 +1,4 @@
-package Java;
+package Java.zigzag;
 
 
 import java.util.ArrayList;
