@@ -1,6 +1,7 @@
-package Java;
+package Java.LeetCode.nonOverlappingSubArray;
 
 import Java.HelpersToPrint.HelperToPrint;
+import Java.LeetCode.nonOverlappingSubArray.MaximumSumTwoNonOverlappingSubarrays;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -42,7 +43,7 @@ public class MaximumSumTwoNonOverlappingSubarraysKSize {
     }
 
     /**
-     * similar {@link Java.LeetCode.MaximumSumTwoNonOverlappingSubarrays}
+     * similar {@link MaximumSumTwoNonOverlappingSubarrays}
      *
      * @param nums
      * @return

@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.nonOverlappingSubArray;
 
 import Java.HelpersToPrint.HelperToPrint;
 

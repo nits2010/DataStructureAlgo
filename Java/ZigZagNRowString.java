@@ -33,8 +33,8 @@ import java.util.List;
  */
 public class ZigZagNRowString {
 
-    public ZigZagNRowString(String str, int n) {
-        int temp = 0;
+    public static void zigZagNRowString(String str, int n) {
+
         if (n == 0) {
             System.out.println("invalid");
             return;
@@ -43,27 +43,29 @@ public class ZigZagNRowString {
         if (n == 1 || str.length() <= n) {
             System.out.println(str);
         } else {
+
             List<StringBuffer> res = new ArrayList<>(n);
-            boolean flag = false;
+            int rr = 0;
+            boolean up = false;
+
             for (int i = 0; i < n; i++)
                 res.add(new StringBuffer());
 
             for (int i = 0; i < str.length(); i++) {
 
-                StringBuffer s = res.get(temp);
-                s.append(str.charAt(i));
+                res.get(rr).append(str.charAt(i));
 
-                if (!flag)
-                    temp++;
+                if (!up)
+                    rr++;
                 else
-                    temp--;
+                    rr--;
 
-                if (temp == n) {
-                    flag = true;
-                    temp -= 2;
+                if (rr == n) {
+                    up = true;
+                    rr -= 2;
                 }
-                if (temp == 0)
-                    flag = false;
+                if (rr == 0)
+                    up = false;
 
             }
 
@@ -76,12 +78,14 @@ public class ZigZagNRowString {
     }
 
     public static void main(String[] args) {
-        new ZigZagNRowString("ABCDEFGH", 2);
-        new ZigZagNRowString("GEEKSFORGEEKS", 3);
-        new ZigZagNRowString("GEEKSFORGEEKS", 14);
-        new ZigZagNRowString("GEEKSFORGEEKS", 0);
+        zigZagNRowString("ABCDEFGH", 2);
+        zigZagNRowString("GEEKSFORGEEKS", 3);
+        zigZagNRowString("GEEKSFORGEEKS", 14);
+        zigZagNRowString("GEEKSFORGEEKS", 0);
+
 
         System.out.println("");
     }
+
 
 }
