@@ -39,7 +39,7 @@ public class MaximumSumSubSquareOfSizeK {
      * <p>
      * Strip(i,j) represent the sum of elements from j to j+k-1 of ith row.
      * <p>
-     * Strip(i,j) = Strip(i,j-1) - Mat[i][j-1] + M[i][j+k-1] ; 1<=j<m-k+1;
+     * Strip(i,j) = Strip(i,j-1) - M[i][j-1] + M[i][j+k-1] ; 1<=j<m-k+1;
      * <p>
      * KSum(i,j) represent the sum of square KxK matrix
      * <p>

@@ -1,6 +1,6 @@
 package Java.sum.sub.array.problmes;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.*;
 
@@ -36,7 +36,7 @@ public class LongestSubArraySumK {
         if (nums == null || nums.length == 0)
             return Collections.EMPTY_LIST;
 
-        HelperToPrint.print(nums);
+        Printer.print(nums);
         /**
          * This will tell at what index(value) we saw a sum(key)
          */

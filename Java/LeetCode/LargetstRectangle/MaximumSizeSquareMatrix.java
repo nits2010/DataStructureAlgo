@@ -1,6 +1,6 @@
 package Java.LeetCode.LargetstRectangle;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -36,9 +36,9 @@ public class MaximumSizeSquareMatrix {
 
 
         System.out.println("Input");
-        HelperToPrint.print(M);
+        Printer.print(M);
         System.out.println("Sub-Square");
-        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
+        Printer.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
         System.out.println("Area :" + MaximumSizeSqureSubMatrixArea.maximalSquare((M)));
 
         char N[][] =
@@ -49,9 +49,9 @@ public class MaximumSizeSquareMatrix {
                         {'1', '0', '0', '1', '0'}
                 };
         System.out.println("Input");
-        HelperToPrint.print(N);
+        Printer.print(N);
         System.out.println("Sub-Square");
-        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
+        Printer.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((N)));
 
         char O[][] =
@@ -60,9 +60,9 @@ public class MaximumSizeSquareMatrix {
 
                 };
         System.out.println("Input");
-        HelperToPrint.print(O);
+        Printer.print(O);
         System.out.println("Sub-Square");
-        HelperToPrint.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
+        Printer.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((O)));
 
     }

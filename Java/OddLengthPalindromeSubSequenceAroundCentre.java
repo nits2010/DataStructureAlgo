@@ -60,9 +60,10 @@ class OddLengthPalindromeSubSequenceAroundCentreDP {
 
         for (int length = n - 1; length >= 0; length--) {
 
-            for (int i = 0; i + length < n; i++) {
+            for (int i = 0; i < n - length; i++) {
 
-                int j = i + length;
+                int j = i + length; //length apart i and j
+
                 char c1 = str.charAt(i);
                 char c2 = str.charAt(j);
 

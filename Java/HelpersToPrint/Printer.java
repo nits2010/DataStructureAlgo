@@ -8,7 +8,7 @@ import java.util.List;
  * Date: 2019-07-24
  * Description:
  */
-public class HelperToPrint {
+public class Printer {
 
     public static void print(final int a[]) {
         System.out.println();

@@ -1,6 +1,6 @@
 package Java.LeetCode.LargetstRectangle;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.Stack;
 
@@ -34,7 +34,7 @@ public class LargestRectangle {
 
 
         System.out.println("Input");
-        HelperToPrint.print(input);
+        Printer.print(input);
         System.out.println(maximalRectangle(input));
 
 
@@ -44,7 +44,7 @@ public class LargestRectangle {
                 };
 
         System.out.println("Input");
-        HelperToPrint.print(input2);
+        Printer.print(input2);
         System.out.println(maximalRectangle(input2));
     }
 

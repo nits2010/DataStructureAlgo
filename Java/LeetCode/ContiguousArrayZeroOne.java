@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -51,7 +51,7 @@ public class ContiguousArrayZeroOne {
 
     private static void test(int[] nums, int expectedOutput) {
         System.out.print("Input: ");
-        HelperToPrint.print(nums);
+        Printer.print(nums);
 
         LargestSubArrayWithEqualZeroAndOneBruteForce bruteForce = new LargestSubArrayWithEqualZeroAndOneBruteForce();
         LargestSubArrayWithEqualZeroAndOneUsingArray usingArray = new LargestSubArrayWithEqualZeroAndOneUsingArray();

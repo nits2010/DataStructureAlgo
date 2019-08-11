@@ -1,6 +1,6 @@
 package Java.sum.sub.array.problmes;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -43,7 +43,7 @@ public class LongestSubarraySumAtMostk {
 
 
         System.out.println("\n \n Input k: " + k);
-        HelperToPrint.print(nums);
+        Printer.print(nums);
         int maxSize = 0;
 
         int sum = 0;

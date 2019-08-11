@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.*;
 
@@ -117,14 +117,14 @@ public class OptimizeMemoryUsage {
             System.out.println("Not found");
 
         System.out.println("\n\nForeground :");
-        HelperToPrint.print(foreground);
+        Printer.print(foreground);
         System.out.println("Background :");
-        HelperToPrint.print(background);
+        Printer.print(background);
 
 
         List<int[]> usages = OptimalMemoryUsage.optimizeMemoryUsage(foreground, background, memory);
         System.out.println("Optimal -> ");
-        HelperToPrint.print(usages);
+        Printer.print(usages);
 
     }
 

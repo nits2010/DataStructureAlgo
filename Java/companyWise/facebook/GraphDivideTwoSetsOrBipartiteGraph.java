@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.*;
 
@@ -90,7 +90,7 @@ public class GraphDivideTwoSetsOrBipartiteGraph {
 
     private static void test(int[][] graph) {
         System.out.println("Given Graph");
-        HelperToPrint.print(graph);
+        Printer.print(graph);
 
         System.out.println(BipartiteGraphDFSBackTracking.isBipartiteGraph(graph));
 

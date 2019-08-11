@@ -1,6 +1,6 @@
 package Java.sum.sub.array.problmes;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +50,7 @@ public class NumberSubArraysSumExactlyK {
      */
     static int numberSubArraysSumExactlyK(int nums[], int sum) {
         System.out.println("Input sum :" + sum);
-        HelperToPrint.print(nums);
+        Printer.print(nums);
 
         if (nums == null || nums.length == 0)
             return 0;

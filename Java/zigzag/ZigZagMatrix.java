@@ -1,6 +1,6 @@
 package Java.zigzag;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -50,7 +50,7 @@ public class ZigZagMatrix {
 
     public static void print(int zigZag[][]) {
 
-        HelperToPrint.print(zigZag);
+        Printer.print(zigZag);
         System.out.println("\n\n");
         int n = zigZag.length;
         int i = 1;

@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 import java.util.Arrays;
 
@@ -49,7 +49,7 @@ public class RemoveMinimum2TimesMinGreaterThenMax {
     }
 
     public static void test(int[] nums, int expected) {
-        HelperToPrint.print(nums);
+        Printer.print(nums);
         RemoveMinimum2TimesMinGreaterThenMaxBacktrack backtrack = new RemoveMinimum2TimesMinGreaterThenMaxBacktrack();
         RemoveMinimum2TimesMinGreaterThenMaxDP dp = new RemoveMinimum2TimesMinGreaterThenMaxDP();
         RemoveMinimum2TimesMinGreaterThenMaxIterate iterate = new RemoveMinimum2TimesMinGreaterThenMaxIterate();

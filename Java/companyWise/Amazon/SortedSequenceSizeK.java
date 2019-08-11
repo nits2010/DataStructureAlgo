@@ -1,11 +1,10 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 import Java.NextGreaterElementOnRightSide;
 import Java.SmallerElementOnLeftSide;
 
 import java.util.Arrays;
-import java.util.Stack;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -50,7 +49,7 @@ public class SortedSequenceSizeK {
     private static void test(int[] nums, int k) {
 
         System.out.println();
-        HelperToPrint.print(nums);
+        Printer.print(nums);
 
         SortedSequenceSizeKUsingMemory memory = new SortedSequenceSizeKUsingMemory();
 

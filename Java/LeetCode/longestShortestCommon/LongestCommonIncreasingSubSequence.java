@@ -1,7 +1,8 @@
-package Java;
+package Java.LeetCode.longestShortestCommon;
+
+import Java.HelpersToPrint.Printer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -51,10 +52,10 @@ public class LongestCommonIncreasingSubSequence {
     private static void test(int[] arr1, int[] arr2, ILongestCommonIncreasingSubSequence sol, ILongestCommonIncreasingSubSequence sol2) {
         System.out.println("2D");
         System.out.println("First array : ");
-        Arrays.stream(arr1).forEach(i -> System.out.print(i + " "));
+        Printer.print(arr1);
 
         System.out.println("Second array : ");
-        Arrays.stream(arr2).forEach(i -> System.out.print(i + " "));
+        Printer.print(arr2);
 
         System.out.println("\n LCIS length 2D " + sol.longestCommonIncreasingSubSequence(arr1, arr2));
         System.out.println("\n LCIS length 1D " + sol2.longestCommonIncreasingSubSequence(arr1, arr2));
@@ -78,11 +79,11 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
      * Let i is use to iterate over A and j is for B.
      * <p>
      * LCIS(i,j) can be defined as
-     * Length of longest increasing sub-sequence which ends on A's, "i" the char and B's "j"th char
+     * Length of longest increasing sub-sequence which ends , i'th the char of A and j'th char of B
      * <p>
      * Now,
      * If both are not same, i.e. A(i) > B( j) then we can extend last solution LCIS(i-1,j)
-     * If both are same, then we need to find the maximum out of all previously computed cases where A(i) > B(j) ; let max it be
+     * If both are same, then we need to find the maximum out of all previously computed cases where A(i) > B(j) ; let denote by 'max'
      * <p>
      * LCIS(i,j)
      * i=0 or j=0 then 0
@@ -95,6 +96,9 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
      * LCIS[i][j] = Max { LCIS[i-1][j] if A(i) == B(j)}
      * *                     1 + Max ( LCIS [i-1][k] where A(i) > B(k) and 0<=k<j )
      * *                 }
+     * <p>
+     * {@link Java.LongestIncreasingSubSequence}
+     * {@link LongestCommonSubSequence}
      *
      * @param a
      * @param b
@@ -107,15 +111,16 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
         int m = b.length;
 
         int lcis[][] = new int[n + 1][m + 1];
-        lcis[0][0] = 0;  //empty sequence
         List<Integer> sequence = new ArrayList<>();
 
-        int last;
+        int last; //use to fill the sequence
         int max = Integer.MIN_VALUE;
+
         for (int i = 0; i <= n; i++) {
 
             int maxL = 0;
             last = 0;
+
             for (int j = 0; j <= m; j++) {
 
                 //empty sequence
@@ -124,7 +129,7 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
 
                 else {
 
-                    lcis[i][j] = lcis[i - 1][j];
+                    lcis[i][j] = lcis[i - 1][j]; //extend the previous solution, this solution has length at least as previous solution.
 
                     int x = a[i - 1];
                     int y = b[j - 1];
