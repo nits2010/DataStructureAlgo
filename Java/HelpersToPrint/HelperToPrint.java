@@ -12,7 +12,9 @@ public class HelperToPrint {
 
     public static void print(final int a[]) {
         System.out.println();
+        System.out.print("[ ");
         Arrays.stream(a).forEach(i -> System.out.print(i + " "));
+        System.out.print("]");
         System.out.println();
 
     }
