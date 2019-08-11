@@ -42,7 +42,7 @@ public class PartitionSetInKSubset {
      * { {1} ,{2,3}} -> 1 to set 1 and 2 & 3 goes to set 2
      * { {2} ,{1,3}} -> 2 to set 1 and 1 & 3 goes to set 2
      * <p>
-     * * so for every element, it could be part of current set we are taking for or some other set.
+     * * so for every element, it could be part of current set we are taking or some other set.
      * <p>
      * S(n,k) is number of partition of dividing n elements in k sets
      * <p>

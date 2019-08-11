@@ -3,10 +3,20 @@ package Java;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 11/12/18
- * Description:
+ * Description: https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/
+ * Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array
+ * such that the integers in the subsequence are sorted in increasing order. For example, if input is {1, 101, 2, 3, 100, 4, 5},
+ * then output should be 106 (1 + 2 + 3 + 100), if the input array is {3, 4, 5, 10},
+ * then output should be 22 (3 + 4 + 5 + 10) and if the input array is {10, 5, 4, 3}, then output should be 10
  */
 public class MaximumSumIncreasingSequence {
 
+    /**
+     * similar to {@link LongestIncreasingSubSequence}
+     *
+     * @param arr
+     * @return
+     */
     static int maximumSumIncreasingSubSequence(int arr[]) {
 
         /**
@@ -25,9 +35,6 @@ public class MaximumSumIncreasingSequence {
         int length = arr.length;
 
         int mSISS[] = new int[length];
-
-        for (int i = 0; i < length; i++)
-            mSISS[i] = 0;
 
         int max;
         int msiss = Integer.MIN_VALUE;

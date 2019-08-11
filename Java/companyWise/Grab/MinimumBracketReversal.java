@@ -30,6 +30,8 @@ import java.util.Stack;
  * <p>
  * Input:  exp = "}{{}}{{{"
  * Output: 3
+ *
+ * similar {@link Java.LeetCode.LongestValidParentheses}
  */
 public class MinimumBracketReversal {
 

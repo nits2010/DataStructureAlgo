@@ -42,9 +42,9 @@ public class LongestRepeatingNonOverlappingSubString {
 
 /**
  * Naive Solution : The problem can be solved easily by taking all the possible substrings and for all the
- * substrings check it for the remaining(non-overlapping) string if there exists an identical substring. There are O(n2)
+ * substrings check it for the remaining(non-overlapping) string if there exists an identical substring. There are O(n^2)
  * total substrings and checking them against the remaining string will take O(n) time.
- * So overall time complexity of above solution is O(n3).
+ * So overall time complexity of above solution is O(n^3).
  */
 class LongestRepeatingNonOverlappingSubStringNaive {
 
@@ -79,6 +79,9 @@ class LongestRepeatingNonOverlappingSubStringNaive {
 
 }
 
+/**
+ * {@link Java.LeetCode.longestShortestCommon.LongestCommonSubString}
+ */
 class LongestRepeatingNonOverlappingSubStringDP {
 
     public static String longestRepeatingNonOverlappingSubString(String str) {

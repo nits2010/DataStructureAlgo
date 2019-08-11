@@ -23,7 +23,7 @@ public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
 
     public static void main(String args[]) {
 
-        int nums[] = {3,1,4,2,2,1};
+        int nums[] = {3, 1, 4, 2, 2, 1};
         int difference = partitionSetIntoTwoSubsetMinimumDifference(nums);
         System.out.println(difference);
     }
@@ -41,13 +41,46 @@ public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
         return partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, 0, 0, sum);
     }
 
+    /**
+     * Each element could be a part of either of the set.
+     * 1. Current element is part of set 2
+     * 2. current element is part of set 1.
+     * <p>
+     * Our goal: Minimize the sum of two sets  [ we need to keep track the sum of both the sets ]
+     * Our constraints:
+     * 1. Either of one set can be empty at max assuming all element is part of other set vice-versa
+     * 2. Otherwise it can be the part of only 1 of them.
+     * 3. When elements divided in two sets, find the minimum difference
+     * <p>
+     * Our choices:
+     * 1. Current element is part of set 2
+     * 2. current element is part of set 1.
+     * <p>
+     * <p>
+     * Entry: Assuming all element is part of set 2
+     *
+     * @param nums
+     * @param i
+     * @param sum1
+     * @param sum2
+     * @return
+     */
     private static int partitionSetIntoTwoSubsetMinimumDifferenceRecursive(int[] nums, int i, int sum1, int sum2) {
         if (i > nums.length)
             return Integer.MAX_VALUE;
 
+        /**
+         * Our goal:
+         * Minimize the sum of two sets  [ we need to keep track the sum of both the sets ]
+         */
         if (i == nums.length)
             return Math.abs(sum1 - sum2);
 
+        /**
+         * Our choices:
+         *      * 1. Current element is part of set 2; not reducing the value from set2 sum
+         *      * 2. current element is part of set 1; reduce from set 2 and add it to set 1
+         */
         return Math.min(
                 partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, i + 1, sum1, sum2),
                 partitionSetIntoTwoSubsetMinimumDifferenceRecursive(nums, i + 1, sum1 + nums[i], sum2 - nums[i]));
@@ -57,25 +90,28 @@ public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
 
     /**
      * Same as partition the set with equal sum
-     *
+     * <p>
      * {@link PartitionSetIntoTwoSubsetEqualSum}
      *
      * @param nums
-     * @return
-     * O(n*sum) / O(n*sum)
-     * //can be reduced to O(n*sum) / O(n)
+     * @return <br/>
+     * Complexity: time/Space-> O(n * sum) / O(n*sum)
+     *
+     * Note: can be reduced to O(n*sum) / O(n)
      */
     private static int partitionSetIntoTwoSubsetMinimumDifferenceDP(int nums[]) {
 
         int sum = Arrays.stream(nums).sum();
         int n = nums.length;
-        boolean dp[][] = new boolean[n + 1][sum + 1]; //is it possible to make sum j with i elements
+
+        //dp[i][j] defines that, is it possible to make sum j with i elements
+        boolean dp[][] = new boolean[n + 1][sum + 1];
 
         for (int i = 0; i <= n; i++)
             dp[i][0] = true; //we can take empty set to make sum = 0
 
         for (int i = 0; i <= sum; i++)
-            dp[0][sum] = false;
+            dp[0][sum] = false; //we can't make any sum (except 0) with no elements
 
         dp[0][0] = true; //with 0 element, 0 sum is possible
 

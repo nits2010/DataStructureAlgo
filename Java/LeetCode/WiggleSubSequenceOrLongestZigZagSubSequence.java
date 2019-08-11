@@ -37,15 +37,14 @@ import java.util.Arrays;
  * Follow up:
  * Can you do it in O(n) time?
  */
-public class WiggleSubSequenceZigZagSubSequence {
+public class WiggleSubSequenceOrLongestZigZagSubSequence {
 
     public static void main(String[] args) {
         int arr[] = {10, 22, 9, 33, 49,
                 50, 31, 60};
-        int n = arr.length;
 
-        WiggleSubsequencePoly poly = new WiggleSubsequencePoly();
-        WiggleSubsequenceLinear linear = new WiggleSubsequenceLinear();
+        WiggleSubSequencePoly poly = new WiggleSubSequencePoly();
+        WiggleSubSequenceLinear linear = new WiggleSubSequenceLinear();
 
         System.out.println("Poly " + poly.wiggleMaxLength(arr));
         System.out.println("linear " + linear.wiggleMaxLength(arr));
@@ -54,7 +53,10 @@ public class WiggleSubSequenceZigZagSubSequence {
 }
 
 
-class WiggleSubsequencePoly {
+/**
+ * base idea {@link Java.LongestIncreasingSubSequence}
+ */
+class WiggleSubSequencePoly {
 
 
     public int wiggleMaxLength(int[] nums) {
@@ -67,7 +69,7 @@ class WiggleSubsequencePoly {
          * Z[i][1] is the length of longest Zig-Zag sub-sequence s.t. last element is smallest
          *
          * Z[i][0] = Max { Z[i][0], { Z[j][1] + 1 } where 0<=j<i and A[i] > A[j]
-         * Z[i][1] = Max { Z[i][1], { Z[j][0] + 1 } where 0<=j<i and A[i] > A[j]
+         * Z[i][1] = Max { Z[i][1], { Z[j][0] + 1 } where 0<=j<i and A[i] < A[j]
          *
          * The first recurrence relation is based on the fact that, If we are at position i and this element has to bigger
          * than its previous element then for this sequence (upto i) to be bigger we will try to choose an element j ( < i)
@@ -109,10 +111,10 @@ class WiggleSubsequencePoly {
 }
 
 //Linear
-class WiggleSubsequenceLinear {
+class WiggleSubSequenceLinear {
 
     /**
-     * Check alternat sign on SEQUENCE
+     * Check alternate sign on SEQUENCE
      *
      * @param nums
      * @return

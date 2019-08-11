@@ -19,6 +19,8 @@ import java.util.Stack;
  * Input: ")()())"
  * Output: 4
  * Explanation: The longest valid parentheses substring is "()()"
+ *
+ * Similar {@link Java.companyWise.Grab.MinimumBracketReversal}
  */
 public class LongestValidParentheses {
 
@@ -41,7 +43,8 @@ public class LongestValidParentheses {
 
             if (s.charAt(i) == '(')
                 open++;
-            else close++;
+            else
+                close++;
 
             if (open == close)
                 lVp = Math.max(lVp, close + open);
@@ -58,7 +61,8 @@ public class LongestValidParentheses {
 
             if (s.charAt(i) == '(')
                 open++;
-            else close++;
+            else
+                close++;
 
             if (open == close)
                 lVp = Math.max(lVp, close + open);

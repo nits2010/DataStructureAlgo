@@ -6,10 +6,29 @@ import java.util.Arrays;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-25
  * Description:
+ * https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
  * https://www.geeksforgeeks.org/partition-set-k-subsets-equal-sum/
+ * Given an integer array of N elements, the task is to divide this array into K non-empty subsets such that the sum of elements in every subset is same. All elements of this array should be part of exactly one partition.
+ * Examples:
+ * <p>
+ * Input : arr = [2, 1, 4, 5, 6], K = 3
+ * Output : Yes
+ * we can divide above array into 3 parts with equal
+ * sum as [[2, 4], [1, 5], [6]]
+ * <p>
+ * Input  : arr = [2, 1, 5, 5, 6], K = 3
+ * Output : No
+ * It is not possible to divide above array into 3
+ * parts with equal sum
+ * <p>
+ * Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+ * Output: True
+ * Explanation: It's possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.
+ * <p>
+ * <p>
  * DP solution: https://leetcode.com/articles/partition-to-k-equal-sum-subsets/
  * See this for complexity analysis
- * * https://efficientcodeblog.wordpress.com/2017/12/01/partition-to-k-equal-sum-subsets/
+ * https://efficientcodeblog.wordpress.com/2017/12/01/partition-to-k-equal-sum-subsets/
  */
 public class PartitionSetIntoKSubsetEqualSum {
 
@@ -30,59 +49,7 @@ public class PartitionSetIntoKSubsetEqualSum {
     }
 
 
-    /**
-     * O ( K! * k^(n-k) )
-     * See this for complexity analysis
-     * https://efficientcodeblog.wordpress.com/2017/12/01/partition-to-k-equal-sum-subsets/
-     *
-     * @param groups
-     * @param row
-     * @param nums
-     * @param target
-     * @return
-     */
-    public static boolean search(int[] groups, int row, int[] nums, int target) {
-        if (row < 0) return true;
-
-        //chose this element and try to find which bucket we can fit it in
-        int v = nums[row--];
-        for (int i = 0; i < groups.length; i++) { //O(k)
-            //if this bucket is possible
-            if (groups[i] + v <= target) {
-
-                groups[i] += v;
-
-                //fil it in and try other buckets with remaining elements
-                if (search(groups, row, nums, target)) return true;
-
-                groups[i] -= v;
-            }
-            if (groups[i] == 0) break; // this will limit the search to instead searching N elements to N-k elements
-        }
-        return false;
-    }
-
-    /**
-     * O ( K! * k^(n-k) )
-     *
-     * @param nums
-     * @param k
-     * @return
-     */
-    public static boolean canPartitionKSubsetsLimitingSearch(int[] nums, int k) {
-        int sum = Arrays.stream(nums).sum();
-        if (sum % k > 0) return false;
-        int target = sum / k;
-
-        Arrays.sort(nums); // O( n log n)
-        int row = nums.length - 1;
-        if (nums[row] > target) return false;
-        while (row >= 0 && nums[row] == target) { //O(n)
-            row--;
-            k--;
-        }
-        return search(new int[k], row, nums, target);
-    }
+    //++++==========================canPartitionKSubsetsExhaustiveSearch=====================================================
 
     /**
      * Complexity:
@@ -157,6 +124,71 @@ public class PartitionSetIntoKSubsetEqualSum {
 
     }
 
+    //++++==========================canPartitionKSubsetsExhaustiveSearch=====================================================
+
+
+    //++++==============================canPartitionKSubsetsLimitingSearch=================================================
+
+    /**
+     * O ( K! * k^(n-k) )
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    public static boolean canPartitionKSubsetsLimitingSearch(int[] nums, int k) {
+        int sum = Arrays.stream(nums).sum();
+        if (sum % k > 0) return false;
+        int target = sum / k;
+
+        Arrays.sort(nums); // O( n log n)
+        int row = nums.length - 1;
+        if (nums[row] > target) return false;
+        while (row >= 0 && nums[row] == target) { //O(n)
+            row--;
+            k--;
+        }
+        return search(new int[k], row, nums, target);
+    }
+
+    /**
+     * O ( K! * k^(n-k) )
+     * See this for complexity analysis
+     * https://efficientcodeblog.wordpress.com/2017/12/01/partition-to-k-equal-sum-subsets/
+     *
+     * @param groups
+     * @param row
+     * @param nums
+     * @param target
+     * @return
+     */
+    public static boolean search(int[] groups, int row, int[] nums, int target) {
+        if (row < 0) return true;
+
+        //chose this element and try to find which bucket we can fit it in
+        int v = nums[row--];
+        for (int i = 0; i < groups.length; i++) { //O(k)
+            //if this bucket is possible
+            if (groups[i] + v <= target) {
+
+                groups[i] += v;
+
+                //fil it in and try other buckets with remaining elements
+                if (search(groups, row, nums, target)) return true;
+
+                groups[i] -= v;
+            }
+            if (groups[i] == 0) break; // this will limit the search to instead searching N elements to N-k elements
+        }
+        return false;
+    }
+
+
+    //++++===============================================================================
+
+
+    //++++===============================Easy to understand================================================
+
     //Easy to understand
     private static boolean canPartitionKSubsetsExhaustiveSearchEasy(int nums[], int k) {
 
@@ -176,11 +208,10 @@ public class PartitionSetIntoKSubsetEqualSum {
 
     private static boolean canPartitionKSubsetsExhaustiveSearchEasy(int[] nums, int totalBuckets, int startFrom, int currentBucketSum, int subsetSum, boolean visited[]) {
 
-        //if all the remaning buckets has been field correctly and still left the values with, then we are done
-        if (totalBuckets == 1) {
+        //if all the remaining buckets has been field correctly and still left the values with, then we are done
+        if (totalBuckets == 1)
             return true;
 
-        }
 
         //current bucket has filled and still left some bucket to fill
         if (currentBucketSum == subsetSum) {
@@ -216,6 +247,10 @@ public class PartitionSetIntoKSubsetEqualSum {
         return false;
     }
 
+    //++++===============================Easy to understand================================================
+
+
+    //++++===============================canPartitionKSubsetsExhaustiveSearchEasyOptimized================================================
 
     //Easy to understand
     private static boolean canPartitionKSubsetsExhaustiveSearchEasyOptimized(int nums[], int k) {
