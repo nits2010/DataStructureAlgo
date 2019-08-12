@@ -52,13 +52,25 @@ public class MergeKSortedIterators {
 
 
         priorityQueue(asList);
+        priorityQueueCache(asList);
     }
 
 
     private static void priorityQueue(List<List<Integer>> asList) {
 
-        System.out.println("\n\nPriorityQueueV2-> Input :" + asList);
+        System.out.println("\n\nPriorityQueue-> Input :" + asList);
         MergeKSortedIteratorsUsingPriorityQueue.MergingIterator v1Iterator = new MergeKSortedIteratorsUsingPriorityQueue.MergingIterator(asList.stream().map(l -> l.iterator()).collect(Collectors.toList()));
+
+
+        while (v1Iterator.hasNext())
+            System.out.print(v1Iterator.next() + " ");
+
+    }
+
+    private static void priorityQueueCache(List<List<Integer>> asList) {
+
+        System.out.println("\n\nPriorityQueue cache-> Input :" + asList);
+        MergeKSortedIteratorsUsingPriorityQueueCached.MergingIterator v1Iterator = new MergeKSortedIteratorsUsingPriorityQueueCached.MergingIterator(asList.stream().map(l -> l.iterator()).collect(Collectors.toList()));
 
 
         while (v1Iterator.hasNext())
@@ -164,6 +176,62 @@ class MergeKSortedIteratorsUsingPriorityQueue {
                 priorityQueue.offer(poll);
 
             return toReturn;
+
+        }
+    }
+}
+
+
+/**
+ * This kind of implementation is not really a iterator. As it cache the whole data.
+ *
+ * HashNext: O(1) where size is Length of iterators list
+ * next: O(1)
+ */
+class MergeKSortedIteratorsUsingPriorityQueueCached {
+
+
+    /**
+     * Using Sorted list like data structure;
+     * Using Priority Queue
+     */
+    static class MergingIterator implements Iterator<Integer> {
+
+        private final PriorityQueue<Integer> priorityQueue;
+
+        public MergingIterator(List<Iterator<Integer>> iterators) {
+
+            priorityQueue = new PriorityQueue<>();
+            init(iterators);
+        }
+
+        /**
+         * O(size * log(size)) where size is Length of iterators list
+         */
+        private final void init(List<Iterator<Integer>> iterators) {
+            for (Iterator<Integer> iterator : iterators) {
+
+                while (iterator.hasNext())
+                    priorityQueue.offer(iterator.next());
+            }
+
+        }
+
+        /**
+         * O(1) where size is Length of iterators list
+         */
+        public boolean hasNext() {
+            return !priorityQueue.isEmpty();
+
+
+        }
+
+        /**
+         * O(log(size))
+         */
+        public Integer next() {
+
+            return priorityQueue.poll();
 
         }
     }
