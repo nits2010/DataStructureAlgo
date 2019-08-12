@@ -65,6 +65,13 @@ public class MergeKSortedIterators {
         while (iterator.hasNext())
             System.out.print(iterator.next() + " ");
 
+        System.out.println("\nEmpty");
+
+        MergeKSortedIteratorsUsingPriorityQueueOnly.MergingIterator iterator2 = new MergeKSortedIteratorsUsingPriorityQueueOnly.MergingIterator(Arrays.asList());
+
+        while (iterator2.hasNext())
+            System.out.print(iterator2.next() + " ");
+
     }
 
 
@@ -154,6 +161,8 @@ class MergeKSortedIteratorsUsingPriorityQueueOnly {
          * O(log(size))
          */
         public Integer next() {
+            if (!hasNext())
+                throw new NoSuchElementException("Iterator does not have element. ");
 
             Pair<Iterator<Integer>, Integer> poll = priorityQueue.poll();
 
@@ -261,6 +270,8 @@ class MergeKSortedIteratorsUsingPriorityQueueAndPeekIterator {
          * O(log(size))
          */
         public Integer next() {
+            if (!hasNext())
+                throw new NoSuchElementException("Iterator does not have element. ");
 
             PeekingIterator<Integer> poll = priorityQueue.poll();
             Integer toReturn = poll.next();
@@ -323,6 +334,8 @@ class MergeKSortedIteratorsUsingPriorityQueueCached {
          * O(log(size))
          */
         public Integer next() {
+            if (!hasNext())
+                throw new NoSuchElementException("Iterator does not have element. ");
 
             return priorityQueue.poll();
 
