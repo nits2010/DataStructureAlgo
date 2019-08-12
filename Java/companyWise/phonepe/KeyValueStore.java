@@ -1,9 +1,7 @@
 package Java.companyWise.phonepe;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -13,10 +11,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class KeyValueStore<Key, Value> implements IKeyValueStore<Key, Value> {
 
 
-    private Map<Key, Value> keyValueMap;
+    //    private Map<Key, Value> keyValueMap;
+    private ICustomMap<Key, Value> keyValueMap;
 
     public KeyValueStore() {
-        this.keyValueMap = new ConcurrentHashMap<>();
+//        this.keyValueMap = new ConcurrentHashMap<>();
+        this.keyValueMap = new CustomConcurrentHashMap<>();
     }
 
 
