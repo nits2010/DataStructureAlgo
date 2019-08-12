@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.LeetCode.HelperDatastructure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,15 +15,6 @@ import java.util.List;
 
 public class AllNodesDistanceKBinaryTree {
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
         List<Integer> output = new ArrayList<>();

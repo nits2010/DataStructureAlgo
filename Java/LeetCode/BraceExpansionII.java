@@ -104,7 +104,7 @@ public class BraceExpansionII {
      * 2. Finding each component could have multiple parts in it
      * each component it self has multiple part in it
      * like [a,z] has [a], [z]
-     * we can observe that they are seperated by "," hence to reduce it to third equation (a character only) we;ll use ","
+     * we can observe that they are separated by "," hence to reduce it to third equation (a character only) we;ll use ","
      * <p>
      * but the component like
      * [a [b,c] ] is complex , we need to further drill down it with using product ("*") logic
