@@ -1,7 +1,6 @@
 package Java.companyWise.phonepe;
 
 import java.io.Serializable;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -14,10 +13,13 @@ public class CustomConcurrentHashMap<Key, Value> implements ICustomMap<Key, Valu
     private static final int MAXIMUM_CAPACITY = 1 << 30;
     private static final int DEFAULT_CAPACITY = 16;
     private static final int DEFAULT_CONCURRENCY_LEVEL = 16;
-    private static final float LOAD_FACTOR = 0.75f;
 
 
-//    ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+    transient volatile CustomNode<Key, Value> table[];
+
+    public CustomConcurrentHashMap() {
+        table = new CustomNode[DEFAULT_CAPACITY];
+    }
 
     @Override
     public int size() {
@@ -36,7 +38,83 @@ public class CustomConcurrentHashMap<Key, Value> implements ICustomMap<Key, Valu
     }
 
     @Override
-    public Value put(Key key, Value value) {
+    public synchronized Value put(Key key, Value value) {
+        int hashCode = key.hashCode();
+
+        int hash = hashCode % DEFAULT_CAPACITY;
+
+        if (table != null) {
+
+            if (table[hash] == null) {
+
+                CustomNode<Key, Value> temp = new CustomNode<>();
+                temp.setKey(key);
+                temp.setValue(value);
+                temp.setNext(null);
+
+                return value;
+
+            } else {
+
+                CustomNode<Key, Value> head = table[hash];
+
+                CustomNode<Key, Value> temp = head;
+
+                while (temp != null) {
+                    if (temp.getKey().hashCode() == hashCode && temp.getKey().equals(key)) {
+                        temp.setValue(value);
+                        return value;
+                    }
+                    temp = temp.getNext();
+                }
+
+                if (temp == null) {
+                    CustomNode<Key, Value> newValue = new CustomNode<>();
+                    temp.setKey(key);
+                    temp.setValue(value);
+                    temp.setNext(head);
+
+                    table[hash] = newValue;
+
+                    return value;
+
+                }
+
+            }
+        }
+
+
+        return value;
+    }
+
+    @Override
+    public Value get(Key key) {
+
+        int hashCode = key.hashCode();
+
+        int hash = hashCode % DEFAULT_CAPACITY;
+
+        if (table != null && table[hash] != null) {
+
+            CustomNode<Key, Value> head = table[hash];
+
+            if (head.getKey().hashCode() == hashCode && head.getKey().equals(key)) {
+                return head.getValue();
+            } else {
+
+                CustomNode<Key, Value> temp = head;
+
+                while (temp != null) {
+                    if (temp.getKey().hashCode() == hashCode && temp.getKey().equals(key)) {
+                        return temp.getValue();
+                    }
+                    temp = temp.getNext();
+                }
+            }
+
+
+        }
+
         return null;
     }
 }

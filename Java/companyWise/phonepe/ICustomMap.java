@@ -18,4 +18,6 @@ public interface ICustomMap<Key, Value> {
 
     Value put(Key key, Value value);
 
+    Value get(Key key);
+
 }
