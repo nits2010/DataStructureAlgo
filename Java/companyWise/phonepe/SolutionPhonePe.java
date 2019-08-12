@@ -23,14 +23,24 @@ public class SolutionPhonePe {
         System.out.println(keyValue.get(1));
 
 
-        IKeyValueStore<Object, List<Object>> keyValueL = new KeyValueStore<>();
+        IKeyValueStore<Object, ICustomList<Object>> keyValueL = new KeyValueStore<>();
+        ICustomList<Object> list = new CustomList<>();
+        list.add("Gutpa");
+        list.add("Test");
 
-        keyValueL.put("Nitin", Arrays.asList("Gupta", "Sign"));
-        keyValueL.put(1, Arrays.asList(1, 2, 3));
+
+        keyValueL.putL("Nitin", list);
+
+        ICustomList<Object> list2 = new CustomList<>();
+        list2.add(1);
+        list2.add(2);
+        list2.add(3);
+
+        keyValueL.putL(1, list2);
 
 
-        System.out.println(keyValueL.get("Nitin"));
-        System.out.println(keyValueL.get(1));
+        System.out.println(keyValueL.getL("Nitin"));
+        System.out.println(keyValueL.getL(1));
 
 
         IKeyValueStore<Object, Set<Object>> keyValueS = new KeyValueStore<>();
@@ -47,7 +57,7 @@ public class SolutionPhonePe {
         set2.add(1);
 
 
-        keyValueS.put(1, set2);
+        keyValueS.putS(1, set2);
 
 
         System.out.println(keyValueS.get("Nitin"));

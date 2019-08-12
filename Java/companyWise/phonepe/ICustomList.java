@@ -5,7 +5,7 @@ package Java.companyWise.phonepe;
  * Date: 2019-08-12
  * Description:
  */
-public interface IList<T> {
+public interface ICustomList<T> {
 
 
     int size();
@@ -13,5 +13,6 @@ public interface IList<T> {
     boolean isEmpty();
 
     void linkFirst(T e);
+    void add(T e);
 
 }

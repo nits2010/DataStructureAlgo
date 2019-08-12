@@ -31,8 +31,8 @@ public class KeyValueStore<Key, Value> implements IKeyValueStore<Key, Value> {
     }
 
     @Override
-    public List<Value> getL(Key key) {
-        return (List<Value>) keyValueMap.get(key);
+    public ICustomList<Value> getL(Key key) {
+        return (ICustomList<Value>) keyValueMap.get(key);
     }
 
     @Override

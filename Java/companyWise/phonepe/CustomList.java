@@ -5,7 +5,7 @@ package Java.companyWise.phonepe;
  * Date: 2019-08-12
  * Description:
  */
-public class CustomList<T> implements IList<T> {
+public class CustomList<T> implements ICustomList<T> {
 
     private int size = 0;
     private ListNode<T> head;
@@ -33,5 +33,25 @@ public class CustomList<T> implements IList<T> {
         head = node;
     }
 
+    @Override
+    public void add(T e) {
+        linkFirst(e);
+    }
 
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("[");
+
+        ListNode<T> node = head;
+
+        while (node != null) {
+            str.append(node.getValue() + ",");
+            node = node.getNext();
+        }
+
+        str.setCharAt(str.length() - 1, ']');
+        return str.toString();
+    }
 }

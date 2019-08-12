@@ -1,6 +1,5 @@
 package Java.companyWise.phonepe;
 
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -14,7 +13,7 @@ public interface IKeyValueStore<Key, Value> {
 
     void put(Key key, Value value);
 
-    List<Value> getL(Key key);
+    ICustomList<Value> getL(Key key);
 
     void putL(Key key, Value value);
 
