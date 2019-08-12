@@ -1,4 +1,4 @@
-package Java.zigzag;
+package Java.LeetCode.zigzag;
 
 import Java.HelpersToPrint.Printer;
 

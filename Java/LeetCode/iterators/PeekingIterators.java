@@ -9,7 +9,7 @@ import java.util.List;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-12
  * Description: https://leetcode.com/problems/peeking-iterator/
- * Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIteratorDriver that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().
+ * Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterators that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().
  * <p>
  * Example:
  * <p>
@@ -21,7 +21,7 @@ import java.util.List;
  * Calling hasNext() after that should return false.
  * Follow up: How would you extend your design to be generic and work with all types, not just integer?
  */
-public class PeekingIteratorDriver {
+public class PeekingIterators {
 
     public static void main(String[] args) {
         PeekingIterator test = new PeekingIterator(Arrays.asList(1, 2, 3).iterator());
