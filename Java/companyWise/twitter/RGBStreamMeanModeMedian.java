@@ -1,4 +1,4 @@
-package Java.companyWise.uber;
+package Java.companyWise.twitter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
