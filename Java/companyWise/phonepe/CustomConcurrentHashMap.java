@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class CustomConcurrentHashMap<Key, Value> implements ICustomMap<Key, Value>, Serializable {
 
 
-    private static final int DEFAULT_CAPACITY = 16;
+    private static final int DEFAULT_CAPACITY = 2;
 
 
     transient volatile CustomNode<Key, Value> table[];
@@ -69,9 +69,9 @@ public class CustomConcurrentHashMap<Key, Value> implements ICustomMap<Key, Valu
 
                 if (temp == null) {
                     CustomNode<Key, Value> newValue = new CustomNode<>();
-                    temp.setKey(key);
-                    temp.setValue(value);
-                    temp.setNext(head);
+                    newValue.setKey(key);
+                    newValue.setValue(value);
+                    newValue.setNext(head);
 
                     table[hash] = newValue;
 

@@ -1,8 +1,6 @@
 package Java.companyWise.phonepe;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -13,15 +11,31 @@ import java.util.Set;
 public class SolutionPhonePe {
 
     public static void main(String[] args) {
+        test();
+
+        testL();
+
+        testS();
+
+
+    }
+
+
+    public static void test() {
         IKeyValueStore<Object, Object> keyValue = new KeyValueStore<>();
 
 
         keyValue.put("Nitin", "Gupta");
         keyValue.put(1, 6);
+        keyValue.put(3, 9);
 
         System.out.println(keyValue.get("Nitin"));
         System.out.println(keyValue.get(1));
+        System.out.println(keyValue.get(3));
 
+    }
+
+    public static void testL() {
 
         IKeyValueStore<Object, ICustomList<Object>> keyValueL = new KeyValueStore<>();
         ICustomList<Object> list = new CustomList<>();
@@ -41,7 +55,9 @@ public class SolutionPhonePe {
 
         System.out.println(keyValueL.getL("Nitin"));
         System.out.println(keyValueL.getL(1));
+    }
 
+    public static void testS() {
 
         IKeyValueStore<Object, Set<Object>> keyValueS = new KeyValueStore<>();
 
@@ -49,6 +65,8 @@ public class SolutionPhonePe {
         Set<Object> set1 = new HashSet<>();
         set1.add("TEST");
         set1.add("TEST2");
+        set1.add("TEST2");
+        set1.add("");
         keyValueS.put("Nitin", set1);
 
         Set<Object> set2 = new HashSet<>();
@@ -60,9 +78,7 @@ public class SolutionPhonePe {
         keyValueS.putS(1, set2);
 
 
-        System.out.println(keyValueS.get("Nitin"));
-        System.out.println(keyValueS.get(1));
-
-
+        System.out.println(keyValueS.getS("Nitin"));
+        System.out.println(keyValueS.getS(1));
     }
 }
