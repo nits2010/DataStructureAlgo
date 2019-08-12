@@ -1,4 +1,4 @@
-package Java.companyWise.phonepe;
+package Java.companyWise.phonepe.keyValueStore;
 
 import java.io.Serializable;
 import java.util.Objects;

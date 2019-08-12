@@ -1,4 +1,4 @@
-package Java.companyWise.phonepe;
+package Java.companyWise.phonepe.keyValueStore;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

@@ -1,4 +1,4 @@
-package Java.companyWise.phonepe;
+package Java.companyWise.phonepe.keyValueStore;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ import java.util.Set;
  * Date: 2019-08-12
  * Description:
  */
-public class SolutionPhonePe {
+public class Driver {
 
     public static void main(String[] args) {
         test();
