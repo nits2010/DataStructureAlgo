@@ -79,6 +79,12 @@ public class MaximumSumRectangle {
 
     }
 
+    /**
+     * {@link Java.sum.sub.array.problems.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     *
+     * @param temp
+     * @return
+     */
     private static int[] kadens1D(int[] temp) {
         int max[] = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
 
@@ -104,7 +110,7 @@ public class MaximumSumRectangle {
                 start = i + 1;
             }
 
-            if ( temp[i] < 0 && maxNeg < temp[i] ) {
+            if (temp[i] < 0 && maxNeg < temp[i]) {
                 maxNeg = temp[i];
                 maxNegIndex = i;
             }

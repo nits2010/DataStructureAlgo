@@ -1,4 +1,4 @@
-package Java.sum.sub.array.problmes;
+package Java.sum.sub.array.problems;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
