@@ -18,7 +18,9 @@ import java.util.*;
  * When we take a comma delimited list of 2 or more expressions, we take the union of possibilities.
  * R("{a,b,c}") = {"a","b","c"}
  * R("{{a,b},{b,c}}") = {"a","b","c"} (notice the final set only contains each word at most once)
- * When we concatenate two expressions, we take the set of possible concatenations between two words where the first word comes from the first expression and the second word comes from the second expression.
+ * When we concatenate two expressions, we take the set of possible concatenations between two words
+ * where the first word comes from the first expression and the second word comes from the second expression.
+ * <p>
  * R("{a,b}{c,d}") = {"ac","ad","bc","bd"}
  * R("a{b,c}{d,e}f{g,h}") = {"abdfg", "abdfh", "abefg", "abefh", "acdfg", "acdfh", "acefg", "acefh"}
  * Formally, the 3 rules for our grammar:
@@ -46,17 +48,23 @@ import java.util.*;
  * 1 <= expression.length <= 50
  * expression[i] consists of '{', '}', ','or lowercase English letters.
  * The given expression represents a set of words based on the grammar given in the description.
- *
+ * <p>
  * [Google]
- *
+ * <p>
  * https://rosettacode.org/wiki/Brace_expansion#Java
+ * <p>
+ * {@link BraceExpansionI} has
+ * 1. There are no nested curly brackets. [ But this question has ]
+ * 2. All characters inside a pair of consecutive opening and ending curly brackets are different.
  */
 public class BraceExpansionII {
 
 
     public static void main(String args[]) {
-        System.out.println(braceExpansionII("{{a,z},a{b,c},{ab,z}}"));
-        System.out.println(braceExpansionII("{a{b,c}}{{d,e}f{g,h}}"));
+        System.out.println(braceExpansionII("{a,b}{c,{d,e}}") + " Expected " + Arrays.asList("ac", "ad", "ae", "bc", "bd", "be"));
+        System.out.println(braceExpansionII("{{a,z},a{b,c},{ab,z}}") + " Expected " + Arrays.asList("a", "ab", "ac", "z"));
+        System.out.println(braceExpansionII("{a{b,c}}{{d,e}f{g,h}}") + " Expected " + Arrays.asList("abdfg", "abdfh", "abefg", "abefh", "acdfg", "acdfh", "acefg", "acefh"));
+        System.out.println(braceExpansionII("{a,b,c}d{e,f}") + " Expected " + Arrays.asList("ade", "adf", "bde", "bdf", "cde", "cdf"));
     }
 
     public static List<String> braceExpansionII(String expression) {
@@ -69,12 +77,12 @@ public class BraceExpansionII {
      * lets understand the problem with an example;
      * {{a,z},a{b,c},{ab,z}}
      * <p>
-     * first what we can easily see is there is extra parenthesis which need to be remove in order to proceed ahead, lets suppose our algo
+     * first what we can easily see, is there is extra parenthesis which need to be remove in order to proceed ahead, lets suppose our algo
      * does this and it gives us back [ count braces and remove ]
      * <p>
      * {a,z},a{b,c},{ab,z}
      * <p>
-     * now, we can see below things
+     * now, we can see below possibilities
      * 1. component (separated by "," ) : made of equal number of parenthesis ({, }) here we have [ {a,z} ] [a{b,c} ] , [{ab,z}]
      * 2. each component could have multiple parts in it
      * like [ a{b,c} ] has [a] [ {b,c}] or
