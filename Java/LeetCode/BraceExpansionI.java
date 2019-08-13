@@ -1,6 +1,7 @@
 package Java.LeetCode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -49,6 +50,7 @@ public class BraceExpansionI {
         List<String> components = getComponents(expression.trim());
         dfs(components, result, new StringBuilder(), 0);
 
+        Collections.sort(components);
         return result;
 
     }
