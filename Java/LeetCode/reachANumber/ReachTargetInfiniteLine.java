@@ -1,7 +1,4 @@
-package Java.LeetCode;
-
-import java.util.ArrayList;
-import java.util.List;
+package Java.LeetCode.reachANumber;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -28,21 +25,28 @@ import java.util.List;
  * On the third move we step from -1 to 2.
  * Note:
  * target will be a non-zero integer in the range [-10^9, 10^9].
+ *
+ * For full solution: https://leetcode.com/problems/reach-a-number/discuss/357047/With-Full-explanation-and-approach-to-reach-solution
+ *
  */
 public class ReachTargetInfiniteLine {
 
     public static void main(String[] args) {
-//        test(3, 2);
-//        test(2, 3);
+        test(3, 2);
+        test(2, 3);
         test(5, 5);
         test(4, 3);
         test(11, 5);
+        test(7, 5);
+        test(12, 7);
+//        test(-1000000000, 44723);
     }
 
     private static void test(int target, int expected) {
         System.out.println("\nTarget: " + target);
         System.out.println(" Brute " + ReachNumberInfiniteLineBruteForce.reachNumber(target) + " expected: " + expected);
-        System.out.println(" Intutive " + ReachNumberInfiniteLineIntuitive.reachNumber(target) + " expected: " + expected);
+        System.out.println(" Intuitive " + ReachNumberInfiniteLineIntuitive.reachNumber(target) + " expected: " + expected);
+        System.out.println(" MAths " + ReachNumberInfiniteLineMathematical.reachNumber(target) + " expected: " + expected);
     }
 }
 
@@ -77,6 +81,13 @@ class ReachNumberInfiniteLineBruteForce {
 
     }
 
+    /**
+     * Give error for big number which is outside Integer range
+     * @param target
+     * @param steps
+     * @param currentPos
+     * @return
+     */
     private static int reachNumber(int target, int steps, int currentPos) {
 
         if (Math.abs(currentPos) > Math.abs(target))
@@ -86,17 +97,18 @@ class ReachNumberInfiniteLineBruteForce {
             return steps;
 
 
-        int positive = reachNumber(target, steps + 1, currentPos + steps + 1);
-        int negative = reachNumber(target, steps + 1, currentPos - (steps + 1));
+        long positive = reachNumber(target, steps + 1, currentPos + steps + 1);
+        long negative = reachNumber(target, steps + 1, currentPos - (steps + 1));
 
 
-        return Math.min(positive, negative);
+        return (int)Math.min(positive, negative);
     }
 
 
 }
 
-/** https://leetcode.com/problems/reach-a-number/discuss/357047/With-Full-explanation-and-approach-to-reach-solution
+/**
+ *
  * If you observe the movement, we can see some pattern exist in the way the step should be taken.
  * <p>
  * first either we reach -target or +target, the answer would be same, as we can always flip the direction of step to other side.
@@ -210,6 +222,56 @@ class ReachNumberInfiniteLineIntuitive {
         return step;
     }
 
+}
+
+/**
+ * We can solve this question using maths.
+ * as above stated already;
+ * 1 + 2 + 3 + 4 + .... = sum >= target [Replace sum with 'n' and 'target' with 'x' for simple interpretation ]
+ * <p>
+ * n(n+1)/2 >= x
+ * n^2 + n - 2*x >= 0
+ * <p>
+ * Which is like
+ * AN^2 + BN + C = 0
+ * Has solution
+ * N = ( -B (+,-) Sqrt (B^2 - 4*A*C) )/ 2*A ; (+,-) means either + or -
+ * <p>
+ * apply on equation;
+ * N >= ( -1 (+,-) Sqrt ( 1 - 4*1*(-2*x) ) ) / 2
+ * N >= ( -1 (+,-) Sqrt ( 1 + 8*x ) ) / 2
+ * <p>
+ * See image for more clarity
+ *
+ * Runtime: 0 ms, faster than 100.00% of Java online submissions for Reach a Number.
+ * Memory Usage: 33.1 MB, less than 20.00% of Java online submissions for Reach a Number.
+ */
+
+class ReachNumberInfiniteLineMathematical {
+    public static int reachNumber(int target) {
+
+        long targetLong = Math.abs(target);
+
+        long value =  (int)(Math.ceil(((Math.sqrt(Math.abs(targetLong) * 8 + 1)) -1)/2));
+
+        //difference should be even of (target & value (total steps)) and it will come in one step or two
+        //even difference will ensure us there is a way to adjust the back steps.
+        long totalSteps = (value * (value + 1) )/ 2;
+
+        if((totalSteps - targetLong) % 2 == 0 ) {
+            return (int) value;
+        }
+        value++;
+        totalSteps = (value * (value + 1) )/ 2;
+
+        if((totalSteps - targetLong) % 2 == 0 ) {
+            return (int) value;
+        }
+        value++;
+
+        return (int) value;
 
 
+
+    }
 }

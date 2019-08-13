@@ -23,6 +23,7 @@ public class LongestUniformSubString {
 
     static int[] longestUniformSubstring(String input){
 
+
         if(input.isEmpty())
             return new int[]{ -1, 0 };
 
