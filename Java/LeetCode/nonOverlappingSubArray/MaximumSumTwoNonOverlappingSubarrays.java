@@ -41,17 +41,17 @@ import Java.HelpersToPrint.Printer;
 public class MaximumSumTwoNonOverlappingSubarrays {
 
     public static void main(String[] args) {
-//        test(new int[]{0, 6, 5, 2, 2, 5, 1, 9, 4}, 1, 2, 20);
-//        test(new int[]{3, 8, 1, 3, 2, 1, 8, 9, 0}, 3, 2, 29);
+        test(new int[]{0, 6, 5, 2, 2, 5, 1, 9, 4}, 1, 2, 20);
+        test(new int[]{3, 8, 1, 3, 2, 1, 8, 9, 0}, 3, 2, 29);
         test(new int[]{3, 8, 1, 4, 2, 7, 22, 9, 5}, 3, 2, 49);
-//        test(new int[]{2, 1, 5, 6, 0, 9, 5, 0, 3, 8}, 4, 3, 31);
+        test(new int[]{2, 1, 5, 6, 0, 9, 5, 0, 3, 8}, 4, 3, 31);
     }
 
     private static void test(int[] nums, int L, int M, int expected) {
         Printer.print(nums);
         MaximumSumTwoNonOverlapUsingBuySellStocksIdea buySellStocksIdea = new MaximumSumTwoNonOverlapUsingBuySellStocksIdea();
         MaximumSumTwoNonOverlapDP dp = new MaximumSumTwoNonOverlapDP();
-//        System.out.println(" L : " + L + " M :" + M + " obtained :" + buySellStocksIdea.maxSumTwoNoOverlap(nums, L, M) + " Expected :" + expected);
+        System.out.println(" L : " + L + " M :" + M + " obtained :" + buySellStocksIdea.maxSumTwoNoOverlap(nums, L, M) + " Expected :" + expected);
         System.out.println(" L : " + L + " M :" + M + " obtained :" + dp.maxSumTwoNoOverlap(nums, L, M) + " Expected :" + expected);
     }
 
@@ -102,8 +102,6 @@ public class MaximumSumTwoNonOverlappingSubarrays {
      * Memory Usage: 38.6 MB, less than 8.70% of Java online submissions for Maximum Sum of Two Non-Overlapping Subarrays.
      * <p>
      * https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/discuss/278727/C%2B%2B-O(N)-buysell-stock-2-times
-     *
-     *
      */
 
     static class MaximumSumTwoNonOverlapUsingBuySellStocksIdea {
@@ -186,7 +184,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
             for (int i = 1; i < nums.length; ++i)
                 nums[i] += nums[i - 1];
 
-//            Printer.print(nums);
+            Printer.print(nums);
             System.out.println("........................................");
 
             int res = nums[L + M - 1], Lmax = nums[L - 1], Mmax = nums[M - 1];
@@ -203,12 +201,12 @@ public class MaximumSumTwoNonOverlappingSubarrays {
                 Mmax = Math.max(Mmax, nums[i - L] - nums[i - L - M]);
                 System.out.println(" M : " + Mmax + " nums[i - L] " + nums[i - L] + " -  nums[i - L - M] " + nums[i - L - M]);
 
-                int x = Lmax + nums[i] - nums[i - M];
-                System.out.println(" X :" + x + " nums[i] " + nums[i] + " -nums[i - M]: " + nums[i - M]);
-                int y = Mmax + nums[i] - nums[i - L];
-                System.out.println(" Y :" + y + " nums[i] " + nums[i] + " -nums[i - L]: " + nums[i - L]);
+                int lm = Lmax + nums[i] - nums[i - M];
+                System.out.println(" X :" + lm + " nums[i] " + nums[i] + " -nums[i - M]: " + nums[i - M]);
+                int ml = Mmax + nums[i] - nums[i - L];
+                System.out.println(" Y :" + ml + " nums[i] " + nums[i] + " -nums[i - L]: " + nums[i - L]);
 
-                res = Math.max(res, Math.max(x, y));
+                res = Math.max(res, Math.max(lm, ml));
                 System.out.println(" res :" + res + " LMax :" + Lmax + " MMax : " + Mmax + " \n");
             }
             return res;

@@ -27,7 +27,7 @@ import java.util.Set;
  * .
  * 1000
  */
-public class CombinationalSum {
+public class CombinationSum {
 
     public static void main(String args[]) {
 

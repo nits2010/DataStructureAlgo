@@ -57,4 +57,48 @@ public class Printer {
             System.out.print(" ) ");
         }
     }
+
+    public static String toString(int[] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder("[");
+
+        for (int i = 0; i < nums.length; i++) {
+            result.append(nums[i]);
+            result.append(",");
+        }
+        result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
+
+    }
+
+    public static String toString(int[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < nums.length; i++) {
+
+
+            result.append(" [ ");
+            for (int j = 0; j < nums[0].length; j++) {
+                result.append(nums[i][j] + " ");
+                result.append(",");
+            }
+
+            result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
+        }
+
+
+        return result.toString();
+
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(toString(new int[]{1, 3, 4}));
+        System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));
+    }
 }
