@@ -23,6 +23,9 @@ import java.util.List;
  * 123-4-5-6-7+8-9
  * 123-45-67+89
  * -1+2-3+4+5+6+78+9
+ * <p>
+ * [UBER]
+ * Similar {@link Java.LeetCode.operatorBasedQuestions.AddOperatorsPlusMinusMultiply}
  */
 public class SumTo100 {
 
@@ -34,7 +37,7 @@ public class SumTo100 {
 
     /**
      * O(9^9) + O(256 * 2^9 ) as maximum length of a combination is 9 at max when all digits are different and single digit value like {1, 2, 3, 4, 5, 6, 7, 8, 9}
-     *
+     * <p>
      * We'll have 256 combination of single digit to 9 digit number.
      *
      * @param target
@@ -79,9 +82,7 @@ public class SumTo100 {
     /**
      * Run dfs to build all combination from 0 to 9
      *
-     * @return
-     *
-     * O(9^9)
+     * @return O(9 ^ 9)
      */
     private static List<List<Long>> combination(int options[]) {
 
