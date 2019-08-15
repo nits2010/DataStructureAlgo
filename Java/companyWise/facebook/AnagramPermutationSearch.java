@@ -26,6 +26,8 @@ import java.util.List;
 public class AnagramPermutationSearch {
 
     public static void main(String args[]) {
+        System.out.println(AnagramSubstringSearch.anagramSubstringSearch("zzzzzzzz", "zzzz"));
+        System.out.println(AnagramSubstringSearch.anagramSubstringSearch("AAAA", "AAAAAA"));
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("BACDGABCDA", "ABCD"));
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("BACDGABCDA", "ABCDE"));
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("BACDGABCDA", "AB"));
@@ -38,13 +40,13 @@ public class AnagramPermutationSearch {
 class AnagramSubstringSearch {
 
     public static List<Integer> anagramSubstringSearch(String string, String pattern) {
-        if (string == null || pattern == null || string.isEmpty() || pattern.isEmpty())
+        if (string == null || pattern == null || string.isEmpty() || pattern.isEmpty() || pattern.length() > string.length())
             return Collections.EMPTY_LIST;
 
 
         int patternC[] = patternCounter(pattern);
 
-        int str[] = new int[26];
+        int str[] = new int[256];
 
         int n = string.length();
         int p = pattern.length();
@@ -54,7 +56,7 @@ class AnagramSubstringSearch {
             return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++)
-            str[string.charAt(i) - '0']++;
+            str[string.charAt(i) - 'A']++;
 
         List<Integer> solution = new ArrayList<>();
 
@@ -65,11 +67,13 @@ class AnagramSubstringSearch {
             if (match(str, patternC))
                 solution.add(s);
 
-            str[string.charAt(i) - '0']++;
-            str[string.charAt(s++) - '0']--;
+            str[string.charAt(i) - 'A']++;
+            str[string.charAt(s++) - 'A']--;
 
 
         }
+        if (match(str, patternC))
+            solution.add(s);
 
         return solution;
 
@@ -84,10 +88,10 @@ class AnagramSubstringSearch {
     }
 
     private static int[] patternCounter(String pattern) {
-        int patternC[] = new int[26];
+        int patternC[] = new int[256];
 
         for (char c : pattern.toCharArray())
-            patternC[c - '0']++;
+            patternC[c - 'A']++;
 
         return patternC;
     }
