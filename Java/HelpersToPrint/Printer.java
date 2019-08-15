@@ -97,6 +97,18 @@ public class Printer {
 
     }
 
+    public static String toString(final List<int[]> list) {
+        if (null == list || list.size() == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int[] x : list) {
+            result.append(toString(x) + ",");
+        }
+
+        return result.toString().substring(0, result.length()-1);
+    }
+
     public static void main(String[] args) {
 //        System.out.println(toString(new int[]{1, 3, 4}));
         System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));

@@ -55,7 +55,9 @@ public class ThreeSum3SumMultiplicity {
         System.out.println("Input :" + Printer.toString(nums));
 
         IThreeSum3SumMultiplicity sorting = new ThreeSum3SumMultiplicitySorting();
+        IThreeSum3SumMultiplicity couting = new ThreeSum3SumMultiplicityCounting();
         System.out.println("Sorting: " + sorting.threeSumMulti(nums, target) + " expected :" + expected);
+        System.out.println("couting: " + couting.threeSumMulti(nums, target) + " expected :" + expected);
     }
 }
 
@@ -171,23 +173,38 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
 /**
  * In above solution, once we found that sum = target, we need to calculate all the duplicate elements for j and k.
  * That introduce an extra loop [ though that loop minimize the j and k while loop run time. ]
- *
+ * <p>
  * But what if we already know how many of them are there after each i'th element.
  * sum = nums[i] + nums[j] + nums[k]
- *
+ * <p>
  * If we know how many nums[j] + nums[k] are present then we can directly add those contribution in our solution.
- *
- * This then reduce to {@link TwoSumProblem} because we need to find all nums[i] + {nums[j] + nums[k]} where {x} denotes the number of times x occurred
- *
+ * <p>
+ * This then reduce to {@link TwoSum2Sum} because we need to find all nums[i] + {nums[j] + nums[k]} where {x} denotes the number of times x occurred
+ * <p>
  * Algorithm:
  * compute nums[j] + nums[k] count after each i'th element
- *
  */
 class ThreeSum3SumMultiplicityCounting implements IThreeSum3SumMultiplicity {
 
 
     @Override
-    public int threeSumMulti(int[] A, int target) {
-        return 0;
+    public int threeSumMulti(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        long solution = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            solution += map.getOrDefault(target - nums[i], 0);
+
+            for (int j = 0; j < i; j++) {
+
+                int temp = nums[i] + nums[j];
+                map.put(temp, map.getOrDefault(temp, 0) + 1);
+            }
+
+
+        }
+
+        return (int) (solution % (1e9 + 7));
     }
 }

@@ -24,7 +24,7 @@ import java.util.*;
  * [-1, -1, 2]
  * ]
  * <p>
- * Extension of {@link TwoSumProblem}
+ * Extension of {@link TwoSum2Sum}
  */
 public class ThreeSum3Sum {
 

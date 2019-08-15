@@ -17,7 +17,7 @@ import java.util.*;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class TwoSumProblem {
+public class TwoSum2Sum {
 
 
     /**
