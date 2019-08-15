@@ -1,8 +1,5 @@
 package Java.LeetCode;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-15
