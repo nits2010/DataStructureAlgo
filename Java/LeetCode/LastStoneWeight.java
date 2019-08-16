@@ -134,7 +134,7 @@ class LastStoneWeightPriorityQueue {
  * Time: O(n) {bucket frequency} + the maximum value of stones= 1000 and the max length of stones is 30 [1 <= stones.length <= 30[.
  * In wost scenario; all stones are duplicate Or unique or flatten like [1,1,1,1,1000]
  * <p>
- * at max the loop will run 1000^2 time. Hence constant
+ * at max the loop will run 1000 time. Hence constant
  * <p>
  * Space: O(1)
  * Time: O(n+1000) => O(n)
@@ -168,6 +168,7 @@ class LastStoneWeightBucketSort {
 
 
         int i = max;
+        int lastJ = max;
 
         /**
          * Run backward
@@ -189,16 +190,22 @@ class LastStoneWeightBucketSort {
                 } else {
                     /**
                      * Otherwise find a stone whose frequency is not 0
+                     * Reset j as per lasj .
+                     * Case like
+                     * [1,1,1,1,1000]
+                     * then if we set j = i-1 then j will start again from last entry always makes it to run ~1000 times every time for i
                      */
-                    int j = i - 1;
+                    int j = i - 1 > lastJ ? lastJ : i - 1;
                     while (j > 0 && buckets[j] == 0) j--;
 
                     /**
                      * If no bucket left, then [i] is last stone
                      */
                     if (j == 0) {
-                        break;
+                        return i;
                     } else {
+                        lastJ = j;
+
                         /**
                          * Utilize both of the stones
                          */
@@ -211,16 +218,18 @@ class LastStoneWeightBucketSort {
                         buckets[i - j]++;
 
 
+                        if (i - j > j) {
+                            i = i - j;
+                        } else {
+                            i = j;
+                        }
+
                     }
                 }
-            }
-            i--;
+            } else
+                i--;
         }
 
-
-        for (int x = 0; x < buckets.length; x++)
-            if (buckets[x] > 0 && buckets[x] % 2 != 0)
-                return x;
 
         return 0;
     }
