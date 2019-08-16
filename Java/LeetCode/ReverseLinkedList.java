@@ -1,19 +1,13 @@
 package Java.LeetCode;
 
+import Java.LeetCode.HelperDatastructure.ListNode;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-12
  * Description:
  */
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class ReverseLinkedList {
 

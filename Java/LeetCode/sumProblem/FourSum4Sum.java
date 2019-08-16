@@ -29,6 +29,10 @@ import java.util.*;
  * <p>
  * {@link ThreeSum3Sum}
  * {@link TwoSum2Sum}
+ *
+ * https://leetcode.com/problems/4sum/discuss/359397/Optimisations-or-Thought-Process-or-Java-or-4ms
+ *
+ * https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
  */
 public class FourSum4Sum {
 
