@@ -44,7 +44,6 @@ public class ListCombination {
             System.out.println(output);
 
 
-
         } catch (InvalidArgument invalidArgument) {
             invalidArgument.printStackTrace();
         }
@@ -129,26 +128,33 @@ public class ListCombination {
     private static List<String> generateCombination(List<String> input) {
         List<String> output = new LinkedList<>();
 
-        generateCombination(input, 0, output, "");
+        generateCombination(input, 0, output, new StringBuilder());
         return output;
     }
 
-    private static void generateCombination(List<String> input, int index, List<String> output, String temp) {
+    /**
+     * similar to {@link Java.LeetCode.BraceExpansionI}
+     *
+     * @param input
+     * @param index
+     * @param output
+     * @param temp
+     */
+    private static void generateCombination(List<String> input, int index, List<String> output, StringBuilder temp) {
 
         if (temp.length() == input.size()) {
-            output.add(temp);
+            output.add(temp.toString());
             return;
         }
 
         String current = input.get(index);
 
         for (int i = 0; i < current.length(); i++) {
-            temp = temp + current.charAt(i);
+            temp.append(current.charAt(i));
             generateCombination(input, index + 1, output, temp);
-            temp = temp.substring(0, temp.length() - 1);
+            temp.deleteCharAt(temp.length() - 1);
         }
     }
-
 
 
 }

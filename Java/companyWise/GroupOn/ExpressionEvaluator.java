@@ -85,7 +85,7 @@ public class ExpressionEvaluator {
             case '*':
                 return (double) op1 * op2;
             case '%':
-                if (op2 == 0) {
+                if (op1 == 0) {
                     return null; //not possible
                 }
                 return (double) op2 / op1;

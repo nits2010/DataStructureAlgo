@@ -128,7 +128,7 @@ class SolutionPainterPartitionProblem {
             for (int i = 2; i <= n; i++) {
 
                 int best = Integer.MAX_VALUE;
-                int max ;
+                int max;
                 for (int j = 1; j <= i; j++) {
                     max = Math.max(cost[j][k - 1], sum[i] - sum[j]);
 
@@ -182,7 +182,6 @@ class SolutionPainterPartitionProblem {
         int low = Arrays.stream(board).max().getAsInt();
         int high = Arrays.stream(board).sum();
 
-        int potentialSolution = 0;
 
         while (low < high) {
             int mid = (low + high) >> 1;
@@ -193,10 +192,9 @@ class SolutionPainterPartitionProblem {
                 low = mid + 1;
             } else if (requiredPainter == painters) {
                 high = mid;
-                potentialSolution = mid;
             }
         }
-        return potentialSolution;
+        return low;
 
     }
 

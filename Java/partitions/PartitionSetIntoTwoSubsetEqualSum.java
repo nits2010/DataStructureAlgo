@@ -6,6 +6,34 @@ import java.util.Arrays;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-25
  * Description:https://leetcode.com/problems/partition-equal-subset-sum
+ *
+ * Given a non-empty array containing only positive integers,
+ * find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+ *
+ * Note:
+ *
+ * Each of the array element will not exceed 100.
+ * The array size will not exceed 200.
+ *
+ *
+ * Example 1:
+ *
+ * Input: [1, 5, 11, 5]
+ *
+ * Output: true
+ *
+ * Explanation: The array can be partitioned as [1, 5, 5] and [11].
+ *
+ *
+ * Example 2:
+ *
+ * Input: [1, 2, 3, 5]
+ *
+ * Output: false
+ *
+ * Explanation: The array cannot be partitioned into equal sum subsets.
+ *
+ *
  */
 public class PartitionSetIntoTwoSubsetEqualSum {
 
@@ -18,10 +46,12 @@ public class PartitionSetIntoTwoSubsetEqualSum {
         int total = 0;
         for (int i : nums) total += i; // get total of all nums
         if (total % 2 == 1) return false; // if the total is odd, the array cannot be partitioned
+
 //        return partitionSetIntoTwoSubsetRecursive(nums.length - 1, nums, 0, total / 2);
 
-        return partitionSetIntoTwoSubsetRecursive(nums, 0, 0, total / 2) == 0;
-        //       return partitionSetIntoTwoSubsetDP(nums);
+//        return partitionSetIntoTwoSubsetRecursive(nums, 0, 0, total / 2) == 0;
+
+        return partitionSetIntoTwoSubsetDP(nums);
     }
 
 
@@ -33,19 +63,22 @@ public class PartitionSetIntoTwoSubsetEqualSum {
         if (i == nums.length)
             return Math.abs(sum1 - sum2);
 
-        return Math.min(partitionSetIntoTwoSubsetRecursive(nums, i + 1, sum1, sum2),
-                partitionSetIntoTwoSubsetRecursive(nums, i + 1, sum1 + nums[i], sum2));
+        return Math.min(
+                partitionSetIntoTwoSubsetRecursive(nums, i + 1, sum1, sum2), //Don't include current item in other set
+                partitionSetIntoTwoSubsetRecursive(nums, i + 1, sum1 + nums[i], sum2)); // include current item in other set
 
     }
 
     //Backward
     public static boolean partitionSetIntoTwoSubsetRecursive(int i, int[] n, int sum, int target) {
         if (i < 0 || sum > target) return false;
+
         if (n[i] > target)
             return false; // Magic step. If the single integer is greater than the target, you return false;
         if (sum == target) return true;
+
         return partitionSetIntoTwoSubsetRecursive(i - 1, n, sum + n[i], target) // test adding the current integer (n[i]) to the sum
-                || partitionSetIntoTwoSubsetRecursive(i - 1, n, sum, target); // test not adding the current integer to the sum
+                || partitionSetIntoTwoSubsetRecursive(i - 1, n, sum, target); // test by not adding the current integer to the sum
     }
 
 
@@ -57,14 +90,16 @@ public class PartitionSetIntoTwoSubsetEqualSum {
 
         if (sum % 2 != 0)
             return false;
+
         int n = nums.length;
+
         boolean dp[][] = new boolean[n + 1][sum + 1]; //is it possible to make sum j with i elements
 
         for (int i = 0; i <= n; i++)
             dp[i][0] = true; //we can take empty set to make sum = 0
 
         for (int i = 0; i <= sum; i++)
-            dp[0][sum] = false;
+            dp[0][i] = false;
 
         dp[0][0] = true; //with 0 element, 0 sum is possible
 

@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -102,7 +102,7 @@ class CanJumpToReachLastBackTracking {
             return false;
 
 
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
         return canJump(nums, 0);
 
     }
@@ -138,7 +138,7 @@ class CanJumpToReachLastBackTracking {
  * <p>
  * Dp[i] = Min { 1+ Min { Dp[j] if nums[j] >= (i-j}}
  * <p>
- * Dp[n-1] will be our solution if its -1 then False otherwise true
+ * Dp[n-1] will be our solution
  */
 class CanJumpToReachLastDP {
 
@@ -147,7 +147,7 @@ class CanJumpToReachLastDP {
 
         if (null == nums || nums.length == 0)
             return false;
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
 
         int n = nums.length;
         boolean dp[] = new boolean[n];
@@ -177,7 +177,7 @@ class CanJumpToReachLastLinear {
 
 
     public static boolean canJump(int[] nums) {
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
         int reachAble = nums.length - 1;
         for (int i = nums.length - 1; i >= 0; i--) {
             if (i + nums[i] >= reachAble) {
@@ -206,7 +206,7 @@ class MinimumJumpToReachLastDP {
         if (null == nums || nums.length == 0)
             return -1;
 
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
         int n = nums.length;
         int dp[] = new int[n];
 
@@ -245,7 +245,7 @@ class MinimumJumpToReachLastLinear {
         if (null == nums || nums.length == 0 || nums.length == 1)
             return 0;
 
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
 //        if (nums[0] == 0)
 //            return 0;
 

@@ -111,7 +111,7 @@ class LongestArithmeticSequenceUnsorted {
         }
 
         int maxDiff = max - min;
-        int dp[][] = new int[a.length][2 * maxDiff + 1];
+        int dp[][] = new int[a.length][2 * maxDiff + 1]; //as the difference could be -MaxDiff....0....+MaxDiff ; hence 2*maxDiff + 1
 
         int maxLAP = 0;
 

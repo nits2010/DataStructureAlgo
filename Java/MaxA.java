@@ -9,7 +9,7 @@ package Java;
  *
  * O(1) solution https://leetcode.com/articles/4-keys-keyboard/
  * <p>
- * This is a famous interview question asked in Google, Paytm and many other company interviews.
+ *
  * <p>
  * Below is the problem statement.
  * <p>
@@ -48,42 +48,43 @@ package Java;
 public class MaxA {
 
     public static void main(String args[]) {
-        int N;
 
         // for the rest of the array we will rely on the previous
         // entries to compute new ones
-        for (N = 1; N <= 20; N++)
-            System.out.println("Maximum Number of A's with keystrokes is N " + N + " -> " + findoptimalDP1(N));
+        for (int N = 1; N <= 20; N++)
+            System.out.println("Maximum Number of A's with keystrokes is N " + N + " -> " + findOptimalDP1(N));
 
         System.out.println("Optimized....");
         // for the rest of the array we will rely on the previous
         // entries to compute new ones
-        for (N = 1; N <= 20; N++)
-            System.out.println("Maximum Number of A's with keystrokes is N " + N + " -> " +  findoptimalOptimized(N));
+        for (int N = 1; N <= 20; N++)
+            System.out.println("Maximum Number of A's with keystrokes is N " + N + " -> " +  findOptimalOptimized(N));
     }
 
 
     // this function returns the optimal
     // length string for N keystrokes
-    public static int findoptimalDP1(int N) {
+    //O(n^2)
+    public static int findOptimalDP1(int N) {
+
         // The optimal string length is N
         // when N is smaller than 7
         if (N <= 6)
             return N;
 
         // An array to store result
-        // of subproblems
+        // of sub-problems
         int screen[] = new int[N + 1];
 
         int b; // To pick a breakpoint
 
         // Initializing the optimal lengths
-        // array for uptil 6 input strokes
+        // array for until 6 input strokes
         int n;
         for (n = 1; n <= 6; n++)
             screen[n] = n;
 
-        // Solve all subproblems in bottom manner
+        // Solve all sub-problems in bottom manner
         for (n = 7; n <= N; n++) {
             // Initialize length of optimal
             // string for n keystrokes
@@ -111,18 +112,19 @@ public class MaxA {
     }
 
 
-    public static int findoptimalOptimized(int N) {
+    //O(n)
+    public static int findOptimalOptimized(int N) {
         // The optimal string length is N
         // when N is smaller than 7
         if (N <= 6)
             return N;
 
         // An array to store result
-        // of subproblems
+        // of sub-problems
         int screen[] = new int[N + 1];
 
         // Initializing the optimal lengths
-        // array for uptil 6 input strokes
+        // array for until 6 input strokes
         int n;
         for (n = 1; n <= 6; n++)
             screen[n] = n;

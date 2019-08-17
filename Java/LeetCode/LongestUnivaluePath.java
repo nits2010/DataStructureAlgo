@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.LeetCode.HelperDatastructure.TreeNode;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,18 +14,6 @@ import java.util.Queue;
  * Description:
  */
 public class LongestUnivaluePath {
-    //  Definition for a binary tree node.
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-
 
 
     static int ans = 0;
@@ -66,7 +56,6 @@ public class LongestUnivaluePath {
 
 
     }
-
 
 
     public static TreeNode stringToTreeNode(String input) {

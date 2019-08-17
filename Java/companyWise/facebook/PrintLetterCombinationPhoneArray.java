@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.HelperToPrint;
+import Java.HelpersToPrint.Printer;
 import Java.LeetCode.LetterCombinationsPhoneNumber;
 import com.sun.javaws.exceptions.InvalidArgumentException;
 
@@ -34,7 +34,7 @@ public class PrintLetterCombinationPhoneArray {
 
     //Follow-up: Check whether the given text matches with a given integer array.
     private static void testGivenTextMatchesWithArray(int[] nums, String text) {
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
         System.out.println("Testing text :" + text + " matches with " + match(nums, text, 0, text));
     }
 
@@ -75,7 +75,7 @@ public class PrintLetterCombinationPhoneArray {
      */
     private static void testIndividualNumbersArray(int[] nums) {
         System.out.println("Testing ");
-        HelperToPrint.printArray(nums);
+        Printer.print(nums);
 
         List<String> combinations = new ArrayList<>();
 

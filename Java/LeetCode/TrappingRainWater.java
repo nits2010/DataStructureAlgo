@@ -25,6 +25,12 @@ public class TrappingRainWater {
 
     }
 
+    /**
+     * Runtime: 1 ms, faster than 98.39% of Java online submissions for Trapping Rain Water.
+     * Memory Usage: 36.2 MB, less than 100.00% of Java online submissions for Trapping Rain Water.
+     * @param height
+     * @return
+     */
     public static int trap(int[] height) {
 
         int leftMax = 0, rightMax = 0;
@@ -32,7 +38,7 @@ public class TrappingRainWater {
         int totalWater = 0;
         int l = 0, r = height.length - 1;
 
-        while (l <= r) {
+        while (l < r) {
 
             if (height[l] < height[r]) {
                 if (height[l] > leftMax)

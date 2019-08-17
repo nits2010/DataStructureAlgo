@@ -31,10 +31,10 @@ public class BooleanParenthesization {
 
         //  ((T|T)&(F^T)), (T|(T&(F^T))), (((T|T)&F)^T) and (T|((T&F)^T))
 
-        System.out.println(booleanParenthesization("TTFT", "|&^"));
+        System.out.println(booleanParenthesizing("TTFT", "|&^"));
     }
 
-    private static int booleanParenthesization(String symb, String op) {
+    private static int booleanParenthesizing(String symb, String op) {
 
 
         if (null == symb || symb.isEmpty() || null == op || op.isEmpty())
@@ -42,7 +42,7 @@ public class BooleanParenthesization {
 
 
         char symbol[] = symb.toCharArray();
-        char oper[] = op.toCharArray();
+        char operator[] = op.toCharArray();
 
         int n = symb.length();
 
@@ -69,17 +69,17 @@ public class BooleanParenthesization {
                     int totalIK = T[i][k] + F[i][k];
                     int totalKJ = T[k + 1][j] + F[k + 1][j];
 
-                    if (oper[k] == '&') {
+                    if (operator[k] == '&') {
                         T[i][j] += T[i][k] * T[k + 1][j]; // Both has to be true means left (T[i][k]) true and right(T[k+1][j] true
                         F[i][j] += (totalIK * totalKJ - T[i][k] * T[k + 1][j]); // Both has to be false ; hence remove  true from total
                     }
-                    if (oper[k] == '^') {
+                    if (operator[k] == '^') {
                         T[i][j] += T[i][k] * F[k + 1][j] + F[i][k] * T[k + 1][j]; // either of them is true and other is false;
                         F[i][j] += T[i][k] * T[k + 1][j] + F[i][k] * F[k + 1][j]; // both of them true or false
 
                     }
-                    if (oper[k] == '|') {
-                        T[i][j] += (totalIK * totalKJ - F[i][k] * F[k + 1][j]);  //both has to be true; remove all false from total true
+                    if (operator[k] == '|') {
+                        T[i][j] += (totalIK * totalKJ - F[i][k] * F[k + 1][j]);  //either has to be true; remove all false from total true
                         F[i][j] += F[i][k] * F[k + 1][j];//both has to be false
                     }
 

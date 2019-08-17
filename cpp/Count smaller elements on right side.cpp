@@ -4,7 +4,7 @@
 this logic use either array or stack
 we use array .
 Logic:
-we travers the main array from right to left and keep inserting the current element in the temp array MinStepsInfiniteGrid.t temp array always a sorted one
+we travers the main array from right to left and keep inserting the current element in the temp array  temp array always a sorted one
 ex.
 index         0  1 2 3 4 5
 main array    12 1 3 0 11 1

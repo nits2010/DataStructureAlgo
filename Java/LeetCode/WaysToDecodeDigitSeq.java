@@ -64,7 +64,7 @@ public class WaysToDecodeDigitSeq {
         char digits[] = s.toCharArray();
         int n = s.length();
 
-        //number of ways to decode string from 0 to i as i
+        //number of ways to decode string from 0 to i at i
         int count[] = new int[n + 1];
         count[0] = count[1] = 1; //empty string or 1 char string can be decode only in 1 way
 
