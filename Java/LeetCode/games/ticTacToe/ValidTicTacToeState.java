@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.games.ticTacToe;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

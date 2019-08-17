@@ -1,4 +1,4 @@
-package Java.LeetCode.sudoku;
+package Java.LeetCode.games.sudoku;
 
 import Java.HelpersToPrint.Printer;
 

@@ -1,4 +1,4 @@
-package Java.LeetCode.sudoku;
+package Java.LeetCode.games.sudoku;
 
 import java.util.HashSet;
 import java.util.Set;
