@@ -97,6 +97,30 @@ public class Printer {
 
     }
 
+
+    public static String toString(char[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < nums.length; i++) {
+
+
+            result.append(" [ ");
+            for (int j = 0; j < nums[0].length; j++) {
+                result.append(nums[i][j] + " ");
+                result.append(",");
+            }
+
+            result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
+        }
+
+
+        return result.toString();
+
+    }
+
     public static String toString(final List<int[]> list) {
         if (null == list || list.size() == 0)
             return null;
