@@ -61,7 +61,7 @@ public class KPalindromeString {
  * given string length is n and k
  * if (n-l-k)> 1 then its not possible
  * <p>
- * {@link Java.Palindroms.LongestPalindromicSubsequence}
+ * {@link Java.LeetCode.Palindroms.LongestPalindromicSubsequence}
  */
 class KPalindromeStringUsingLPS {
 

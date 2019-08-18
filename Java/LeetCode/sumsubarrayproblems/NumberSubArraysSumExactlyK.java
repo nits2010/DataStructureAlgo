@@ -1,4 +1,4 @@
-package Java.sum.sub.array.problems;
+package Java.LeetCode.sumsubarrayproblems;
 
 import Java.HelpersToPrint.Printer;
 

@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.tree;
 
 import Java.Tree.TreeNode;
 import javafx.util.Pair;
@@ -148,7 +148,7 @@ class MaximumEvenPathSum {
 
 
             // max = MAX ( max, (left.odd +  right.odd + value))
-            max[0] = Math.max(max[0], left.getValue() + right.getValue() + root.getData());
+            max[0] = Math.max(max[0], Math.max(left.getValue(), right.getValue()) + root.getData());
 
             int even = root.getData() + Math.max(left.getValue(), right.getValue());
             int odd = Math.max(root.getData(), Math.max(left.getKey(), right.getKey()) + root.getData());
@@ -235,7 +235,9 @@ class MaximumPathSumLeafToLeaf {
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/
  * Given a non-empty binary tree, find the maximum path sum.
  * <p>
- * For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+ * For this problem, a path is defined as any sequence of nodes from some starting node to any node
+ * in the tree along the parent-child connections.
+ * The path must contain at least one node and does not need to go through the root.
  * <p>
  * Example 1:
  * <p>

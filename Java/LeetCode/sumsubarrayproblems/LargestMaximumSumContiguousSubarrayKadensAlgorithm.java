@@ -1,4 +1,4 @@
-package Java.sum.sub.array.problems;
+package Java.LeetCode.sumsubarrayproblems;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

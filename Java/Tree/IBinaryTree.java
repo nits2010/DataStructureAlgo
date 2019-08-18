@@ -1,7 +1,6 @@
 package Java.Tree;
 
-import Java.LeetCode.MaximumPathSum;
-import javafx.util.Pair;
+import Java.LeetCode.tree.MaximumPathSum;
 
 import java.util.LinkedList;
 import java.util.List;

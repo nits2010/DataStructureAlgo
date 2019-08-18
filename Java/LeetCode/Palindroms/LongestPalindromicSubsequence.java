@@ -1,4 +1,4 @@
-package Java.Palindroms;
+package Java.LeetCode.Palindroms;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

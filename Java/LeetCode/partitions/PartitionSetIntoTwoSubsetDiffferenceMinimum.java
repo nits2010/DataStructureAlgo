@@ -1,4 +1,4 @@
-package Java.partitions;
+package Java.LeetCode.partitions;
 
 import java.util.Arrays;
 

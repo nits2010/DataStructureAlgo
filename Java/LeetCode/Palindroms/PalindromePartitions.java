@@ -1,4 +1,4 @@
-package Java.Palindroms;
+package Java.LeetCode.Palindroms;
 
 import java.util.LinkedList;
 import java.util.List;

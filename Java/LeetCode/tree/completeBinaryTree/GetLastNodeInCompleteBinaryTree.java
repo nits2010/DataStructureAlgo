@@ -1,4 +1,4 @@
-package Java.LeetCode.completeBinaryTree;
+package Java.LeetCode.tree.completeBinaryTree;
 
 import Java.LeetCode.HelperDatastructure.TreeNode;
 
