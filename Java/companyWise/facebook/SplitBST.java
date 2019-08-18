@@ -1,5 +1,7 @@
 package Java.companyWise.facebook;
 
+import Java.LeetCode.tree.TrimBinarySearchTree;
+
 import java.util.*;
 
 /**
@@ -44,7 +46,7 @@ import java.util.*;
  * The BST is always valid and each node's value is different.
  * <p>
  * <p>
- * {@link Java.LeetCode.TrimBinarySearchTree}
+ * {@link TrimBinarySearchTree}
  *
  * [FACEBOOK]
  */
@@ -155,7 +157,7 @@ class BinarySearchTreeBased {
 
 
     /**
-     * This is similar to Trim Tree  {@link Java.LeetCode.TrimBinarySearchTree}.
+     * This is similar to Trim Tree  {@link TrimBinarySearchTree}.
      * Lets revise it,
      * 1. We purge the left sub-tree if its outside the lowest range since all left won't satisfy the condition
      * 2. WE purge the right sub-tree if its outside the highest range since all right won't satisfy the condition.

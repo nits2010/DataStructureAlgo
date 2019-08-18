@@ -134,9 +134,36 @@ public class TwoSum2Sum {
         return new int[]{-1, -1};
     }
 
+
+    /**
+     * Single pass algo
+     *
+     * @param nums
+     * @param target
+     * @return Runtime: 2 ms, faster than 98.89% of Java online submissions for Two Sum.
+     * Memory Usage: 37.7 MB, less than 98.82% of Java online submissions for Two Sum.
+     */
+    public static int[] twoSum(int[] nums, int target) {
+        if (null == nums || nums.length == 0)
+            return new int[]{-1, -1};
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int item = nums[i];
+            int complement = target - item;
+
+            if (map.containsKey(complement))
+                return new int[]{map.get(complement), i};
+            else
+                map.put(item, i);
+        }
+        return new int[]{-1, -1};
+    }
+
     public static void main(String args[]) {
         int nums[] = {1, 8, 5, 4};
-        int x[] = twoSumMapWithoutDuplicate(nums, 9);
+        int x[] = twoSum(nums, 9);
         System.out.println(x[0] + " " + x[1]);
     }
 

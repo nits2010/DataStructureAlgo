@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.tree;
 
 import Java.LeetCode.HelperDatastructure.TreeNode;
 
