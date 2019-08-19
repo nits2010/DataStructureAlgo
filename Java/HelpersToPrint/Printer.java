@@ -71,7 +71,21 @@ public class Printer {
         result.setCharAt(result.length() - 1, ']');
 
         return result.toString();
+    }
 
+    public static String toString(char[] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder("[");
+
+        for (int i = 0; i < nums.length; i++) {
+            result.append(nums[i]);
+            result.append(",");
+        }
+        result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
     }
 
     public static String toString(int[][] nums) {
@@ -82,12 +96,7 @@ public class Printer {
         for (int i = 0; i < nums.length; i++) {
 
 
-            result.append(" [ ");
-            for (int j = 0; j < nums[0].length; j++) {
-                result.append(nums[i][j] + " ");
-                result.append(",");
-            }
-
+            result.append(toString(nums[i]));
             result.setCharAt(result.length() - 1, ']');
             result.append("\n");
         }
@@ -98,6 +107,7 @@ public class Printer {
     }
 
 
+
     public static String toString(char[][] nums) {
         if (null == nums || nums.length == 0)
             return null;
@@ -106,12 +116,7 @@ public class Printer {
         for (int i = 0; i < nums.length; i++) {
 
 
-            result.append(" [ ");
-            for (int j = 0; j < nums[0].length; j++) {
-                result.append(nums[i][j] + " ");
-                result.append(",");
-            }
-
+            result.append(toString(nums[i]));
             result.setCharAt(result.length() - 1, ']');
             result.append("\n");
         }
@@ -130,11 +135,13 @@ public class Printer {
             result.append(toString(x) + ",");
         }
 
-        return result.toString().substring(0, result.length()-1);
+        return result.toString().substring(0, result.length() - 1);
     }
 
     public static void main(String[] args) {
 //        System.out.println(toString(new int[]{1, 3, 4}));
         System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));
+        System.out.println(toString(new char[]{'a','b','c'}));
+        System.out.println(toString(new char[][]{{'a','b','c'}, {'x','y','z'}, {'t','y', 'p'}}));
     }
 }
