@@ -107,7 +107,6 @@ public class Printer {
     }
 
 
-
     public static String toString(char[][] nums) {
         if (null == nums || nums.length == 0)
             return null;
@@ -138,10 +137,68 @@ public class Printer {
         return result.toString().substring(0, result.length() - 1);
     }
 
+    public static int[] copyOf(int[] input) {
+        int[] copy = new int[input.length];
+
+        for (int i = 0; i < input.length; i++)
+            copy[i] = input[i];
+
+        return copy;
+    }
+
+    public static int[][] copyOf(int[][] input) {
+        int[][] copy = new int[input.length][input[0].length];
+
+        for (int i = 0; i < input.length; i++)
+            for (int j = 0; j < input[0].length; j++)
+                copy[i][j] = input[i][j];
+
+        return copy;
+    }
+
+    public static char[] copyOf(char[] input) {
+        char[] copy = new char[input.length];
+
+        for (int i = 0; i < input.length; i++)
+            copy[i] = input[i];
+
+        return copy;
+    }
+
+
+    public static char[][] copyOf(char[][] input) {
+        char[][] copy = new char[input.length][input[0].length];
+
+        for (int i = 0; i < input.length; i++)
+            for (int j = 0; j < input[0].length; j++)
+                copy[i][j] = input[i][j];
+
+        return copy;
+
+    }
+
+
+    public static <T> T[] copyOf(T[] input) {
+
+        if (input == null || input.length == 0)
+            return input;
+        int n = input.length;
+        return Arrays.copyOf(input, input.length);
+    }
+
+
     public static void main(String[] args) {
-//        System.out.println(toString(new int[]{1, 3, 4}));
+
+        int x[] = {1, 2, 3};
+        System.out.println(toString(copyOf(x)));
+
+        int x2[][] = {{1, 2, 3}, {4, 5, 6}};
+        int x2d[][] = copyOf(x2);
+        System.out.println(x2 == x2d);
+
+        System.out.println(toString(new int[]{1, 3, 4}));
         System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));
-        System.out.println(toString(new char[]{'a','b','c'}));
-        System.out.println(toString(new char[][]{{'a','b','c'}, {'x','y','z'}, {'t','y', 'p'}}));
+        System.out.println(toString(new char[]{'a', 'b', 'c'}));
+        System.out.println(toString(new char[][]{{'a', 'b', 'c'}, {'x', 'y', 'z'}, {'t', 'y', 'p'}}));
     }
 }

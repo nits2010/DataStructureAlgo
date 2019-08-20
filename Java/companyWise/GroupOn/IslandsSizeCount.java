@@ -3,9 +3,30 @@ package Java.companyWise.GroupOn;
 /**
  * Author: Nitin Gupta
  * Date: 26/04/19
- * Description:
+ * Description: Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.
+ * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
+ * You may assume all four edges of the grid are all surrounded by water.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input:
+ * 11110
+ * 11010
+ * 11000
+ * 00000
+ * <p>
+ * Output: 1
+ * Example 2:
+ * <p>
+ * Input:
+ * 11000
+ * 11000
+ * 00100
+ * 00011
+ * <p>
+ * Output: 3
  */
-public class IslandsFinder {
+public class IslandsSizeCount {
 
 
     static int row[] = {-1, -1, -1, 0, 0, 1, 1, 1};
@@ -18,7 +39,7 @@ public class IslandsFinder {
 
         @Override
         public String toString() {
-            return "IslandsFinder{" +
+            return "IslandsSizeCount{" +
                     "count=" + count +
                     ", size=" + size +
 
@@ -54,9 +75,7 @@ public class IslandsFinder {
         Islands islands = new Islands();
 
         boolean marked[][] = new boolean[n][m];
-        //Arrays.fill(marked, false);
 
-        //int size = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
 
