@@ -90,7 +90,6 @@ public class RemoveObstacleRobotMinimumDistance {
     }
 
 
-    // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
     static int removeObstacle(int numRows, int numColumns, List<List<Integer>> lot) {
 
         if (lot == null || lot.isEmpty())
