@@ -8,6 +8,7 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-21
  * Description: https://leetcode.com/problems/course-schedule-ii/
+ *
  * There are a total of n courses you have to take, labeled from 0 to n-1.
  * <p>
  * Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
@@ -31,10 +32,10 @@ import java.util.*;
  * The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
  * You may assume that there are no duplicate edges in the input prerequisites.
  * <p>
- * {@link CourseScheduleI} Just need to return courses order also
- * JUST ONE LINE CHANGE FROM {@link CourseScheduleI} TO THIS SOLUTION
+ * {@link CourseSchedule1} Just need to return courses order also
+ * JUST ONE LINE CHANGE FROM {@link CourseSchedule1} TO THIS SOLUTION
  */
-public class CourseScheduleII {
+public class CourseSchedule2 {
 
 
     public static void main(String[] args) {

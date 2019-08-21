@@ -37,7 +37,7 @@ import java.util.Queue;
  * <p>
  * {@link Java.graph.AlienLanguageOrder}
  */
-public class CourseScheduleI {
+public class CourseSchedule1 {
 
 
     public static void main(String[] args) {

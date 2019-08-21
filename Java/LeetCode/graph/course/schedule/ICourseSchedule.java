@@ -16,4 +16,7 @@ public interface ICourseSchedule {
     default int[] findOrder(int numCourses, int[][] prerequisites) {
         return null;
     }
+
+    //https://leetcode.com/problems/course-schedule-iii/
+    default int scheduleCourse(int[][] courses) { return 0; }
 }
