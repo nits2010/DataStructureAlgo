@@ -139,7 +139,7 @@ class MaximumSizeSquareSubMatrix {
         // get Auxilary Arra yWith First Row & Col data
         int temp[][] = getAuxiliaryArrayWithFirstRowCol(input);
 
-        // for rest of rows and column'MinStepsInfiniteGrid
+        // for rest of rows and column's
         for (int i = 1; i < input.length; i++) {
             for (int j = 1; j < input[0].length; j++) {
 

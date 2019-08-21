@@ -90,7 +90,7 @@ public class EqualXandY {
 
         }
 
-        System.out.println("MinStepsInfiniteGrid : " + start + " end " + result + " total count : " + resultCount);
+        System.out.println("s : " + start + " end " + result + " total count : " + resultCount);
 
 
     }

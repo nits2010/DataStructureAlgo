@@ -292,6 +292,18 @@ class CourseScheduleGreedy implements ICourseSchedule {
  * <p>
  * Solution: Replace the array list with Priority Queue ( Max heap )
  * <p>
+ * <p>
+ * Then we keep track of a variable cnt, means the days we spent on courses.
+ * <p>
+ * And we for loop the sorted list. Whenever we come up with a new course, we pick one of the following 2 actions
+ * <p>
+ * If cnt + courseLength <= courseDeadline, we are happy to take the course
+ * If 1's condition does not meet, we cannot take the course. However, we should not just stop here. We should think:
+ * Did we make a silly decision before? Maybe the current course's length is pretty short, but the deadline is late, and we took some course with earlier deadline but longer course length.
+ * For example, we have course schedule: [[3,3], [2,4], [2,4]], if we take the [3,3] course, we can not take the two [2,4] course any more. And obviously, taking the [3,3] course is a
+ * silly decision. So we do the follwing: If we previously took a course with length longer than the current course, we withdraw that course and take this one. (Well, "withdraw"
+ * means cnt -= withDrawnCourseLength)
+ * Now the question to ask is: how to find out the longest course we took before? PriorityQueue, of course!
  * O(n*logn) / O(n)
  */
 class CourseScheduleGreedyPriorityQueue implements ICourseSchedule {

@@ -108,10 +108,10 @@ public class ATimesToContainB {
 
     /**
      * If |B| > 2|A| - 2 and B occurs in A^n, then A occurs in B. Count and remove all complete instances of A in B, and
-     * then the solution is this count plus the solution to the same problem with A'MinStepsInfiniteGrid removed from B.
+     * then the solution is this count plus the solution to the same problem with A's removed from B.
      * <p>
      * Otherwise, it is guaranteed that if B appears in A^n, it appears in A^3. Construct A^3 and find the first occurrence of B in it.
-     * Find and remove any complete instances of A appearing after the end of B'MinStepsInfiniteGrid appearance in A^3. Return 3 minus the number of removed instances.
+     * Find and remove any complete instances of A appearing after the end of B's appearance in A^3. Return 3 minus the number of removed instances.
      * <p>
      * Examples:
      * <p>

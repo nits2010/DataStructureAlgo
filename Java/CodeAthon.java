@@ -78,7 +78,7 @@ public class CodeAthon {
 			return 1;
 		}
 
-		// Use Pascal'MinStepsInfiniteGrid triangle
+		// Use Pascal's triangle
 
 		// Initialize
 		int[] row = new int[r];
