@@ -44,6 +44,7 @@ public class DirectedGraph implements IGraph {
     /**
      * This works for both, Directed Graph
      * and Un-Directed Graph
+     *
      * @return
      */
     @Override
@@ -87,9 +88,11 @@ public class DirectedGraph implements IGraph {
         stack.push(x);
 
     }
+
     /**
      * This works for only, Directed Graph
      * because A DAG G has at least one vertex with in-degree 0 and one vertex with out-degree 0.
+     *
      * @return
      */
     @Override
@@ -137,6 +140,56 @@ public class DirectedGraph implements IGraph {
         }
 
         return top;
+    }
+
+    @Override
+    public boolean detectCycleKhanAlgo() {
+        List<Integer> top = new ArrayList<>(this.vertices);
+
+
+        //count inDegree
+        int[] inDegree = new int[this.vertices];
+
+
+        for (int i = 0; i < this.vertices; i++) {
+
+            for (Integer adj : adjancyList[i]) {
+                inDegree[adj]++;
+            }
+        }
+
+
+        Queue<Integer> queue = new LinkedList<>();
+
+        //push all 0 degree elements
+        for (int i = 0; i < this.vertices; i++)
+            if (inDegree[i] == 0)
+                queue.offer(i);
+
+
+        //Process one by one
+        while (!queue.isEmpty()) {
+
+            int current = queue.poll();
+            top.add(current);
+
+            for (Integer adj : adjancyList[current]) {
+                inDegree[adj]--;
+                if (inDegree[adj] == 0)
+                    queue.offer(adj);
+
+            }
+        }
+
+
+        return top.size() != this.vertices;
+
+    }
+
+    @Override
+    public boolean detectCycleStack() {
+
+        return false;
     }
 
 

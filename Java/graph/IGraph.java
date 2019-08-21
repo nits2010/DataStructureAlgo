@@ -15,5 +15,9 @@ public interface IGraph extends IGraphBase {
 
     List<Integer> topologicalSortKhanAlgo();
 
+    boolean detectCycleKhanAlgo();
+
+    boolean detectCycleStack();
+
 
 }

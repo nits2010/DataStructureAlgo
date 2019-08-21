@@ -151,6 +151,7 @@ class NumberIslandsIIBuildAndCount {
  * O(k* log(m*n)) / O (m*n)
  * <p>
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.32.html
+ * https://segmentfault.com/a/1190000016587068
  */
 class NumberIslandsIIUnionFind {
 
