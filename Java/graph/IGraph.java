@@ -17,7 +17,7 @@ public interface IGraph extends IGraphBase {
 
     boolean detectCycleKhanAlgo();
 
-    boolean detectCycleStack();
+    boolean detectCycleDFS();
 
 
 }

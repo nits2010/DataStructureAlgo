@@ -187,7 +187,61 @@ public class DirectedGraph implements IGraph {
     }
 
     @Override
-    public boolean detectCycleStack() {
+    public boolean detectCycleDFS() {
+
+        return detectCycle(adjancyList, this.vertices);
+    }
+
+
+    private boolean detectCycle(List<Integer>[] adjList, int vertices) {
+
+        int visited[] = new int[vertices]; //initially all are false;
+
+        /**
+         * Visit each vertices
+         */
+        for (int c = 0; c < vertices; c++) {
+            //Visit those which has not visit yet
+
+            if (visited[c] != -1 && detectCycle(adjList, c, visited))
+                return false;
+
+        }
+        return true;
+    }
+
+    /**
+     * DFS
+     *
+     * @param adjList
+     * @param vertex
+     * @param visited
+     * @return
+     */
+    private boolean detectCycle(List<Integer>[] adjList, int vertex, int[] visited) {
+
+        /**
+         * If visited already, then there is a cycle
+         */
+        if (visited[vertex] == 1)
+            return true;
+
+        /**
+         * This means, that this vertex has been covered
+         */
+        if (visited[vertex] == -1)
+            return false;
+
+        visited[vertex] = 1;
+
+        for (Integer c : adjList[vertex])
+            if (detectCycle(adjList, c, visited))
+                return true;
+
+        /**
+         * Mark this vertex as covered
+         */
+        visited[vertex] = -1;
 
         return false;
     }
