@@ -79,8 +79,8 @@ class ActivateFountainsIntervalMerge {
      * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 5; i=1 {(1,3) is in (1,5)}
      * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 5; i=2 {(1,3) is in (1,5)}
      * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 6; i=3 {(2,6) is not in (1,5)} F = 2
-     * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 6; i=4 {(3,6) is not in (1,6)}
-     * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 6; i=5 {(3,5) is not in (1,6)}
+     * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 6; i=4 {(3,6) is  in (1,6)}
+     * [(1,5),(1,3),(1,3),(2,6),(3,6),(3,5)] l = 1 and r = 6; i=5 {(3,5) is  in (1,6)}
      *
      * @param fountains
      * @return
@@ -162,6 +162,8 @@ class ActivateFountainsIntervalMerge {
  * <p>
  * It turns out that after the pre-processing, it is same as below problem
  * {@link MinimumJumpToReachLastJumpGame}
+ * Since [5,6,6,0,0,0] from index =0 we can jump 5 and from index 2 we can jump 6. Since after jumping 5, we can't jump anymore then we have to take only one
+ * jump from index=0 to index=1 hence to index=5
  */
 class ActivateFountainsIntervalMergeOptimized {
     /**
@@ -209,7 +211,7 @@ class ActivateFountainsIntervalMergeOptimized {
             nextGreaterRight = Math.max(nextGreaterRight, interval[i]);
 
             /**
-             * If the last fountain can cover only this point, then update with next fountain.
+             * If the last fountain can cover only this point, activate new fountain.
              */
             if (i == right) {
                 fountainsActivate++;
