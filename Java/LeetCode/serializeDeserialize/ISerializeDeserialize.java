@@ -1,4 +1,6 @@
-package Java.companyWise.facebook.serializeDeserializeBinaryTree;
+package Java.LeetCode.serializeDeserialize;
+
+import Java.LeetCode.HelperDatastructure.TreeNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

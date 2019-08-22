@@ -1,4 +1,7 @@
-package Java.companyWise.facebook.serializeDeserializeBinaryTree;
+package Java.LeetCode.serializeDeserialize.binaryTree;
+
+import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -8,7 +11,7 @@ package Java.companyWise.facebook.serializeDeserializeBinaryTree;
 
 
 public class SerializeDeSerialize {
-
+    static SerializeDeSerializeBinaryTree serializeDeSerializeBinaryTree = new SerializeDeSerializeBinaryTree();
 
     static void inOrder(TreeNode root) {
         if (null == root)
@@ -19,8 +22,6 @@ public class SerializeDeSerialize {
         inOrder(root.right);
 
     }
-
-
 
 
     public static void main(String args[]) {
@@ -53,15 +54,14 @@ public class SerializeDeSerialize {
 
         System.out.println("Original Tree Inorder");
         inOrder(root);
-
+        ISerializeDeserialize preOrder = serializeDeSerializeBinaryTree.new PreOrder();
 
         System.out.println("\nSerializing Tree");
-        ISerializeDeserialize serializeDeserialize = new SerializeDeSerializePreOrder();
 
-        String vv = serializeDeserialize.serialize(root);
+        String vv = preOrder.serialize(root);
         System.out.println(" Serialized tree " + vv);
 
-        TreeNode r = serializeDeserialize.deserialize(vv);
+        TreeNode r = preOrder.deserialize(vv);
         System.out.println("Deserialize tree , inorder");
         inOrder(r);
 
@@ -79,12 +79,15 @@ public class SerializeDeSerialize {
 
 
         System.out.println("Serializing Tree");
-        ISerializeDeserialize serializeDeserialize = new SerializeDeSerializeLevelOrder();
 
-        String vv = serializeDeserialize.serialize(root);
+
+        ISerializeDeserialize levelOrder = serializeDeSerializeBinaryTree.new LevelOrder();
+
+
+        String vv = levelOrder.serialize(root);
         System.out.println(" Serialized tree " + vv);
 
-        TreeNode r = serializeDeserialize.deserialize(vv);
+        TreeNode r = levelOrder.deserialize(vv);
         System.out.println("Deserialize tree , inorder");
         inOrder(r);
 
