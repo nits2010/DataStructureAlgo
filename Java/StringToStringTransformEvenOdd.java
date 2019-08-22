@@ -24,6 +24,8 @@ import java.util.stream.Collectors;
  * <p>
  * Given: s="abcd" ,x="abcdcd"
  * x length to big so will never be equals
+ *
+ * [Google]
  */
 public class StringToStringTransformEvenOdd {
 

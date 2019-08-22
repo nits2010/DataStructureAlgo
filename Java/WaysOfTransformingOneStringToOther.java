@@ -22,7 +22,7 @@ package Java;
  * Expalnation : Four ways will be -> "a.b..",
  *  "a..b.", ".ab.." & ".a.b." .
  * "." is where characters are removed.
- * Asked in : Google
+ * Asked in : [Google]
  */
 public class WaysOfTransformingOneStringToOther {
 

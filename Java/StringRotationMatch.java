@@ -9,6 +9,24 @@ import java.util.Map;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 16/04/19
  * Description: https://www.careercup.com/question?id=5747832811159552
+ *
+ * You are given an array of strings. For example, ["AB", "BC", "FOO", "ZA", "BAZ"]
+ * - Output strings where you can get from one to the other using any ROT transformation.
+ *
+ * ROT_1(AB) = BC
+ * ROT_1(BC) = CD
+ * ROT_25(AB) = ZA
+ * AB,BC you can go from one to the other using ROT_1
+ * Input: list of strings
+ * Output: strings where you can get from one to the other using any ROT transformation.
+ * Example:
+ * Input : ["AB", "BC", "FOO", "ZA", "BAZ"]
+ * Output: [ [ab, bc] , [ab, za] ]
+ * AB,BC because you can go from one to the other using ROT_1
+ * AB,ZA because you can go from one to the other using ROT_25
+ * Do not return FOO, BAZ you can’t get from one to the other.
+ *
+ * [Google]
  */
 public class StringRotationMatch {
 
@@ -43,8 +61,7 @@ public class StringRotationMatch {
         List<Pair> out = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) { //O(n)
             for (int j = i + 1; j < arr.length; j++) { //O(n)
-                if (i == j)
-                    continue;
+
 
                 String s1 = arr[i];
                 String s2 = arr[j];
@@ -90,7 +107,7 @@ public class StringRotationMatch {
         Map<String, List<Integer>> duplicates = new HashMap<>();
 
         int i = 0;
-        //This loop will run at most O(n) time since in inner loop even all of them map to one entry only, then each element will touch at most 2 times
+        //This loop will run at most O(n) time since, in the inner loop if all of them map to one entry only, then each element will touch at most 2 times
         for (String s : transformed) { //O(n)
 
             List<Integer> entries = duplicates.getOrDefault(s, new ArrayList<>());
