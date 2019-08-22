@@ -1,17 +1,15 @@
-package Java.LeetCode.serializeDeserialize.binaryTree;
+package Java.LeetCode.serializeDeserialize.binarSearchTree;
 
 import Java.LeetCode.HelperDatastructure.TreeNode;
 import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
- * Date: 04/04/19
+ * Date: 2019-08-22
  * Description:
  */
-
-
-public class SerializeDeSerialize {
-    static SerializeDeSerializeBinaryTree serializeDeSerializeBinaryTree = new SerializeDeSerializeBinaryTree();
+public class Driver {
+    static SerializeDeSerializeBinarySearchTree serializeDeSerializeBinarySearchTree = new SerializeDeSerializeBinarySearchTree();
 
     static void inOrder(TreeNode root) {
         if (null == root)
@@ -28,22 +26,22 @@ public class SerializeDeSerialize {
 
 
         preOrder();
-        levelOrder();
+        postOrder();
 
 
     }
 
     private static TreeNode getTree() {
-        TreeNode root = new TreeNode(2);
+        TreeNode root = new TreeNode(10);
 
-        root.left = new TreeNode(3);
-        root.right = new TreeNode(5);
+        root.left = new TreeNode(6);
+        root.right = new TreeNode(20);
 
-        root.left.left = new TreeNode(11);
-        root.left.right = new TreeNode(4);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(8);
 
         root.right.left = null;
-        root.right.right = new TreeNode(9);
+        root.right.right = new TreeNode(30);
 
         return root;
     }
@@ -54,7 +52,7 @@ public class SerializeDeSerialize {
 
         System.out.println("Original Tree Inorder");
         inOrder(root);
-        ISerializeDeserialize preOrder = serializeDeSerializeBinaryTree.new PreOrder();
+        ISerializeDeserialize preOrder = serializeDeSerializeBinarySearchTree.new PreOrder();
 
         System.out.println("\nSerializing Tree");
 
@@ -69,7 +67,7 @@ public class SerializeDeSerialize {
     }
 
 
-    private static void levelOrder() {
+    private static void postOrder() {
 
         System.out.println("\n\n Level order ");
         TreeNode root = getTree();
@@ -81,7 +79,7 @@ public class SerializeDeSerialize {
         System.out.println("Serializing Tree");
 
 
-        ISerializeDeserialize levelOrder = serializeDeSerializeBinaryTree.new LevelOrder();
+        ISerializeDeserialize levelOrder = serializeDeSerializeBinarySearchTree.new PostOrder();
 
 
         String vv = levelOrder.serialize(root);
