@@ -1,4 +1,4 @@
-package Java;
+package Java.companyWise.Google;
 
 import javafx.util.Pair;
 
@@ -9,7 +9,6 @@ import java.util.*;
  * Date: 12/04/19
  * Description: https://www.careercup.com/question?id=5763748409638912
  * <p>
- * Set Matrix Zeroes II
  * There are orbs on an NxM board ('O' denotes orb. 'X' denotes empty slot).
  * <p>
  * Whenever two orbs are in the same column or the same row, you get to erase one of them.
@@ -50,6 +49,11 @@ import java.util.*;
  * erase(0,0), (1,1), (3,2)
  * <p>
  * Return 3
+ * <p>
+ * [Google]
+ * <p>
+ * {@link Java.LeetCode.SetMatrixZeroes}
+ * *
  */
 
 public class SetMatrixZerosEraseOrbsXs {
@@ -130,8 +134,72 @@ public class SetMatrixZerosEraseOrbsXs {
 
     }
 
+
     /**
-     * This will count for any given row, how many orbs(o) are there, we call them connected comoponets
+     * Similar like khans topological sort;
+     * we first build the graph from given matrix s.t. there is edge from a row to col where an orbs found (undirected graph)
+     * then after we calculate degree of each orbs
+     * then run topological sort till there is 1 or left whose degree is more than 0
+     * <p>
+     * {@link Java.graph.TopologicalSorts}
+     *
+     * @param matrix
+     * @return
+     */
+    private static char[][] eraseOrbs(char[][] matrix) {
+
+
+        Pair<Map<Integer, Set<Integer>>, Map<Integer, Set<Integer>>> mapMapPair = buildGraphAndEdges(matrix);
+        Map<Integer, Set<Integer>> row = mapMapPair.getKey();
+        Map<Integer, Set<Integer>> col = mapMapPair.getValue();
+
+
+        //Count degree
+        PriorityQueue<DegreeNode> priorityQueue = getDegreeInPQ(matrix.length, row, col);
+
+
+        //Delete till every node has zero degree except last node
+        while (!priorityQueue.isEmpty()) {
+
+            DegreeNode node = priorityQueue.peek();
+
+            //decrease the degree
+            node.degree--;
+
+            //if it has 0 degree, then pop it to not to process further
+            if (node.degree == 0)
+                priorityQueue.poll();
+            else {
+                //If all other node degree is not 0? in that case only one node has more than 0 degree
+                if (priorityQueue.size() <= 1) {
+                    break;
+                }
+            }
+
+            //Find and remove the degree
+            if (!row.isEmpty() && row.containsKey(node.i) && row.get(node.i).contains(node.j)) {
+                row.get(node.i).remove(node.j);
+                if (row.get(node.i).size() == 0)
+                    row.remove(node.i);
+            }
+
+            if (!col.isEmpty() && col.containsKey(node.j) && col.get(node.j).contains(node.i)) {
+                col.get(node.j).remove(node.i);
+                if (col.get(node.j).size() == 0)
+                    col.remove(node.j);
+            }
+
+            matrix[node.i][node.j] = 'X';
+
+        }
+
+
+        return matrix;
+    }
+
+
+    /**
+     * This will count for any given row, how many orbs(o) are there, we call them connected components
      * similarly for columns
      * i->(j's) and
      * j -> (i's)
@@ -185,78 +253,7 @@ public class SetMatrixZerosEraseOrbsXs {
             }
         }
 
-
-//        for (Integer i : row.keySet()) {
-//            for (Integer j : row.get(i)) {
-//                int degree = row.get(i).size() + col.getOrDefault(j, new HashSet<>()).size() - 2;
-//                if (degree > 0)
-//                    priorityQueue.offer(new DegreeNode(i, j, degree));
-//            }
-//        }
-
-
         return priorityQueue;
     }
-
-    /**
-     * Similar like khans topological sort;
-     * we first build the graph from given matrix s.t. there is edge from a row to col where an orbs found (undirected graph)
-     * then after we calculate degree of each orbs
-     * then run topological sort till there is 1 or left whose degree is more than 0
-     *
-     * @param matrix
-     * @return
-     */
-    private static char[][] eraseOrbs(char[][] matrix) {
-
-
-        Pair<Map<Integer, Set<Integer>>, Map<Integer, Set<Integer>>> mapMapPair = buildGraphAndEdges(matrix);
-        Map<Integer, Set<Integer>> row = mapMapPair.getKey();
-        Map<Integer, Set<Integer>> col = mapMapPair.getValue();
-
-
-        //Count degree
-        PriorityQueue<DegreeNode> priorityQueue = getDegreeInPQ(matrix.length, row, col);
-
-
-        //Delete till every node has zero degree except last node
-        while (!priorityQueue.isEmpty()) {
-
-            DegreeNode node = priorityQueue.peek();
-
-            //decrease the degree
-            node.degree--;
-
-            //if it has more degree, then push it to process further
-            if (node.degree == 0)
-                priorityQueue.poll();
-            else {
-                //If all other node degree is 0? in that case only one node has more than 0 degree
-                if (priorityQueue.size() <= 1) {
-                    break;
-                }
-            }
-
-            //Find and remove the degree
-            if (!row.isEmpty() && row.containsKey(node.i) && row.get(node.i).contains(node.j)) {
-                row.get(node.i).remove(node.j);
-                if (row.get(node.i).size() == 0)
-                    row.remove(node.i);
-            }
-
-            if (!col.isEmpty() && col.containsKey(node.j) && col.get(node.j).contains(node.i)) {
-                col.get(node.j).remove(node.i);
-                if (col.get(node.j).size() == 0)
-                    col.remove(node.j);
-            }
-
-            matrix[node.i][node.j] = 'X';
-
-        }
-
-
-        return matrix;
-    }
-
 
 }

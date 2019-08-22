@@ -1,4 +1,4 @@
-package Java;
+package Java.companyWise.Google;
 
 import java.util.HashMap;
 import java.util.Map;

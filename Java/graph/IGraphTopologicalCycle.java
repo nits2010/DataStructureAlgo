@@ -7,7 +7,7 @@ import java.util.List;
  * Date: 12/04/19
  * Description:
  */
-public interface IGraph extends IGraphBase {
+public interface IGraphTopologicalCycle extends IGraphBase {
 
 
 

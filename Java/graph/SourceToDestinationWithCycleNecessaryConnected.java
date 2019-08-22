@@ -14,7 +14,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
     public static void main(String args[]) {
 
         int vertices = 9;
-        IGraph directedGraph = new DirectedGraph(vertices);
+        IGraphTopologicalCycle directedGraph = new DirectedGraph(vertices);
 
         directedGraph.addEdge(2, 3);
         directedGraph.addEdge(2, 4);
@@ -31,7 +31,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         System.out.println(isNecessaryConnected(directedGraph, vertices, 2, 8));
 
 
-        IGraph directedGraph2 = new DirectedGraph(vertices);
+        IGraphTopologicalCycle directedGraph2 = new DirectedGraph(vertices);
 
         directedGraph2.addEdge(2, 3);
         directedGraph2.addEdge(2, 1);
@@ -50,7 +50,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
 
     }
 
-    private static boolean isNecessaryConnected(IGraph directedGraph, int vertices, int source, int destination) {
+    private static boolean isNecessaryConnected(IGraphTopologicalCycle directedGraph, int vertices, int source, int destination) {
         if (source > vertices || destination > vertices || source < 0 || destination < 0)
             return false;
 
@@ -68,7 +68,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         return true;
     }
 
-    private static boolean dfs(IGraph directedGraph, Set<Integer> visited, boolean[] path, int source, int destination, int current) {
+    private static boolean dfs(IGraphTopologicalCycle directedGraph, Set<Integer> visited, boolean[] path, int source, int destination, int current) {
 
         //if this path already been computed
         if (path[current])

@@ -16,6 +16,8 @@ package Java;
  * * New number added is 5.0, SMA = 3.0
  * * New number added is 6.0, SMA = 4.666666666666667
  * * New number added is 8.0, SMA = 6.333333333333333
+ *
+ * {@link Java.companyWise.facebook.MovingAverage}
  */
 public class SimpleMovingAverage {
     static class MovingAverageHolder {

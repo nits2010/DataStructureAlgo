@@ -5,6 +5,8 @@ package Java.companyWise.facebook;
  * Date: 03/04/19
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.
+ *
+ * {@link Java.SimpleMovingAverage}
  */
 public class MovingAverage {
 

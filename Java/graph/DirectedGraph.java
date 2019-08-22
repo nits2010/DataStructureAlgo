@@ -8,7 +8,7 @@ import java.util.stream.Stream;
  * Date: 20/02/19
  * Description:
  */
-public class DirectedGraph implements IGraph {
+public class DirectedGraph implements IGraphTopologicalCycle {
 
 
     //To hold the edges
@@ -49,45 +49,9 @@ public class DirectedGraph implements IGraph {
      */
     @Override
     public List<Integer> topologicalSort() {
-
-        boolean visited[] = new boolean[this.vertices];
-
-        Arrays.fill(visited, false);
-
-        //visit every vertices one by one;
-
-        Stack<Integer> stack = new Stack<>();
-
-        Stream<Integer> verticesStream = Stream.iterate(0, x -> x + 1).limit(this.vertices);
-
-        verticesStream
-                .filter(x -> !visited[x])
-                .forEach(x -> topologicalSort(visited, stack, x));
-
-
-        final List<Integer> sorted = new ArrayList<>(stack.size());
-        while (!stack.isEmpty()) {
-            sorted.add(stack.pop());
-        }
-
-
-        return sorted;
+        return TopologicalSorts.topologicalSort(this.vertices, this.adjancyList);
     }
 
-
-    private void topologicalSort(boolean[] visited, Stack<Integer> stack, int x) {
-
-        visited[x] = true;
-
-        List<Integer> edges = this.adjancyList[x];
-
-
-        edges.stream()
-                .filter(i -> !visited[i])
-                .forEach(i -> topologicalSort(visited, stack, i));
-        stack.push(x);
-
-    }
 
     /**
      * This works for only, Directed Graph
@@ -97,153 +61,17 @@ public class DirectedGraph implements IGraph {
      */
     @Override
     public List<Integer> topologicalSortKhanAlgo() {
-        List<Integer> top = new ArrayList<>(this.vertices);
-
-
-        //count inDegree
-        int[] inDegree = new int[this.vertices];
-
-
-        for (int i = 0; i < this.vertices; i++) {
-
-            for (Integer adj : adjancyList[i]) {
-                inDegree[adj]++;
-            }
-        }
-
-
-        Queue<Integer> queue = new LinkedList<>();
-
-        //push all 0 degree elements
-        for (int i = 0; i < this.vertices; i++)
-            if (inDegree[i] == 0)
-                queue.offer(i);
-
-
-        //Process one by one
-        while (!queue.isEmpty()) {
-
-            int current = queue.poll();
-            top.add(current);
-
-            for (Integer adj : adjancyList[current]) {
-                inDegree[adj]--;
-                if (inDegree[adj] == 0)
-                    queue.offer(adj);
-
-            }
-        }
-
-        if (top.size() != this.vertices) {
-            System.out.println("Cycle exists");
-            return new ArrayList<>();
-        }
-
-        return top;
+        return TopologicalSorts.topologicalSortKhanAlgo(this.adjancyList, this.vertices);
     }
 
     @Override
     public boolean detectCycleKhanAlgo() {
-        List<Integer> top = new ArrayList<>(this.vertices);
-
-
-        //count inDegree
-        int[] inDegree = new int[this.vertices];
-
-
-        for (int i = 0; i < this.vertices; i++) {
-
-            for (Integer adj : adjancyList[i]) {
-                inDegree[adj]++;
-            }
-        }
-
-
-        Queue<Integer> queue = new LinkedList<>();
-
-        //push all 0 degree elements
-        for (int i = 0; i < this.vertices; i++)
-            if (inDegree[i] == 0)
-                queue.offer(i);
-
-
-        //Process one by one
-        while (!queue.isEmpty()) {
-
-            int current = queue.poll();
-            top.add(current);
-
-            for (Integer adj : adjancyList[current]) {
-                inDegree[adj]--;
-                if (inDegree[adj] == 0)
-                    queue.offer(adj);
-
-            }
-        }
-
-
-        return top.size() != this.vertices;
-
+        return GraphDetectCycle.detectCycleKhanAlgo(this.vertices, this.adjancyList);
     }
 
     @Override
     public boolean detectCycleDFS() {
-
-        return detectCycle(adjancyList, this.vertices);
-    }
-
-
-    private boolean detectCycle(List<Integer>[] adjList, int vertices) {
-
-        int visited[] = new int[vertices]; //initially all are false;
-
-        /**
-         * Visit each vertices
-         */
-        for (int c = 0; c < vertices; c++) {
-            //Visit those which has not visit yet
-
-            if (visited[c] != -1 && detectCycle(adjList, c, visited))
-                return false;
-
-        }
-        return true;
-    }
-
-    /**
-     * DFS
-     *
-     * @param adjList
-     * @param vertex
-     * @param visited
-     * @return
-     */
-    private boolean detectCycle(List<Integer>[] adjList, int vertex, int[] visited) {
-
-        /**
-         * If visited already, then there is a cycle
-         */
-        if (visited[vertex] == 1)
-            return true;
-
-        /**
-         * This means, that this vertex has been covered
-         */
-        if (visited[vertex] == -1)
-            return false;
-
-        visited[vertex] = 1;
-
-        for (Integer c : adjList[vertex])
-            if (detectCycle(adjList, c, visited))
-                return true;
-
-        /**
-         * Mark this vertex as covered
-         */
-        visited[vertex] = -1;
-
-        return false;
+        return GraphDetectCycle.detectCycleDFS(this.vertices, this.adjancyList);
     }
 
 

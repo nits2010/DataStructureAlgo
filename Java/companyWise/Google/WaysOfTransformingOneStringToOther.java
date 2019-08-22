@@ -1,4 +1,4 @@
-package Java;
+package Java.companyWise.Google;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
