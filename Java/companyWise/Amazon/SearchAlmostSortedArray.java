@@ -1,10 +1,12 @@
-package Java;
+package Java.companyWise.Amazon;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-22
  * Description: https://www.geeksforgeeks.org/search-almost-sorted-array/#_=_
- * Given an array which is sorted, but after sorting some elements are moved to either of the adjacent positions, i.e., arr[i] may be present at arr[i+1] or arr[i-1]. Write an efficient function to search an element in this array. Basically the element arr[i] can only be swapped with either arr[i+1] or arr[i-1].
+ * Given an array which is sorted, but after sorting some elements are moved to either of the adjacent positions, i.e.,
+ * arr[i] may be present at arr[i+1] or arr[i-1]. Write an efficient function to search an element in this array.
+ * Basically the element arr[i] can only be swapped with either arr[i+1] or arr[i-1].
  * <p>
  * For example consider the array {2, 3, 10, 4, 40}, 4 is moved to next position and 10 is moved to previous position.
  * <p>
