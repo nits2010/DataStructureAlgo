@@ -5,7 +5,10 @@ import Java.HelpersToPrint.Printer;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-21
- * Description: https://leetcode.com/problems/jump-game/
+ * Description:
+ * https://leetcode.com/problems/jump-game/
+ * https://leetcode.com/problems/jump-game-ii/
+ *
  * https://www.geeksforgeeks.org/minimum-number-jumps-reach-endset-2on-solution/
  * Given an array of integers where each element represents the max number of steps that can be made forward from that element. Write a function to return the minimum number of jumps to reach the end of the array (starting from the first element). If an element is 0, then we cannot move through that element.
  * <p>
