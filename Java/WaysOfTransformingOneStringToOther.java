@@ -5,6 +5,24 @@ package Java;
  * Date: 09/04/19
  * Description:
  * https://www.geeksforgeeks.org/ways-transforming-one-string-removing-0-characters/
+ *
+ * Given two sequences A, B, find out number of unique ways in sequence A, to form a subsequence of A that is identical to the
+ * sequence B. Transformation is meant by converting string A (by removing 0 or more characters) to string B.
+ *
+ * Examples:
+ *
+ * Input : A = "abcccdf", B = "abccdf"
+ * Output : 3
+ * Explanation : Three ways will be -> "ab.ccdf",
+ * "abc.cdf" & "abcc.df" .
+ * "." is where character is removed.
+ *
+ * Input : A = "aabba", B = "ab"
+ * Output : 4
+ * Expalnation : Four ways will be -> "a.b..",
+ *  "a..b.", ".ab.." & ".a.b." .
+ * "." is where characters are removed.
+ * Asked in : Google
  */
 public class WaysOfTransformingOneStringToOther {
 
