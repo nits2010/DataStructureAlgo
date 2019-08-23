@@ -38,6 +38,8 @@ public class ReCycledPair {
         System.out.println("Total :" + pairs.size());
         pairs.stream().forEach(p -> System.out.println(" first :" + p.getKey() + " second " + p.getValue()));
 
+        String s = "";
+        s.lastIndexOf('a');
     }
 
 
