@@ -113,6 +113,7 @@ public class ContainerWithMostWater {
 
                 if (height[left] < height[right]) {
                     left++;
+
                     while (left < right && height[left] <= height[left - 1]) ;
 
 

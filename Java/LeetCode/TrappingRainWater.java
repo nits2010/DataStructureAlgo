@@ -16,6 +16,8 @@ package Java.LeetCode;
  * Output: 6
  * <p>
  * https://www.geeksforgeeks.org/trapping-rain-water/
+ *
+ * {@link ContainerWithMostWater}
  */
 public class TrappingRainWater {
 
