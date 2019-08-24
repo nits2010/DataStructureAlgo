@@ -28,6 +28,8 @@ import java.util.Map;
  * Note that the selected boxes are in consecutive order
  * with indexes {1, 2, 3, 4}.
  * Source: Asked in [Amazon].
+ * <p>
+ * {@link Java.LeetCode.sumsubarrayproblems.LongestSubArraySumK}
  */
 public class MaximumNumberChocolatesDistributedEquallyAmongKStudents {
 
