@@ -87,8 +87,10 @@ class PermutationUsingLoops {
     }
 
     private static int getJ(int[] p, int i) {
-        if (i % 2 != 0) return p[i];
-        else return 0;
+        if (i % 2 != 0)
+            return p[i];
+        else
+            return 0;
     }
 
     private static String getNextPermutation(String input, int i, int j) {

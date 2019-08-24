@@ -62,18 +62,25 @@ class PermutationsSortedLexicographicOrderSolution {
 
         while (true) {
 
+            //"DCFEBA" -> C (1)
             first = getFirst(input);
 
+            //FEDCBA; first = -1
             //we are done
             if (first < 0)
                 return;
 
+            //"DCFEBA" & first= C(1) ; ceil = E (3)
             ceil = getCeilOfFirst(input, first);
 
+            //"DCFEBA" ; first= C(1) ; ceil = E (3)
+            // Swap -> "DEFCBA"
             swap(input, first, ceil);
 
+            //"DEFCBA" -> "DEABCF"
             reverse(input, first + 1, input.length - 1);
 
+            //"DEABCF"
             permutations.add(new String(input));
 
 
@@ -89,6 +96,18 @@ class PermutationsSortedLexicographicOrderSolution {
         input[j] = t;
     }
 
+    /**
+     * "DCFEBA"
+     * output: C
+     *
+     * B > A
+     * E > B
+     * F > E
+     * C < F <- output
+     *
+     * @param input
+     * @return
+     */
     private int getFirst(char[] input) {
         int len = input.length;
         for (int i = len - 2; i >= 0; i--) {
@@ -99,6 +118,20 @@ class PermutationsSortedLexicographicOrderSolution {
         return -1;
     }
 
+    /**
+     * "DCFEBA" and first = 1 -> C
+     * output: E
+     *
+     * F > C (F)
+     * E > C && E < F (E)
+     * B < C
+     * A < C
+     * End -> our output 'E'
+     *
+     * @param input
+     * @param first
+     * @return
+     */
     private int getCeilOfFirst(char[] input, int first) {
         int len = input.length;
         int ceil = first + 1;
@@ -109,6 +142,14 @@ class PermutationsSortedLexicographicOrderSolution {
 
     }
 
+    /**
+     * "DEFCBA" ; start = F(2) and end = A(5)
+     * Reverse= "DEABCF"
+     *
+     * @param input
+     * @param start
+     * @param end
+     */
     private void reverse(char[] input, int start, int end) {
         if (start > end || start == end) return;
         while (start < end) {

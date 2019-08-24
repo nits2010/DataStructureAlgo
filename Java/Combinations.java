@@ -31,9 +31,13 @@ public class Combinations {
         int n = str.length();
 
         for (int i = start; i < n; i++) {
+
             comb.append(str.charAt(i));
+
             out.add(comb.toString());
+
             combination(str, out, comb, i + 1);
+
             comb.deleteCharAt(comb.length() - 1);
         }
     }
