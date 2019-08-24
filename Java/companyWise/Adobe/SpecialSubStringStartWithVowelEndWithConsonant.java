@@ -165,7 +165,6 @@ class SpecialSubStringStartWithVowelEndWithConsonantIndexSearching {
      */
 
     /**
-     * Brute Force:
      *
      * @param str
      * @return
@@ -293,7 +292,7 @@ class SpecialSubStringStartWithVowelEndWithConsonantSuffixArray {
 
     /*
        Above algorithm surely cut many branches that we should not explore but algorithm lags in finding the sub-string efficiently.
-       We can use suffix array. Suffix array can be build in O(n^2) or O(n*log(n) * log(n) ) or O(nLog(n) Or even O(n) time.
+       We can use suffix array. Suffix array can be build in O(n^2) or O(n*log(n) * log(n) ) or O(nLog(n)) Or even O(n) time.
                   0  1   2
         example [ a, b, ,c ] -> Suffixes array [ abc, bc, c ]
        ALSO FIND THE last consonant index {this will help us to find the first and last sub-string }
@@ -306,6 +305,8 @@ class SpecialSubStringStartWithVowelEndWithConsonantSuffixArray {
 
         Time complexity: O(n)
         Space: O(n)
+
+        Below implementation is : O(n * (log(n))^2) Because of suffix array
 
      */
 
