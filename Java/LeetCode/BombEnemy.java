@@ -8,6 +8,7 @@ import java.util.Arrays;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-25
  * Description: https://leetcode.com/problems/bomb-enemy
+ * http://leetcode.liangjiateng.cn/leetcode/bomb-enemy/description
  * <p>
  * 361.Bomb Enemy
  * Given a 2D grid, each cell is either a wall 'W', an enemy 'E' or empty '0' (the number zero), return the maximum enemies you can kill using one bomb.
