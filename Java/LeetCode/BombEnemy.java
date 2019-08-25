@@ -25,7 +25,7 @@ import java.util.Arrays;
  * 0 E 0 0
  * <p>
  * Placing a bomb at (1,1) kills 3 enemies.
- *
+ * <p>
  * similar idea {@link Java.LeetCode.LargetstRectangle.MaximumSizeSquareMatrix} to cache row and column
  */
 public class BombEnemy {
@@ -33,9 +33,26 @@ public class BombEnemy {
 
     public static void main(String[] args) {
 
-        test(new char[][]{{'0', 'E', '0', '0'}, {'E', '0', 'W', 'E'}, {'0', 'E', '0', '0'}}, 3);
-        test(new char[][]{{'0', 'E', 'E', '0'}, {'E', 'W', 'W', 'E'}, {'0', 'E', 'E', '0'}}, 3);
-        test(new char[][]{{'0', 'E', 'W', 'E'}, {'E', 'W', 'W', 'E'}, {'0', 'E', 'E', '0'}}, 4);
+        test(new char[][]{
+                {'0', 'E', '0', '0'},
+                {'E', '0', 'W', 'E'},
+                {'0', 'E', '0', '0'}}, 3);
+
+        test(new char[][]{
+                {'0', 'E', 'E', '0'},
+                {'E', 'W', 'W', 'E'},
+                {'0', 'E', 'E', '0'}}, 3);
+
+        test(new char[][]{
+                {'0', 'E', 'W', 'E'},
+                {'E', 'W', 'W', 'E'},
+                {'0', 'E', 'E', '0'}}, 4);
+
+
+        test(new char[][]{
+                {'F', 'E', 'W', '0'},
+                {'E', 'W', 'W', 'W'},
+                {'F', 'E', 'W', '0'}}, 0);
     }
 
     private static void test(char[][] grid, int expected) {
@@ -77,10 +94,10 @@ class BombEnemyMemo {
                 if (grid[i][j] == '0') {
 
                     if (row[i] == -1)
-                        row[i] = rowKill(grid, i);
+                        row[i] = rowKill(grid, i, j);
 
                     if (col[j] == -1)
-                        col[j] = colKill(grid, j);
+                        col[j] = colKill(grid, i, j);
 
                     maxKills = Math.max(maxKills, row[i] + col[j]);
 
@@ -93,31 +110,45 @@ class BombEnemyMemo {
     }
 
     //O(n)
-    private int colKill(char[][] grid, int c) {
-        int colKill = 0;
-        for (int x = 0; x < grid.length; x++) {
-            if (grid[x][c] == 'W')
-                break;
+    private int colKill(char[][] grid, int r, int c) {
+        int count = 0;
 
-            if (grid[x][c] == 'E')
-                colKill++;
+        for (int i = r; i < grid.length; i++)
+            if (grid[i][c] == 'W')
+                break;
+            else if (grid[i][c] == 'E')
+                count++;
+
+        if (r != 0) {
+            for (int i = r; i >= 0; i--)
+                if (grid[i][c] == 'W')
+                    break;
+                else if (grid[i][c] == 'E')
+                    count++;
         }
 
-        return colKill;
+        return count;
     }
 
     //O(m)
-    private int rowKill(char grid[][], int r) {
-        int rowKill = 0;
-        for (int x = 0; x < grid[0].length; x++) {
-            if (grid[r][x] == 'W')
-                break;
+    private int rowKill(char grid[][], int r, int c) {
+        int count = 0;
 
-            if (grid[r][x] == 'E')
-                rowKill++;
+        for (int i = c; i < grid[0].length; i++)
+            if (grid[r][i] == 'W')
+                break;
+            else if (grid[r][i] == 'E')
+                count++;
+
+        if (c != 0) {
+            for (int i = c; i >= 0; i--)
+                if (grid[r][i] == 'W')
+                    break;
+                else if (grid[r][i] == 'E')
+                    count++;
         }
 
-        return rowKill;
+        return count;
     }
 
 }
@@ -150,8 +181,8 @@ class BombEnemyBruteForce {
 
                 if (grid[i][j] == '0') {
 
-                    int rowKill = rowKill(grid, i);
-                    int colKill = colKill(grid, j);
+                    int rowKill = rowKill(grid, i, j);
+                    int colKill = colKill(grid, i, j);
                     maxKills = Math.max(maxKills, rowKill + colKill);
 
                 }
@@ -162,31 +193,45 @@ class BombEnemyBruteForce {
     }
 
     //O(n)
-    private int colKill(char[][] grid, int c) {
-        int colKill = 0;
-        for (int x = 0; x < grid.length; x++) {
-            if (grid[x][c] == 'W')
-                break;
+    private int colKill(char[][] grid, int r, int c) {
+        int count = 0;
 
-            if (grid[x][c] == 'E')
-                colKill++;
+        for (int i = r; i < grid.length; i++)
+            if (grid[i][c] == 'W')
+                break;
+            else if (grid[i][c] == 'E')
+                count++;
+
+        if (r != 0) {
+            for (int i = r; i >= 0; i--)
+                if (grid[i][c] == 'W')
+                    break;
+                else if (grid[i][c] == 'E')
+                    count++;
         }
 
-        return colKill;
+        return count;
     }
 
     //O(m)
-    private int rowKill(char grid[][], int r) {
-        int rowKill = 0;
-        for (int x = 0; x < grid[0].length; x++) {
-            if (grid[r][x] == 'W')
-                break;
+    private int rowKill(char grid[][], int r, int c) {
+        int count = 0;
 
-            if (grid[r][x] == 'E')
-                rowKill++;
+        for (int i = c; i < grid[0].length; i++)
+            if (grid[r][i] == 'W')
+                break;
+            else if (grid[r][i] == 'E')
+                count++;
+
+        if (c != 0) {
+            for (int i = c; i >= 0; i--)
+                if (grid[r][i] == 'W')
+                    break;
+                else if (grid[r][i] == 'E')
+                    count++;
         }
 
-        return rowKill;
+        return count;
     }
 
 
