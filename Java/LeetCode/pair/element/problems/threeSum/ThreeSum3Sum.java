@@ -1,6 +1,7 @@
-package Java.LeetCode.sumProblem;
+package Java.LeetCode.pair.element.problems.threeSum;
 
 import Java.HelpersToPrint.Printer;
+import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
 import java.util.*;
 

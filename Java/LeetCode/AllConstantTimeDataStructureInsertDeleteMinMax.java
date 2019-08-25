@@ -32,6 +32,9 @@ public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
 class AllOne {
 
+    /**
+     * DLL used to return Max (from Head) or Min(tail)
+     */
     class Node {
         int val;
         Set<String> keys;
@@ -51,17 +54,17 @@ class AllOne {
     Node tail;
 
     // key -> Node
-    Map<String, Node> keyMap;
+    Map<String, Node> keyVsNodeMap;
 
     // count -> Node
-    Map<Integer, Node> indexMap;
+    Map<Integer, Node> countVsNodeMap;
 
     /**
      * Initialize your data structure here.
      */
     public AllOne() {
-        keyMap = new HashMap<>();
-        indexMap = new HashMap<>();
+        keyVsNodeMap = new HashMap<>();
+        countVsNodeMap = new HashMap<>();
         head = new Node(-1);
         tail = new Node(-1);
         head.next = tail;
@@ -72,18 +75,34 @@ class AllOne {
      * Inserts a new key <Key> with value 1. Or increments an existing key by 1.
      */
     public void inc(String key) {
-        int newCount = !keyMap.containsKey(key) ? 1 : keyMap.get(key).val + 1;
-        Node oldNode = !keyMap.containsKey(key) ? tail : keyMap.get(key);
+        int newCount = !keyVsNodeMap.containsKey(key) ? 1 : keyVsNodeMap.get(key).val + 1;
+        Node oldNode = !keyVsNodeMap.containsKey(key) ? tail : keyVsNodeMap.get(key);
 
-        if (!indexMap.containsKey(newCount)) {
+        /**
+         * If this is a new count, then add to countMap and at the tail.
+         */
+        if (!countVsNodeMap.containsKey(newCount)) {
             Node newNode = new Node(newCount);
-            indexMap.put(newCount, newNode);
+            countVsNodeMap.put(newCount, newNode);
             insertBefore(newNode, oldNode);
         }
 
-        indexMap.get(newCount).keys.add(key);
-        keyMap.put(key, indexMap.get(newCount));
+        /**
+         * update keys for this count
+         */
+        countVsNodeMap.get(newCount).keys.add(key);
+        /**
+         * Push the node to key map
+         */
+        keyVsNodeMap.put(key, countVsNodeMap.get(newCount));
+        /**
+         * Remove keys from old node, as the count has been changed
+         */
         oldNode.keys.remove(key);
+
+        /**
+         * Modify DLL accordingly
+         */
         refreshNode(oldNode);
     }
 
@@ -91,22 +110,51 @@ class AllOne {
      * Decrements an existing key by 1. If Key's value is 1, remove it from the data structure.
      */
     public void dec(String key) {
-        if (!keyMap.containsKey(key)) return;
+        if (!keyVsNodeMap.containsKey(key)) return;
 
-        Node oldNode = keyMap.get(key);
+        /**
+         * If key exist, we need to reduce the count
+         */
+        Node oldNode = keyVsNodeMap.get(key);
+
+        /**
+         * if key has only one count, then remove it completely
+         */
         if (oldNode.val == 1) {
-            keyMap.remove(key);
+            keyVsNodeMap.remove(key);
         } else {
+            /**
+             * If key has more than 1 count, decrease hte count
+             */
             int newCount = oldNode.val - 1;
-            if (!indexMap.containsKey(newCount)) {
+
+            /**
+             * If this count seen first time, add it and insert after old count node, as hte count has reduced so it will be
+             * towards tail
+             */
+            if (!countVsNodeMap.containsKey(newCount)) {
                 Node newNode = new Node(newCount);
-                indexMap.put(newCount, newNode);
+                countVsNodeMap.put(newCount, newNode);
                 insertAfter(newNode, oldNode);
             }
-            indexMap.get(newCount).keys.add(key);
-            keyMap.put(key, indexMap.get(newCount));
+            /**
+             * update keys for this count
+             */
+            countVsNodeMap.get(newCount).keys.add(key);
+            /**
+             * Push the node to key map
+             */
+            keyVsNodeMap.put(key, countVsNodeMap.get(newCount));
         }
+        /**
+         * Remove keys from old node, as the count has been changed
+         */
         oldNode.keys.remove(key);
+
+
+        /**
+         * Modify DLL accordingly
+         */
         refreshNode(oldNode);
     }
 
@@ -131,7 +179,7 @@ class AllOne {
         if (node.keys.size() == 0) {
             node.pre.next = node.next;
             node.next.pre = node.pre;
-            indexMap.remove(node.val);
+            countVsNodeMap.remove(node.val);
         }
     }
 

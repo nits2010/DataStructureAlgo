@@ -1,4 +1,4 @@
-package Java.LeetCode;
+package Java.LeetCode.sortedrotated;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -62,18 +62,17 @@ class RotatedSortedArraySearch {
 
                 //does key lies in this sorted array
                 if (nums[low] <= target && nums[mid] >= target)
-                    high = mid - 1; //it would lie in left side
+                    high = mid - 1; //it would lie in left side since target is before mid; [low,mid-1]
                 else
-                    low = mid + 1; //it would lie in right side
-
+                    low = mid + 1; //it would lie in right side; since target is after mid; [mid+1,high]
             } else {
                 //that means nums[low..mid] is not sorted and it makes nums[mid..high] sorted
 
                 //see does it exist in other half
                 if (target >= nums[mid] && target <= nums[high])
-                    low = mid + 1;
+                    low = mid + 1; //it would lie in right side; since target is after mid; [mid+1,high]
                 else
-                    high = mid - 1;
+                    high = mid - 1; //it would lie in left side since target is before mid; [low,mid-1]
             }
 
         }

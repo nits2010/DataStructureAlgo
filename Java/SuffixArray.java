@@ -9,7 +9,8 @@ import java.util.Comparator;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-25
  * Description:
- *
+ * <p>
+ * https://discuss.codechef.com/t/a-tutorial-on-suffix-arrays/2950
  */
 public class SuffixArray {
 

@@ -147,6 +147,12 @@ class CountNodesInCompleteBinaryTreeUsigHeight {
     }
 
 
+    /**
+     * Simply find the size of tree O(n)
+     *
+     * @param root
+     * @return
+     */
     public int countNodesSlow(TreeNode root) {
         if (root == null)
             return (0);

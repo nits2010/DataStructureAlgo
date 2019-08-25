@@ -1,11 +1,8 @@
-package Java.LeetCode.sumProblem;
+package Java.LeetCode.pair.element.problems.threeSum;
 
 import Java.HelpersToPrint.Printer;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

@@ -1,4 +1,4 @@
-package Java.LeetCode.sumProblem;
+package Java.LeetCode.pair.element.problems.fourSum;
 
 import Java.HelpersToPrint.Printer;
 

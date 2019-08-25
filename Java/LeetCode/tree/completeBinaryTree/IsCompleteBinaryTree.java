@@ -41,9 +41,7 @@ public class IsCompleteBinaryTree {
         if (null == root)
             return true;
 
-        /**
 
-         */
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
@@ -131,7 +129,8 @@ public class IsCompleteBinaryTree {
         if (i >= nodeCount)
             return false;
 
-        return isCompleteUsingByNumbering(root.left, 2 * i + 1, nodeCount) && isCompleteUsingByNumbering(root.right, 2 * i + 2, nodeCount);
+        return isCompleteUsingByNumbering(root.left, 2 * i + 1, nodeCount)
+                && isCompleteUsingByNumbering(root.right, 2 * i + 2, nodeCount);
     }
 
 
