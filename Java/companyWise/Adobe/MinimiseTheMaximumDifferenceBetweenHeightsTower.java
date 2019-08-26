@@ -70,7 +70,7 @@ public class MinimiseTheMaximumDifferenceBetweenHeightsTower {
 
         /**
          * Algorithm:
-         * Since we the maximum and minimum element in the array at any moment defines the overall difference. Then for each update
+         * Since we know the maximum and minimum element in the array at any moment defines the overall difference. Then for each update
          * we need to track them in such a way that if increasing any element affecting max so far
          * or decreasing any element affecting min so far.
          * <p>

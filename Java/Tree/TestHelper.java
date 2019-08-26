@@ -138,4 +138,31 @@ public class TestHelper {
     }
 
 
+    public static void largestBST() {
+
+        IBinaryTree binaryTree = new BinaryTree();
+
+        BinaryTreeNode<Integer> largestBST1 = buildTree(binaryTree, new int[]{60, 55, 70, 50});
+        System.out.println("\n largest Bst size " + binaryTree.largestBSTSize(largestBST1) + " should be 4");
+
+
+        BinaryTreeNode<Integer> largestBST2 = buildTree(binaryTree, new int[]{60, 55, 70, 80, 25, 70, 54});
+        System.out.println("\n largest Bst size " + binaryTree.largestBSTSize(largestBST2) + " should be 1");
+
+
+        BinaryTreeNode<Integer> largestBST3 = buildTree(binaryTree, new int[]{70, 80, 60, 40, 90, 50, 100, 20, 50, 30, 45, 45, 55, 70, 120});
+        System.out.println("\n largest Bst size " + binaryTree.largestBSTSize(largestBST3) + "should be 7");
+
+
+    }
+
+    private static BinaryTreeNode<Integer> buildTree(IBinaryTree binaryTree, int nums[]) {
+        BinaryTreeNode<Integer> tree =
+                new BinaryTreeNode<>(nums[0]);
+        for (int i = 1; i < nums.length; i++) {
+            binaryTree.insert(nums[i], tree);
+        }
+        return tree;
+    }
+
 }

@@ -62,21 +62,10 @@ public class DriverProgramBinarySearchTree {
         TestHelper.runTraversal(binaryTree, bst);
 
 
-
         System.out.println("\n is BST: " + binaryTree.isBST(bst));
 
         ((BinarySearchTree) binaryTree).clear();
-        BinaryTreeNode<Integer> largestBST = new BinaryTreeNode<>(60);
-
-        binaryTree.insert(55, largestBST);
-        binaryTree.insert(70, largestBST);
-        binaryTree.insert(50, largestBST);
-
-
-        TestHelper.runTraversal(binaryTree, largestBST);
-
-        System.out.println("\n is BST: " + binaryTree.isBST(largestBST));
-        System.out.println("\n largest Bst size " + binaryTree.largestBSTSize(largestBST));
+        TestHelper.largestBST();
 
 
         System.out.println("Check for identical bst ");
