@@ -549,13 +549,32 @@ public interface IBinaryTree {
     }
 
 
+    default boolean isBST(TreeNode<Integer> root) {
+
+        return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+
+    default boolean isBSTUtil(TreeNode<Integer> root, Integer min, Integer max) {
+
+        if (null == root)
+            return true;
+
+
+        if (root.getData() < min || root.getData() > max)
+            return false;
+
+
+        return (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max));
+
+    }
+
+
     /****************** Java.Tree properties methods *******************/
 
     boolean search(TreeNode<Integer> root, Integer data);
 
     int largestBSTSize(TreeNode<Integer> root);
-
-    boolean isBST(TreeNode<Integer> root);
 
 
     /****************** Successors and predecessors *******************/
@@ -646,83 +665,18 @@ public interface IBinaryTree {
 
     TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta);
 
-
-    default boolean isLeaf(TreeNode root) {
-        if (root == null || (root.getLeft() == null && root.getRight() == null))
-            return true;
-        return false;
-    }
-
     /**
      * https://www.geeksforgeeks.org/flip-binary-tree/
      * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
-     *
+     * <p>
      * CODE is wrong if the left most node has right child then it is wrong
+     *
      * @param root
      * @return
      */
     default TreeNode flipTreeUpSideDown(TreeNode root) {
 
-        return flipTreeUpSideDownRecursive(root);
-    }
-
-    default TreeNode flipTreeUpSideDownRecursive(TreeNode root) {
-
-        if (root == null | root.getLeft() == null)
-            return root;
-
-        TreeNode flipped = flipTreeUpSideDownRecursive(root.getLeft());
-
-        root.getLeft().setLeft(root.getRight());
-        root.getLeft().setRight(root);
-        root.setLeft(null);
-        root.setRight(null);
-
-        return flipped;
-
-
-    }
-
-    /**
-     * In the flip operation,
-     * 1. left most node becomes the root of flipped tree and its parent become its right child
-     * 2. and the right sibling become its left child
-     * recursively.
-     *
-     * @param root
-     * @return
-     */
-    default TreeNode flipTreeUpSideDownIterative(TreeNode root) {
-        if (root == null || root.getLeft() == null)
-            return root;
-
-        TreeNode parent = null;
-        TreeNode current = root;
-        TreeNode right = null;
-        TreeNode left;
-
-        while (current != null) {
-
-            //left most node becomes the root of flipped tree
-            left = current.getLeft();
-
-
-            //the right sibling become its left child
-            current.setLeft(right);
-
-            right = current.getRight();
-
-            // and its parent become its right child
-            current.setRight(parent);
-
-
-            parent = current;
-            current = left;
-
-
-        }
-
-        return parent;
+        return FlipTreeUpSideDown.flipTreeUpSideDown(root);
     }
 
 
@@ -733,72 +687,8 @@ public interface IBinaryTree {
      * @return
      */
     default List<TreeNode> boundaryTraversal(TreeNode root) {
-
-        List<TreeNode> traversal = new LinkedList<>();
-
-        if (root == null)
-            return traversal;
-
-        traversal.add(root);
-        boundaryTraversalLeft(root.getLeft(), traversal);
-        boundaryTraversalLeaves(root.getLeft(), traversal);
-        boundaryTraversalLeaves(root.getRight(), traversal);
-        boundaryTraversalRight(root.getRight(), traversal);
-        return traversal;
+        return TreeBoundaryTraversal.boundaryTraversal(root);
     }
-
-
-    default void boundaryTraversalLeft(TreeNode root, List<TreeNode> traversal) {
-
-        if (root == null)
-            return;
-
-        if (root.getLeft() != null) {
-            traversal.add(root);
-            boundaryTraversalLeft(root.getLeft(), traversal);
-
-
-        } else if (root.getRight() != null) {
-            traversal.add(root);
-            boundaryTraversalLeft(root.getRight(), traversal);
-
-
-        }
-    }
-
-    default void boundaryTraversalLeaves(TreeNode root, List<TreeNode> traversal) {
-
-        if (root == null)
-            return;
-
-
-        boundaryTraversalLeaves(root.getLeft(), traversal);
-
-        if (isLeaf(root)) {
-            traversal.add(root);
-        }
-
-        boundaryTraversalLeaves(root.getRight(), traversal);
-
-
-    }
-    default void boundaryTraversalRight(TreeNode root, List<TreeNode> traversal) {
-
-        if (root == null)
-            return;
-
-        if (root.getRight() != null) {
-            boundaryTraversalRight(root.getRight(), traversal);
-
-            traversal.add(root);
-        } else if (root.getLeft() != null) {
-            boundaryTraversalRight(root.getLeft(), traversal);
-
-            traversal.add(root);
-        }
-    }
-
-
 
 
     /**

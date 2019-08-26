@@ -1,5 +1,6 @@
 package Java.Tree;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -71,9 +72,20 @@ public class TestHelper {
 
     }
 
-    public static void fromOrderToOrderTest(IBinaryTree binaryTree, TreeNode<Integer> root) {
+    public static void fromOrderToOrderTest() {
 
         System.out.println("Running pre-order To Post Order test ");
+
+        IBinaryTree binaryTree = new BinarySearchTree();
+
+        TreeNode<Integer> root = new BinaryTreeNode<>(1);
+        binaryTree.insert(2, root);
+        binaryTree.insert(3, root);
+        binaryTree.insert(4, root);
+        binaryTree.insert(5, root);
+        binaryTree.insert(6, root);
+        binaryTree.insert(7, root);
+
 
         List<Integer> preOrder = binaryTree.preOrder(root);
         List<Integer> postOrder = binaryTree.postOrder(root);
@@ -130,11 +142,44 @@ public class TestHelper {
 
     }
 
-    public static void medianTest(IBinaryTree binaryTree, TreeNode<Integer> root) {
+    public static void medianTest() {
+        IBinaryTree binaryTree = new BinarySearchTree();
+
+
+        //======= Test 1============
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(4);
+
+        binaryTree.insert(2, root);
+        binaryTree.insert(5, root);
+        binaryTree.insert(1, root);
+        binaryTree.insert(3, root);
+
+        TestHelper.runTraversal(binaryTree, root);
+
         System.out.println("********** Median Test********");
         List<Integer> inOrder = binaryTree.inOrder(root);
         System.out.println("inorder " + inOrder);
         System.out.println("Median: " + ((BinarySearchTree) binaryTree).medianO1(root));
+
+
+        //======= Test 2============
+
+        TreeNode<Integer> bt = new BinaryTreeNode<>(1);
+
+
+        binaryTree.insert(2, bt);
+        binaryTree.insert(3, bt);
+        binaryTree.insert(4, bt);
+        binaryTree.insert(5, bt);
+        binaryTree.insert(6, bt);
+        binaryTree.insert(7, bt);
+
+
+        System.out.println("********** Median Test********");
+        inOrder = binaryTree.inOrder(bt);
+        System.out.println("inorder " + inOrder);
+        System.out.println("Median: " + ((BinarySearchTree) binaryTree).medianO1(bt));
+
     }
 
 
@@ -163,6 +208,47 @@ public class TestHelper {
             binaryTree.insert(nums[i], tree);
         }
         return tree;
+    }
+
+
+    public static void identicalBST() {
+        IBinaryTree binaryTree = new BinarySearchTree();
+
+        System.out.println("Check for identical bst ");
+
+        Integer input1[] = {8, 3, 6, 1, 4, 7, 10, 14, 13};
+        Integer input2[] = {8, 10, 14, 3, 6, 4, 1, 7, 13};
+
+        System.out.println("Input array, a->");
+        Arrays.stream(input1).forEach(e -> System.out.print(e + " "));
+        System.out.println("Input array, b->");
+        Arrays.stream(input2).forEach(e -> System.out.print(e + " "));
+        System.out.println("\n" + ((BinarySearchTree) binaryTree).checkForIdenticalBST(Arrays.asList(input1), Arrays.asList(input2)));
+
+
+        Integer input3[] = {8, 7, 3, 6, 1, 4, 13, 14, 10};
+
+
+        System.out.println("Input array, a->");
+        Arrays.stream(input3).forEach(e -> System.out.print(e + " "));
+        System.out.println("Input array, b->");
+        Arrays.stream(input2).forEach(e -> System.out.print(e + " "));
+        System.out.println("\n" + ((BinarySearchTree) binaryTree).checkForIdenticalBST(Arrays.asList(input2), Arrays.asList(input3)));
+
+    }
+
+    public static void isBST() {
+        IBinaryTree binaryTree = new BinaryTree();
+
+
+        BinaryTreeNode<Integer> isBSTRoot = new BinaryTreeNode<>(4);
+
+        binaryTree.insert(2, isBSTRoot);
+        binaryTree.insert(5, isBSTRoot);
+        binaryTree.insert(1, isBSTRoot);
+        binaryTree.insert(3, isBSTRoot);
+        System.out.println("\n is BST: " + binaryTree.isBST(isBSTRoot));
+
     }
 
 }

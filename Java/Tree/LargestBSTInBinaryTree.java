@@ -11,15 +11,19 @@ public class LargestBSTInBinaryTree {
 
         Integer size;
         Boolean isBST;
-
         Integer min;
         Integer max;
 
-        public LargestBSTHelper(Integer size, Boolean isBST, Integer min, Integer max) {
+        //https://www.geeksforgeeks.org/adobe-interview-experience-for-member-of-technical-staff/
+        //Adobe
+        Integer sumOfAllNode = 0;
+
+        public LargestBSTHelper(Integer size, Boolean isBST, Integer min, Integer max, int sum) {
             this.size = size;
             this.isBST = isBST;
             this.min = min;
             this.max = max;
+            sumOfAllNode = sum;
         }
 
         public LargestBSTHelper() {
@@ -31,20 +35,17 @@ public class LargestBSTInBinaryTree {
 
         LargestBSTHelper helper = largestBSTSizeUtil(root);
 
+        System.out.println("\n\n largestBSTSize Sum of all node " + helper.sumOfAllNode);
+
         return helper.size;
     }
 
 
     private static LargestBSTHelper largestBSTSizeUtil(TreeNode<Integer> root) {
 
-        //If its null root, then its a bst and size =0
+        //If its null root, then its a bst and size =0; and min would +inf and max would be -inf
         if (null == root)
-            return new LargestBSTHelper(0, true, Integer.MIN_VALUE, Integer.MAX_VALUE);
-
-
-        //if its a single node with no left and right child then its a bst of size 1 and min & max would be itself
-        if (null == root.getLeft() && null == root.getRight())
-            return new LargestBSTHelper(1, true, root.getData(), root.getData());
+            return new LargestBSTHelper(0, true, Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
 
         //Find size of left
         LargestBSTHelper lHelper = largestBSTSizeUtil(root.getLeft());
@@ -52,42 +53,26 @@ public class LargestBSTInBinaryTree {
         //Find size of right
         LargestBSTHelper rHelper = largestBSTSizeUtil(root.getRight());
 
-        LargestBSTHelper helper = new LargestBSTHelper();
 
         //If left and right is a bst, then update the values
-        if (lHelper.isBST && rHelper.isBST) {
+        if (lHelper.isBST && rHelper.isBST && root.getData() > lHelper.max && root.getData() < rHelper.min) {
 
-            if ((lHelper.size == 0 || (root.getData() > lHelper.max)) && (rHelper.size == 0 || root.getData() < rHelper.min)) {
+            //this binary tree is bst rooted at root
+            boolean isBST = true;
 
-                //this binary tree is bst rooted at root
-                helper.isBST = true;
+            int max = Math.max(rHelper.max, Math.max(lHelper.max, root.getData()));
+            int min = Math.min(rHelper.min, Math.min(lHelper.min, root.getData()));
 
-                helper.max = root.getData();
-                helper.min = root.getData();
+            int size = lHelper.size + rHelper.size + 1;
+            int sumOfAllNode = lHelper.sumOfAllNode + rHelper.sumOfAllNode + root.getData();
 
-                if (lHelper.size != 0) {
-                    helper.max = Math.max(lHelper.max, helper.max);
-                    helper.min = Math.min(lHelper.min, helper.min);
-                }
+            LargestBSTHelper helper = new LargestBSTHelper(size, isBST, min, max, sumOfAllNode);
 
+            return helper;
 
-                if (rHelper.size != 0) {
-                    helper.max = Math.max(rHelper.max, helper.max);
-                    helper.min = Math.min(rHelper.min, helper.min);
-                }
-
-                helper.size = lHelper.size + rHelper.size + 1;
-
-                return helper;
-            }
         }
 
-        //This bt is not bst rooted at root
-        helper.isBST = false;
+        return new LargestBSTHelper(Math.max(lHelper.size, rHelper.size), false, Integer.MAX_VALUE, Integer.MIN_VALUE, Math.max(lHelper.sumOfAllNode, rHelper.sumOfAllNode));
 
-        //but there could be a bst already exist on left or right, return the max size
-        helper.size = Math.max(lHelper.size, rHelper.size);
-
-        return helper;
     }
 }

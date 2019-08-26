@@ -412,11 +412,7 @@ public class BinaryTree implements IBinaryTree {
     }
 
 
-    @Override
-    public boolean isBST(TreeNode<Integer> root) {
 
-        return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
-    }
 
     @Override
     public TreeNode<Integer> lowestCommonAncestor
@@ -435,21 +431,6 @@ public class BinaryTree implements IBinaryTree {
 
         return (left != null) ? left : right;
 
-
-    }
-
-
-    private boolean isBSTUtil(TreeNode<Integer> root, Integer min, Integer max) {
-
-        if (null == root)
-            return true;
-
-
-        if (root.getData() < min || root.getData() > max)
-            return false;
-
-
-        return (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max));
 
     }
 
