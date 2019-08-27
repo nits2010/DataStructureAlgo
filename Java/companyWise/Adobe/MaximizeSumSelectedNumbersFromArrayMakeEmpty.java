@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * Maximize the sum of selected numbers from an array to make it empty
  * Given an array of N numbers, we need to maximize the sum of selected numbers. At each step, you need to select a number Ai, delete one occurrence of it and delete all occurrences of Ai-1 and Ai+1 (if they exist) in the array. Repeat these steps until the array gets empty. The problem is to maximize the sum of the selected numbers.
  * <p>
- * Note: We have to delete all the occureneces of Ai+1 and Ai-1 elements if they are present in the array and not Ai+1 and Ai-1.
+ * Note: We have to delete all the occurrences of Ai+1 and Ai-1 elements if they are present in the array and not Ai+1 and Ai-1.
  * <p>
  * Examples:
  * <p>
@@ -173,9 +173,7 @@ public class MaximizeSumSelectedNumbersFromArrayMakeEmpty {
 
         }
 
-        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(((o1, o2) -> {
-            return o2[0] * o2[1] - o1[0] * o1[1];
-        }));
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(((o1, o2) -> o2[0] * o2[1] - o1[0] * o1[1]));
 
         //O(n)
         priorityQueue.addAll(new ArrayList<>(freq.values()));
