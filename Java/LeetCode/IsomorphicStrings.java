@@ -240,6 +240,7 @@ class IsomorphicStringsUsingHash {
                     hash.append(map.get(c));
                 else {
                     map.put(c, count++);
+                    hash.append(map.get(c));
                 }
             }
 
