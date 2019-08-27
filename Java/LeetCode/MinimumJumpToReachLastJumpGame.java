@@ -8,7 +8,7 @@ import Java.HelpersToPrint.Printer;
  * Description:
  * https://leetcode.com/problems/jump-game/
  * https://leetcode.com/problems/jump-game-ii/
- *
+ * <p>
  * https://www.geeksforgeeks.org/minimum-number-jumps-reach-endset-2on-solution/
  * Given an array of integers where each element represents the max number of steps that can be made forward from that element. Write a function to return the minimum number of jumps to reach the end of the array (starting from the first element). If an element is 0, then we cannot move through that element.
  * <p>
@@ -52,11 +52,16 @@ public class MinimumJumpToReachLastJumpGame {
         System.out.println(CanJumpToReachLastBackTracking.canJump(new int[]{3, 2, 1, 0, 4}));
         System.out.println(CanJumpToReachLastBackTracking.canJump(new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}));
 
+        System.out.println("DP Top Down...........\n");
+        System.out.println(CanJumpToReachLastBackTrackingDpTopDown.canJump(new int[]{2, 3, 1, 1, 4}));
+        System.out.println(CanJumpToReachLastBackTrackingDpTopDown.canJump(new int[]{3, 2, 1, 0, 4}));
+        System.out.println(CanJumpToReachLastBackTrackingDpTopDown.canJump(new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}));
 
-        System.out.println("DP...........\n");
-        System.out.println(CanJumpToReachLastDP.canJump(new int[]{2, 3, 1, 1, 4}));
-        System.out.println(CanJumpToReachLastDP.canJump(new int[]{3, 2, 1, 0, 4}));
-        System.out.println(CanJumpToReachLastDP.canJump(new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}));
+
+        System.out.println("DP Bottom UP...........\n");
+        System.out.println(CanJumpToReachLastDPBottomUp.canJump(new int[]{2, 3, 1, 1, 4}));
+        System.out.println(CanJumpToReachLastDPBottomUp.canJump(new int[]{3, 2, 1, 0, 4}));
+        System.out.println(CanJumpToReachLastDPBottomUp.canJump(new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}));
 
 
         System.out.println("Linear...........\n");
@@ -134,6 +139,52 @@ class CanJumpToReachLastBackTracking {
 
 
 /**
+ * Overlapping sub-problems
+ * Cache the same problem solution
+ */
+class CanJumpToReachLastBackTrackingDpTopDown {
+
+
+    public static boolean canJump(int[] nums) {
+        if (null == nums || nums.length == 0)
+            return false;
+
+
+        Printer.print(nums);
+
+        boolean jump[] = new boolean[nums.length];
+
+        return canJump(nums, 0, jump);
+
+    }
+
+    private static boolean canJump(int[] nums, int current, boolean jump[]) {
+
+        /**
+         * Our Constraints: We can't jump outside the array
+         */
+        if (current >= nums.length)
+            return false;
+
+        if (jump[current])
+            return jump[current];
+
+        /**
+         * Our Goal: We need to reach end of the array ( last index element). Hence when current = nums.length - 1 We are done
+         */
+        if (current == nums.length - 1)
+            return true;
+
+        for (int j = 1; j <= nums[current]; j++)
+            if (canJump(nums, j + current, jump))
+                return true;
+
+        return false;
+    }
+}
+
+
+/**
  * We can solve this problem using dynamic programming as you see we are unnecessary evaluating the same index again and again in above solution.
  * <p>
  * Lets
@@ -143,7 +194,7 @@ class CanJumpToReachLastBackTracking {
  * <p>
  * Dp[n-1] will be our solution
  */
-class CanJumpToReachLastDP {
+class CanJumpToReachLastDPBottomUp {
 
 
     public static boolean canJump(int[] nums) {
