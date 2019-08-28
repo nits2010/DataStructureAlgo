@@ -1,6 +1,9 @@
 package Java.HelpersToPrint;
 
+import Java.LeetCode.HelperDatastructure.TreeNode;
+
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -203,6 +206,30 @@ public class Printer {
     }
 
 
+    public static List<Integer> preOrder(TreeNode root) {
+        final List<Integer> preOrder = new LinkedList<>();
+
+        if (null == root)
+            return preOrder;
+
+        preOrderUtil(root, preOrder);
+
+        return preOrder;
+    }
+
+
+    public static void preOrderUtil(TreeNode root, List<Integer> preorder) {
+
+        if (null == root)
+            return;
+
+        preorder.add(root.val);
+        preOrderUtil(root.left, preorder);
+        preOrderUtil(root.right, preorder);
+
+    }
+
+
     public static void main(String[] args) {
 
         int x[] = {1, 2, 3};
@@ -217,4 +244,6 @@ public class Printer {
         System.out.println(toString(new char[]{'a', 'b', 'c'}));
         System.out.println(toString(new char[][]{{'a', 'b', 'c'}, {'x', 'y', 'z'}, {'t', 'y', 'p'}}));
     }
+
+
 }
