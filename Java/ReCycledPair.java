@@ -38,6 +38,8 @@ public class ReCycledPair {
         System.out.println("Total :" + pairs.size());
         pairs.stream().forEach(p -> System.out.println(" first :" + p.getKey() + " second " + p.getValue()));
 
+        String s = "";
+        s.lastIndexOf('a');
     }
 
 
@@ -64,49 +66,6 @@ class SolutionReCycledPair {
     }
 
 
-    private Set<Pair<Integer, Integer>> getPairsSol2(List<Integer> arr) {
-        int len = arr.size();
-        Set<Integer> pairs = new HashSet<>(len);
-        Set<Pair<Integer, Integer>> res = new HashSet<>();
-
-        int[] temp = arr.stream().mapToInt(i -> i).toArray();
-
-        for (int i = 0; i < temp.length; i++) {
-            pairs.clear();
-
-            int number = temp[i];
-
-            int digits = (int) Math.log10(number) + 1;
-            int pow = (int) Math.pow(10, digits - 1);
-            int rotation = digits;
-
-            while (rotation > 0) {
-
-                int rotatedNumber = getRotatedNumber(number, pow);
-
-                int digitsInRotatedNumber = (int) Math.log10(rotatedNumber) + 1;
-
-                if (!pairs.contains(rotatedNumber)) {
-                    pairs.add(rotatedNumber);
-
-                    if (digits == digitsInRotatedNumber) {
-
-                        int pos = Arrays.binarySearch(temp, i + 1, temp.length, rotatedNumber);
-                        if (pos > 0) {
-                            res.add(new Pair<>(temp[i], rotatedNumber));
-                        }
-                    }
-
-                }
-                number = rotatedNumber;
-                rotation--;
-            }
-
-        }
-
-        return res;
-
-    }
 
     private int getRotatedNumber(int number, int pow) {
         int r = number % 10;
@@ -170,6 +129,54 @@ class SolutionReCycledPair {
         }
 
         return temp;
+
+    }
+
+
+
+    ////////
+
+    private Set<Pair<Integer, Integer>> getPairsSol2(List<Integer> arr) {
+        int len = arr.size();
+        Set<Integer> pairs = new HashSet<>(len);
+        Set<Pair<Integer, Integer>> res = new HashSet<>();
+
+        int[] temp = arr.stream().mapToInt(i -> i).toArray();
+
+        for (int i = 0; i < temp.length; i++) {
+            pairs.clear();
+
+            int number = temp[i];
+
+            int digits = (int) Math.log10(number) + 1;
+            int pow = (int) Math.pow(10, digits - 1);
+            int rotation = digits;
+
+            while (rotation > 0) {
+
+                int rotatedNumber = getRotatedNumber(number, pow);
+
+                int digitsInRotatedNumber = (int) Math.log10(rotatedNumber) + 1;
+
+                if (!pairs.contains(rotatedNumber)) {
+                    pairs.add(rotatedNumber);
+
+                    if (digits == digitsInRotatedNumber) {
+
+                        int pos = Arrays.binarySearch(temp, i + 1, temp.length, rotatedNumber);
+                        if (pos > 0) {
+                            res.add(new Pair<>(temp[i], rotatedNumber));
+                        }
+                    }
+
+                }
+                number = rotatedNumber;
+                rotation--;
+            }
+
+        }
+
+        return res;
 
     }
 }

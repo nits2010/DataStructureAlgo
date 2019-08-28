@@ -183,7 +183,7 @@ public class FormMinimumNumberFromGivenSequence {
         //To keep track the max number printed so far
         int currMax = 0;
 
-        //how many D'MinStepsInfiniteGrid are there
+        //how many D's are there
         int noOfD = 0;
 
         int entry = 0;
@@ -202,7 +202,7 @@ public class FormMinimumNumberFromGivenSequence {
 
 
                 case 'I':
-                    //if this letter is "I", then count how many D'MinStepsInfiniteGrid are there followed by this I
+                    //if this letter is "I", then count how many D's are there followed by this I
                     j = i + 1;
 
                     while (j < sequences.length && sequences[j] == 'D') {
@@ -229,7 +229,7 @@ public class FormMinimumNumberFromGivenSequence {
                         output[runner++] = entry;
                     }
 
-                    //Carry the remaining D'MinStepsInfiniteGrid and move the cursor ahead
+                    //Carry the remaining D's and move the cursor ahead
                     for (int k = 0; k < noOfD; k++) {
                         output[runner++] = --entry;
                         i++;
@@ -244,14 +244,14 @@ public class FormMinimumNumberFromGivenSequence {
                         //if this is the first letter then we need to treat it differently
                         // as we need to increase the currMax such that further values satisfy
 
-                        //count how many D'MinStepsInfiniteGrid are there ahead
+                        //count how many D's are there ahead
                         j = i + 1;
                         while (j < sequences.length && sequences[j] == 'D') {
                             noOfD++;
                             j++;
                         }
 
-                        //The number of D'MinStepsInfiniteGrid ahead we need to have the current max that much ahead, since we need to print 2 number for a first letter then + 2
+                        //The number of D's ahead we need to have the current max that much ahead, since we need to print 2 number for a first letter then + 2
                         currMax = noOfD + 2;
 
                         output[runner++] = currMax;

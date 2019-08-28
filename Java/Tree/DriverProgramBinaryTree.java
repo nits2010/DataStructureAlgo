@@ -102,35 +102,12 @@ public class DriverProgramBinaryTree {
         binaryTree.insert(6, bt2);
         binaryTree.insert(7, bt2);
         test.setLeft(null);
-        test.setRight( new BinaryTreeNode<>(8));
+        test.setRight(new BinaryTreeNode<>(8));
         TestHelper.runFlipedTreeTest(binaryTree, bt2);
 
-        System.out.println("***********BST***************");
 
-
-        BinaryTreeNode<Integer> isBSTRoot = new BinaryTreeNode<>(4);
-
-        binaryTree.insert(2, isBSTRoot);
-        binaryTree.insert(5, isBSTRoot);
-        binaryTree.insert(1, isBSTRoot);
-        binaryTree.insert(3, isBSTRoot);
-
-        TestHelper.runTraversal(binaryTree, isBSTRoot);
-
-        System.out.println(binaryTree.isBST(isBSTRoot));
-
-        System.out.println("***********Largest BST***************");
-
-        BinaryTreeNode<Integer> largestBST = new BinaryTreeNode<>(60);
-
-        binaryTree.insert(55, largestBST);
-        binaryTree.insert(70, largestBST);
-        binaryTree.insert(50, largestBST);
-
-
-        System.out.println(binaryTree.inOrder(largestBST));
-        System.out.println(binaryTree.isBST(largestBST));
-        System.out.println(binaryTree.largestBSTSize(largestBST));
+        TestHelper.largestBST();
+        TestHelper.isBST();
 
 
     }

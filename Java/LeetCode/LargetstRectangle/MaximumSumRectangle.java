@@ -1,5 +1,7 @@
 package Java.LeetCode.LargetstRectangle;
 
+import Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+
 import java.util.Arrays;
 
 /**
@@ -80,7 +82,7 @@ public class MaximumSumRectangle {
     }
 
     /**
-     * {@link Java.sum.sub.array.problems.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * {@link LargestMaximumSumContiguousSubarrayKadensAlgorithm}
      *
      * @param temp
      * @return

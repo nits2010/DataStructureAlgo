@@ -25,11 +25,12 @@ public class UndirectedGraph {
         Graph connectedGraph = gfg.buildConnectedGraph();
 
         // Original graph
-        System.out.println("\tINITIAL GRAPH");
+        System.out.println("\n INITIAL GRAPH");
         gfg.printConnectedComponent(connectedGraph.getNodes().get(0), new HashSet<>());
 
-        System.out.println("\tCLONED GRAPH");
-        Graph cloned = connectedGraph.cloneConnectedComponent(connectedGraph);
+        System.out.println("\n CLONED GRAPH");
+        GraphClone cloneGraph = new GraphClone();
+        Graph cloned = cloneGraph.cloneConnectedComponent(connectedGraph);
         gfg.printConnectedComponent(cloned.getNodes().get(0), new HashSet<>());
 
     }
@@ -44,8 +45,9 @@ public class UndirectedGraph {
             gfg.printConnectedComponent(n, visited);
 
         // Cloned graph
-        System.out.println("\n\n\tCLONED GRAPH\n");
-        Graph cloned = disConnectedGraph.cloneGraphDisConnectedUndirected(disConnectedGraph);
+        System.out.println("\n\n\n CLONED GRAPH\n");
+        GraphClone cloneGraph = new GraphClone();
+        Graph cloned = cloneGraph.cloneGraphDisConnectedUndirected(disConnectedGraph);
         visited = new HashSet<>();
         for (GraphNode node : cloned.getNodes())
             gfg.printConnectedComponent(node, visited);

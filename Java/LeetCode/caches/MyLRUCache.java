@@ -57,7 +57,7 @@ public class MyLRUCache {
 
 class LRUCache {
 
-    static class Node {
+    private static class Node {
         int key;
         int value;
         Node next;
@@ -71,7 +71,7 @@ class LRUCache {
 
     }
 
-    static class DLL {
+    private static class DLL {
 
         Node head, tail;
 
@@ -118,9 +118,9 @@ class LRUCache {
         }
     }
 
-    Map<Integer, Node> cache;
-    DLL lru;
-    int capacity;
+    private Map<Integer, Node> cache;
+    private DLL lru;
+    private int capacity;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;

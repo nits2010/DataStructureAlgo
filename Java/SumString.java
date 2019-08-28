@@ -4,6 +4,27 @@ package Java;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 20/12/18
  * Description: https://www.geeksforgeeks.org/check-given-string-sum-string/
+ * Check if a given string is sum-string
+ * Given a string of digits, determine whether it is a ‘sum-string’. A string S is called a sum-string if a rightmost
+ * substring can be written as sum of two substrings before it and same is recursively true for substrings before it.
+ *
+ * Examples :
+ *
+ * “12243660” is a sum string.
+ * Explanation : 24 + 36 = 60, 12 + 24 = 36
+ *
+ * “1111112223” is a sum string.
+ * Explanation: 111+112 = 223, 1+111 = 112
+ *
+ * “2368” is not a sum string
+ * In general a string S is called sum-string if it satisfies the following properties:
+ *
+ * sub-string(i, x) + sub-string(x+1, j)
+ *  = sub-string(j+1, l)
+ * and
+ * sub-string(x+1, j)+sub-string(j+1, l)
+ *  = sub-string(l+1, m)
+ * and so on till end.
  */
 public class SumString {
 

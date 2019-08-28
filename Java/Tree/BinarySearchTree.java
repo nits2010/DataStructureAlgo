@@ -455,27 +455,6 @@ public class BinarySearchTree implements IBinarySearchTree {
 
 
     @Override
-    public boolean isBST(TreeNode<Integer> root) {
-
-        //If you try with Integer.Min and max value, then it is a good chance that it fails in overflow or max,min value at root of tree
-        return isValidBST(root, null, null);
-    }
-
-    public boolean isValidBST(TreeNode<Integer> root, Integer min, Integer max) {
-        if (root == null)
-            return true;
-
-        if (min != null && root.getData() <= min)
-            return false;
-
-        if (max != null && root.getData() >= max)
-            return false;
-
-
-        return (isValidBST(root.getLeft(), min, root.getData()) && isValidBST(root.getRight(), root.getData(), max));
-    }
-
-    @Override
     public TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
         if (null == root)
             return null;

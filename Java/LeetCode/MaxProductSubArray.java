@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-23
@@ -35,7 +37,7 @@ public class MaxProductSubArray {
      * Memory Usage: 37.8 MB, less than 14.64% of Java online submissions for Maximum Product Subarray.
      *
      * @param nums
-     * @return {@link Java.sum.sub.array.problems.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * @return {@link LargestMaximumSumContiguousSubarrayKadensAlgorithm}
      */
     public static int maxProductEasy(int[] nums) {
 

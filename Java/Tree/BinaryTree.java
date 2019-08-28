@@ -1,6 +1,7 @@
 package Java.Tree;
 
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 /**
@@ -407,76 +408,15 @@ public class BinaryTree implements IBinaryTree {
     @Override
     public int largestBSTSize(TreeNode<Integer> root) {
 
-        LargestBSTHelper helper = largestBSTSizeUtil(root);
-
-        return helper.size;
+        return LargestBSTInBinaryTree.largestBSTSize(root);
     }
 
-    private LargestBSTHelper largestBSTSizeUtil(TreeNode<Integer> root) {
 
-        //If its null root, then its a bst and size =0
-        if (null == root) {
-            LargestBSTHelper helper = new LargestBSTHelper();
-            helper.size = 0;
-            helper.isBST = true;
-            helper.min = Integer.MIN_VALUE;
-            helper.max = Integer.MAX_VALUE;
-            return helper;
-        }
-
-        //if its a single node with no left and right child then its a bst of size 1 and min & max would be itself
-        if (null == root.getLeft() && null == root.getRight()) {
-            LargestBSTHelper helper = new LargestBSTHelper();
-            helper.size = 1;
-            helper.isBST = true;
-            helper.min = root.getData();
-            helper.max = root.getData();
-            return helper;
-        }
-
-        //Find size of left
-        LargestBSTHelper lHelper = largestBSTSizeUtil(root.getLeft());
-
-        //Find size of right
-        LargestBSTHelper rHelper = largestBSTSizeUtil(root.getRight());
-
-        LargestBSTHelper helper = new LargestBSTHelper();
-
-        //If left and right is a bst, then update the values
-        if (lHelper.isBST && rHelper.isBST && root.getData() > lHelper.max && root.getData() < rHelper.min) {
-            //this binary tree is bst rooted at root
-            helper.isBST = true;
-
-            //the maximum value for above tree would minimum of all maximum
-            helper.max = Math.max(rHelper.max, Math.min(lHelper.max, root.getData()));
-
-            //the minimum value for above tree would maximum of all minimum
-            helper.min = Math.min(rHelper.min, Math.max(lHelper.min, root.getData()));
-
-            helper.size = lHelper.size + rHelper.size + 1;
-
-            return helper;
-        }
-
-        //This bt is not bst rooted at root
-        helper.isBST = false;
-
-        //but there could be a bst already exist on left or right, return the max size
-        helper.size = Math.max(lHelper.size, rHelper.size);
-
-
-        return helper;
-    }
 
 
     @Override
-    public boolean isBST(TreeNode<Integer> root) {
-
-        return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
-    }
-
-    @Override
-    public TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
+    public TreeNode<Integer> lowestCommonAncestor
+            (TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
         if (null == root)
             return null;
 
@@ -491,21 +431,6 @@ public class BinaryTree implements IBinaryTree {
 
         return (left != null) ? left : right;
 
-
-    }
-
-
-    private boolean isBSTUtil(TreeNode<Integer> root, Integer min, Integer max) {
-
-        if (null == root)
-            return true;
-
-
-        if (root.getData() < min || root.getData() > max)
-            return false;
-
-
-        return (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max));
 
     }
 

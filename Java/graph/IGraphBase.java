@@ -16,8 +16,4 @@ public interface IGraphBase {
     void addEdge(int source, int destination);
 
 
-
-
-
-
 }

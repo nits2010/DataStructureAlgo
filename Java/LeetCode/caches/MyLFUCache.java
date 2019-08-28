@@ -57,11 +57,10 @@ public class MyLFUCache {
         cacheTreeMap.put(0, 0);
 
 
-
         System.out.println("\nConstant time");
 
         LFUCacheConstantTime lfuCacheConstantTime = new LFUCacheConstantTime();
-        LFUCacheConstantTime.LFUCache  cacheConstantTime= lfuCacheConstantTime.new LFUCache(0);
+        LFUCacheConstantTime.LFUCache cacheConstantTime = lfuCacheConstantTime.new LFUCache(0);
         cacheConstantTime.put(0, 0);
 
 
@@ -100,9 +99,6 @@ public class MyLFUCache {
         System.out.println(cacheTreeMap.get(2) + " should be 2");
         System.out.println(cacheTreeMap.get(1) + " should be 1");
         System.out.println(cacheTreeMap.get(4) + " should be 4");
-
-
-
 
 
         System.out.println("\nConstant time Map");
@@ -160,8 +156,6 @@ public class MyLFUCache {
         System.out.println(cacheTreeMap.get(4) + " should be 4");       // returns 4
 
 
-
-
         System.out.println("\nConstant Time Map");
 
         LFUCacheConstantTime lfuCacheConstantTime = new LFUCacheConstantTime();
@@ -196,11 +190,11 @@ class LFUCacheUsingHeap {
     class LFUCache {
 
 
-        class Cache implements Comparable<Cache> {
-            int key;
+        private class Cache implements Comparable<Cache> {
+            final int key;
             int value;
-            int freq = 0;
-            long timeStamp;
+            int freq;
+            final long timeStamp;
 
 
             public Cache(int key, int value, int freq, long timeStamp) {
@@ -219,10 +213,10 @@ class LFUCacheUsingHeap {
             }
         }
 
-        private PriorityQueue<Cache> lfu;
-        private Map<Integer, Cache> cache;
-        private int capacity;
-        long currentTimeStamp;
+        private final PriorityQueue<Cache> lfu;
+        private final Map<Integer, Cache> cache;
+        private final int capacity;
+        private long currentTimeStamp;
 
 
         public LFUCache(int capacity) {
@@ -320,7 +314,7 @@ class LFUCacheUsingTreeMap {
     class LFUCache {
 
 
-        class Cache implements Comparable<Cache> {
+        private class Cache implements Comparable<Cache> {
             int key;
             int value;
             int freq;
@@ -344,10 +338,10 @@ class LFUCacheUsingTreeMap {
             }
         }
 
-        private int capacity;
+        private final int capacity;
         private int timeStamp;
-        private HashMap<Integer, Cache> cache;
-        private TreeMap<Cache, Integer> lfu;
+        private final HashMap<Integer, Cache> cache;
+        private final TreeMap<Cache, Integer> lfu;
 
         public LFUCache(int capacity) {
             this.capacity = capacity;
@@ -406,7 +400,7 @@ class LFUCacheUsingTreeMap {
  * Concept: https://www.javarticles.com/2012/06/lfu-cache.html
  * https://medium.com/algorithm-and-datastructure/lfu-cache-in-o-1-in-java-4bac0892bdb3
  * <p>
- * To put and get data in Java in O(1), We need to use Map or more specifically HashMap.
+ * To put and get data in O(1), We need to use Map or more specifically HashMap.
  * HashMap<K, V>
  * Since we need to find the least frequently used item to remove it for putting new data,
  * we need a counter to keep track number of times a Key(K) has been accessed. Access could get or put. To achieve that we need another Map<K, C>;
@@ -420,9 +414,10 @@ class LFUCacheUsingTreeMap {
  * We need a tag or min variable, it will hold the current min. Whenever a new Item inserts into the cache min=1; It will be increased only when there are no items in the (counter==min).
  */
 class LFUCacheConstantTime {
+
     class LFUCache {
 
-        class Cache {
+        private class Cache {
             int key;
             int value;
 
@@ -447,26 +442,33 @@ class LFUCacheConstantTime {
 
         /**
          * Defines our actual cache.
-         * This contains key as cache key and value as cache Node
+         * This contains
+         * Key: As cache key and
+         * Value: As cache Node
          */
-        private Map<Integer, Cache> cache;
+        private final Map<Integer, Cache> cache;
 
         /**
          * Defines the Frequency Cache.
-         * This contains what key(as key) accessed how many times as vlaue
+         * This contains what
+         * Key: As cache key and
+         * Value: How many times a key accessed
          */
-        private Map<Integer, Integer> frequencyCache;
+        private final Map<Integer, Integer> frequencyCache;
 
         /**
          * This is Frequency to DLL ; i avoid making own dll to simplify the code.
          * <p>
-         * This contains at which frequency the item(key) are there in First in First out manner (FIFO) to achieve Least Recently Used
+         * This contains at which
+         * Key: frequency the item(key)
+         * Value: Caches in First in First out manner (FIFO) to achieve Least Recently Used
          */
-        private Map<Integer, LinkedHashSet<Cache>> lfu;
+        private final Map<Integer, LinkedHashSet<Cache>> lfu;
+
         /**
          * Actual capacity of cache
          */
-        private int capacity;
+        private final int capacity;
 
         /**
          * This indicates what is the least frequency in the system currently.
@@ -502,7 +504,7 @@ class LFUCacheConstantTime {
             int oldFrequency = frequencyCache.getOrDefault(item.key, 1);
             frequencyCache.put(item.key, oldFrequency + 1);
 
-            //Update our lfu, remove from head (or in somewhere and push it to tail
+            //Update our lfu, remove from head (or in somewhere) and push it to tail
             lfu.get(oldFrequency).remove(item);
 
             //does any more item left at this frequency? , if not then leastFrequency will be the next one for sure
@@ -533,9 +535,10 @@ class LFUCacheConstantTime {
 
                 return;
             } else {
+
                 //This is new entry in our system, do we have capacity ?
                 if (cache.size() == capacity) {
-                    //we don't have capacity, the lfu item need to be evict based on leastFrequentlyUsed if frequency clash
+                    //we don't have capacity, the lfu item need to be evict based on leastFrequentlyUsed, if frequency clash than LRU
 
                     //find the item
                     Cache item = lfu.get(leastFrequency).iterator().next();
