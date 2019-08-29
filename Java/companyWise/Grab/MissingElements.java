@@ -6,7 +6,9 @@ import javafx.util.Pair;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-18
  * Description: https://www.geeksforgeeks.org/find-two-missing-numbers-set-2-xor-based-solution/
- * Given an array of n unique integers where each element in the array is in range [1, n]. The array has all distinct elements and size of array is (n-2). Hence Two numbers from the range are missing from this array. Find the two missing numbers.
+ * Given an array of n unique integers where each element in the array is in range [1, n].
+ * The array has all distinct elements and size of array is (n-2).
+ * Hence Two numbers from the range are missing from this array. Find the two missing numbers.
  *
  * Examples:
  *

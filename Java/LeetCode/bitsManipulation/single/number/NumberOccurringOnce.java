@@ -1,11 +1,13 @@
-package Java;
+package Java.LeetCode.bitsManipulation.single.number;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-18
+ *
  * Description: https://www.geeksforgeeks.org/find-the-element-that-appears-once/
  * <p>
- * Given an array where every element occurs three times, except one element which occurs only once. Find the element that occurs once. Expected time complexity is O(n) and O(1) extra space.
+ * Given an array where every element occurs three times, except one element which occurs only once.
+ * Find the element that occurs once. Expected time complexity is O(n) and O(1) extra space.
  * Examples :
  * <p>
  * Input: arr[] = {12, 1, 12, 3, 12, 1, 1, 2, 3, 3}
@@ -15,6 +17,8 @@ package Java;
  * Input: arr[] = {10, 20, 10, 30, 10, 30, 30}
  * Output: 20
  * In the given array all element appear three times except 20 which appears once.
+ *
+ * [Adobe]
  */
 public class NumberOccurringOnce {
 

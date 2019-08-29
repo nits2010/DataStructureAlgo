@@ -125,6 +125,24 @@ public class Printer {
 
     }
 
+    public static String toStringInline(int[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < nums.length; i++) {
+
+
+            result.append(toString(nums[i]));
+            result.setCharAt(result.length() - 1, ']');
+            result.append(",");
+        }
+
+
+        return result.toString();
+
+    }
+
 
     public static String toString(char[][] nums) {
         if (null == nums || nums.length == 0)
@@ -155,6 +173,7 @@ public class Printer {
 
         return result.toString().substring(0, result.length() - 1);
     }
+
 
     public static int[] copyOf(int[] input) {
         int[] copy = new int[input.length];
@@ -226,6 +245,30 @@ public class Printer {
         preorder.add(root.val);
         preOrderUtil(root.left, preorder);
         preOrderUtil(root.right, preorder);
+
+    }
+
+    public static List<Integer> inOrder(TreeNode root) {
+        final List<Integer> inOrder = new LinkedList<>();
+
+        if (null == root)
+            return inOrder;
+
+        inOrderUtil(root, inOrder);
+
+        return inOrder;
+    }
+
+
+    public static void inOrderUtil(TreeNode root, List<Integer> inOrder) {
+
+        if (null == root)
+            return;
+
+
+        inOrderUtil(root.left, inOrder);
+        inOrder.add(root.val);
+        inOrderUtil(root.right, inOrder);
 
     }
 
