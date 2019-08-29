@@ -1,11 +1,14 @@
 package Java.Tree;
 
 import Java.LeetCode.tree.MaximumPathSum;
+import Java.Tree.traversal.EulerTour;
+import Java.Tree.traversal.MoriesTreeTraversal;
+import Java.Tree.traversal.TreeTraversalIterative;
+import Java.Tree.traversal.TreeTraversalRecursive;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -35,224 +38,46 @@ public interface IBinaryTree {
 
 
     default List<Integer> inOrder(TreeNode<Integer> root) {
-        final List<Integer> inOrder = new LinkedList<>();
-
-        if (null == root)
-            return inOrder;
-
-        inorderUtil(root, inOrder);
-
-        return inOrder;
+        return TreeTraversalRecursive.inOrder(root);
     }
 
-    default void inorderUtil(TreeNode<Integer> root, final List<Integer> inorder) {
-
-        if (null == root)
-            return;
-
-        inorderUtil(root.getLeft(), inorder);
-        inorder.add(root.getData());
-        inorderUtil(root.getRight(), inorder);
-
-
-    }
 
     /****************** PostOrder  - default implementation Traversal *******************/
 
     default List<Integer> postOrder(TreeNode<Integer> root) {
-        final List<Integer> postOrder = new LinkedList<>();
-
-        if (null == root)
-            return postOrder;
-
-        postOrderUtil(root, postOrder);
-
-        return postOrder;
+        return TreeTraversalRecursive.postOrder(root);
     }
 
-    default void postOrderUtil(TreeNode<Integer> root, List<Integer> postorder) {
-        if (null == root)
-            return;
-
-        postOrderUtil(root.getLeft(), postorder);
-        postOrderUtil(root.getRight(), postorder);
-        postorder.add(root.getData());
-    }
 
     /****************** PreOrder - default implementation Traversal *******************/
 
     default List<Integer> preOrder(TreeNode<Integer> root) {
-        final List<Integer> preOrder = new LinkedList<>();
-
-        if (null == root)
-            return preOrder;
-
-        preOrderUtil(root, preOrder);
-
-        return preOrder;
+        return TreeTraversalRecursive.preOrder(root);
     }
 
-
-    default void preOrderUtil(TreeNode<Integer> root, List<Integer> preorder) {
-
-        if (null == root)
-            return;
-
-        preorder.add(root.getData());
-        preOrderUtil(root.getLeft(), preorder);
-        preOrderUtil(root.getRight(), preorder);
-
-    }
 
     /****************** Level Order - default implementation Traversal *******************/
 
     default List<Integer> levelOrder(TreeNode<Integer> root) {
 
-        if (null == root)
-            return null;
-
-        List<Integer> levelOrder = new LinkedList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
-
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            TreeNode temp = queue.poll();
-            levelOrder.add((Integer) temp.getData());
-
-            if (null != temp.getLeft())
-                queue.add(temp.getLeft());
-
-            if (null != temp.getRight())
-                queue.add(temp.getRight());
-
-
-        }
-        return levelOrder;
+        return TreeTraversalRecursive.levelOrder(root);
     }
 
 
     /****************** In Order Iterative - default implementation Traversal *******************/
     default List<Integer> inOrderIterative(TreeNode<Integer> root) {
-        List<Integer> inOrder = new LinkedList<>();
-        if (null == root)
-            return inOrder;
-
-        Stack<TreeNode<Integer>> stack = new Stack<>();
-
-
-        while (root != null || !stack.isEmpty()) {
-
-
-            //Process left subtree first, push all left subtree node over root
-            while (root != null) {
-
-                stack.push(root);
-                root = root.getLeft();
-            }
-
-            //If all elements has processed then break and return
-            if (stack.isEmpty())
-                return inOrder;
-
-            //process this node
-            root = stack.pop();
-
-            inOrder.add(root.getData());
-
-            //go to right after processing
-            root = root.getRight();
-
-        }
-
-
-        return inOrder;
+        return TreeTraversalIterative.inOrderIterative(root);
     }
 
 
     /****************** Pre Order Iterative - default implementation Traversal *******************/
     default List<Integer> preOrderIterative(TreeNode<Integer> root) {
-        List<Integer> preOrder = new LinkedList<>();
-        if (null == root)
-            return preOrder;
-
-        Stack<TreeNode<Integer>> stack = new Stack<>();
-
-
-        //Push root, as this will process first
-        stack.push(root);
-
-        while (!stack.isEmpty()) {
-
-            //Process root first
-            root = stack.pop();
-            preOrder.add(root.getData());
-
-            //push right child first as this traversal is Root left and right;
-            // pushing right first insure left is on top of stack and process first
-            if (null != root.getRight())
-                stack.push(root.getRight());
-
-            //push left
-            if (null != root.getLeft())
-                stack.push(root.getLeft());
-
-        }
-
-
-        return preOrder;
+        return TreeTraversalIterative.preOrderIterative(root);
     }
 
     /****************** Post Order Iterative - default implementation Traversal *******************/
     default List<Integer> postOrderIterative(TreeNode<Integer> root) {
-        List<Integer> postOrder = new LinkedList<>();
-        if (null == root)
-            return postOrder;
-
-        Stack<TreeNode<Integer>> stack = new Stack<>();
-
-        //to ensure right process first
-        TreeNode<Integer> previous = root;
-
-
-        while (root != null) {
-
-            //Process left subtree first, push all root of left subtree node
-            while (root.getLeft() != null) {
-                stack.push(root);
-                root = root.getLeft();
-            }
-
-
-            //Process right first, to process it we need to deep down the right part of it.
-            while (null != root && (root.getRight() == null || root.getRight() == previous)) {
-
-                //Since there is no right node of right node, then this is the rightmost node then process it
-                postOrder.add(root.getData());
-
-                //set previous node as current node; right
-                previous = root;
-
-                //get the above tree node; root
-                if (!stack.isEmpty())
-                    root = stack.pop();
-                else
-                    return postOrder;
-
-
-            }
-
-            //it may possible the right node of current "right" hasn't process yet [since there is right subtree exist]
-            // then push the root again in order to process that right node
-
-            stack.push(root);
-
-            //go to right for processing
-            root = root.getRight();
-
-        }
-
-        return postOrder;
+        return TreeTraversalIterative.postOrderIterative(root);
     }
 
 
@@ -261,106 +86,13 @@ public interface IBinaryTree {
 
     /****************** InOrder Mories algorithm for Java.Tree Traversal- without stack *******************/
     default List<Integer> inOrderMories(TreeNode<Integer> root) {
-        List<Integer> inOrder = new LinkedList<>();
-
-        if (null == root)
-            return inOrder;
-
-
-        TreeNode<Integer> temp;
-
-        while (root != null) {
-
-            //see if no left then process it and move to right child
-            if (root.getLeft() == null) {
-                inOrder.add(root.getData());
-                root = root.getRight();
-
-            } else {
-
-                //If there is left child
-                temp = root.getLeft();
-
-                //then transform this tree to right skew tree
-
-                //find the right most node of this "temp"
-                while (temp.getRight() != null && temp.getRight() != root) {
-                    temp = temp.getRight();
-                }
-
-                //If this is rightmost node, then make current root as right subtree of temp; transforming to right skew tree
-                if (temp.getRight() == null) {
-
-                    temp.setRight(root);
-
-                    //move to the new left subtree
-                    root = root.getLeft();
-                } else {
-
-                    inOrder.add(root.getData());
-                    //Restore the tree
-                    temp.setRight(null);
-
-                    root = root.getRight();
-
-                }
-
-            }
-        }
-        return inOrder;
-
+        return MoriesTreeTraversal.inOrderMories(root);
     }
 
     /****************** PreOrder Mories algorithm for Java.Tree Traversal- without stack *******************/
 
     default List<Integer> preOrderMories(TreeNode<Integer> root) {
-        List<Integer> preOrder = new LinkedList<>();
-
-        if (null == root)
-            return preOrder;
-
-
-        TreeNode<Integer> temp;
-
-        while (root != null) {
-
-            //see if no left then process it and move to right child
-            if (root.getLeft() == null) {
-                preOrder.add(root.getData());
-                root = root.getRight();
-
-            } else {
-
-                //If there is left child
-                temp = root.getLeft();
-
-                //then transform this tree to right skew tree
-
-                //find the right most node of this "temp"
-                while (temp.getRight() != null && temp.getRight() != root) {
-                    temp = temp.getRight();
-                }
-
-                //If this is rightmost node, then make current root as right subtree of temp; transforming to right skew tree
-                if (temp.getRight() == null) {
-                    preOrder.add(root.getData());
-                    temp.setRight(root);
-
-                    //move to the new left subtree
-                    root = root.getLeft();
-                } else {
-
-
-                    //Restore the tree
-                    temp.setRight(null);
-
-                    root = root.getRight();
-
-                }
-
-            }
-        }
-        return preOrder;
+        return MoriesTreeTraversal.preOrderMories(root);
 
     }
 
@@ -368,37 +100,7 @@ public interface IBinaryTree {
     /****************** Default implementation of Euler Tour of a Binary tree *******************/
 
     default List<Integer> eulerTour(TreeNode<Integer> root) {
-        List<Integer> eulerTour = new LinkedList<>();
-        eulerTour(root, eulerTour);
-        return eulerTour;
-
-    }
-
-    default void eulerTour(TreeNode<Integer> root, List<Integer> eulerTour) {
-        if (null == root)
-            return;
-
-        //At the entry point
-        eulerTour.add(root.getData());
-
-        if (null != root.getLeft()) {
-
-            eulerTour(root.getLeft(), eulerTour);
-
-            //at the exit point
-            eulerTour.add(root.getData());
-
-        }
-
-        if (null != root.getRight()) {
-
-
-            eulerTour(root.getRight(), eulerTour);
-
-            //at the exit point
-            eulerTour.add(root.getData());
-
-        }
+        return EulerTour.eulerTour(root);
     }
 
 

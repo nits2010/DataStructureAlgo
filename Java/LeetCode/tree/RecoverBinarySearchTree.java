@@ -66,28 +66,32 @@ public class RecoverBinarySearchTree {
     }
 
     private static void test(TreeNode root, TreeNode expected) {
-        System.out.println("Input :" + Printer.inOrder(root));
+        System.out.println("\nInput :" + Printer.inOrder(root));
         System.out.println("Expected :" + Printer.inOrder(expected));
 
 //        RecoverBinarySearchTreeUsingMemory usingMemory = new RecoverBinarySearchTreeUsingMemory();
-        RecoverBinarySearchTreeConstant constantMemory = new RecoverBinarySearchTreeConstant();
-        constantMemory.recoverTree(root);
-
+//        usingMemory.recoverTree(root);
 //        System.out.println(" Using Memory :" + Printer.inOrder(root));
-        System.out.println(" Constant Memory :" + Printer.inOrder(root));
+
+//        RecoverBinarySearchTreeConstantRecursive constantMemory = new RecoverBinarySearchTreeConstantRecursive();
+//        constantMemory.recoverTree(root);
+//        System.out.println(" Constant Memory :" + Printer.inOrder(root));
+
+
+        RecoverBinarySearchTreeConstantMories constantMemoryMories = new RecoverBinarySearchTreeConstantMories();
+        constantMemoryMories.recoverTree(root);
+        System.out.println(" Constant Memory Mories:" + Printer.inOrder(root));
+
 
     }
 }
 
 /**
  * Convert to inOrder
- * find nodes; first & mid;  when you see first time the order is not correct, then those two element as first and mid.
- * then find another element that does not follow the order called last.
+ * find nodes; first & mid;  when you see first time the order is not correct, then those two element as first and last.
+ * then find another element that does not follow the order ,update last.
  * <p>
- * if last!=null
  * swap(first, last)
- * else
- * swap(first,mid)
  * <p>
  * input [1,3,null,null,2]
  * * *    1
@@ -99,7 +103,7 @@ public class RecoverBinarySearchTree {
  * inorder [3, 2, 1]
  * <p>
  * i = 3; j = 3;
- * i = 2 : in[i] < in[j] : mismatch found ; first 3 and mid = 2
+ * i = 2 : in[i] < in[j] : mismatch found ; first 3 and last = 2
  * <p>
  * i = 1 ; j=2 : in[i] < in[j] : mismatch found second time; last = 1
  * <p>
@@ -114,9 +118,9 @@ public class RecoverBinarySearchTree {
  * * *   2
  * <p>
  * inorder[1,3,2,4]
- * first = 3, mid = 2, last=null
+ * first = 3, last = 2,
  * <p>
- * swap(first,mid)
+ * swap(first,last)
  * [1,2,3,4]
  * <p>
  * O(n)/O(n)
@@ -133,8 +137,8 @@ class RecoverBinarySearchTreeUsingMemory {
         List<TreeNode> inorder = new ArrayList<>();
         inOrder(root, inorder);
 
-        TreeNode first, last, mid;
-        first = mid = last = null;
+        TreeNode first, last;
+        first = last = null;
 
         int i = 1, j = 0;
 
@@ -144,7 +148,7 @@ class RecoverBinarySearchTreeUsingMemory {
 
                 if (first == null) {
                     first = inorder.get(j);
-                    mid = inorder.get(i);
+                    last = inorder.get(i);
                 } else {
                     last = inorder.get(i);
                     break;
@@ -155,15 +159,10 @@ class RecoverBinarySearchTreeUsingMemory {
         if (first == null)
             return;
 
-        if (last == null) {
-            int temp = first.val;
-            first.val = mid.val;
-            mid.val = temp;
-        } else {
-            int temp = first.val;
-            first.val = last.val;
-            last.val = temp;
-        }
+
+        int temp = first.val;
+        first.val = last.val;
+        last.val = temp;
 
 
     }
@@ -182,14 +181,12 @@ class RecoverBinarySearchTreeUsingMemory {
 
 /**
  * Instead of converting tree to array, do in-order traversal on the go and check for first, mid and last
+ * <p>
+ * Runtime: 2 ms, faster than 99.76% of Java online submissions for Recover Binary Search Tree.
+ * Memory Usage: 36.4 MB, less than 100.00% of Java online submissions for Recover Binary Search Tree.
  */
-class RecoverBinarySearchTreeConstant {
+class RecoverBinarySearchTreeConstantRecursive {
 
-    private void swap(TreeNode a, TreeNode b) {
-
-        swapByValue(a, b);
-
-    }
 
     private void swapByValue(TreeNode a, TreeNode b) {
         int temp = a.val;
@@ -203,48 +200,123 @@ class RecoverBinarySearchTreeConstant {
             return;
 
 
-        TreeNode[] swappedElements = {null, null, null}; //first,mid,last
-        TreeNode[] pointer = {null, null}; //i,j
+        TreeNode[] swappedElements = {null, null}; //first,last
+        TreeNode[] prev = {null}; //j
 
-        recoverTree(root, swappedElements, pointer);
+        recoverTree(root, swappedElements, prev);
 
         if (swappedElements[0] == null)
             return;
-
-
-        if (swappedElements[2] == null)
-            swap(swappedElements[0], swappedElements[1]);
-        else
-            swap(swappedElements[0], swappedElements[2]);
+        swapByValue(swappedElements[0], swappedElements[1]);
     }
 
 
-    final int i = 0, j = 1;
+    private void recoverTree(TreeNode current, TreeNode[] swappedElements, TreeNode[] prev) {
 
-    private void recoverTree(TreeNode root, TreeNode[] swappedElements, TreeNode[] pointer) {
+        if (null == current)
+            return;
+
+
+        recoverTree(current.left, swappedElements, prev);
+
+        if (prev[0] != null)
+            if (prev[0].val > current.val) {
+                if (swappedElements[0] == null) {
+                    swappedElements[0] = prev[0];
+                    swappedElements[1] = current;
+                } else {
+                    swappedElements[1] = current;
+                }
+            }
+
+        prev[0] = current;
+
+        recoverTree(current.right, swappedElements, prev);
+
+    }
+
+}
+
+
+/**
+ * WE can do mories inorder traversal to achieve the same
+ * <p>
+ * Runtime: 2 ms, faster than 99.76% of Java online submissions for Recover Binary Search Tree.
+ * Memory Usage: 39.9 MB, less than 80.77% of Java online submissions for Recover Binary Search Tree.
+ */
+class RecoverBinarySearchTreeConstantMories {
+
+
+    private void swapByValue(TreeNode a, TreeNode b) {
+        int temp = a.val;
+        a.val = b.val;
+        b.val = temp;
+    }
+
+    public void recoverTree(TreeNode root) {
 
         if (null == root)
             return;
 
 
-        pointer[i] = root;
-        recoverTree(root.left, swappedElements, pointer);
-        pointer[i] = root;
+        TreeNode first = null;
+        TreeNode last = null;
 
-        if (pointer[j] != null)
-            if (pointer[j].val > pointer[i].val) {
-                if (swappedElements[0] == null) {
-                    swappedElements[0] = pointer[j];
-                    swappedElements[1] = pointer[i];
-                } else if (swappedElements[2] == null) {
-                    swappedElements[2] = pointer[i];
+        TreeNode prev = null;
+
+
+        TreeNode current = root;
+
+        while (current != null) {
+
+            if (current.left == null) {
+
+                if (prev != null)
+                    if (prev.val > current.val) {
+                        if (first == null) {
+                            first = prev;
+                            last = current;
+                        } else {
+                            last = current;
+                        }
+                    }
+
+                prev = current;
+
+                current = current.right;
+
+            } else {
+                TreeNode pred = current.left;
+                while (pred.right != null && pred.right != current)
+                    pred = pred.right;
+
+                if (pred.right == null) {
+                    pred.right = current;
+                    current = current.left;
+                } else {
+
+                    pred.right = null;
+
+                    if (prev != null)
+                        if (prev.val > current.val) {
+                            if (first == null) {
+                                first = prev;
+                                last = current;
+                            } else {
+                                last = current;
+                            }
+                        }
+
+                    prev = current;
+
+                    current = current.right;
                 }
             }
-
-        pointer[j] = pointer[i];
-
-        recoverTree(root.right, swappedElements, pointer);
+        }
+        if (first != null)
+            swapByValue(first, last);
 
     }
+
 
 }
