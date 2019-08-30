@@ -1,4 +1,4 @@
-package Java.companyWise.Amazon.no.element.adjacent;
+package Java.LeetCode.adjacent.houserobber;
 
 import Java.HelpersToPrint.Printer;
 

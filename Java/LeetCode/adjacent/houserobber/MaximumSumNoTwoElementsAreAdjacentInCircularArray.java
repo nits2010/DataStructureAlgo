@@ -1,11 +1,28 @@
-package Java.companyWise.Amazon.no.element.adjacent;
+package Java.LeetCode.adjacent.houserobber;
 
 import Java.HelpersToPrint.Printer;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-28
- * Description:
+ * Description: https://leetcode.com/problems/house-robber-ii/
+ * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed.
+ * All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+ * <p>
+ * Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: [2,3,2]
+ * Output: 3
+ * Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2),
+ * because they are adjacent houses.
+ * Example 2:
+ * <p>
+ * Input: [1,2,3,1]
+ * Output: 4
+ * Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+ * Total amount you can rob = 1 + 3 = 4.
  * <p>
  * Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the
  * sequence should be adjacent in the *circular array*.
@@ -42,13 +59,23 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
     private static void test(int[] nums, int expected) {
         System.out.println("\nInput :" + Printer.toString(nums) + " Expected :" + expected);
 
-        System.out.println("Idea 1: Two array DPS :" + maximumSumNoTwoAdjCircularArrayTwoArrayDp(nums));
-        System.out.println("Idea 2: Two array DPS :" + maximumSumNoTwoAdjCircularArrayTwoArrayDpV2(nums));
-        System.out.println("Idea 3: Linear :" + maximumSumNoTwoAdjCircularArrayTwoArrayLinear(nums));
-        System.out.println("Idea 4: Linear :" + maximumSumNoTwoAdjCircularArrayTwoArrayLinearSingleScan(nums));
+        System.out.println("Idea 1: Two array DPS :" + HouseRobberIIDP.rob(nums));
+        System.out.println("Idea 2: Two array DPS :" + HouseRobberIIDP.rob(nums));
+        System.out.println("Idea 3: Linear :" + HouseRobberIILinear.rob(nums));
+        System.out.println("Idea 4: Linear :" + HouseRobberIILinear.rob(nums));
 
 
+    }
 
+}
+
+/**
+ * {@link MaximumSumNoTwoElementsAreAdjacent}
+ */
+class HouseRobberIIDP {
+
+    public static int rob(int[] nums) {
+        return maximumSumNoTwoAdjCircularArrayTwoArrayDp(nums);
     }
 
     /**
@@ -62,7 +89,7 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
      * @param nums
      * @return
      */
-    public static int maximumSumNoTwoAdjCircularArrayTwoArrayDp(int nums[]) {
+    private static int maximumSumNoTwoAdjCircularArrayTwoArrayDp(int nums[]) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -152,7 +179,16 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
 
         return Math.max(dpLR[n - 2], dpRL[1]);
     }
+}
 
+/**
+ * {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+ */
+class HouseRobberIILinear {
+
+    public static int rob(int[] nums) {
+        return maximumSumNoTwoAdjCircularArrayTwoArrayLinearSingleScan(nums);
+    }
 
     /**
      * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
@@ -208,6 +244,9 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
 
     /**
      * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+     * <p>
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for House Robber II.
+     * Memory Usage: 34.3 MB, less than 100.00% of Java online submissions for House Robber II.
      *
      * @param nums
      * @return
