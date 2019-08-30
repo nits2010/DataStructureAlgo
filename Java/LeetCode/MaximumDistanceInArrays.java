@@ -26,6 +26,8 @@ import java.util.Comparator;
  * Each given array will have at least 1 number. There will be at least two non-empty arrays.
  * The total number of the integers in all the m arrays will be in the range of [2, 10000].
  * The integers in the m arrays will be in the range of [-10000, 10000].
+ *
+ * Article: https://leetcode.com/articles/maximum-distance-in-array/
  */
 public class MaximumDistanceInArrays {
 
