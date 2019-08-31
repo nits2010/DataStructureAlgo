@@ -25,27 +25,28 @@ import java.util.Map;
  * <p>
  * "aaabbb", k = 3
  * There are only two unique characters, thus show error message.
- * Source: Java.companyWise.Google Interview Question.
+ * [Google] [Amazon]
  */
 public class LongestSubStringKUniqueChar {
 
     public static void main(String args[]) {
 
-        System.out.println(longestSubStringKUniqueChar("aabbcc", 3));
+        System.out.println(longestSubStringKUniqueChar("aabbcc", 3) + " expected : aabbcc");
 
-        System.out.println(longestSubStringKUniqueChar("aabbcc", 2));
+        System.out.println(longestSubStringKUniqueChar("aabbcc", 2) + "expected : aabb");
 
-        System.out.println(longestSubStringKUniqueChar("aabbcc", 1));
+        System.out.println(longestSubStringKUniqueChar("aabbcc", 1) + " expected : aa");
 
-        System.out.println(longestSubStringKUniqueChar("aabbcccccc", 1));
+        System.out.println(longestSubStringKUniqueChar("aabbcccccc", 1) + " expected : cccccc");
 
-        System.out.println(longestSubStringKUniqueChar("aabacbebebe", 3));
+        System.out.println(longestSubStringKUniqueChar("aabacbebebe", 3) + " expected: cbebebe");
 
-        System.out.println(longestSubStringKUniqueChar("aaabbb", 3));
+        System.out.println(longestSubStringKUniqueChar("aaabbb", 3) + " Expected: <EMPTY>");
     }
 
     /**
      * time/space = O(n)/O(1)
+     *
      * @param string
      * @param k
      * @return
@@ -56,6 +57,7 @@ public class LongestSubStringKUniqueChar {
         if (null == string || string.isEmpty() || k == 0)
             return subStr;
 
+        System.out.println("\nInput :" + string + " k :" + k);
         string = string.trim();
 
         char str[] = string.toCharArray();
@@ -82,30 +84,31 @@ public class LongestSubStringKUniqueChar {
 
             if (countOfUnique == k) {
 
-                if (subStr.length() < (i - start + 1)) {
+                if (subStr.length() < (i - start + 1))
                     subStr = string.substring(start, i + 1);
-                }
-            } else if (countOfUnique > k) {
 
-                while (countOfUnique > k) {
-
-                    char c = str[start];
-
-                    if (map.get(c) > 0) {
-                        map.put(c, map.getOrDefault(c, 1) - 1);
-
-                        if (map.get(c) == 0)
-                            countOfUnique--;
-
-                    }
-                    start++;
-                }
             }
+
+            while (countOfUnique > k) {
+
+                char c = str[start];
+
+                if (map.get(c) > 0) {
+                    map.put(c, map.getOrDefault(c, 1) - 1);
+
+                    if (map.get(c) == 0)
+                        countOfUnique--;
+
+                }
+                start++;
+            }
+
 
         }
 
         if (totalUnique < k)
-            throw new IllegalArgumentException("input has less unique char then require");
+//            throw new IllegalArgumentException("input has less unique char then require");
+            return "";
         return subStr;
 
     }
