@@ -42,6 +42,10 @@ public class LongestSubStringKUniqueChar {
         System.out.println(longestSubStringKUniqueChar("aabacbebebe", 3) + " expected: cbebebe");
 
         System.out.println(longestSubStringKUniqueChar("aaabbb", 3) + " Expected: <EMPTY>");
+
+        System.out.println(longestSubStringKUniqueChar("eceba", 2) + " Expected: ece");
+
+        System.out.println(longestSubStringKUniqueChar("aa", 1) + " Expected: aa");
     }
 
     /**
@@ -62,7 +66,7 @@ public class LongestSubStringKUniqueChar {
 
         char str[] = string.toCharArray();
 
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>(); //O(1) at max 256 chars
 
         int totalUnique = 0, countOfUnique = 0;
         int start = 0;
@@ -77,10 +81,10 @@ public class LongestSubStringKUniqueChar {
 
                 totalUnique++;
 
-                map.put(str[i], 1);
 
-            } else
-                map.put(str[i], map.getOrDefault(str[i], 0) + 1);
+            }
+
+            map.put(str[i], map.getOrDefault(str[i], 0) + 1);
 
             if (countOfUnique == k) {
 

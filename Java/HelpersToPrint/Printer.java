@@ -1,7 +1,10 @@
 package Java.HelpersToPrint;
 
 import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.flatten.Node;
+import Java.LeetCode.flatten.SinglyNode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -270,6 +273,35 @@ public class Printer {
         inOrder.add(root.val);
         inOrderUtil(root.right, inOrder);
 
+    }
+
+
+    public static <T extends SinglyNode> List<T> print(T head) {
+
+        List<T> nodes = new ArrayList<>();
+
+        T temp = head;
+
+        while (temp != null) {
+            nodes.add(temp);
+            temp = (T) temp.next;
+        }
+
+        return nodes;
+    }
+
+    public static <T extends Node> List<T> print(T head) {
+
+        List<T> nodes = new ArrayList<>();
+
+        T temp = head;
+
+        while (temp != null) {
+            nodes.add(temp);
+            temp = (T) temp.next;
+        }
+
+        return nodes;
     }
 
 

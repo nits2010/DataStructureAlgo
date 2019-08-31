@@ -21,16 +21,16 @@ public class LargestMaximumSumContiguousSubarrayKadensAlgorithm {
 
     public static void main(String[] args) {
 
-        System.out.println(maximumSumSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
-        System.out.println(maximumSumSubArray(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, -4}));
+        System.out.println(KadensAlgorithm.maximumSumSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println(KadensAlgorithm.maximumSumSubArray(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, -4}));
 
-        int[] a = kadens1D(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        int[] a = KadensAlgorithm.kadens1D(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
         if (a[2] == -1)
             System.out.println(" Max sum :" + a[0] + " from: " + a[1] + " To: " + a[1]);
         else
             System.out.println(" Max sum :" + a[0] + " from :" + a[1] + " To :" + a[2]);
 
-        a = kadens1D(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, -4});
+        a = KadensAlgorithm.kadens1D(new int[]{-2, -1, -3, -4, -1, -2, -1, -5, -4});
         if (a[2] == -1)
             System.out.println(" Max sum :" + a[0] + " from: " + a[1] + " To: " + a[1]);
         else
@@ -38,7 +38,11 @@ public class LargestMaximumSumContiguousSubarrayKadensAlgorithm {
 
     }
 
-    private static int maximumSumSubArray(int nums[]) {
+
+}
+
+class KadensAlgorithm {
+    public static int maximumSumSubArray(int nums[]) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -64,7 +68,7 @@ public class LargestMaximumSumContiguousSubarrayKadensAlgorithm {
      * @param temp
      * @return
      */
-    private static int[] kadens1D(int[] temp) {
+    public static int[] kadens1D(int[] temp) {
         int max[] = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
 
         int currentSum = 0;
