@@ -1,3 +1,8 @@
+
+All
+http://guozet.me/leetcode/
+& solution https://github.com/guozetang/leetcode
+
 https://evelynn.gitbooks.io
 
 https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode

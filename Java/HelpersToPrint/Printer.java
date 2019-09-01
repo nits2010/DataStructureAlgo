@@ -304,6 +304,40 @@ public class Printer {
         return nodes;
     }
 
+    public static <T extends TreeNode> List<T> print(T head) {
+
+        List<T> nodes = new ArrayList<>();
+
+        T temp = head;
+
+        while (temp != null) {
+            nodes.add(temp);
+            temp = (T) temp.right;
+        }
+
+        return nodes;
+    }
+
+
+    public static <T extends TreeNode> List<T> printCircular(T head) {
+
+        List<T> nodes = new ArrayList<>();
+
+        T temp = head;
+
+        while (temp != null) {
+            nodes.add(temp);
+            temp = (T) temp.right;
+
+            if (temp == head) {
+                nodes.add(temp);//if it was circular, then state it for testing purpose
+                break;
+            }
+        }
+
+
+        return nodes;
+    }
 
     public static void main(String[] args) {
 

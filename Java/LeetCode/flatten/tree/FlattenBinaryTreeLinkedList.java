@@ -56,7 +56,7 @@ public class FlattenBinaryTreeLinkedList {
          * * 3       6
          */
         testPostOrder(TreeBuilder.arrayToTree(new Integer[]{1, 2, 5, 3, null, null, 6}), Arrays.asList(1, 2, 3, 5, 6));
-        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, 2, 5, 3, 4, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
+        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, 2, 5, 3, null, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
         System.out.println();
         /**
          * * 1
@@ -72,7 +72,7 @@ public class FlattenBinaryTreeLinkedList {
          * *           6
          */
         testPostOrder(TreeBuilder.arrayToTree(new Integer[]{1, null, 2, null, 3, null, 4, null, 5, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
-        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, 2, 5, 3, 4, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
+        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, null, 2, null, 3, null, 4, null, 5, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
         System.out.println();
         /**
          * *             1
@@ -86,8 +86,8 @@ public class FlattenBinaryTreeLinkedList {
          * *     5
 
          */
-        testPostOrder(TreeBuilder.arrayToTree(new Integer[]{1, 2, null, 3, null, 4, null, 5, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
-        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, 2, 5, 3, 4, null, 6}), Arrays.asList(1, 2, 3, 4, 5, 6));
+        testPostOrder(TreeBuilder.arrayToTree(new Integer[]{1, 2, null, 3, null, 4, null, 5, null, 6}), Arrays.asList(1, 2, 3, 4, 5));
+        testPostOrderShort(TreeBuilder.arrayToTree(new Integer[]{1, 2, null, 3, null, 4, null, 5, null, 6}), Arrays.asList(1, 2, 3, 4, 5));
         System.out.println();
     }
 
@@ -101,7 +101,7 @@ public class FlattenBinaryTreeLinkedList {
 
 
     private static void testPostOrderShort(TreeNode root, List<Integer> expected) {
-        System.out.println(" \n Input " + Printer.preOrder(root) + " expected :" + expected);
+//        System.out.println(" \n Input " + Printer.preOrder(root) + " expected :" + expected);
 
         FlattenBinaryTreeLinkedListPostOrderShort postOrder = new FlattenBinaryTreeLinkedListPostOrderShort();
         postOrder.flatten(root);
