@@ -1,6 +1,5 @@
-package Java.LeetCode.flatten;
+package Java.LeetCode.flatten.list;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

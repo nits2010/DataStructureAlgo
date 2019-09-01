@@ -1,8 +1,6 @@
-package Java.LeetCode.flatten;
+package Java.LeetCode.flatten.list;
 
 import Java.HelpersToPrint.Printer;
-
-import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

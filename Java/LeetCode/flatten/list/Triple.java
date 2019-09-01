@@ -1,4 +1,4 @@
-package Java.LeetCode.flatten;
+package Java.LeetCode.flatten.list;
 
 import java.util.List;
 

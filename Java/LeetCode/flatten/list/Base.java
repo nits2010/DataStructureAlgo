@@ -1,4 +1,4 @@
-package Java.LeetCode.flatten;
+package Java.LeetCode.flatten.list;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

@@ -1,4 +1,4 @@
-package Java.LeetCode.flattenNestedListIterator;
+package Java.LeetCode.flatten.flattenNestedListIterator;
 
 import java.util.Arrays;
 import java.util.List;
