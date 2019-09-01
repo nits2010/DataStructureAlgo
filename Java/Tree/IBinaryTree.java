@@ -253,7 +253,7 @@ public interface IBinaryTree {
 
     default boolean isBST(TreeNode<Integer> root) {
 
-        return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return isBSTUtil(root, null, null);
     }
 
 
@@ -262,15 +262,16 @@ public interface IBinaryTree {
         if (null == root)
             return true;
 
+        if (min != null && root.getData() <= min)
+            return false;
 
-        if (root.getData() < min || root.getData() > max)
+        if (max != null && root.getData() >= max)
             return false;
 
 
         return (isBSTUtil(root.getLeft(), min, root.getData()) && isBSTUtil(root.getRight(), root.getData(), max));
 
     }
-
 
     /****************** Java.Tree properties methods *******************/
 
