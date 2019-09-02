@@ -17,12 +17,12 @@ public class CoinChangeProblem {
 
     static void testMinimumCoins() {
         int coins[] = {1, 2, 5}, amount = 11;
-        System.out.println(MinimumCoins.coinChange(coins, amount));
+        System.out.println(CoinChangeMinimumCoins.coinChange(coins, amount));
     }
 
     static void numberOfWays() {
         int coins[] = {1, 2, 5};
-        System.out.println(NumberOfWays.numberOfWays(5, coins));
+        System.out.println(CoinChangeNumberOfWays.numberOfWays(5, coins));
     }
 
 }
@@ -47,7 +47,7 @@ public class CoinChangeProblem {
  * * <p>
  * * Similar to Knapsack problem
  */
-class MinimumCoins {
+class CoinChangeMinimumCoins {
     // minimum[v] defines the minimum number of coins required to make amount
 
     //minimum[v] = 1+ Minimum(minimum[v-coin[i]] for all i-> 0, n)
@@ -117,7 +117,7 @@ class MinimumCoins {
  * the number of coins is less than 500
  * the answer is guaranteed to fit into signed 32-bit integer
  */
-class NumberOfWays {
+class CoinChangeNumberOfWays {
 
     //total[i][j] = number of ways to make sum i using j coins
     //total[i][j] = total[i][j-1] + total[i-coins[j]][j]

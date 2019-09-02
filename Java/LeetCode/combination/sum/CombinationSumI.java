@@ -79,6 +79,8 @@ public class CombinationSumI {
  * Runtime: 2 ms, faster than 99.82% of Java online submissions for Combination Sum.
  * Memory Usage: 36.8 MB, less than 100.00% of Java online submissions for Combination Sum.
  * <p>
+ * <p>
+ * [Backtracking]
  */
 class CombinationSumIDFS {
 
