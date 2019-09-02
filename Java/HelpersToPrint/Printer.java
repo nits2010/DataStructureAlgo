@@ -111,6 +111,22 @@ public class Printer {
         return result.toString();
     }
 
+
+    public static String toString(String[] str) {
+        if (null == str || str.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder("[");
+
+        for (int i = 0; i < str.length; i++) {
+            result.append(str[i]);
+            result.append(",");
+        }
+        result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
+    }
+
     public static String toString(int[][] nums) {
         if (null == nums || nums.length == 0)
             return null;
@@ -165,6 +181,8 @@ public class Printer {
         return result.toString();
 
     }
+
+
 
     public static String toString(final List<int[]> list) {
         if (null == list || list.size() == 0)

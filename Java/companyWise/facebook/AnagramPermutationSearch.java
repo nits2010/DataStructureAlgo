@@ -22,6 +22,8 @@ import java.util.List;
  * Output:   Found at Index 0
  * Found at Index 1
  * Found at Index 4
+ * <p>
+ * {@link Java.LeetCode.FindAllAnagramsString}
  */
 public class AnagramPermutationSearch {
 
@@ -52,7 +54,7 @@ class AnagramSubstringSearch {
         int p = pattern.length();
 
 
-        if(n==p)
+        if (n == p)
             return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++)
