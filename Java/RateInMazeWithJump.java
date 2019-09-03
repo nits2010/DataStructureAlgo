@@ -1,5 +1,7 @@
 package Java;
 
+import Java.HelpersToPrint.Printer;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 20/12/18
@@ -7,20 +9,24 @@ package Java;
  * <p>
  * This is the variation of Rat in Maze
  * <p>
- * A Maze is given as N*N binary matrix of blocks where source block is the upper left most block i.e., maze[0][0] and destination block is lower rightmost block i.e., maze[N-1][N-1]. A rat starts from source and has to reach destination. The rat can move only in two directions: forward and down.
- * In the maze matrix, 0 means the block is dead end and non-zero number means the block can be used in the path from source to destination. The non-zero value of mat[i][j] indicates number of maximum jumps rat can make from cell mat[i][j].
+ * A Maze is given as N*N binary matrix of blocks where source block is the upper left most block i.e., maze[0][0] and destination block is lower rightmost block i.e., maze[N-1][N-1].
+ * A rat starts from source and has to reach destination. The rat can move only in two directions: forward and down.
+ * In the maze matrix, 0 means the block is dead end and non-zero number means the block can be used in the path from source to destination.
+ * The non-zero value of mat[i][j] indicates number of maximum jumps rat can make from cell mat[i][j].
  * <p>
  * In this variation, Rat is allowed to jump multiple steps at a time instead of 1.
  * <p>
  * Examples
  * Examples:
  * <p>
- * Input : { {2, 1, 0, 0},
+ * Input :
+ * { {2, 1, 0, 0},
  * {3, 0, 0, 1},
  * {0, 1, 0, 1},
  * {0, 0, 0, 1}
  * }
- * Output : { {1, 0, 0, 0},
+ * Output :
+ * { {1, 0, 0, 0},
  * {1, 0, 0, 1},
  * {0, 0, 0, 1},
  * {0, 0, 0, 1}
@@ -57,22 +63,16 @@ public class RateInMazeWithJump {
 
     public static void main(String args[]) {
 
-        int maze[][] = {{2, 1, 0, 0},
-                {3, 0, 0, 1},
-                {0, 1, 0, 1},
-                {0, 0, 0, 1}};
+        test(new int[][]{{2, 1, 0, 0}, {3, 0, 0, 1}, {0, 1, 0, 1}, {0, 0, 0, 1}}, new int[][]{{1, 0, 0, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}});
 
-        int solution[][] = {{1, 0, 0, 0},
-                {1, 0, 0, 1},
-                {0, 0, 0, 1},
-                {0, 0, 0, 1}};
 
+    }
+
+    private static void test(int[][] maze, int[][] expected) {
         int n = maze.length, m = maze[0].length;
-
+        System.out.println("\n Maze :\n" + Printer.toString(maze) + " \n expected :\n" + Printer.toString(expected));
         int result[][] = rateInMazeWithJump(maze, 0, 0, n - 1, m - 1);
-
-        System.out.println(isCorrect(result, solution));
-
+        System.out.println("\n Obtained :\n" + Printer.toString(result) + "\nMatch :" + isCorrect(result, expected));
 
     }
 
