@@ -52,7 +52,7 @@ public class UniquePathsI {
     }
 
     private static void test(int m, int n, int expected) {
-        System.out.println("\n m = " + m + " n = " + n + " expected : " + expected);
+        System.out.println(" m = " + m + " n = " + n + " expected : " + expected);
         UniquePathsIBacktracking backtracking = new UniquePathsIBacktracking();
         UniquePathsIDPTopDown pathsIDPTopDown = new UniquePathsIDPTopDown();
         UniquePathsIDPBottomUp pathsIDPBottomUp = new UniquePathsIDPBottomUp();
@@ -370,7 +370,10 @@ class UniquePathsIBinomialCoefficient {
     private int binomialCoefficient(int n, int k) {
 
         int c[] = new int[k + 1];
-
+        /**
+         * m==1 ; if only horizontal strip is there; source (0,0) destination (0,n-1) and we can move right only
+         * n==1 ; if only vertical strip is there; source (0,0) destination (m-1,0) and we can move down only
+         */
         c[0] = 1;
 
         for (int i = 1; i <= n; i++)
