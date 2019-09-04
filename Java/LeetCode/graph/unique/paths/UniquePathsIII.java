@@ -102,7 +102,7 @@ public class UniquePathsIII {
  * <p>
  * Complexity:
  * To reach a cell there are two way and we try all the source cell to reach this cell.
- * Complexity: O((m*n)^4) /O (m*n)
+ * Complexity: O(4^(m*n)) /O (m*n)
  * <p>
  * TLE
  */
