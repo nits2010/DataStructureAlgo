@@ -42,6 +42,13 @@ public class MinimumPathSum {
                         {1, 9, 1},
                         {1, 2, 8}
                 }, 13);
+
+        test(new int[][]
+                {
+                        {-8, -6, 3},
+                        {2, 8, -10},
+                        {-8, -12, -6}
+                }, -32);
     }
 
     private static void test(int[][] grid, int expected) {
@@ -87,7 +94,8 @@ class MinimumPathSumBacktracking {
         dp[sx][sy] = true;
 
 
-        int count = Math.min(
+        int count =
+                Math.min(
                 minPathSum(grid, sx + 1, sy, dx, dy, m, n, dp),
                 minPathSum(grid, sx, sy + 1, dx, dy, m, n, dp)) + grid[sx][sy];
 
