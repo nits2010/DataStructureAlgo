@@ -129,7 +129,8 @@ public class MinimumWordBreak {
                 minCut++;
                 temp = temp.substring(lastMatchPoint + 1);
                 remaining -= lastMatchPoint + 1;
-            } else return minCut;
+            } else
+                return minCut;
 
         }
 

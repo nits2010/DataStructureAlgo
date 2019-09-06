@@ -20,7 +20,7 @@ import java.util.*;
  * <p>
  * [Facebook]
  * <p>
- * {@link IntersectionTwoArraysII}
+ * {@link Java.LeetCode.intersection.arrays.IntersectionTwoArraysII}
  */
 public class IntersectionTwoArraysWithRestriction {
 
