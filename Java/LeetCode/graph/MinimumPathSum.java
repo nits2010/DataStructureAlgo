@@ -50,6 +50,8 @@ public class MinimumPathSum {
         System.out.println(" Top Down DP : " + MinimumPathSumDPTopDown.minPathSum(grid));
         System.out.println(" Bottom up DP : " + MinimumPathSumDPBottomUp.minPathSum(grid));
         System.out.println(" Bottom up  DP Space optimized : " + MinimumPathSumDPBottomUpSpaceOptimized.minPathSum(grid));
+        System.out.println(" Bottom up  DP constant space : " + MinimumPathSumDPBottomUpConstant.minPathSum(grid));
+
     }
 
 
@@ -228,6 +230,51 @@ class MinimumPathSumDPBottomUpSpaceOptimized {
 
 
         return dp[n - 1];
+
+    }
+}
+
+
+class MinimumPathSumDPBottomUpConstant {
+    /**
+     * dp[i][j] = {
+     * *                 Min ( dp[i-1][j] , dp[i][j-1] ) + grid[i][j] i>0 and j>0
+     * *                 dp[i][j-1] + grid[i][j] ; i ==0 and j>0
+     * *                 dp[i-1][j] + grid[i][j] ; i >0 and j==0
+     * *                 grid[i][j] ; i==j==0
+     * *        }
+     * <p>
+     * O(m*n) / O(m*n)
+     * Runtime: 2 ms, faster than 90.21% of Java online submissions for Minimum Path Sum.
+     * Memory Usage: 42.3 MB, less than 83.78% of Java online submissions for Minimum Path Sum.
+     *
+     * @param grid
+     * @return
+     */
+    public static int minPathSum(int[][] grid) {
+
+        if (grid == null || grid.length == 0 || grid[0].length == 0)
+            return 0;
+
+        int m = grid.length;
+        int n = grid[0].length;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+
+                if (i == 0 && j == 0)
+                    grid[i][j] = grid[i][j];
+                else if (i == 0)
+                    grid[i][j] = grid[i][j - 1] + grid[i][j];
+                else if (j == 0)
+                    grid[i][j] = grid[i - 1][j] + grid[i][j];
+                else
+                    grid[i][j] = Math.min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
+            }
+        }
+
+
+        return grid[m - 1][n - 1];
 
     }
 }
