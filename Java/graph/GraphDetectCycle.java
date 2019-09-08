@@ -57,12 +57,6 @@ public class GraphDetectCycle {
 
     public static boolean detectCycleDFS(final int vertices, final List<Integer>[] adjancyList) {
 
-        return detectCycle(adjancyList, vertices);
-    }
-
-
-    private static boolean detectCycle(List<Integer>[] adjList, int vertices) {
-
         int visited[] = new int[vertices]; //initially all are false;
 
         /**
@@ -71,12 +65,13 @@ public class GraphDetectCycle {
         for (int c = 0; c < vertices; c++) {
             //Visit those which has not visit yet
 
-            if (visited[c] != -1 && detectCycle(adjList, c, visited))
+            if (visited[c] != -1 && detectCycleDFS(adjancyList, c, visited))
                 return false;
 
         }
         return true;
     }
+
 
     /**
      * DFS
@@ -86,7 +81,7 @@ public class GraphDetectCycle {
      * @param visited
      * @return
      */
-    private static boolean detectCycle(List<Integer>[] adjList, int vertex, int[] visited) {
+    private static boolean detectCycleDFS(List<Integer>[] adjList, int vertex, int[] visited) {
 
         /**
          * If visited already, then there is a cycle
@@ -103,7 +98,7 @@ public class GraphDetectCycle {
         visited[vertex] = 1;
 
         for (Integer c : adjList[vertex])
-            if (detectCycle(adjList, c, visited))
+            if (detectCycleDFS(adjList, c, visited))
                 return true;
 
         /**

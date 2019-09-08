@@ -13,10 +13,11 @@ public class TopologicalSorts {
     /**
      * This works for both, Directed Graph
      * and Un-Directed Graph
+     * DFS
      *
      * @return
      */
-    public static List<Integer> topologicalSort(final int vertices, final List<Integer>[] adjancyList) {
+    public static List<Integer> topologicalSortDFS(final int vertices, final List<Integer>[] adjancyList) {
 
         boolean visited[] = new boolean[vertices];
 
@@ -30,7 +31,7 @@ public class TopologicalSorts {
 
         verticesStream
                 .filter(x -> !visited[x])
-                .forEach(x -> topologicalSort(adjancyList, visited, stack, x));
+                .forEach(x -> topologicalSortDFS(adjancyList, visited, stack, x));
 
 
         final List<Integer> sorted = new ArrayList<>(stack.size());
@@ -43,7 +44,7 @@ public class TopologicalSorts {
     }
 
 
-    private static void topologicalSort(final List<Integer>[] adjancyList, boolean[] visited, Stack<Integer> stack, int x) {
+    private static void topologicalSortDFS(final List<Integer>[] adjancyList, boolean[] visited, Stack<Integer> stack, int x) {
 
         visited[x] = true;
 
@@ -52,7 +53,7 @@ public class TopologicalSorts {
 
         edges.stream()
                 .filter(i -> !visited[i])
-                .forEach(i -> topologicalSort(adjancyList, visited, stack, i));
+                .forEach(i -> topologicalSortDFS(adjancyList, visited, stack, i));
         stack.push(x);
 
     }

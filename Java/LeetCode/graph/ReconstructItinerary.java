@@ -101,7 +101,7 @@ interface IReconstructItinerary {
  * <p>
  * We can do either backtracking or just modify normal dfs to Eular path algorithm.
  * Where we approach from top to down and once we reach down with all node visited , we'll build itinerary from bottom.
- * At last reverse it.
+ * At last shortestPath it.
  * <p>
  * Runtime: 5 ms, faster than 81.48% of Java online submissions for Reconstruct Itinerary.
  * Memory Usage: 44 MB, less than 61.19% of Java online submissions for Reconstruct Itinerary.
@@ -185,7 +185,7 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
      * targets = {'JFK': ['D'], 'A': [], 'B': [], 'C': ['JFK'], 'D': []}
      * route = ['A', 'D', 'JFK', 'C', 'B', 'D', 'C', 'A', 'JFK']
      * stack = []
-     * Return route in reverse:
+     * Return route in shortestPath:
      * <p>
      * <p>
      * route = ['JFK', 'A', 'C

@@ -55,7 +55,7 @@ public class CombinationSumII {
         CombinationSumIIDFSV2 visitedDfs = new CombinationSumIIDFSV2();
 
         System.out.println(" dfs :" + dfs.combinationSum2(candidates, target));
-        System.out.println(" reverse dfs :" + reverseDFS.combinationSum2(candidates, target));
+        System.out.println(" shortestPath dfs :" + reverseDFS.combinationSum2(candidates, target));
         System.out.println(" visited dfs :" + visitedDfs.combinationSum2(candidates, target));
     }
 }

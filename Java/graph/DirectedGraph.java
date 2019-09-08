@@ -1,7 +1,6 @@
 package Java.graph;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -49,7 +48,7 @@ public class DirectedGraph implements IGraphTopologicalCycle {
      */
     @Override
     public List<Integer> topologicalSort() {
-        return TopologicalSorts.topologicalSort(this.vertices, this.adjancyList);
+        return TopologicalSorts.topologicalSortDFS(this.vertices, this.adjancyList);
     }
 
 

@@ -175,7 +175,7 @@ public class GenerateValidParenthesis {
 
 
         /**
-         * In reverse order
+         * In shortestPath order
          * Complexity: O(4^n / (sqrt(n)))
          * @param n
          * @return

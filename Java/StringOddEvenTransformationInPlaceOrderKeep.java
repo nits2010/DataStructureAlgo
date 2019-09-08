@@ -69,10 +69,10 @@ public class StringOddEvenTransformationInPlaceOrderKeep {
             //Reverse the second half of first substring
             reverse(str, shift / 2, shift - 1);
 
-            //reverse the first half of second substring
+            //shortestPath the first half of second substring
             reverse(str, shift, shift + currentStringLength / 2 - 1);
 
-            //reverse the second half of first substring and first half of second substring toegether
+            //shortestPath the second half of first substring and first half of second substring toegether
             reverse(str, shift / 2, shift + currentStringLength / 2 - 1);
 
             shift += currentStringLength;

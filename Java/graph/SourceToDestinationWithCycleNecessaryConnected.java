@@ -1,6 +1,5 @@
 package Java.graph;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,7 +30,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         System.out.println(isNecessaryConnected(directedGraph, vertices, 2, 8));
 
 
-        IGraphTopologicalCycle directedGraph2 = new DirectedGraph(vertices);
+        IGraphBase directedGraph2 = new DirectedGraph(vertices);
 
         directedGraph2.addEdge(2, 3);
         directedGraph2.addEdge(2, 1);
@@ -50,16 +49,15 @@ public class SourceToDestinationWithCycleNecessaryConnected {
 
     }
 
-    private static boolean isNecessaryConnected(IGraphTopologicalCycle directedGraph, int vertices, int source, int destination) {
+    private static boolean isNecessaryConnected(IGraphBase directedGraph, int vertices, int source, int destination) {
         if (source > vertices || destination > vertices || source < 0 || destination < 0)
             return false;
 
         Set<Integer> visited = new HashSet<>();
         boolean path[] = new boolean[vertices];
-        Arrays.fill(path, false);
 
         visited.add(source);
-        dfs(directedGraph, visited, path, source, destination, source);
+        dfs(directedGraph, visited, path, destination, source);
 
         for (int node : directedGraph.getAdjList()[source]) {
             if (path[node] == false)
@@ -68,13 +66,14 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         return true;
     }
 
-    private static boolean dfs(IGraphTopologicalCycle directedGraph, Set<Integer> visited, boolean[] path, int source, int destination, int current) {
+    private static boolean dfs(IGraphBase directedGraph, Set<Integer> visited, boolean[] path, int destination, int current) {
 
         //if this path already been computed
         if (path[current])
             return true;
 
         for (int node : directedGraph.getAdjList()[current]) {
+
             if (!visited.contains(node)) {
 
                 //add this node so that we won't visit again (to avoid cycle)
@@ -83,7 +82,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
                 if (node == destination)
                     path[node] = true;
 
-                if (dfs(directedGraph, visited, path, source, destination, node)) {
+                if (dfs(directedGraph, visited, path, destination, node)) {
                     path[current] = true;
                     return true;
                 }

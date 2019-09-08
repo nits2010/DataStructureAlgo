@@ -52,7 +52,7 @@ import Java.HelpersToPrint.Printer;
  * If the neighbors on both the sides of a cell are either active or inactive, the cell becomes inactive on the next day;
  * otherwise the cell becomes active.
  * <p>
- * It just reverse of above.
+ * It just shortestPath of above.
  */
 public class CellStateAfterNDays {
     public static void main(String[] args) {

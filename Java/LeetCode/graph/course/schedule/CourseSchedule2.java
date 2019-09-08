@@ -121,7 +121,7 @@ class CourseScheduleIIBFS implements ICourseSchedule {
                     queue.offer(v);
         }
 
-        if (count < 0) //Or you have to reverse the array if you start from 0th index
+        if (count < 0) //Or you have to shortestPath the array if you start from 0th index
             return order;
 
         return new int[0];
