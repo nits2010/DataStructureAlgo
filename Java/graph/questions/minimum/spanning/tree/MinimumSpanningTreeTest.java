@@ -41,8 +41,12 @@ public class MinimumSpanningTreeTest {
     private static void test(IWeightedGraph graph) {
 
         System.out.println("\n Graph :\n" + graph.scan());
-        IMinimumSpanningTree mst = new KruskalMinimumSpanningTree();
-        System.out.println("Kruskal MST :" + mst.mst(graph));
+
+        IMinimumSpanningTree kruskalMinimumSpanningTree = new KruskalMinimumSpanningTree();
+        IMinimumSpanningTree prIMinimumSpanningTree = new PrimMinimumSpanningTree();
+
+        System.out.println("Kruskal MST :" + kruskalMinimumSpanningTree.mst(graph));
+        System.out.println("Prims MST :" + prIMinimumSpanningTree.mst(graph));
 
 
     }

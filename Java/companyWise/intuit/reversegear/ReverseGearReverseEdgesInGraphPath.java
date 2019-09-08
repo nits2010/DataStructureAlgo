@@ -57,6 +57,9 @@ public class ReverseGearReverseEdgesInGraphPath {
  * Now we can see that we have modified the graph in such a way that, if we move towards original edge, no cost is incurred,
  * but if we move toward shortestPath edge 1 cost is added. So if we apply Dijkstra’s shortest path on this modified graph from given source,
  * then that will give us minimum cost to reach from source to destination i.e. minimum edge reversal from source to destination.
+ *
+ * {@link Java.graph.questions.shortest.path.DijkstraShortestPath}
+ *
  */
 class MinimumEdgesToReverseMakePathFromSourceToDestination {
 

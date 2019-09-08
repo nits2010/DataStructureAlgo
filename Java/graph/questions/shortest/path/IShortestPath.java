@@ -1,4 +1,4 @@
-package Java.graph.questions.minimum.spanning.tree;
+package Java.graph.questions.shortest.path;
 
 import Java.graph.graph.IWeightedGraph;
 import Java.graph.graph.types.Edges;
@@ -10,9 +10,7 @@ import java.util.List;
  * Date: 2019-09-08
  * Description:
  */
-public interface IMinimumSpanningTree {
+public interface IShortestPath {
 
-
-    List<Edges> mst(IWeightedGraph graph);
-
+    List<Edges> shortestPath(IWeightedGraph graph, int source);
 }

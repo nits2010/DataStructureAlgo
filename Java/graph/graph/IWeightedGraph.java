@@ -1,6 +1,6 @@
 package Java.graph.graph;
 
-import Java.graph.questions.minimum.spanning.tree.Edges;
+import Java.graph.graph.types.Edges;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public interface IWeightedGraph {
 
 
-    List<Edges> getAdjList();
+    List<Edges>[] getAdjList();
 
     int getVertices();
 

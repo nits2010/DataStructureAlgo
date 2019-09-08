@@ -1,7 +1,6 @@
 package Java.graph.graph.types;
 
 import Java.graph.graph.IWeightedGraph;
-import Java.graph.questions.minimum.spanning.tree.Edges;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,19 +13,23 @@ import java.util.List;
 public class WeightedUnDirectedGraph implements IWeightedGraph {
 
     //To hold the edges
-    private final List<Edges> adjacencyList;
+    private final List<Edges>[] adjList;
     private final int vertices;
 
     //initiate the graph
     public WeightedUnDirectedGraph(int vertices) {
 
-        adjacencyList = new LinkedList<>();
+        adjList = new LinkedList[vertices];
+        for (int i = 0; i < vertices; i++)
+            adjList[i] = new LinkedList<>();
+
         this.vertices = vertices;
     }
 
+
     @Override
-    public List<Edges> getAdjList() {
-        return adjacencyList;
+    public List<Edges>[] getAdjList() {
+        return adjList;
     }
 
     @Override
@@ -36,16 +39,16 @@ public class WeightedUnDirectedGraph implements IWeightedGraph {
 
     @Override
     public void addEdge(int source, int destination, double weight) {
-        adjacencyList.add(new Edges(source, destination, weight));
-        adjacencyList.add(new Edges(destination, source, weight));
+        adjList[source].add(new Edges(source, destination, weight));
+        adjList[destination].add(new Edges(destination, source, weight));
     }
 
     @Override
     public String scan() {
 
         StringBuilder graphData = new StringBuilder();
-        for (int u = 0; u < this.adjacencyList.size(); u++)
-            graphData.append(this.adjacencyList.get(u) + " \n");
+        for (int u = 0; u < this.adjList.length; u++)
+            graphData.append(this.adjList[u] + " \n");
 
         return graphData.toString();
     }

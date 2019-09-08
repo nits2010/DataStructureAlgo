@@ -1,4 +1,4 @@
-package Java.graph.questions.minimum.spanning.tree;
+package Java.graph.graph.types;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -7,9 +7,9 @@ package Java.graph.questions.minimum.spanning.tree;
  */
 public class Edges {
 
-    int source;
-    int destination;
-    double weight;
+    public int source;
+    public int destination;
+    public double weight;
 
     public Edges(int source, int destination, double weight) {
         this.source = source;
@@ -18,6 +18,11 @@ public class Edges {
     }
 
 
+    public Edges(int source, int distance) {
+        this.source = source;
+        this.destination = distance;
+    }
+
     public Edges() {
     }
 
@@ -25,4 +30,5 @@ public class Edges {
     public String toString() {
         return source + "->" + destination + " w: " + weight;
     }
+
 }
