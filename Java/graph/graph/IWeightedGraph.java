@@ -19,4 +19,6 @@ public interface IWeightedGraph {
     void addEdge(int source, int destination, double weight);
 
     String scan();
+
+    int getEdges();
 }

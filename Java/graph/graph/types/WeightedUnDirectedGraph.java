@@ -15,6 +15,7 @@ public class WeightedUnDirectedGraph implements IWeightedGraph {
     //To hold the edges
     private final List<Edges>[] adjList;
     private final int vertices;
+    private int edges;
 
     //initiate the graph
     public WeightedUnDirectedGraph(int vertices) {
@@ -41,6 +42,7 @@ public class WeightedUnDirectedGraph implements IWeightedGraph {
     public void addEdge(int source, int destination, double weight) {
         adjList[source].add(new Edges(source, destination, weight));
         adjList[destination].add(new Edges(destination, source, weight));
+        this.edges += 2;
     }
 
     @Override
@@ -51,5 +53,10 @@ public class WeightedUnDirectedGraph implements IWeightedGraph {
             graphData.append(this.adjList[u] + " \n");
 
         return graphData.toString();
+    }
+
+    @Override
+    public int getEdges() {
+        return this.edges;
     }
 }

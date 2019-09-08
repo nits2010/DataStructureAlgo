@@ -18,6 +18,8 @@ import java.util.*;
  * …..a) Extract the vertex with minimum distance value node from Min Heap. Let the extracted vertex be u.
  * …..b) For every adjacent vertex v of u, check if v is in Min Heap. If v is in Min Heap and distance value is more
  * than weight of u-v plus distance value of u, then update the distance value of v.
+ * <p>
+ * Complexity: O(V*log(V))
  */
 public class DijkstraShortestPath implements IShortestPath {
 
