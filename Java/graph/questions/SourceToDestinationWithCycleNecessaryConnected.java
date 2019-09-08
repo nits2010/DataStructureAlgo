@@ -1,4 +1,7 @@
-package Java.graph;
+package Java.graph.questions;
+
+import Java.graph.graph.types.DirectedGraph;
+import Java.graph.graph.IGraphBase;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +16,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
     public static void main(String args[]) {
 
         int vertices = 9;
-        IGraphTopologicalCycle directedGraph = new DirectedGraph(vertices);
+        IGraphBase directedGraph = new DirectedGraph(vertices);
 
         directedGraph.addEdge(2, 3);
         directedGraph.addEdge(2, 4);

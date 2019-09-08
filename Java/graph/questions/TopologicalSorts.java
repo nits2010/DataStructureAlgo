@@ -1,4 +1,4 @@
-package Java.graph;
+package Java.graph.questions;
 
 import java.util.*;
 import java.util.stream.Stream;

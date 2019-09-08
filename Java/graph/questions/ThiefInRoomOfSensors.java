@@ -1,8 +1,7 @@
-package Java.graph;
+package Java.graph.questions;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

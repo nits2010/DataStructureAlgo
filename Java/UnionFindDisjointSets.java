@@ -4,7 +4,7 @@ package Java;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-20
  * Description:
- * Union Find algirthm with path compression and ranking
+ * Union Find algorithm with path compression and ranking
  */
 public class UnionFindDisjointSets {
 
@@ -30,8 +30,8 @@ public class UnionFindDisjointSets {
         return find(i);
     }
 
-    public void unionBoth(int i, int j) {
-        union(i, j);
+    public boolean unionBoth(int i, int j) {
+        return union(i, j);
     }
 
 
@@ -54,13 +54,13 @@ public class UnionFindDisjointSets {
      * @param i
      * @param j
      */
-    private void union(int i, int j) {
+    private boolean union(int i, int j) {
 
         int pi = find(i);
         int pj = find(j);
 
         if (pi == pj)
-            return;
+            return false;
 
         if (parent[pi].rank < parent[pj].rank) {
             parent[pi].id = pj; //make pj as parent of pi, this will make pj size always same as we added one more child only
@@ -71,6 +71,7 @@ public class UnionFindDisjointSets {
             parent[pj].rank++;
         }
 
+        return true;
     }
 
 }

@@ -145,6 +145,23 @@ public class Printer {
 
     }
 
+    public static String toString(List<Integer>[] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < nums.length; i++) {
+
+
+            result.append(nums[i]);
+            result.append("\n");
+        }
+
+
+        return result.toString();
+
+    }
+
     public static String toStringInline(int[][] nums) {
         if (null == nums || nums.length == 0)
             return null;
@@ -181,7 +198,6 @@ public class Printer {
         return result.toString();
 
     }
-
 
 
     public static String toString(final List<int[]> list) {

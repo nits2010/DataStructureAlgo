@@ -1,4 +1,7 @@
-package Java.graph.nodeBase;
+package Java.graph.questions.clone;
+
+import Java.graph.graph.node.base.Graph;
+import Java.graph.graph.node.base.GraphNode;
 
 import java.util.*;
 

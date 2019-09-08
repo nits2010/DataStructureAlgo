@@ -1,4 +1,7 @@
-package Java.graph.nodeBase;
+package Java.graph.questions.clone;
+
+import Java.graph.graph.node.base.Graph;
+import Java.graph.graph.node.base.GraphNode;
 
 import java.util.*;
 
@@ -7,54 +10,49 @@ import java.util.*;
  * Date: 2019-06-19
  * Description:
  */
-public class UndirectedGraph {
+public class GraphCloneTest {
 
 
     // Driver code
     public static void main(String[] args) {
-        UndirectedGraph gfg = new UndirectedGraph();
         System.out.println("Connected");
-        connected(gfg);
+        connected();
 
         System.out.println("\n\n\n DisConnected");
-        disConnected(gfg);
+        disConnected();
     }
 
 
-    private static void connected(UndirectedGraph gfg) {
-        Graph connectedGraph = gfg.buildConnectedGraph();
+    private static void connected() {
+        Graph connectedGraph = buildConnectedGraph();
 
         // Original graph
         System.out.println("\n INITIAL GRAPH");
-        gfg.printConnectedComponent(connectedGraph.getNodes().get(0), new HashSet<>());
+        System.out.println(connectedGraph.printConnectedComponent(connectedGraph.getNodes().get(0), new HashSet<>()));
 
         System.out.println("\n CLONED GRAPH");
         GraphClone cloneGraph = new GraphClone();
         Graph cloned = cloneGraph.cloneConnectedComponent(connectedGraph);
-        gfg.printConnectedComponent(cloned.getNodes().get(0), new HashSet<>());
+        System.out.println(connectedGraph.printConnectedComponent(cloned.getNodes().get(0), new HashSet<>()));
 
     }
 
-    private static void disConnected(UndirectedGraph gfg) {
-        Graph disConnectedGraph = gfg.buildDisConnectedGraph();
+    private static void disConnected() {
+        Graph disConnectedGraph = buildDisConnectedGraph();
 
         // Original graph
         System.out.println("\tINITIAL GRAPH");
-        Set<GraphNode> visited = new HashSet<>();
-        for (GraphNode n : disConnectedGraph.getNodes())
-            gfg.printConnectedComponent(n, visited);
+        System.out.println(disConnectedGraph.scanGraph(disConnectedGraph));
 
         // Cloned graph
         System.out.println("\n\n\n CLONED GRAPH\n");
         GraphClone cloneGraph = new GraphClone();
-        Graph cloned = cloneGraph.cloneGraphDisConnectedUndirected(disConnectedGraph);
-        visited = new HashSet<>();
-        for (GraphNode node : cloned.getNodes())
-            gfg.printConnectedComponent(node, visited);
+        Graph clonedGraph = cloneGraph.cloneGraphDisConnectedUndirected(disConnectedGraph);
+        System.out.println(disConnectedGraph.scanGraph(clonedGraph));
     }
 
 
-    public Graph buildConnectedGraph() {
+    public static Graph buildConnectedGraph() {
         GraphNode node1 = new GraphNode(1);
         GraphNode node2 = new GraphNode(2);
         GraphNode node3 = new GraphNode(3);
@@ -81,7 +79,7 @@ public class UndirectedGraph {
     }
 
     // Function to build the graph
-    public Graph buildDisConnectedGraph() {
+    public static Graph buildDisConnectedGraph() {
 
         // Create graph
         Graph g = new Graph();
@@ -116,8 +114,8 @@ public class UndirectedGraph {
     }
 
     // Function to print the connected components
-    public void printConnectedComponent(GraphNode node,
-                                        Set<GraphNode> visited) {
+    public static void printConnectedComponent(GraphNode node,
+                                               Set<GraphNode> visited) {
         if (visited.contains(node))
             return;
 

@@ -1,5 +1,6 @@
 package Java.companyWise.Google;
 
+import Java.graph.questions.TopologicalSorts;
 import javafx.util.Pair;
 
 import java.util.*;
@@ -141,7 +142,7 @@ public class SetMatrixZerosEraseOrbsXs {
      * then after we calculate degree of each orbs
      * then run topological sort till there is 1 or left whose degree is more than 0
      * <p>
-     * {@link Java.graph.TopologicalSorts}
+     * {@link TopologicalSorts}
      *
      * @param matrix
      * @return

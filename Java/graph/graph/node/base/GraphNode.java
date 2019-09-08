@@ -1,4 +1,4 @@
-package Java.graph.nodeBase;
+package Java.graph.graph.node.base;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,29 +28,28 @@ public class GraphNode {
     }
 
     // Function to add a child to the current node
-    public void addChild(GraphNode node)
-    {
+    public void addChild(GraphNode node) {
         this.neighbors.add(node);
     }
 
     // Function to return a list of children
     // for the current node
-    public List<GraphNode> getChildren()
-    {
+    public List<GraphNode> getChildren() {
         return neighbors;
     }
 
     // Function to set the node's value
-    public void setData(int data)
-    {
+    public void setData(int data) {
         this.val = data;
     }
 
     // Function to return the node's value
-    public int getData()
-    {
+    public int getData() {
         return val;
     }
 
-
+    @Override
+    public String toString() {
+        return "" + val;
+    }
 }

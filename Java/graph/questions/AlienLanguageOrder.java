@@ -1,4 +1,6 @@
-package Java.graph;
+package Java.graph.questions;
+
+import Java.graph.graph.types.DirectedGraph;
 
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class AlienLanguageOrder {
 
     private static void findOrder(String[] words, int characters) {
 
-        final IGraphTopologicalCycle graph = new DirectedGraph(characters);
+        final DirectedGraph graph = new DirectedGraph(characters);
 
         //Push all edges
         for (int i = 0; i < words.length - 1; i++) {
@@ -67,7 +69,7 @@ public class AlienLanguageOrder {
             }
         }
 
-        List<Integer> integers = graph.topologicalSortKhanAlgo();
+        List<Integer> integers = TopologicalSorts.topologicalSortKhanAlgo(graph.getAdjList(), graph.getVertices());
         if (integers.isEmpty()) {
             System.out.println("No order possible");
         } else

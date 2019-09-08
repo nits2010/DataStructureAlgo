@@ -1,4 +1,4 @@
-package Java.graph;
+package Java.graph.graph;
 
 import java.util.List;
 
@@ -14,6 +14,9 @@ public interface IGraphBase {
     int getVertices();
 
     void addEdge(int source, int destination);
+
+    String print();
+
 
 
 }
