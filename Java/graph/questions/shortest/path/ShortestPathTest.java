@@ -38,23 +38,27 @@ public class ShortestPathTest {
                 4       */
 
 
-        test(getGraph(new int[][]{{0, 1, 10}, {1, 3, 15}, {2, 3, 4}, {0, 2, 6}, {0, 3, 5}}, 4));
+        test(getGraph(new int[][]{{0, 1, 10}, {1, 3, 15}, {2, 3, 4}, {0, 2, 6}, {0, 3, 5}}, 4), 0);
 
 
-        test(getGraph(new int[][]{{0, 1, 9}, {0, 2, 6}, {0, 3, 5}, {0, 4, 3}, {2, 1, 2}, {2, 3, 4}}, 5));
+        test(getGraph(new int[][]{{0, 1, 9}, {0, 2, 6}, {0, 3, 5}, {0, 4, 3}, {2, 1, 2}, {2, 3, 4}}, 5), 0);
 
 
         test(getGraph(new int[][]{{0, 1, 4}, {0, 7, 8}, {1, 2, 8}, {2, 3, 7}, {3, 4, 9},
-                {4, 5, 10}, {5, 6, 2}, {6, 7, 1}, {7, 8, 7}, {2, 8, 2}, {1, 7, 11}, {2, 5, 4}, {3, 5, 14}, {8, 6, 6}}, 9));
+                {4, 5, 10}, {5, 6, 2}, {6, 7, 1}, {7, 8, 7}, {2, 8, 2}, {1, 7, 11}, {2, 5, 4}, {3, 5, 14}, {8, 6, 6}}, 9), 0);
+
+        test(getGraph(new int[][]{{0, 1, 4}, {0, 7, 8}, {1, 2, 8}, {2, 3, 7}, {3, 4, 9},
+                {4, 5, 10}, {5, 6, 2}, {6, 7, 1}, {7, 8, 7}, {2, 8, 2}, {1, 7, 11}, {2, 5, 4}, {3, 5, 14}, {8, 6, 6}}, 9), 3);
 
     }
 
-    private static void test(IWeightedGraph graph) {
+    private static void test(IWeightedGraph graph, int source) {
         System.out.println("\n Graph :\n" + graph.scan());
 
         final IShortestPath dijkstraShortestPath = new DijkstraShortestPath();
-        final List<Edges> shortestPath = dijkstraShortestPath.shortestPath(graph, 0);
+        final List<Edges> shortestPath = dijkstraShortestPath.shortestPath(graph, source);
         shortestPath.stream().forEach(e -> System.out.println(e));
+
 
     }
 }
