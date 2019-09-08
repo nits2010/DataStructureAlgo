@@ -30,6 +30,14 @@ public class UnionFindDisjointSets {
         return find(i);
     }
 
+    /**
+     * Union both the sets
+     * false: if union is not done {when parents are same} otherwise true
+     *
+     * @param i
+     * @param j
+     * @return false: if union is not done {when parents are same} otherwise true
+     */
     public boolean unionBoth(int i, int j) {
         return union(i, j);
     }
@@ -48,11 +56,15 @@ public class UnionFindDisjointSets {
         return parent[i].id = find(parent[i].id); //Path compression
     }
 
+
     /**
      * O(logn)
+     * Union both the sets
+     * false: if union is not done {when parents are same} otherwise true
      *
      * @param i
      * @param j
+     * @return false: if union is not done {when parents are same} otherwise true
      */
     private boolean union(int i, int j) {
 

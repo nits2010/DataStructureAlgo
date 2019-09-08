@@ -1,9 +1,8 @@
 package Java.graph.questions;
 
 import Java.UnionFindDisjointSets;
-import Java.graph.graph.IGraphBase;
+import Java.graph.graph.IGraph;
 import Java.graph.graph.types.DirectedGraph;
-import Java.graph.graph.types.UnDirectedGraph;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -28,8 +27,8 @@ public class DetectCycleGraph {
      * @param vertices
      * @return
      */
-    private static IGraphBase getGraph(int vertices, int[][] edgs) {
-        IGraphBase graph = new DirectedGraph(vertices);
+    private static IGraph getGraph(int vertices, int[][] edgs) {
+        IGraph graph = new DirectedGraph(vertices);
 
         for (int[] edg : edgs) {
             graph.addEdge(edg[0], edg[1]);
@@ -46,7 +45,7 @@ public class DetectCycleGraph {
         test(getGraph(4, new int[][]{{0, 1}, {1, 2}, {2, 3}}));
     }
 
-    private static void test(IGraphBase graph) {
+    private static void test(IGraph graph) {
         System.out.println("\n Graph :\n" + graph.print());
 
         System.out.println(" DFS : " + detectCycleDFS(graph.getVertices(), graph.getAdjList()));

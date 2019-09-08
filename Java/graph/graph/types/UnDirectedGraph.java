@@ -1,9 +1,6 @@
 package Java.graph.graph.types;
 
-import Java.HelpersToPrint.Printer;
-import Java.graph.graph.IGraphBase;
-import Java.graph.graph.node.base.Graph;
-import Java.graph.graph.node.base.GraphNode;
+import Java.graph.graph.IGraph;
 
 import java.util.*;
 
@@ -12,7 +9,7 @@ import java.util.*;
  * Date: 12/04/19
  * Description:
  */
-public class UnDirectedGraph implements IGraphBase {
+public class UnDirectedGraph implements IGraph {
 
     //To hold the edges
     private final List<Integer>[] adjacencyList;

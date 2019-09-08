@@ -1,6 +1,6 @@
 package Java.graph.graph.types;
 
-import Java.graph.graph.IGraphBase;
+import Java.graph.graph.IGraph;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ import java.util.*;
  * Date: 20/02/19
  * Description:
  */
-public class DirectedGraph implements IGraphBase {
+public class DirectedGraph implements IGraph {
 
 
     //To hold the edges

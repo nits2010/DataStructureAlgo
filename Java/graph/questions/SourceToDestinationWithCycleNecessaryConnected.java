@@ -1,7 +1,7 @@
 package Java.graph.questions;
 
 import Java.graph.graph.types.DirectedGraph;
-import Java.graph.graph.IGraphBase;
+import Java.graph.graph.IGraph;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -16,7 +16,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
     public static void main(String args[]) {
 
         int vertices = 9;
-        IGraphBase directedGraph = new DirectedGraph(vertices);
+        IGraph directedGraph = new DirectedGraph(vertices);
 
         directedGraph.addEdge(2, 3);
         directedGraph.addEdge(2, 4);
@@ -33,7 +33,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         System.out.println(isNecessaryConnected(directedGraph, vertices, 2, 8));
 
 
-        IGraphBase directedGraph2 = new DirectedGraph(vertices);
+        IGraph directedGraph2 = new DirectedGraph(vertices);
 
         directedGraph2.addEdge(2, 3);
         directedGraph2.addEdge(2, 1);
@@ -52,7 +52,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
 
     }
 
-    private static boolean isNecessaryConnected(IGraphBase directedGraph, int vertices, int source, int destination) {
+    private static boolean isNecessaryConnected(IGraph directedGraph, int vertices, int source, int destination) {
         if (source > vertices || destination > vertices || source < 0 || destination < 0)
             return false;
 
@@ -69,7 +69,7 @@ public class SourceToDestinationWithCycleNecessaryConnected {
         return true;
     }
 
-    private static boolean dfs(IGraphBase directedGraph, Set<Integer> visited, boolean[] path, int destination, int current) {
+    private static boolean dfs(IGraph directedGraph, Set<Integer> visited, boolean[] path, int destination, int current) {
 
         //if this path already been computed
         if (path[current])

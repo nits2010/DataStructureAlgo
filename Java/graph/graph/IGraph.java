@@ -7,7 +7,7 @@ import java.util.List;
  * Date: 20/02/19
  * Description:
  */
-public interface IGraphBase {
+public interface IGraph {
 
     List<Integer>[] getAdjList();
 
