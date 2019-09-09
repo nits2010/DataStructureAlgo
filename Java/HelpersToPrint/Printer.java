@@ -80,6 +80,21 @@ public class Printer {
         return result.toString();
     }
 
+    public static <T> String toString(T[] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder("[");
+
+        for (int i = 0; i < nums.length; i++) {
+            result.append(nums[i]);
+            result.append(",");
+        }
+        result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
+    }
+
 
     public static String toString(double[] nums) {
         if (null == nums || nums.length == 0)
@@ -221,6 +236,7 @@ public class Printer {
 
         return copy;
     }
+
 
     public static int[][] copyOf(int[][] input) {
         int[][] copy = new int[input.length][input[0].length];
