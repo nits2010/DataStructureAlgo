@@ -20,6 +20,8 @@ import java.util.*;
  * than weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
  * Complexity: O(V*log(V))
+ *
+ * https://www.dyclassroom.com/graph/detecting-negative-cycle-using-bellman-ford-algorithm
  */
 public class DijkstraShortestPath implements IShortestPath {
 
