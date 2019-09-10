@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.LeetCode.HelperDatastructure.ListNode;
+import Java.LeetCode.templates.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

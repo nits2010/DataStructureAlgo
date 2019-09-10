@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 
 import java.io.BufferedReader;
 import java.io.IOException;

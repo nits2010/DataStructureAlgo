@@ -1,7 +1,7 @@
 package Java.LeetCode.listToBST;
 
-import Java.LeetCode.HelperDatastructure.ListNode;
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.ListNode;
+import Java.LeetCode.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

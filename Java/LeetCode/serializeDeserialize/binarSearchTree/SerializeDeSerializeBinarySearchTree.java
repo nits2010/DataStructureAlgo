@@ -1,10 +1,7 @@
 package Java.LeetCode.serializeDeserialize.binarSearchTree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
-
-import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

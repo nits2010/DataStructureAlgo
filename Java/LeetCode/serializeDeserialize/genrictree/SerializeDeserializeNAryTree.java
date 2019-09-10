@@ -1,9 +1,5 @@
 package Java.LeetCode.serializeDeserialize.genrictree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
-import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
-
-import javax.print.attribute.standard.MediaSize;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

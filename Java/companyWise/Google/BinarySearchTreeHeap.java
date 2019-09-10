@@ -1,7 +1,7 @@
 package Java.companyWise.Google;
 
 import Java.HelpersToPrint.Printer;
-import Java.LeetCode.HelperDatastructure.TreapNode;
+import Java.LeetCode.templates.TreapNode;
 
 import java.util.*;
 

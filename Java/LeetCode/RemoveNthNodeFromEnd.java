@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 import Java.HelpersToPrint.Printer;
-import Java.LeetCode.HelperDatastructure.ListNode;
+import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.listToBST.ListBuilder;
 
 import java.util.Arrays;

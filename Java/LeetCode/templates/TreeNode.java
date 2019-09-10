@@ -1,4 +1,4 @@
-package Java.LeetCode.HelperDatastructure;
+package Java.LeetCode.templates;
 
 import java.util.Objects;
 

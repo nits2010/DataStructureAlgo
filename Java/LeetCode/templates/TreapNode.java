@@ -1,4 +1,4 @@
-package Java.LeetCode.HelperDatastructure;
+package Java.LeetCode.templates;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

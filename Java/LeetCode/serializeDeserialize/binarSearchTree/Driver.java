@@ -1,6 +1,6 @@
 package Java.LeetCode.serializeDeserialize.binarSearchTree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
 
 /**

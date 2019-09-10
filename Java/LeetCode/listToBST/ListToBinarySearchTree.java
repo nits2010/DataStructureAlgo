@@ -1,8 +1,8 @@
 package Java.LeetCode.listToBST;
 
 import Java.HelpersToPrint.Printer;
-import Java.LeetCode.HelperDatastructure.ListNode;
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.ListNode;
+import Java.LeetCode.templates.TreeNode;
 
 import java.util.Arrays;
 import java.util.List;

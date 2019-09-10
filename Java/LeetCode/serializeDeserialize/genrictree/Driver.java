@@ -1,10 +1,5 @@
 package Java.LeetCode.serializeDeserialize.genrictree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
-import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
-import Java.LeetCode.serializeDeserialize.binaryTree.SerializeDeSerializeBinaryTree;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;

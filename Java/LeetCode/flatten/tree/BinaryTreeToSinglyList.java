@@ -7,7 +7,7 @@ package Java.LeetCode.flatten.tree;
  * Driver {@link Java.LeetCode.flatten.tree.BinaryTreeToList}
  */
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 
 /**
  * One of the variation to convert BT to Singly list is {@link FlattenBinaryTreeLinkedList},

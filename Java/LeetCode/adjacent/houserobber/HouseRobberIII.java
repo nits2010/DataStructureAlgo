@@ -1,9 +1,8 @@
 package Java.LeetCode.adjacent.houserobber;
 
 import Java.HelpersToPrint.Printer;
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
-import Java.companyWise.GroupOn.MathHomework;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

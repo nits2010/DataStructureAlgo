@@ -1,6 +1,6 @@
 package Java.LeetCode.serializeDeserialize;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

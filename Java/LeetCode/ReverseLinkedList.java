@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.LeetCode.HelperDatastructure.ListNode;
+import Java.LeetCode.templates.ListNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

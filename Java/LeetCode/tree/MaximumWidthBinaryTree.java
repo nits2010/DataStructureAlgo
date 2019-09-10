@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -69,8 +69,8 @@ public class MaximumWidthBinaryTree {
 }
 
 
-class MaximumWidthBinaryTreeBFS{
+class MaximumWidthBinaryTreeBFS {
     public int widthOfBinaryTree(TreeNode root) {
-
+        return 0;
     }
 }

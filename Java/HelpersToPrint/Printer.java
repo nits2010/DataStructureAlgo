@@ -1,7 +1,7 @@
 package Java.HelpersToPrint;
 
-import Java.LeetCode.HelperDatastructure.ListNode;
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.ListNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.flatten.list.Node;
 import Java.LeetCode.flatten.list.SinglyNode;
 

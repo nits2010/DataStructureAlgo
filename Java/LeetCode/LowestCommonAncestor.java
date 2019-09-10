@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 import Java.HelpersToPrint.Printer;
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
 import java.util.*;
