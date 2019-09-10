@@ -1,14 +1,15 @@
-package Java.companyWise.facebook;
-
-import Java.LeetCode.tree.TrimBinarySearchTree;
+package Java.LeetCode.tree;
 
 import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-20
- * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/8713158291562499583
- * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
+ * Description:https://leetcode.com/problems/split-bst
+ * http://leetcode.liangjiateng.cn/leetcode/split-bst/description
+ * <p>
+ * 776.Split BST
+ * <p>
  * Given a Binary Search Tree (BST) with root node root, and a target value V, split the tree into two subtrees where one subtree has nodes
  * that are all smaller or equal to the target value, while the other subtree has all nodes that are greater than the target value.
  * It's not necessarily the case that the tree contains a node with value V.
@@ -36,10 +37,10 @@ import java.util.*;
  * while the diagrams for the outputs are:
  * <p>
  * *       4
- * *    /     \
- * *    3      6      and    2
- * *   / \                  /
- * *  5   7                1
+ * *     /   \
+ * *    3      6      and           2
+ * *          / \                  /
+ * *          5   7                1
  * <p>
  * Note:
  * The size of the BST will not exceed 50.
@@ -47,8 +48,10 @@ import java.util.*;
  * <p>
  * <p>
  * {@link TrimBinarySearchTree}
- *
+ * <p>
  * [FACEBOOK]
+ * https://aonecode.com/aplusplus/interviewctrl/getInterview/8713158291562499583
+ * * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
  */
 
 class BSTNode {
@@ -153,37 +156,33 @@ public class SplitBST {
 }
 
 
+/**
+ * This is similar to Trim Tree  {@link TrimBinarySearchTree}.
+ * Lets revise it,
+ * 1. We purge the left sub-tree if its outside the lowest range since all left won't satisfy the condition
+ * 2. WE purge the right sub-tree if its outside the highest range since all right won't satisfy the condition.
+ * 3. If this is in range, then we consider it and try to find solution for its left and right sub-tree.
+ * <p>
+ * <p>
+ * Observation:
+ * Instead of having two ranges, we have only one range in this problem V. And we need to divide in smaller (<=V) and greater ( > V ) parts ; So;
+ * Same;
+ * 1. if this root is less or equal to V then all left sub-tree will satisfy the condition (since all <=V) but right sub-tree may not satisfy the condition. Split on right side
+ * 2. If this root is greater then V then all right sub-tree will satisfy the condition (since all >V) but left sub-tree may satisfy the condition. Split on left side;
+ * <p>
+ * Now, question is how to attach the tree back so that they follow what is asked in problem.
+ * <p>
+ * Note;
+ * 1. When we recurring on right side (in case 1) then we need to correct the current node right sub-tree with all higher value sub-tree  of it [ so that tree remain BST ]
+ * 2. When we recurring on left side (in case 2) then we need to correct the current node left sub-tree with all lower value sub-tree of it [so that tree remain BST ].
+ * <p>
+ * Means at each point, we need to know what are the root of lower value sub-tree or higher value sub-tree w.r.t. current node.
+ * <p>
+ * with an exception that if root is null, then both left and right is null tree.
+ */
 class BinarySearchTreeBased {
 
 
-    /**
-     * This is similar to Trim Tree  {@link TrimBinarySearchTree}.
-     * Lets revise it,
-     * 1. We purge the left sub-tree if its outside the lowest range since all left won't satisfy the condition
-     * 2. WE purge the right sub-tree if its outside the highest range since all right won't satisfy the condition.
-     * 3. If this is in range, then we consider it and try to find solution for its left and right sub-tree.
-     * <p>
-     * <p>
-     * Observation:
-     * Instead of having two ranges, we have only one range in this problem V. And we need to divide in smaller (<=V) and greater ( > V ) parts ; So;
-     * Same;
-     * 1. if this root is less or equal to V then all left sub-tree will satisfy the condition (since all <=V) but right sub-tree may not satisfy the condition. Split on right side
-     * 2. If this root is greater then V then all right sub-tree will satisfy the condition (since all >V) but left sub-tree may satisfy the condition. Split on left side;
-     * <p>
-     * Now, question is how to attach the tree back so that they follow what is asked in problem.
-     * <p>
-     * Note;
-     * 1. When we recurring on right side (in case 1) then we need to correct the current node right sub-tree with all higher value sub-tree  of it [ so that tree remain BST ]
-     * 2. When we recurring on left side (in case 2) then we need to correct the current node left sub-tree with all lower value sub-tree of it [so that tree remain BST ].
-     * <p>
-     * Means at each point, we need to know what are the root of lower value sub-tree or higher value sub-tree w.r.t. current node.
-     * <p>
-     * with an exception that if root is null, then both left and right is null tree.
-     *
-     * @param root
-     * @param v
-     * @return
-     */
     public BSTNode[] splitBST(BSTNode root, int v) {
 
         //if root is null, then both left and right is null tree.

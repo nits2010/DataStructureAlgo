@@ -79,7 +79,7 @@ public class StrobogrammaticNumberII {
      */
     public static List<String> findStrobogrammatic(int n) {
         if (n <= 0)
-            return Collections.EMPTY_LIST;
+            return Arrays.asList("");
 
         if (n == 1)
             return Arrays.asList("0", "1", "8");
