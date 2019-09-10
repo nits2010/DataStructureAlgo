@@ -293,8 +293,10 @@ public class Printer {
 
     public static void preOrderUtil(TreeNode root, List<Integer> preorder) {
 
-        if (null == root)
+        if (null == root) {
+            preorder.add(null);
             return;
+        }
 
         preorder.add(root.val);
         preOrderUtil(root.left, preorder);
