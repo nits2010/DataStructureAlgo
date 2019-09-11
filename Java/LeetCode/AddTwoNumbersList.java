@@ -20,7 +20,7 @@ import Java.LeetCode.templates.ListNode;
  * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807.
  */
-public class AddTwoNumbers {
+public class AddTwoNumbersList {
 
     public static void main(String[] args) {
         test(ListBuilder.arrayToSinglyList(new Integer[]{9}), ListBuilder.arrayToSinglyList(new Integer[]{9, 9, 9}), ListBuilder.arrayToSinglyList(new Integer[]{8, 0, 0, 1}));
