@@ -1,17 +1,21 @@
 package Java.LeetCode;
 
+import Java.HelpersToPrint.Printer;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-15
- * Description: http://buttercola.blogspot.com/2015/09/leetcode-walls-and-gates.html
+ * Description: http://leetcode.liangjiateng.cn/leetcode/walls-and-gates/description
+ * 286.Walls and Gates
  * <p>
  * You are given a m x n 2D grid initialized with these three possible values.
  * -1 - A wall or an obstacle.
  * 0 - A gate.
- * INF - Infinity means an empty room. We use the value 231 - 1 = 2147483647 to represent INF as you may assume that the distance to a gate is less than2147483647.
+ * INF - Infinity means an empty room. We use the value 2^31 - 1 = 2147483647 to represent INF as you may assume that the distance to a gate is less than 2147483647.
+ * <p>
  * Fill each empty room with the distance to its nearest gate. If it is impossible to reach a gate, it should be filled with INF.
  * For example, given the 2D grid:
  * INF  -1  0  INF
@@ -23,6 +27,8 @@ import java.util.Queue;
  * 2   2   1  -1
  * 1  -1   2  -1
  * 0  -1   3   4
+ * <p>
+ * http://buttercola.blogspot.com/2015/09/leetcode-walls-and-gates.html
  */
 
 
@@ -31,51 +37,41 @@ public class WallsGates {
     final static int INF = Integer.MAX_VALUE;
 
     public static void main(String args[]) {
-        testBFS();
-        testDFS();
+        testBFS(new int[][]{{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}});
+        testDFS(new int[][]{{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}});
 
     }
 
-    private static void testDFS() {
+    private static void testDFS(int room[][]) {
 
-        int room[][] = {{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}};
         System.out.println("\nGiven room");
-        print(room);
+        System.out.println(Printer.toString(room));
 
         WallsGatesDFS dfs = new WallsGatesDFS();
         dfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        print(room);
+        System.out.println(Printer.toString(room));
 
 
     }
 
 
-    private static void testBFS() {
+    private static void testBFS(int room[][]) {
 
-        int room[][] = {{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}};
         System.out.println("\nGiven room");
-        print(room);
+        System.out.println(Printer.toString(room));
 
         WallsGatesBFS bfs = new WallsGatesBFS();
         bfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        print(room);
+        System.out.println(Printer.toString(room));
 
 
     }
 
-    private static void print(int room[][]) {
 
-        for (int i = 0; i < room.length; i++) {
-            System.out.println();
-            for (int j = 0; j < room[0].length; j++) {
-                System.out.print(room[i][j] + " ");
-            }
-        }
-    }
 }
 
 class WallsGatesDFS {
@@ -137,8 +133,6 @@ class WallsGatesDFS {
 
 class WallsGatesBFS {
 
-    static int row[] = {0, 0, 1, -1};
-    static int col[] = {1, -1, 0, 0};
 
     public void wallsAndGates(int[][] rooms) {
         if (rooms == null || rooms.length == 0) {
@@ -161,7 +155,6 @@ class WallsGatesBFS {
     private void wallsAndGatesHelper(int row, int col, int distance, int[][] rooms, Queue<Integer> queue) {
         fill(row, col, distance, rooms, queue);
 
-        int m = rooms.length;
         int n = rooms[0].length;
 
         while (!queue.isEmpty()) {
@@ -201,7 +194,7 @@ class WallsGatesBFS {
             rooms[row][col] = distance;
         }
 
-        int cord = row * n + col;
+        int cord = n * row + col;
         queue.offer(cord);
     }
 

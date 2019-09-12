@@ -10,7 +10,10 @@ import java.util.*;
  * Date: 2019-08-20
  * Description: http://leetcode.liangjiateng.cn/leetcode/number-of-islands-ii/description
  * 305.Number of Islands II
- * A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns the water at position (row, col) into a land. Given a list of positions to operate, count the number of islands after each addLand operation. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+ * A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns
+ * the water at position (row, col) into a land. Given a list of positions to operate, count the number of islands after each addLand operation.
+ * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid
+ * are all surrounded by water.
  * <p>
  * Example:
  * <p>
@@ -131,10 +134,10 @@ class NumberIslandsIIBuildAndCount {
  * 2. get connected to old island.
  * <p>
  * Which turns out, if we somehow efficiently can find that two island are connected or not, then we can simply discard the new land as potential new island.
- * Since, an island can be connected through 4 directions {horizontal and vertical} i.e. means we need to attach those valid position to old island as well to correctly evaluate the new position as
- * potential island.
+ * Since, an island can be connected through 4 directions {horizontal and vertical} i.e. means we need to attach those valid position to old island as well to correctly evaluate
+ * the new position as potential island.
  * <p>
- * Union-Find
+ * Union-Find {@link Java.UnionFindDisjointSets}
  * -----------
  * Using union-Find we can find out that two points are connected or not by checking there parent.
  * <p>
@@ -144,9 +147,6 @@ class NumberIslandsIIBuildAndCount {
  * 2. For each position evaluate following things
  * *  2.1 : does this land is being connected to any previous island ? if so then we should not count this as island.
  * * 2.2 : Also do same for all 4 direction
- * <p>
- * {@link Java.UnionFindDisjointSets}
- * <p>
  * <p>
  * O(k* log(m*n)) / O (m*n)
  * <p>

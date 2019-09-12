@@ -7,6 +7,7 @@ import java.util.Map;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-31
  * Description: https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+ * http://leetcode.liangjiateng.cn/leetcode/longest-substring-with-at-most-k-distinct-characters/description
  * 340.Longest Substring with At Most K Distinct Characters
  * Given a string, find the length of the longest substring T that contains at most k distinct characters.
  * <p>
@@ -85,9 +86,8 @@ public class LongestSubstringAtMostKDistinctCharacters {
             if (chars[c] == 0) {
                 distinctChars++;
                 totalDistinctChars++;
-
-
             }
+
             chars[c]++;
 
             if (distinctChars == k)

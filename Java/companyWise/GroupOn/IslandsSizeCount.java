@@ -88,8 +88,7 @@ public class IslandsSizeCount {
                     islands.count++;
 
                     //find the max size
-                    int max = Math.max(islands.currentSize, islands.size);
-                    islands.size = max;
+                    islands.size = Math.max(islands.currentSize, islands.size);
                 }
             }
         }

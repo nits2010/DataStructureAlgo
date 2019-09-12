@@ -32,6 +32,8 @@ import java.util.Map;
  * cache.get(1);       // returns -1 (not found)
  * cache.get(3);       // returns 3
  * cache.get(4);       // returns 4
+ *
+ * [Amazon]
  */
 
 
@@ -118,9 +120,9 @@ class LRUCache {
         }
     }
 
-    private Map<Integer, Node> cache;
-    private DLL lru;
-    private int capacity;
+    private final Map<Integer, Node> cache;
+    private final DLL lru;
+    private final int capacity;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;

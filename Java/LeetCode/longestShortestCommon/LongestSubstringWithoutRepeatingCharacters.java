@@ -5,7 +5,6 @@ package Java.LeetCode.longestShortestCommon;
  * Date: 2019-08-31
  * Description:
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
- * <p>
  * 3. Longest Substring Without Repeating Characters [ Medium ]
  * <p>
  * Given a string, find the length of the longest substring without repeating characters.
@@ -26,6 +25,8 @@ package Java.LeetCode.longestShortestCommon;
  * Output: 3
  * Explanation: The answer is "wke", with the length of 3.
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ * <p>
+ * [Amazon]
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
@@ -154,10 +155,9 @@ class LongestSubstringWithoutRepeatingCharactersIndex {
         int chars[] = new int[256];
 
         int start = 0;
-        int end = 0;
         int len = 0;
 
-        for (; end < s.length(); end++) {
+        for (int end = 0; end < s.length(); end++) {
 
             char c = s.charAt(end);
 

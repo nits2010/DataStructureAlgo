@@ -9,6 +9,7 @@ import static Java.HelpersToPrint.Printer.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-20
  * Description: https://leetcode.com/problems/number-of-islands/
+ * 200. Number of Islands
  * Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water
  * and is formed by connecting adjacent lands horizontally or vertically.
  * You may assume all four edges of the grid are all surrounded by water.
@@ -34,50 +35,28 @@ import static Java.HelpersToPrint.Printer.*;
  * <p>
  * Count with Size : {@link IslandsSizeCount}
  * https://leetcode.com/problems/number-of-islands/discuss/363021/2-ms46.96-to-1ms-100-or-Explanation-or-Optimisation-or-Bonus-Question
+ *
+ * [Amazon]
  */
 public class NumberIslands {
 
-    private static char[][] getIsland() {
-
-        char grid[][] = {
-                {'1', '1', '1', '1', '0'},
-                {'1', '1', '0', '1', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '0', '0', '0'}
-        };
-        return grid;
-    }
-
-    private static char[][] getIsland1() {
-        char grid[][] = {{'1', '1', '1', '1', '1'}, {'1', '1', '0', '1', '1'}, {'1', '1', '0', '0', '1'}, {'0', '0', '0', '0', '1'}};
-        return grid;
-    }
-
-    private static char[][] getIsland2() {
-        char grid[][] = {{'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '1'}};
-        return grid;
-    }
-
 
     public static void main(String[] args) {
-        test(getIsland());
-        test(getIsland1());
-        test(getIsland2());
+        test(new char[][]{{'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '1'}}, 3);
+        test(new char[][]{{'1', '1', '1', '1', '1'}, {'1', '1', '0', '1', '1'}, {'1', '1', '0', '0', '1'}, {'0', '0', '0', '0', '1'}}, 1);
+        test(new char[][]{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '0', '0', '0'}}, 1);
     }
 
-    private static void test(char[][] grid) {
-        System.out.println("\nInput \n" + Printer.toString(grid));
+    private static void test(char[][] grid, int expected) {
+        System.out.println("\nInput \n" + Printer.toString(grid) + " expected :" + expected);
         NumberIslandsDFS dfs = new NumberIslandsDFS();
         NumberIslandsDFSV2 dfs2 = new NumberIslandsDFSV2();
         NumberIslandsDFSDirectIteration dfs3 = new NumberIslandsDFSDirectIteration();
 
-        char grid1[][] = copyOf(grid);
-        char grid2[][] = copyOf(grid);
-        char grid3[][] = copyOf(grid);
 
-        System.out.println("dfs: " + dfs.numIslands(grid1));
-        System.out.println("dfs2:" + dfs2.numIslands(grid2));
-        System.out.println("dfs3:" + dfs3.numIslands(grid3));
+        System.out.println("dfs: " + dfs.numIslands(copyOf(grid)));
+        System.out.println("dfs2:" + dfs2.numIslands(copyOf(grid)));
+        System.out.println("dfs3:" + dfs3.numIslands(copyOf(grid)));
 
     }
 

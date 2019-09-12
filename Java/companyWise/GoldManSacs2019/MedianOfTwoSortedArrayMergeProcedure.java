@@ -29,6 +29,8 @@ import Java.LeetCode.medians.MedianOfTwoSortedArray;
  * B -> 2, 3 5 11 -> y = 4
  * <p>
  * 2 2 3 4 5 7 8 9 11 -> 5
+ *
+ * {@link MedianOfTwoSortedArray}
  */
 public class MedianOfTwoSortedArrayMergeProcedure {
 
