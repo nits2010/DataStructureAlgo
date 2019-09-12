@@ -89,7 +89,7 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
      * j = 2 [2 index]
      * k = 5 [12]
      * <p>
-     * Hence j has duplicacy  till index 4 while k has till 10
+     * Hence j has duplicates  till index 4 while k has till 10
      * In total  x-> for j and y->k
      * x = 2 and y = 3
      * then there will be 2*3 pairs with current i, as we can choose all the permutation

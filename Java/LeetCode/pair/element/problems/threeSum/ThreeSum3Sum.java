@@ -142,9 +142,6 @@ class ThreeSum3SumSortingOptimized implements IThreeSum3Sum {
     private List<List<Integer>> threeSum(int[] nums, int target) {
 
 
-        /**
-         * to avoid duplicate triplet
-         */
         final List<List<Integer>> solution = new ArrayList<>();
 
         Arrays.sort(nums);

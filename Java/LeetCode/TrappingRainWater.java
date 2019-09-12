@@ -61,6 +61,11 @@ public class TrappingRainWater {
         return totalWater;
     }
 
+    /**
+     * {@link Java.companyWise.Amazon.MaximumDifferenceInIndex}
+     * @param height
+     * @return
+     */
     // Method for maximum amount of water
     public static int trapWithExtraSpace(int[] height) {
         int n = height.length;

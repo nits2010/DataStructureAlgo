@@ -1,12 +1,15 @@
 package Java.LeetCode;
 
+import Java.HelpersToPrint.Printer;
+
 import java.util.Map;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-19
  * Description: https://leetcode.com/problems/container-with-most-water/
- * Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+ * Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two
+ * endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
  * <p>
  * Note: You may not slant the container and n is at least 2.
  * <p>
@@ -22,10 +25,19 @@ import java.util.Map;
 public class ContainerWithMostWater {
 
     public static void main(String[] args) {
+        test(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49);
+        test(new int[]{8, 7, 6, 5, 4, 3, 2, 1, 0}, 16);
 
+
+    }
+
+    private static void test(int[] height, int expected) {
+        System.out.println("\n Input :" + Printer.toString(height) + " expected :" + expected);
         Solution solution = new Solution();
-        System.out.println(solution.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
-        System.out.println(solution.maxArea(new int[]{8, 7, 6, 5, 4, 3, 2, 1, 0}));
+        System.out.println("brute :" + solution.maxAreaBruteForce(height));
+        System.out.println("maxAreaOptimized :" + solution.maxAreaOptimized(height));
+        System.out.println("maxAreaOptimized V2 :" + solution.maxAreaOptimizedV2(height));
+
     }
 
 
@@ -99,6 +111,15 @@ public class ContainerWithMostWater {
             return maxWater;
         }
 
+        /**
+         * Skipped similar height values on left and right, as they won't give more water as either left or right would reduce
+         * <p>
+         * Runtime: 2 ms, faster than 94.51% of Java online submissions for Container With Most Water.
+         * Memory Usage: 39.6 MB, less than 95.51% of Java online submissions for Container With Most Water.
+         *
+         * @param height
+         * @return
+         */
         private int maxAreaOptimizedV2(int[] height) {
             if (height == null || height.length == 0)
                 return 0;
@@ -114,13 +135,13 @@ public class ContainerWithMostWater {
                 if (height[left] < height[right]) {
                     left++;
 
-                    while (left < right && height[left] <= height[left - 1]) ;
+                    while (left < right && height[left] <= height[left - 1]) left++;
 
 
                 } else {
 
                     right--;
-                    while (right > left && height[right] <= height[right + 1]) ;
+                    while (right > left && height[right] <= height[right + 1]) right--;
 
 
                 }
