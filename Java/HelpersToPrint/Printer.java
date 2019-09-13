@@ -1,14 +1,13 @@
 package Java.HelpersToPrint;
 
+import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.flatten.list.Node;
 import Java.LeetCode.flatten.list.SinglyNode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -385,6 +384,20 @@ public class Printer {
         return nodes;
     }
 
+    public static <T extends DoublyListNode> List<T> print(T head) {
+
+        List<T> nodes = new ArrayList<>();
+
+        T temp = head;
+
+        while (temp != null) {
+            nodes.add(temp);
+            temp = (T) temp.next;
+        }
+
+        return nodes;
+    }
+
 
     public static <T extends ListNode> List<List<T>> print(T[] heads) {
 
@@ -416,6 +429,19 @@ public class Printer {
 
 
         return nodes;
+    }
+
+
+    public static List<Integer> reverse(Integer[] elements) {
+        return Arrays.stream(elements)
+                .sorted(Collections.reverseOrder())
+                .collect(Collectors.toList());
+    }
+
+    public static List<Integer> reverse(List<Integer> elements) {
+        return elements.stream()
+                .sorted(Collections.reverseOrder())
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) {

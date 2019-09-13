@@ -1,7 +1,10 @@
 package Java.LeetCode.listToBST;
 
+import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.templates.TreeNode;
+
+import java.util.List;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -28,9 +31,46 @@ public class ListBuilder {
         return head;
     }
 
+    public static ListNode arrayToSinglyList(List<Integer> elements) {
+
+        if (elements == null || elements.size() == 0)
+            return null;
+
+        ListNode head = new ListNode(elements.get(0));
+        ListNode temp = head;
+        int i = 1;
+
+        while (i < elements.size()) {
+            temp.next = new ListNode(elements.get(i));
+            temp = temp.next;
+            i++;
+        }
+
+        return head;
+    }
+
+    public static ListNode copyOf(ListNode head) {
+
+        if (head == null)
+            return head;
+
+        ListNode copyHead = new ListNode(-1);
+        ListNode current = copyHead;
+        while (head != null) {
+            current.next = new ListNode(head.val);
+            current = current.next;
+
+            head = head.next;
+        }
+
+        return copyHead.next;
+
+    }
+
 
     /**
      * Utilizing TreeNode as doubly ll node
+     *
      * @param elements
      * @return
      */
@@ -55,4 +95,76 @@ public class ListBuilder {
 
         return head;
     }
+
+
+    /**
+     * @param elements Values in list
+     * @return Head of doubly linked list
+     */
+    public static DoublyListNode arrayToDoublyListNode(Integer[] elements) {
+
+        if (elements == null || elements.length == 0)
+            return null;
+
+        DoublyListNode head = new DoublyListNode(elements[0]);
+        DoublyListNode temp = head;
+        int i = 1;
+
+        while (i < elements.length) {
+            temp.next = new DoublyListNode(elements[i]);
+            temp.next.prev = temp;
+            temp = temp.next;
+            i++;
+        }
+
+        return head;
+    }
+
+    /**
+     * @param elements Values in list
+     * @return Head of doubly linked list
+     */
+    public static DoublyListNode arrayToDoublyListNode(List<Integer> elements) {
+
+        if (elements == null || elements.isEmpty())
+            return null;
+
+        DoublyListNode head = new DoublyListNode(elements.get(0));
+        DoublyListNode temp = head;
+        int i = 1;
+
+        while (i < elements.size()) {
+            temp.next = new DoublyListNode(elements.get(i));
+            temp.next.prev = temp;
+            temp = temp.next;
+            i++;
+        }
+
+        return head;
+    }
+
+    public static DoublyListNode copyOf(DoublyListNode head) {
+
+        if (head == null)
+            return head;
+
+        DoublyListNode copyHead = null;
+        DoublyListNode current = null;
+        while (head != null) {
+            if (current == null) {
+                current = new DoublyListNode(head.val);
+                copyHead = current;
+            } else {
+                current.next = new DoublyListNode(head.val);
+                current.next.prev = current;
+                current = current.next;
+            }
+
+            head = head.next;
+        }
+
+        return copyHead;
+    }
+
+
 }

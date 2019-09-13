@@ -1,6 +1,14 @@
 package Java.LeetCode;
 
+import Java.HelpersToPrint.Printer;
+import Java.LeetCode.listToBST.ListBuilder;
+import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -21,19 +29,52 @@ import Java.LeetCode.templates.ListNode;
 
 public class ReverseLinkedList {
 
-    public ListNode reverseList(ListNode head) {
+    public static void main(String[] args) {
+        test(new Integer[]{1, 2, 3, 4, 5});
+        test(new Integer[]{1, 2, 3, 4});
+        test(new Integer[]{1});
+        test(new Integer[]{1, 2});
+    }
 
-        return reverseListRecursive(head);
+
+    private static void test(Integer[] elements) {
+
+        testSingly(ListBuilder.arrayToSinglyList(elements), ListBuilder.arrayToSinglyList(Printer.reverse(elements)));
+        testDoubly(ListBuilder.arrayToDoublyListNode(elements), ListBuilder.arrayToDoublyListNode(Printer.reverse(elements)));
 
     }
 
-    // 1-2-3-4; n_1 = 2-3-4 ; head = 1
-    //  2-3-4 ; n_1 = 3-4 ; head = 2
-    // 3-4; n_1 = 4; head= 3
-    // 4 -> return ; newHead = 4, 4->3
-    // 4-3-2; newHead = 4
-    // 4-3-2-1, newHEad = 4
-    public ListNode reverseListRecursive(ListNode head) {
+
+    private static void testSingly(ListNode list, ListNode expected) {
+        System.out.println("\n Singly Input :" + Printer.print(list) + " expected :" + Printer.print(expected));
+        ReverseSinglyLinkedList solution = new ReverseSinglyLinkedList();
+        System.out.println(" Recursive :" + Printer.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + Printer.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+    }
+
+    private static void testDoubly(DoublyListNode list, DoublyListNode expected) {
+        System.out.println("\n Doubly Input :" + Printer.print(list) + " expected :" + Printer.print(expected));
+
+        ReverseDoublyLinkedList solution = new ReverseDoublyLinkedList();
+        System.out.println(" Recursive :" + Printer.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + Printer.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+    }
+
+}
+
+
+class ReverseSinglyLinkedList {
+
+    /**
+     * // 1-2-3-4; n_1 = 2-3-4 ; head = 1
+     * //  2-3-4 ; n_1 = 3-4 ; head = 2
+     * // 3-4; n_1 = 4; head= 3
+     * // 4 -> return ; newHead = 4, 4->3
+     * // 4-3-2; newHead = 4
+     * // 4-3-2-1, newHEad = 4
+     */
+
+    ListNode reverseListRecursive(ListNode head) {
         if (head == null || head.next == null)
             return head;
 
@@ -47,7 +88,7 @@ public class ReverseLinkedList {
         return newHead;
     }
 
-    public ListNode reverseListIterative(ListNode head) {
+    ListNode reverseListIterative(ListNode head) {
 
         if (null == head || head.next == null)
             return head;
@@ -74,5 +115,58 @@ public class ReverseLinkedList {
         return current;
 
     }
+}
 
+
+class ReverseDoublyLinkedList {
+
+
+    DoublyListNode reverseListRecursive(DoublyListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+
+        DoublyListNode n_1_head = head.next;
+
+        head.next = null;
+        n_1_head.prev = null;
+
+        DoublyListNode newHead = reverseListRecursive(n_1_head);
+
+        n_1_head.next = head;
+        n_1_head.next.prev = n_1_head;
+
+        return newHead;
+    }
+
+    DoublyListNode reverseListIterative(DoublyListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        DoublyListNode current = head;
+        DoublyListNode next = head.next;
+        current.next = null;
+        current.prev = null;
+
+
+        while (next != null) {
+            //swap(next.next, current);
+            {
+                DoublyListNode temp = next.next;
+                next.next = current;
+                current.prev = next;
+                current = temp;
+            }
+
+            //swap(current, next);
+            {
+                DoublyListNode temp = current;
+                current = next;
+                next = temp;
+            }
+
+        }
+
+        return current;
+    }
 }

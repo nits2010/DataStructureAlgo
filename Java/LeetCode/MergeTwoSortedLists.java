@@ -19,7 +19,7 @@ public class MergeTwoSortedLists {
     static class MergeTwoSortedSinglyLists {
 
         //Recursive
-       public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
             if (l1 == null)
                 return l2;
