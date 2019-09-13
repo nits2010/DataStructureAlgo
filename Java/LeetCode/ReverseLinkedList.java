@@ -5,7 +5,17 @@ import Java.LeetCode.templates.ListNode;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-12
- * Description:
+ * Description: https://leetcode.com/problems/reverse-linked-list/
+ * 206. Reverse Linked List
+ * Reverse a singly linked list.
+ * <p>
+ * Example:
+ * <p>
+ * Input: 1->2->3->4->5->NULL
+ * Output: 5->4->3->2->1->NULL
+ * Follow up:
+ * <p>
+ * A linked list can be reversed either iteratively or recursively. Could you implement both?
  */
 
 

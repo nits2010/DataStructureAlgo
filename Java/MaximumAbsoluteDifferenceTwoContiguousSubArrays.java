@@ -83,9 +83,14 @@ class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
             a[i] = -a[i];
     }
 
+    /**
+     * {@link Java.LeetCode.MaximumSubarrayKadans}
+     * @param a
+     * @return
+     */
     private int[] maximumSumSubArrayKadansFromLeft(int a[]) {
         int n = a.length;
-        int res[] = new int[n];
+        int []res = new int[n];
 
 
         int currentSum = a[0];

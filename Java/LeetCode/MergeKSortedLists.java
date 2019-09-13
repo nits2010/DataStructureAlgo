@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.HelpersToPrint.Printer;
+import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.ListNode;
 
 import java.util.Comparator;
@@ -21,64 +23,28 @@ import java.util.PriorityQueue;
  * 2->6
  * ]
  * Output: 1->1->2->3->4->4->5->6
+ * <p>
+ * Extension of {@link Java.LeetCode.MergeTwoSortedLists.MergeTwoSortedSinglyLists}
  */
 public class MergeKSortedLists {
 
-    private static ListNode getList(int[] a) {
-        ListNode head = new ListNode(a[0]);
-        ListNode temp = head;
-
-        int i = 1;
-        while (i < a.length) {
-            temp.next = new ListNode(a[i++]);
-            temp = temp.next;
-        }
-        return head;
-    }
-
-    private static void print(ListNode head) {
-
-        StringBuilder print = new StringBuilder();
-
-        while (head != null) {
-            print.append(head.val);
-            print.append("->");
-            head = head.next;
-        }
-        print.setLength(print.length() - 2);
-        System.out.println(print);
-    }
-
     public static void main(String[] args) {
 
-        ListNode[] list = new ListNode[3];
-        list[0] = getList(new int[]{1, 4, 5});
-        list[1] = getList(new int[]{1, 3, 4});
-        list[2] = getList(new int[]{2, 6});
-
-        ListNode[] list2 = new ListNode[5];
-        list2[0] = getList(new int[]{1, 4, 5});
-        list2[1] = getList(new int[]{1, 3, 4});
-        list2[2] = getList(new int[]{2, 6});
-        list2[3] = getList(new int[]{1, 2, 3, 4, 5, 6, 6});
-        list2[4] = getList(new int[]{0, 3, 6, 8, 10});
-
-
-        test(list);
-        test(list2);
+        test(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6})});
+        test(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6}), ListBuilder.arrayToSinglyList(new Integer[]{1, 2, 3, 4, 5, 6, 6}), ListBuilder.arrayToSinglyList(new Integer[]{0, 3, 6, 8, 10})});
     }
 
     private static void test(ListNode[] list) {
         IMergeKSortedLists pq = new MergeKSortedListsPriorityQueue();
-        IMergeKSortedLists kWayMerget = new MergeKSortedListsDC();
+        IMergeKSortedLists kWayMerge = new MergeKSortedListsDC();
 
         System.out.println("PQ->");
         ListNode head = pq.mergeKLists(list);
-        print(head);
+        System.out.println(Printer.print(head));
 
         System.out.println("KWay->");
-        head = kWayMerget.mergeKLists(list);
-        print(head);
+        head = kWayMerge.mergeKLists(list);
+        System.out.println(Printer.print(head));
 
     }
 }
@@ -90,8 +56,8 @@ interface IMergeKSortedLists {
 }
 
 /**
+ * Using Priority Queue
  * O(n*Log(k)) / O(k)
- * <p>
  * Runtime: 38 ms, faster than 23.73% of Java online submissions for Merge k Sorted Lists.
  * Memory Usage: 39.5 MB, less than 78.69% of Java online submissions for Merge k Sorted Lists.
  */
@@ -107,18 +73,17 @@ class MergeKSortedListsPriorityQueue implements IMergeKSortedLists {
         PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
         int n = lists.length;
 
-        /**
-         * Cache first node of all the list
+        /*
+         * queue first node of all the list
          */
-        for (int i = 0; i < n; i++) {
+        for (ListNode list : lists)
+            if (list != null)
+                pq.offer(list);
 
-            if (lists[i] != null)
-                pq.offer(lists[i]);
-        }
-
-
+        //Apply merge on the base of smallest node
         while (!pq.isEmpty()) {
 
+            //take the smallest node
             ListNode temp = pq.poll();
 
             if (resultHead == null) {
@@ -155,16 +120,15 @@ class MergeKSortedListsDC implements IMergeKSortedLists {
         int interval = 1;
         int size = lists.length;
 
-        /**
-         * Since we apply k-way merge sort such a way that it form a binary tree structure,
+        /*
+         * We apply k-way merge sort such a way that it form a binary tree structure,
          * this binary tree is Tournament binary tree which has height log(n) of base 2
          */
         while (interval < size) {
 
-            for (int i = 0; i + interval < size; i += interval * 2) {
-
+            //Merge list that are {@code interval} away
+            for (int i = 0; i + interval < size; i += interval * 2)
                 lists[i] = mergeTwoLists(lists[i], lists[i + interval]);
-            }
 
             interval *= 2;
         }
@@ -174,6 +138,13 @@ class MergeKSortedListsDC implements IMergeKSortedLists {
     }
 
 
+    /**
+     * {@link MergeKSortedLists}
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode h = new ListNode(0);
         ListNode ans = h;
