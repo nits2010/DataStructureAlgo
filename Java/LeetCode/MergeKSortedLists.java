@@ -30,20 +30,28 @@ public class MergeKSortedLists {
 
     public static void main(String[] args) {
 
-        test(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6})});
-        test(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6}), ListBuilder.arrayToSinglyList(new Integer[]{1, 2, 3, 4, 5, 6, 6}), ListBuilder.arrayToSinglyList(new Integer[]{0, 3, 6, 8, 10})});
+        testPQ(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6})});
+        testKWay(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6})});
+
+        testPQ(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6}), ListBuilder.arrayToSinglyList(new Integer[]{1, 2, 3, 4, 5, 6, 6}), ListBuilder.arrayToSinglyList(new Integer[]{0, 3, 6, 8, 10})});
+        testKWay(new ListNode[]{ListBuilder.arrayToSinglyList(new Integer[]{1, 4, 5}), ListBuilder.arrayToSinglyList(new Integer[]{1, 3, 4}), ListBuilder.arrayToSinglyList(new Integer[]{2, 6}), ListBuilder.arrayToSinglyList(new Integer[]{1, 2, 3, 4, 5, 6, 6}), ListBuilder.arrayToSinglyList(new Integer[]{0, 3, 6, 8, 10})});
     }
 
-    private static void test(ListNode[] list) {
+    private static void testPQ(ListNode[] list) {
         IMergeKSortedLists pq = new MergeKSortedListsPriorityQueue();
-        IMergeKSortedLists kWayMerge = new MergeKSortedListsDC();
-
+        System.out.println("\n Input : " + Printer.print(list));
         System.out.println("PQ->");
         ListNode head = pq.mergeKLists(list);
         System.out.println(Printer.print(head));
+    }
+
+    private static void testKWay(ListNode[] list) {
+        IMergeKSortedLists kWayMerge = new MergeKSortedListsDC();
+        System.out.println("\n Input : " + Printer.print(list));
+
 
         System.out.println("KWay->");
-        head = kWayMerge.mergeKLists(list);
+        ListNode head = kWayMerge.mergeKLists(list);
         System.out.println(Printer.print(head));
 
     }
@@ -56,7 +64,7 @@ interface IMergeKSortedLists {
 }
 
 /**
- * Using Priority Queue
+ * Using Priority queue
  * O(n*Log(k)) / O(k)
  * Runtime: 38 ms, faster than 23.73% of Java online submissions for Merge k Sorted Lists.
  * Memory Usage: 39.5 MB, less than 78.69% of Java online submissions for Merge k Sorted Lists.
@@ -73,17 +81,15 @@ class MergeKSortedListsPriorityQueue implements IMergeKSortedLists {
         PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
         int n = lists.length;
 
-        /*
-         * queue first node of all the list
-         */
+
+        //Queue first node of all the list
         for (ListNode list : lists)
             if (list != null)
                 pq.offer(list);
 
-        //Apply merge on the base of smallest node
+
         while (!pq.isEmpty()) {
 
-            //take the smallest node
             ListNode temp = pq.poll();
 
             if (resultHead == null) {
@@ -121,14 +127,15 @@ class MergeKSortedListsDC implements IMergeKSortedLists {
         int size = lists.length;
 
         /*
-         * We apply k-way merge sort such a way that it form a binary tree structure,
+         * Since we apply k-way merge sort such a way that it form a binary tree structure,
          * this binary tree is Tournament binary tree which has height log(n) of base 2
          */
         while (interval < size) {
 
-            //Merge list that are {@code interval} away
-            for (int i = 0; i + interval < size; i += interval * 2)
+            for (int i = 0; i + interval < size; i += interval * 2) {
+
                 lists[i] = mergeTwoLists(lists[i], lists[i + interval]);
+            }
 
             interval *= 2;
         }
@@ -139,7 +146,7 @@ class MergeKSortedListsDC implements IMergeKSortedLists {
 
 
     /**
-     * {@link MergeKSortedLists}
+     * {@link Java.LeetCode.MergeTwoSortedLists.MergeTwoSortedSinglyLists}
      *
      * @param l1
      * @param l2

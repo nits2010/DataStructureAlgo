@@ -386,6 +386,18 @@ public class Printer {
     }
 
 
+    public static <T extends ListNode> List<List<T>> print(T[] heads) {
+
+        List<List<T>> nodes = new ArrayList<>();
+
+        for (T t : heads)
+            nodes.add(print(t));
+
+        return nodes;
+
+    }
+
+
     public static <T extends TreeNode> List<T> printCircular(T head) {
 
         List<T> nodes = new ArrayList<>();
