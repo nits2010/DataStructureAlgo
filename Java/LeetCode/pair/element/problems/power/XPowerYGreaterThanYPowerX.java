@@ -136,7 +136,7 @@ public class XPowerYGreaterThanYPowerX {
 
      */
 
-    private static int pairs(int xs[], int ys[]) {
+    private static int pairs(int []xs, int []ys) {
         if (xs == null || xs.length == 0 || ys == null || ys.length == 0)
             return 0;
 
@@ -144,16 +144,16 @@ public class XPowerYGreaterThanYPowerX {
 
         Arrays.sort(ys);
 
-        int countOfY[] = new int[5]; //0,1,2,3,4
-        for (int i = 0; i < ys.length; i++) {
-            if (ys[i] < 5)
-                countOfY[ys[i]]++;
+        int[] countOfY = new int[5]; //0,1,2,3,4
+        for (int y : ys) {
+            if (y < 5)
+                countOfY[y]++;
             else
                 break;
         }
 
 
-        /**
+        /*
          * Find for every element of X
          */
 
@@ -178,18 +178,18 @@ public class XPowerYGreaterThanYPowerX {
         if (x == 1)
             return countOfY[0];
 
-        int count = 0;
+        int count ;
 
         // Find number of Y that is greater than x; finding index is sufficient as N-index would give the count
         int index = ceilIndex(y, x);
 
-        /**
+        /*
          * if no element found
          */
         if (index < 0) {
             count = 0;
         } else {
-            /**
+            /*
              * Skip same element in y which are equal to x
              */
             while (y[index] == x)
@@ -199,14 +199,14 @@ public class XPowerYGreaterThanYPowerX {
         }
 
 
-        /**
+        /*
          * we need to remove where y=3 and 4 so
          *        x = 2 -> ans= (N-index) - Count[3] - Count[4]
          */
         if (x == 2 && count > 0)
             count = count - countOfY[3] - countOfY[4];
 
-        /**
+        /*
          *  Additionally we need to add all Y where its 0 or 1 when x > 1
          *  Example:
          *        x = 2 ; ans = ans + Count[0] + Count[1] = 1 + 0 + 1 = 2

@@ -8,8 +8,8 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/4sum-ii/
- * Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are such that A[i] + B[j] + C[k] + D[l] is zero.
- * <p>
+ * Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are
+ * such that A[i] + B[j] + C[k] + D[l] is zero.
  * To make problem a bit easier, all A, B, C, D have same length of N where 0 ≤ N ≤ 500.
  * All integers are in the range of -2^28 to 2^28 - 1 and the result is guaranteed to be at most 2^31 - 1.
  * <p>
@@ -20,10 +20,8 @@ import java.util.*;
  * B = [-2,-1]
  * C = [-1, 2]
  * D = [ 0, 2]
- * <p>
  * Output:
  * 2
- * <p>
  * Explanation:
  * The two tuples are:
  * 1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
@@ -39,8 +37,8 @@ public class FourSum4SumII {
 
     private static void test(int[] a, int[] b, int[] c, int[] d, int expected) {
 
-        System.out.println("input ");
-        System.out.println("A :" + Printer.toString(a) + " B :" + Printer.toString(b) + " c :" + Printer.toString(c) + " d :" + Printer.toString(d));
+        System.out.println("input A :" + Printer.toString(a) + " B :" + Printer.toString(b) + " c :" + Printer.toString(c) + " d :" + Printer.toString(d)
+                + "\n expected :" + expected);
         IFourSum4SumII sorting = new FourSum4SumIISorting();
         IFourSum4SumII hashing = new FourSum4SumIIHashing();
 
@@ -58,15 +56,15 @@ interface IFourSum4SumII {
  * Reduce the problem to two sum problem
  * Algo:
  * Compute Sum List-> A+B for all
- * Compute diff List-> -(C+D) for all [ note here i used -(c+d) not (c+d) . a+b+c+d = a+b = -(c+d) ]
+ * Compute diff List-> -(C+D) for all [ note here  -(c+d) not (c+d) . a+b+c+d => a+b = -(c+d) ]
  * For each element in sum list -> element
  * Find how many times it occurred in Diff list and add that count
  * To Find occurrence, we can use binary search
- *
+ * <p>
  * Find the index of first occurrence of element
  * find the index of last occurrence of element
  * count = last-fist+1
- *
+ * <p>
  * Runtime: 271 ms, faster than 5.10% of Java online submissions for 4Sum II.
  * Memory Usage: 51.8 MB, less than 88.00% of Java online submissions for 4Sum II.
  */
@@ -77,7 +75,7 @@ class FourSum4SumIISorting implements IFourSum4SumII {
         return fourSumCount(a, b, c, d, 0);
     }
 
-    public int fourSumCount(int[] a, int[] b, int[] c, int[] d, int target) {
+    private int fourSumCount(int[] a, int[] b, int[] c, int[] d, int target) {
 
 
         ArrayList<Integer> sumPairs = new ArrayList<>();
@@ -89,39 +87,42 @@ class FourSum4SumIISorting implements IFourSum4SumII {
 
             for (int j = 0; j < n; j++) {
 
-                /**
+                /*
                  * Convert those array in elements such a way that for elemnets sum become zero.
-                 * a + b + c + d = 0
-                 * a + b = - (c+d)
+                 * a + b + c + d = target
+                 * a + b = target - (c+d)
                  */
                 sumPairs.add(a[i] + b[j]);
-
-                diffPairs.add(-(c[i] + d[j]));
+                diffPairs.add(target - (c[i] + d[j]));
             }
         }
 
+        //sort them to reduce it to TwoSum
         Collections.sort(sumPairs);
         Collections.sort(diffPairs);
 
         int count = 0;
-        for (int i = 0; i < sumPairs.size(); i++) {
+        for (int element : sumPairs) {
 
-            int element = sumPairs.get(i);
-
-            int countOfelement = binarySearch(diffPairs, element);
-            if (countOfelement != -1)
-                count += countOfelement;
+            int countOfElement = binarySearch(diffPairs, element);
+            if (countOfElement != -1)
+                count += countOfElement;
         }
 
         return count;
 
     }
 
+    /**
+     * {@link Java.LeetCode.FindFirstLastPositionElementSortedArray}
+     *
+     * @param diffPairs
+     * @param element
+     * @return
+     */
     private int binarySearch(ArrayList<Integer> diffPairs, int element) {
         if (diffPairs == null || diffPairs.isEmpty())
             return -1;
-
-        int low = 0, high = diffPairs.size();
 
         int first = firstIndex(diffPairs, element);
         if (first == -1)
@@ -141,7 +142,9 @@ class FourSum4SumIISorting implements IFourSum4SumII {
         int low = 0, high = diffPairs.size() - 1;
 
         while (low <= high) {
-            int mid = (low + high) >> 1;
+
+            int mid = low + (high - low) >> 1;
+
             int midV = diffPairs.get(mid);
 
             if ((low == mid && midV == element) || (midV == element && diffPairs.get(mid - 1) < element))
@@ -149,7 +152,7 @@ class FourSum4SumIISorting implements IFourSum4SumII {
             else if (midV < element)
                 low = mid + 1;
             else
-                high = mid - 1; //mid already been tested
+                high = mid - 1;
         }
 
         return -1;
@@ -194,23 +197,24 @@ class FourSum4SumIIHashing implements IFourSum4SumII {
         Map<Integer, Integer> map = new HashMap<>();
 
         int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                int sum = a[i] + b[j];
+
+        //cache them
+        for (int x : a) {
+            for (int y : b) {
+                int sum = x + y;
                 map.put(sum, map.getOrDefault(sum, 0) + 1);
             }
         }
 
-
-        for (int i = 0; i < c.length; i++) {
-            for (int j = 0; j < d.length; j++) {
-
-                int diff = -(c[i] + d[j]);
+        //find them
+        for (int x : c) {
+            for (int y : d) {
+                int diff = -(x + y);
                 count += map.getOrDefault(diff, 0);
-
-
             }
         }
+
+
         return count;
     }
 }

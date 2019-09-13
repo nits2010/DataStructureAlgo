@@ -56,9 +56,9 @@ public class ThreeSum3SumMultiplicity {
         System.out.println("Input :" + Printer.toString(nums));
 
         IThreeSum3SumMultiplicity sorting = new ThreeSum3SumMultiplicitySorting();
-        IThreeSum3SumMultiplicity couting = new ThreeSum3SumMultiplicityCounting();
+        IThreeSum3SumMultiplicity counting = new ThreeSum3SumMultiplicityCounting();
         System.out.println("Sorting: " + sorting.threeSumMulti(nums, target) + " expected :" + expected);
-        System.out.println("couting: " + couting.threeSumMulti(nums, target) + " expected :" + expected);
+        System.out.println("couting: " + counting.threeSumMulti(nums, target) + " expected :" + expected);
     }
 }
 

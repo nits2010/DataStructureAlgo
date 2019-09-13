@@ -49,7 +49,7 @@ public class FindFirstLastPositionElementSortedArray {
 class BinarySearchFirstLastIndex {
     public int[] searchRange(int[] nums, int target) {
 
-        int output[] = {-1, -1};
+        int []output = {-1, -1};
 
         if (nums == null || nums.length == 0)
             return output;

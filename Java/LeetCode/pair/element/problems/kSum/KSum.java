@@ -14,12 +14,11 @@ import java.util.List;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-16
  * Description:
- * This is generalization of {@link TwoSum2Sum} {@link ThreeSum3Sum} {@link FourSum4Sum}
- * to Ksum
+ * This is generalization of {@link TwoSum2Sum}, {@link ThreeSum3Sum}, {@link FourSum4Sum} to K-sum
  */
 public class KSum {
     public static void main(String[] args) {
-        test(new int[]{1, 0, -1, 0, -2},  4, 0);
+        test(new int[]{1, 0, -1, 0, -2}, 4, 0);
 
         test(new int[]{1, 0, -1, 0, -2, 2}, 4, 0);
 
@@ -28,7 +27,7 @@ public class KSum {
         test(new int[]{-4, -3, -2, -1, 0, 0, 1, 2, 3, 4}, 4, 0);
 
 
-        test(new int[]{1, 0, -1, 0, -2},  5, 0);
+        test(new int[]{1, 0, -1, 0, -2}, 5, 0);
 
         test(new int[]{1, 0, -1, 0, -2, 2}, 5, 0);
 
@@ -37,7 +36,7 @@ public class KSum {
         test(new int[]{-4, -3, -2, -1, 0, 0, 1, 2, 3, 4}, 5, 0);
 
 
-        test(new int[]{1, 0, -1, 0, -2},  3, 0);
+        test(new int[]{1, 0, -1, 0, -2}, 3, 0);
 
         test(new int[]{1, 0, -1, 0, -2, 2}, 3, 0);
 
@@ -46,8 +45,7 @@ public class KSum {
         test(new int[]{-4, -3, -2, -1, 0, 0, 1, 2, 3, 4}, 3, 0);
 
 
-
-        test(new int[]{1, 0, -1, 0, -2},  2, 0);
+        test(new int[]{1, 0, -1, 0, -2}, 2, 0);
 
         test(new int[]{1, 0, -1, 0, -2, 2}, 2, 0);
 
@@ -79,7 +77,7 @@ class KSumSorting implements IKSum {
 
     @Override
     public List<List<Integer>> kSum(int[] nums, int k, int target) {
-        if (nums == null || nums.length == 0 || nums.length < k)
+        if (nums == null || nums.length < k)
             return Collections.EMPTY_LIST;
 
         Arrays.sort(nums);
@@ -91,6 +89,8 @@ class KSumSorting implements IKSum {
     private List<List<Integer>> kSum(int[] nums, int k, int start, int target) {
         int len = nums.length;
         List<List<Integer>> result = new ArrayList<>();
+
+
         if (len < k)
             return Collections.EMPTY_LIST;
 
@@ -98,13 +98,10 @@ class KSumSorting implements IKSum {
             return twoSum(nums, start, len - 1, target);
         } else {
 
-            /**
-             * Take each element, and exclude it from target to reduce the problem to smaller k-1 sum problem
-             */
+            //Take each element, and exclude it from target to reduce the problem to smaller k-1 sum problem
             for (int i = start; i < len - (k - 1); i++) {
-                /**
-                 * Avoid duplicates
-                 */
+
+                //Avoid duplicates
                 if (i > start && nums[i] == nums[i - 1])
                     continue;
 
@@ -113,15 +110,13 @@ class KSumSorting implements IKSum {
                 int rem = target - nums[i];
                 List<List<Integer>> smallerSumResult = kSum(nums, k - 1, i + 1, rem);
 
-                /**
-                 * Append the current element to make it k sum from k-1 sum
-                 */
+
+                //Append the current element to make it k sum from k-1 sum
                 for (List<Integer> list : smallerSumResult)
                     list.add(0, ele);
 
-                /**
-                 * Append to our result
-                 */
+
+                //Append to our result
                 result.addAll(smallerSumResult);
 
 
@@ -131,7 +126,7 @@ class KSumSorting implements IKSum {
         return result;
     }
 
-    private List<List<Integer>> twoSum(int nums[], int low, int high, int target) {
+    private List<List<Integer>> twoSum(int[] nums, int low, int high, int target) {
 
         List<List<Integer>> result = new ArrayList<>();
 
@@ -140,16 +135,10 @@ class KSumSorting implements IKSum {
             int sum = nums[low] + nums[high];
 
             if (sum == target) {
-                List<Integer> twoSum = new ArrayList<>();
-                twoSum.add(nums[low]);
-                twoSum.add(nums[high]);
 
-                result.add(twoSum);
+                result.add(Arrays.asList(nums[low], nums[high]));
 
-                /**
-                 * Avoid duplicates
-                 */
-
+                //Avoid duplicates
                 while (low < high && nums[low] == nums[++low]) ;
                 while (high > low && nums[high] == nums[--high]) ;
 

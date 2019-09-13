@@ -34,9 +34,9 @@ public class A_And_B_ToZero {
      * <p>
      * O(n^2)
      */
-    static class BruteForce {
+    private static class BruteForce {
 
-        private List<int[]> pairs(int items[]) {
+        private List<int[]> pairs(int[] items) {
             if (items == null || items.length == 0)
                 return Collections.EMPTY_LIST;
 
