@@ -27,6 +27,7 @@ import Java.HelpersToPrint.Printer;
 public class FindFirstLastPositionElementSortedArray {
 
     public static void main(String[] args) {
+//        test(new int[]{5}, 8, new int[]{3, 4});
         test(new int[]{5, 7, 7, 8, 8, 10}, 8, new int[]{3, 4});
         test(new int[]{5, 7, 7, 8, 8, 10}, 6, new int[]{-1, -1});
         test(new int[]{5, 5, 5, 5, 5, 5}, 5, new int[]{0, 5});
@@ -81,7 +82,7 @@ class BinarySearchFirstLastIndex {
 
             //Because (left + right) / 2 can exceed the integer limit
             // whereas left + (right - left)/2 doesn't exceed the integer bounds.
-            int mid = l + (r - l) >> 1;
+            int mid = (r + l) >> 1;
 
             if (nums[mid] == target) {
 
@@ -110,7 +111,7 @@ class BinarySearchFirstLastIndex {
 
         while (l <= r) {
 
-            int mid = l + (r - l) >> 1;
+            int mid = (r + l) >> 1;
 
             if (nums[mid] == target) {
 

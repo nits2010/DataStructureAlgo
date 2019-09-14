@@ -26,7 +26,6 @@ public class FirstBadVersion {
     public static void main(String[] args) {
         test(5, 4, 4);
         test(5, 2, 2);
-        test(5, 8, -1);
     }
 
     private static void test(int n, int badVersion, int expected) {
@@ -48,11 +47,7 @@ class VersionControl {
     }
 
     boolean isBadVersion(int version) {
-        if (version < firstBadVersion)
-            return false;
-        if (version >= firstBadVersion)
-            return true;
-        return true;
+        return version >= firstBadVersion;
     }
 }
 
@@ -62,6 +57,9 @@ class FirstBadVersionBinarySearch extends VersionControl {
         super(firstBadVersion);
     }
 
+    /**
+     * {@link Java.BinarySearch} #Overlow
+     */
     public int firstBadVersion(int n) {
         int s = 1, e = n;
 
@@ -69,7 +67,6 @@ class FirstBadVersionBinarySearch extends VersionControl {
             int mid = s + (e - s) / 2;
 
             if (isBadVersion(mid)) {
-
                 e = mid;
             } else
                 s = mid + 1;

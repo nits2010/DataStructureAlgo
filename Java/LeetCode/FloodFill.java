@@ -34,12 +34,14 @@ import Java.HelpersToPrint.Printer;
  * The length of image and image[0] will be in the range [1, 50].
  * The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
  * The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
+ *
+ * https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/
  */
 public class FloodFill {
 
     public static void main(String[] args) {
-//        test(new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2, new int[][]{{2, 2, 2}, {2, 2, 0}, {2, 0, 1}});
-//        test(new int[][]{{1, 1, 0}, {1, 1, 0}, {1, 0, 0}}, 1, 1, 2, new int[][]{{2, 2, 0}, {2, 2, 0}, {2, 0, 0}});
+        test(new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2, new int[][]{{2, 2, 2}, {2, 2, 0}, {2, 0, 1}});
+        test(new int[][]{{1, 1, 0}, {1, 1, 0}, {1, 0, 0}}, 1, 1, 2, new int[][]{{2, 2, 0}, {2, 2, 0}, {2, 0, 0}});
         test(new int[][]{{0, 0, 0}, {0, 1, 1}}, 1, 1, 1, new int[][]{{2, 2, 0}, {2, 2, 0}, {2, 0, 0}});
 
     }
