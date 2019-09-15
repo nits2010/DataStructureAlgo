@@ -17,51 +17,20 @@ import java.util.stream.Collectors;
 public class GenericPrinter {
 
     public static void print(final int[] a) {
-        System.out.println();
-        System.out.print("[ ");
-        Arrays.stream(a).forEach(i -> System.out.print(i + " "));
-        System.out.print("]");
-        System.out.println();
-
+        System.out.println(toString(a));
     }
 
     public static void print(final int[][] a) {
-        System.out.println();
-
-        for (int[] ints : a) {
-            System.out.println();
-            Arrays.stream(ints).forEach(x -> System.out.print(x + " "));
-        }
-        System.out.println();
+        System.out.println(toString(a));
     }
 
 
     public static void print(final char[][] a) {
-        System.out.println();
-
-        for (char[] chars : a) {
-            System.out.println();
-            for (int j = 0; j < a[0].length; j++) {
-                System.out.print(chars[j] + " ");
-            }
-
-        }
-        System.out.println();
+        System.out.println(toString(a));
     }
 
     public static void print(final List<int[]> list) {
-
-        System.out.println();
-        for (int[] i : list) {
-
-            System.out.print(" ( ");
-            for (int x = 0; x < i.length; x++) {
-                System.out.print(i[x]);
-                if (x != i.length - 1)
-                    System.out.print(" , ");
-            }
-            System.out.print(" ) ");
-        }
+        System.out.println(toString(list));
     }
 
     public static String toString(int[] nums) {
@@ -124,7 +93,6 @@ public class GenericPrinter {
 
         return result.toString();
     }
-
 
     public static String toString(String[] str) {
         if (null == str || str.length == 0)
