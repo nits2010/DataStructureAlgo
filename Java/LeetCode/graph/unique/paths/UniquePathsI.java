@@ -59,6 +59,7 @@ public class UniquePathsI {
         UniquePathsIDPBottomUpSpaceOptimize pathsIDPBottomUpSpaceOptimize = new UniquePathsIDPBottomUpSpaceOptimize();
         UniquePathsIBinomialCoefficient binomialCoefficient = new UniquePathsIBinomialCoefficient();
         System.out.println("backtracking  : " + backtracking.uniquePaths(m, n));
+        System.out.println("backtracking 2 : " + backtracking.uniquePaths2(m, n));
         System.out.println("DP Top Down  : " + pathsIDPTopDown.uniquePaths(m, n));
         System.out.println("DP Bottom up   :" + pathsIDPBottomUp.uniquePaths(m, n));
         System.out.println("DP Bottom up  space optimize :" + pathsIDPBottomUpSpaceOptimize.uniquePaths(m, n));
@@ -131,6 +132,27 @@ class UniquePathsIBacktracking {
         return true;
     }
 
+    /**
+     * Simple and short
+     *
+     * @param m
+     * @param n
+     * @return
+     */
+
+    public int uniquePaths2(int m, int n) {
+        return uniquePathBacktrack(0, 0, m, n);
+    }
+
+    public int uniquePathBacktrack(int r, int c, int m, int n) {
+        if (r > m || c > n) {
+            return 0;
+        }
+        if (r == m - 1 && c == n - 1) {
+            return 1;
+        }
+        return uniquePathBacktrack(r + 1, c, m, n) + uniquePathBacktrack(r, c + 1, m, n);
+    }
 
 }
 

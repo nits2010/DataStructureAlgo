@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class KthLargestElement {
 
     public static void test1() {
-        int arr[] = {12, 3, 5, 7, 4, 19, 26};
+        int[] arr = {12, 3, 5, 7, 4, 19, 26};
         int k = 3;
 
         int kthLargestElement = kthLargestElement(arr, arr.length, k);

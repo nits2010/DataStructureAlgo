@@ -151,7 +151,6 @@ public class Printer {
 
             result.append(toString(nums[i]));
             result.setCharAt(result.length() - 1, ']');
-            result.append("\n");
         }
 
 
