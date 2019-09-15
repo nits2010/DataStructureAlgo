@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.HelpersToPrint.Printer;
+
 import java.util.*;
 
 /**
@@ -35,39 +37,19 @@ import java.util.*;
  */
 public class BoggleSearchWordSearchII {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-         test1();
-        test2();
-        test3();
+        test(new String[]{"abcd"}, new char[][]{{'a', 'b'}, {'c', 'd'}}, new String[]{""});
+        test(new String[]{"abcd", "abdc"}, new char[][]{{'a', 'b'}, {'c', 'd'}}, new String[]{"abdc"});
+        test(new String[]{"oath", "pea", "eat", "rain"}, new char[][]{{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}}, new String[]{"eat", "oath"});
+        test(new String[]{"GEEKS", "FOR", "QUIZ", "GEE"}, new char[][]{{'G', 'I', 'Z'}, {'U', 'E', 'K'}, {'Q', 'S', 'E'}}, new String[]{""});
     }
 
-    private static void test3() {
+    private static void test(String[] dictionary, char[][] boggle, String[] expected) {
+        Printer.inputPrint(dictionary, expected, "Dictionary");
+        System.out.println("Boggle:" + Printer.toString(boggle));
+        System.out.println("Obtained: " + new SolutionBoggleSearch().findWords(boggle, dictionary));
 
-        String dictionary[] = {"abcd"};
-        char boggle[][] = {{'a', 'b'},
-                {'c', 'd'}};
-
-        SolutionBoggleSearch solutionBoggleSearch = new SolutionBoggleSearch();
-        System.out.println(solutionBoggleSearch.findWords(boggle, dictionary));
-    }
-
-    static void test1() {
-        String dictionary[] = {"GEEKS", "FOR", "QUIZ", "GEE"};
-        char boggle[][] = {{'G', 'I', 'Z'},
-                {'U', 'E', 'K'},
-                {'Q', 'S', 'E'}};
-
-        SolutionBoggleSearch solutionBoggleSearch = new SolutionBoggleSearch();
-        System.out.println(solutionBoggleSearch.findWords(boggle, dictionary));
-    }
-
-    static void test2() {
-        String dictionary[] = {"oath", "pea", "eat", "rain"};
-        char boggle[][] = {{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}};
-
-        SolutionBoggleSearch solutionBoggleSearch = new SolutionBoggleSearch();
-        System.out.println(solutionBoggleSearch.findWords(boggle, dictionary)); //["eat","oath"]
     }
 
 
@@ -76,15 +58,15 @@ public class BoggleSearchWordSearchII {
 class SolutionBoggleSearch {
 
 
-    int row8[] = {-1, 1, 0, 0, -1, -1, 1, 1};
-    int col8[] = {0, 0, -1, 1, -1, 1, -1, 1};
+    int[] row8 = {-1, 1, 0, 0, -1, -1, 1, 1};
+    int[] col8 = {0, 0, -1, 1, -1, 1, -1, 1};
 
 
-    int row4[] = {0, 0, 1, -1};
-    int col4[] = {-1, 1, 0, 0};
+    int[] row4 = {0, 0, 1, -1};
+    int[] col4 = {-1, 1, 0, 0};
 
 
-    class TrieNode {
+    static class TrieNode {
 
         public boolean isLeaf = false;
         public char value;
@@ -101,7 +83,7 @@ class SolutionBoggleSearch {
 
     }
 
-    class Trie {
+    static class Trie {
         TrieNode root;
 
         public void insert(String toInsert) {
@@ -129,12 +111,12 @@ class SolutionBoggleSearch {
 
     }
 
-    public List<String> search(char boggle[][], TrieNode root) {
+    public List<String> search(char[][] boggle, TrieNode root) {
         int n = boggle.length;
         int m = boggle[0].length;
 
         Set<String> boggleInDic = new HashSet<>();
-        boolean visited[][] = new boolean[n][m];
+        boolean[][] visited = new boolean[n][m];
 
 
         for (int i = 0; i < n; i++) {
@@ -189,9 +171,7 @@ class SolutionBoggleSearch {
 
     private boolean isSafe(int r, int c, boolean[][] visited, int n, int m) {
 
-        if (r >= n || c >= m || r < 0 || c < 0 || visited[r][c])
-            return false;
-        return true;
+        return r < n && c < m && r >= 0 && c >= 0 && !visited[r][c];
     }
 
     public List<String> findWords(char[][] board, String[] dictionary) {
@@ -199,7 +179,7 @@ class SolutionBoggleSearch {
             return new ArrayList<>();
 
         Trie trie = new Trie();
-        Arrays.stream(dictionary).forEach(s -> trie.insert(s));
+        Arrays.stream(dictionary).forEach(trie::insert);
 
         return search(board, trie.root);
 

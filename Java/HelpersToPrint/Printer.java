@@ -85,8 +85,8 @@ public class Printer {
 
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < nums.length; i++) {
-            result.append(nums[i]);
+        for (T num : nums) {
+            result.append(num);
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -199,12 +199,11 @@ public class Printer {
             return null;
 
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < nums.length; i++) {
+        for (char[] num : nums) {
 
 
-            result.append(toString(nums[i]));
+            result.append(toString(num));
             result.setCharAt(result.length() - 1, ']');
-            result.append("\n");
         }
 
 
@@ -443,13 +442,67 @@ public class Printer {
                 .collect(Collectors.toList());
     }
 
+    public static <I, E> void inputPrint(I[] input, E[] expected, String inputString) {
+        System.out.println("-----------");
+        System.out.println(inputString + ": " + Printer.toString(input));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+    public static <I, E> void inputPrint(I[][] input, E[] expected, String inputString) {
+        System.out.println("-----------");
+        System.out.println(inputString + ": " + Printer.toString(input));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+
+    public static <I, E> void inputPrint(I[][] input, E[][] expected, String inputString) {
+        System.out.println("-----------");
+        System.out.println(inputString + ": " + Printer.toString(input));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+    public static <I, I2, E> void inputPrint(I[] input1, I2[] input2, E[] expected, String inputString1, String inputString2) {
+        System.out.println("-----------");
+        System.out.println(inputString1 + ": " + Printer.toString(input1));
+        System.out.println(inputString2 + ": " + Printer.toString(input2));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+    public static <I, I2, E> void inputPrint(I[] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
+        System.out.println("-----------");
+        System.out.println(inputString1 + ": " + Printer.toString(input1));
+        System.out.println(inputString2 + ": " + Printer.toString(input2));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+    public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
+        System.out.println("-----------");
+        System.out.println(inputString1 + ": " + Printer.toString(input1));
+        System.out.println(inputString2 + ": " + Printer.toString(input2));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
+    public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[][] expected, String inputString1, String inputString2) {
+        System.out.println("-----------");
+        System.out.println(inputString1 + ": " + Printer.toString(input1));
+        System.out.println(inputString2 + ": " + Printer.toString(input2));
+        System.out.println("Expected :" + Printer.toString(expected));
+
+    }
+
     public static void main(String[] args) {
 
-        int x[] = {1, 2, 3};
+        int[] x = {1, 2, 3};
         System.out.println(toString(copyOf(x)));
 
-        int x2[][] = {{1, 2, 3}, {4, 5, 6}};
-        int x2d[][] = copyOf(x2);
+        int[][] x2 = {{1, 2, 3}, {4, 5, 6}};
+        int[][] x2d = copyOf(x2);
         System.out.println(x2 == x2d);
 
         System.out.println(toString(new int[]{1, 3, 4}));
