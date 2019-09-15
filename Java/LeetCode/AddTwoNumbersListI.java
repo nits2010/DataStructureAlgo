@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.ListNode;
 
@@ -31,8 +31,8 @@ public class AddTwoNumbersListI {
     }
 
     private static void test(ListNode l1, ListNode l2, ListNode expected) {
-        System.out.println("\n L1 :" + Printer.print(l1) + "\n L2 :" + Printer.print(l2) + "\n Expected :" + Printer.print(expected));
-        System.out.println("\n Obtained :" + Printer.print(addTwoNumbers(l1, l2)));
+        System.out.println("\n L1 :" + GenericPrinter.print(l1) + "\n L2 :" + GenericPrinter.print(l2) + "\n Expected :" + GenericPrinter.print(expected));
+        System.out.println("\n Obtained :" + GenericPrinter.print(addTwoNumbers(l1, l2)));
     }
 
 

@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class GroupAnagrams {
     }
 
     private static void test(String[] strings, List<List<String>> expected) {
-        System.out.println("\n Input :" + Printer.toString(strings) + " Expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(strings) + " Expected :" + expected);
         GroupAnagramsSortCollapse sortCollapse = new GroupAnagramsSortCollapse();
         GroupAnagramsIndividualSortCollapse individualSortCollapse = new GroupAnagramsIndividualSortCollapse();
         GroupAnagramsIndividualHashCollapse hashCollapse = new GroupAnagramsIndividualHashCollapse();

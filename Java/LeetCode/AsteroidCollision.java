@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -68,7 +68,7 @@ public class AsteroidCollision {
     }
 
     private static void test(int[] asteroids, int[] expected) {
-        System.out.println("\n Input :" + Printer.toString(asteroids) + " expected :" + Printer.toString(expected));
+        System.out.println("\n Input :" + GenericPrinter.toString(asteroids) + " expected :" + GenericPrinter.toString(expected));
 
         AsteroidCollisionSolution bruteForce = new AsteroidCollisionBruteForce();
         AsteroidCollisionSolution stack = new AsteroidCollisionStack();
@@ -81,7 +81,7 @@ public class AsteroidCollision {
     }
 
     private static void test(int[] asteroids, AsteroidCollisionSolution solution, String type) {
-        System.out.println(type + " -> " + Printer.toString(solution.asteroidCollision(asteroids)));
+        System.out.println(type + " -> " + GenericPrinter.toString(solution.asteroidCollision(asteroids)));
     }
 }
 

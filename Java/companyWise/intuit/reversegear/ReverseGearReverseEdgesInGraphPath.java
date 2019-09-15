@@ -1,6 +1,6 @@
 package Java.companyWise.intuit.reversegear;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -41,7 +41,7 @@ public class ReverseGearReverseEdgesInGraphPath {
     }
 
     private static void test(int[][] graph, int expected) {
-        System.out.println("\n Given Graph :\n" + Printer.toString(graph) + " expected :" + expected);
+        System.out.println("\n Given Graph :\n" + GenericPrinter.toString(graph) + " expected :" + expected);
         System.out.println(MinimumEdgesToReverseMakePathFromSourceToDestination.minReverse(graph, graph.length, graph.length));
     }
 

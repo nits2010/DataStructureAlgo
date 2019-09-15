@@ -1,8 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
-
-import java.util.Map;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -32,7 +30,7 @@ public class ContainerWithMostWater {
     }
 
     private static void test(int[] height, int expected) {
-        System.out.println("\n Input :" + Printer.toString(height) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(height) + " expected :" + expected);
         Solution solution = new Solution();
         System.out.println("brute :" + solution.maxAreaBruteForce(height));
         System.out.println("maxAreaOptimized :" + solution.maxAreaOptimized(height));

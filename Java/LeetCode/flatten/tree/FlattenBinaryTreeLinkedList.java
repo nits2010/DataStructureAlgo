@@ -1,6 +1,6 @@
 package Java.LeetCode.flatten.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
@@ -92,11 +92,11 @@ public class FlattenBinaryTreeLinkedList {
     }
 
     private static void testPostOrder(TreeNode root, List<Integer> expected) {
-        System.out.println(" \n Input " + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println(" \n Input " + GenericPrinter.preOrder(root) + " expected :" + expected);
 
         FlattenBinaryTreeLinkedListPostOrder postOrder = new FlattenBinaryTreeLinkedListPostOrder();
         postOrder.flatten(root);
-        System.out.println("\n PostOrder  :" + Printer.preOrder(root));
+        System.out.println("\n PostOrder  :" + GenericPrinter.preOrder(root));
     }
 
 
@@ -105,7 +105,7 @@ public class FlattenBinaryTreeLinkedList {
 
         FlattenBinaryTreeLinkedListPostOrderShort postOrder = new FlattenBinaryTreeLinkedListPostOrderShort();
         postOrder.flatten(root);
-        System.out.println("\n PostOrder short:" + Printer.preOrder(root));
+        System.out.println("\n PostOrder short:" + GenericPrinter.preOrder(root));
     }
 
 

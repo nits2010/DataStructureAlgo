@@ -1,8 +1,6 @@
 package Java.LeetCode.graph.unique.paths;
 
-import Java.HelpersToPrint.Printer;
-
-import java.util.Arrays;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -78,7 +76,7 @@ public class UniquePaths {
     }
 
     private static void test(int[][] maze, int expected) {
-        System.out.println("\n grid :\n" + Printer.toString(maze) + " expected :" + expected);
+        System.out.println("\n grid :\n" + GenericPrinter.toString(maze) + " expected :" + expected);
 
         UniquePathsBacktracking backtracking = new UniquePathsBacktracking();
 

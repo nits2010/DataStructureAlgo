@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,12 +49,12 @@ public class ReorderDataLogFiles {
     }
 
     private static void test(String[] logs, String[] expected) {
-        System.out.println("\n Input :" + Printer.toString(logs));
-        System.out.println(" Expected :" + Printer.toString(expected));
+        System.out.println("\n Input :" + GenericPrinter.toString(logs));
+        System.out.println(" Expected :" + GenericPrinter.toString(expected));
         ReorderDataLogFilesSeparateSortIndexOf separateSortIndexOf = new ReorderDataLogFilesSeparateSortIndexOf();
         ReorderDataLogFilesWithInSortIndexOf withInSortIndexOf = new ReorderDataLogFilesWithInSortIndexOf();
-        System.out.println(" separateSortIndexOf    :" + Printer.toString(separateSortIndexOf.reorderLogFiles(Printer.copyOf(logs))));
-        System.out.println(" withInSortIndexOf      :" + Printer.toString(withInSortIndexOf.reorderLogFiles(Printer.copyOf(logs))));
+        System.out.println(" separateSortIndexOf    :" + GenericPrinter.toString(separateSortIndexOf.reorderLogFiles(GenericPrinter.copyOf(logs))));
+        System.out.println(" withInSortIndexOf      :" + GenericPrinter.toString(withInSortIndexOf.reorderLogFiles(GenericPrinter.copyOf(logs))));
 
     }
 }

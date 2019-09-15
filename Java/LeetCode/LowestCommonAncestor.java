@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
@@ -30,7 +30,7 @@ public class LowestCommonAncestor {
     }
 
     private static void test(TreeNode root, TreeNode p, TreeNode q, TreeNode expected) {
-        System.out.println(" \n Tree :" + Printer.inOrder(root) + " p : " + p + " q: " + q + " expected :" + expected);
+        System.out.println(" \n Tree :" + GenericPrinter.inOrder(root) + " p : " + p + " q: " + q + " expected :" + expected);
 
         LowestCommonAncestorBinarySearchTree lcaBinarySearchTree = new LowestCommonAncestorBinarySearchTree();
         System.out.println("BST Rec:" + lcaBinarySearchTree.lowestCommonAncestorRecursive(root, p, q));

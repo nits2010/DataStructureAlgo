@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -46,8 +46,8 @@ public class BoggleSearchWordSearchII {
     }
 
     private static void test(String[] dictionary, char[][] boggle, String[] expected) {
-        Printer.inputPrint(dictionary, expected, "Dictionary");
-        System.out.println("Boggle:" + Printer.toString(boggle));
+        GenericPrinter.inputPrint(dictionary, expected, "Dictionary");
+        System.out.println("Boggle:" + GenericPrinter.toString(boggle));
         System.out.println("Obtained: " + new SolutionBoggleSearch().findWords(boggle, dictionary));
 
     }

@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -109,12 +109,12 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
 
     public int lengthOfLIS(int nums[]) {
         System.out.println("\n input ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
 
         System.out.println("\n LIS -> ");
         LIS lis = lengthOfLISHelper(nums);
 
-        Printer.print(lis.lis);
+        GenericPrinter.print(lis.lis);
 
         return lis.length;
     }

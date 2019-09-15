@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -51,7 +51,7 @@ public class TreasureIsland {
     private static void test(char[][] grid) {
         BFS bfs = new BFS();
         List<int[]> path = bfs.shortestPathToTreasureIsland(grid);
-        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + Printer.toString(path));
+        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + GenericPrinter.toString(path));
     }
 
 

@@ -1,6 +1,6 @@
 package Java.LeetCode.intersection.arrays;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -36,8 +36,8 @@ public class IntersectionTwoArrays {
     }
 
     private static void test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\n Input; nums1 :" + Printer.toString(nums1) + " nums2 :" + Printer.toString(nums2) + " expected :" + Printer.toString(expected));
-        System.out.println("Set Obtained :" + Printer.toString(intersection(nums1, nums2)));
+        System.out.println("\n Input; nums1 :" + GenericPrinter.toString(nums1) + " nums2 :" + GenericPrinter.toString(nums2) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("Set Obtained :" + GenericPrinter.toString(intersection(nums1, nums2)));
     }
 
 

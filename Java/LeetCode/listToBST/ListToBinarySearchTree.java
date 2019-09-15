@@ -1,6 +1,6 @@
 package Java.LeetCode.listToBST;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.templates.TreeNode;
 
@@ -35,14 +35,14 @@ public class ListToBinarySearchTree {
 
 
     private static void testSinglyListToBST(ListNode head, List<Integer> inOrderTraversal, int expectedHeight) {
-        System.out.println("\n Input :" + Printer.print(head) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
+        System.out.println("\n Input :" + GenericPrinter.print(head) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
 
         ConvertSortedSinglyListBinarySearchTree listBinarySearchTree = new ConvertSortedSinglyListBinarySearchTree();
         final TreeNode treeNode = listBinarySearchTree.sortedListToBST(head);
 
         int height = height(treeNode);
 
-        System.out.println("\n Singly Inorder Traversal :" + Printer.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Singly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
     }
 
     private static void testDoublyListToBST(TreeNode head, List<Integer> inOrderTraversal, int expectedHeight) {
@@ -54,7 +54,7 @@ public class ListToBinarySearchTree {
 
         int height = height(treeNode);
 
-        System.out.println("\n Doubly Inorder Traversal :" + Printer.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Doubly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
     }
 
 

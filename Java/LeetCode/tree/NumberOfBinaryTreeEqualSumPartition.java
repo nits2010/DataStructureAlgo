@@ -1,9 +1,7 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
-
-import java.util.Stack;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -83,7 +81,7 @@ public class NumberOfBinaryTreeEqualSumPartition {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\n Tree :" + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Tree :" + GenericPrinter.preOrder(root) + " expected :" + expected);
         System.out.println("Obtained :" + partitions(root));
     }
 

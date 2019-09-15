@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.NextGreaterElementOnRightSide;
 import Java.SmallerElementOnLeftSide;
 
@@ -34,7 +34,7 @@ public class SortedSubSequenceSize3 {
     private static void test(int[] nums) {
 
         System.out.println();
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         int[] seq = sortedSubSequenceSize3(nums);
         if (seq.length == 0)
             System.out.println(" No such triplet");

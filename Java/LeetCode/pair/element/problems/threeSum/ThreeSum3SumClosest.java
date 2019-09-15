@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -32,7 +32,7 @@ public class ThreeSum3SumClosest {
     private static void test(int[] nums, int target) {
 
         IThreeSum3SumClosest sorting = new IThreeSum3SumClosestSorting();
-        System.out.println("Input: " + Printer.toString(nums));
+        System.out.println("Input: " + GenericPrinter.toString(nums));
         System.out.println(" Closest :" + sorting.threeSumClosest(nums, target));
 
     }

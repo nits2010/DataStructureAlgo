@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -38,7 +38,7 @@ public class ActivateFountains {
     }
 
     private static void test(int[] fountains, int expected) {
-        System.out.println(Printer.toString(fountains));
+        System.out.println(GenericPrinter.toString(fountains));
 
         ActivateFountainsIntervalMerge intervalsMerge = new ActivateFountainsIntervalMerge();
         ActivateFountainsIntervalMergeOptimized optimized = new ActivateFountainsIntervalMergeOptimized();

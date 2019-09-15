@@ -1,6 +1,6 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -37,7 +37,7 @@ public class IslandPerimeter {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Grid :\n" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\n Grid :\n" + GenericPrinter.toString(grid) + " expected :" + expected);
         IslandPerimeterNeighbourCount neighbourCount = new IslandPerimeterNeighbourCount();
         IslandPerimeterEdgeCount edgeCount = new IslandPerimeterEdgeCount();
         IslandPerimeterNeighbourCount2 edgeCount2 = new IslandPerimeterNeighbourCount2();

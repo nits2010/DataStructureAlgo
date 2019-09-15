@@ -1,9 +1,9 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.companyWise.GroupOn.IslandsSizeCount;
 
-import static Java.HelpersToPrint.Printer.*;
+import static Java.HelpersToPrint.GenericPrinter.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -48,7 +48,7 @@ public class NumberIslands {
     }
 
     private static void test(char[][] grid, int expected) {
-        System.out.println("\nInput \n" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\nInput \n" + GenericPrinter.toString(grid) + " expected :" + expected);
         NumberIslandsDFS dfs = new NumberIslandsDFS();
         NumberIslandsDFSV2 dfs2 = new NumberIslandsDFSV2();
         NumberIslandsDFSDirectIteration dfs3 = new NumberIslandsDFSDirectIteration();

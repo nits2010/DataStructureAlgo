@@ -1,6 +1,6 @@
 package Java.BitonicProblems;/* package whatever; // don't place package name! */
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 //MaximumLengthBitonicSubarray
 class MaximumLengthBitonicSubArrayHelper {
@@ -34,7 +34,7 @@ class MaximumLengthBitonicSubArrayHelper {
     }
 
     public void print() {
-        Printer.print(input);
+        GenericPrinter.print(input);
     }
 
     //false if no subarray exist otherwise true

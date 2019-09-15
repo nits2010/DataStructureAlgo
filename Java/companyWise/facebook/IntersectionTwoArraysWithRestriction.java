@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.intersection.arrays.IntersectionTwoArrays;
 
 import java.util.*;
@@ -32,7 +32,7 @@ public class IntersectionTwoArraysWithRestriction {
     }
 
     private static void test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\n Input; nums1 :" + Printer.toString(nums1) + " nums2 :" + Printer.toString(nums2) + " expected :" + Printer.toString(expected));
+        System.out.println("\n Input; nums1 :" + GenericPrinter.toString(nums1) + " nums2 :" + GenericPrinter.toString(nums2) + " expected :" + GenericPrinter.toString(expected));
         System.out.println("Set Obtained :" + intersection(nums1, nums2));
     }
 

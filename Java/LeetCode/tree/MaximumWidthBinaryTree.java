@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 import java.util.*;
@@ -124,7 +124,7 @@ public class MaximumWidthBinaryTree {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\nInput : " + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println("\nInput : " + GenericPrinter.preOrder(root) + " expected :" + expected);
 
         final MaximumWidthBinaryTreeUsingMap usingMap = new MaximumWidthBinaryTreeUsingMap();
         final MaximumWidthBinaryTreeUsingList usingList = new MaximumWidthBinaryTreeUsingList();

@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -39,7 +39,7 @@ public class LongestConsecutiveSequence {
         Sort sort = new Sort();
         UsingMap map = new UsingMap();
 
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         System.out.println("Sort" + sort.longestConsecutive(nums));
         System.out.println("Map " + map.longestConsecutive(nums));
 

@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.kSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.fourSum.FourSum4Sum;
 import Java.LeetCode.pair.element.problems.threeSum.ThreeSum3Sum;
 import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
@@ -58,7 +58,7 @@ public class KSum {
     private static void test(int[] nums, int k, int target) {
         IKSum kSum = new KSumSorting();
 
-        System.out.println("\nInput : " + Printer.toString(nums) + " K :" + k + " Target: " + target);
+        System.out.println("\nInput : " + GenericPrinter.toString(nums) + " K :" + k + " Target: " + target);
         System.out.println("Sorting: " + kSum.kSum(nums, k, target));
     }
 

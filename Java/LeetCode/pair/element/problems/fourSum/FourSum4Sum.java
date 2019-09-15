@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.fourSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.threeSum.ThreeSum3Sum;
 import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
@@ -44,7 +44,7 @@ public class FourSum4Sum {
 
     private static void test(int[] nums, int target) {
 
-        System.out.println("\nInput: " + Printer.toString(nums) + " target :" + target);
+        System.out.println("\nInput: " + GenericPrinter.toString(nums) + " target :" + target);
         IFourSum4Sum sorting = new FourSum4SumSortingV1();
         IFourSum4Sum sorting2 = new FourSum4SumSortingV2();
         System.out.println("V1 : " + sorting.fourSum(nums, target));

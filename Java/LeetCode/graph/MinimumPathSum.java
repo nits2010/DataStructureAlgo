@@ -1,6 +1,6 @@
 package Java.LeetCode.graph;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -52,7 +52,7 @@ public class MinimumPathSum {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Input :" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(grid) + " expected :" + expected);
         System.out.println(" Backtracking : " + MinimumPathSumBacktracking.minPathSum(grid));
         System.out.println(" Top Down DP : " + MinimumPathSumDPTopDown.minPathSum(grid));
         System.out.println(" Bottom up DP : " + MinimumPathSumDPBottomUp.minPathSum(grid));

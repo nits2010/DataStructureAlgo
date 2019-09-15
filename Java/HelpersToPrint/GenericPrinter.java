@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
  * Date: 2019-07-24
  * Description:
  */
-public class Printer {
+public class GenericPrinter {
 
-    public static void print(final int a[]) {
+    public static void print(final int[] a) {
         System.out.println();
         System.out.print("[ ");
         Arrays.stream(a).forEach(i -> System.out.print(i + " "));
@@ -25,24 +25,24 @@ public class Printer {
 
     }
 
-    public static void print(final int a[][]) {
+    public static void print(final int[][] a) {
         System.out.println();
 
-        for (int i = 0; i < a.length; i++) {
+        for (int[] ints : a) {
             System.out.println();
-            Arrays.stream(a[i]).forEach(x -> System.out.print(x + " "));
+            Arrays.stream(ints).forEach(x -> System.out.print(x + " "));
         }
         System.out.println();
     }
 
 
-    public static void print(final char a[][]) {
+    public static void print(final char[][] a) {
         System.out.println();
 
-        for (int i = 0; i < a.length; i++) {
+        for (char[] chars : a) {
             System.out.println();
             for (int j = 0; j < a[0].length; j++) {
-                System.out.print(a[i][j] + " ");
+                System.out.print(chars[j] + " ");
             }
 
         }
@@ -52,7 +52,7 @@ public class Printer {
     public static void print(final List<int[]> list) {
 
         System.out.println();
-        for (int i[] : list) {
+        for (int[] i : list) {
 
             System.out.print(" ( ");
             for (int x = 0; x < i.length; x++) {
@@ -70,8 +70,8 @@ public class Printer {
 
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < nums.length; i++) {
-            result.append(nums[i]);
+        for (int num : nums) {
+            result.append(num);
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -101,8 +101,8 @@ public class Printer {
 
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < nums.length; i++) {
-            result.append(nums[i]);
+        for (double num : nums) {
+            result.append(num);
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -116,8 +116,8 @@ public class Printer {
 
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < nums.length; i++) {
-            result.append(nums[i]);
+        for (char num : nums) {
+            result.append(num);
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -132,8 +132,8 @@ public class Printer {
 
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < str.length; i++) {
-            result.append(str[i]);
+        for (String s : str) {
+            result.append(s);
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -146,10 +146,10 @@ public class Printer {
             return null;
 
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < nums.length; i++) {
+        for (int[] num : nums) {
 
 
-            result.append(toString(nums[i]));
+            result.append(toString(num));
             result.setCharAt(result.length() - 1, ']');
         }
 
@@ -163,10 +163,10 @@ public class Printer {
             return null;
 
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < nums.length; i++) {
+        for (List<Integer> num : nums) {
 
 
-            result.append(nums[i]);
+            result.append(num);
             result.append("\n");
         }
 
@@ -180,10 +180,10 @@ public class Printer {
             return null;
 
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < nums.length; i++) {
+        for (int[] num : nums) {
 
 
-            result.append(toString(nums[i]));
+            result.append(toString(num));
             result.setCharAt(result.length() - 1, ']');
             result.append(",");
         }
@@ -218,7 +218,7 @@ public class Printer {
 
         StringBuilder result = new StringBuilder();
         for (int[] x : list) {
-            result.append(toString(x) + ",");
+            result.append(toString(x)).append(",");
         }
 
         return result.toString().substring(0, result.length() - 1);
@@ -228,8 +228,7 @@ public class Printer {
     public static int[] copyOf(int[] input) {
         int[] copy = new int[input.length];
 
-        for (int i = 0; i < input.length; i++)
-            copy[i] = input[i];
+        System.arraycopy(input, 0, copy, 0, input.length);
 
         return copy;
     }
@@ -239,8 +238,7 @@ public class Printer {
         int[][] copy = new int[input.length][input[0].length];
 
         for (int i = 0; i < input.length; i++)
-            for (int j = 0; j < input[0].length; j++)
-                copy[i][j] = input[i][j];
+            System.arraycopy(input[i], 0, copy[i], 0, input[0].length);
 
         return copy;
     }
@@ -248,8 +246,7 @@ public class Printer {
     public static char[] copyOf(char[] input) {
         char[] copy = new char[input.length];
 
-        for (int i = 0; i < input.length; i++)
-            copy[i] = input[i];
+        System.arraycopy(input, 0, copy, 0, input.length);
 
         return copy;
     }
@@ -259,8 +256,7 @@ public class Printer {
         char[][] copy = new char[input.length][input[0].length];
 
         for (int i = 0; i < input.length; i++)
-            for (int j = 0; j < input[0].length; j++)
-                copy[i][j] = input[i][j];
+            System.arraycopy(input[i], 0, copy[i], 0, input[0].length);
 
         return copy;
 
@@ -444,55 +440,55 @@ public class Printer {
 
     public static <I, E> void inputPrint(I[] input, E[] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + Printer.toString(input));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString + ": " + GenericPrinter.toString(input));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
     public static <I, E> void inputPrint(I[][] input, E[] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + Printer.toString(input));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString + ": " + GenericPrinter.toString(input));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
 
     public static <I, E> void inputPrint(I[][] input, E[][] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + Printer.toString(input));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString + ": " + GenericPrinter.toString(input));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[] input1, I2[] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + Printer.toString(input1));
-        System.out.println(inputString2 + ": " + Printer.toString(input2));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
+        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + Printer.toString(input1));
-        System.out.println(inputString2 + ": " + Printer.toString(input2));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
+        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + Printer.toString(input1));
-        System.out.println(inputString2 + ": " + Printer.toString(input2));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
+        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[][] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + Printer.toString(input1));
-        System.out.println(inputString2 + ": " + Printer.toString(input2));
-        System.out.println("Expected :" + Printer.toString(expected));
+        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
+        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
+        System.out.println("Expected :" + GenericPrinter.toString(expected));
 
     }
 

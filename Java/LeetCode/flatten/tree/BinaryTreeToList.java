@@ -1,6 +1,6 @@
 package Java.LeetCode.flatten.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
@@ -102,10 +102,10 @@ public class BinaryTreeToList {
 
 
     private static void testSingly(TreeNode root, List<Integer> expected) {
-        System.out.println(" \n Input " + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println(" \n Input " + GenericPrinter.preOrder(root) + " expected :" + expected);
         final BinaryTreeToSinglyList singly = new BinaryTreeToSinglyList();
         final TreeNode listHead = singly.treeToSinglyList(root);
-        System.out.println(" \n Singly " + Printer.print(listHead));
+        System.out.println(" \n Singly " + GenericPrinter.print(listHead));
 
     }
 
@@ -115,14 +115,14 @@ public class BinaryTreeToList {
         final BinaryTreeToDoublyList doubly = new BinaryTreeToDoublyList();
         final TreeNode listHead = doubly.treeToDoublyList(root);
 
-        System.out.println(" \n Doubly " + Printer.print(listHead));
+        System.out.println(" \n Doubly " + GenericPrinter.print(listHead));
     }
 
     private static void testCircularSingly(TreeNode root, List<Integer> expected) {
 //        System.out.println(" \n Input " + Printer.preOrder(root) + " expected :" + expected);
         final BinaryTreeToCircularSinglyList singlyCircular = new BinaryTreeToCircularSinglyList();
         final TreeNode listHead = singlyCircular.treeToCircularSinglyList(root);
-        System.out.println(" \n Singly Circular" + Printer.printCircular(listHead));
+        System.out.println(" \n Singly Circular" + GenericPrinter.printCircular(listHead));
     }
 
     private static void testCircularDoubly(TreeNode root, List<Integer> expected) {
@@ -131,7 +131,7 @@ public class BinaryTreeToList {
         final BinaryTreeToCircularDoublyList doublyCircular = new BinaryTreeToCircularDoublyList();
         final TreeNode listHead = doublyCircular.treeToCircularDoublyList(root);
 
-        System.out.println(" \n Doubly Circular" + Printer.printCircular(listHead));
+        System.out.println(" \n Doubly Circular" + GenericPrinter.printCircular(listHead));
     }
 
 

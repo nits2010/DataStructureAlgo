@@ -1,6 +1,6 @@
 package Java.LeetCode.bitsManipulation.single.number;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -33,8 +33,8 @@ public class SingleNumberIII {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("Input :" + Printer.toString(nums) + " Expected :" + Printer.toString(expected));
-        System.out.println("Two nunbers :" + Printer.toString(singleNumber(nums)));
+        System.out.println("Input :" + GenericPrinter.toString(nums) + " Expected :" + GenericPrinter.toString(expected));
+        System.out.println("Two nunbers :" + GenericPrinter.toString(singleNumber(nums)));
     }
 
     /**

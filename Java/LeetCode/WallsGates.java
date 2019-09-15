@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,13 +45,13 @@ public class WallsGates {
     private static void testDFS(int room[][]) {
 
         System.out.println("\nGiven room");
-        System.out.println(Printer.toString(room));
+        System.out.println(GenericPrinter.toString(room));
 
         WallsGatesDFS dfs = new WallsGatesDFS();
         dfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        System.out.println(Printer.toString(room));
+        System.out.println(GenericPrinter.toString(room));
 
 
     }
@@ -60,13 +60,13 @@ public class WallsGates {
     private static void testBFS(int room[][]) {
 
         System.out.println("\nGiven room");
-        System.out.println(Printer.toString(room));
+        System.out.println(GenericPrinter.toString(room));
 
         WallsGatesBFS bfs = new WallsGatesBFS();
         bfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        System.out.println(Printer.toString(room));
+        System.out.println(GenericPrinter.toString(room));
 
 
     }

@@ -1,6 +1,6 @@
 package Java.LeetCode.sumsubarrayproblems;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +50,7 @@ public class NumberSubArraysSumExactlyK {
      */
     static int numberSubArraysSumExactlyK(int nums[], int sum) {
         System.out.println("Input sum :" + sum);
-        Printer.print(nums);
+        GenericPrinter.print(nums);
 
         if (nums == null || nums.length == 0)
             return 0;

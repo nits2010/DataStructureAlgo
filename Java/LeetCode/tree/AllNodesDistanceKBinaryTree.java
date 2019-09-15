@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import javafx.util.Pair;
 
@@ -60,7 +60,7 @@ public class AllNodesDistanceKBinaryTree {
         KDistanceAwayFromNodeSolution solution1 = new KDistanceAwayFromNodeSolution();
         KDistanceAwayFromNodeSolutionCleaner solution1Cleaner = new KDistanceAwayFromNodeSolutionCleaner();
 
-        System.out.println(Printer.preOrder(node.getKey()));
+        System.out.println(GenericPrinter.preOrder(node.getKey()));
         System.out.println("node :" + node.getValue().val + " k: " + k);
         System.out.println(solution1.distanceK(node.getKey(), node.getValue(), k));
         System.out.println(solution1Cleaner.distanceK(node.getKey(), node.getValue(), k));

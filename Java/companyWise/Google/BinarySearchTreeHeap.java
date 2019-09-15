@@ -1,6 +1,6 @@
 package Java.companyWise.Google;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreapNode;
 
 import java.util.*;
@@ -67,13 +67,13 @@ public class BinarySearchTreeHeap {
     }
 
     private static void test(int[][] input, int[][] expected) {
-        System.out.println("Input :" + Printer.toStringInline(input) + " Expected Output :" + Printer.toStringInline(expected));
+        System.out.println("Input :" + GenericPrinter.toStringInline(input) + " Expected Output :" + GenericPrinter.toStringInline(expected));
         TreapBSTMaxHeap bstMaxHeap = new TreapBSTMaxHeap();
         TreapBSTMinHeap bstMinHeap = new TreapBSTMinHeap();
         final TreapNode root = bstMaxHeap.buildTreapMaxHeap(input);
-        System.out.println(Printer.toString(levelOrder(root)));
+        System.out.println(GenericPrinter.toString(levelOrder(root)));
         final TreapNode rootMinHeap = bstMinHeap.buildTreapMinHeap(input);
-        System.out.println(Printer.toString(levelOrder(rootMinHeap)));
+        System.out.println(GenericPrinter.toString(levelOrder(rootMinHeap)));
     }
 
 

@@ -1,6 +1,6 @@
 package Java.companyWise.Adobe;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.aAndBZero.AndSumToZero;
 
 import java.util.*;
@@ -22,11 +22,11 @@ public class A_And_B_ToZero {
     }
 
     private static void test(int[] nums) {
-        System.out.println("\n Input :" + Printer.toString(nums));
+        System.out.println("\n Input :" + GenericPrinter.toString(nums));
 
         BruteForce bruteForce = new BruteForce();
 
-        System.out.println("Brute Force :" + Printer.toString(bruteForce.pairs(nums)));
+        System.out.println("Brute Force :" + GenericPrinter.toString(bruteForce.pairs(nums)));
     }
 
     /**

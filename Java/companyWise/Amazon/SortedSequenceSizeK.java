@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.NextGreaterElementOnRightSide;
 import Java.SmallerElementOnLeftSide;
 
@@ -49,7 +49,7 @@ public class SortedSequenceSizeK {
     private static void test(int[] nums, int k) {
 
         System.out.println();
-        Printer.print(nums);
+        GenericPrinter.print(nums);
 
         SortedSequenceSizeKUsingMemory memory = new SortedSequenceSizeKUsingMemory();
 

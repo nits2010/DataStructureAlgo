@@ -1,6 +1,6 @@
 package Java.LeetCode.flatten.list;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -38,13 +38,13 @@ public class FlattenMultilevelSinglyLinkedList {
 
         System.out.println("Level wise -> :" + head.levelWise);
         final SinglyNode levelWise = FlattenMultilevelSinglyListLevelWise.flatten(head.head);
-        System.out.println("flatten Level Wise " + Printer.print(levelWise));
+        System.out.println("flatten Level Wise " + GenericPrinter.print(levelWise));
     }
 
     private static void testDepthWise(Triple<SinglyNode> head) {
         System.out.println("Depth wise -> :" + head.depthWise);
         final SinglyNode depthWise = FlattenMultilevelSinglyListDepthWise.flatten(head.head);
-        System.out.println("flatten Depth Wise " + Printer.print(depthWise));
+        System.out.println("flatten Depth Wise " + GenericPrinter.print(depthWise));
     }
 
 

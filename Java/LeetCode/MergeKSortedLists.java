@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.ListNode;
 
@@ -39,20 +39,20 @@ public class MergeKSortedLists {
 
     private static void testPQ(ListNode[] list) {
         IMergeKSortedLists pq = new MergeKSortedListsPriorityQueue();
-        System.out.println("\n Input : " + Printer.print(list));
+        System.out.println("\n Input : " + GenericPrinter.print(list));
         System.out.println("PQ->");
         ListNode head = pq.mergeKLists(list);
-        System.out.println(Printer.print(head));
+        System.out.println(GenericPrinter.print(head));
     }
 
     private static void testKWay(ListNode[] list) {
         IMergeKSortedLists kWayMerge = new MergeKSortedListsDC();
-        System.out.println("\n Input : " + Printer.print(list));
+        System.out.println("\n Input : " + GenericPrinter.print(list));
 
 
         System.out.println("KWay->");
         ListNode head = kWayMerge.mergeKLists(list);
-        System.out.println(Printer.print(head));
+        System.out.println(GenericPrinter.print(head));
 
     }
 }

@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 import java.util.ArrayList;
@@ -66,8 +66,8 @@ public class RecoverBinarySearchTree {
     }
 
     private static void test(TreeNode root, TreeNode expected) {
-        System.out.println("\nInput :" + Printer.inOrder(root));
-        System.out.println("Expected :" + Printer.inOrder(expected));
+        System.out.println("\nInput :" + GenericPrinter.inOrder(root));
+        System.out.println("Expected :" + GenericPrinter.inOrder(expected));
 
 //        RecoverBinarySearchTreeUsingMemory usingMemory = new RecoverBinarySearchTreeUsingMemory();
 //        usingMemory.recoverTree(root);
@@ -80,7 +80,7 @@ public class RecoverBinarySearchTree {
 
         RecoverBinarySearchTreeConstantMories constantMemoryMories = new RecoverBinarySearchTreeConstantMories();
         constantMemoryMories.recoverTree(root);
-        System.out.println(" Constant Memory Mories:" + Printer.inOrder(root));
+        System.out.println(" Constant Memory Mories:" + GenericPrinter.inOrder(root));
 
 
     }

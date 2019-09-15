@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -35,7 +35,7 @@ public class DistributeCandies {
     }
 
     private static void test(int[] candies) {
-        System.out.println("Input : " + Printer.toString(candies));
+        System.out.println("Input : " + GenericPrinter.toString(candies));
         DistributeCandiesUsingHash hash = new DistributeCandiesUsingHash();
         DistributeCandiesUsingBit bitSet = new DistributeCandiesUsingBit();
         DistributeCandiesUsingBoolean booleanArray = new DistributeCandiesUsingBoolean();

@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -70,9 +70,9 @@ public class RateInMazeWithJump {
 
     private static void test(int[][] maze, int[][] expected) {
         int n = maze.length, m = maze[0].length;
-        System.out.println("\n Maze :\n" + Printer.toString(maze) + " \n expected :\n" + Printer.toString(expected));
+        System.out.println("\n Maze :\n" + GenericPrinter.toString(maze) + " \n expected :\n" + GenericPrinter.toString(expected));
         int result[][] = rateInMazeWithJump(maze, 0, 0, n - 1, m - 1);
-        System.out.println("\n Obtained :\n" + Printer.toString(result) + "\nMatch :" + isCorrect(result, expected));
+        System.out.println("\n Obtained :\n" + GenericPrinter.toString(result) + "\nMatch :" + isCorrect(result, expected));
 
     }
 

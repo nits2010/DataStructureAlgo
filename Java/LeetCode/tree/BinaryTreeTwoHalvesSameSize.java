@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 /**
@@ -52,7 +52,7 @@ public class BinaryTreeTwoHalvesSameSize {
     }
 
     private static void test(TreeNode root, int nodeAtBreak[]) {
-        System.out.println("\n Input tree :" + Printer.preOrder(root) + " expected Size break :" + Printer.toString(nodeAtBreak));
+        System.out.println("\n Input tree :" + GenericPrinter.preOrder(root) + " expected Size break :" + GenericPrinter.toString(nodeAtBreak));
 
         final TreeNode[] treeNodes = binaryTreeTwoHalvesSameSize(root);
 

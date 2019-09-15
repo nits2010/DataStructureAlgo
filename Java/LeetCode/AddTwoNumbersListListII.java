@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.ListNode;
 
@@ -33,11 +33,11 @@ public class AddTwoNumbersListListII {
     }
 
     private static void test(ListNode l1, ListNode l2, Integer[] expected) {
-        System.out.println("\n L1 :" + Printer.print(l1) + "\n L2 :" + Printer.print(l2) + "\n Expected :" + Printer.toString(expected));
+        System.out.println("\n L1 :" + GenericPrinter.print(l1) + "\n L2 :" + GenericPrinter.print(l2) + "\n Expected :" + GenericPrinter.toString(expected));
         AddTwoNumbersListListIIUsingDiff usingDiff = new AddTwoNumbersListListIIUsingDiff();
         AddTwoNumbersListListIIStack stack = new AddTwoNumbersListListIIStack();
 //        System.out.println("\n usingDiff :" + Printer.print(usingDiff.addTwoNumbers(l1, l2)));
-        System.out.println("\n Stack :" + Printer.print(stack.addTwoNumbers(l1, l2)));
+        System.out.println("\n Stack :" + GenericPrinter.print(stack.addTwoNumbers(l1, l2)));
     }
 
 

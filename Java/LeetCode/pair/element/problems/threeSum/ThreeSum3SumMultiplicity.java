@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
 import java.util.*;
@@ -53,7 +53,7 @@ public class ThreeSum3SumMultiplicity {
     }
 
     private static void test(int[] nums, int target, int expected) {
-        System.out.println("Input :" + Printer.toString(nums));
+        System.out.println("Input :" + GenericPrinter.toString(nums));
 
         IThreeSum3SumMultiplicity sorting = new ThreeSum3SumMultiplicitySorting();
         IThreeSum3SumMultiplicity counting = new ThreeSum3SumMultiplicityCounting();

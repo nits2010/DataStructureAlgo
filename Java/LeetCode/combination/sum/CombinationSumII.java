@@ -1,6 +1,6 @@
 package Java.LeetCode.combination.sum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -49,7 +49,7 @@ public class CombinationSumII {
     }
 
     private static void test(int[] candidates, int target, List<List<Integer>> expected) {
-        System.out.println("\n Candidates :" + Printer.toString(candidates) + " Target :" + target + " expected :" + expected);
+        System.out.println("\n Candidates :" + GenericPrinter.toString(candidates) + " Target :" + target + " expected :" + expected);
         CombinationSumIIDFS dfs = new CombinationSumIIDFS();
         CombinationSumIIReverseDFS reverseDFS = new CombinationSumIIReverseDFS();
         CombinationSumIIDFSV2 visitedDfs = new CombinationSumIIDFSV2();

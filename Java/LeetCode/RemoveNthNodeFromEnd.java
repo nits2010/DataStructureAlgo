@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.listToBST.ListBuilder;
 
@@ -39,8 +39,8 @@ public class RemoveNthNodeFromEnd {
     }
 
     private static void test(ListNode head, int n, List<Integer> expected) {
-        System.out.println(" \n Input :" + Printer.print(head) + " n :" + n + " expected :" + expected);
-        System.out.println("\n Fast slow :" + Printer.print(removeNthFromEnd(head, n)));
+        System.out.println(" \n Input :" + GenericPrinter.print(head) + " n :" + n + " expected :" + expected);
+        System.out.println("\n Fast slow :" + GenericPrinter.print(removeNthFromEnd(head, n)));
     }
 
     /**

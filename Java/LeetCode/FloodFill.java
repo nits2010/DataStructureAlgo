@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -47,10 +47,10 @@ public class FloodFill {
     }
 
     private static void test(int[][] image, int sr, int sc, int newColor, int[][] expectedImage) {
-        System.out.println("\nInput image :\n " + Printer.toString(image) + "(sr,sc)= (" + sc + "," + sc + ")\n Expected Image:\n" + Printer.toString(expectedImage));
+        System.out.println("\nInput image :\n " + GenericPrinter.toString(image) + "(sr,sc)= (" + sc + "," + sc + ")\n Expected Image:\n" + GenericPrinter.toString(expectedImage));
         FloodFillDFS dfs = new FloodFillDFS();
         final int[][] newImage = dfs.floodFill(image, sr, sc, newColor);
-        System.out.println("\n DFS new Image:\n" + Printer.toString(newImage));
+        System.out.println("\n DFS new Image:\n" + GenericPrinter.toString(newImage));
     }
 }
 

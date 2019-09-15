@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -36,7 +36,7 @@ public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public int maximumAbsoluteDifferenceTwoContiguousSubArrays(int a[]) {
-        Printer.print(a);
+        GenericPrinter.print(a);
 
 
         if (a == null || a.length == 0)

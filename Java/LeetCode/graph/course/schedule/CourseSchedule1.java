@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.graph.graph.types.DirectedGraph;
 import Java.graph.questions.AlienLanguageOrder;
 
@@ -54,7 +54,7 @@ public class CourseSchedule1 {
 
     private static void test(int numCourses, int[][] prerequisites, boolean expected) {
 
-        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + Printer.toString(prerequisites));
+        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + GenericPrinter.toString(prerequisites));
 
         ICourseSchedule bfs = new CourseScheduleITopologicalBFS();
         ICourseSchedule bfsOptimized = new CourseScheduleITopologicalBFSOptimized();

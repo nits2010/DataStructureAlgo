@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -54,7 +54,7 @@ public class ChocolateDistributionProblem {
     }
 
     private static void test(int[] chocolates, int m, int expected) {
-        System.out.println("\n chocolates :" + Printer.toString(chocolates) + " students :" + m);
+        System.out.println("\n chocolates :" + GenericPrinter.toString(chocolates) + " students :" + m);
         System.out.println("minimumDifference :" + minimumDifference(chocolates, m) + " expected :" + expected);
     }
 

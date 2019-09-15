@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -32,7 +32,7 @@ public class MinCostClimbingStairs {
     }
 
     private static void test(int[] cost, int expected) {
-        System.out.println("\n Input :" + Printer.toString(cost) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(cost) + " expected :" + expected);
 
         System.out.println("Left to right :" + minCostClimbingStairs(cost));
         System.out.println("Right to Left :" + minCostClimbingStairsFromBack(cost));

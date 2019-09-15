@@ -1,6 +1,6 @@
 package Java.LeetCode.listToBST;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 import java.util.Arrays;
@@ -55,13 +55,13 @@ public class ConvertSortedArrayBinarySearchTree {
     }
 
     private static void test(int[] nums, List<Integer> inOrderTraversal, int expectedHeight) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
 
         final TreeNode treeNode = sortedArrayToBST(nums);
 
         int height = height(treeNode);
 
-        System.out.println("\n Singly Inorder Traversal :" + Printer.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Singly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
     }
 
     /**

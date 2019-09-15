@@ -1,6 +1,6 @@
 package Java.LeetCode.adjacent.houserobber;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
@@ -48,7 +48,7 @@ public class HouseRobberIII {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\n Input " + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Input " + GenericPrinter.preOrder(root) + " expected :" + expected);
 
         HouseRobberIIIPostOrder postOrder = new HouseRobberIIIPostOrder();
         System.out.println("Max rob :" + postOrder.rob(root));

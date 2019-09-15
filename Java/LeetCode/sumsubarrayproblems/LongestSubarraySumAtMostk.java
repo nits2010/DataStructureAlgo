@@ -1,6 +1,6 @@
 package Java.LeetCode.sumsubarrayproblems;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -43,7 +43,7 @@ public class LongestSubarraySumAtMostk {
 
 
         System.out.println("\n \n Input k: " + k);
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         int maxSize = 0;
 
         int sum = 0;

@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -20,8 +20,8 @@ public class ReplaceGreatestElementOnRightSide {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("\n input :" + Printer.toString(nums) + " expected :" + Printer.toString(expected));
-        System.out.println("\n Obtained :" + Printer.toString(greatestElementOnRightSide(nums)));
+        System.out.println("\n input :" + GenericPrinter.toString(nums) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Obtained :" + GenericPrinter.toString(greatestElementOnRightSide(nums)));
     }
 
     /**

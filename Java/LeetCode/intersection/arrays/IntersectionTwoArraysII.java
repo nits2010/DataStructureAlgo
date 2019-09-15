@@ -1,6 +1,6 @@
 package Java.LeetCode.intersection.arrays;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -51,10 +51,10 @@ public class IntersectionTwoArraysII {
     }
 
     private static void test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\n Input; nums1 :" + Printer.toString(nums1) + " nums2 :" + Printer.toString(nums2) + " expected :" + Printer.toString(expected));
-        System.out.println("Map   :" + Printer.toString(IntersectionTwoArraysIIMap.intersect(nums1, nums2)));
-        System.out.println("Sort 1  :" + Printer.toString(IntersectionTwoArraysIISort.intersect(nums1, nums2)));
-        System.out.println("Linear  search :" + Printer.toString(IntersectionTwoArraysIILinear.intersect(nums1, nums2)));
+        System.out.println("\n Input; nums1 :" + GenericPrinter.toString(nums1) + " nums2 :" + GenericPrinter.toString(nums2) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("Map   :" + GenericPrinter.toString(IntersectionTwoArraysIIMap.intersect(nums1, nums2)));
+        System.out.println("Sort 1  :" + GenericPrinter.toString(IntersectionTwoArraysIISort.intersect(nums1, nums2)));
+        System.out.println("Linear  search :" + GenericPrinter.toString(IntersectionTwoArraysIILinear.intersect(nums1, nums2)));
 
     }
 

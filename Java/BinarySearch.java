@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -17,7 +17,7 @@ public class BinarySearch {
     }
 
     private static void test(int[] nums, int target, int expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " target :" + target + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " target :" + target + " expected :" + expected);
         System.out.println("binary search 1:" + BinarySearchOverflow.binarySearch1(nums, target));
         System.out.println("binary search Recursive 1:" + BinarySearchOverflow.binarySearchRecursive1(nums, target));
         System.out.println("binary search 2:" + BinarySearchNoOverflow.binarySearch2(nums, target));

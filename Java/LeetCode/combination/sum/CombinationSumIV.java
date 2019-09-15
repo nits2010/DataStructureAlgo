@@ -1,6 +1,6 @@
 package Java.LeetCode.combination.sum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -53,7 +53,7 @@ public class CombinationSumIV {
     }
 
     private static void test(int[] candidates, int target, int expected) {
-        System.out.println("\n Candidates :" + Printer.toString(candidates) + " Target :" + target + " expected :" + expected);
+        System.out.println("\n Candidates :" + GenericPrinter.toString(candidates) + " Target :" + target + " expected :" + expected);
         CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS combinationSumIDFS = new CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS();
         CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS combinationSumIVDFSV2 = new CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS();
         CombinationSumIVBacktracking.CombinationSumIVBacktrackingMemo memo = new CombinationSumIVBacktracking.CombinationSumIVBacktrackingMemo();

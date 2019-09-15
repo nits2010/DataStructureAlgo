@@ -1,7 +1,6 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.Printer;
-import Java.graph.graph.types.Edges;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -59,7 +58,7 @@ public class MaxAreaIsland {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Grid:\n" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\n Grid:\n" + GenericPrinter.toString(grid) + " expected :" + expected);
         System.out.println("Obtained :" + maxAreaOfIsland(grid));
     }
 

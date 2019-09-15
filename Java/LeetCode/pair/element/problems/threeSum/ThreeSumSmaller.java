@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -35,7 +35,7 @@ public class ThreeSumSmaller {
     }
 
     private static void test(int[] nums, int target) {
-        System.out.println("Input :" + Printer.toString(nums));
+        System.out.println("Input :" + GenericPrinter.toString(nums));
 
         ThreeSumSmallerSorting sorting = new ThreeSumSmallerSorting();
         System.out.println("Sorting " + sorting.threeSumSmaller(nums, target));

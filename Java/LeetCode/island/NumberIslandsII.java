@@ -1,7 +1,6 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.Printer;
-import javafx.util.Pair;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -64,7 +63,7 @@ public class NumberIslandsII {
     }
 
     private static void test(int m, int n, int[][] positions) {
-        System.out.println("\nm : " + m + " n: " + n + " position :" + Printer.toString(positions));
+        System.out.println("\nm : " + m + " n: " + n + " position :" + GenericPrinter.toString(positions));
         NumberIslandsIIBuildAndCount buildAndCount = new NumberIslandsIIBuildAndCount();
         NumberIslandsIIUnionFind unionFind = new NumberIslandsIIUnionFind();
 

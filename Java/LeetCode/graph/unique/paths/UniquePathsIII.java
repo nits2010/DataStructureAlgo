@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.unique.paths;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -46,11 +46,11 @@ public class UniquePathsIII {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Input grid :" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\n Input grid :" + GenericPrinter.toString(grid) + " expected :" + expected);
         final UniquePathsIIIBacktracking backtracking = new UniquePathsIIIBacktracking();
         UniquePathsIIITopDownDP topDownDP = new UniquePathsIIITopDownDP();
-        System.out.println("\n Backtracking dfs :" + backtracking.uniquePathsIII(Printer.copyOf(grid)));
-        System.out.println("\n topDownDP dfs :" + topDownDP.uniquePathsIII(Printer.copyOf(grid)));
+        System.out.println("\n Backtracking dfs :" + backtracking.uniquePathsIII(GenericPrinter.copyOf(grid)));
+        System.out.println("\n topDownDP dfs :" + topDownDP.uniquePathsIII(GenericPrinter.copyOf(grid)));
     }
 }
 

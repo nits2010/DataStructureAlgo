@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -33,7 +33,7 @@ public class MaximumDifferenceInIndex {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected :" + expected);
 
         MaximumDifferenceInIndexBruteForce bruteForce = new MaximumDifferenceInIndexBruteForce();
         MaximumDifferenceInIndexPrefixSuffixArray prefixSuffixArray = new MaximumDifferenceInIndexPrefixSuffixArray();

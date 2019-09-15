@@ -1,6 +1,6 @@
 package Java.LeetCode.Palindroms;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -89,8 +89,8 @@ class ShortestPalindromeAppendsEndKMP {
         String joined = rev + "$" + s;
 
         int prefixWhichIsAlsoSuffix[] = prefixWhichIsAlsoSuffix(joined);
-        System.out.println(Printer.toString(joined.toCharArray()));
-        System.out.println(Printer.toString(prefixWhichIsAlsoSuffix));
+        System.out.println(GenericPrinter.toString(joined.toCharArray()));
+        System.out.println(GenericPrinter.toString(prefixWhichIsAlsoSuffix));
 
         int lengthOfLongestPrefixAlsoSuffix = prefixWhichIsAlsoSuffix[joined.length() - 1];
 

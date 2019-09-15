@@ -1,6 +1,6 @@
 package Java.LeetCode.adjacent.houserobber;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -58,7 +58,7 @@ public class MaximumSumNoTwoElementsAreAdjacent {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " Expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " Expected :" + expected);
 
         HouseRobber.MaximumSumNoTwoElementsAreAdjacentRecursive recursive = new HouseRobber.MaximumSumNoTwoElementsAreAdjacentRecursive();
         HouseRobber.MaximumSumNoTwoElementsAreAdjacentDPTopDown dpTopDown = new HouseRobber.MaximumSumNoTwoElementsAreAdjacentDPTopDown();

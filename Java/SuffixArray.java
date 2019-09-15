@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -24,9 +24,9 @@ public class SuffixArray {
 
 
     private static void test(String text, int expected[]) {
-        System.out.println("\nText :" + text + " Expected " + Printer.toString(expected));
-        System.out.println(Printer.toString(suffixArrayPolynomial(text)));
-        System.out.println(Printer.toString(suffixArray(text)));
+        System.out.println("\nText :" + text + " Expected " + GenericPrinter.toString(expected));
+        System.out.println(GenericPrinter.toString(suffixArrayPolynomial(text)));
+        System.out.println(GenericPrinter.toString(suffixArray(text)));
     }
 
     public static int[] suffixArrayPolynomial(String text) {

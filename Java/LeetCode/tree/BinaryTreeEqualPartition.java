@@ -1,10 +1,9 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -70,7 +69,7 @@ public class BinaryTreeEqualPartition {
     }
 
     private static void test(TreeNode root, boolean expected) {
-        System.out.println("\n Input :" + Printer.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.preOrder(root) + " expected :" + expected);
         EqualTreePartitionFlatAndCount flatAndCount = new EqualTreePartitionFlatAndCount();
         EqualTreePartitionFlatAndCount2 flatAndCount2 = new EqualTreePartitionFlatAndCount2();
         System.out.println("flatAndCount : " + flatAndCount.checkEqualTree(root));

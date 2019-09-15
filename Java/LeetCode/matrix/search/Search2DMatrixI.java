@@ -1,6 +1,6 @@
 package Java.LeetCode.matrix.search;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 
 /**
@@ -57,7 +57,7 @@ public class Search2DMatrixI {
     }
 
     private static void test(int[][] mat, int target, boolean expected) {
-        System.out.println("\n Input :" + Printer.toString(mat) + " target : " + target + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(mat) + " target : " + target + " expected :" + expected);
         System.out.println(" obtained :" + searchMatrix(mat, target));
     }
 

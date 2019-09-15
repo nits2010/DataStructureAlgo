@@ -1,6 +1,6 @@
 package Java.LeetCode.sumsubarrayproblems;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -36,7 +36,7 @@ public class LongestSubArraySumK {
         if (nums == null || nums.length == 0)
             return Collections.EMPTY_LIST;
 
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         /**
          * This will tell at what index(value) we saw a sum(key)
          */

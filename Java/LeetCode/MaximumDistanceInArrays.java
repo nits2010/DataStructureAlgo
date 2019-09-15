@@ -1,7 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
-import Java.companyWise.GroupOn.MathHomework;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -38,7 +37,7 @@ public class MaximumDistanceInArrays {
     }
 
     private static void test(int[][] list, int expected) {
-        System.out.println("\n Input :" + Printer.toString(list) + " expected :" + expected + "\n");
+        System.out.println("\n Input :" + GenericPrinter.toString(list) + " expected :" + expected + "\n");
 
         MaximumDistanceInArraysBruteForce bruteForce = new MaximumDistanceInArraysBruteForce();
         MaximumDistanceInArraysBruteForceOptimized bruteForceOptimized = new MaximumDistanceInArraysBruteForceOptimized();

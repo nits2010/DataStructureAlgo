@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 /**
@@ -63,7 +63,7 @@ public class BinaryTreeUpsideDown {
     }
 
     private static void test(Integer[] tree, Integer[] expected) {
-        System.out.println("\n Given tree " + Printer.toString(tree) + " expected :" + Printer.toString(expected));
+        System.out.println("\n Given tree " + GenericPrinter.toString(tree) + " expected :" + GenericPrinter.toString(expected));
 
         System.out.println("Recursive :");
         test(new BinaryTreeUpsideDownRecursive(), TreeBuilder.arrayToTree(tree));
@@ -75,7 +75,7 @@ public class BinaryTreeUpsideDown {
 
     private static void test(IBinaryTreeUpsideDown impl, TreeNode root) {
         final TreeNode flipped = impl.upsideDownBinaryTree(root);
-        System.out.println(" Obtained :" + Printer.preOrder(flipped));
+        System.out.println(" Obtained :" + GenericPrinter.preOrder(flipped));
 
     }
 }

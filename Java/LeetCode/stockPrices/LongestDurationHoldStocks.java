@@ -1,6 +1,6 @@
 package Java.LeetCode.stockPrices;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.companyWise.Amazon.MaximumDifferenceInIndex;
 
 /**
@@ -36,7 +36,7 @@ public class LongestDurationHoldStocks {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " expected :" + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected :" + expected);
 
         LongestDurationHoldStocksBruteForce bruteForce = new LongestDurationHoldStocksBruteForce();
         LongestDurationHoldStocksPrefixSuffixArray prefixSuffixArray = new LongestDurationHoldStocksPrefixSuffixArray();

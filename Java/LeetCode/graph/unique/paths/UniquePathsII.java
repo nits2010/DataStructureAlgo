@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.unique.paths;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -66,7 +66,7 @@ public class UniquePathsII {
     }
 
     private static void test(int[][] maze, int expected) {
-        System.out.println("\n grid :\n" + Printer.toString(maze) + " expected :" + expected);
+        System.out.println("\n grid :\n" + GenericPrinter.toString(maze) + " expected :" + expected);
 
         UniquePathsIIBacktracking backtracking = new UniquePathsIIBacktracking();
         UniquePathIIDPTopDown pathIIDPTopDown = new UniquePathIIDPTopDown();

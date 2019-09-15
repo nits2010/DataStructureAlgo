@@ -1,6 +1,6 @@
 package Java.LeetCode.graph;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -57,7 +57,7 @@ public class CherryPickup {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n grid :\n" + Printer.toString(grid) + " expected :" + expected);
+        System.out.println("\n grid :\n" + GenericPrinter.toString(grid) + " expected :" + expected);
         CherryPickupDPBottomUp bottomUp = new CherryPickupDPBottomUp();
         System.out.println(" Bottom up:" + bottomUp.cherryPickup(grid));
     }

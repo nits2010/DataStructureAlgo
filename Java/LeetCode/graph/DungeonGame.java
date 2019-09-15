@@ -1,6 +1,6 @@
 package Java.LeetCode.graph;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -67,7 +67,7 @@ public class DungeonGame {
     }
 
     private static void test(int[][] dungeon, int expected) {
-        System.out.println("\n Input :\n" + Printer.toString(dungeon) + " expected :" + expected);
+        System.out.println("\n Input :\n" + GenericPrinter.toString(dungeon) + " expected :" + expected);
         DungeonGameDPBack dpBack = new DungeonGameDPBack();
         DungeonGameDPBackSpaceOptimized dpBackSpaceOptimized = new DungeonGameDPBackSpaceOptimized();
         DungeonGameDPBackTopDown dungeonGameDPBackRecursive = new DungeonGameDPBackTopDown();

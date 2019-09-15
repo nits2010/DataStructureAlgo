@@ -1,6 +1,6 @@
 package Java.LeetCode.adjacent.houserobber;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -57,7 +57,7 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\nInput :" + Printer.toString(nums) + " Expected :" + expected);
+        System.out.println("\nInput :" + GenericPrinter.toString(nums) + " Expected :" + expected);
 
         System.out.println("Idea 1: Two array DPS :" + HouseRobberIIDP.rob(nums));
         System.out.println("Idea 2: Two array DPS :" + HouseRobberIIDP.rob(nums));

@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -36,9 +36,9 @@ public class FindFirstLastPositionElementSortedArray {
     }
 
     private static void test(int[] nums, int target, int[] expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " target :" + target + " expected :" + Printer.toString(expected));
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " target :" + target + " expected :" + GenericPrinter.toString(expected));
         BinarySearchFirstLastIndex firstLastIndex = new BinarySearchFirstLastIndex();
-        System.out.println("Binary search :" + Printer.toString(firstLastIndex.searchRange(nums, target)));
+        System.out.println("Binary search :" + GenericPrinter.toString(firstLastIndex.searchRange(nums, target)));
     }
 }
 

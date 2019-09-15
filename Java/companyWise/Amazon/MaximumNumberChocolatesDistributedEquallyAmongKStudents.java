@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +39,7 @@ public class MaximumNumberChocolatesDistributedEquallyAmongKStudents {
     }
 
     private static void test(int[] chocolates, int k, int expected) {
-        System.out.println("Chocolates :" + Printer.toString(chocolates) + " students :" + k);
+        System.out.println("Chocolates :" + GenericPrinter.toString(chocolates) + " students :" + k);
         System.out.println("Max  :" + maximumNumberOfChocolates(chocolates, k) + " expected :" + expected);
     }
 
