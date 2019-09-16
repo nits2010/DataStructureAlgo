@@ -7,6 +7,7 @@ import Java.HelpersToPrint.GenericPrinter;
  * Date: 16/09/19
  * Description: https://leetcode.com/problems/minimize-max-distance-to-gas-station/
  * http://leetcode.liangjiateng.cn/leetcode/minimize-max-distance-to-gas-station/description
+ * https://www.lintcode.com/problem/minimize-max-distance-to-gas-station/note
  * 774.Minimize Max Distance to Gas Station [hard]
  * On a horizontal number line, we have gas stations at positions stations[0], stations[1], ..., stations[N-1], where N = stations.length.
  * <p>
@@ -67,6 +68,8 @@ public class MinimizeMaxDistanceGasStation {
  * (cost of adding p stations between i to i-1} = (stations[i] - stations[i-1])/(p+1) ; means divide the space between i and i-1 in p equal parts.
  * <p>
  * M[i-1][s-p] : means what was the cost when having 0 to s stations in earlier.
+ * <p>
+ * Complexity: O(n*k^2) / O (n*k)
  */
 class MinimizeMaxDistanceGasStationDPBottomUp {
     public double minmaxGasDist(int[] stations, int k) {
@@ -89,10 +92,13 @@ class MinimizeMaxDistanceGasStationDPBottomUp {
          *
          */
 
+        //O(k)
         for (int s = 1; s <= k; s++) {
+            //O(n)
             for (int i = 1; i < N; i++) {
 
                 double min = Integer.MAX_VALUE;
+                //O(k)
                 for (int p = 0; p <= s; p++) {
                     double a = minDistance[i - 1][s - p];
                     double b = (double) (stations[i] - stations[i - 1]) / (p + 1);
@@ -126,13 +132,14 @@ class MinimizeMaxDistanceGasStationDPBottomUp {
  * case 2: if require less, then we need to reduce the search space so high = mid
  * case 3: we found one potetial solution, try to reduce it more so that we can minimize the maximum distance.
  * <p>
- * Complexity: This verification algorithm runs at O(n), where n is the length of the stations array. T
+ * Complexity:  O( n * max * log (max)) but max is limit  to [0, 10^8] hence O(n)
+ * This verification algorithm runs at O(n), where n is the length of the stations array. T
  * his is acceptable if we can walk the search space very efficiently (which can be done at the order of O(log(max/step)),
  * with step = 10^-6). In particular, this is much faster than the straightforward O(Klogn) solution where we add the stations one by one in a greedy manner (i.e.,
  * always reduce the current maximum distance first), given that K could be orders of magnitude larger than n (note this greedy algorithm can be optimized to run at O(nlogn),
  * <p>
  * Your submission beats 92.78% Submissions!
- *
+ * <p>
  * Priority queue solution: https://www.youtube.com/watch?v=C_OdHoPJqLQ
  */
 class MinimizeMaxDistanceGasStationBinarySearch {
@@ -144,10 +151,13 @@ class MinimizeMaxDistanceGasStationBinarySearch {
         final int N = stations.length;
 
         double low = 0;
-        double high = findMax(stations); //stations[stations.length - 1] - stations[0];
+        double high = stations[stations.length - 1] - stations[0];
         double eps = 1e-6;
-        while ((low + eps) < high) {
+
+        //O( n* max * log (max))
+        while ((low + eps) < high) { //O( max * log (max))
             double mid = (low + high) / 2;
+
             if (isPossible(stations, k, mid)) {
                 high = mid;
             } else
@@ -157,20 +167,13 @@ class MinimizeMaxDistanceGasStationBinarySearch {
 
     }
 
+    //O(n)
     private boolean isPossible(int[] stations, int k, double mid) {
         int requireStations = 0;
         for (int i = 1; i < stations.length; i++) {
             requireStations += (int) Math.abs((stations[i] - stations[i - 1]) / mid);
         }
         return requireStations <= k;
-    }
-
-    private double findMax(int[] stations) {
-        double max = 0;
-        for (int i = 1; i < stations.length; i++)
-            max = Math.max(max, stations[i] - stations[i - 1]);
-
-        return max;
     }
 
 
