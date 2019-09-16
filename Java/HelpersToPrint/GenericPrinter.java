@@ -406,6 +406,14 @@ public class GenericPrinter {
                 .collect(Collectors.toList());
     }
 
+
+    public static <I, E> void inputPrint(I[] input, E expected, String inputString) {
+        System.out.println("-----------");
+        System.out.println(inputString + ": " + GenericPrinter.toString(input));
+        System.out.println("Expected :" + expected);
+
+    }
+
     public static <I, E> void inputPrint(I[] input, E[] expected, String inputString) {
         System.out.println("-----------");
         System.out.println(inputString + ": " + GenericPrinter.toString(input));

@@ -70,8 +70,8 @@ class SolutionPainterPartitionProblem {
      * <p>
      * M[i][k] = Min {
      * *                 Max {
-     * *                    M[j][k-1] where j varies from 0<= j <i
-     * *                        + Sum [ board[m] ; m from j to n-1 ]
+     * *                    M[j][k-1] where j varies from 1<= j <=i
+     * *                        , Sum [ board[m] ; m from j to n-1 ]
      * **                    }
      * * }
      *
@@ -79,7 +79,7 @@ class SolutionPainterPartitionProblem {
      * @param painters
      * @return O(k * n ^ 2)
      */
-    int miinCost(int board[], int painters) {
+    int minCost(int[] board, int painters) {
 
         if (null == board || board.length == 0)
             return 0;
@@ -88,7 +88,7 @@ class SolutionPainterPartitionProblem {
         if (n == 1)
             return board[0];
 
-        int sum[] = new int[n + 1];
+        int[] sum = new int[n + 1];
         sum[0] = 0;
 
         for (int i = 1; i <= n; i++) {
@@ -102,7 +102,7 @@ class SolutionPainterPartitionProblem {
             return sum[n];
 
 
-        int cost[][] = new int[n + 1][painters + 1]; //top row and left column is 0; no board , no painters
+        int[][] cost = new int[n + 1][painters + 1]; //top row and left column is 0; no board , no painters
 
         //cost of painting n boards with 1 painters
         for (int i = 1; i <= n; i++) {
@@ -117,8 +117,8 @@ class SolutionPainterPartitionProblem {
         /**
          *  * M[i][k] = Min {
          *      * *                 Max {
-         *      * *                    M[j][k-1] where j varies from 0<= j <i
-         *      * *                        + Sum [ board[m] ; m from j to n-1 ]
+         *      * *                    M[j][k-1] where j varies from 1<= j <=i
+         *      * *                        , Sum [ board[m] ] ; m from j to n-1 ]
          *      * **                    }
          *      * * }
          */
@@ -203,12 +203,12 @@ class SolutionPainterPartitionProblem {
         int currentUnits = 0;
         int requiredPainters = 1;
 
-        for (int i = 0; i < board.length; i++) {
+        for (int value : board) {
 
-            if (board[i] > cost)
+            if (value > cost)
                 return Integer.MAX_VALUE;
 
-            currentUnits += board[i];
+            currentUnits += value;
 
             if (currentUnits > cost) {
                 requiredPainters++;
