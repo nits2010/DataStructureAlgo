@@ -21,10 +21,10 @@ public class OptimalGameStrategy {
 
     public static void main(String args[]) {
 
-        int a[] = {5, 3, 7, 10};
+        int[] a = {5, 3, 7, 10};
         System.out.println(maxOG(a));
 
-        int b[] = {8, 15, 3, 7};
+        int[] b = {8, 15, 3, 7};
         System.out.println(maxOG(b));
 
 
@@ -35,7 +35,7 @@ public class OptimalGameStrategy {
             return 0;
 
         int n = a.length;
-        int game[][] = new int[n + 1][n + 1];
+        int[][] game = new int[n + 1][n + 1];
 
 
         for (int i = 1; i <= n; i++)

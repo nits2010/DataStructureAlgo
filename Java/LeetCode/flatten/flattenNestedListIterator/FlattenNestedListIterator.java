@@ -321,7 +321,7 @@ class NestedIteratorUsingStack implements Iterator<Integer> {
         stack = new Stack<>();
 
         /**
-         * since we need to show from left to right direction, simply push all the elements in shortestPath order initially
+         * since we need to show from left to right direction, simply push all the elements in reverse order initially
          */
         for (int i = nestedList.size() - 1; i >= 0; i--)
             stack.push(nestedList.get(i));

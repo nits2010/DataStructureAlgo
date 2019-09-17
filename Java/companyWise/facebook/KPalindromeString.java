@@ -162,16 +162,16 @@ class KPalindromeStringUsingLPS {
 }
 
 /**
- * We can think this problem as transforming the given string to its shortestPath (to make palindrome) by
+ * We can think this problem as transforming the given string to its reverse (to make palindrome) by
  * removing at most k characters. If we achieve this then we can make its k-palindrome.
  * <p>
- * If we find out how many chars we may need to delete from given string "s" to make it shortestPath string "rs",
+ * If we find out how many chars we may need to delete from given string "s" to make it reverse string "rs",
  * then we'll be able to tell this is k-palindrome
  * <p>
  * Looking closely it look like Edit distance problem where only deletion is allowed.
  * If we find out, what is the cost for converting "s" to "rs" .
  * <p>
- * Since, it may possible that given string "s" may not able able to convert to its shortestPath string "rs", then we need to delete at
+ * Since, it may possible that given string "s" may not able able to convert to its reverse string "rs", then we need to delete at
  * most N character from "s" and delete N character from "rs" to make them equal.
  * so total
  * 2*N character;

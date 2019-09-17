@@ -10,7 +10,7 @@ import java.util.*;
  * Description:https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/
  * <p>
  * Given a directed graph and a source node and destination node, we need to find how many edges we need to
- * shortestPath in order to make at least 1 path from source node to destination node.
+ * reverse in order to make at least 1 path from source node to destination node.
  */
 public class ReverseGearReverseEdgesInGraphPath {
 
@@ -50,12 +50,12 @@ public class ReverseGearReverseEdgesInGraphPath {
 
 /**
  * This problem can be solved assuming a different version of the given graph.
- * In this version we make a shortestPath edge corresponding to every edge and we assign that a weight 1 and assign a weight 0 to original edge.
+ * In this version we make a reverse edge corresponding to every edge and we assign that a weight 1 and assign a weight 0 to original edge.
  * After this modification above graph looks something like below,
  * <p>
  * <p>
  * Now we can see that we have modified the graph in such a way that, if we move towards original edge, no cost is incurred,
- * but if we move toward shortestPath edge 1 cost is added. So if we apply Dijkstra’s shortest path on this modified graph from given source,
+ * but if we move toward reverse edge 1 cost is added. So if we apply Dijkstra’s shortest path on this modified graph from given source,
  * then that will give us minimum cost to reach from source to destination i.e. minimum edge reversal from source to destination.
  *
  * {@link Java.graph.questions.shortest.path.DijkstraShortestPath}

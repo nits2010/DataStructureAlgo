@@ -69,7 +69,7 @@ class RemoveAllAdjacentDuplicatesStringUsingStack implements IRemoveAllAdjacentD
             return s;
 
         Stack<Character> stack = new Stack<>();
-        char str[] = s.toCharArray();
+        char[] str = s.toCharArray();
         stack.push(str[0]);
 
         int i = 1;

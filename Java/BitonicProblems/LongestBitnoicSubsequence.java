@@ -105,7 +105,7 @@ public class LongestBitnoicSubsequence {
         return max;
     }
 
-    // function to shortestPath an array
+    // function to reverse an array
     public static void reveresArr(int arr[]) {
         int i = 0;
         int j = arr.length - 1;

@@ -57,7 +57,7 @@ class SuffixArrayNLogN {
              * First rank is defined by how far the character is from 'a'
              * Second rank is defined by how far the character is from 'a' and if there is no adjacent char then its -1
              */
-            int rank[] = new int[2];
+            int[] rank = new int[2];
         }
 
         int n = text.length();
@@ -72,11 +72,9 @@ class SuffixArrayNLogN {
          *  3       ana                0              13
          *  4       na                 13             0
          *  5       a                  0             -1
-         */
-        /**
          * This array will be use to assign the next rank
          */
-        int suffixRank[] = new int[n];
+        int[] suffixRank = new int[n];
 
         for (int i = 0; i < n; i++) {
 
@@ -98,10 +96,6 @@ class SuffixArrayNLogN {
         /**
          * We first sort all suffixes according to first character, then according to first 2 characters,
          * then first 4 characters and so on while the number of characters to be considered is smaller than 2n
-         */
-
-
-        /**
          * After this sorting, we have sort the data based on first 2 character.
          *
          * Sort suffixes based on rank;
@@ -114,8 +108,6 @@ class SuffixArrayNLogN {
          *  0        banana             1               0
          *  2        nana               13              0
          *  4        na                 13              0
-         *
-         *
          */
         Arrays.sort(suffixes, suffixComparator);
 
@@ -123,8 +115,6 @@ class SuffixArrayNLogN {
          * Sort data based on 4 char , than 8 char ....
          * Iteratively assign rank and sort of every 2^(i). where 2<=i<=log(n)
          */
-
-
         for (int k = 4; k < 2 * n; k *= 2) {
 
             /**
@@ -193,7 +183,7 @@ class SuffixArrayNLogN {
 
         }
 
-        int suffixArray[] = new int[n];
+        int[] suffixArray = new int[n];
         int i = 0;
 
         for (Suffix s : suffixes)
@@ -229,7 +219,7 @@ class SuffixArrayPolynomial {
 
         Arrays.sort(suffixes, Comparator.comparing(o -> o.suffix));
 
-        int suffixArray[] = new int[n];
+        int[] suffixArray = new int[n];
         int i = 0;
 
         for (Suffix s : suffixes)

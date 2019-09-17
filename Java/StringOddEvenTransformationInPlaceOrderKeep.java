@@ -1,5 +1,7 @@
 package Java;
 
+import Java.HelpersToPrint.GenericPrinter;
+
 import java.util.Arrays;
 
 /**
@@ -36,7 +38,7 @@ import java.util.Arrays;
 public class StringOddEvenTransformationInPlaceOrderKeep {
 
 
-    public static void main(String arg[]) {
+    public static void main(String[] arg) {
         String input = "a1b2c3d4e5f6g7h8i9";
 
 //        String[] in = {"a", "1", "b", "2", "c", "3", "d", "4", "e", "5", "f", "6", "g", "7", "h", "8", "i", "9", "j", "10", "k", "11"};
@@ -48,31 +50,29 @@ public class StringOddEvenTransformationInPlaceOrderKeep {
 
     private static String[] transform(String[] input) {
 
-        String str[] = input;
+        String[] str = GenericPrinter.copyOf(input);
         int shift = 0;
         int length = input.length;
-        int partitionLength;
         int currentStringLength;
 
         int leftOverLength = length;
 
         //Iterate over string, till every partition transformed
         while (leftOverLength > 0) {
-            partitionLength = getPartitionLength(leftOverLength);
-            currentStringLength = partitionLength(partitionLength);
+            currentStringLength = partitionLength(leftOverLength);
             leftOverLength = leftOverLength - currentStringLength;
 
 
-            //Apply cycle leader algo
+            //Apply cycle leader algorithm
             cycleLeaderAlgorithm(str, shift, currentStringLength);
 
             //Reverse the second half of first substring
             reverse(str, shift / 2, shift - 1);
 
-            //shortestPath the first half of second substring
+            //reverse the first half of second substring
             reverse(str, shift, shift + currentStringLength / 2 - 1);
 
-            //shortestPath the second half of first substring and first half of second substring toegether
+            //reverse the second half of first substring and first half of second substring toegether
             reverse(str, shift / 2, shift + currentStringLength / 2 - 1);
 
             shift += currentStringLength;
@@ -84,21 +84,16 @@ public class StringOddEvenTransformationInPlaceOrderKeep {
 
     }
 
-    private static void swap(String input[], int firstIndex, int secondIndex) {
-        String temp = input[firstIndex];
-        input[firstIndex] = input[secondIndex];
-        input[secondIndex] = temp;
+    static int partitionLength(int length) {
+        int k = 0;
+
+        while (Math.pow(3, k) + 1 <= length)
+            k++;
+
+        return (int) Math.pow(3, k - 1) + 1;
     }
 
-    private static void reverse(String in[], int from, int to) {
 
-        while (from < to) {
-            swap(in, from, to);
-            from++;
-            to--;
-        }
-
-    }
 
     private static void cycleLeaderAlgorithm(String[] str, int shift, int partitionLength) {
 
@@ -131,17 +126,21 @@ public class StringOddEvenTransformationInPlaceOrderKeep {
 
     }
 
-    static int partitionLength(int partitionLength) {
-        return (int) Math.pow(3, partitionLength) + 1;
+    private static void swap(String[] input, int firstIndex, int secondIndex) {
+        String temp = input[firstIndex];
+        input[firstIndex] = input[secondIndex];
+        input[secondIndex] = temp;
     }
 
-    static int getPartitionLength(int length) {
+    private static void reverse(String[] in, int from, int to) {
 
-        int k = 0;
+        while (from < to) {
+            swap(in, from, to);
+            from++;
+            to--;
+        }
 
-        while (Math.pow(3, k) + 1 <= length)
-            k++;
-
-        return k - 1;
     }
+
+
 }

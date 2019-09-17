@@ -240,8 +240,8 @@ class SolutionPairOfPalindromeUsingTrie {
     }
 
     /**
-     * Build the trie of given words s.t. we insert the word in trie in shortestPath order as well as check does it contains a substring which is palindrome if so, note its id
-     * then search each word in same manner (without shortestPath)
+     * Build the trie of given words s.t. we insert the word in trie in reverse order as well as check does it contains a substring which is palindrome if so, note its id
+     * then search each word in same manner (without reverse)
      *
      * @param list
      * @return
@@ -286,9 +286,9 @@ class SolutionUsingHash {
      * 2. B is shorter then A and AB is palindrome;
      * <p>
      * Continuing above example;
-     * A = xyxabc  and B = cba[ its sub-part of A "abc" shortestPath "cba" and shorter than A and present in words list]
+     * A = xyxabc  and B = cba[ its sub-part of A "abc" reverse "cba" and shorter than A and present in words list]
      * 1. len(B) < len(A) and cbaxyxabc which is a palindrome
-     * A = abc  and B = cba [ its sub-part of A and equal to A in shortestPath and present in words list ]
+     * A = abc  and B = cba [ its sub-part of A and equal to A in reverse and present in words list ]
      * len(B) = len(A) and abccba is palindrome
      * <p>
      * A = abcxyx  and B = cba

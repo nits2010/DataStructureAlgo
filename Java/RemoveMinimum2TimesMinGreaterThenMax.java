@@ -144,7 +144,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
         if (low >= high)
             return 0;
 
-        int minMax[] = minMaxInRange(a, low, high);
+        int[] minMax = minMaxInRange(a, low, high);
 
         //Current array is at right portion
         if (minMax[0] * 2 > minMax[1])
@@ -158,7 +158,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
 
     }
 
-    static int[] minMaxInRange(int a[], int low, int high) {
+    static int[] minMaxInRange(int[] a, int low, int high) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         while (low <= high) {
@@ -226,7 +226,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxDP {
         if (memo[low][high] != -1)
             return memo[low][high];
 
-        int minMax[] = minMaxInRange(a, low, high); //O(n)
+        int[] minMax = minMaxInRange(a, low, high); //O(n)
 
         //Current array is at right portion
         if (minMax[0] * 2 > minMax[1])

@@ -85,6 +85,6 @@ public class SumString {
 
     private static boolean sumString(String s1, String s2, String s3) {
 
-        return (Integer.valueOf(s1) + Integer.valueOf(s2) == Integer.valueOf(s3));
+        return (Integer.parseInt(s1) + Integer.parseInt(s2) == Integer.parseInt(s3));
     }
 }
