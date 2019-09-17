@@ -24,14 +24,14 @@ package Java;
  */
 public class WordWrapProblem {
 
-    public static void main(String args[]) {
-        int l[] = {3, 2, 2, 5};
+    public static void main(String[] args) {
+        int[] l = {3, 2, 2, 5};
         int maxWidth = 6;
 
         int cost = wordWrap(l, maxWidth);
         System.out.println(cost);
 
-        int l2[] = {4, 2, 2, 7,2,4,1,14};
+        int[] l2 = {4, 2, 2, 7,2,4,1,14};
         int maxWidth2 = 16;
 
         int cost2 = wordWrap(l2, maxWidth2);
@@ -52,7 +52,7 @@ public class WordWrapProblem {
         // extra[i][j] : W - line[i]; ( i == j ); if this is a single word, try to put this word. If possible it will be positive value otherwise a negative value denotes not possible
         // extra[i][j] : extra[i][j-1]-line[j-1] - 1; 1 for space between word
 
-        int extra[][] = new int[n + 1][n + 1];
+        int[][] extra = new int[n + 1][n + 1];
 
         for (int i = 1; i <= n; i++) {
             extra[i][i] = maxWidth - l[i - 1]; //fill diagonally
@@ -70,7 +70,7 @@ public class WordWrapProblem {
         // lineCost[i][j] : 0 if j == n && extra[i][j] >=0 (means all are placed)
         // lineCost[i][j] : extra[i][j]^3
 
-        int lineCost[][] = new int[n + 1][n + 1];
+        int[][] lineCost = new int[n + 1][n + 1];
 
         for (int i = 1; i <= n; i++) {
 
@@ -91,8 +91,8 @@ public class WordWrapProblem {
         // cost[j] = 0 if j=0
         //           min ( cost[i-1] + line[i][j] ) if cost[i-1]!=max & line[i][j] != max
 
-        int cost[] = new int[n + 1];
-        int p[] = new int[n + 1];
+        int[] cost = new int[n + 1];
+        int[] p = new int[n + 1];
 
         cost[0] = 0; //there is no cost of putting empty word on empty line
 
@@ -122,7 +122,7 @@ public class WordWrapProblem {
         return cost[n];
     }
 
-    private static int print(int p[], int n) {
+    private static int print(int[] p, int n) {
         int k ;
         if (p[n] == 1)
             k = 1;

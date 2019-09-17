@@ -30,16 +30,14 @@ import java.util.*;
  */
 public class ReCycledPair {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         SolutionReCycledPair sol = new SolutionReCycledPair();
-        int a[] = {32, 42, 301, 23, 9, 5, 130};
+        int[] a = {32, 42, 301, 23, 9, 5, 130};
         Set<Pair<Integer, Integer>> pairs = sol.recycledPairs(a);
         System.out.println("Total :" + pairs.size());
-        pairs.stream().forEach(p -> System.out.println(" first :" + p.getKey() + " second " + p.getValue()));
+        pairs.forEach(p -> System.out.println(" first :" + p.getKey() + " second " + p.getValue()));
 
-        String s = "";
-        s.lastIndexOf('a');
     }
 
 
@@ -60,8 +58,7 @@ class SolutionReCycledPair {
         List<Integer> arr = removeDuplicates(a, n);
 
 
-        final Set<Pair<Integer, Integer>> pairs = getPairsSol1(arr);
-        return pairs;
+        return getPairsSol1(arr);
 
     }
 
@@ -94,7 +91,7 @@ class SolutionReCycledPair {
                 if (map.containsKey(rotatedNumber)) {
 
                     for (Integer x : map.get(rotatedNumber)) {
-                        if (x != i)
+                        if (!x.equals(i))
                             pairs.add(new Pair<>(i, x));
                     }
                     map.get(rotatedNumber).add(i);
@@ -114,7 +111,7 @@ class SolutionReCycledPair {
     }
 
 
-    private final List<Integer> removeDuplicates(int a[], int n) {
+    private List<Integer> removeDuplicates(int a[], int n) {
 
         List<Integer> temp = new ArrayList<>(n);
 

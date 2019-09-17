@@ -8,14 +8,14 @@ package Java;
  */
 public class UnionFindDisjointSets {
 
-    class Set {
+    static class Set {
 
         int rank;
         int id;
 
     }
 
-    private Set parent[];
+    private Set[] parent;
 
     public UnionFindDisjointSets(int n) {
         parent = new Set[n + 1];
