@@ -31,7 +31,7 @@ public class AppleOrchard {
     8 1
      */
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test(4,4,8);
         test(2,3,4);

@@ -45,7 +45,7 @@ public class MergeSortedListOfInterval {
         merge(a, b).stream().forEach(x -> System.out.print(x + "->"));
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         List<Interval> a = new ArrayList<>();
         List<Interval> b = new ArrayList<>();

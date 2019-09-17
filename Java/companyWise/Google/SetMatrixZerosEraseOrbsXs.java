@@ -106,7 +106,7 @@ public class SetMatrixZerosEraseOrbsXs {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         char matrix[][] = {{'X', 'X', 'X', 'X', 'X', 'O'},
                 {'O', 'X', 'X', 'X', 'X', 'X'},
                 {'O', 'X', 'X', 'X', 'X', 'O'},

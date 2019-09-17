@@ -31,7 +31,7 @@ package Java.LeetCode;
  */
 public class CustomSortString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionCustomSortString sol = new SolutionCustomSortString();
         System.out.println(sol.customSortString("cba", "abcd") + " expected :" + "cbad");
         System.out.println(sol.customSortString("bca", "abc") + " expected :" + "bca");

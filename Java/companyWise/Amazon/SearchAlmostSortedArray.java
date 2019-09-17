@@ -24,7 +24,7 @@ package Java.companyWise.Amazon;
  */
 public class SearchAlmostSortedArray {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         boolean pass =
                 search(new int[]{3, 2, 10, 4, 40}, 4) == 3

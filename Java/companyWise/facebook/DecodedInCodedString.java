@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  */
 public class DecodedInCodedString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         testUsingStacks();
         testUsingImplicitStack();
 

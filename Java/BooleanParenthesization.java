@@ -27,7 +27,7 @@ package Java;
  */
 public class BooleanParenthesization {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         //  ((T|T)&(F^T)), (T|(T&(F^T))), (((T|T)&F)^T) and (T|((T&F)^T))
 

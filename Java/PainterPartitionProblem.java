@@ -29,7 +29,7 @@ import java.util.Arrays;
  */
 public class PainterPartitionProblem {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionPainterPartitionProblem sol = new SolutionPainterPartitionProblem();
         int boards[] = {10, 20, 30, 40};
         int k = 2;

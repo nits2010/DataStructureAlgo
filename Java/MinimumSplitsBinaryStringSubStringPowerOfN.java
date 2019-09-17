@@ -20,7 +20,7 @@ package Java;
  */
 public class MinimumSplitsBinaryStringSubStringPowerOfN {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionMinimumSplitsBinaryStringSubStringPowerOfN sol = new SolutionMinimumSplitsBinaryStringSubStringPowerOfN();
 
         int powerOf[] = {4, 6};

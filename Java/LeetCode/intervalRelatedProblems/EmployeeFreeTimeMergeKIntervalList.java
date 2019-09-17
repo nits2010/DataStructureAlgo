@@ -43,7 +43,7 @@ public class EmployeeFreeTimeMergeKIntervalList {
         return lists;
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test(buildInput1());
         test(buildInput2());
     }

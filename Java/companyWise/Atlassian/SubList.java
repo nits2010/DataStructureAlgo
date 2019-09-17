@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class SubList {
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String []args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         int first[] = new int[Integer.valueOf(scanner.nextInt())];

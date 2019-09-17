@@ -8,7 +8,7 @@ package Java;
 public class EditDistance {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String str1 = "sunday";
         String str2 = "saturday";
         System.out.println(editDistDP(str1, str2, str1.length(), str2.length()));

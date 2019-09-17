@@ -31,7 +31,7 @@ import java.util.*;
 
 public class MeetingRoomII {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println("\n\nMeeting Room II tests");
         MeetingRoomII meetingRoom = new MeetingRoomII();

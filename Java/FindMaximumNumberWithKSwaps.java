@@ -77,7 +77,7 @@ public class FindMaximumNumberWithKSwaps {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String n1 = "254";
         String n2 = "254";
         String n3 = "68543";

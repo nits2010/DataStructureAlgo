@@ -27,7 +27,7 @@ import java.util.Arrays;
  */
 public class MinimumPossibleSizeArrayGivenRulesRemovingElements {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test(new int[]{2, 3, 4, 5, 6, 4}, 1, 0);
         test(new int[]{2, 3, 4, 7, 6, 4}, 1, 3);
     }

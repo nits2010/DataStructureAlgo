@@ -20,7 +20,7 @@ package Java.companyWise.twitter;
  */
 public class RGBStreamMeanModeMedian {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         IRGBStream streamProcessor = new RGBStream();
         double mean[];
         double median[];

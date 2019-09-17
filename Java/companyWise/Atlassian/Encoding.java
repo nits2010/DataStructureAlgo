@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Description:
  */
 public class Encoding {
-    public static void main(String args[]) throws Exception {
+    public static void main(String []args) throws Exception {
 
 
         Map<Integer, Character> baseMap = new HashMap<>();

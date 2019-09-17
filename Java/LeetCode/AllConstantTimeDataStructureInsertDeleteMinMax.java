@@ -21,7 +21,7 @@ import java.util.Set;
  */
 public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         AllOne allOne = new AllOne();
         allOne.inc("");
         allOne.dec("");

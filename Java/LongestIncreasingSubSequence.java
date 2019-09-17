@@ -35,7 +35,7 @@ import java.util.Arrays;
 public class LongestIncreasingSubSequence {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int items[] = {10, 9, 2, 5, 3, 7, 101, 18};
 
         int items2[] = {2, 5, 3, 7, 11, 8, 10, 13, 6};

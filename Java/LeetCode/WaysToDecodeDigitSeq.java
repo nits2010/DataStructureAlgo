@@ -27,7 +27,7 @@ package Java.LeetCode;
 public class WaysToDecodeDigitSeq {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(digitSeqDecoding("0212"));
         System.out.println(digitSeqDecoding("00212"));
         System.out.println(digitSeqDecoding("212"));

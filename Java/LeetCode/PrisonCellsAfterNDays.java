@@ -52,7 +52,7 @@ import Java.HelpersToPrint.GenericPrinter;
  */
 public class PrisonCellsAfterNDays {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionPrisonCellsAfterNDays sol = new SolutionPrisonCellsAfterNDays();
         GenericPrinter.print(sol.prisonAfterNDays(new int[]{0, 1, 0, 1, 1, 0, 0, 1}, 7));
         GenericPrinter.print(sol.prisonAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));

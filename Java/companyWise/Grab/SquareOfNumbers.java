@@ -49,7 +49,7 @@ public class SquareOfNumbers {
         return output;
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(squares(Arrays.asList(-4, -3, 0, 2, 5, 7)).equals(Arrays.asList(0, 4, 9, 16, 25, 49)));
         System.out.println(squares(Arrays.asList(-9, -4, -3, 0, 2, 5, 7)).equals(Arrays.asList(0, 4, 9, 16, 25, 49, 81)));
         System.out.println(squares(Arrays.asList(0, 2, 5, 7)).equals(Arrays.asList(0, 4, 25, 49)));

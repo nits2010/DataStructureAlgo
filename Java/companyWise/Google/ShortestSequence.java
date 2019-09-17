@@ -127,7 +127,7 @@ public class ShortestSequence {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         int array[] = {4, 2, 1, 2, 3, 3, 2, 4, 1};

@@ -44,7 +44,7 @@ public class StringRotationMatch {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String[] arr1 = {"AB", "BC", "FOO", "ZA", "BAZ"};
         System.out.println(rotationPairsBruteForce(arr1));
         System.out.println(rotationPairs(arr1));

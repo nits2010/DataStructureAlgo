@@ -10,7 +10,7 @@ package Java.LeetCode;
 public class CoinChangeProblem {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         testMinimumCoins();
         numberOfWays();
     }

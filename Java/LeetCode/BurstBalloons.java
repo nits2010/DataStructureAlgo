@@ -24,7 +24,7 @@ package Java.LeetCode;
  */
 public class BurstBalloons {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int nums[] = {3, 1, 5, 8};
         System.out.println(maxCoinsSimplify(nums));
 

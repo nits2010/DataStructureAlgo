@@ -23,7 +23,7 @@ import java.util.Comparator;
  */
 public class MergeIntervalsUnionIntersection {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int interval[][] = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         test1(interval);
 

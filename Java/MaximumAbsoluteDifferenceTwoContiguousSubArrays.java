@@ -21,7 +21,7 @@ import Java.HelpersToPrint.GenericPrinter;
  */
 public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int i1[] = {-2, -3, 4, -1, -2, 1, 5, -3};
         int i2[] = {2, -1, -2, 1, -4, 2, 8};
 

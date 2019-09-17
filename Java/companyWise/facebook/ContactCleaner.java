@@ -39,7 +39,7 @@ import java.util.*;
 public class ContactCleaner {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String[][] contacts = {{"John", "john@gmail.com", "john@fb.com"},
                 {"Dan", "dan@gmail.com", "+1234567"},

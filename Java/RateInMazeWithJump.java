@@ -9,7 +9,8 @@ import Java.HelpersToPrint.GenericPrinter;
  * <p>
  * This is the variation of Rat in Maze
  * <p>
- * A Maze is given as N*N binary matrix of blocks where source block is the upper left most block i.e., maze[0][0] and destination block is lower rightmost block i.e., maze[N-1][N-1].
+ * A Maze is given as N*N binary matrix of blocks where source block is the upper left most block i.e., maze[0][0] and destination block is
+ * lower rightmost block i.e., maze[N-1][N-1].
  * A rat starts from source and has to reach destination. The rat can move only in two directions: forward and down.
  * In the maze matrix, 0 means the block is dead end and non-zero number means the block can be used in the path from source to destination.
  * The non-zero value of mat[i][j] indicates number of maximum jumps rat can make from cell mat[i][j].
@@ -49,29 +50,25 @@ import Java.HelpersToPrint.GenericPrinter;
  */
 public class RateInMazeWithJump {
 
-    private static boolean isCorrect(int result[][], int solution[][]) {
+    private static boolean isCorrect(int[][] result, int[][] solution) {
         for (int i = 0; i < result.length; i++) {
-
             for (int j = 0; j < result[0].length; j++)
                 if (result[i][j] != solution[i][j])
                     return false;
         }
-
         return true;
     }
 
 
-    public static void main(String args[]) {
-
+    public static void main(String[] args) {
         test(new int[][]{{2, 1, 0, 0}, {3, 0, 0, 1}, {0, 1, 0, 1}, {0, 0, 0, 1}}, new int[][]{{1, 0, 0, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}});
-
 
     }
 
     private static void test(int[][] maze, int[][] expected) {
         int n = maze.length, m = maze[0].length;
         System.out.println("\n Maze :\n" + GenericPrinter.toString(maze) + " \n expected :\n" + GenericPrinter.toString(expected));
-        int result[][] = rateInMazeWithJump(maze, 0, 0, n - 1, m - 1);
+        int[][] result = rateInMazeWithJump(maze, 0, 0, n - 1, m - 1);
         System.out.println("\n Obtained :\n" + GenericPrinter.toString(result) + "\nMatch :" + isCorrect(result, expected));
 
     }
@@ -79,13 +76,9 @@ public class RateInMazeWithJump {
 
     private static int[][] rateInMazeWithJump(int[][] maze, int sx, int sy, int dx, int dy) {
 
-
-        int result[][] = new int[maze.length][maze[0].length];
-
+        int[][] result = new int[maze.length][maze[0].length];
         rateInMazeWithJump(maze, sx, sy, dx, dy, result);
         return result;
-
-
     }
 
 
@@ -136,11 +129,8 @@ public class RateInMazeWithJump {
 
     }
 
-    private static boolean isSafe(int[][] maze, int sx, int sy, int result[][]) {
-
-        if (sx <= maze.length && sy <= maze[0].length && result[sx][sy] == 0)
-            return true;
-        return false;
+    private static boolean isSafe(int[][] maze, int sx, int sy, int[][] result) {
+        return sx <= maze.length && sy <= maze[0].length && result[sx][sy] == 0;
     }
 
 

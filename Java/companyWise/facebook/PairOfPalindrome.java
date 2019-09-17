@@ -27,7 +27,7 @@ import java.util.*;
 public class PairOfPalindrome {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test0();
         test1();

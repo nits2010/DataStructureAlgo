@@ -31,7 +31,7 @@ import java.util.*;
 public class FlattenNestedListIterator {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         usingList();
         usingQueue();
         usingStack();

@@ -9,7 +9,7 @@ import java.util.Stack;
  */
 public class ExpressionEvaluator {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String expression = "8*2+5*6-18%2";
 

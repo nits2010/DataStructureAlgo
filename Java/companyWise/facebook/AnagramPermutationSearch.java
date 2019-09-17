@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class AnagramPermutationSearch {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("zzzzzzzz", "zzzz"));
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("AAAA", "AAAAAA"));
         System.out.println(AnagramSubstringSearch.anagramSubstringSearch("BACDGABCDA", "ABCD"));

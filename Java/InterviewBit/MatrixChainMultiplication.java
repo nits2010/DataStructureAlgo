@@ -11,7 +11,7 @@ import java.util.List;
 public class MatrixChainMultiplication {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         List<Integer> dime = new ArrayList<>();
 
         dime.add(40);

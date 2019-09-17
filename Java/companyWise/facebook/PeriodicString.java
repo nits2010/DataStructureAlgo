@@ -42,7 +42,7 @@ import javafx.util.Pair;
  */
 public class PeriodicString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String text[] = {"ABCABC", "ABABAB", "ABCDABCD", "GEEKSFORGEEKS",
                 "GEEKGEEK", "AAAACAAAAC", "ABCDABC"};

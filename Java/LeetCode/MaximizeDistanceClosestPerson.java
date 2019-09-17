@@ -30,7 +30,7 @@ package Java.LeetCode;
  */
 public class MaximizeDistanceClosestPerson {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionMaximizeDistanceClosestPerson sol = new SolutionMaximizeDistanceClosestPerson();
 
         int seats1[] = {1, 0, 0, 0, 1, 0, 1}; // 2

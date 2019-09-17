@@ -11,7 +11,7 @@ import java.util.Set;
 public class SmallestMissingNumber {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int nums[] = {1, 2, 0};
         int nums1[] = {1};
         int nums2[] = {};

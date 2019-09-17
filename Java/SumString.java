@@ -28,7 +28,7 @@ package Java;
  */
 public class SumString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String test1 = "12243660";
         String test2 = "1111112223";
         String test3 = "2368";

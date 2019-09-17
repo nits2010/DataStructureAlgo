@@ -10,7 +10,7 @@ import java.util.List;
  * Description:
  */
 public class Add1 {
-    public static void main(String args[]) {
+    public static void main(String []args) {
         ArrayList<Integer> inp = new ArrayList<>();
         inp.add(0);
         inp.add(0);

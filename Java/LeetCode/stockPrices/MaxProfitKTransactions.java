@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class MaxProfitKTransactions {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int prices[] = {2, 1, 2, 0, 1};
         System.out.println(maxProfit(2, prices));
 

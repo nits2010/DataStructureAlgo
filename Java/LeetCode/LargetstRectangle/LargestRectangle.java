@@ -23,7 +23,7 @@ import java.util.Stack;
  */
 public class LargestRectangle {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         char[][] input =
                 {
                         {'1', '0', '1', '0', '0'},

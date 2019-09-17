@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class AlphanumericAbbreviations {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String input = "ANKS";
 
         List<String> output = new LinkedList<>();

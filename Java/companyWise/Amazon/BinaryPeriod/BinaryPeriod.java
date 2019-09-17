@@ -6,7 +6,7 @@ package Java.companyWise.Amazon.BinaryPeriod;
  * Description:
  */
 public class BinaryPeriod {
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionBinaryPeriod sol = new SolutionBinaryPeriod();
         System.out.println(sol.binaryPeriod(15));
         System.out.println(sol.binaryPeriodBiggest(15));

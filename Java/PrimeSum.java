@@ -10,26 +10,39 @@ import java.util.Set;
  * Date: 20/12/18
  * Description:
  * https://www.geeksforgeeks.org/prime-numbers-after-prime-p-with-sum-s/
+ * Prime numbers after prime P with sum S
+ * Given three numbers sum S, prime P and N, find all N prime numbers after prime P such that their sum is equal to S.
+ * <p>
+ * Examples :
+ * <p>
+ * Input :  N = 2, P = 7, S = 28
+ * Output : 11 17
+ * Explanation : 11 and 17 are primes after
+ * prime 7 and (11 + 17 = 28)
+ * <p>
+ * Input :  N = 3, P = 2, S = 23
+ * Output : 3 7 13
+ * 5 7 11
+ * Explanation : 3, 5, 7, 11 and 13 are primes
+ * after prime 2. And (3 + 7 + 13 = 5 + 7 + 11
+ * = 23)
+ * <p>
+ * Input :  N = 4, P = 3, S = 54
+ * Output : 5 7 11 31
+ * 5 7 13 29
+ * 5 7 19 23
+ * 5 13 17 19
+ * 7 11 13 23
+ * 7 11 17 19
+ * Explanation : All are prime numbers and
+ * their sum is 54
  */
 public class PrimeSum {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        int s, p, n;
-
-        n = 2;
-        p = 7;
-        s = 28;
-
-        System.out.println(isPrimeSum(primeSum(n, p, s), s));
-
-
-        n = 2;
-        p = 3;
-        s = 54;
-
-        System.out.println(isPrimeSum(primeSum(n, p, s), s));
-
+        System.out.println(isPrimeSum(primeSum(2, 7, 20), 20));
+        System.out.println(isPrimeSum(primeSum(2, 3, 54), 54));
 
 
     }

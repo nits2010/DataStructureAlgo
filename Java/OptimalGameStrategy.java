@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class OptimalGameStrategy {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int[] a = {5, 3, 7, 10};
         System.out.println(maxOG(a));

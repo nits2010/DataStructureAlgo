@@ -14,7 +14,7 @@ import java.util.*;
  */
 public class SortStringsBasedCustomAlphabetOrder {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         char alphabet[] = {'b', 'c', 'a'};
         String sentences[] = {"aa", "ab", "bc", "abc", "", "xt", "yz"};

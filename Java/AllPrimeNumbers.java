@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class AllPrimeNumbers {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int n = 50;
 
 //        List<Integer> primes = generatePrimeNumber(0, n);

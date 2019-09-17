@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class LexicographicallySmallestRotatedSequence {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionLexicographicallySmallestRotatedSequence sol = new SolutionLexicographicallySmallestRotatedSequence();
         System.out.println(sol.lexicographicallySmallestRotatedSequenceBruteForce("GEEKSQUIZ"));
         System.out.println(sol.lexicographicallySmallestRotatedSequenceBruteForce("GFG"));

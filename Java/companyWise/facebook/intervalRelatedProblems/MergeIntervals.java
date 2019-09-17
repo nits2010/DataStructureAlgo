@@ -23,7 +23,7 @@ import java.util.*;
 public class MergeIntervals {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         List<Interval> intervals = Arrays.asList(
                 new Interval(1, 4),
                 new Interval(2, 3));

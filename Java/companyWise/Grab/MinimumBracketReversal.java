@@ -36,7 +36,7 @@ import java.util.Stack;
 public class MinimumBracketReversal {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         Map<String, Integer> map = new HashMap<>();
         map.put("}}{{", 2);

@@ -33,7 +33,7 @@ public class ClosestPairPoints {
         public static Comparator<Point> byY = (o1, o2) -> o1.y - o2.y;
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         Point points[] = {new Point(2, 3), new Point(12, 30), new Point(40, 50), new Point(5, 1), new Point(12, 10), new Point(3, 4)};
 

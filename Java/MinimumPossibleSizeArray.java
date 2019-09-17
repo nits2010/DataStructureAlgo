@@ -18,7 +18,7 @@ public class MinimumPossibleSizeArray {
      */
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int[] arr = {2, 3, 4, 5, 6, 4};
         int k = 1;

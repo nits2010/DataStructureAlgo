@@ -15,7 +15,7 @@ import Java.LeetCode.templates.TreeNode;
  */
 public class ClosestBinarySearchTreeValue {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         TreeNode bst = getBST();
         System.out.println(closestValue(bst, 4.4));
         System.out.println(closestValue(bst, 3.4));

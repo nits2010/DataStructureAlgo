@@ -44,7 +44,7 @@ import java.util.PriorityQueue;
  */
 public class MedianOfStream {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionMedianFinder obj = new SolutionMedianFinder();
         int ints[] = {5, 15, 1, 3, 2, 8, 7, 9, 10, 6, 11, 4};
 

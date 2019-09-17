@@ -108,7 +108,7 @@ public class ThiefInRoomOfSensors {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         Room room = new Room(5, 1, 1);
 

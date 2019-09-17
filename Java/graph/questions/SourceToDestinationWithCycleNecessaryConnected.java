@@ -13,7 +13,7 @@ import java.util.Set;
  */
 public class SourceToDestinationWithCycleNecessaryConnected {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int vertices = 9;
         IGraph directedGraph = new DirectedGraph(vertices);

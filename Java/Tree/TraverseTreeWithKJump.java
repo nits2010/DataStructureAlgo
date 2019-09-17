@@ -43,7 +43,7 @@ public class TraverseTreeWithKJump {
         tree.get(child).add(source);
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         List<List<Integer>> tree = new ArrayList<>();
 

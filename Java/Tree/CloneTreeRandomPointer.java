@@ -22,7 +22,7 @@ class NodeWithRandom {
 
 public class CloneTreeRandomPointer {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         NodeWithRandom tree = new NodeWithRandom(10);
         NodeWithRandom n2 = new NodeWithRandom(6);

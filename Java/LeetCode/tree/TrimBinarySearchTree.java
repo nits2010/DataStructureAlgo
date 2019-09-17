@@ -54,7 +54,7 @@ import java.util.List;
 
 
 public class TrimBinarySearchTree {
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test(getBST1(), 3, 6);
         test(getBST2(), 18, 31);

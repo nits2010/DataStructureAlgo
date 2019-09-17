@@ -65,7 +65,7 @@ import java.util.List;
  */
 public class TextJustification {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         test(new String[]{"This", "is", "an", "example", "of", "text", "justification."}, 16);

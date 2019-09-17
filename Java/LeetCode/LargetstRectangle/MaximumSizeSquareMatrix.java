@@ -23,7 +23,7 @@ import Java.HelpersToPrint.GenericPrinter;
 public class MaximumSizeSquareMatrix {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         char M[][] =
                 {
                         {'0', '1', '1', '0', '1'},

@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
  */
 public class StringToStringTransformEvenOdd {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println(canTransform("abcd", "adcb"));
         System.out.println(canTransform("abcd", "dacb"));

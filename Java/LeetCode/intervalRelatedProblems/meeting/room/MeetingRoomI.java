@@ -25,7 +25,7 @@ import java.util.List;
 
 
 public class MeetingRoomI {
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println("Meeting Room I tests");
         MeetingRoomI meetingRoomI = new MeetingRoomI();

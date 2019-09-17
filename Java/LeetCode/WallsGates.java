@@ -36,7 +36,7 @@ public class WallsGates {
 
     final static int INF = Integer.MAX_VALUE;
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         testBFS(new int[][]{{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}});
         testDFS(new int[][]{{INF, -1, 0, INF,}, {INF, INF, INF, -1}, {INF, -1, INF, -1}, {0, -1, INF, INF}});
 

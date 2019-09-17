@@ -11,7 +11,7 @@ import java.util.Map;
 public class DominoesArrangementProblem {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int a[] = {4, 3, 3, 4, 1, 2, 2, 3, 6, 5, 4, 5};
         System.out.println(solution(a));

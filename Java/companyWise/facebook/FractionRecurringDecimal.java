@@ -28,7 +28,7 @@ import java.util.Map;
  */
 public class FractionRecurringDecimal {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(fractionToDecimal(4, 333)); //"0.(012)"
         System.out.println(fractionToDecimal(7, 12)); //"0.(012)"
     }

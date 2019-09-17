@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 public class MaximumSumRectangle {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int matrix[][] = {
                 {1, 2, -1, -4, -20},
                 {-8, -3, 4, 2, 1},

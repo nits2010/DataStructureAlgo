@@ -22,7 +22,7 @@ import javafx.util.Pair;
  * Output : 3 4
  */
 public class MissingElements {
-    public static void main (String args[]){
+    public static void main (String []args){
 
         int arr[] = {1, 3, 5, 6};
         Pair<Integer, Integer> p1 = missingElements(arr, 6);

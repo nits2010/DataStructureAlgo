@@ -40,7 +40,7 @@ package Java.LeetCode.games.ticTacToe;
  */
 public class ValidTicTacToeState {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String board1[] = {"O  ", "   ", "   "};
         String board2[] = {"XOX", " X ", "   "};
         String board3[] = {"XXX", "   ", "OOO"};

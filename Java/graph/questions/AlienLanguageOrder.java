@@ -24,7 +24,7 @@ import java.util.List;
 public class AlienLanguageOrder {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String[] words = {"caa", "aaa", "aab"};
         int character = 3;

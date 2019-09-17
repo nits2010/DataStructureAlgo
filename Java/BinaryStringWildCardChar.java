@@ -27,7 +27,7 @@ import java.util.Queue;
  */
 public class BinaryStringWildCardChar {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String str = "1??0?101";
         SolutionBinarStringWildCardChar sol = new SolutionBinarStringWildCardChar();
         System.out.println(sol.binaryString(str));

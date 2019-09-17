@@ -22,7 +22,7 @@ package Java.LeetCode.bitsManipulation.single.number;
  */
 public class NumberOccurringOnce {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int arr[] = {12, 1, 12, 3, 12, 1, 1, 2, 3, 3};
         System.out.println(numberOccurringOnce(arr, 3));
         System.out.println(numberOccurringOnceFaster(arr, 3));

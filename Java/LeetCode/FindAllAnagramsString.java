@@ -44,7 +44,7 @@ import java.util.List;
 public class FindAllAnagramsString {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(anagramSubstringSearch("zzzzzzzz", "zzzz"));
         System.out.println(anagramSubstringSearch("aaaaa", "aaaaaaa"));
         System.out.println(anagramSubstringSearch("cbaebabacd", "abc"));
