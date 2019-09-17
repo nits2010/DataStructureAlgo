@@ -132,7 +132,7 @@ class MinimizeMaxDistanceGasStationDPBottomUp {
  * case 2: if require less, then we need to reduce the search space so high = mid
  * case 3: we found one potetial solution, try to reduce it more so that we can minimize the maximum distance.
  * <p>
- * Complexity:  O( n * max * log (max)) but max is limit  to [0, 10^8] hence O(n)
+ * Complexity:  O( n *  log (max)) but max is limit  to [0, 10^8] hence O(n)
  * This verification algorithm runs at O(n), where n is the length of the stations array. T
  * his is acceptable if we can walk the search space very efficiently (which can be done at the order of O(log(max/step)),
  * with step = 10^-6). In particular, this is much faster than the straightforward O(Klogn) solution where we add the stations one by one in a greedy manner (i.e.,
@@ -154,7 +154,7 @@ class MinimizeMaxDistanceGasStationBinarySearch {
         double high = stations[stations.length - 1] - stations[0];
         double eps = 1e-6;
 
-        //O( n* max * log (max))
+        //O( n* log (max))
         while ((low + eps) < high) { //O( max * log (max))
             double mid = (low + high) / 2;
 
