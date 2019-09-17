@@ -34,6 +34,8 @@ import java.util.Arrays;
  * Output: 3
  * We need to remove any three elements from ends
  * like 20, 4, 1 or 4, 1, 3 or 20, 3, 1 or 20, 4, 1
+ * <p>
+ * Best solution : {@link RemoveMinimum2TimesMinGreaterThenMaxIterate}
  */
 public class RemoveMinimum2TimesMinGreaterThenMax {
 
