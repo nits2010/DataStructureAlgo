@@ -10,12 +10,14 @@ package Java;
  * Example: input:"acc" output: "a1c2" buffer overflow, because output size length is 4 and input size length is 3. Such inputs will not be given
  * aacccddd ->a2c3d3
  * acc -> a1c2
+ *
+ * {@link Java.LeetCode.StringCompressionRunLengthEncoding}
  */
 public class StringCompression2 {
 
     private static final char SPACE = ' ';
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(compress("abcde     "));
         System.out.println(compress("abcdeeeeeeeefffffg"));
         System.out.println(compress("abcdeeeeeeeeeeeeeeeeeeefffffg"));
@@ -31,7 +33,7 @@ public class StringCompression2 {
         if (toCompress == null || toCompress.isEmpty())
             return toCompress;
 
-        char str[] = toCompress.toCharArray();
+        char[] str = toCompress.toCharArray();
         int n = str.length;
 
 
@@ -104,7 +106,7 @@ public class StringCompression2 {
             char c = str[i];
 
 
-            //if next character is a character only, means we need to put 1 in between to these char [ remember we already compressed multi chars ]
+            //if next is a character only, means we need to put 1 in between to these char [ remember we already compressed multi chars ]
             if (Character.isLetter(c)) {
 
                 //Since this is a letter, then we need to move this chunk ahead to make a room for '1'
@@ -135,7 +137,7 @@ public class StringCompression2 {
 
                     i++;//push i to next char a b b c d 6 _ _ _ o 3 _ -> a 1 b c d 6 _ _ _ o 3 _ till i will be pointing 'a'
 
-                }else if (i < n-1 && str[i+1] == SPACE){ //if next char is not character and its a space, then push 1 at the place of space
+                }else if (i < n-1 && str[i+1] == SPACE){ //if next char is a space, then push 1 at the place of space
 
                     str[i+1] = '1';
                     i++;

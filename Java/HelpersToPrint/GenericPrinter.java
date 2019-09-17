@@ -94,6 +94,23 @@ public class GenericPrinter {
         return result.toString();
     }
 
+    public static String toString(char[] nums, int from, int to) {
+        if (null == nums || nums.length == 0 || from > to || from < 0)
+            return null;
+
+        to = to > nums.length - 1 ? nums.length : to;
+
+        StringBuilder result = new StringBuilder("[");
+
+        for (int i = from; i <= to; i++) {
+            result.append(nums[i]);
+            result.append(",");
+        }
+        result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
+    }
+
     public static String toString(String[] str) {
         if (null == str || str.length == 0)
             return null;

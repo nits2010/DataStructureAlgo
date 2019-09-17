@@ -1,18 +1,20 @@
 package Java.companyWise.facebook;
 
+import Java.HelpersToPrint.GenericPrinter;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 03/04/19
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.
- *
+ * <p>
  * {@link Java.SimpleMovingAverage}
  */
 public class MovingAverage {
 
     static class MovingAverageHolder {
 
-        int circularQueue[];
+        int[] circularQueue;
         int size;
         int head = 0;
         int tail = 0;
@@ -54,31 +56,32 @@ public class MovingAverage {
 //                return ((double) sum / this.maxSize); //Note here we divide by the max size of array
 
             //considers the last N values.
-            return (double) sum / (this.size % (this.maxSize + 1));
+            double avg = (double) sum / (this.size % (this.maxSize + 1));
+            return Math.round(avg * 100) / 100.0;
         }
 
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        int arr[] = {1, 2, 35, 343, 1, 21, 212, 324};
-        int n = 3;
-        int arr2[] = {1, 3, 5, 6, 8};
-
-        System.out.println("\n\n\narr1");
-        movingAverage(arr, n);
-
-        System.out.println("\n\narr2");
-        movingAverage(arr2, n);
+        test(new int[]{1, 2, 35, 343, 1, 21, 212, 324}, 3, new double[]{1.0, 1.5, 12.67, 126.67, 126.33, 121.67, 78.0, 185.67});
+        test(new int[]{1, 3, 5, 6, 8}, 3, new double[]{1.0, 2.0, 3.0, 4.67, 6.33});
     }
 
-    private static void movingAverage(int arr[], int n) {
+    private static void test(int[] nums, int n, double[] expected) {
+        System.out.println("\nNums:" + GenericPrinter.toString(nums) + ", n:" + n + "\nExpected:" + GenericPrinter.toString(expected));
+        System.out.println("Obtained:" + GenericPrinter.toString(movingAverage(nums, n)));
+    }
+
+    private static double[] movingAverage(int[] arr, int n) {
 
         MovingAverageHolder movingAverageHolder = new MovingAverageHolder(n);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(movingAverageHolder.getAverage(arr[i]));
 
-        }
+        double[] avg = new double[arr.length];
+        for (int i = 0; i < arr.length; i++)
+            avg[i] = movingAverageHolder.getAverage(arr[i]);
+
+        return avg;
     }
 }

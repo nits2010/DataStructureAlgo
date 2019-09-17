@@ -1,11 +1,16 @@
 package Java;
 
+import Java.HelpersToPrint.GenericPrinter;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-14
  * Description: https://www.geeksforgeeks.org/program-find-simple-moving-average/
  * <p>
- * Simple Moving Average is the average obtained from the data for some t period of time . In normal mean, it’s value get changed with the changing data but in this type of mean it also changes with the time interval . We get the mean for some period t and then we remove some previous data . Again we get new mean and this process continues . This is why it is moving average . This have a great application in financial market .
+ * Simple Moving Average is the average obtained from the data for some t period of time . In normal mean,
+ * it’s value get changed with the changing data but in this type of mean it also changes with the time interval .
+ * We get the mean for some period t and then we remove some previous data . Again we get new mean and this process continues .
+ * This is why it is moving average . This have a great application in financial market .
  * * <p>
  * * Examples:
  * * <p>
@@ -16,13 +21,36 @@ package Java;
  * * New number added is 5.0, SMA = 3.0
  * * New number added is 6.0, SMA = 4.666666666666667
  * * New number added is 8.0, SMA = 6.333333333333333
- *
+ * <p>
  * {@link Java.companyWise.facebook.MovingAverage}
  */
 public class SimpleMovingAverage {
+
+    public static void main(String[] args) {
+
+        test(new int[]{1, 2, 35, 343, 1, 21, 212, 324}, 3, new double[]{0.33, 1.0, 12.67, 126.67, 126.33, 121.67, 78.0, 185.67});
+        test(new int[]{1, 3, 5, 6, 8}, 3, new double[]{0.33, 1.33, 3.0, 4.67, 6.33});
+    }
+
+    private static void test(int[] nums, int n, double[] expected) {
+        System.out.println("\nNums:" + GenericPrinter.toString(nums) + " n:" + n + "\nExpected:" + GenericPrinter.toString(expected));
+        System.out.println("Obtained:" + GenericPrinter.toString(movingAverage(nums, n)));
+    }
+
+    private static double[] movingAverage(int[] arr, int n) {
+
+        SimpleMovingAverage.MovingAverageHolder movingAverageHolder = new SimpleMovingAverage.MovingAverageHolder(n);
+        double[] avg = new double[arr.length];
+        for (int i = 0; i < arr.length; i++)
+            avg[i] = movingAverageHolder.getSimpleAverage(arr[i]);
+
+        return avg;
+
+    }
+
     static class MovingAverageHolder {
 
-        int circularQueue[];
+        int[] circularQueue;
         int size;
         int head = 0;
         int tail = 0;
@@ -55,30 +83,11 @@ public class SimpleMovingAverage {
             circularQueue[tail] = item;
             tail = (tail + 1) % this.maxSize;
 
-            return ((double) sum / this.maxSize); //Note: this distinguish this question to actual moving average question
+            double av = ((double) sum / this.maxSize); //Note: this distinguish this question to actual moving average question
+
+            return Math.round(av * 100) / 100.0;
 
         }
     }
 
-    public static void main(String args[]) {
-
-        int arr[] = {1, 2, 35, 343, 1, 21, 212, 324};
-        int n = 3;
-        int arr2[] = {1, 3, 5, 6, 8};
-
-        System.out.println("\n\n\narr1");
-        movingAverage(arr, n);
-
-        System.out.println("\n\narr2");
-        movingAverage(arr2, n);
-    }
-
-    private static void movingAverage(int arr[], int n) {
-
-        SimpleMovingAverage.MovingAverageHolder movingAverageHolder = new SimpleMovingAverage.MovingAverageHolder(n);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(movingAverageHolder.getSimpleAverage(arr[i]));
-
-        }
-    }
 }
