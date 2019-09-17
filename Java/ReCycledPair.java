@@ -1,5 +1,6 @@
 package Java;
 
+import Java.HelpersToPrint.GenericPrinter;
 import javafx.util.Pair;
 
 import java.util.*;
@@ -31,13 +32,16 @@ import java.util.*;
 public class ReCycledPair {
 
     public static void main(String[] args) {
+        test(new int[]{32, 42, 301, 23, 9, 5, 130}, new int[][]{{301, 130}, {32, 23}});
+    }
+
+    private static void test(int[] nums, int[][] expected) {
+        System.out.println("\nNums: " + GenericPrinter.toString(nums) + "\nExpected    :" + GenericPrinter.toString(expected));
 
         SolutionReCycledPair sol = new SolutionReCycledPair();
-        int[] a = {32, 42, 301, 23, 9, 5, 130};
-        Set<Pair<Integer, Integer>> pairs = sol.recycledPairs(a);
-        System.out.println("Total :" + pairs.size());
-        pairs.forEach(p -> System.out.println(" first :" + p.getKey() + " second " + p.getValue()));
 
+        System.out.println("Solution1   :" + GenericPrinter.toString(sol.recycledPairs1(nums)));
+        System.out.println("Solution2   :" + GenericPrinter.toString(sol.recycledPairs2(nums)));
     }
 
 
@@ -45,37 +49,18 @@ public class ReCycledPair {
 
 class SolutionReCycledPair {
 
-    public final Set<Pair<Integer, Integer>> recycledPairs(int a[]) {
-
+    //======= Time Complexity: O(n * R * L); n= length of input, R is max length of a digit, L= max unique rotated number
+    public int[][] recycledPairs1(int[] a) {
         if (null == a || a.length == 0)
-            return new HashSet<>();
+            return null;
 
+        int[] arr = removeDuplicates(a);
 
-        int n = a.length;
-
-        Arrays.sort(a);
-
-        List<Integer> arr = removeDuplicates(a, n);
-
-
-        return getPairsSol1(arr);
-
-    }
-
-
-
-    private int getRotatedNumber(int number, int pow) {
-        int r = number % 10;
-        int q = number / 10;
-        return r * pow + q;
-    }
-
-    private Set<Pair<Integer, Integer>> getPairsSol1(List<Integer> arr) {
-
-        int len = arr.size();
+        int len = arr.length;
         Set<Pair<Integer, Integer>> pairs = new HashSet<>(len);
         Map<Integer, Set<Integer>> map = new HashMap<>();
 
+        //O(n)
         for (Integer i : arr) {
 
             int digits = (int) Math.log10(i) + 1;
@@ -83,13 +68,13 @@ class SolutionReCycledPair {
             int rotation = digits;
             int number = i;
 
+            //O(R)
             while (rotation > 0) {
-
-
-                int rotatedNumber = getRotatedNumber(number, pow);
+                int rotatedNumber = rotate(number, pow);
 
                 if (map.containsKey(rotatedNumber)) {
 
+                    //O(L)
                     for (Integer x : map.get(rotatedNumber)) {
                         if (!x.equals(i))
                             pairs.add(new Pair<>(i, x));
@@ -99,6 +84,7 @@ class SolutionReCycledPair {
                     Set<Integer> l = new HashSet<>();
                     l.add(i);
                     map.put(rotatedNumber, l);
+
                 }
                 number = rotatedNumber;
                 rotation--;
@@ -106,52 +92,39 @@ class SolutionReCycledPair {
 
 
         }
-
-        return pairs;
-    }
-
-
-    private List<Integer> removeDuplicates(int a[], int n) {
-
-        List<Integer> temp = new ArrayList<>(n);
-
-        for (int i = 0; i < n; i++) {
-            int x = a[i];
-
-            while (i < n && a[i] == x)
-                i++;
-
-            temp.add(x);
-            i--;
+        int[][] output = new int[pairs.size()][2];
+        int i = 0;
+        for (Pair<Integer, Integer> p : pairs) {
+            output[i++] = new int[]{p.getKey(), p.getValue()};
         }
-
-        return temp;
-
+        return output;
     }
 
 
+    //=============== Time Complexity: O(n * R * log(n)); n= length of input, R is max length of a digit
+    public int[][] recycledPairs2(int[] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
 
-    ////////
-
-    private Set<Pair<Integer, Integer>> getPairsSol2(List<Integer> arr) {
-        int len = arr.size();
+        int[] arr = removeDuplicates(nums);
+        int len = arr.length;
         Set<Integer> pairs = new HashSet<>(len);
         Set<Pair<Integer, Integer>> res = new HashSet<>();
 
-        int[] temp = arr.stream().mapToInt(i -> i).toArray();
-
-        for (int i = 0; i < temp.length; i++) {
+        //O(n)
+        for (int i = 0; i < arr.length; i++) {
             pairs.clear();
 
-            int number = temp[i];
+            int number = arr[i];
 
             int digits = (int) Math.log10(number) + 1;
             int pow = (int) Math.pow(10, digits - 1);
             int rotation = digits;
 
+            //O(R)
             while (rotation > 0) {
 
-                int rotatedNumber = getRotatedNumber(number, pow);
+                int rotatedNumber = rotate(number, pow);
 
                 int digitsInRotatedNumber = (int) Math.log10(rotatedNumber) + 1;
 
@@ -160,9 +133,10 @@ class SolutionReCycledPair {
 
                     if (digits == digitsInRotatedNumber) {
 
-                        int pos = Arrays.binarySearch(temp, i + 1, temp.length, rotatedNumber);
+                        //O(log(n)
+                        int pos = Arrays.binarySearch(arr, i + 1, arr.length, rotatedNumber);
                         if (pos > 0) {
-                            res.add(new Pair<>(temp[i], rotatedNumber));
+                            res.add(new Pair<>(arr[i], rotatedNumber));
                         }
                     }
 
@@ -172,8 +146,36 @@ class SolutionReCycledPair {
             }
 
         }
+        int[][] output = new int[res.size()][2];
+        int i = 0;
+        for (Pair<Integer, Integer> p : res) {
+            output[i++] = new int[]{p.getKey(), p.getValue()};
+        }
+        return output;
 
-        return res;
+    }
 
+
+    private int[] removeDuplicates(int[] a) {
+        Arrays.sort(a);
+        int[] output = new int[a.length];
+        int o = 0;
+        for (int i = 0; i < a.length; i++) {
+            int x = a[i];
+
+            while (i < a.length && a[i] == x)
+                i++;
+
+            output[o++] = x;
+            i--;
+        }
+        return Arrays.copyOfRange(output, 0, o);
+
+    }
+
+    private int rotate(int number, int pow) {
+        int r = number % 10;
+        int q = number / 10;
+        return r * pow + q;
     }
 }
