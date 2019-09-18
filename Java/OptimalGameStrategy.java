@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class OptimalGameStrategy {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
 
         int[] a = {5, 3, 7, 10};
         System.out.println(maxOG(a));
@@ -41,6 +41,9 @@ public class OptimalGameStrategy {
         for (int i = 1; i <= n; i++)
             game[i][i] = a[i - 1];
 
+        /**
+         * {@link Java.InterviewBit.MatrixChainMultiplication
+         */
         for (int l = 2; l <= n; l++) {
 
             for (int i = 1; i <= n - l + 1; i++) {

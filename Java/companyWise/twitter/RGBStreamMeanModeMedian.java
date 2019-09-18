@@ -1,5 +1,7 @@
 package Java.companyWise.twitter;
 
+import Java.HelpersToPrint.GenericPrinter;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-24
@@ -20,45 +22,25 @@ package Java.companyWise.twitter;
  */
 public class RGBStreamMeanModeMedian {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
+
+        test(new int[]{0, 34, 43, 39, 90}, new int[]{0, 232, 21, 210, 110}, new int[]{0, 9, 34, 23, 230});
+
+    }
+
+    private static void test(int[] r, int[] g, int[] b) {
+        if (r == null || g == null || b == null || r.length != g.length || g.length != b.length)
+            return;
+
         IRGBStream streamProcessor = new RGBStream();
-        double mean[];
-        double median[];
+        for (int i = 0; i < r.length; i++) {
+            streamProcessor.setRGB(r[i], g[i], b[i]);
+            System.out.println("\nr:" + r[i] + " g:" + g[i] + " b:" + b[i]);
+            System.out.println("Mean:   " + GenericPrinter.toString(streamProcessor.showMean()));
+            System.out.println("Median: " + GenericPrinter.toString(streamProcessor.showMedian()));
+        }
 
-        System.out.println();
-        streamProcessor.setRGB(0, 0, 0);
-        mean = streamProcessor.showMean();
-        median = streamProcessor.showMedian();
-        System.out.println("Mean ( " + mean[0] + ", " + mean[1] + ", " + mean[2] + " )");
-        System.out.println("median ( " + median[0] + ", " + median[1] + ", " + median[2] + " )");
 
-        System.out.println();
-        streamProcessor.setRGB(34, 232, 9);
-        mean = streamProcessor.showMean();
-        median = streamProcessor.showMedian();
-        System.out.println("Mean ( " + mean[0] + ", " + mean[1] + ", " + mean[2] + " )");
-        System.out.println("median ( " + median[0] + ", " + median[1] + ", " + median[2] + " )");
-
-        System.out.println();
-        streamProcessor.setRGB(43, 21, 34);
-        mean = streamProcessor.showMean();
-        median = streamProcessor.showMedian();
-        System.out.println("Mean ( " + mean[0] + ", " + mean[1] + ", " + mean[2] + " )");
-        System.out.println("median ( " + median[0] + ", " + median[1] + ", " + median[2] + " )");
-
-        System.out.println();
-        streamProcessor.setRGB(39, 210, 23);
-        mean = streamProcessor.showMean();
-        median = streamProcessor.showMedian();
-        System.out.println("Mean ( " + mean[0] + ", " + mean[1] + ", " + mean[2] + " )");
-        System.out.println("median ( " + median[0] + ", " + median[1] + ", " + median[2] + " )");
-
-        System.out.println();
-        streamProcessor.setRGB(90, 110, 230);
-        mean = streamProcessor.showMean();
-        median = streamProcessor.showMedian();
-        System.out.println("Mean ( " + mean[0] + ", " + mean[1] + ", " + mean[2] + " )");
-        System.out.println("median ( " + median[0] + ", " + median[1] + ", " + median[2] + " )");
     }
 
 }
@@ -79,17 +61,17 @@ class RGBStream implements IRGBStream {
     private static final int MAX = Integer.MAX_VALUE;
     private static final int MIN = Integer.MIN_VALUE;
 
-    final int R[];
+    final int[] R;
     int rMinimum = MAX, rMaximum = MIN;
     double rSum = 0;
     int rLength = 0;
 
-    final int G[];
+    final int[] G;
     int gMinimum = MAX, gMaximum = MIN;
     double gSum = 0;
     int gLength = 0;
 
-    final int B[];
+    final int[] B;
     int bMinimum = MAX, bMaximum = MIN;
     double bSum = 0;
     int bLength = 0;
@@ -146,7 +128,7 @@ class RGBStream implements IRGBStream {
         double gMean = gSum / gLength;
 
 
-        return new double[]{rMean, gMean, bMean};
+        return new double[]{round(rMean), round(gMean), round(bMean)};
     }
 
     /**
@@ -177,14 +159,18 @@ class RGBStream implements IRGBStream {
             if (total >= num / 2 && e1 == -1)
                 e1 = i;
 
-            if (total >= (num / 2 + 1) && e2 == -1) {
+            if (total >= num / 2 + 1) {
                 e2 = i;
                 break;
             }
 
         }
 
-        return (num % 2 == 0) ? ((double) (e1 + e2) / 2) : e2;
+        return round((num % 2 == 0) ? ((double) (e1 + e2) / 2) : e2);
+    }
+
+    private double round(double n) {
+        return Math.round(n * 100) / 100.00;
     }
 
 

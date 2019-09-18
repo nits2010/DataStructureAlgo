@@ -31,7 +31,7 @@ public class MatrixChainMultiplication {
 
         int n = A.size();
 
-        int cost[][] = new int[n][n];
+        int[][] cost = new int[n][n];
 
         for (int i = 0; i < n; i++)
             cost[i][i] = 0;
