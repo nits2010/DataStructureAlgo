@@ -148,14 +148,12 @@ class MinimizeMaxDistanceGasStationBinarySearch {
         if (stations == null || stations.length == 0)
             return 0;
 
-        final int N = stations.length;
-
         double low = 0;
-        double high = stations[stations.length - 1] - stations[0];
+        double high = stations[stations.length - 1] - stations[0]; //stations are in increasing order
         double eps = 1e-6;
 
         //O( n* log (max))
-        while ((low + eps) < high) { //O( max * log (max))
+        while ((low + eps) < high) { //O( log (max))
             double mid = (low + high) / 2;
 
             if (isPossible(stations, k, mid)) {
@@ -171,6 +169,7 @@ class MinimizeMaxDistanceGasStationBinarySearch {
     private boolean isPossible(int[] stations, int k, double mid) {
         int requireStations = 0;
         for (int i = 1; i < stations.length; i++) {
+            //find how many stations would require between stations[i] and stations[i-1] in order to have distance between them as mid
             requireStations += (int) Math.abs((stations[i] - stations[i - 1]) / mid);
         }
         return requireStations <= k;

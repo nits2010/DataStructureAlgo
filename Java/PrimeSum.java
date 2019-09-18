@@ -1,9 +1,6 @@
 package Java;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -21,14 +18,16 @@ import java.util.Set;
  * prime 7 and (11 + 17 = 28)
  * <p>
  * Input :  N = 3, P = 2, S = 23
- * Output : 3 7 13
+ * Output :
+ * 3 7 13
  * 5 7 11
  * Explanation : 3, 5, 7, 11 and 13 are primes
  * after prime 2. And (3 + 7 + 13 = 5 + 7 + 11
  * = 23)
  * <p>
  * Input :  N = 4, P = 3, S = 54
- * Output : 5 7 11 31
+ * Output :
+ * 5 7 11 31
  * 5 7 13 29
  * 5 7 19 23
  * 5 13 17 19
@@ -41,68 +40,44 @@ public class PrimeSum {
 
     public static void main(String[] args) {
 
-        System.out.println(isPrimeSum(primeSum(2, 7, 20), 20));
-        System.out.println(isPrimeSum(primeSum(2, 3, 54), 54));
-
-
+        System.out.println(primeSum(2, 7, 28));
+        System.out.println(primeSum(3, 2, 23));
+        System.out.println(primeSum(4, 3, 54));
     }
 
-    private static List<List<Integer>> primeSum(int n, int p, int s) {
+    private static List<List<Integer>> primeSum(int n, int p, int sum) {
 
-        List<Integer> allPrimes = AllPrimeNumbers.generatePrimeNumber(p + 1, s);
-
-        Set<Integer> numbers = new HashSet<>();
-
+        List<Integer> allPrimes = AllPrimeNumbers.generatePrimeNumber(p + 1, sum);
         List<List<Integer>> result = new LinkedList<>();
-
-        primeSum(0, n, 0, s, numbers, allPrimes, result);
-
+        primeSum(0, n, 0, sum, new ArrayList<>(), allPrimes, result);
         return result;
     }
 
 
-    private static void primeSum(int totalSum, int n, int index, int s, Set<Integer> numbers, List<Integer> allPrimes, List<List<Integer>> result) {
-
-
-        //If total sum found of given sum
-        if (totalSum == s) {
-            result.add(new LinkedList<>(numbers));
-
-            return;
-        }
+    private static void primeSum(int currentSum, int n, int index, int s, List<Integer> temp, List<Integer> allPrimes, List<List<Integer>> result) {
 
         //if we run out of prime number, to backtrack
         //Or if total prime number added in set is more than required n
-        if (index == allPrimes.size() || numbers.size() > n) {
+        if (index == allPrimes.size() || temp.size() > n || currentSum > s) {
             return;
         }
 
+        //If total sum found of given sum
+        if (currentSum == s && temp.size() == n) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
 
         //include this number to our set to try if it make sum=s
-        numbers.add(allPrimes.get(index));
-        primeSum(totalSum + allPrimes.get(index), n, index + 1, s, numbers, allPrimes, result);
+        temp.add(allPrimes.get(index));
+        primeSum(currentSum + allPrimes.get(index), n, index + 1, s, temp, allPrimes, result);
 
         //exclude this number to our set to try if it make sum=s
-        numbers.remove(allPrimes.get(index));
-        primeSum(totalSum, n, index + 1, s, numbers, allPrimes, result);
+        temp.remove(allPrimes.get(index));
+        primeSum(currentSum, n, index + 1, s, temp, allPrimes, result);
 
 
     }
 
-    public static boolean isPrimeSum(List<List<Integer>> primeSumNbrs, int s) {
 
-        boolean response = true;
-        for (List<Integer> l : primeSumNbrs) {
-            int sum = 0;
-            for (Integer i : l)
-                sum += i;
-
-            response &= (sum == s);
-
-        }
-        if (response)
-            System.out.println(primeSumNbrs);
-        return response;
-
-    }
 }
