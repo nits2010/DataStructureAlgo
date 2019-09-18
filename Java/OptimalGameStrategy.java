@@ -1,7 +1,5 @@
 package Java;
 
-import java.util.Map;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-15
@@ -30,6 +28,26 @@ public class OptimalGameStrategy {
 
     }
 
+    /**
+     * game[i][j] represent maximum value obtained by choosing the value in range of [i,j]
+     * <p>
+     * game[i][j] =  Max
+     * *                  { value[i] +  Min { game[i+2][j], game[i+1][j-1]}
+     * *                   value[j] +  Min { game[i][j-2], game[i+1][j-1]} }
+     * <p>
+     * Case 1: Choose i'th element, then opponent can choose from [i+1, j]
+     * *    a) if opponent choose i+1 then we can choose from [i+2,j] => game[i+2][j]
+     * *    b) if opponent choose j then we can choose from [i+1,j-1] => game[i+1][j-1]
+     * <p>
+     * Case 2: Choose j'th element, then opponent can choose from [i, j-1]
+     * *    a) if opponent choose i then we can choose from [i+1,j-1] => game[i+1][j-1]
+     * *    b) if opponent choose j-1 then we can choose from [i,j-2] => game[i][j-2]
+     * <p>
+     * Base case, when there is only 2 values, then in first chance, i'll always pick max of them
+     *
+     * @param a
+     * @return
+     */
     private static int maxOG(int a[]) {
         if (a == null || a.length == 0)
             return 0;
@@ -50,12 +68,25 @@ public class OptimalGameStrategy {
 
                 int j = i + l - 1;
 
+                //Base case, when there is only 2 values, then in first chance, i'll always pick max of them
                 if (l == 2)
                     game[i][j] = Math.max(a[i - 1], a[j - 1]);
                 else {
+                    //if we choose i'th then opponent has choice [i+1,j]
+
+                    //if opponent choose i+1, then we can choose [i+2,j]
                     int x = (i + 2 <= n) ? game[i + 2][j] : 0;
+
+                    //if opponent choose j, then we can choose [i+1,j-1]
                     int y = (i + 1 <= n && j - 1 >= 0) ? game[i + 1][j - 1] : 0;
+
+                    //if we choose j'th then opponent has choice [i,j-1]
+
+
+                    //if opponent choose j-1 then we can choose [i,j-2]
                     int z = (j - 2 >= 0) ? game[i][j - 2] : 0;
+
+                    //if opponent choose i then we can choose [i+1,j-1]
                     int m = (i + 1 <= n && j - 1 >= 0) ? game[i + 1][j - 1] : 0;
 
                     game[i][j] = Math.max(a[i - 1] + Math.min(x, y), a[j - 1] + Math.min(z, m));
