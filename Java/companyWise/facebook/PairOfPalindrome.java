@@ -1,11 +1,28 @@
 package Java.companyWise.facebook;
 
+
+import Java.HelpersToPrint.GenericPrinter;
+
 import java.util.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 03/04/19
- * Description:
+ * Description: https://leetcode.com/problems/palindrome-pairs/
+ * 336. Palindrome Pairs
+ * Given a list of unique words, find all pairs of distinct indices (i, j) in the given list,
+ * so that the concatenation of the two words, i.e. words[i] + words[j] is a palindrome.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: ["abcd","dcba","lls","s","sssll"]
+ * Output: [[0,1],[1,0],[3,2],[2,4]]
+ * Explanation: The palindromes are ["dcbaabcd","abcddcba","slls","llssssll"]
+ * Example 2:
+ * <p>
+ * Input: ["bat","tab","cat"]
+ * Output: [[0,1],[1,0]]
+ * Explanation: The palindromes are ["battab","tabbat"]
  * https://www.geeksforgeeks.org/palindrome-pair-in-an-array-of-words-or-strings/
  * Explanation: https://fizzbuzzed.com/top-interview-questions-5/
  * <p>
@@ -22,132 +39,60 @@ import java.util.*;
  * "keeg", "bc"}
  * Output : Yes
  * There is a pair "abc" and "xyxcba"
+ *
+ * [Amazon]
  */
 
 public class PairOfPalindrome {
 
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
 
-        test0();
-        test1();
-        test2();
-        test3();
-        test4();
-        test5();
-        test6();
-        test7();
-
-
-    }
-
-    private static void print(String list[]) {
-        StringJoiner stringJoiner = new StringJoiner(",");
-        for (int i = 0; i < list.length; i++)
-            stringJoiner.add(list[i]);
-
-        System.out.println(stringJoiner.toString());
-    }
-
-    private static void test0() {
-        System.out.println("\ntest 0 ....");
-        String[] list = {"a", ""};
-
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
+        test(new String[]{"a", ""}, Arrays.asList(Arrays.asList(0, 1), Arrays.asList(1, 0)));
+        test(new String[]{"abc", "xyxcba", "geekst", "or", "keeg", "bc"}, Arrays.asList(Arrays.asList(0, 1)));
+        test(new String[]{"abcd", "dcba", "lls", "s", "sssll"}, Arrays.asList(Arrays.asList(0, 1), Arrays.asList(1, 0), Arrays.asList(2, 4), Arrays.asList(3, 2)));
+        test(new String[]{"bat", "tab", "cat"}, Arrays.asList(Arrays.asList(0, 1), Arrays.asList(1, 0)));
+        test(new String[]{"b"}, Arrays.asList());
+        test(new String[]{"b", "t", "c"}, Arrays.asList());
+        test(new String[]{"bb", "tt", "cc"}, Arrays.asList());
+        test(new String[]{"ab", "ba", "cc"}, Arrays.asList(Arrays.asList(0, 1), Arrays.asList(1, 0)));
 
 
     }
 
-    private static void test1() {
-        System.out.println("\ntest 1 ....");
-        String[] list = {"abc", "xyxcba", "geekst", "or", "keeg", "bc"};
 
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
+    private static void test(String[] list, List<List<Integer>> expected) {
+        System.out.println("\nList:" + GenericPrinter.toString(list));
+        System.out.println("Expected :   " + expected);
+        System.out.println("Trie  :      " + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
+        System.out.println("Trie2 :      " + SolutionPairOfPalindromeUsingTrie2.palindromePairs(list));
+        System.out.println("Hash  :      " + SolutionUsingHash.palindromePairs(list));
 
-
-    }
-
-    private static void test2() {
-        System.out.println("\ntest 2 ....");
-        String[] list = {"abcd", "dcba", "lls", "s", "sssll"};
-
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
 
     }
 
-    private static void test3() {
-        System.out.println("\ntest 3 ....");
-        String[] list = {"bat", "tab", "cat"};
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
-
-    }
-
-    private static void test4() {
-        System.out.println("\ntest 4 ....");
-        String[] list = {"b"};
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
-    }
-
-    private static void test5() {
-        System.out.println("\n test 5 ....");
-        String[] list = {"b", "t", "c"};
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
-
-    }
-
-    private static void test6() {
-        System.out.println("\ntest 6 ....");
-        String[] list = {"bb", "tt", "cc"};
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
-
-    }
-
-    private static void test7() {
-        System.out.println("\ntest 7 ....");
-        String[] list = {"ab", "ba", "cc"};
-        print(list);
-        System.out.println();
-        System.out.println("Trie" + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
-        System.out.println("Hash" + SolutionUsingHash.palindromePairs(list));
-
-    }
 }
 
 
+/**
+ * https://fizzbuzzed.com/top-interview-questions-5/
+ * https://leetcode.com/problems/palindrome-pairs/discuss/79195/O(n-*-k2)-java-solution-with-Trie-structure
+ * Runtime: 57 ms, faster than 69.41% of Java online submissions for Palindrome Pairs.
+ * Memory Usage: 50.6 MB, less than 21.95% of Java online submissions for Palindrome Pairs.
+ */
 class SolutionPairOfPalindromeUsingTrie {
 
     static class TrieNode {
 
         public boolean isLeaf = false;
-        public Map<Character, TrieNode> children = new HashMap<>(26);
-        public List<Integer> palindromesWithInStringIndexes = new ArrayList<>();
+        public final Map<Character, TrieNode> children = new HashMap<>(26);
+        public final List<Integer> palindromesWithInStringIndexes = new ArrayList<>();
         public int idOfThisString = -1;
     }
 
     static class Trie {
 
-        TrieNode root;
+        private TrieNode root;
 
         private void insert(String toInsert, int myIndex) {
             if (root == null)
@@ -172,6 +117,7 @@ class SolutionPairOfPalindromeUsingTrie {
             }
             pCrawl.isLeaf = true;
             pCrawl.idOfThisString = myIndex;
+            pCrawl.palindromesWithInStringIndexes.add(myIndex);
 
 
         }
@@ -183,9 +129,7 @@ class SolutionPairOfPalindromeUsingTrie {
                 to--;
             }
 
-            if (from >= to)
-                return true;
-            return false;
+            return from >= to;
         }
 
         private List<List<Integer>> search(String toSearch, int myId) {
@@ -194,7 +138,7 @@ class SolutionPairOfPalindromeUsingTrie {
             if (search(toSearch, myId, ids)) {
                 return ids;
             } else
-                return Collections.EMPTY_LIST;
+                return ids;
 
         }
 
@@ -212,8 +156,6 @@ class SolutionPairOfPalindromeUsingTrie {
                 if (!pCrawl.children.containsKey(currentChar))
                     return false;
 
-                pCrawl = pCrawl.children.get(currentChar);
-
                 //if the string at pCrawl is forming a string at this point, and this not same as the current word
                 //and the remaining word is palindrome, the collect the ids
                 if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myIndex
@@ -222,6 +164,10 @@ class SolutionPairOfPalindromeUsingTrie {
                     ids.add(Arrays.asList(myIndex, pCrawl.idOfThisString));
 
                 }
+
+                pCrawl = pCrawl.children.get(currentChar);
+
+
 
 
             }
@@ -264,6 +210,137 @@ class SolutionPairOfPalindromeUsingTrie {
 
 }
 
+/**
+ * Same as above just instead of map, used array
+ * Runtime: 27 ms, faster than 91.75% of Java online submissions for Palindrome Pairs.
+ * Memory Usage: 43.2 MB, less than 100.00% of Java online submissions for Palindrome Pairs.
+ */
+class SolutionPairOfPalindromeUsingTrie2 {
+    static class TrieNode {
+
+        public boolean isLeaf = false;
+        public final TrieNode[] children = new TrieNode[26];
+        public final List<Integer> palindromesWithInStringIndexes = new ArrayList<>();
+        public int idOfThisString = -1;
+    }
+
+    static class Trie {
+
+        private TrieNode root;
+
+        private void insert(String toInsert, int myIndex) {
+            if (root == null)
+                root = new TrieNode();
+
+            TrieNode pCrawl = root;
+
+            for (int i = toInsert.length() - 1; i >= 0; i--) {
+
+                char currentChar = toInsert.charAt(i);
+
+                if (pCrawl.children[currentChar - 'a'] == null)
+                    pCrawl.children[currentChar - 'a'] = new TrieNode();
+
+
+                if (isPalindrome(toInsert, 0, i))
+                    pCrawl.palindromesWithInStringIndexes.add(myIndex);
+
+                pCrawl = pCrawl.children[currentChar - 'a'];
+
+
+            }
+            pCrawl.isLeaf = true;
+            pCrawl.idOfThisString = myIndex;
+            pCrawl.palindromesWithInStringIndexes.add(myIndex);
+
+
+        }
+
+        private boolean isPalindrome(String toInsert, int from, int to) {
+
+            while (from < to && toInsert.charAt(from) == toInsert.charAt(to)) {
+                from++;
+                to--;
+            }
+
+            return from >= to;
+        }
+
+        private List<List<Integer>> search(String toSearch, int myId) {
+
+            List<List<Integer>> ids = new ArrayList<>();
+            if (search(toSearch, myId, ids)) {
+                return ids;
+            } else
+                return ids;
+
+        }
+
+        private boolean search(String toSearch, int myIndex, List<List<Integer>> ids) {
+            if (null == root)
+                return false;
+
+
+            TrieNode pCrawl = root;
+
+            for (int i = 0; i < toSearch.length(); i++) {
+
+                //if the string at pCrawl is forming a string at this point, and this not same as the current word
+                //and the remaining word is palindrome, the collect the ids
+                if (pCrawl.idOfThisString >= 0 && pCrawl.idOfThisString != myIndex
+                        && isPalindrome(toSearch, i, toSearch.length() - 1)) {
+
+                    ids.add(Arrays.asList(myIndex, pCrawl.idOfThisString));
+
+                }
+
+                char currentChar = toSearch.charAt(i);
+
+                if (pCrawl.children[currentChar - 'a'] == null)
+                    return false;
+
+                pCrawl = pCrawl.children[currentChar - 'a'];
+
+
+            }
+
+            //Collect all the ids, where the pCrawl says its palindrome
+            for (int id : pCrawl.palindromesWithInStringIndexes) {
+                if (id != myIndex) {
+                    ids.add(Arrays.asList(myIndex, id));
+                }
+            }
+
+            return true;
+        }
+
+
+    }
+
+    /**
+     * Build the trie of given words s.t. we insert the word in trie in reverse order as well as check does it contains a substring which is palindrome if so, note its id
+     * then search each word in same manner (without reverse)
+     *
+     * @param list
+     * @return
+     */
+    public static List<List<Integer>> palindromePairs(String[] list) {
+
+        List<List<Integer>> response = new ArrayList<>();
+
+        Trie trie = new Trie();
+        for (int i = 0; i < list.length; i++)
+            trie.insert(list[i], i);
+
+        for (int i = 0; i < list.length; i++) {
+            response.addAll(trie.search(list[i], i));
+        }
+
+        return response;
+
+    }
+
+}
 
 
 class SolutionUsingHash {
@@ -309,11 +386,11 @@ class SolutionUsingHash {
      * @return
      */
     public static List<List<Integer>> palindromePairs(String[] list) {
+        List<List<Integer>> response = new ArrayList<>();
 
         if (null == list || list.length <= 1)
-            return Collections.EMPTY_LIST;
+            return response;
 
-        List<List<Integer>> response = new ArrayList<>();
 
         // Convert it to word vs id
         Map<String, Integer> wordToIndexMap = new TreeMap<>();
@@ -326,6 +403,11 @@ class SolutionUsingHash {
         for (String word : wordToIndexMap.keySet()) {
 
             int i = wordToIndexMap.get(word);
+
+            if (word.isEmpty()) {
+                attachForEmptyString(response, list, i);
+                continue;
+            }
 
             for (int j = 0; j < word.length(); j++) {
 
@@ -359,6 +441,14 @@ class SolutionUsingHash {
 
     }
 
+    private static void attachForEmptyString(List<List<Integer>> response, String[] list, int i) {
+        for (int j = 0; j < list.length; j++) {
+            if (i != j) {
+                response.add(Arrays.asList(i, j));
+            }
+        }
+    }
+
 
     private static boolean isPalindrome(String toInsert, int from, int to) {
 
@@ -367,9 +457,7 @@ class SolutionUsingHash {
             to--;
         }
 
-        if (from >= to)
-            return true;
-        return false;
+        return from >= to;
     }
 
 }
