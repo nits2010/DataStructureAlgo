@@ -12,7 +12,7 @@ public class Combinations {
 
     public static void main(String []args) {
 
-        List<String> combination = combination("abc");
+        List<String> combination = combination("AAB");
         System.out.println("combination ->" + combination);
 
 

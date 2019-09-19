@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-class Permutation {
+public class Permutation {
     public static void main(String[] args) throws java.lang.Exception {
         System.out.println("\n Recursion " + PermutationRecursion.generatePermutation("ABC"));
         System.out.println("\n Loops : " + PermutationUsingLoops.generatePermutation("ABC"));
