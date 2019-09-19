@@ -32,6 +32,7 @@ public class MinimizeMaxDistanceGasStation {
 
     public static void main(String[] args) {
         test(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 9, 0.5);
+        test(new int[]{1, 5, 10}, 2, 2.5);
         test(new int[]{1, 5, 10}, 3, 2.0);
         test(new int[]{3, 6, 12, 19, 33, 44, 67, 72, 89, 95}, 2, 14.0);
 
