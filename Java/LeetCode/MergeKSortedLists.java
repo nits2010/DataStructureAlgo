@@ -24,7 +24,7 @@ import java.util.PriorityQueue;
  * ]
  * Output: 1->1->2->3->4->4->5->6
  * <p>
- * Extension of {@link Java.LeetCode.MergeTwoSortedLists.MergeTwoSortedSinglyLists}
+ * Extension of {@link Java.LeetCode.MergeTwoSortedLists}
  */
 public class MergeKSortedLists {
 
@@ -146,7 +146,7 @@ class MergeKSortedListsDC implements IMergeKSortedLists {
 
 
     /**
-     * {@link Java.LeetCode.MergeTwoSortedLists.MergeTwoSortedSinglyLists}
+     * {@link Java.LeetCode.MergeTwoSortedLists}
      *
      * @param l1
      * @param l2

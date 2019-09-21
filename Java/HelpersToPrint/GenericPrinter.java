@@ -55,10 +55,25 @@ public class GenericPrinter {
         StringBuilder result = new StringBuilder("[");
 
         for (T num : nums) {
-            result.append(num);
+            result.append(num.toString());
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
+
+        return result.toString();
+    }
+
+
+    public static <T> String toStringT2D(T[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder("[\n");
+
+        for (T[] num : nums)
+            result.append(toString(num)).append("\n");
+        result.append("]");
+
 
         return result.toString();
     }

@@ -20,13 +20,13 @@ import java.util.*;
  * than weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
  * Complexity: O(V*log(V))
- *
+ * <p>
  * https://www.dyclassroom.com/graph/detecting-negative-cycle-using-bellman-ford-algorithm
  */
 public class DijkstraShortestPath implements IShortestPath {
 
 
-    private class CostNode {
+    private static class CostNode {
         int vertex;
         double cost;
 
@@ -38,13 +38,14 @@ public class DijkstraShortestPath implements IShortestPath {
 
     @Override
     public List<Edges> shortestPath(IWeightedGraph graph, int source) {
+        final List<Edges> shortestPath = new ArrayList<>();
 
         if (graph.getAdjList() == null || graph.getAdjList().length == 0)
-            return Collections.EMPTY_LIST;
+            return shortestPath;
 
         final List<Edges>[] adjList = graph.getAdjList();
 
-        final List<Edges> shortestPath = new ArrayList<>();
+
         final Set<Integer> settled = new HashSet<>();
 
         // 1) Create a Min Heap of size V where V is the number of vertices in the given graph.
@@ -52,7 +53,7 @@ public class DijkstraShortestPath implements IShortestPath {
         final PriorityQueue<CostNode> pq = new PriorityQueue<>((Comparator.comparingDouble(o -> o.cost)));
 
         //To keep the distance of vertices distance[V] from source 's'
-        final double cost[] = new double[graph.getVertices()];
+        final double[] cost = new double[graph.getVertices()];
         Arrays.fill(cost, Integer.MAX_VALUE);
 
         //distance of source to source is 0

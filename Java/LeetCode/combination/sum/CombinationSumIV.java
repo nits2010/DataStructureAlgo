@@ -40,11 +40,14 @@ import java.util.Arrays;
  * Difference here is: We need to try every possibility. A number from given candidate array can be placed anywhere in ths solution list
  * <p>
  * Explanation: https://leetcode.com/problems/combination-sum-iv/discuss/372950/TLE-to-100-beat-or-Optimisation-or-step-by-step-or-7-solutions
+ * <p>
+ * Variation {@link Java.companyWise.thoughtspot.CombinationSumProduct}
  */
 public class CombinationSumIV {
 
 
     public static void main(String[] args) {
+        test(new int[]{1, 2, 3, 4, 5}, 5, 4);
         test(new int[]{2, 3, 6, 7}, 7, 4);
         test(new int[]{2, 3, 5}, 7, 5);
         test(new int[]{2, 3, 5}, 0, 1);
@@ -54,12 +57,12 @@ public class CombinationSumIV {
 
     private static void test(int[] candidates, int target, int expected) {
         System.out.println("\n Candidates :" + GenericPrinter.toString(candidates) + " Target :" + target + " expected :" + expected);
+
         CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS combinationSumIDFS = new CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS();
         CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS combinationSumIVDFSV2 = new CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS();
         CombinationSumIVBacktracking.CombinationSumIVBacktrackingMemo memo = new CombinationSumIVBacktracking.CombinationSumIVBacktrackingMemo();
 
         CombinationSumIVDP.CombinationSumIVRecursive recursive = new CombinationSumIVDP.CombinationSumIVRecursive();
-
         CombinationSumIVDP.CombinationSumIVTopDown topDown = new CombinationSumIVDP.CombinationSumIVTopDown();
         CombinationSumIVDP.CombinationSumIVTopDownV2 topDownV2 = new CombinationSumIVDP.CombinationSumIVTopDownV2();
         CombinationSumIVDP.CombinationSumIVBottomUp bottomUp = new CombinationSumIVDP.CombinationSumIVBottomUp();
@@ -129,9 +132,9 @@ class CombinationSumIVDP {
                 return 1;
 
             int res = 0;
-            for (int i = 0; i < nums.length; i++)
-                if (target >= nums[i])
-                    res += combinationSum4(nums, target - nums[i]);
+            for (int num : nums)
+                if (target >= num)
+                    res += combinationSum4(nums, target - num);
 
             return res;
         }
@@ -154,7 +157,7 @@ class CombinationSumIVDP {
         public int combinationSum4(int[] nums, int target) {
             if (nums == null || nums.length == 0)
                 return 0;
-            int dp[] = new int[target + 1];
+            int[] dp = new int[target + 1];
             Arrays.fill(dp, -1);
             return combinationSum4(nums, target, dp);
         }
@@ -172,9 +175,10 @@ class CombinationSumIVDP {
                 return dp[target];
 
             int res = 0;
-            for (int i = 0; i < nums.length; i++) //O(n)
-                if (target >= nums[i])
-                    res += combinationSum4(nums, target - nums[i]); //O(n)
+            //O(n)
+            for (int num : nums)
+                if (target >= num)
+                    res += combinationSum4(nums, target - num); //O(n)
 
             return dp[target] = res;
         }
@@ -199,7 +203,7 @@ class CombinationSumIVDP {
         public int combinationSum4(int[] nums, int target) {
             if (nums == null || nums.length == 0)
                 return 0;
-            int dp[] = new int[target + 1];
+            int[] dp = new int[target + 1];
             Arrays.fill(dp, -1);
             return combinationSum4(nums, 0, target, dp);
         }
@@ -217,8 +221,9 @@ class CombinationSumIVDP {
                 return dp[currSum];
 
             int res = 0;
-            for (int i = 0; i < nums.length; i++) //O(n)
-                res += combinationSum4(nums, currSum + nums[i], target, dp); //O(n)
+            //O(n)
+            for (int num : nums)
+                res += combinationSum4(nums, currSum + num, target, dp); //O(n)
 
             return dp[currSum] = res;
         }
@@ -255,16 +260,16 @@ class CombinationSumIVDP {
                 return 0;
 
 
-            int dp[] = new int[Target + 1];
+            int[] dp = new int[Target + 1];
             //base case
             dp[0] = 1;
 
             for (int target = 1; target <= Target; target++) {
 
-                for (int j = 0; j < nums.length; j++) {
+                for (int num : nums) {
 
-                    if (target >= nums[j])
-                        dp[target] += dp[target - nums[j]];
+                    if (target >= num)
+                        dp[target] += dp[target - num];
                 }
             }
 
@@ -290,13 +295,13 @@ class CombinationSumIVBacktracking {
             if (candidates == null || candidates.length == 0)
                 return 0;
 
-            int response[] = {0};
+            int[] response = {0};
 
             combinationSum4(candidates, 0, 0, target, response);
             return response[0];
         }
 
-        private void combinationSum4(int[] candidates, int i, int currentSum, int target, int response[]) {
+        private void combinationSum4(int[] candidates, int i, int currentSum, int target, int[] response) {
 
             //Our constraints : We can't go beyond target, we can take more element than available in array
             if (i >= candidates.length)
@@ -382,12 +387,12 @@ class CombinationSumIVBacktracking {
             if (candidates == null || candidates.length == 0)
                 return 0;
 
-            int memo[] = new int[target + 1];
+            int[] memo = new int[target + 1];
             Arrays.fill(memo, -1);
             return combinationSum4(candidates, 0, target, memo);
         }
 
-        private int combinationSum4(int[] candidates, int i, int target, int memo[]) {
+        private int combinationSum4(int[] candidates, int i, int target, int[] memo) {
 
             //Our constraints : We can't go beyond target, we can take more element than available in array
             if (i >= candidates.length)
@@ -395,10 +400,9 @@ class CombinationSumIVBacktracking {
 
 
             //3. Our goal: when currentSum = target
-            if (0 == target) {
-
+            if (0 == target)
                 return 1;
-            }
+
 
             if (memo[target] != -1)
                 return memo[target];
