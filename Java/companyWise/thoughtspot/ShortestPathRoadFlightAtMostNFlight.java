@@ -78,6 +78,8 @@ import java.util.*;
  * path :A->(F:20)B->(R:100)E road cost :100 flight cost :20
  * Best Path A->(F:20)B->(R:20)C->(R:5)E
  * BackTracking    :45
+ *
+ * Similar {@link Java.companyWise.Google.ShortestPathBreakingThroughWalls}
  */
 class CityCell {
 
@@ -95,7 +97,7 @@ class CityCell {
     }
 }
 
-public class ShortestPathAtMost1Flight {
+public class ShortestPathRoadFlightAtMostNFlight {
 
     public static void main(String[] args) {
         test(new CityCell[][]
@@ -138,8 +140,8 @@ public class ShortestPathAtMost1Flight {
     private static void test(CityCell[][] cityMap, int flightCount, int expected) {
         System.out.println("\nCity Map :\n" + GenericPrinter.toStringT2D(cityMap) + " flightCount " + flightCount);
         System.out.println("Expected                :" + expected);
-        System.out.println("BackTracking            :" + new ShortestPathAtMost1FlightBacktracking(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));
-        System.out.println("DijkstraShortestPath    :" + new ShortestPathAtMost1FlightDijkstraShortestPath(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));
+        System.out.println("BackTracking            :" + new ShortestPathRoadFlightAtMostNFlightBacktracking(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));
+        System.out.println("DijkstraShortestPath    :" + new ShortestPathRoadFlightAtMostNFlightDijkstraShortestPath(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));
 
     }
 }
@@ -156,10 +158,10 @@ public class ShortestPathAtMost1Flight {
  * T(N) = T(N-1) + T(N-1)
  * => O(2^N)
  */
-class ShortestPathAtMost1FlightBacktracking {
+class ShortestPathRoadFlightAtMostNFlightBacktracking {
     final Map<Integer, Character> map = new HashMap<>();
 
-    public ShortestPathAtMost1FlightBacktracking(int n) {
+    public ShortestPathRoadFlightAtMostNFlightBacktracking(int n) {
         for (int i = 0; i < n; i++) {
             map.put(i, (char) (i + 65));
         }
@@ -236,10 +238,10 @@ class ShortestPathAtMost1FlightBacktracking {
  * <p>
  * Complexity: O((m*n)^2)
  */
-class ShortestPathAtMost1FlightDijkstraShortestPath {
+class ShortestPathRoadFlightAtMostNFlightDijkstraShortestPath {
     final Map<Integer, Character> map = new HashMap<>();
 
-    public ShortestPathAtMost1FlightDijkstraShortestPath(int n) {
+    public ShortestPathRoadFlightAtMostNFlightDijkstraShortestPath(int n) {
         for (int i = 0; i < n; i++) {
             map.put(i, (char) (i + 65));
         }
@@ -329,6 +331,7 @@ class ShortestPathAtMost1FlightDijkstraShortestPath {
                     distance[i].withFlight = current.distance + cityCell.f;
                     queue.offer(new Node(distance[i].withFlight, i, current.flightCount + 1));
                 }
+
 
             }
 
