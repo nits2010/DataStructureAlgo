@@ -3,7 +3,26 @@ package Java.LeetCode.medians;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-19
- * Description:
+ * Description: https://leetcode.com/problems/median-of-two-sorted-arrays/
+ * 4. Median of Two Sorted Arrays
+ * here are two sorted arrays nums1 and nums2 of size m and n respectively.
+ * <p>
+ * Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ * <p>
+ * You may assume nums1 and nums2 cannot be both empty.
+ * <p>
+ * Example 1:
+ * <p>
+ * nums1 = [1, 3]
+ * nums2 = [2]
+ * <p>
+ * The median is 2.0
+ * Example 2:
+ * <p>
+ * nums1 = [1, 2]
+ * nums2 = [3, 4]
+ * <p>
+ * The median is (2 + 3)/2 = 2.5
  */
 public class MedianOfTwoSortedArray {
 
@@ -19,6 +38,10 @@ public class MedianOfTwoSortedArray {
 
     public static double findMedianSortedArrays(final int[] X, final int[] Y) {
 
+        if (X.length > Y.length) {
+            return findMedianSortedArrays(Y, X);
+        }
+
         int x = X.length;
         int y = Y.length;
         int n = x + y;
@@ -26,9 +49,6 @@ public class MedianOfTwoSortedArray {
         final int NEG_INF = Integer.MIN_VALUE;
         final int POS_INF = Integer.MAX_VALUE;
 
-        if (x > y) {
-            return findMedianSortedArrays(Y, X);
-        }
 
         /**
          * Do binary search on smaller array
@@ -37,12 +57,11 @@ public class MedianOfTwoSortedArray {
         while (start <= end) {
 
             //Find where we should partition array X
-            int partitionX = (start + end) >> 1; //median of smaller array
+            int partitionX = start + (end - start) >> 1; //median of smaller array
 
             //Find where we should partition array Y such that both partition elements (partition of X + partition of Y) are equal or 1 more on left side
             // (x + y + 1) / 2 gives you the middle point when we combine both the array and since we already have 0 to partitionX element, then remove those to make them equal
             int partitionY = (x + y + 1) / 2 - partitionX;
-
 
 
             //If no element left on array X on left partition

@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,7 +44,7 @@ public class DegreeAnArray {
     }
 
     private static void test(int[] nums) {
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         System.out.println();
         System.out.println("Simple Count -> " + DegreeAnArraySimpleCount.findShortestSubArray(nums));
         System.out.println("Single scan -> " + DegreeAnArraySingleScan.findShortestSubArray(nums));

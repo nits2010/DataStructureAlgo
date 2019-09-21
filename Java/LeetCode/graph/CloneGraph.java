@@ -1,5 +1,7 @@
 package Java.LeetCode.graph;
 
+import Java.graph.questions.clone.GraphClone;
+
 import java.util.*;
 
 /**
@@ -20,7 +22,7 @@ import java.util.*;
  * The undirected graph is a simple graph, which means no repeated edges and no self-loops in the graph.
  * Since the graph is undirected, if node p has node q as neighbor, then node q must have node p as neighbor too.
  * You must return the copy of the given node as a reference to the cloned graph.
- * {@link Java.graph.nodeBase.GraphClone}
+ * {@link GraphClone}
  */
 public class CloneGraph {
 

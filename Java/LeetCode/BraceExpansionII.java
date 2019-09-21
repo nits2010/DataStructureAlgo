@@ -60,7 +60,7 @@ import java.util.*;
 public class BraceExpansionII {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(braceExpansionII("{a,b}{c,{d,e}}") + " Expected " + Arrays.asList("ac", "ad", "ae", "bc", "bd", "be"));
         System.out.println(braceExpansionII("{{a,z},a{b,c},{ab,z}}") + " Expected " + Arrays.asList("a", "ab", "ac", "z"));
         System.out.println(braceExpansionII("{a{b,c}}{{d,e}f{g,h}}") + " Expected " + Arrays.asList("abdfg", "abdfh", "abefg", "abefh", "acdfg", "acdfh", "acefg", "acefh"));

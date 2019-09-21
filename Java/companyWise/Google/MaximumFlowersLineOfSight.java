@@ -1,6 +1,6 @@
 package Java.companyWise.Google;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -57,7 +57,7 @@ public class MaximumFlowersLineOfSight {
 
     private static void test(char[][] garden) {
 
-        System.out.println(Printer.toString(garden));
+        System.out.println(GenericPrinter.toString(garden));
         System.out.println("Max flower visibile :" + maximumFlower(garden));
     }
 

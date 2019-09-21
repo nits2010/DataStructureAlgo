@@ -11,7 +11,7 @@ import java.util.List;
 public class MatrixChainMultiplication {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         List<Integer> dime = new ArrayList<>();
 
         dime.add(40);
@@ -31,7 +31,7 @@ public class MatrixChainMultiplication {
 
         int n = A.size();
 
-        int cost[][] = new int[n][n];
+        int[][] cost = new int[n][n];
 
         for (int i = 0; i < n; i++)
             cost[i][i] = 0;

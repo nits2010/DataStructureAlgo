@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -37,30 +37,30 @@ public class MoveZero {
 
     static void test1(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         Sol1 sol1 = new Sol1();
         sol1.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
     }
 
 
     static void test2(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         Sol2 sol2 = new Sol2();
         sol2.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
     }
 
     static void test3(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         Sol3 sol = new Sol3();
         sol.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
     }
 }
 

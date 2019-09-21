@@ -1,6 +1,6 @@
 package Java.LeetCode.nonOverlappingSubArray;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -48,7 +48,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
     }
 
     private static void test(int[] nums, int L, int M, int expected) {
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         MaximumSumTwoNonOverlapUsingBuySellStocksIdea buySellStocksIdea = new MaximumSumTwoNonOverlapUsingBuySellStocksIdea();
         MaximumSumTwoNonOverlapDP dp = new MaximumSumTwoNonOverlapDP();
         System.out.println(" L : " + L + " M :" + M + " obtained :" + buySellStocksIdea.maxSumTwoNoOverlap(nums, L, M) + " Expected :" + expected);
@@ -184,7 +184,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
             for (int i = 1; i < nums.length; ++i)
                 nums[i] += nums[i - 1];
 
-            Printer.print(nums);
+            GenericPrinter.print(nums);
             System.out.println("........................................");
 
             int res = nums[L + M - 1], Lmax = nums[L - 1], Mmax = nums[M - 1];

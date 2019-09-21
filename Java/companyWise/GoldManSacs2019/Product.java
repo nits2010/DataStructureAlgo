@@ -71,7 +71,7 @@ public class Product {
         return count;
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(nonRepeatingDigitProductCount(2, 10, 15));
     }
 

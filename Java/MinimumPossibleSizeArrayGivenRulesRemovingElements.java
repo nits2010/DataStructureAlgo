@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -27,13 +27,13 @@ import java.util.Arrays;
  */
 public class MinimumPossibleSizeArrayGivenRulesRemovingElements {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test(new int[]{2, 3, 4, 5, 6, 4}, 1, 0);
         test(new int[]{2, 3, 4, 7, 6, 4}, 1, 3);
     }
 
     private static void test(int a[], int k, int expected) {
-        Printer.print(a);
+        GenericPrinter.print(a);
         System.out.println(minimumPossibleSizeArrayGivenRulesRemovingElements(a, k) + " expected " + expected);
     }
 

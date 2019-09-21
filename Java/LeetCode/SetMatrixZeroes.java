@@ -47,7 +47,7 @@ import java.util.Queue;
  */
 public class SetMatrixZeroes {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test1(new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}});
         test2(new int[][]{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}});

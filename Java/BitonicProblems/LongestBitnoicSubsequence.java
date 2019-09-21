@@ -15,7 +15,7 @@ package Java.BitonicProblems;
  */
 public class LongestBitnoicSubsequence {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int arr1[] = {1, 11, 2, 10, 4, 5, 2, 1};
         int arr2[] = {12, 11, 40, 5, 3, 1};
         int arr3[] = {80, 60, 30, 40, 20, 10};

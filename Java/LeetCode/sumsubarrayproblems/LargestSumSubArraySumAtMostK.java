@@ -14,7 +14,7 @@ import java.util.TreeSet;
  */
 public class LargestSumSubArraySumAtMostK {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(largestSumAtMostK(new int[]{2, 3, -4, 6, -8, -5}, 7));
         System.out.println(largestSumAtMostK(new int[]{2, 3, -4, 6, 8, -5}, 7));
         System.out.println(largestSumAtMostK(new int[]{-2, 3, -4, 6, 8, -5}, 7));

@@ -50,7 +50,7 @@ public class CountMinimumRightFlipsBulbsSwitch {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test(Arrays.asList(1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1));
         test(Arrays.asList(0, 0, 0, 1));
         test(Arrays.asList(1, 0, 0, 0));

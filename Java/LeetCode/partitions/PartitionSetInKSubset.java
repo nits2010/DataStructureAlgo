@@ -23,7 +23,7 @@ import java.util.Arrays;
  */
 public class PartitionSetInKSubset {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int res = partitionSetInKSubset(9, 3);
         int res2 = partitionSetInKSubsetSpaceOptimized(9, 3);

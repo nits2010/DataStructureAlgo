@@ -36,7 +36,7 @@ import java.util.PriorityQueue;
  */
 public class SlidingWindowMedian {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         SolutionSlidingWindowMedian median = new SolutionSlidingWindowMedian();
         test4(median);

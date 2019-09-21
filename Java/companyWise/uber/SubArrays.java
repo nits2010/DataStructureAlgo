@@ -13,7 +13,7 @@ import java.util.*;
 public class SubArrays {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
 //        Scanner scanner = new Scanner(System.in);

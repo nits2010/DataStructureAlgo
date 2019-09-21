@@ -21,7 +21,7 @@ import Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKade
  */
 public class MaxProductSubArray {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int nums[] = {-2, 0, -1};
         int nums2[] = {-2, -1, 0, -4};
         System.out.println(maxProduct(nums));

@@ -32,7 +32,7 @@ import java.util.Arrays;
  */
 public class PartitionSetIntoKSubsetEqualSum {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int nums[] = {4, 3, 2, 3, 5, 2, 1}, k = 4;
         System.out.println(canPartitionKSubsets(nums, 4));
         int nums2[] = {2, 1, 5, 3, 7};

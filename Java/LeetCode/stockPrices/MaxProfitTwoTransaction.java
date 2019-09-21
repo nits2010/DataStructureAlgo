@@ -6,7 +6,7 @@ package Java.LeetCode.stockPrices;
  * Description:
  */
 public class MaxProfitTwoTransaction {
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int prices3[] = {2,1,2,0,1};
         System.out.println(maxProfit(prices3));

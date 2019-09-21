@@ -456,19 +456,7 @@ public class BinarySearchTree implements IBinarySearchTree {
 
     @Override
     public TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
-        if (null == root)
-            return null;
-
-        //If this element is in between alpha and beta then this is LCA
-        if (alpha.getData().compareTo(root.getData()) <= 0 && beta.getData().compareTo(root.getData()) >= 0)
-            return root;
-
-        if (alpha.getData().compareTo(root.getData()) < 0)
-            return lowestCommonAncestor(root.getLeft(), alpha, beta);
-        else
-            return lowestCommonAncestor(root.getRight(), alpha, beta);
-
-
+        return LowestCommonAncestor.lowestCommonAncestorBST(root, alpha, beta);
     }
 
 
@@ -716,6 +704,7 @@ public class BinarySearchTree implements IBinarySearchTree {
         return checkForIdenticalBST(input1, input2, index1, index2, min, max);
 
     }
+
     //O(n^2)
     private boolean checkForIdenticalBST(List<Integer> input1, List<Integer> input2, int index1, int index2, int min, int max) {
 
@@ -756,7 +745,6 @@ public class BinarySearchTree implements IBinarySearchTree {
         return i;
 
     }
-
 
 
     @Override
@@ -897,9 +885,6 @@ public class BinarySearchTree implements IBinarySearchTree {
 
         return values;
     }
-
-
-
 
 
     class Wrapper {

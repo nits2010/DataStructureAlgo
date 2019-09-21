@@ -33,7 +33,7 @@ public class InterleavedListOfList {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test1();
         test2();

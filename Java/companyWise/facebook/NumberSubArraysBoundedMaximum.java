@@ -25,7 +25,7 @@ package Java.companyWise.facebook;
  */
 public class NumberSubArraysBoundedMaximum {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         SolutionNumberSubArraysBoundedMaximum sol = new SolutionNumberSubArraysBoundedMaximum();
         System.out.println(sol.countSubArrays(new int[]{2, 4, 3, 1, 8, 7, 6}, 2, 6));

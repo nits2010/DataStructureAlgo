@@ -30,7 +30,7 @@ package Java.companyWise.facebook;
  */
 public class ShortestSubArraySumGreaterThenN {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int arr[] = {1, 4, 45, 6, 0, 19};
         test(arr, 51);

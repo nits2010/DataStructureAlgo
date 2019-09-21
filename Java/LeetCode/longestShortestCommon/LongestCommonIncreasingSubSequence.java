@@ -1,6 +1,6 @@
 package Java.LeetCode.longestShortestCommon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -52,10 +52,10 @@ public class LongestCommonIncreasingSubSequence {
     private static void test(int[] arr1, int[] arr2, ILongestCommonIncreasingSubSequence sol, ILongestCommonIncreasingSubSequence sol2) {
         System.out.println("2D");
         System.out.println("First array : ");
-        Printer.print(arr1);
+        GenericPrinter.print(arr1);
 
         System.out.println("Second array : ");
-        Printer.print(arr2);
+        GenericPrinter.print(arr2);
 
         System.out.println("\n LCIS length 2D " + sol.longestCommonIncreasingSubSequence(arr1, arr2));
         System.out.println("\n LCIS length 1D " + sol2.longestCommonIncreasingSubSequence(arr1, arr2));

@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.modulo;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -30,8 +30,8 @@ public class AModKPairs {
     }
 
     private static void test(int[] nums, int k) {
-        System.out.println(Printer.toString(nums) + " k " + k);
-        System.out.println(Printer.toString(pairs(nums, k)));
+        System.out.println(GenericPrinter.toString(nums) + " k " + k);
+        System.out.println(GenericPrinter.toString(pairs(nums, k)));
     }
 
     /*

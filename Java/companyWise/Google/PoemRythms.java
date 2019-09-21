@@ -45,7 +45,7 @@ public class PoemRythms {
 
     static int count = 0;
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int n = 3;
         char[] str = new char[n];
 

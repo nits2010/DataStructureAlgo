@@ -47,7 +47,7 @@ public class IslandsSizeCount {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int mat[][] = {{1, 0, 0, 0, 1, 0},
                 {0, 1, 0, 0, 1, 0},
                 {0, 0, 1, 1, 0, 0},
@@ -88,8 +88,7 @@ public class IslandsSizeCount {
                     islands.count++;
 
                     //find the max size
-                    int max = Math.max(islands.currentSize, islands.size);
-                    islands.size = max;
+                    islands.size = Math.max(islands.currentSize, islands.size);
                 }
             }
         }

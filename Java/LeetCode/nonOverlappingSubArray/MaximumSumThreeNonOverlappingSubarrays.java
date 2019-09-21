@@ -1,6 +1,6 @@
 package Java.LeetCode.nonOverlappingSubArray;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -34,9 +34,9 @@ public class MaximumSumThreeNonOverlappingSubarrays {
     }
 
     private static void test(int[] nums, int k, int[] expected) {
-        System.out.println("Input : " + Printer.toString(nums) + " k :" + k);
+        System.out.println("Input : " + GenericPrinter.toString(nums) + " k :" + k);
         MaximumSum3NonOverlappingSubarrays sol = new MaximumSum3NonOverlappingSubarrays();
-        System.out.println("Obtained :" + Printer.toString(sol.maxSumOfThreeSubarrays(nums, k)) + " expected :" + Printer.toString(expected));
+        System.out.println("Obtained :" + GenericPrinter.toString(sol.maxSumOfThreeSubarrays(nums, k)) + " expected :" + GenericPrinter.toString(expected));
     }
 }
 
@@ -146,7 +146,7 @@ class MaximumSum3NonOverlappingSubarrays {
             j--;
         }
 
-        System.out.println("Left " + Printer.toString(leftWindowSum) + " \n right " + Printer.toString(rightWindowSum));
+        System.out.println("Left " + GenericPrinter.toString(leftWindowSum) + " \n right " + GenericPrinter.toString(rightWindowSum));
 
         /**
          * left -> represent the index of left sub-array

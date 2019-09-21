@@ -1,7 +1,5 @@
 package Java.LeetCode.Palindroms;
 
-import Java.HelpersToPrint.Printer;
-
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-19

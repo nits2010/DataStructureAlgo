@@ -412,26 +412,9 @@ public class BinaryTree implements IBinaryTree {
     }
 
 
-
-
     @Override
-    public TreeNode<Integer> lowestCommonAncestor
-            (TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
-        if (null == root)
-            return null;
-
-        if (root == alpha || root == beta)
-            return root;
-
-        TreeNode left = lowestCommonAncestor(root.getLeft(), alpha, beta);
-        TreeNode right = lowestCommonAncestor(root.getRight(), alpha, beta);
-
-        if (left != null && right != null)
-            return root;
-
-        return (left != null) ? left : right;
-
-
+    public TreeNode<Integer> lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> alpha, TreeNode<Integer> beta) {
+        return LowestCommonAncestor.lowestCommonAncestorBT(root, alpha, beta);
     }
 
 

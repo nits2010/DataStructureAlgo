@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -34,7 +34,7 @@ public class ProductArrayExceptSelf {
 
     private static void test(int[] nums) {
         System.out.println("Input: ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         System.out.println("outputs: ");
 
         IProductArrayExceptSelf division = new ProductArrayExceptSelfUsingDivision();

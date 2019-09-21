@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -34,6 +34,8 @@ import java.util.Arrays;
  * Output: 3
  * We need to remove any three elements from ends
  * like 20, 4, 1 or 4, 1, 3 or 20, 3, 1 or 20, 4, 1
+ * <p>
+ * Best solution : {@link RemoveMinimum2TimesMinGreaterThenMaxIterate}
  */
 public class RemoveMinimum2TimesMinGreaterThenMax {
 
@@ -49,25 +51,26 @@ public class RemoveMinimum2TimesMinGreaterThenMax {
     }
 
     public static void test(int[] nums, int expected) {
-        Printer.print(nums);
+        System.out.println("-------\nNums:" + GenericPrinter.toString(nums) + "\nExpected  : " + expected);
         RemoveMinimum2TimesMinGreaterThenMaxBacktrack backtrack = new RemoveMinimum2TimesMinGreaterThenMaxBacktrack();
         RemoveMinimum2TimesMinGreaterThenMaxDP dp = new RemoveMinimum2TimesMinGreaterThenMaxDP();
         RemoveMinimum2TimesMinGreaterThenMaxIterate iterate = new RemoveMinimum2TimesMinGreaterThenMaxIterate();
 
-        System.out.println("Backtrack: " + backtrack.minRemove(nums) + " expected :" + expected);
-        System.out.println("Top Down :" + dp.minRemoveTopDown(nums) + " expected :" + expected);
-        System.out.println("bottom up :" + dp.minRemoveBottomUp(nums) + " expected :" + expected);
-        System.out.println("Iterate  :" + iterate.minRemove(nums) + " expected :" + expected);
+        System.out.println("Backtrack : " + backtrack.minRemove(nums));
+        System.out.println("Top Down  : " + dp.minRemoveTopDown(nums));
+        System.out.println("bottom up : " + dp.minRemoveBottomUp(nums));
+        System.out.println("Iterate   : " + iterate.minRemove(nums));
     }
 }
 
 
 /**
- * In both dp solution, the bottel neck is extra n iteration done for finding min-max.
+ * In both dp solution, the bottle neck is extra n iteration done for finding min-max.
  * We can reduce it to O(logn) using segment tree.
  * https://www.geeksforgeeks.org/remove-minimum-elements-from-either-side-such-that-2min-becomes-more-than-max-set-2/
  * <p>
- * But the important observation is, if we go width wise, we can keep track the min max at the run time it self.
+ * In earlier Dp solution "Bottom up" we went width wise to find the min-max in that width [start,end].
+ * Then finding min-max in range of [start,end] alternatevlely we can keep track the min-max at the run time it self.
  * so we don't need to calculate all the time. O(1)
  * <p>
  * O(n^2)
@@ -80,25 +83,26 @@ class RemoveMinimum2TimesMinGreaterThenMaxIterate {
 
         int min, max;
         int minRemoval = 0;
-        for (int low = 0; low < a.length; low++) {
+
+        for (int start = 0; start < a.length; start++) {
 
             min = Integer.MAX_VALUE;
             max = Integer.MIN_VALUE;
-            for (int high = low; high < a.length; high++) {
 
-                if (min > a[high])
-                    min = a[high];
+            //keep increasing the width by adding more element on right side pointed by 'end'
+            for (int end = start; end < a.length; end++) {
 
-                if (max < a[high])
-                    max = a[high];
+                //keep track of min-max
+                min = Math.min(min, a[end]);
+                max = Math.max(max, a[end]);
 
+                //Do we need to remove any element in this window ?
                 if (2 * min <= max) //No removal required
                     break;
 
-                //remove it from high;
-                if ((high - low + 1 > minRemoval)) {
-                    minRemoval = high - low + 1;
-                }
+                //remove is required from either of side, hence at least 1; keep track the max removal
+                minRemoval = Math.max((end - start + 1), minRemoval);
+
             }
         }
 
@@ -114,7 +118,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxIterate {
  */
 class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
 
-    public int minRemove(int a[]) {
+    public int minRemove(int[] a) {
         if (null == a || a.length == 0)
             return 0;
 
@@ -122,11 +126,13 @@ class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
     }
 
     /**
-     * Our goal: Remove minimum elements s.t. 2*min > max; Hence maximum length of array possible; minimum operation
+     * Our goal: Remove minimum elements s.t. (2*min > max); Hence maximum length of array possible; minimum operation
      * Our choices: Either remove from low or high
      * Our constrains:
      * 1. Can't remove more then n elements
      * 2. only remove when 2*min > max
+     * <p>
+     * Time Complexity: O(n*2^n)
      *
      * @param a
      * @param low
@@ -144,7 +150,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
         if (low >= high)
             return 0;
 
-        int minMax[] = minMaxInRange(a, low, high);
+        int[] minMax = minMaxInRange(a, low, high);
 
         //Current array is at right portion
         if (minMax[0] * 2 > minMax[1])
@@ -158,7 +164,8 @@ class RemoveMinimum2TimesMinGreaterThenMaxBacktrack {
 
     }
 
-    static int[] minMaxInRange(int a[], int low, int high) {
+    //O(n)
+    static int[] minMaxInRange(int[] a, int low, int high) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         while (low <= high) {
@@ -226,7 +233,7 @@ class RemoveMinimum2TimesMinGreaterThenMaxDP {
         if (memo[low][high] != -1)
             return memo[low][high];
 
-        int minMax[] = minMaxInRange(a, low, high); //O(n)
+        int[] minMax = minMaxInRange(a, low, high); //O(n)
 
         //Current array is at right portion
         if (minMax[0] * 2 > minMax[1])
@@ -242,21 +249,31 @@ class RemoveMinimum2TimesMinGreaterThenMaxDP {
 
     /************** Bottom up *****************/
 
+    /**
+     * {@link Java.InterviewBit.MatrixChainMultiplication}
+     *
+     * @param a
+     * @return
+     */
     public int minRemoveBottomUp(int a[]) {
         if (null == a || a.length == 0)
             return 0;
 
         int[][] memo = new int[a.length][a.length];
-        for (int width = 0; width < a.length; width++) {
 
-            for (int low = 0, high = width; low < a.length && high < a.length; low++, high++) {
+        for (int width = 1; width <= a.length; width++) {
 
-                int[] minMax = minMaxInRange(a, low, high);
+            for (int start = 0; start < a.length - width + 1; start++) {
+
+                int end = width + start - 1;
+
+                int[] minMax = minMaxInRange(a, start, end);
 
                 if (minMax[0] * 2 > minMax[1])
                     continue;
 
-                memo[low][high] = Math.min(memo[low + 1][high], memo[low][high - 1]) + 1;
+                //either remove from start or end addition to this item
+                memo[start][end] = Math.min(memo[start + 1][end], memo[start][end - 1]) + 1;
 
             }
         }

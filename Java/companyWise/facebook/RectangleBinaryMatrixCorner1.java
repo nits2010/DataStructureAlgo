@@ -29,7 +29,7 @@ import java.util.Set;
  */
 public class RectangleBinaryMatrixCorner1 {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test1();
         test2();
         test3();

@@ -38,11 +38,13 @@ import java.util.List;
  * The substring with start index = 0 is "ab", which is an anagram of "ab".
  * The substring with start index = 1 is "ba", which is an anagram of "ab".
  * The substring with start index = 2 is "ab", which is an anagram of "ab".
+ * <p>
+ * {@link Java.companyWise.facebook.AnagramPermutationSearch} extension of above
  */
 public class FindAllAnagramsString {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(anagramSubstringSearch("zzzzzzzz", "zzzz"));
         System.out.println(anagramSubstringSearch("aaaaa", "aaaaaaa"));
         System.out.println(anagramSubstringSearch("cbaebabacd", "abc"));
@@ -52,6 +54,7 @@ public class FindAllAnagramsString {
     /**
      * Runtime: 10 ms, faster than 61.88% of Java online submissions for Find All Anagrams in a String.
      * Memory Usage: 38.2 MB, less than 100.00% of Java online submissions for Find All Anagrams in a String.
+     *
      * @param string
      * @param pattern
      * @return
@@ -69,7 +72,7 @@ public class FindAllAnagramsString {
         int p = pattern.length();
 
 
-        if(n==p)
+        if (n == p)
             return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++) {

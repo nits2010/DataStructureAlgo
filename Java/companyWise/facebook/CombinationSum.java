@@ -29,7 +29,7 @@ import java.util.Set;
  */
 public class CombinationSum {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int arr[] = {10, 15, 55};
         int sum = 1000;

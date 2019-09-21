@@ -40,7 +40,7 @@ package Java;
  */
 public class ATimesToContainB {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println();
         String a = "abcd";

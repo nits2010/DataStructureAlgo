@@ -7,6 +7,7 @@ import java.text.DecimalFormat;
  * Date: 15/03/19
  * Description:
  */
+
 public class ConvertNumberToWords {
 
     private static final String[] tensNames = {
@@ -175,28 +176,28 @@ public class ConvertNumberToWords {
      */
     public static void main(String[] args) {
 
-        System.out.println("*** " + convert(334.32f ));
+//        System.out.println("*** " + convert(334.32f ));
 
 
-//        System.out.println("*** " + convert(0, true));
-//        System.out.println("*** " + convert(1, true));
-//        System.out.println("*** " + convert(16, true));
-//        System.out.println("*** " + convert(100, true));
-//        System.out.println("*** " + convert(118, true));
-//        System.out.println("*** " + convert(200, true));
-//        System.out.println("*** " + convert(219, true));
-//        System.out.println("*** " + convert(800, true));
-//        System.out.println("*** " + convert(801, true));
-//        System.out.println("*** " + convert(1316, true));
-//        System.out.println("*** " + convert(1000000, true));
-//        System.out.println("*** " + convert(2000000, true));
-//        System.out.println("*** " + convert(3000200, true));
-//        System.out.println("*** " + convert(700000, true));
-//        System.out.println("*** " + convert(9000000, true));
-//        System.out.println("*** " + convert(9001000, true));
-//        System.out.println("*** " + convert(123456789, true));
-//        System.out.println("*** " + convert(2147483647, true));
-//        System.out.println("*** " + convert(3000000010L, true));
+        System.out.println("*** " + convert(0, true));
+        System.out.println("*** " + convert(1, true));
+        System.out.println("*** " + convert(16, true));
+        System.out.println("*** " + convert(100, true));
+        System.out.println("*** " + convert(118, true));
+        System.out.println("*** " + convert(200, true));
+        System.out.println("*** " + convert(219, true));
+        System.out.println("*** " + convert(800, true));
+        System.out.println("*** " + convert(801, true));
+        System.out.println("*** " + convert(1316, true));
+        System.out.println("*** " + convert(1000000, true));
+        System.out.println("*** " + convert(2000000, true));
+        System.out.println("*** " + convert(3000200, true));
+        System.out.println("*** " + convert(700000, true));
+        System.out.println("*** " + convert(9000000, true));
+        System.out.println("*** " + convert(9001000, true));
+        System.out.println("*** " + convert(123456789, true));
+        System.out.println("*** " + convert(2147483647, true));
+        System.out.println("*** " + convert(3000000010L, true));
 
         /*
          *** zero

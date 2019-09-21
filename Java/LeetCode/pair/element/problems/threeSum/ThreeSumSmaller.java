@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -35,7 +35,7 @@ public class ThreeSumSmaller {
     }
 
     private static void test(int[] nums, int target) {
-        System.out.println("Input :" + Printer.toString(nums));
+        System.out.println("Input :" + GenericPrinter.toString(nums));
 
         ThreeSumSmallerSorting sorting = new ThreeSumSmallerSorting();
         System.out.println("Sorting " + sorting.threeSumSmaller(nums, target));
@@ -49,8 +49,8 @@ public class ThreeSumSmaller {
  */
 class ThreeSumSmallerSorting {
 
-    public int threeSumSmaller(int nums[], int target) {
-        if (nums == null || nums.length == 0 || nums.length < 3)
+    int threeSumSmaller(int[] nums, int target) {
+        if (nums == null || nums.length < 3)
             return 0;
         return threeSum(nums, target);
     }
@@ -62,8 +62,8 @@ class ThreeSumSmallerSorting {
 
         int solution = 0;
 
-        /**
-         * 12 and [5, 1, 3, 4, 7] => [1,3,4,5,7]
+        /*
+          12 and [5, 1, 3, 4, 7] => [1,3,4,5,7]
          */
         Arrays.sort(nums);
 
@@ -71,8 +71,9 @@ class ThreeSumSmallerSorting {
 
             int a = nums[i];
 
-            /**
-             * Avoid duplicates
+
+            /*
+              Avoid duplicates
              */
             if (i > 0 && a == nums[i - 1])
                 continue;
@@ -86,7 +87,7 @@ class ThreeSumSmallerSorting {
                 int c = nums[k];
 
 
-                /**
+                /*
                  * [1,3,4,5,7] ; 12
                  *
                  * i= 0; a = 1
@@ -113,7 +114,7 @@ class ThreeSumSmallerSorting {
                     j++;
 
 
-                } else if (sum >= target)
+                } else
                     k--; //Sum is bigger, then reduce the bigger number to smaller number; hence k
             }
 

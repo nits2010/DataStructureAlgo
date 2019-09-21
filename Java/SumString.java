@@ -28,7 +28,7 @@ package Java;
  */
 public class SumString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String test1 = "12243660";
         String test2 = "1111112223";
         String test3 = "2368";
@@ -85,6 +85,6 @@ public class SumString {
 
     private static boolean sumString(String s1, String s2, String s3) {
 
-        return (Integer.valueOf(s1) + Integer.valueOf(s2) == Integer.valueOf(s3));
+        return (Integer.parseInt(s1) + Integer.parseInt(s2) == Integer.parseInt(s3));
     }
 }

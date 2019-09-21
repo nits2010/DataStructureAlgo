@@ -1,6 +1,6 @@
 package Java.LeetCode.serializeDeserialize.binarSearchTree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
 
 /**
@@ -22,7 +22,7 @@ public class Driver {
     }
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         preOrder();

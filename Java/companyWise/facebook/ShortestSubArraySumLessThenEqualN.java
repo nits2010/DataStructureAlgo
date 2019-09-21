@@ -28,7 +28,7 @@ import java.util.LinkedList;
  */
 public class ShortestSubArraySumLessThenEqualN {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int a[] = {1};
         test(a, 1);
 

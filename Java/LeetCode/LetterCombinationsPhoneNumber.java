@@ -28,7 +28,7 @@ import java.util.Queue;
 
 public class LetterCombinationsPhoneNumber {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println(letterCombinations("23"));
     }

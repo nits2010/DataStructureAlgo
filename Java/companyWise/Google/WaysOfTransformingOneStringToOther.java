@@ -26,7 +26,7 @@ package Java.companyWise.Google;
  */
 public class WaysOfTransformingOneStringToOther {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String a = "aabba", b = "ab";
         String x = "abcccdf", y = "abccdf";

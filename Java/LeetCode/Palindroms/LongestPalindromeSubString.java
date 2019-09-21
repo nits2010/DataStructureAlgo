@@ -4,30 +4,40 @@ package Java.LeetCode.Palindroms;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-23
  * Description: https://leetcode.com/problems/longest-palindromic-substring/
+ * 5. Longest Palindromic Substring
  * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: "babad"
  * Output: "bab"
  * Note: "aba" is also a valid answer.
  * Example 2:
- *
+ * <p>
  * Input: "cbbd"
  * Output: "bb"
  * Explanations: https://leetcode.com/articles/longest-palindromic-substring/
- *
- *
+ * https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/
  */
 public class LongestPalindromeSubString {
 
     public static void main(String str[]) {
-        System.out.println(longestPalindromeSubString("babad"));
+        System.out.println(longestPalindrome("babad"));
     }
 
-    //O(n^2)
-    public static String longestPalindromeSubString(String s) {
 
+    /**
+     * O(n^2)
+     * Runtime: 30 ms, faster than 48.36% of Java online submissions for Longest Palindromic Substring.
+     * Memory Usage: 36.1 MB, less than 100.00% of Java online submissions for Longest Palindromic Substring.
+     *
+     * @param s
+     * @return
+     */
+    public static String longestPalindrome(String s) {
+
+        if (null == s || s.isEmpty())
+            return s;
         int n = s.length();
         int max = 1;
         int start = 0;
@@ -65,6 +75,6 @@ public class LongestPalindromeSubString {
         }
 
 
-        return s.substring(start, start + max - 1);
+        return s.substring(start, start + max);
     }
 }

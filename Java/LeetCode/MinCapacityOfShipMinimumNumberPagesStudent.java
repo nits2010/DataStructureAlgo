@@ -50,7 +50,7 @@ package Java.LeetCode;
  */
 public class MinCapacityOfShipMinimumNumberPagesStudent {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionMinCapacityOfShipMinimumNumberPagesStudent sol = new SolutionMinCapacityOfShipMinimumNumberPagesStudent();
         int weights[] = {3, 2, 2, 4, 1, 4}, d = 3;
         System.out.println(sol.shipWithinDays(weights, d));

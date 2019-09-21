@@ -8,7 +8,7 @@ package Java.LeetCode;
 public class IsValidInteger {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionIsValidInteger solution = new SolutionIsValidInteger();
 
        /* "0" =>true

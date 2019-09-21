@@ -29,7 +29,7 @@ import java.util.*;
  */
 public class RemoveInvalidPretenses {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         BackTrackingDFS dfs = new BackTrackingDFS();
         BackTrackingBFS bfs = new BackTrackingBFS();

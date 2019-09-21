@@ -1,6 +1,6 @@
 package Java.companyWise.Adobe;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -38,7 +38,7 @@ public class MinimiseTheMaximumDifferenceBetweenHeightsTower {
     }
 
     private static void test(int[] height, int b, int expected) {
-        System.out.println("Input :" + Printer.toString(height));
+        System.out.println("Input :" + GenericPrinter.toString(height));
         System.out.println(" minDifference : " + MinimumDifferenceHeightTowerMinimumPossibleDifference.minDifference(height, b) + " expected " + expected);
     }
 

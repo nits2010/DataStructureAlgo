@@ -11,7 +11,7 @@ import java.util.List;
 public class DriverProgramAVLTree {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         IBinaryTree avlTree = new AVLTree();
         List<TreeNode> nodes = new LinkedList<>();

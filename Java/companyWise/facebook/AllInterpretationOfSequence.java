@@ -42,7 +42,7 @@ public class AllInterpretationOfSequence {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int[] arr = {1, 1, 3, 4};
         List<String> out = allInterpretationOfSequence(arr);

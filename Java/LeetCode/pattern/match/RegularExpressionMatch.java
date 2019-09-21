@@ -48,11 +48,10 @@ package Java.LeetCode.pattern.match;
  * s = "mississippi"
  * p = "mis*is*p*."
  * Output: false
- *
+ * <p>
  * My Explanation: https://leetcode.com/problems/regular-expression-matching/discuss/354099/100-Pure-explanation-and-derivation-to-DP-with-lot-of-example-or-JAVA-or-Beat-96-and-100
  * https://leetcode.com/problems/regular-expression-matching/discuss/5651/Easy-DP-Java-Solution-with-detailed-Explanation
  * https://youtu.be/l3hda49XcDE
- *
  */
 public class RegularExpressionMatch {
 
@@ -195,12 +194,13 @@ class RegularExpressionMatchDP {
      * Text[i-1] != Pattern[j-1] and Pattern[j-1]!=’.’ and Pattern[j-1]!=’* => False
      * Pattern[j-1] == ‘.’ => M[i-1][j-1]
      * Pattern[j-1] == ‘*’ => M[i][j-2] | (if Pattern[j-2] == ‘.’ Or Pattern[j-2] == Text[i-1]) M[i-1][j]
-     *
+     * <p>
      * 1   if p.charAt(j-1) != s.charAt(i) : dp[i][j] = dp[i][j-2]  //in this case, a* only counts as empty
-     *                2   if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
-     *                               dp[i][j] = dp[i-1][j]    //in this case, a* counts as multiple a
-     *                            or dp[i][j] = dp[i][j-1]   // in this case, a* counts as single a
-     *                            or dp[i][j] = dp[i][j-2]   // in this case, a* counts as empty
+     * 2   if p.charAt(i-1) == s.charAt(i) or p.charAt(i-1) == '.':
+     * dp[i][j] = dp[i-1][j]    //in this case, a* counts as multiple a
+     * or dp[i][j] = dp[i][j-1]   // in this case, a* counts as single a
+     * or dp[i][j] = dp[i][j-2]   // in this case, a* counts as empty
+     *
      * @param text
      * @param pattern
      * @return
@@ -230,14 +230,11 @@ class RegularExpressionMatchDP {
         /**
          * For simplicity i took this
          */
-        char texts[] = text.toCharArray();
-        char patterns[] = pattern.toCharArray();
+        char[] texts = text.toCharArray();
+        char[] patterns = pattern.toCharArray();
 
-        //Corner case
-        if (patterns[0] == '*')
-            return false;
 
-        final boolean M[][] = new boolean[textLength + 1][patternLength + 1];
+        final boolean[][] M = new boolean[textLength + 1][patternLength + 1];
 
         /**
          * Empty string matches to empty pattern
@@ -262,6 +259,7 @@ class RegularExpressionMatchDP {
                 //Text[i-1] == Pattern[j-1]  Or Pattern[j-1] == ‘.’
                 if (texts[i - 1] == patterns[j - 1] || patterns[j - 1] == '.')
                     M[i][j] = M[i - 1][j - 1];
+
                 else if (patterns[j - 1] == '*') {
 
                     //The character at pattern is “*” => Look back either 2 character before (assume previous character don’t exist

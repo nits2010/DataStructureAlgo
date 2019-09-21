@@ -23,7 +23,7 @@ package Java.LeetCode.sortedrotated;
  */
 public class MinimumRotatedSortedArrayFindPivot {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         FindPivot min = new FindPivot();
         System.out.println(min.search(new int[]{4, 5, 6, 7, 8, 9, 1, 2, 3}));
         System.out.println(min.search(new int[]{4, 5, 6, 7, 0, 1, 2}));

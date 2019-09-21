@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
  */
 public class WordOrdering {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String words[] = {"cc", "cb", "bb", "ac"};
         char ordering[] = {'c', 'b', 'a'};

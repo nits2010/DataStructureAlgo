@@ -236,12 +236,11 @@ class IsomorphicStringsUsingHash {
 
             for (char c : s.toCharArray()) {
 
-                if (map.containsKey(c))
-                    hash.append(map.get(c));
-                else {
+                if (!map.containsKey(c)) {
                     map.put(c, count++);
-                    hash.append(map.get(c));
                 }
+                hash.append(map.get(c));
+
             }
 
 

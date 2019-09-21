@@ -57,7 +57,7 @@ package Java.LeetCode.pattern.match;
 public class WildcardMatching {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(isMatch("aa", "*"));
         System.out.println(isMatch("cb", "?a"));
         System.out.println(isMatch("adceb", "*a*b"));

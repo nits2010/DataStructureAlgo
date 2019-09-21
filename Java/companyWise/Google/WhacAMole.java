@@ -1,6 +1,6 @@
 package Java.companyWise.Google;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -44,7 +44,7 @@ public class WhacAMole {
         WhacAMoleMemoryEfficient withoutMemory = new WhacAMoleMemoryEfficient();
 
         System.out.println("\nWindow : " + w + " Input ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         System.out.println("Whac-Moles using 1 Mallet : " + memory.whacAMoleSingleMallet(nums, w));
         System.out.println("Whac-Moles using 1 Mallet (Without memory) : " + withoutMemory.whacAMoleSingleMallet(nums, w));
 

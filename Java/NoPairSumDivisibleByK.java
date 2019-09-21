@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -32,7 +32,7 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubSet(int[] nums, int k, SubSetNoPairSumDivisibleByK subset) {
         System.out.println("Input ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         List<Integer> modulo = subset.maximumSizeSubSetNoPairSumDivisibleByKElements(nums, k);
         System.out.println("Size : " + modulo.size() + " array " + modulo);
     }
@@ -51,10 +51,10 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubArray(int[] nums, int k, SubArrayNoPairSumDivisibleByK array) {
         System.out.println("Input ");
-        Printer.print(nums);
+        GenericPrinter.print(nums);
         int[] modulo = array.maximumSizeSubSetNoPairSumDivisibleByK(nums, k);
         System.out.println("output ");
-        Printer.print(modulo);
+        GenericPrinter.print(modulo);
     }
 }
 

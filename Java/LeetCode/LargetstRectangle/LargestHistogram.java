@@ -17,7 +17,7 @@ import java.util.Stack;
  */
 public class LargestHistogram {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int input[] = {2, 1, 5, 6, 2, 3};
         System.out.println(largestRectangleAreaIn1D(input));
 

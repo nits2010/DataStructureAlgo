@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class NextSmallestPalindrome {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int num[] = {7, 2, 3, 3, 8, 2};
         int next[] = nextPalindrome(num, num.length);
 

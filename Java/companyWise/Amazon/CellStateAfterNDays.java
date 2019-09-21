@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -56,8 +56,8 @@ import Java.HelpersToPrint.Printer;
  */
 public class CellStateAfterNDays {
     public static void main(String[] args) {
-        Printer.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
-        Printer.print(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
+        GenericPrinter.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
+        GenericPrinter.print(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
     }
 
 
@@ -73,7 +73,7 @@ public class CellStateAfterNDays {
      */
     static int[] cellAfterNDays(int[] houses, int N) {
         System.out.println("Given N: " + N);
-        Printer.print(houses);
+        GenericPrinter.print(houses);
         N = (N - 1) % 14 + 1;
         final int houseSize = 8;
 

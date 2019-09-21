@@ -8,7 +8,7 @@ package Java;
  */
 public class LongestPossibleChunkedPalindrome {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         String input1 = "ghiabcdefhelloadamhelloabcdefghi";
         String input2 = "antaprezatepzapreanta";

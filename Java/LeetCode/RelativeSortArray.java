@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -41,19 +41,19 @@ public class RelativeSortArray {
 
     static void test(int a[], int b[]) {
         System.out.println("\nInput ");
-        Printer.print(a);
-        Printer.print(b);
+        GenericPrinter.print(a);
+        GenericPrinter.print(b);
         int[] usingMap = SortArrayAccordingToOrderDefinedAnotherArray.relativeSortArray(a, b);
         System.out.println("usingMap ");
-        Printer.print(usingMap);
+        GenericPrinter.print(usingMap);
 
         int[] bucketSort = SortArrayAccordingToOrderDefinedAnotherArrayUsingBuckets.relativeSortArray(a, b);
         System.out.println("bucketSort ");
-        Printer.print(bucketSort);
+        GenericPrinter.print(bucketSort);
 
         int[] customSort = SortArrayAccordingToOrderDefinedAnotherArrayUsingCustomSort.relativeSortArray(a, b);
         System.out.println("customSort ");
-        Printer.print(customSort);
+        GenericPrinter.print(customSort);
     }
 }
 

@@ -8,11 +8,12 @@ package Java.Tree;
 public class FlipTreeUpSideDown {
 
 
-    /**
+    /***
+     * Given a binary tree where all the right nodes are either leaf nodes with a sibling (a left node that shares the same parent node)
+     * or empty.
      * https://www.geeksforgeeks.org/flip-binary-tree/
      * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
      * <p>
-     * CODE is wrong if the left most node has right child then it is wrong
      *
      * @param root
      * @return

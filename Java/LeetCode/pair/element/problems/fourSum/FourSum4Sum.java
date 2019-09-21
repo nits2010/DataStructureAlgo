@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.fourSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.threeSum.ThreeSum3Sum;
 import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
@@ -10,18 +10,12 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/4sum/
- * <p>
  * Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target?
  * Find all unique quadruplets in the array which gives the sum of target.
- * <p>
  * Note:
- * <p>
  * The solution set must not contain duplicate quadruplets.
- * <p>
  * Example:
- * <p>
  * Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.
- * <p>
  * A solution set is:
  * [
  * [-1,  0, 0, 1],
@@ -31,9 +25,8 @@ import java.util.*;
  * <p>
  * {@link ThreeSum3Sum}
  * {@link TwoSum2Sum}
- *
+ * <p>
  * https://leetcode.com/problems/4sum/discuss/359397/Optimisations-or-Thought-Process-or-Java-or-4ms
- *
  * https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
  */
 public class FourSum4Sum {
@@ -51,7 +44,7 @@ public class FourSum4Sum {
 
     private static void test(int[] nums, int target) {
 
-        System.out.println("\nInput: " + Printer.toString(nums) + " target :" + target);
+        System.out.println("\nInput: " + GenericPrinter.toString(nums) + " target :" + target);
         IFourSum4Sum sorting = new FourSum4SumSortingV1();
         IFourSum4Sum sorting2 = new FourSum4SumSortingV2();
         System.out.println("V1 : " + sorting.fourSum(nums, target));
@@ -66,10 +59,11 @@ interface IFourSum4Sum {
 }
 
 /**
- * Fix the first element as A[i] where i is from 0 to n–3.
- * After fixing the first element of quadruple, fix the second element as A[j] where j varies from i+1 to n-2.
- * Find remaining two elements in O(n) time, using the two sum
- * O(n^3)
+ * Algo:
+ * 1. Fix the first element as A[i] where i is from 0 to n–3.
+ * 2. After fixing the first element of quadruple, fix the second element as A[j] where j varies from i+1 to n-2.
+ * 3. Find remaining two elements in O(n) time, using the two sum {@link TwoSum2Sum}
+ * Complexity: O(n^3)
  * Runtime: 19 ms, faster than 68.43% of Java online submissions for 4Sum.
  * Memory Usage: 37.1 MB, less than 100.00% of Java online submissions for 4Sum.
  */
@@ -77,10 +71,10 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
 
     @Override
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        if (nums == null || nums.length == 0 || nums.length < 4)
+        if (nums == null || nums.length < 4)
             return Collections.EMPTY_LIST;
 
-        /**
+        /*
          * The solution set must not contain duplicate quadruplets.
          */
         List<List<Integer>> solution = new ArrayList<>();
@@ -88,22 +82,24 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
 
         Arrays.sort(nums);
 
+        //1. Fix the first element as A[i] where i is from 0 to n–3.
         for (int i = 0; i < nums.length - 3; i++) {
 
             int a = nums[i];
 
-            /**
+            /*
              * Avoid duplicate
              */
             if (i > 0 && a == nums[i - 1])
                 continue;
 
 
+            //2. After fixing the first element of quadruple, fix the second element as A[j] where j varies from i+1 to n-2.
             for (int j = i + 1; j < nums.length - 2; j++) {
 
                 int b = nums[j];
 
-                /**
+                /*
                  * Avoid duplicate
                  */
                 if (j > i + 1 && b == nums[j - 1])
@@ -112,6 +108,10 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
 
                 int l = j + 1;
                 int r = nums.length - 1;
+
+                /*
+                  3. Find remaining two elements in O(n) time, using the two sum
+                 */
 
                 twoSum(nums, l, r, a, b, target, solution);
 
@@ -124,7 +124,7 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
 
     }
 
-    private void twoSum(int nums[], int l, int r, int a, int b, int target, List<List<Integer>> solution) {
+    private void twoSum(int []nums, int l, int r, int a, int b, int target, List<List<Integer>> solution) {
         while (l < r) {
             int c = nums[l];
             int d = nums[r];
@@ -135,7 +135,7 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
 
                 solution.add(Arrays.asList(a, b, c, d));
 
-                /**
+                /*
                  * Avoid immediate duplicates
                  */
                 while (l < r && c == nums[++l]) ;
@@ -168,22 +168,23 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
         List<List<Integer>> solution = new ArrayList<>();
         Arrays.sort(nums);
 
-        /**
+        /*
          * Fix first element from left
          */
         for (int i = 0; i < nums.length - 3; i++) {
 
             int a = nums[i];
 
-            /**
-             * return immediately if a*4>target
+            /*
+             * return immediately if (a * 4 > target)
              * As we going to include 3 more element with this which are always greater and equal this number.
              * In the least case, when they are equal then it becomes 4*a. If 4*a > target
              * then then its not possible as remaining equal/greater number will be more than > target always as data is sorted
              */
-            if (a << 2 > target) return solution;
+            if ((a << 2) > target)
+                return solution;
 
-            /**
+            /*
              * Fix last element from array's last;
              * j>i+2; since in-between we need to find 2 elements which gives us total 4 element.
              * hence those two element will run in between of i+1 to j-1
@@ -192,23 +193,24 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
 
                 int b = nums[j];
 
-                /**
+                /*
                  * break immediately if nums[j]*4 < target
                  *
                  * return immediately if b*4<target
                  * As we going to include 3 more element with this which are always smaller and equal this number.
-                 * In the least case, when they are equal then it becomes 4*b. If 4*a < target
+                 * In the least case, when they are equal then it becomes 4*b. If 4*b < target
                  * then then its not possible as remaining equal/smaller number will be less than < target always as data is sorted and we are moving
                  * j towards left which makes every element smaller than the current j'th element
                  */
-                if (b << 2 < target) break;
+                if (b << 2 < target)
+                    break;
 
-                /**
+                /*
                  * convert to two sum
                  */
                 int rem = target - nums[i] - nums[j];
 
-                /**
+                /*
                  * Problem reduce to Two-Sum problem
                  */
                 int lo = i + 1, hi = j - 1;
@@ -226,12 +228,14 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
         return solution;
     }
 
-    private void twoSum(int nums[], int target, int low, int high, int i, int j, List<List<Integer>> list) {
+    private void twoSum(int []nums, int target, int low, int high, int i, int j, List<List<Integer>> list) {
 
         while (low < high) {
             int sum = nums[low] + nums[high];
-            if (sum > target) high--;
-            else if (sum < target) low++;
+            if (sum > target)
+                high--;
+            else if (sum < target)
+                low++;
             else {
                 list.add(Arrays.asList(nums[i], nums[low], nums[high], nums[j]));
                 low++;

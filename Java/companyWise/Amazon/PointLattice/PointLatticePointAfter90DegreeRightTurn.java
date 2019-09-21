@@ -11,7 +11,7 @@ package Java.companyWise.Amazon.PointLattice;
  */
 public class PointLatticePointAfter90DegreeRightTurn {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionPointLatticePointAfter90DegreeRightTurn sol = new SolutionPointLatticePointAfter90DegreeRightTurn();
         System.out.println(sol.solution(2, 2, 2, -3));
         System.out.println(sol.solution(-1, 3, 3, 1));

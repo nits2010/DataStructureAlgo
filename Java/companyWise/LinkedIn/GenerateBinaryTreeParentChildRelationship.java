@@ -60,7 +60,7 @@ public class GenerateBinaryTreeParentChildRelationship {
 
     static Node root = null;
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         Node root = test1();
         inorder(root);

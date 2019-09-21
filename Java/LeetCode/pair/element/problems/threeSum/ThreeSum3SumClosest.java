@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -9,7 +9,8 @@ import java.util.Arrays;
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/3sum-closest/
  * <p>
- * Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+ * Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target.
+ * Return the sum of the three integers. You may assume that each input would have exactly one solution.
  * <p>
  * Example:
  * <p>
@@ -31,7 +32,7 @@ public class ThreeSum3SumClosest {
     private static void test(int[] nums, int target) {
 
         IThreeSum3SumClosest sorting = new IThreeSum3SumClosestSorting();
-        System.out.println("Input: " + Printer.toString(nums));
+        System.out.println("Input: " + GenericPrinter.toString(nums));
         System.out.println(" Closest :" + sorting.threeSumClosest(nums, target));
 
     }
@@ -95,7 +96,7 @@ class IThreeSum3SumClosestSorting implements IThreeSum3SumClosest {
                  */
                 if (sum < target)
                     j++;
-                else if (sum > target) //If sum is smaller then bigger, then we need decrese the sum hence k--
+                else if (sum > target) //If sum is smaller then bigger, then we need decrease the sum hence k--
                     k--;
 
                 int currentDiff = Math.abs(sum - target);

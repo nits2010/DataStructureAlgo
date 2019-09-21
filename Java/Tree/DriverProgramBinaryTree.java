@@ -11,7 +11,7 @@ import java.util.List;
 public class DriverProgramBinaryTree {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         IBinaryTree binaryTree = new BinaryTree();

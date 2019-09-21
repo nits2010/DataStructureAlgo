@@ -47,7 +47,7 @@ package Java;
  */
 public class MaxA {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         // for the rest of the array we will rely on the previous
         // entries to compute new ones

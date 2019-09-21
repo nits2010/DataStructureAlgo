@@ -1,5 +1,8 @@
 package Java;
 
+import Java.HelpersToPrint.GenericPrinter;
+import com.sun.tools.javah.Gen;
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -20,14 +23,21 @@ import java.util.Stack;
  * <p>
  * Input: arr[] = {1, 3, 0, 2, 5}
  * Output:        {_, 1, _, 0, 2}
+ * <p>
+ * similar {@link NextGreaterElementOnRightSide}
  */
 public class SmallerElementOnLeftSide {
 
 
     public static void main(String[] args) {
-        int[] a = new int[]{12, 11, 10, 5, 6, 2, 30, 5, 3, 32, 2, 40};
-        int greaterOnRightSide[] = immediateSmallerElementOnLeftSide(a);
-        Arrays.stream(greaterOnRightSide).forEach(ele -> System.out.println(ele + " "));
+        test(new int[]{12, 11, 10, 5, 6, 2, 30, 5, 3, 32, 2, 40}, new int[]{-1, -1, -1, -1, 3, -1, 5, 5, 5, 8, -1, 10});
+
+    }
+
+    private static void test(int[] nums, int[] expected) {
+        System.out.println("\nNums:" + GenericPrinter.toString(nums) + "\nExpected:" + GenericPrinter.toString(expected));
+        System.out.println("Obtained:" + GenericPrinter.toString(immediateSmallerElementOnLeftSide(nums)));
+
     }
 
     public static int[] immediateSmallerElementOnLeftSide(int nums[]) {
@@ -35,20 +45,23 @@ public class SmallerElementOnLeftSide {
         if (null == nums || nums.length == 0)
             return nums;
 
-        Stack<Integer> stack = new Stack<>();
-        int smallerOnLeftSide[] = new int[nums.length];
+        Stack<Integer> stack = new Stack<>();//indexes
+        int[] smallerOnLeftSide = new int[nums.length];
         smallerOnLeftSide[0] = -1; //there is no smaller element on left side of first element
 
-        stack.push(0); //indexes
+        stack.push(0);
 
         for (int i = 1; i < nums.length; i++) {
 
+            //pop all the greater & equal element on left side of nums[i]
             while (!stack.isEmpty() && nums[stack.peek()] >= nums[i])
                 stack.pop();
 
+            //if there is element on the stack, then top element is smaller left element of nums[i]
             if (!stack.isEmpty()) {
                 smallerOnLeftSide[i] = stack.peek();
             } else
+                //there is no smaller element of this nums[i]
                 smallerOnLeftSide[i] = -1;
 
             stack.push(i);

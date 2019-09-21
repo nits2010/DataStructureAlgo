@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -53,13 +53,13 @@ public class CourseSchedule2 {
 
     private static void test(int numCourses, int[][] prerequisites, int[] expected) {
 
-        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + Printer.toString(prerequisites));
+        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + GenericPrinter.toString(prerequisites));
 
         ICourseSchedule bfs = new CourseScheduleIIBFS();
         ICourseSchedule dfs = new CourseScheduleIIDFS();
 
-        System.out.println("BFS Order:" + Printer.toString(bfs.findOrder(numCourses, prerequisites)) + " expected :" + Printer.toString(expected));
-        System.out.println("DFS Order:" + Printer.toString(dfs.findOrder(numCourses, prerequisites)) + " expected :" + Printer.toString(expected));
+        System.out.println("BFS Order:" + GenericPrinter.toString(bfs.findOrder(numCourses, prerequisites)) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("DFS Order:" + GenericPrinter.toString(dfs.findOrder(numCourses, prerequisites)) + " expected :" + GenericPrinter.toString(expected));
 
     }
 
@@ -121,7 +121,7 @@ class CourseScheduleIIBFS implements ICourseSchedule {
                     queue.offer(v);
         }
 
-        if (count < 0) //Or you have to reverse the array if you start from 0th index
+        if (count < 0) //Or you have to shortestPath the array if you start from 0th index
             return order;
 
         return new int[0];

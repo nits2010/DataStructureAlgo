@@ -27,7 +27,7 @@ package Java.companyWise.facebook;
  */
 public class SimilarRGBColor {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         ClosestRGBColor closestRGBColor = new ClosestRGBColor();
         System.out.println(closestRGBColor.closestRGB("#09f166"));
         System.out.println(closestRGBColor.closestRGBLook("#09f166"));

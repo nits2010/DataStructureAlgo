@@ -1,9 +1,8 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Comparator;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
@@ -82,7 +81,7 @@ class LastStoneWeightPriorityQueue {
         if (null == stones || stones.length == 0)
             return 0;
 
-        System.out.println(Printer.toString(stones));
+        System.out.println(GenericPrinter.toString(stones));
 
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
 

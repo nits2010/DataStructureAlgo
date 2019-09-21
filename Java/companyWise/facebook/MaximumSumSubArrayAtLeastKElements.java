@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -31,10 +31,16 @@ public class MaximumSumSubArrayAtLeastKElements {
         System.out.println(maxSum(new int[]{1, 1, 1, 1, 1, 1}, 2));
     }
 
+    /**
+     * {@link Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * @param num
+     * @param k
+     * @return
+     */
     static int maxSum(int num[], int k) {
         if (num == null || num.length == 0)
             return 0;
-        Printer.print(num);
+        GenericPrinter.print(num);
 
         int max = Integer.MIN_VALUE;
 

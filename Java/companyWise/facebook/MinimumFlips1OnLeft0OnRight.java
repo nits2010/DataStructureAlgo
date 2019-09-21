@@ -19,13 +19,13 @@ package Java.companyWise.facebook;
  */
 public class MinimumFlips1OnLeft0OnRight {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        System.out.println(flips( "00001"));
-        System.out.println(flips( "1011000"));
-        System.out.println(flips( "1111000"));
-        System.out.println(flips( "000000"));
-        System.out.println(flips( "1111"));
+        System.out.println(flips("00001"));
+        System.out.println(flips("1011000"));
+        System.out.println(flips("1111000"));
+        System.out.println(flips("000000"));
+        System.out.println(flips("1111"));
 
     }
 
@@ -75,8 +75,8 @@ public class MinimumFlips1OnLeft0OnRight {
         if (null == bits || bits.isEmpty())
             return 0;
 
-        int lFlip[] = new int[bits.length()];
-        int rFlip[] = new int[bits.length()];
+        int[] lFlip = new int[bits.length()];
+        int[] rFlip = new int[bits.length()];
 
         lFlip[0] = bits.charAt(0) == '0' ? 1 : 0;
 

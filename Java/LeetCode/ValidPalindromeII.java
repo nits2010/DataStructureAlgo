@@ -20,7 +20,7 @@ package Java.LeetCode;
  * The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
  */
 public class ValidPalindromeII {
-    public static void main(String args[]) {
+    public static void main(String []args) {
         SolutionValidPalindromeII sol = new SolutionValidPalindromeII();
         System.out.println(sol.validPalindrome("aba"));
         System.out.println(sol.validPalindrome("abc"));

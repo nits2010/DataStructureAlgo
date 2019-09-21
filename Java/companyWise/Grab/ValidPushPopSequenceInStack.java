@@ -16,7 +16,7 @@ import java.util.Stack;
  */
 public class ValidPushPopSequenceInStack {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         int push[] = {44, 66, 2, 88, 32, 9};
         int pop[] = {88, 2, 9, 32, 66, 44};

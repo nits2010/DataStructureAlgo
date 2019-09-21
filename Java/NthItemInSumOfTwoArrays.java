@@ -34,7 +34,7 @@ import java.util.Set;
  */
 public class NthItemInSumOfTwoArrays {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int arr1[] = {1, 2};
         int arr2[] = {3, 4};
 

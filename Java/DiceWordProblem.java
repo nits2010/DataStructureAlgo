@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class DiceWordProblem {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String word = "xniu";
         char dices[][] = {{'a', 'b', 'c', 'd', 'x', 'y'},
                 {'e', 'f', 'g', 'h', 'i', 'j'},

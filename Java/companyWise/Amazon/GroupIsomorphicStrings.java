@@ -58,7 +58,7 @@ class GroupIsomorphicStringsUsingHash {
 
         for (String string : strings) {
 
-            String hash = hash(string);
+            String hash = hash2(string);
 
             if (!hashToList.containsKey(hash))
                 hashToList.put(hash, new ArrayList<>());
@@ -84,13 +84,57 @@ class GroupIsomorphicStringsUsingHash {
 
         for (char c : s.toCharArray()) {
 
-            if (map.containsKey(c))
-                hash.append(map.get(c));
-            else {
+            if (!map.containsKey(c)) {
                 map.put(c, count++);
-                hash.append(map.get(c));
             }
+            hash.append(map.get(c) + ","); //for cases like when counter=12 then 12 and actual 12(1 for a, 2 for b) should be different
+            //"apple" -> 1,2,2,3,4 & "apply" -> 1,2,2,3,4. It will make "22" different from "2,2".
         }
+        hash.deleteCharAt(hash.length() - 1);
+        return hash.toString();
+    }
+
+
+    /**
+     * There is a limitation on above has. when the counter become >= 11 { two or more digits }
+     * the it is difficult to distiguish between counter =11 and whne counter =1 but
+     * <p>
+     * example:
+     * ...aa... -> ..44..
+     * ...zz.... -> ..44...
+     * They are different may be but mapped to same
+     * <p>
+     * Two way:
+     * 1. push "," as separator
+     * 2. use character
+     * <p>
+     * we can use 'character' it self
+     *
+     * apple->abbcd
+     * apply->abbcd
+     *
+     * romi->abcd
+     *
+     * @param s
+     * @return
+     */
+    private String hash2(String s) {
+        if (s.isEmpty())
+            return "";
+
+        char count = 'a';
+        StringBuilder hash = new StringBuilder();
+
+        Map<Character, Character> map = new HashMap<>();
+
+        for (char c : s.toCharArray()) {
+
+            if (!map.containsKey(c)) {
+                map.put(c, count++);
+            }
+            hash.append(map.get(c));
+        }
+        System.out.println(hash);
         return hash.toString();
     }
 

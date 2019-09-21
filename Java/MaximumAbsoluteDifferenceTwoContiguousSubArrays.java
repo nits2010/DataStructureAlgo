@@ -1,6 +1,6 @@
 package Java;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -21,7 +21,7 @@ import Java.HelpersToPrint.Printer;
  */
 public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int i1[] = {-2, -3, 4, -1, -2, 1, 5, -3};
         int i2[] = {2, -1, -2, 1, -4, 2, 8};
 
@@ -36,7 +36,7 @@ public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public int maximumAbsoluteDifferenceTwoContiguousSubArrays(int a[]) {
-        Printer.print(a);
+        GenericPrinter.print(a);
 
 
         if (a == null || a.length == 0)
@@ -83,9 +83,14 @@ class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
             a[i] = -a[i];
     }
 
+    /**
+     * {@link Java.LeetCode.MaximumSubarrayKadans}
+     * @param a
+     * @return
+     */
     private int[] maximumSumSubArrayKadansFromLeft(int a[]) {
         int n = a.length;
-        int res[] = new int[n];
+        int []res = new int[n];
 
 
         int currentSum = a[0];

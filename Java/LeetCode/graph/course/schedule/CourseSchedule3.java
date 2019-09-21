@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -43,7 +43,7 @@ public class CourseSchedule3 {
     }
 
     private static void test(int[][] courses, int expected) {
-        System.out.println("\n Input :" + Printer.toString(courses));
+        System.out.println("\n Input :" + GenericPrinter.toString(courses));
 
         ICourseSchedule recursive = new CourseSchedule3Recursive();
         ICourseSchedule dpTopDown = new CourseSchedule3DPTopDown();

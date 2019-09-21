@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
+import Java.LeetCode.templates.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import java.util.List;
  */
 public class AllRootToLeafPathBinaryTree {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test(getTree1());
         test(getTree2());
     }

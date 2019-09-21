@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class LongestIncreasingPath {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int m[][] = {{9, 9, 4}, {6, 6, 8}, {2, 1, 1}};
         int n[][] = {{7, 7, 5}, {2, 4, 6}, {8, 2, 0}};
         System.out.println(longestIncreasingPath(n));

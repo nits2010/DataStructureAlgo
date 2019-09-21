@@ -1,6 +1,6 @@
 package Java.LeetCode.partitions;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +47,7 @@ public class PartitionArrayThreePartsWithEqualSum {
     }
 
     private static void test(int[] nums, boolean expected) {
-        System.out.println("\n Input :" + Printer.toString(nums) + " expected " + expected);
+        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected " + expected);
         PartitionArrayThreePartsWithEqualSumPrefixSumArray prefixSumArray = new PartitionArrayThreePartsWithEqualSumPrefixSumArray();
         PartitionArrayThreePartsWithEqualSumPrefixSumArrayOptimized prefixSumArrayOptimized = new PartitionArrayThreePartsWithEqualSumPrefixSumArrayOptimized();
         PartitionArrayThreePartsWithEqualSumIndex sumIndex = new PartitionArrayThreePartsWithEqualSumIndex();

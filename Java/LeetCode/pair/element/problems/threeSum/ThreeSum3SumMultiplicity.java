@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.threeSum;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
 import java.util.*;
@@ -53,12 +53,12 @@ public class ThreeSum3SumMultiplicity {
     }
 
     private static void test(int[] nums, int target, int expected) {
-        System.out.println("Input :" + Printer.toString(nums));
+        System.out.println("Input :" + GenericPrinter.toString(nums));
 
         IThreeSum3SumMultiplicity sorting = new ThreeSum3SumMultiplicitySorting();
-        IThreeSum3SumMultiplicity couting = new ThreeSum3SumMultiplicityCounting();
+        IThreeSum3SumMultiplicity counting = new ThreeSum3SumMultiplicityCounting();
         System.out.println("Sorting: " + sorting.threeSumMulti(nums, target) + " expected :" + expected);
-        System.out.println("couting: " + couting.threeSumMulti(nums, target) + " expected :" + expected);
+        System.out.println("couting: " + counting.threeSumMulti(nums, target) + " expected :" + expected);
     }
 }
 
@@ -89,7 +89,7 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
      * j = 2 [2 index]
      * k = 5 [12]
      * <p>
-     * Hence j has duplicacy  till index 4 while k has till 10
+     * Hence j has duplicates  till index 4 while k has till 10
      * In total  x-> for j and y->k
      * x = 2 and y = 3
      * then there will be 2*3 pairs with current i, as we can choose all the permutation

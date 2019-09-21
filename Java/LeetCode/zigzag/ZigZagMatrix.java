@@ -1,6 +1,6 @@
 package Java.LeetCode.zigzag;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -50,7 +50,7 @@ public class ZigZagMatrix {
 
     public static void print(int zigZag[][]) {
 
-        Printer.print(zigZag);
+        GenericPrinter.print(zigZag);
         System.out.println("\n\n");
         int n = zigZag.length;
         int i = 1;

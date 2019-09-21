@@ -22,7 +22,7 @@ import java.util.Arrays;
 public class NextGreaterElementIII {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(nextGreaterElement(12443322));
         System.out.println(nextGreaterElement(12222333));
         System.out.println(nextGreaterElement(12));

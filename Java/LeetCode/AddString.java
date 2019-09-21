@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class AddString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         SolutionAddString sol = new SolutionAddString();

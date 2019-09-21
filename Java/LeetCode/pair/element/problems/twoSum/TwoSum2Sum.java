@@ -161,7 +161,7 @@ public class TwoSum2Sum {
         return new int[]{-1, -1};
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int nums[] = {1, 8, 5, 4};
         int x[] = twoSum(nums, 9);
         System.out.println(x[0] + " " + x[1]);

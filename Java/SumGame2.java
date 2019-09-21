@@ -25,7 +25,7 @@ class Solution {
 
 class SumGame2 {
 
-	public static void main(String args[]) throws Exception {
+	public static void main(String []args) throws Exception {
 
 		// Read input from stdin and provide input before running
 

@@ -129,7 +129,8 @@ public class MinimumWordBreak {
                 minCut++;
                 temp = temp.substring(lastMatchPoint + 1);
                 remaining -= lastMatchPoint + 1;
-            } else return minCut;
+            } else
+                return minCut;
 
         }
 
@@ -175,7 +176,7 @@ public class MinimumWordBreak {
     }
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String dictionary[] = {"Cat", "Mat", "Ca", "tM", "at", "C", "Dog", "og", "Do", "DogYat"};
 
         Trie trie = new Trie();

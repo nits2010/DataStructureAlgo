@@ -1,6 +1,6 @@
 package Java.LeetCode.games.sudoku;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -55,7 +55,7 @@ public class SudokuSolver {
     private static void test(char[][] board) {
         ISudokuSolver solver = new SudoSolverBacktrackingWithRestriction();
         solver.solveSudoku(board);
-        System.out.println(Printer.toString(board));
+        System.out.println(GenericPrinter.toString(board));
     }
 }
 

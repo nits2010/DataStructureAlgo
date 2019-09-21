@@ -34,7 +34,7 @@ import java.util.HashMap;
  */
 public class LongestArithmeticSequence {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test1();
         test2();

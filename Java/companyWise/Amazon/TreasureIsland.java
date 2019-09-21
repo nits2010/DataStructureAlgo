@@ -1,6 +1,6 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-20
  * Description: https://leetcode.com/discuss/interview-question/347457/Amazon-or-OA-2019-or-Treasure-Island
- * ou have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs.
+ * You have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs.
  * Other areas are safe to sail in. There are other explorers trying to find the treasure. So you must figure out a shortest
  * route to the treasure island.
  * <p>
@@ -31,7 +31,6 @@ import java.util.*;
  * <p>
  * Similar {@link Java.LeetCode.island.NumberIslands}
  * Similar {@link RemoveObstacleRobotMinimumDistance} In current question we need to find the path as well.
- *
  */
 
 
@@ -51,7 +50,7 @@ public class TreasureIsland {
     private static void test(char[][] grid) {
         BFS bfs = new BFS();
         List<int[]> path = bfs.shortestPathToTreasureIsland(grid);
-        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + Printer.toString(path));
+        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + GenericPrinter.toString(path));
     }
 
 
@@ -60,10 +59,10 @@ public class TreasureIsland {
      */
     private static class BFS {
 
-        public List<int[]> shortestPathToTreasureIsland(char grid[][]) {
+        public List<int[]> shortestPathToTreasureIsland(char[][] grid) {
 
             if (grid == null || grid.length == 0)
-                return Collections.EMPTY_LIST;
+                return new ArrayList<>();
 
 
             return shortestPath(grid);
@@ -77,37 +76,30 @@ public class TreasureIsland {
             int n = grid.length;
             int m = grid[0].length;
 
-            final int row[] = {0, 0, 1, -1};
-            final int col[] = {-1, 1, 0, 0};
+            final int[] row = {0, 0, 1, -1};
+            final int[] col = {-1, 1, 0, 0};
 
-            Queue<int[]> queue = new LinkedList<>();
-            /**
-             * Coordinates and distance
-             */
+            final Queue<int[]> queue = new LinkedList<>();
+
+            //Coordinates and distance
             queue.offer(new int[]{0, 0, 0});
 
-            /**
-             * This hold the distance which been cover by the path
-             */
-            int distance[][] = new int[n][m];
 
-            /**
-             * Assume you can't reach anywhere
-             */
+            //This hold the distance which been cover by the path
+            int[][] distance = new int[n][m];
+
+
+            //Assume you can't reach anywhere
             for (int i = 0; i < n; i++)
                 Arrays.fill(distance[i], Integer.MAX_VALUE);
 
-            /**
-             * Distance from source is always 0
-             */
+
+            //Distance from source is always 0
             distance[0][0] = 0;
 
-            /**
-             * Holds the treasure location
-             */
-            int treasure[] = new int[]{-1, -1};
 
-            int minDistance = 0;
+            //Holds the treasure location
+            int[] treasure = new int[]{-1, -1};
 
             while (!queue.isEmpty()) {
 
@@ -126,17 +118,16 @@ public class TreasureIsland {
 
                     if (isSafe(r, c, n, m, grid, 'D')) {
 
-                        /**
-                         * Treasure found
-                         */
+                        //Treasure found
                         if (grid[r][c] == 'X') {
-                            minDistance = d + 1;
                             treasure[0] = r;
                             treasure[1] = c;
                             break;
                         }
 
+                        //mark this as danger so that we don't visit again
                         grid[r][c] = 'D';
+
                         queue.offer(new int[]{r, c, d + 1});
                     }
                 }
@@ -156,7 +147,7 @@ public class TreasureIsland {
          * @param col
          * @return
          */
-        private List<int[]> buildPath(int distance[][], int[] treasure, final int row[], final int col[]) {
+        private List<int[]> buildPath(int[][] distance, int[] treasure, final int[] row, final int[] col) {
             List<int[]> path = new ArrayList<>();
 
             int i = treasure[0];
@@ -168,10 +159,7 @@ public class TreasureIsland {
                 int d = Integer.MAX_VALUE;
                 int x = i, y = j; //Will tell from where we reached i and j
 
-                /**
-                 * Find the location from where we reach here;
-                 * which gives minimum distance
-                 */
+                //Find the location from where we reach here; which gives minimum distance
                 for (int k = 0; k < row.length; k++) {
 
                     int r = row[k] + i;
@@ -188,9 +176,7 @@ public class TreasureIsland {
                     }
                 }
 
-                /**
-                 * If we have reached source back
-                 */
+                //If we have reached source back
                 if (x == 0 && y == 0) {
                     path.add(new int[]{0, 0});
                     break;
@@ -207,15 +193,11 @@ public class TreasureIsland {
         }
 
         private boolean isInBoundary(int r, int c, int n, int m) {
-            if (r < 0 || c < 0 || r >= n || c >= m)
-                return false;
-            return true;
+            return r >= 0 && c >= 0 && r < n && c < m;
         }
 
         private boolean isSafe(int r, int c, int n, int m, char[][] grid, char danger) {
-            if (isInBoundary(r, c, n, m) && grid[r][c] != danger)
-                return true;
-            return false;
+            return isInBoundary(r, c, n, m) && grid[r][c] != danger;
         }
     }
 

@@ -1,6 +1,8 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
+import Java.graph.graph.types.DirectedGraph;
+import Java.graph.questions.AlienLanguageOrder;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -35,7 +37,7 @@ import java.util.Queue;
  * The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
  * You may assume that there are no duplicate edges in the input prerequisites.
  * <p>
- * {@link Java.graph.AlienLanguageOrder}
+ * {@link AlienLanguageOrder}
  */
 public class CourseSchedule1 {
 
@@ -52,7 +54,7 @@ public class CourseSchedule1 {
 
     private static void test(int numCourses, int[][] prerequisites, boolean expected) {
 
-        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + Printer.toString(prerequisites));
+        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + GenericPrinter.toString(prerequisites));
 
         ICourseSchedule bfs = new CourseScheduleITopologicalBFS();
         ICourseSchedule bfsOptimized = new CourseScheduleITopologicalBFSOptimized();
@@ -75,7 +77,7 @@ public class CourseSchedule1 {
  * Time/Space: O(V+E) / O(V)
  * Runtime: 4 ms, faster than 75.87% of Java online submissions for Course Schedule.
  * Memory Usage: 44.2 MB, less than 96.15% of Java online submissions for Course Schedule.
- * {@link Java.graph.DirectedGraph} #Khan's Algo
+ * {@link DirectedGraph} #Khan's Algo
  */
 class CourseScheduleITopologicalBFS implements ICourseSchedule {
 
@@ -200,7 +202,7 @@ class CourseScheduleITopologicalBFS implements ICourseSchedule {
  * Runtime: 3 ms, faster than 89.99% of Java online submissions for Course Schedule.
  * Memory Usage: 44.3 MB, less than 96.15% of Java online submissions for Course Schedule.
  * <p>
- * {@link Java.graph.DirectedGraph} #Khan's Algo
+ * {@link DirectedGraph} #Khan's Algo
  */
 class CourseScheduleITopologicalBFSOptimized implements ICourseSchedule {
 
@@ -293,7 +295,7 @@ class CourseScheduleITopologicalDFS implements ICourseSchedule {
         List<Integer>[] adjList = buildGraph(numCourses, prerequisites);
 
 
-        return detectCycle(adjList, numCourses);
+        return !detectCycle(adjList, numCourses);
     }
 
     private boolean detectCycle(List<Integer>[] adjList, int numCourses) {
@@ -307,10 +309,10 @@ class CourseScheduleITopologicalDFS implements ICourseSchedule {
             //Visit those which has not visit yet
 
             if (visited[c] != -1 && detectCycle(adjList, c, visited))
-                return false;
+                return true;
 
         }
-        return true;
+        return false;
     }
 
     /**

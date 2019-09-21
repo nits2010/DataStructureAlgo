@@ -19,7 +19,7 @@ package Java.LeetCode;
  */
 public class DeleteOperationTwoStrings {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         System.out.println(minDistance("sea", "eat"));
     }
 

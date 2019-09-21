@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.Printer;
+import Java.HelpersToPrint.GenericPrinter;
 
 import java.util.Arrays;
 
@@ -21,6 +21,7 @@ import java.util.Arrays;
 public class ActivateFountains {
 
     public static void main(String[] args) {
+        test(new int[]{0, 20, 4, 0, 0, 0, 0, 0}, 1);
         test(new int[]{0, 0, 0, 3, 0, 0, 2, 0, 0}, 2);
         test(new int[]{0, 0, 0, 3, 0, 0, 2, 0, 0}, 2);
         test(new int[]{3, 0, 2, 0, 1, 0}, 2);
@@ -38,12 +39,14 @@ public class ActivateFountains {
     }
 
     private static void test(int[] fountains, int expected) {
-        System.out.println(Printer.toString(fountains));
+        System.out.println("\nfountains: " + GenericPrinter.toString(fountains));
 
         ActivateFountainsIntervalMerge intervalsMerge = new ActivateFountainsIntervalMerge();
         ActivateFountainsIntervalMergeOptimized optimized = new ActivateFountainsIntervalMergeOptimized();
-        System.out.println("intervalsMerge; Obtained :" + intervalsMerge.activateFountains(fountains) + "expected :" + expected);
-        System.out.println("intervalsMerge-optimized; Obtained :" + optimized.activateFountains(fountains) + "expected :" + expected);
+        System.out.println("Expected :                  " + expected);
+        System.out.println("intervalsMerge :            " + intervalsMerge.activateFountains(fountains));
+        System.out.println("intervalsMerge-optimized:   " + optimized.activateFountains(fountains));
+        System.out.println("intervalsMerge-optimizedV2: " + optimized.activateFountainsV2(fountains));
     }
 
 
@@ -179,19 +182,19 @@ class ActivateFountainsIntervalMergeOptimized {
     public int activateFountains(int[] fountains) {
         int n = fountains.length;
 
-        int interval[] = new int[n];
+        int[] reachOfFountain = new int[n];
 
         for (int i = 1; i <= n; i++) {
 
             int left = Math.max(i - fountains[i - 1], 1);
             int right = Math.min(i + fountains[i - 1], n);
 
-            interval[left - 1] = right;
+            reachOfFountain[left - 1] = Math.max(reachOfFountain[left - 1], right);
 
         }
 
 
-        int right = interval[0];
+        int right = reachOfFountain[0];
         int nextGreaterRight = right;
 
         int fountainsActivate = 1;
@@ -208,7 +211,7 @@ class ActivateFountainsIntervalMergeOptimized {
          * @return
          */
         for (int i = 1; i < n; i++) {
-            nextGreaterRight = Math.max(nextGreaterRight, interval[i]);
+            nextGreaterRight = Math.max(nextGreaterRight, reachOfFountain[i]);
 
             /**
              * If the last fountain can cover only this point, activate new fountain.
@@ -223,5 +226,33 @@ class ActivateFountainsIntervalMergeOptimized {
 
         return fountainsActivate;
     }
+
+    //https://leetcode.com/discuss/interview-question/363036/Twitter-or-OA-2019-or-Activate-Fountain/328153
+    // It seems like using a greedy approach that always add the fountain that (1) covers all uncovered spots to the left,
+    // and (b) maximizes the number of spots to the right that are covered, will work. O(n^2) without optimizations,
+    // but the array can be preprocessed to store the rightmost index that can be "covered with water" from a given index for O(n).
+    public int activateFountainsV2(int[] fountains) {
+        int n = fountains.length;
+        int[] extents = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            int left = Math.max(i - fountains[i], 0);
+            int right = Math.min(i + (fountains[i] + 1), n);
+            extents[left] = Math.max(extents[left], right);
+        }
+
+        int num_fountains = 1;
+        int right = extents[0], next_right = 0;
+        for (int i = 0; i < n; i++) {
+            next_right = Math.max(next_right, extents[i]);
+            if (i == right) {
+                num_fountains++;
+                right = next_right;
+            }
+        }
+
+        return num_fountains;
+    }
+
 
 }

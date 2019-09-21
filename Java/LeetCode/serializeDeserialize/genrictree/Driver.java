@@ -1,10 +1,5 @@
 package Java.LeetCode.serializeDeserialize.genrictree;
 
-import Java.LeetCode.HelperDatastructure.TreeNode;
-import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
-import Java.LeetCode.serializeDeserialize.binaryTree.SerializeDeSerializeBinaryTree;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -43,7 +38,7 @@ public class Driver {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         test(getTree());
         test(getTree2());

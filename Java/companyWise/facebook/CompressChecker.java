@@ -13,7 +13,7 @@ package Java.companyWise.facebook;
  */
 public class CompressChecker {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println(isCompressed("I18NN", "INTERNATIONALIZATION"));
         System.out.println(isCompressed("8NN", "INTERNATIONALIZATION"));

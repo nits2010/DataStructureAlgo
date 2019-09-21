@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class WordBreak {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
 
         test("catsanddog", Arrays.asList("cat", "cats", "and", "sand", "dog"));
@@ -73,7 +73,8 @@ class WordBreakI {
 /**
  * https://leetcode.com/problems/word-break-ii/
  * <p>
- * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
+ * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word.
+ * Return all such possible sentences.
  * <p>
  * Note:
  * <p>
@@ -110,6 +111,7 @@ class WordBreakI {
  * []
  */
 class WordBreakII {
+
     //O(2^n)
     static class WordBreakIIBruteForce {
 
@@ -205,11 +207,7 @@ class WordBreakII {
             }
 
             for (String s : wordIndex[index]) {
-                String old = current; //for backtracking
-                current = s + " " + current; //build a word
-                dfs(wordIndex, solution, current, index - s.length()); // build further word, rem we reduce the index by current word length as we have consumed that word length from original string
-
-                current = old; //backtrack
+                dfs(wordIndex, solution, s + " " + current, index - s.length()); // build further word, rem we reduce the index by current word length as we have consumed that word length from original string
             }
 
 
@@ -271,6 +269,7 @@ class WordBreakII {
     static class WordBreakIIDP {
 
         public static List<String> wordBreak(String s, List<String> wordDict) {
+
             HashSet<String> set = new HashSet<>(wordDict);
 
             if (s.length() == 0 || !canBreak(s, wordDict))
@@ -350,7 +349,7 @@ class WordBreakII {
          * @return
          */
         public static List<String> wordBreak(String s, List<String> wordDict) {
-            HashMap<Integer, List<String>> map = new HashMap<>(); //This is similar to List<String>[] wordIndex, i just use map this time ; just trying data structure :P
+            HashMap<Integer, List<String>> map = new HashMap<>(); //This is similar to List<String>[] wordIndex,
             return buildAndGather(s, s.length(), wordDict, map);
         }
 
@@ -362,7 +361,6 @@ class WordBreakII {
             if (end == 0) return new ArrayList<>(Arrays.asList(""));
 
             //Just to see if we have already solved this index, if so return that list
-            //Memo
             if (map.containsKey(end)) {
                 return map.get(end);
             }

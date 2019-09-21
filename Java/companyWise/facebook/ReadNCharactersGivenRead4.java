@@ -101,7 +101,7 @@ public class ReadNCharactersGivenRead4 {
     }
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         System.out.println("Testing ->1");
         test1("filetestbuffer");

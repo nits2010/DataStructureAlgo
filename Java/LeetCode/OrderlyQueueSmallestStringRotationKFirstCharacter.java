@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class OrderlyQueueSmallestStringRotationKFirstCharacter {
 
-    public static void main (String args[]){
+    public static void main (String []args){
         SolutionOrderlyQueueSmallestStringRotationKFirstCharacter sol = new SolutionOrderlyQueueSmallestStringRotationKFirstCharacter();
         System.out.println(sol.orderlyQueue("cba", 1));
         System.out.println(sol.orderlyQueue("baaca", 3));

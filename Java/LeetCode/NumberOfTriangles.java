@@ -23,7 +23,7 @@ import java.util.Arrays;
  */
 public class NumberOfTriangles {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         int arr[] = {10, 21, 22, 100, 101, 200, 300};
         SolutionNumberOfTriangles sol = new SolutionNumberOfTriangles();
         System.out.println(sol.triangleNumber(arr));

@@ -17,7 +17,7 @@ package Java.LeetCode;
  */
 public class InterleavingString {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         String s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac";
         Solution solution = new Solution();
         System.out.println(solution.isInterleave(s1, s2, s3));

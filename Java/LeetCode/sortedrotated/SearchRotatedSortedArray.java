@@ -26,7 +26,7 @@ package Java.LeetCode.sortedrotated;
  */
 public class SearchRotatedSortedArray {
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         RotatedSortedArraySearch search = new RotatedSortedArraySearch();
         System.out.println(search.search(new int[]{4, 5, 6, 7, 8, 9, 1, 2, 3}, 6));
         System.out.println(search.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));

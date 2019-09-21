@@ -27,7 +27,7 @@ package Java.companyWise.facebook;
 public class KPalindromeString {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
         test("abcdecba", 1);
         test("abcdecba", 1);
         test("abcdeca", 2);

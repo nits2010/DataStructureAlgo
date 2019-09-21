@@ -31,7 +31,7 @@ import java.util.*;
 public class WordBreak {
 
 
-    public static void main(String args[]) {
+    public static void main(String []args) {
 
         Set<String> dict = new HashSet<>();
         dict.add("I");
