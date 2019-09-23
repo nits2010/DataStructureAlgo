@@ -147,10 +147,9 @@ public class GenericPrinter {
 
         StringBuilder result = new StringBuilder();
         for (int[] num : nums) {
-
-
             result.append(toString(num));
             result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
         }
 
 

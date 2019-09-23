@@ -79,7 +79,7 @@ public class CellStateAfterNDays {
 
         for (int i = N; i > 0; i--) {
 
-            int temp[] = new int[houseSize];
+            int[] temp = new int[houseSize];
 
             for (int c = 1; c < houseSize - 1; c++) { // leaving first and last as it is
                 temp[c] = (houses[c - 1] == houses[c + 1]) //If the neighbors on both the sides of a cell are either active or inactive

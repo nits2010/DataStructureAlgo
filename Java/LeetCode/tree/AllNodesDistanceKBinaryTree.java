@@ -130,7 +130,6 @@ class KDistanceAwayFromNodeSolution {
 
         if (k == 0) {
             output.add(root.val);
-            return;
         } else {
             distanceKInSubTrees(root.left, k - 1, output);
             distanceKInSubTrees(root.right, k - 1, output);
@@ -245,7 +244,6 @@ class KDistanceAwayFromNodeSolutionCleaner {
 
         if (k == 0) {
             output.add(root.val);
-            return;
         } else {
             distanceKInSubTrees(root.left, k - 1, output);
             distanceKInSubTrees(root.right, k - 1, output);

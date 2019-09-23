@@ -1,4 +1,4 @@
-package Java.LeetCode.zigzag;
+package Java.LeetCode.tree;
 
 import java.util.*;
 
@@ -8,14 +8,9 @@ import java.util.*;
  * Description: https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/
  * In an infinite binary tree where every node has two children, the nodes are labelled in row order.
  * <p>
- * In the odd numbered rows (ie., the first, third, fifth,...), the labelling is left to right, while in the even numbered rows (second, fourth, sixth,...), the labelling is right to left.
- * <p>
- * <p>
- * <p>
+ * In the odd numbered rows (ie., the first, third, fifth,...), the labelling is left to right,
+ * while in the even numbered rows (second, fourth, sixth,...), the labelling is right to left.
  * Given the label of a node in this tree, return the labels in the path from the root of the tree to the node with that label.
- * <p>
- * <p>
- * <p>
  * Example 1:
  * <p>
  * Input: label = 14
@@ -49,13 +44,9 @@ public class PathZigzagLabelledBinaryTree {
 
 /**
  * O(logn) where n is the level of the label
- *
- *
- *
  * Explanation
- *
- *https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/discuss/357749/Java-or-Full-explanation-or-100-beat-in-both
- *
+ * https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/discuss/357749/Java-or-Full-explanation-or-100-beat-in-both
+ * <p>
  * Runtime: 0 ms, faster than 100.00% of Java online submissions for Path In Zigzag Labelled Binary Tree.
  * Memory Usage: 33.5 MB, less than 100.00% of Java online submissions for Path In Zigzag Labelled Binary Tree.
  */
@@ -67,14 +58,15 @@ class PathZigzagLabelledBinaryTreeUsingParent {
             return Collections.EMPTY_LIST;
 
         if (label == 1)
-            return Arrays.asList(1);
+            return Collections.singletonList(1);
 
 
         /**
          * Find the level of this label is;
          * You can compute like 2^n > label; find the least value of 'n'
          */
-        int level = (int) (Math.log(label) / Math.log(2)) + 1;;
+        int level = (int) (Math.log(label) / Math.log(2)) + 1;
+        ;
 
         List<Integer> path = new ArrayList<>(level + 1);
         path.add(label);
@@ -112,9 +104,8 @@ class PathZigzagLabelledBinaryTreeUsingParent {
 
 
             //Parent of this label is same as normal tree parent.
-            int parentLabel = (totalNodes - label) / 2;
 
-            label = parentLabel;
+            label = (totalNodes - label) / 2;
             path.add(label);
             level--;
 

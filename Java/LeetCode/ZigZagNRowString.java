@@ -1,4 +1,4 @@
-package Java.LeetCode.zigzag;
+package Java.LeetCode;
 
 
 import java.util.ArrayList;
@@ -7,9 +7,34 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/zigzag-conversion/
- *
- * https://www.geeksforgeeks.org/print-concatenation-of-zig-zag-string-form-in-n-rows/
- * Given a string and number of rows ‘n’. Print the string formed by concatenating n rows when input string is written in row-wise Zig-Zag fashion.
+ * 6. ZigZag Conversion
+ * <p>
+ * <p>
+ * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+ * <p>
+ * P   A   H   N
+ * A P L S I I G
+ * Y   I   R
+ * And then read line by line: "PAHNAPLSIIGYIR"
+ * <p>
+ * Write the code that will take a string and make this conversion given a number of rows:
+ * <p>
+ * string convert(string s, int numRows);
+ * Example 1:
+ * <p>
+ * Input: s = "PAYPALISHIRING", numRows = 3
+ * Output: "PAHNAPLSIIGYIR"
+ * Example 2:
+ * <p>
+ * Input: s = "PAYPALISHIRING", numRows = 4
+ * Output: "PINALSIGYAHRPI"
+ * Explanation:
+ * <p>
+ * P     I    N
+ * A   L S  I G
+ * Y A   H R
+ * P     I
+ * <p>
  * Examples:
  * <p>
  * Input: str = "ABCDEFGH"
@@ -32,32 +57,8 @@ import java.util.List;
  * *     E       O       E
  * Now concatenate the two rows and ignore spaces
  * in every row. We get "GSGSEKFREKEOE"
- *
- *
- * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
- *
- * P   A   H   N
- * A P L S I I G
- * Y   I   R
- * And then read line by line: "PAHNAPLSIIGYIR"
- *
- * Write the code that will take a string and make this conversion given a number of rows:
- *
- * string convert(string s, int numRows);
- * Example 1:
- *
- * Input: s = "PAYPALISHIRING", numRows = 3
- * Output: "PAHNAPLSIIGYIR"
- * Example 2:
- *
- * Input: s = "PAYPALISHIRING", numRows = 4
- * Output: "PINALSIGYAHRPI"
- * Explanation:
- *
- * P     I    N
- * A   L S  I G
- * Y A   H R
- * P     I
+ * <p>
+ * https://www.geeksforgeeks.org/print-concatenation-of-zig-zag-string-form-in-n-rows/
  */
 public class ZigZagNRowString {
 

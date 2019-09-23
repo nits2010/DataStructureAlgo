@@ -1,4 +1,4 @@
-package Java.LeetCode.zigzag;
+package Java.LeetCode.matrixPrint.zigzag;
 
 import Java.HelpersToPrint.GenericPrinter;
 
@@ -11,7 +11,7 @@ public class ZigZagMatrix {
 
     public static int[][] build(int n) {
 
-        int zigZag[][] = new int[n][n];
+        int[][] zigZag = new int[n][n];
 
         int i = 1;
         int j = 1;
@@ -48,7 +48,7 @@ public class ZigZagMatrix {
     }
 
 
-    public static void print(int zigZag[][]) {
+    public static void print(int[][] zigZag) {
 
         GenericPrinter.print(zigZag);
         System.out.println("\n\n");
