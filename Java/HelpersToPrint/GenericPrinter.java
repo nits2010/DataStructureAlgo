@@ -499,6 +499,18 @@ public class GenericPrinter {
 
     }
 
+    public static <T> boolean equalsValues(T... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return false;
+        boolean equal = true;
+        T temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= temp == a[i++];
+        return equal;
+    }
+
     public static void main(String[] args) {
 
         int[] x = {1, 2, 3};
