@@ -30,7 +30,7 @@ import java.util.List;
  * 19    16
  * 20
  */
-public class ForwardDiagonalMatrixUpwardLeft {
+public class DiagonalMatrixUpwardLeft {
 
     public static void main(String[] args) {
         test(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, Arrays.asList(1, 4, 2, 7, 5, 3, 8, 6, 9));
@@ -52,7 +52,7 @@ public class ForwardDiagonalMatrixUpwardLeft {
         final int Col = matrix[0].length;
         List<Integer> solution = new ArrayList<>();
 
-        //print all rows from top to bottom participating
+        //print elements participating  moving upward in row and downward in column
         for (int r = 0; r < Row; r++) {
             solution.add(matrix[r][0]);
 
@@ -64,7 +64,7 @@ public class ForwardDiagonalMatrixUpwardLeft {
 
         }
 
-        //print last row participation from bottom to up
+        //print elements participating  moving upward in row and downward in column in mirror side
         for (int c = 1; c < Col; c++) {
             solution.add(matrix[Row - 1][c]);
 

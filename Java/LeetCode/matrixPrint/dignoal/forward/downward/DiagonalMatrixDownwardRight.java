@@ -22,7 +22,7 @@ import java.util.List;
  * [13,14,15,16]
  * 4, 3, 8, 2, 7, 12, 1, 6, 11, 16, 5, 10, 15, 9, 14, 13
  */
-public class ForwardDiagonalMatrixDownwardRight {
+public class DiagonalMatrixDownwardRight {
 
     public static void main(String[] args) {
         test(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, Arrays.asList(3, 2, 6, 1, 5, 9, 4, 8, 7));

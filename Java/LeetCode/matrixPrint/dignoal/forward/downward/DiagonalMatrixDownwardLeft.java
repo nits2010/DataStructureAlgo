@@ -18,7 +18,7 @@ import java.util.List;
  * expected:
  * [1, 2, 5, 3, 6, 9, 4, 7, 10, 13, 8, 11, 14, 12, 15, 16]
  */
-public class ForwardDiagonalMatrixDownwardLeft {
+public class DiagonalMatrixDownwardLeft {
 
     public static void main(String[] args) {
         test(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, Arrays.asList(1, 2, 4, 3, 5, 7, 6, 8, 9));
