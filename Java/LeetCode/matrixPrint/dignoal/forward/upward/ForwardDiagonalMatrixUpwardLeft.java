@@ -1,4 +1,4 @@
-package Java.LeetCode.matrixPrint.dignoal;
+package Java.LeetCode.matrixPrint.dignoal.forward.upward;
 
 import Java.HelpersToPrint.GenericPrinter;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 23/09/19
  * Description:
- * https://leetcode.com/discuss/interview-question/125358/print-a-matrix-anti-diagonally/123979
+ * <p>
  * https://www.geeksforgeeks.org/zigzag-or-diagonal-traversal-of-matrix/
  * Given a 2D matrix, print all elements of the given matrix in diagonal order. For example, consider the following 5 X 4 input matrix.
  * <p>
@@ -30,7 +30,7 @@ import java.util.List;
  * 19    16
  * 20
  */
-public class ForwardDiagonalMatrix {
+public class ForwardDiagonalMatrixUpwardLeft {
 
     public static void main(String[] args) {
         test(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, Arrays.asList(1, 4, 2, 7, 5, 3, 8, 6, 9));
@@ -40,10 +40,46 @@ public class ForwardDiagonalMatrix {
     private static void test(int[][] matrix, List<Integer> expected) {
         System.out.println("\nMatrix:\n" + GenericPrinter.toString(matrix));
         System.out.println("expected:\n" + expected);
-        System.out.println("Obtained:\n" + printForwardDiag(matrix));
+        System.out.println("Obtained:\n" + printForwardDiag2(matrix));
+        System.out.println("Obtained:\n" + printForwardDiag1(matrix));
     }
 
-    public static List<Integer> printForwardDiag(int[][] matrix) {
+
+    //see image for understanding it
+    public static List<Integer> printForwardDiag1(int[][] matrix) {
+
+        final int Row = matrix.length;
+        final int Col = matrix[0].length;
+        List<Integer> solution = new ArrayList<>();
+
+        //print all rows from top to bottom participating
+        for (int r = 0; r < Row; r++) {
+            solution.add(matrix[r][0]);
+
+            int i = r - 1;
+            int j = 1;
+
+            while (i >= 0 && j < Col)
+                solution.add(matrix[i--][j++]);
+
+        }
+
+        //print last row participation from bottom to up
+        for (int c = 1; c < Col; c++) {
+            solution.add(matrix[Row - 1][c]);
+
+            int i = Row - 2;
+            int j = c + 1;
+
+            while (i >= 0 && j < Col)
+                solution.add(matrix[i--][j++]);
+
+        }
+        return solution;
+
+    }
+
+    public static List<Integer> printForwardDiag2(int[][] matrix) {
 
         final int ROW = matrix.length;
         final int COL = matrix[0].length;
@@ -76,5 +112,6 @@ public class ForwardDiagonalMatrix {
 
         return solution;
     }
+
 
 }
