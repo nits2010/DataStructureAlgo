@@ -42,3 +42,5 @@ https://www.cnblogs.com/lightwindy/p/8476874.html
 
 All
 http://guozet.me/leetcode/ & solution https://github.com/guozetang/leetcode
+
+lintcode solutions: https://github.com/awangdev/LintCode
