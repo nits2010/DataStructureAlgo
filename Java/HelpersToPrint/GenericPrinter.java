@@ -513,6 +513,19 @@ public class GenericPrinter {
     }
 
     @SafeVarargs
+    public static <T> boolean equalsValuesArray(T[]... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return true;
+        boolean equal = true;
+        T[] temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= Arrays.deepEquals(temp, a[i++]);
+        return equal;
+    }
+
+    @SafeVarargs
     public static <T> boolean equalsValues(List<T>... a) {
 
         if (a.length <= 1) // at least 2 length
