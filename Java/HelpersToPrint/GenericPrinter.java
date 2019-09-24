@@ -499,15 +499,29 @@ public class GenericPrinter {
 
     }
 
+    @SafeVarargs
     public static <T> boolean equalsValues(T... a) {
 
         if (a.length <= 1) // at least 2 length
-            return false;
+            return true;
         boolean equal = true;
         T temp = a[0];
         int i = 1;
         while (i < a.length)
             equal &= temp == a[i++];
+        return equal;
+    }
+
+    @SafeVarargs
+    public static <T> boolean equalsValues(List<T>... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return true;
+        boolean equal = true;
+        List<T> temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= temp.equals(a[i++]);
         return equal;
     }
 
