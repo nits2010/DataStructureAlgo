@@ -138,14 +138,14 @@ public class SortedSubSequenceSize3 {
      * @param nums
      * @return
      */
-    public static int[] sortedSubSequenceSize3V2(int nums[]) {
+    public static int[] sortedSubSequenceSize3V2(int []nums) {
 
-        if (nums == null || nums.length == 0 || nums.length < 3)
+        if (nums == null || nums.length < 3)
             return nums;
 
         int n = nums.length;
-        int smaller[] = SmallerElementOnLeftSide.immediateSmallerElementOnLeftSide(nums);
-        int greater[] = NextGreaterElementOnRightSide.immediateGreaterElementOnRightSide(nums);
+        int[] smaller = SmallerElementOnLeftSide.immediateSmallerElementOnLeftSide(nums);
+        int[] greater = NextGreaterElementOnRightSide.immediateGreaterElementOnRightSide(nums);
 
 
         for (int j = 1; j < n - 1; j++) {
