@@ -8,6 +8,9 @@ https://github.com/kdn251/interviews
 https://fizzbuzzed.com/top-interview-questions-1/
 
 https://github.com/RodneyShag/HackerRank_solutions
+https://github.com/RodneyShag/LeetCode_solutions
+https://github.com/RodneyShag/Interview_solutions
+
 https://github.com/rutujar/HackerRank-solutions
 
 

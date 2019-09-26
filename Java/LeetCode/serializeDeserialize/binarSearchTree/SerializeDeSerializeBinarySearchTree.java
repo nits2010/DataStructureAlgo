@@ -40,7 +40,7 @@ public class SerializeDeSerializeBinarySearchTree {
      * Memory Usage: 38.6 MB, less than 100.00% of Java online submissions for Serialize and Deserialize BST.
      */
 
-    class PreOrder implements ISerializeDeserialize {
+    static class PreOrder implements ISerializeDeserialize {
 
         @Override
         public String serialize(TreeNode root) {
@@ -69,7 +69,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (root == null) {
                 return;
             }
-            serialized.append(root.val + ",");
+            serialized.append(root.val).append(",");
             serialized(root.left, serialized);
             serialized(root.right, serialized);
         }
@@ -79,7 +79,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (data.isEmpty())
                 return null;
 
-            String[] preOrder = data.split("\\,");
+            String[] preOrder = data.split(",");
 
             return reconstruct(preOrder, new int[]{0}, Integer.MAX_VALUE);
 
@@ -160,7 +160,7 @@ public class SerializeDeSerializeBinarySearchTree {
     /**
      * * O(n^2)
      */
-    class PostOrder implements ISerializeDeserialize {
+    static class PostOrder implements ISerializeDeserialize {
 
         @Override
         public String serialize(TreeNode root) {
@@ -183,7 +183,7 @@ public class SerializeDeSerializeBinarySearchTree {
             }
             serialized(root.left, serialized);
             serialized(root.right, serialized);
-            serialized.append(root.val + ",");
+            serialized.append(root.val).append(",");
         }
 
         @Override
@@ -191,7 +191,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (data.isEmpty())
                 return null;
 
-            String[] postOrder = data.split("\\,");
+            String[] postOrder = data.split(",");
 
             return reconstruct(postOrder, new int[]{postOrder.length - 1}, Integer.MIN_VALUE);
 

@@ -52,7 +52,7 @@ public class Driver {
 
         System.out.println("Original Tree Inorder");
         inOrder(root);
-        ISerializeDeserialize preOrder = serializeDeSerializeBinarySearchTree.new PreOrder();
+        ISerializeDeserialize preOrder = new SerializeDeSerializeBinarySearchTree.PreOrder();
 
         System.out.println("\nSerializing Tree");
 
@@ -79,7 +79,7 @@ public class Driver {
         System.out.println("Serializing Tree");
 
 
-        ISerializeDeserialize levelOrder = serializeDeSerializeBinarySearchTree.new PostOrder();
+        ISerializeDeserialize levelOrder = new SerializeDeSerializeBinarySearchTree.PostOrder();
 
 
         String vv = levelOrder.serialize(root);
