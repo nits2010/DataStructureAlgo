@@ -95,8 +95,8 @@ public class PaintFence {
         if (n == 1)
             return k; //we have k choices to paint 1 fence
 
-        int same = k; //Hence Same = k {k choices for first fence} * 1 {one choice for second to be same as first}
-        int different = k * (k - 1); //Hence different = k {k choices for first fence} * k-1 {k-1 choice for second to be different than  first}
+        int same = k; // Same = k {k choices for first fence} * 1 {one choice for second to be same as first}
+        int different = k * (k - 1); // different = k {k choices for first fence} * k-1 {k-1 choice for second to be different than  first}
 
         for (int i = 3; i <= n; i++) {
             int prevDiff = different;

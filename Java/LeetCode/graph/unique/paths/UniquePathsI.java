@@ -41,6 +41,9 @@ import java.util.Arrays;
  */
 public class UniquePathsI {
     public static void main(String[] args) {
+        test(2, 2, 2);
+        test(3, 3, 6);
+        test(4, 4, 20);
         test(3, 2, 3);
         test(7, 3, 28);
         test(5, 8, 330);
@@ -52,7 +55,7 @@ public class UniquePathsI {
     }
 
     private static void test(int m, int n, int expected) {
-        System.out.println(" m = " + m + " n = " + n + " expected : " + expected);
+        System.out.println("\nm = " + m + " n = " + n + " expected : " + expected);
         UniquePathsIBacktracking backtracking = new UniquePathsIBacktracking();
         UniquePathsIDPTopDown pathsIDPTopDown = new UniquePathsIDPTopDown();
         UniquePathsIDPBottomUp pathsIDPBottomUp = new UniquePathsIDPBottomUp();

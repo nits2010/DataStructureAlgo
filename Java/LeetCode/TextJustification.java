@@ -62,10 +62,12 @@ import java.util.List;
  * ]
  * <p>
  * For finding the optimal solution see {@link Java.WordWrapProblem}
+ *
+ * [Amazon]
  */
 public class TextJustification {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
 
 
         test(new String[]{"This", "is", "an", "example", "of", "text", "justification."}, 16);
@@ -73,7 +75,7 @@ public class TextJustification {
         test(new String[]{"Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.", "Art", "is", "everything", "else", "we", "do"}, 20);
     }
 
-    private static void test(String words[], int maxWidth) {
+    private static void test(String[] words, int maxWidth) {
         System.out.println("Test start\n");
         SolutionTextJustification sol = new SolutionTextJustification();
 
@@ -91,27 +93,24 @@ public class TextJustification {
 class SolutionTextJustification {
     private static final String SPACE = " ";
 
+    /**
+     * As question says, we need to put the words "Greedily" until we can put. Once we run out of words or space in line we need to do justification.
+     * 1. If this is intermediate line,
+     * 1.1 and there is more than 1 word then we need to distribute spaces in between
+     * 1.2 if there is only one word then we need to be left justified, means need to put all spaces after word.
+     * <p>
+     * 2. If this is last line, space after word only.
+     */
     public List<String> fullJustify(String[] words, int maxWidth) {
-
-        if (words == null || words.length == 0 || maxWidth == 0)
-            return Collections.EMPTY_LIST;
-
-        /**
-         * This holds the line which need to be answered
-         */
+        //This holds the line which need to be answered
         final List<String> lines = new ArrayList<>(words.length);
 
-        /**
-         * As question says, we need to put the words "Greedily" until we can put. Once we run out of words or space in line we need to do justification.
-         * 1. If this is intermediate line,
-         *  1.1 and there is more than 1 word then we need to distribute spaces in between
-         *  1.2 if there is only one word then we need to be left justified means need to put all spaces after word.
-         *
-         *  2. If this is last line, space after word only.
-         */
+        if (words == null || words.length == 0 || maxWidth == 0)
+            return lines;
 
-        int i = 0; //this for iterator on words array to find the words for the current line;
-        int currentLineLength; //this is for finding the current line length while putting words in a line;
+
+        int i = 0; // iterator on words array to find the words for the current line;
+        int currentLineLength; // finding the current line length while putting words in a line;
 
         int spaceLeft; //this tell how many space are required to make current line align i.e. word1 SPACE word2 SPACE word3....
 
@@ -140,11 +139,9 @@ class SolutionTextJustification {
             //since while putting words above we have added a space after every word, remove the space after last word
             currentLineLength--;
 
-            /**
-             * Align ths line in normal format i.e. word1 SPACE word2 SPACE word3....
-             * Note we already calculated the currentLineLength using spaces
-             */
 
+            //Align ths line in normal format i.e. word1 SPACE word2 SPACE word3....
+            //Note we already calculated the currentLineLength using spaces
             alignWords(currentLine);
 
             spaceLeft = maxWidth - currentLineLength;
@@ -177,6 +174,11 @@ class SolutionTextJustification {
     }
 
 
+    /**
+     * Put all the space after the last word.
+     * @param currentWords Contains list of words, mostly 1
+     * @param spaces number of spaces to append
+     */
     private void leftJustify(List<String> currentWords, int spaces) {
 
         //till we have spaces, keep adding them to the current line word; notice at this point we'll have to put space only on last word
@@ -213,9 +215,6 @@ class SolutionTextJustification {
     }
 
 
-
-
-
     private String buildLine(List<String> currentLine) {
         StringBuilder text = new StringBuilder();
 
@@ -227,7 +226,7 @@ class SolutionTextJustification {
 }
 
 //Copied from https://leetcode.com/problems/text-justification/discuss/337337/0-ms-faster-than-100.00
-class TextJusttificationUsingCharArray {
+class TextJustificationUsingCharArray {
 
     public List<String> fullJustify(String[] words, int maxWidth) {
         int i = 0;

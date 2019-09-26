@@ -44,15 +44,13 @@ public class OddLengthPalindromeSubSequenceAroundCentre {
         final List<Integer> recursiveObtained = OddLengthPalindromeSubSequenceAroundCentreRecursive.oddLengthPalindromeCenter(s);
         final List<Integer> dpBottomUpObtained = OddLengthPalindromeSubSequenceAroundCentreDPBottomUp.oddLengthPalindromeCenter(s);
         final List<Integer> dpTopDownObtained = OddLengthPalindromeSubSequenceAroundCentreDPTopDown.oddLengthPalindromeCenter(s);
-        final List<Integer> dpTopDownObtained2 = OddLengthPalindromeSubSequenceAroundCentreDPBottomUp2.oddLengthPalindromeCenter(s);
 
         System.out.println("Expected                :" + expected);
         System.out.println("recursiveObtained       :" + recursiveObtained);
         System.out.println("dpBottomUpObtained      :" + dpBottomUpObtained);
         System.out.println("dpTopDownObtained       :" + dpTopDownObtained);
-        System.out.println("dpTopDownObtained2      :" + dpTopDownObtained2);
 
-        return GenericPrinter.equalsValues(dpBottomUpObtained, expected, recursiveObtained, dpTopDownObtained, dpTopDownObtained2);
+        return GenericPrinter.equalsValues(dpBottomUpObtained, expected, recursiveObtained, dpTopDownObtained);
     }
 
 
@@ -255,31 +253,6 @@ class OddLengthPalindromeSubSequenceAroundCentreDPBottomUp {
         }
 
         return ways;
-
-    }
-}
-
-
-class OddLengthPalindromeSubSequenceAroundCentreDPBottomUp2 {
-
-    //Basically if there is any s[i] == s[j] and i + 1 < j, then that pair s[i], s[j] contributes to every index in between i+1 to j-1.
-    public static List<Integer> oddLengthPalindromeCenter(String s) {
-        int[] dp = new int[s.length()];
-        Arrays.fill(dp, 1);
-        for (int l = 2; l < s.length(); l++) {
-            for (int i = 0; i < s.length() - l; i++) {
-                if (s.charAt(i) == s.charAt(i + l)) {
-                    for (int j = i + 1; j < i + l; j++) {
-                        dp[j] += 1;
-                    }
-                }
-            }
-        }
-        List<Integer> sol = new ArrayList<>();
-        for (int e : dp)
-            sol.add(e);
-
-        return sol;
 
     }
 }

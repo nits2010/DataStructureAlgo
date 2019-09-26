@@ -1,146 +1,88 @@
 package Java.companyWise.facebook;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Stack;
-import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 04/04/19
  * Description:  https://leetcode.com/problems/decode-string/
- *
+ * 394. Decode String [Medium]
  * https://www.geeksforgeeks.org/decode-string-recursively-encoded-count-followed-substring/
- * <p>
  * An encoded string (s) is given, the task is to decode it. The pattern in which the strings are encoded is as follows.
  *
  * <count>[sub_str] ==> The substring 'sub_str' appears 'count' times.
- * <p>
  * Input : str[] = "1[b]"
  * Output : b
- * <p>
  * Input : str[] = "2[ab]"
  * Output : abab
- * <p>
  * Input : str[] = "2[a2[b]]"
  * Output : abbabb
- * <p>
  * Input : str[] = "3[b2[ca]]"
  * Output : bcacabcacabcaca
  * <p>
  * https://aonecode.com/facebook-phone-interview-questions-2019
+ * My explanation: https://leetcode.com/problems/decode-string/discuss/341115/Full-thought-process-2-Algorithm-%3A-beat-100100-Explanation
  *
- * https://leetcode.com/problems/decode-string/discuss/341115/Full-thought-process-2-Algorithm-%3A-beat-100100-Explanation
- *
+ * [Amazon]
  */
 public class DecodedInCodedString {
 
-    public static void main(String []args) {
-        testUsingStacks();
-        testUsingImplicitStack();
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test("10[b12[ca]]", "bcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacaca");
+        test &= test("3[b2[ca]]", "bcacabcacabcaca");
+        test &= test("2[ab]", "abab");
+        test &= test("2[a2[b]]", "abbabb");
+        test &= test("3[b2[ca]]", "bcacabcacabcaca");
+        test &= test("1[b]", "b");
+        test &= test("3[a]2[bc]", "aaabcbc");
+        test &= test("3[a2[c]]", "accaccacc");
+        test &= test("2[abc]3[cd]ef", "abcabccdcdcdef");
+        test &= test("2[ab]", "abab");
+        test &= test("2[a2[b]]", "abbabb");
+        test &= test("1[b]", "b");
+
+        System.out.println("\n Test :" + (test ? "Passed" : "Failed"));
 
     }
 
-    private static void testUsingImplicitStack() {
-        System.out.println("Testing on Implicit Stacks");
-        IDecode decode = new DecodeFaster();
-        boolean pass = true &&
-                multiDigitMultiCharTest(decode) &&
-                singleDigitMultiCharTest(decode) &&
-                singleDigitCharTest(decode);
+    private static boolean test(String s, String expected) {
+        System.out.println("\nInput:" + s);
+        System.out.println("Expected             :" + expected);
+        String iterative = new DecodedInCodedStringIterative().decode(s);
+        String recursive = new DecodedInCodedStringRecursive().decode(s);
+        System.out.println("Iterative            :" + iterative + " Test :" + (expected.equals(iterative)));
+        System.out.println("Recursive            :" + recursive + " Test :" + (expected.equals(recursive)));
 
-        System.out.println(pass);
-    }
-
-    private static void testUsingStacks() {
-        System.out.println("Testing on explicit Stacks");
-        IDecode decode = new Decode();
-        boolean pass = true &&
-                multiDigitMultiCharTest(decode) &&
-                singleDigitMultiCharTest(decode) &&
-                singleDigitCharTest(decode);
-
-        System.out.println(pass);
-    }
-
-
-    private static boolean multiDigitMultiCharTest(IDecode decode) {
-
-        String input1 = "10[b12[ca]]";
-        List<String> expected = Arrays.asList("bcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacacabcacacacacacacacacacacaca");
-
-
-        String[] inputs = {input1};
-
-        List<String> outputs = Arrays.stream(inputs).map(in -> decode.decode(in)).collect(Collectors.toList());
-
-        for (String s : outputs) {
-            System.out.println(s);
-        }
-
-        return outputs.equals(expected);
+        return expected.equals(iterative) && expected.equals(recursive);
 
     }
 
-    private static boolean singleDigitMultiCharTest(IDecode decode) {
-        String input1 = "3[b2[ca]]";
-
-        String input2 = "2[ab]";
-        String input3 = "2[a2[b]]";
-        String input4 = "3[b2[ca]]";
-        String input5 = "1[b]";
-        String input6 = "3[a]2[bc]";
-        String input7 = "3[a2[c]]";
-        String input8 = "2[abc]3[cd]ef";
-
-
-        List<String> expected = Arrays.asList("bcacabcacabcaca", "abab", "abbabb", "bcacabcacabcaca", "b", "aaabcbc", "accaccacc", "abcabccdcdcdef");
-
-        String[] inputs = {input1, input2, input3, input4, input5, input6, input7, input8};
-
-        List<String> outputs = Arrays.stream(inputs).map(in -> decode.decode(in)).collect(Collectors.toList());
-
-        for (String s : outputs) {
-            System.out.println(s);
-        }
-
-        return expected.equals(outputs);
-    }
-
-    private static boolean singleDigitCharTest(IDecode decode) {
-        String input1 = "2[ab]";
-        String input2 = "2[a2[b]]";
-        String input3 = "1[b]";
-
-        List<String> expected = Arrays.asList("abab", "abbabb", "b");
-        String[] inputs = {input1, input2, input3};
-
-        List<String> outputs = Arrays.stream(inputs).map(in -> decode.decode(in)).collect(Collectors.toList());
-
-        for (String s : outputs) {
-            System.out.println(s);
-        }
-
-        return expected.equals(outputs);
-
-    }
 
 }
 
-interface IDecode {
-    String decode(String in);
-}
 
-class DecodeFaster implements IDecode {
+class DecodedInCodedStringRecursive {
 
 
     /**
+     * Recusive stack:
+     * <p>
+     * If we see a number, for a full number and push it to Integer stack (timesStack)
+     * if this is a character (not [ and ] ) then push it to string stack
+     * if this is a [ then push it to string stack, we are about to close this once we reach a ], and we'll evaluate expression between [ and ].
+     * if this is a ] then it time to evaluate ths expression made above.
+     * Simply find how many times this expression need to repate using times stack top and make a new string and push it back to string stack, why? because this may be in another [ and ] that hasn't been resolved yet.
+     * Gist: This algorithm works as dfs manner, first solve the inner most [...] then then keep appending it
+     * <p>
+     * This algorithm works as dfs manner, first solve the inner most [...] then then keep appending it
+     * <p>
      * 10[b12[ca]]
      * <p>
      * Find the count, find the open and close bracket string, do recursively and repeat it.
      * <p>
      * if this is a number, form a number 'times'
-     * if this is a '[' then keep going and find the ']' and solve for this sub-string i.e. b12[ca]
+     * if this is a '[' then find the ']' and solve for this sub-string i.e. b12[ca]
      * if this is a char, append in our result.
      *
      * @param in
@@ -163,8 +105,7 @@ class DecodeFaster implements IDecode {
 
             } else if (current == '[') { // if this is a close, then find the sub-string to recurse
 
-                int start = i + 1;
-                i++;
+                int start = ++i;
 
                 int totalOpen = 1, totalClose = 0;
 
@@ -176,16 +117,13 @@ class DecodeFaster implements IDecode {
 
                     i++;
                 }
-
-
-                //as this character might not be correct at i
+                //as current 'i' after the loop would be at character after ']'
                 --i;
 
                 //Divide
                 String repeatedString = decode(in.substring(start, i));
 
-                //Concur
-                //append this repeated string by count times
+                //Concur; append this repeated string by count times
                 for (int k = 0; k < times; k++)
                     result.append(repeatedString); //this would be suffix and this is sub-part of string
 
@@ -203,12 +141,29 @@ class DecodeFaster implements IDecode {
     }
 }
 
-class Decode implements IDecode {
+/**
+ * If you notice above we are distingushing the number and string that's why we need to have two different stack.
+ * The same above alog can be change to use only one stack and use times variable to repate it
+ * <p>
+ * Can we levrage this idea? Yes,
+ * Just like above, we'll solve one by one [..] and keep appending it to previous made solution.
+ * So just keep finding [ and ] s.t. we get a expression. But wait, by just doing [ and ] we may break the total string and never able to append back.
+ * That's why use implicit stack.
+ * <p>
+ * Example:
+ * As: 10[b12[ca]]
+ * <p>
+ * first two chars are numbers "10" known as "times".
+ * We find a [, that means a potential sub-string is strated to get solve, find this sub-string.
+ * that will be {b12[ca]} . not here we { and } is different then [ and ] .. use for just notation
+ * now our problem become
+ * b12[ca]
+ */
+class DecodedInCodedStringIterative {
 
 
     public String decode(String in) {
 
-        System.out.println("Running " + in);
         char[] str = in.toCharArray();
 
         Stack<Integer> timesStack = new Stack<>();
@@ -232,10 +187,7 @@ class Decode implements IDecode {
                     value = value * 10 + str[j] - '0';
                     j++;
                 }
-
-
                 timesStack.push(value);
-
                 i = --j;
             } else {
 
@@ -282,8 +234,10 @@ class Decode implements IDecode {
 
     private static String getTimesString(int times, String soFar) {
         String temp = soFar;
+        StringBuilder soFarBuilder = new StringBuilder(soFar);
         for (int x = 1; x < times; x++)
-            soFar += temp;
+            soFarBuilder.append(temp);
+        soFar = soFarBuilder.toString();
 
         return soFar;
     }
