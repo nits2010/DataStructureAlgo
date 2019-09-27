@@ -5,6 +5,7 @@ import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.flatten.list.Node;
 import Java.LeetCode.flatten.list.SinglyNode;
+import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -147,10 +148,9 @@ public class GenericPrinter {
 
         StringBuilder result = new StringBuilder();
         for (int[] num : nums) {
-
-
             result.append(toString(num));
             result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
         }
 
 
@@ -497,6 +497,70 @@ public class GenericPrinter {
         System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
         System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
         System.out.println("Expected :" + GenericPrinter.toString(expected));
+
+    }
+
+    @SafeVarargs
+    public static <T> boolean equalsValues(T... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return true;
+        boolean equal = true;
+        T temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= temp == a[i++];
+        return equal;
+    }
+
+    @SafeVarargs
+    public static <T> boolean equalsValuesArray(T[]... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return true;
+        boolean equal = true;
+        T[] temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= Arrays.deepEquals(temp, a[i++]);
+        return equal;
+    }
+
+    @SafeVarargs
+    public static <T> boolean equalsValues(List<T>... a) {
+
+        if (a.length <= 1) // at least 2 length
+            return true;
+        boolean equal = true;
+        List<T> temp = a[0];
+        int i = 1;
+        while (i < a.length)
+            equal &= temp.equals(a[i++]);
+        return equal;
+    }
+
+
+    public static String levelOrder(NArrayTreeNode root) {
+        if (root == null)
+            return null;
+
+        StringBuilder levelOrder = new StringBuilder();
+        Queue<NArrayTreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        levelOrder.append(root.val).append(",");
+
+        while (!queue.isEmpty()) {
+            NArrayTreeNode node = queue.poll();
+
+            if (node.children != null)
+                for (NArrayTreeNode child : node.children) {
+                    levelOrder.append(child.val).append(",");
+                    queue.offer(child);
+                }
+        }
+
+        levelOrder.setLength(levelOrder.length() - 1);
+        return levelOrder.toString();
 
     }
 

@@ -147,8 +147,8 @@ public class LargestRectangle {
 
         buildHistogram(matrix);
 
-        for (int i = 0; i < n; i++) {
-            maxArea = Math.max(maxArea, histogramArea(matrix[i]));
+        for (int[] ints : matrix) {
+            maxArea = Math.max(maxArea, histogramArea(ints));
 
         }
 

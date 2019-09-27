@@ -118,10 +118,10 @@ class ReachingPointsBottomUp {
             else
                 tx %= ty;
 
-        if (sx == tx)
-            return sy <= ty && (ty - sy) % sx == 0;
-        else //sy==ty
-            return sx <= tx && (tx - sx) % sy == 0;
+        if (sx == tx && sy <= ty && (ty - sy) % sx == 0)
+            return true;
+
+        return sy == ty && sx <= tx && (tx - sx) % sy == 0;
 
 
     }

@@ -6,7 +6,8 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/reconstruct-itinerary/
- * Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
+ * Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order.
+ * All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
  * <p>
  * Note:
  * <p>
@@ -55,33 +56,51 @@ import java.util.*;
  */
 public class ReconstructItinerary {
 
-    private static List<String> get(String source, String destination) {
-        return Arrays.asList(source, destination);
-    }
-
     public static void main(String[] args) {
 
-        test(Arrays.asList(get("MUC", "LHR"), get(
-                "JFK", "MUC"), get("SFO", "SJC"), get("LHR", "SFO"))
+
+        test(Arrays.asList(
+                Arrays.asList("JFK", "A"),
+                Arrays.asList("JFK", "D"),
+                Arrays.asList("A", "C"),
+                Arrays.asList("B", "C"),
+                Arrays.asList("C", "JFK"),
+                Arrays.asList("C", "D"),
+                Arrays.asList("D", "A"),
+                Arrays.asList("D", "B"))
+                , "[JFK, A, C, D, B, C, JFK, D, A]");
+
+        test(Arrays.asList(
+                Arrays.asList("MUC", "LHR"),
+                Arrays.asList("JFK", "MUC"),
+                Arrays.asList("SFO", "SJC"),
+                Arrays.asList("LHR", "SFO"))
                 , "[JFK, MUC, LHR, SFO, SJC]");
 
 
-        test(Arrays.asList(get("JFK", "SFO"), get(
-                "JFK", "ATL"), get("SFO", "ATL"), get("ATL", "JFK"), get("ATL", "SFO"))
-                , "[JFK,ATL,JFK,SFO,ATL,SFO]");
+        test(Arrays.asList(
+                Arrays.asList("JFK", "SFO"),
+                Arrays.asList("JFK", "ATL"),
+                Arrays.asList("SFO", "ATL"),
+                Arrays.asList("ATL", "JFK"),
+                Arrays.asList("ATL", "SFO"))
+                , "[JFK, ATL, JFK, SFO, ATL, SFO]");
 
 
-        test(Arrays.asList(get("JFK", "KUL"), get(
-                "JFK", "NRT"), get("NRT", "JFK"))
-                , "[JFK,NRT,JFK,KUL]");
+        test(Arrays.asList(
+                Arrays.asList("JFK", "KUL"),
+                Arrays.asList("JFK", "NRT"),
+                Arrays.asList("NRT", "JFK"))
+                , "[JFK, NRT, JFK, KUL]");
 
     }
 
     private static void test(List<List<String>> tickets, String expected) {
-
-        System.out.println("\n\nInput :" + tickets);
-        IReconstructItinerary graph = new ReconstructItineraryGraph();
-        System.out.println(graph.findItinerary(tickets) + " Expected :" + expected);
+        System.out.println("-------");
+        System.out.println("tickets         :" + tickets);
+        System.out.println("Expected        :" + expected);
+        final List<String> itinerary = new ReconstructItineraryGraph().findItinerary(tickets);
+        System.out.println("Itinerary       :" + itinerary);
     }
 }
 
@@ -96,7 +115,7 @@ interface IReconstructItinerary {
 
 /**
  * Algo:
- * 1. Build a directed graph LinkedList representation, source -> [destination1, detination2....] And each destination is sorted lexical
+ * 1. Build a directed graph LinkedList representation, source -> [destination1, destination2....] And each destination is sorted lexical
  * 2. Run DFS on it.
  * <p>
  * We can do either backtracking or just modify normal dfs to Eular path algorithm.
@@ -110,7 +129,8 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
 
     /**
      * O(ELogE)
-     * where E is number of edges. Because we offer each edge into queue once and then poll it out once. Please correct me if I am wrong. Space complexity is O(E).
+     * where E is number of edges. Because we offer each edge into queue once and then poll it out once.
+     * Space complexity is O(E).
      *
      * @param tickets
      * @return
@@ -119,7 +139,7 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
     public List<String> findItinerary(List<List<String>> tickets) {
 
         if (tickets == null || tickets.isEmpty())
-            return Collections.EMPTY_LIST;
+            return new ArrayList<>();
 
         Map<String, PriorityQueue<String>> graph = buildGraph(tickets);
 
@@ -133,6 +153,8 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
 
     private Map<String, PriorityQueue<String>> buildGraph(List<List<String>> tickets) {
 
+        //Key -> Source
+        //Value -> lexical sorted destinations
         Map<String, PriorityQueue<String>> graph = new HashMap<>();
 
         for (List<String> ticket : tickets) {
@@ -155,40 +177,42 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
      * way back and get merged into that main path. By writing down the path backwards when retreating from recursion, merging the cycles into the main path is easy -
      * the end part of the path has already been written, the start part of the path hasn't been written yet, so just write down the cycle now and then keep backwards-writing the path.
      * <p>
+     * Walk-through
      * Input:
      * [[JFK, A], [JFK, D] , [A,C], [B,C] , [C, JFK], [C , D], [D,A] , [D, B] ]
      * <p>
-     * targets = {'JFK': ['A', 'D'], 'A': ['C'], 'B': ['C'], 'C': ['D', 'JFK'], 'D': ['A', 'B']}
+     * Graph = {'JFK': ['A', 'D'], 'A': ['C'], 'B': ['C'], 'C': ['D', 'JFK'], 'D': ['A', 'B']}
      * route = []
      * stack = ['JFK']
      * First point at which we get stuck:
      * <p>
      * <p>
-     * targets = {'JFK': ['D'], 'A': [], 'B': ['C'], 'C': ['D' , 'JFK',], 'D': ['B']}
+     * Graph = {'JFK': ['D'], 'A': [], 'B': ['C'], 'C': ['D' , 'JFK',], 'D': ['B']}
      * route = []
      * stack = ['JFK', 'A', 'C', 'D', 'A']
      * Update route:
      * <p>
      * <p>
-     * targets = {'JFK': ['D'], 'A': [], 'B': ['C'], 'C': ['JFK'], 'D': ['B']}
-     * route = ['A']
+     * Graph = {'JFK': ['D'], 'A': [], 'B': ['C'], 'C': ['JFK'], 'D': ['B']}
+     * route = ['A'] Last node of path {['JFK', 'A', 'C', 'D', 'A']}
      * stack = ['JFK', 'A', 'C', 'D']
      * Search forward again until stuck:
      * <p>
      * <p>
-     * targets = {'JFK': [], 'A': [], 'B': [], 'C': [], 'D': []}
+     * Graph = {'JFK': [], 'A': [], 'B': [], 'C': [], 'D': []}
      * route = ['A']
      * stack = ['JFK', 'A', 'C', 'D', 'B', 'C', 'JFK', 'D']
      * Update route:
+     * After updating all the way
      * <p>
      * <p>
-     * targets = {'JFK': ['D'], 'A': [], 'B': [], 'C': ['JFK'], 'D': []}
+     * Graph = {'JFK': ['D'], 'A': [], 'B': [], 'C': ['JFK'], 'D': []}
      * route = ['A', 'D', 'JFK', 'C', 'B', 'D', 'C', 'A', 'JFK']
      * stack = []
      * Return route in shortestPath:
      * <p>
      * <p>
-     * route = ['JFK', 'A', 'C
+     * route = JFK, A, C, D, B, C, JFK, D, A { reverse of above route}
      * <p>
      * <p>
      * From JFK we first visit JFK -> A -> C -> D -> A. There we're stuck, so we write down A as the end of the route and retreat back to D.
@@ -214,7 +238,7 @@ class ReconstructItineraryGraph implements IReconstructItinerary {
         /**
          * Try all the destination from this source incrementally.
          * This is important for input like [[JFK, KUL], [JFK, NRT], [NRT, JFK]]
-         * because once you reach Kul, you can't go anywhere but we have tickets left, so we should go NTR first
+         * because once you reach KUL, you can't go anywhere but we have tickets left, so we should go NTR first
          */
         while (!graph.get(source).isEmpty()) {
             String nextDestination = graph.get(source).poll();

@@ -24,8 +24,8 @@ package Java.LeetCode;
  */
 public class BurstBalloons {
 
-    public static void main(String []args) {
-        int nums[] = {3, 1, 5, 8};
+    public static void main(String[] args) {
+        int[] nums = {3, 1, 5, 8};
         System.out.println(maxCoinsSimplify(nums));
 
     }
@@ -34,12 +34,10 @@ public class BurstBalloons {
     /**
      * Lets understand the problem first. Problem clearly stating that we need to maximize the coins
      * 1. First insight-> we find max of all the possible solution
-     * <p>
-     * In order to maximize we need to find the correct order of the bursting the ballons
+     * In order to maximize we need to find the correct order of the bursting the balloons
      * 2. Second insight -> there should be order to maximize the coins collect
      * <p>
-     * After two insight, we if we simply try to bust a ballon and find out what is the max coin we can collect by bursting this bollon and find
-     * out the maximum out of all of them we are done.
+     * After two insight,  if we simply try to bust a balloon and find out what is the max coin we can collect by bursting this balloon and find out the maximum out of all of them we are done.
      * BruteForce:
      * 1. skip the current balloon and burst the next balloon, then find the max coins collected by busting this balloon, to find we need to find what is the max on LEFT side and RIGHT side
      * <p>
@@ -58,7 +56,7 @@ public class BurstBalloons {
      * it would be
      * { 3, 15, 40, 40} -> we found bursting the current balloon the cost. [ EQUATION 1 ]
      * <p>
-     * now consider instead of 1 balloon only, we have two balloons { 3,1}
+     * now consider instead of 1 balloon, we have two balloons { 3,1}
      * [ {3, 1}, 5, 8 ]
      * <p>
      * now we need to find which balloon to burst out of 3 and 1 in order to get max coins; we'll try both and find the max out of it [ just like bruteforce]
@@ -82,7 +80,7 @@ public class BurstBalloons {
      * <p>
      * lets drive dp equation for this;
      * <p>
-     * dp[i][j] represent max coins on bursting ballons between i and j (inclusive)
+     * dp[i][j] represent max coins on bursting balloons between i and j (inclusive)
      * <p>
      * dp[i][j] = Max ( (bursting on left side + bursting on right side + bursting it self) for all k between i<=k<=j )
      * <p>
@@ -91,12 +89,14 @@ public class BurstBalloons {
      * <p>
      * closely look into the solution, its a matrix chain multiplication derivation.
      * Complexity O(n^3)
+     * <p>
+     * {@link Java.InterviewBit.MatrixChainMultiplication}
      *
      * @param nums
      * @return
      */
 
-    public static int maxCoins(int nums[]) {
+    public static int maxCoins(int[] nums) {
 
         if (nums.length == 0)
             return 0;
@@ -106,7 +106,7 @@ public class BurstBalloons {
 
         int n = nums.length;
 
-        int dp[][] = new int[n + 1][n + 1];
+        int[][] dp = new int[n + 1][n + 1];
 
 
         for (int len = 1; len <= n; len++) {
@@ -143,7 +143,7 @@ public class BurstBalloons {
     }
 
 
-    public static int maxCoinsSimplify(int nums[]) {
+    public static int maxCoinsSimplify(int[] nums) {
 
         if (nums.length == 0)
             return 0;
@@ -153,14 +153,14 @@ public class BurstBalloons {
 
         int n = nums.length;
 
-        int temp[] = new int[n + 2];
+        int[] temp = new int[n + 2];
 
         temp[0] = 1;
         for (int i = 0; i < n; i++)
             temp[i + 1] = nums[i];
         temp[n + 1] = 1;
 
-        int dp[][] = new int[n + 2][n + 2];
+        int[][] dp = new int[n + 2][n + 2];
 
 
         for (int len = 1; len <= n; len++) {

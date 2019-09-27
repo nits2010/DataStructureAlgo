@@ -8,6 +8,9 @@ https://github.com/kdn251/interviews
 https://fizzbuzzed.com/top-interview-questions-1/
 
 https://github.com/RodneyShag/HackerRank_solutions
+https://github.com/RodneyShag/LeetCode_solutions
+https://github.com/RodneyShag/Interview_solutions
+
 https://github.com/rutujar/HackerRank-solutions
 
 
@@ -42,3 +45,7 @@ https://www.cnblogs.com/lightwindy/p/8476874.html
 
 All
 http://guozet.me/leetcode/ & solution https://github.com/guozetang/leetcode
+
+lintcode solutions: https://github.com/awangdev/LintCode
+
+https://ondrej-kvasnovsky.gitbooks.io/algorithms/

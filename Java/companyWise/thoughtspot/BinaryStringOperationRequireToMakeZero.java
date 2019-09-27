@@ -1,8 +1,5 @@
 package Java.companyWise.thoughtspot;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Author: Nitin Gupta
  * Date: 20/09/19
@@ -14,7 +11,7 @@ import java.util.Set;
  * 1 <= K <= N
  * <p>
  * Sample:
- * Input:   100010010011110,    K = 2
+ * Input:  100010010011110,    K = 2
  * Step-1: 001000111001011
  * Step-2: 000010010011110
  * Step-3: 000000111001011
