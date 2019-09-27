@@ -1,4 +1,4 @@
-package Java.LeetCode.serializeDeserialize.genrictree;
+package Java.LeetCode.tree.serializeDeserialize.genrictree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -20,6 +20,8 @@ import java.util.Queue;
  * <p>
  * N is in the range of [1, 1000]
  * Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
+ * <p>
+ * [Amazon]
  */
 public class SerializeDeserializeNAryTree implements ISerializeDeserializeNArrayTree {
 
@@ -41,31 +43,30 @@ public class SerializeDeserializeNAryTree implements ISerializeDeserializeNArray
         if (root == null)
             return "";
 
-        final String levelSep = seperator + ",";
+        final String levelSep = NULL_INDICATOR + SEPARATOR;
         Queue<NArrayTreeNode> queue = new LinkedList<>();
 
         StringBuilder serialize = new StringBuilder();
 
 
         queue.offer(root);
-        serialize.append(root.val);
-        serialize.append("," + levelSep); //Defines the Level end
+        serialize.append(root.val).append(SEPARATOR).append(levelSep);//Defines the Level end
 
         while (!queue.isEmpty()) {
 
             NArrayTreeNode treeNode = queue.poll();
 
+            //append child's of this level
             if (treeNode.children != null) {
                 for (NArrayTreeNode child : treeNode.children) {
-                    serialize.append(child.val);
-                    serialize.append(",");
+                    serialize.append(child.val).append(SEPARATOR);
                     queue.offer(child);
                 }
-                serialize.append(levelSep); //Defines the Level end
+                //Defines the Level end
+                serialize.append(levelSep);
             }
         }
-        serialize.setLength(serialize.length() - 1); //Remove last ,
-
+        serialize.setLength(serialize.length() - 1); //Remove last ','
         return serialize.toString();
     }
 
@@ -90,18 +91,19 @@ public class SerializeDeserializeNAryTree implements ISerializeDeserializeNArray
 
         int index = 0;
 
-        String[] content = data.split("\\,");
+        String[] content = data.split(SEPARATOR);
         root.val = Integer.parseInt(content[index++]);
 
         Queue<NArrayTreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
-        while (!queue.isEmpty() && index < content.length-1) {
+        while (!queue.isEmpty() && index < content.length - 1) {
 
             NArrayTreeNode node = queue.poll();
-            index++;
+            index++; //Skip line separator
 
-            while (!content[index].equals(seperator)) {
+            //build child for this node
+            while (!content[index].equals(NULL_INDICATOR)) {
                 if (node.children == null)
                     node.children = new ArrayList<>();
 

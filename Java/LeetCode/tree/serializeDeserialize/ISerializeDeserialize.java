@@ -1,4 +1,4 @@
-package Java.LeetCode.serializeDeserialize;
+package Java.LeetCode.tree.serializeDeserialize;
 
 import Java.LeetCode.templates.TreeNode;
 
@@ -9,8 +9,8 @@ import Java.LeetCode.templates.TreeNode;
  */
 public interface ISerializeDeserialize {
 
-    String seperator = "$";
-
+    String NULL_INDICATOR = "$";
+    String SEPARATOR = ",";
     String serialize(TreeNode root);
 
     TreeNode deserialize(String data);

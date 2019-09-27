@@ -47,3 +47,5 @@ All
 http://guozet.me/leetcode/ & solution https://github.com/guozetang/leetcode
 
 lintcode solutions: https://github.com/awangdev/LintCode
+
+https://ondrej-kvasnovsky.gitbooks.io/algorithms/

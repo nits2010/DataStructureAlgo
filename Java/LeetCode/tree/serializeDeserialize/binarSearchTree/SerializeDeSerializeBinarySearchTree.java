@@ -1,7 +1,7 @@
-package Java.LeetCode.serializeDeserialize.binarSearchTree;
+package Java.LeetCode.tree.serializeDeserialize.binarSearchTree;
 
 import Java.LeetCode.templates.TreeNode;
-import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
+import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -20,7 +20,7 @@ import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
  * <p>
  * Note: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
  * <p>
- * {@link Java.LeetCode.serializeDeserialize.binaryTree.SerializeDeSerializeBinaryTree}
+ * {@link Java.LeetCode.tree.serializeDeserialize.binaryTree.SerializeDeSerializeBinaryTree}
  * <p>
  * The same solution can be used to make it work but the important key here is "Binary search Tree" because of that we can reduce the
  * packets which gets transfer over the network by reducing the size of serialized string.
@@ -69,7 +69,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (root == null) {
                 return;
             }
-            serialized.append(root.val).append(",");
+            serialized.append(root.val).append(SEPARATOR);
             serialized(root.left, serialized);
             serialized(root.right, serialized);
         }
@@ -79,7 +79,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (data.isEmpty())
                 return null;
 
-            String[] preOrder = data.split(",");
+            String[] preOrder = data.split(SEPARATOR);
 
             return reconstruct(preOrder, new int[]{0}, Integer.MAX_VALUE);
 
@@ -91,36 +91,39 @@ public class SerializeDeSerializeBinarySearchTree {
          * *     4    8     30
          * *
          * * Serialized preOrder: [10,6,4,8,20,30 ]
-         * * index = 0 ; Max = BIG {10 < BIG}
+         * * index = 0 ; Max = BIG {10 < BIG} Left of 10
          * *            10
-         * * LEFT -> index = 1 ; Max = 10  { 6 < 10 }
+         * * LEFT -> index = 1 ; Max = 10  { 6 < 10 } Max => 6 Left of 6
          * *           10
          * *         6
-         * * LEFT -> index = 2 ; Max = 6  { 4  < 10 }
+         * * LEFT -> index = 2 ; Max = 6  { 4  < 6 } Max => 4 Left of 4
          * *           10
          * *         6
          * *      4
-         * * LEFT -> index = 3 ; Max = 4  { 8  >= 10 }
+         * * LEFT -> index = 3 ; Max = 4  { 8  > 4 } Return to 4, right of 4
          * *           10
          * *         6
          * *      4
          * *  null
-         * * Right -> index = 3 ; Max = 6  { 8  >= 10 }
+         * * Right -> index = 3 ; Max = 4  { 8  > 4 } return to 6, right of 6
          * *           10
          * *         6
          * *      4
          * *  null  null
-         * * Right -> index = 3 ; Max = 10  { 8  < 10 }
+         * * Right -> index = 3 ; Max = 6  { 8  > 6 }
          * *           10
          * *         6
          * *      4    8
          * *  null  null
-         * * RIGHT -> index = 4 ; Max = BIG  { 20  < BIG }
+         *
+         * Similarly try for left of 8 and right of 8. for index =4, [20]. Apprantely return to 10 and go right of 10
+         *
+         * * RIGHT -> index = 4 ; Max = BIG  { 20  < BIG } left of 20
          * *           10
          * *         6    20
          * *      4    8
          * *  null  null
-         * * LEFT -> index = 5 ; Max = 20  { 30  > 20 }
+         * * LEFT -> index = 5 ; Max = 20  { 30  > 20 }  return 20, right of 20
          * *           10
          * *         6    20
          * *      4    8 N
@@ -183,7 +186,7 @@ public class SerializeDeSerializeBinarySearchTree {
             }
             serialized(root.left, serialized);
             serialized(root.right, serialized);
-            serialized.append(root.val).append(",");
+            serialized.append(root.val).append(SEPARATOR);
         }
 
         @Override
@@ -191,7 +194,7 @@ public class SerializeDeSerializeBinarySearchTree {
             if (data.isEmpty())
                 return null;
 
-            String[] postOrder = data.split(",");
+            String[] postOrder = data.split(SEPARATOR);
 
             return reconstruct(postOrder, new int[]{postOrder.length - 1}, Integer.MIN_VALUE);
 

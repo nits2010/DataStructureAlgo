@@ -1,4 +1,4 @@
-package Java.LeetCode.serializeDeserialize.genrictree;
+package Java.LeetCode.tree.serializeDeserialize.genrictree;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -7,7 +7,8 @@ package Java.LeetCode.serializeDeserialize.genrictree;
  */
 public interface ISerializeDeserializeNArrayTree {
 
-    String seperator = "$";
+    String NULL_INDICATOR = "$";
+    String SEPARATOR = ",";
 
     String serialize(NArrayTreeNode root);
 

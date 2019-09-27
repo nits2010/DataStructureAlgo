@@ -1,4 +1,4 @@
-package Java.LeetCode.serializeDeserialize.genrictree;
+package Java.LeetCode.tree.serializeDeserialize.genrictree;
 
 import java.util.List;
 

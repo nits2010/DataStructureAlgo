@@ -1,7 +1,7 @@
-package Java.LeetCode.serializeDeserialize.binaryTree;
+package Java.LeetCode.tree.serializeDeserialize.binaryTree;
 
 import Java.LeetCode.templates.TreeNode;
-import Java.LeetCode.serializeDeserialize.ISerializeDeserialize;
+import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -33,13 +33,13 @@ import java.util.Queue;
  * format, so please be creative and come up with different approaches yourself.
  * <p>
  * Note: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
- *
+ * <p>
  * [Facebook]
  */
 
 public class SerializeDeSerializeBinaryTree {
 
-    class PreOrder implements ISerializeDeserialize {
+    static class PreOrder implements ISerializeDeserialize {
 
         // Encodes a tree to a single string.
         @Override
@@ -49,31 +49,44 @@ public class SerializeDeSerializeBinaryTree {
             return s.toString();
         }
 
+        /**
+         * Append $ for null node
+         * Append value for non-null node
+         * Append "," as separator
+         *
+         * @param root
+         * @param s
+         */
         private void serialize(TreeNode root, StringBuilder s) {
             if (root == null) {
-                s.append("$,");
+                s.append(NULL_INDICATOR).append(SEPARATOR);
                 return;
             }
-            s.append(root.val).append(",");
+            s.append(root.val).append(SEPARATOR);
             serialize(root.left, s);
             serialize(root.right, s);
 
         }
 
-        @Override
-        // Decodes your encoded data to tree.
+        /**
+         * Algo:
+         * 1. Separate nodes
+         *
+         * @param data
+         * @return
+         */
         public TreeNode deserialize(String data) {
-            String[] node = data.split(",");
+            String[] node = data.split(SEPARATOR);
             int[] counter = new int[1];
             return deserialize(node, counter);
         }
 
         private TreeNode deserialize(String[] node, int[] counter) {
-            if (node[counter[0]].equals("$")) {
+            if (node[counter[0]].equals(NULL_INDICATOR)) {
                 counter[0]++;
                 return null;
             }
-            TreeNode x = new TreeNode(Integer.valueOf(node[counter[0]]));
+            TreeNode x = new TreeNode(Integer.parseInt(node[counter[0]]));
             counter[0]++;
             x.left = deserialize(node, counter);
             x.right = deserialize(node, counter);
@@ -83,12 +96,12 @@ public class SerializeDeSerializeBinaryTree {
     }
 
 
-    class LevelOrder implements ISerializeDeserialize {
+    static class LevelOrder implements ISerializeDeserialize {
 
         @Override
         public String serialize(TreeNode root) {
             if (root == null)
-                return seperator;
+                return NULL_INDICATOR;
 
             StringBuilder serialized = new StringBuilder();
 
@@ -103,12 +116,12 @@ public class SerializeDeSerializeBinaryTree {
                     TreeNode node = queue.poll();
 
                     if (node == null) {
-                        serialized.append(seperator + ",");
+                        serialized.append(NULL_INDICATOR).append(SEPARATOR);
                         size--;
                         continue;
                     }
 
-                    serialized.append(node.val + ",");
+                    serialized.append(node.val).append(SEPARATOR);
                     queue.offer(node.left);
                     queue.offer(node.right);
 
@@ -128,9 +141,9 @@ public class SerializeDeSerializeBinaryTree {
             if (null == data || data.isEmpty())
                 return null;
 
-            String split[] = data.split(",");
+            String[] split = data.split(SEPARATOR);
 
-            if (split.length == 1 && split[0].equals(seperator))
+            if (split.length == 1 && split[0].equals(NULL_INDICATOR))
                 return null;
 
             TreeNode root = new TreeNode(Integer.parseInt(split[0]));
@@ -143,16 +156,20 @@ public class SerializeDeSerializeBinaryTree {
 
                 int size = queue.size();
 
-                while (size > 0) {
+                while (size > 0 && !queue.isEmpty()) {
 
                     TreeNode node = queue.poll();
 
-                    if (!split[index].equals(seperator)) {
+                    //if not null node
+                    if (!split[index].equals(NULL_INDICATOR)) {
                         node.left = new TreeNode(Integer.parseInt(split[index]));
                         queue.offer(node.left);
                     }
+
                     index++;
-                    if (!split[index].equals(seperator)) {
+
+                    //if not null node
+                    if (!split[index].equals(NULL_INDICATOR)) {
                         node.right = new TreeNode(Integer.parseInt(split[index]));
                         queue.offer(node.right);
                     }

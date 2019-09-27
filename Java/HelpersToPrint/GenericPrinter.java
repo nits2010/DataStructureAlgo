@@ -5,6 +5,7 @@ import Java.LeetCode.templates.ListNode;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.flatten.list.Node;
 import Java.LeetCode.flatten.list.SinglyNode;
+import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -536,6 +537,31 @@ public class GenericPrinter {
         while (i < a.length)
             equal &= temp.equals(a[i++]);
         return equal;
+    }
+
+
+    public static String levelOrder(NArrayTreeNode root) {
+        if (root == null)
+            return null;
+
+        StringBuilder levelOrder = new StringBuilder();
+        Queue<NArrayTreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        levelOrder.append(root.val).append(",");
+
+        while (!queue.isEmpty()) {
+            NArrayTreeNode node = queue.poll();
+
+            if (node.children != null)
+                for (NArrayTreeNode child : node.children) {
+                    levelOrder.append(child.val).append(",");
+                    queue.offer(child);
+                }
+        }
+
+        levelOrder.setLength(levelOrder.length() - 1);
+        return levelOrder.toString();
+
     }
 
     public static void main(String[] args) {
