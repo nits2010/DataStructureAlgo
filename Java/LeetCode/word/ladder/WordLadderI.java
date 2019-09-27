@@ -44,6 +44,10 @@ import java.util.*;
  * <p>
  * <p>
  * https://github.com/RodneyShag/LeetCode_solutions/blob/master/Solutions/Word%20Ladder.md
+ * <p>
+ * {@link WordLadderIBFSV2}
+ * {@link WordLadderIBiDirectionBFSUsingRecursion}
+ * {@link WordLadderIBiDirectionalBFS}
  */
 public class WordLadderI {
 
@@ -71,11 +75,13 @@ public class WordLadderI {
         final int bfs1 = new WordLadderIBFS().ladderLength(beginWord, endWord, wordList);
         final int bfs2 = new WordLadderIBFSV2().ladderLength(beginWord, endWord, wordList);
         final int biDirectionalBfs = new WordLadderIBiDirectionalBFS().ladderLength(beginWord, endWord, wordList);
-        System.out.println("BFS1        : " + bfs1 + " Pass ?: " + (bfs1 == expected));
-        System.out.println("BFS2        : " + bfs2 + " Pass ?: " + (bfs2 == expected));
-        System.out.println("Bi-BFS      : " + biDirectionalBfs + " Pass ?: " + (biDirectionalBfs == expected));
+        final int smartDfs = new WordLadderIBiDirectionBFSUsingRecursion().ladderLength(beginWord, endWord, wordList);
+        System.out.println("BFS1        : " + bfs1 + " Pass: " + ((bfs1 == expected) ? "Passed" : "failed"));
+        System.out.println("BFS2        : " + bfs2 + " Pass: " + ((bfs2 == expected) ? "Passed" : "failed"));
+        System.out.println("Bi-BFS      : " + biDirectionalBfs + " Pass: " + ((biDirectionalBfs == expected) ? "Passed" : "failed"));
+        System.out.println("smartDfs    : " + smartDfs + " Pass: " + ((smartDfs == expected) ? "Passed" : "failed"));
 
-        return GenericPrinter.equalsValues(expected, bfs1, bfs2, biDirectionalBfs);
+        return GenericPrinter.equalsValues(expected, bfs1, bfs2, biDirectionalBfs, smartDfs);
     }
 }
 
@@ -409,24 +415,17 @@ class WordLadderIBFSV2 {
  * We now have 2 Deques to deque from, and 2 "visited" Sets, but we don't want to duplicate code. We will create a general function called checkNeighbors() that takes a Deque and Set as input, to help us alternate between the 2 BFS searches.
  * If at any time a String gets dequed, and one of its neighbors has already been visited from the opposite side's parallel search, we've found a solution.
  * <p>
- * Runtime: 13 ms, faster than 97.07% of Java online submissions for Word Ladder.
- * Memory Usage: 38.8 MB, less than 97.81% of Java online submissions for Word Ladder.
+ *
  * <p>
  * For Bidirectional search, the runtime is O(b^(d/2)) + O(b^(d/2)) = O(2*b^(d/2)) = O(b^(d/2)) since each search only has to search halfway before meeting the other search.
  * <p>
  * Time Complexity: O(b^(d/2)) as explained at beginning of Solution 2. In our case, b is the max size of the Set returned by getNeighbors(), making b = O(26m) = O(m) where m is length of longest word.
  * Space Complexity: Same as in Solution 1.
+ * <p>
+ * Runtime: 13 ms, faster than 97.07% of Java online submissions for Word Ladder.
+ * * Memory Usage: 38.8 MB, less than 97.81% of Java online submissions for Word Ladder.
  */
 class WordLadderIBiDirectionalBFS {
-    static class Node {
-        String word;
-        int distance;
-
-        public Node(String word, int distance) {
-            this.word = word;
-            this.distance = distance;
-        }
-    }
 
     public int ladderLength(String source, String destination, List<String> wordList) {
 
@@ -444,29 +443,29 @@ class WordLadderIBiDirectionalBFS {
 
 
         //One direction from source to destination
-        final Queue<Node> queueSourceToDestination = new LinkedList<>();
+        final Queue<String> queueSourceToDestination = new LinkedList<>();
         //contains [string,distance]
-        final Map<String, Integer> visitedSourceDestination = new HashMap<>();
+        final Map<String, Integer> visitedSourceDestinationWithDistance = new HashMap<>();
 
         //One direction from destination to source
-        final Queue<Node> queueDestinationToSource = new LinkedList<>();
+        final Queue<String> queueDestinationToSource = new LinkedList<>();
         //contains [string,distance]
-        final Map<String, Integer> visitedDestinationSource = new HashMap<>();
+        final Map<String, Integer> visitedDestinationSourceWithDistance = new HashMap<>();
 
 
-        queueSourceToDestination.offer(new Node(source, 0)); //distance of source to source is 0
-        visitedSourceDestination.put(source, 0);
+        queueSourceToDestination.offer(source); //distance of source to source is 0
+        visitedSourceDestinationWithDistance.put(source, 0);
 
-        queueDestinationToSource.offer(new Node(destination, 0)); //distance of source to source is 0
-        visitedDestinationSource.put(destination, 0);
+        queueDestinationToSource.offer(destination); //distance of source to source is 0
+        visitedDestinationSourceWithDistance.put(destination, 0);
 
         int distance;
         while (!queueSourceToDestination.isEmpty() && !queueDestinationToSource.isEmpty()) {
 
-            if ((distance = move(queueSourceToDestination, visitedSourceDestination, visitedDestinationSource, uniqueWords)) >= 0)
+            if ((distance = move(queueSourceToDestination, visitedSourceDestinationWithDistance, visitedDestinationSourceWithDistance, uniqueWords)) >= 0)
                 return distance + 2;//source and destination included
 
-            if ((distance = move(queueDestinationToSource, visitedDestinationSource, visitedSourceDestination, uniqueWords)) >= 0)
+            if ((distance = move(queueDestinationToSource, visitedDestinationSourceWithDistance, visitedSourceDestinationWithDistance, uniqueWords)) >= 0)
                 return distance + 2;//source and destination included
 
         }
@@ -482,24 +481,23 @@ class WordLadderIBiDirectionalBFS {
      * @param uniqueWords wordList
      * @return return the minimum distance of this path
      */
-    private int move(Queue<Node> queue, Map<String, Integer> mainPath, Map<String, Integer> otherPath, Set<String> uniqueWords) {
+    private int move(Queue<String> queue, Map<String, Integer> mainPath, Map<String, Integer> otherPath, Set<String> uniqueWords) {
 
         if (queue.isEmpty())
             return -1;
 
-        final Node node = queue.poll();
-        final int distance = node.distance;
-        String word = node.word;
+        final String node = queue.poll();
+        final int distance = mainPath.get(node);
 
         //try all word which is 1 weight away
-        for (String neighbour : getNeighbour(word, uniqueWords)) {
+        for (String neighbour : getNeighbour(node, uniqueWords)) {
 
             if (otherPath.containsKey(neighbour))
                 return distance + otherPath.get(neighbour);
 
             if (!mainPath.containsKey(neighbour)) {
                 mainPath.put(neighbour, distance + 1);
-                queue.offer(new Node(neighbour, distance + 1));
+                queue.offer(neighbour);
             }
         }
 
@@ -560,4 +558,53 @@ class WordLadderIBiDirectionalBFS {
         return neighbour;
     }
 
+}
+
+/**
+ * Recursive BFS
+ * Runtime: 9 ms, faster than 99.55% of Java online submissions for Word Ladder.
+ * Memory Usage: 37.9 MB, less than 100.00% of Java online submissions for Word Ladder.
+ */
+class WordLadderIBiDirectionBFSUsingRecursion {
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> beginSet = new HashSet<>();
+        Set<String> endSet = new HashSet<>();
+        beginSet.add(beginWord);
+        endSet.add(endWord);
+        Set<String> dict = new HashSet<>(wordList);
+        if (!dict.contains(endWord)) return 0;
+        return search(beginSet, endSet, dict, 1);
+    }
+
+    private int search(Set<String> beginSet, Set<String> endSet, Set<String> dict, int cnt) {
+        if (beginSet.isEmpty() || endSet.isEmpty())
+            return 0;
+
+        cnt++;
+        dict.removeAll(beginSet);
+        Set<String> nextSet = new HashSet<>();
+
+        for (String str : beginSet) {
+            //Find all neighbours
+            char[] chs = str.toCharArray();
+            for (int i = 0; i < chs.length; i++) {
+                char original = chs[i];
+                for (char j = 'a'; j <= 'z'; j++) {
+                    chs[i] = j;
+                    String tmp = new String(chs);
+
+                    if (!dict.contains(tmp))
+                        continue;
+
+                    //we reached to destination from other end
+                    if (endSet.contains(tmp))
+                        return cnt;
+
+                    nextSet.add(tmp);
+                }
+                chs[i] = original;
+            }
+        }
+        return nextSet.size() > endSet.size() ? search(endSet, nextSet, dict, cnt) : search(nextSet, endSet, dict, cnt);
+    }
 }
