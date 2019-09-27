@@ -1,5 +1,6 @@
 package Java.LeetCode.tree.serializeDeserialize.genrictree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
 public class NArrayTreeNode {
 
     public int val;
-    public List<NArrayTreeNode> children;
+    public List<NArrayTreeNode> children = new ArrayList<>();
 
     public NArrayTreeNode() {
     }

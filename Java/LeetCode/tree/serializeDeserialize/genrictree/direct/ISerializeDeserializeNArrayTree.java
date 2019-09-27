@@ -1,4 +1,6 @@
-package Java.LeetCode.tree.serializeDeserialize.genrictree;
+package Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
+
+import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

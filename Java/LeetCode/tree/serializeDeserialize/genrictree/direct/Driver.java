@@ -1,11 +1,10 @@
-package Java.LeetCode.tree.serializeDeserialize.genrictree;
+package Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 
 import Java.HelpersToPrint.GenericPrinter;
+import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
