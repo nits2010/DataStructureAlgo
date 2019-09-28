@@ -442,15 +442,13 @@ class LFUCacheConstantTime {
 
         /**
          * Defines our actual cache.
-         * This contains
          * Key: As cache key and
          * Value: As cache Node
          */
         private final Map<Integer, Cache> cache;
 
         /**
-         * Defines the Frequency Cache.
-         * This contains what
+         * Defines the Frequency Cache
          * Key: As cache key and
          * Value: How many times a key accessed
          */
@@ -458,8 +456,6 @@ class LFUCacheConstantTime {
 
         /**
          * This is Frequency to DLL ; i avoid making own dll to simplify the code.
-         * <p>
-         * This contains at which
          * Key: frequency the item(key)
          * Value: Caches in First in First out manner (FIFO) to achieve Least Recently Used
          */

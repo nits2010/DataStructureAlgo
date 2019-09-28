@@ -131,7 +131,7 @@ public class MaximumSumNoThreeElementsAreAdjacent {
  * <p>
  *
  * <p>
- * Time Complexity: As it will form a ternary tree of max height 'n' {we have n choices} Hence O(n^3)
+ * Time Complexity: As it will form a ternary tree of max height 'n' {we have n choices} Hence O(3^n)
  */
 class MaximumSumNoThreeElementsAreAdjacentRecursive {
 
