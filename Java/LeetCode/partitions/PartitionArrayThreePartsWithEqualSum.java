@@ -62,7 +62,7 @@ public class PartitionArrayThreePartsWithEqualSum {
 
 /**
  * {@link PartitionSetIntoTwoSubsetEqualSum}
- * WE can only divide the array in two different sum if overall sum is dividable by 3.
+ * WE can only divide the array in three different subarray if overall sum is dividable by 3.
  * If so, find the index where the each part sum would exist.
  * <p>
  * Algo:

@@ -97,7 +97,7 @@ public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
      * @return <br/>
      * Complexity: time/Space-> O(n * sum) / O(n*sum)
      *
-     * Note: can be reduced to O(n*sum) / O(n)
+     * Note: can be reduced to O(n*sum) / O(sum)
      */
     private static int partitionSetIntoTwoSubsetMinimumDifferenceDP(int nums[]) {
 
