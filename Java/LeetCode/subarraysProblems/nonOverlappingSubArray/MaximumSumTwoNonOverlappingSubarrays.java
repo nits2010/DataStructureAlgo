@@ -195,19 +195,19 @@ public class MaximumSumTwoNonOverlappingSubarrays {
 
                 //Lmax is the case when L contiguous elements are taken first
                 Lmax = Math.max(Lmax, nums[i - M] - nums[i - L - M]);
-                System.out.println(" L : " + Lmax + " nums[i - M ]" + nums[i - M] + " -  nums[i - L - M] " + nums[i - L - M]);
+                //System.out.println(" L : " + Lmax + " nums[i - M ]" + nums[i - M] + " -  nums[i - L - M] " + nums[i - L - M]);
 
                 //Mmax is the case when M contiguous elements are taken first
                 Mmax = Math.max(Mmax, nums[i - L] - nums[i - L - M]);
-                System.out.println(" M : " + Mmax + " nums[i - L] " + nums[i - L] + " -  nums[i - L - M] " + nums[i - L - M]);
+                //System.out.println(" M : " + Mmax + " nums[i - L] " + nums[i - L] + " -  nums[i - L - M] " + nums[i - L - M]);
 
                 int lm = Lmax + nums[i] - nums[i - M];
-                System.out.println(" X :" + lm + " nums[i] " + nums[i] + " -nums[i - M]: " + nums[i - M]);
+                //System.out.println(" X :" + lm + " nums[i] " + nums[i] + " -nums[i - M]: " + nums[i - M]);
                 int ml = Mmax + nums[i] - nums[i - L];
-                System.out.println(" Y :" + ml + " nums[i] " + nums[i] + " -nums[i - L]: " + nums[i - L]);
+                //System.out.println(" Y :" + ml + " nums[i] " + nums[i] + " -nums[i - L]: " + nums[i - L]);
 
                 res = Math.max(res, Math.max(lm, ml));
-                System.out.println(" res :" + res + " LMax :" + Lmax + " MMax : " + Mmax + " \n");
+                //System.out.println(" res :" + res + " LMax :" + Lmax + " MMax : " + Mmax + " \n");
             }
             return res;
         }
