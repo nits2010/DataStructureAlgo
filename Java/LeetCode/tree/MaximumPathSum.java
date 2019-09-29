@@ -71,8 +71,7 @@ class MaximumEvenPathSum {
 
     int maximumEvenPathSum(TreeNode<Integer> root) {
 
-        int max[] = new int[1];
-        max[0] = Integer.MIN_VALUE;
+        int max[] = {Integer.MIN_VALUE};
 
         maximumEvenPathSum(root, max);
 
@@ -196,8 +195,7 @@ class MaximumPathSumLeafToLeaf {
         if (null == root)
             return 0;
 
-        int max[] = new int[1];
-        max[0] = Integer.MIN_VALUE;
+        int max[] = {Integer.MIN_VALUE};
 
         maximumPathSumLeafToLeaf(root, max);
 
@@ -266,8 +264,7 @@ class MaximumPathSumAnyNode {
         if (root == null)
             return 0;
 
-        int max[] = new int[1];
-        max[0] = Integer.MIN_VALUE;
+        int max[] = {Integer.MIN_VALUE};
         maximumPathSumAnyNode(root, max);
         return max[0];
     }
