@@ -67,7 +67,7 @@ public class CellStateAfterNDays {
      * In effect, this makes it 6 cells, each one could be occupied or not, that gives us 6C2 = 15.
      * Since the first and last cell don't change and will always be 0 regardless of their initial value,
      * that means that the 2nd and 7th cell will flip their state if and only if the 3rd and 6th cells are zero i.e.
-     * 0001000, or  so that's a combination that will never happen (2nd and 6th cell with value 1 and 2nd and 5th cell with value 1)
+     * 0001000, or  so , that's a combination that will never happen (2nd and 6th cell with value 1 and 2nd and 5th cell with value 1)
      * which gives us in total 6C2 - 1 = 14 combination. After 14 days, the combination will just repeat over and over again,
      * which leads to the following optimized constant time solution.
      */

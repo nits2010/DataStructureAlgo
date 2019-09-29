@@ -11,7 +11,7 @@ import java.util.*;
  * <p>
  * Give a computer with total K memory space, and an array of foreground tasks and background tasks the computer need to do.
  * Write an algorithm to find a pair of tasks from each array to maximize the memory usage. Notice the tasks could be done
- * without origin order.
+ * without original order.
  * <p>
  * Input
  * The input to the function/method consists of three arguments :

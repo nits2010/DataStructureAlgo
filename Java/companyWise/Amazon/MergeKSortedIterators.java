@@ -113,7 +113,7 @@ public class MergeKSortedIterators {
  * <p>
  * <p>
  * HashNext: O(1) where size is Length of iterators list
- * next: O(1)
+ * next: O(log(size))
  */
 class MergeKSortedIteratorsUsingPriorityQueueOnly {
 
@@ -204,8 +204,6 @@ class MergeKSortedIteratorsUsingPriorityQueueAndPeekIterator {
 
         // Returns the next element in the iteration without advancing the iterator.
         public E peek() {
-
-
             return lastElement;
         }
 
@@ -290,7 +288,7 @@ class MergeKSortedIteratorsUsingPriorityQueueAndPeekIterator {
  * This kind of implementation is not really a iterator. As it cache the whole data.
  * <p>
  * HashNext: O(1) where size is Length of iterators list
- * next: O(1)
+ * next: O(log(size))
  */
 class MergeKSortedIteratorsUsingPriorityQueueCached {
 
