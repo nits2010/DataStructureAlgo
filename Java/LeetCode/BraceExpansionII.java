@@ -231,7 +231,8 @@ public class BraceExpansionII {
 
         return new ArrayList<>(uniqueComponents);
     }
-
+    
+    // TODO: make uniqueComponents as set and convert back to list at last  
     private static List<String> merge(List<String> a, List<String> b) {
 
 

@@ -352,7 +352,8 @@ class WordBreakII {
             HashMap<Integer, List<String>> map = new HashMap<>(); //This is similar to List<String>[] wordIndex,
             return buildAndGather(s, s.length(), wordDict, map);
         }
-
+        
+        //TODO: convert list<>wordDict to set for efficiency 
         public static List<String> buildAndGather(String s, int end, List<String> wordDict, HashMap<Integer, List<String>> map) {
 
             List<String> res = new ArrayList<>();

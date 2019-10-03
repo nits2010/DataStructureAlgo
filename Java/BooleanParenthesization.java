@@ -71,7 +71,7 @@ public class BooleanParenthesization {
 
                     if (operator[k] == '&') {
                         T[i][j] += T[i][k] * T[k + 1][j]; // Both has to be true means left (T[i][k]) true and right(T[k+1][j] true
-                        F[i][j] += (totalIK * totalKJ - T[i][k] * T[k + 1][j]); // Both has to be false ; hence remove  true from total
+                        F[i][j] += (totalIK * totalKJ - T[i][k] * T[k + 1][j]); // either can be false ; hence remove  true from total
                     }
                     if (operator[k] == '^') {
                         T[i][j] += T[i][k] * F[k + 1][j] + F[i][k] * T[k + 1][j]; // either of them is true and other is false;

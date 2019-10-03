@@ -21,8 +21,6 @@ public class TopologicalSorts {
 
         boolean visited[] = new boolean[vertices];
 
-        Arrays.fill(visited, false);
-
         //visit every vertices one by one;
 
         Stack<Integer> stack = new Stack<>();

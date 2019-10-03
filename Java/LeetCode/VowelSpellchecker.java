@@ -72,7 +72,7 @@ public class VowelSpellchecker {
  * 1. When the query exactly matches a word in the wordlist (case-sensitive), you should return the same word back. : Means we need to search query in wordlist with exact match
  * 2. When the query matches a word up to capitalization, you should return the first such match in the wordlist.: Means we need to search query in wordlist with canalization match
  * 3. When the query matches a word up to vowel errors, you should return the first such match in the wordlist. : means we need to replace vowel if possible and then match
- * 4. One way would be finding all three kind of string and then match. To keep and search efficiently, we an use hashmaps.
+ * One way would be finding all three kind of string and then match. To keep and search efficiently, we an use hashmaps.
  * <p>
  * Algo:
  * 1. Build all three kind of hashmaps

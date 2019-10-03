@@ -82,10 +82,10 @@ public class MinimumPossibleSizeArrayGivenRulesRemovingElements {
             return dp[low][high];
 
 
-        //skip the current character
+        //skip the current , by not removig it
         int size = 1 + minimumPossibleSizeArrayGivenRulesRemovingElements(arr, k, low + 1, high, dp);
 
-        //consider the current character
+        //consider the current 
         //Try to find all the triplet where we can remove elements
 
         for (int i = low + 1; i <= high; i++) {

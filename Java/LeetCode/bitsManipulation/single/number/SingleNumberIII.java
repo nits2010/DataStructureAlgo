@@ -40,7 +40,7 @@ public class SingleNumberIII {
     /**
      * Idea leverages from {@link Java.companyWise.Grab.MissingElements}
      * <p>
-     * Xoring all elements will cancelled out by xoring them.
+     * Xoring all elements will cancelled out duplicates
      * After that you'll end up with bits of both the single occurring element.
      * <p>
      * divide the bits in two group by utilizing the right most set bit of xor. Because rightmost set bit will be different in

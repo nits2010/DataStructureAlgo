@@ -60,7 +60,7 @@ public class MaximumSumTwoNonOverlappingSubarraysKSize {
 
         lPreSum[0] = nums[0];
         int lSum = nums[0];
-        mPreSum[n - 1] = 0;
+        mPreSum[n - 1] = 0;// important 
         int mSum = 0;
 
 

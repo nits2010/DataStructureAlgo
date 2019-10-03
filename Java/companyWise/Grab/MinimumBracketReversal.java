@@ -15,7 +15,7 @@ import java.util.Stack;
  * <p>
  * Input:  exp = "}{"
  * Output: 2
- * We need to numberOfWays '}' to '{' and '{' to
+ * We need to change '}' to '{' and '{' to
  * '}' so that the expression becomes balanced,
  * the balanced expression is '{}'
  * <p>
@@ -23,13 +23,13 @@ import java.util.Stack;
  * Output: Can't be made balanced using reversals
  * <p>
  * Input:  exp = "{{{{"
- * Output: 2
+ * Output: 2 "{}{}"
  * <p>
  * Input:  exp = "{{{{}}"
- * Output: 1
+ * Output: 1 "{}{{}}
  * <p>
  * Input:  exp = "}{{}}{{{"
- * Output: 3
+ * Output: 3 {{{}}}{}
  *
  * similar {@link Java.LeetCode.LongestValidParentheses}
  */
@@ -67,18 +67,14 @@ public class MinimumBracketReversal {
 
 class MinimumReversal {
     /**
-     * For finding minimum reversal, first remove the expression in the expression which is valid.
-     * After then we need to find how many { and } are left, the total reversal would be open/2 + close/2
-     * <p>
-     * he idea is to first remove all balanced part of expression. For example, convert “}{{}}{{{” to “}{{{”
-     * by removing highlighted part. If we take a closer look,
-     * we can notice that, after removing balanced part, we always end up with an expression of the form }}…}{{…{,
-     * an expression that contains 0 or more number of closing brackets followed by 0 or more numbers of opening brackets.
+     * The idea is to first remove all balanced part of expression. For example, convert “}{{}}{{{” to “}{{{”
+     * by removing highlighted part. If we take a closer look, we can notice that, after removing balanced part, we always end up with an expression of the form }}…}{{…{,
+     * An expression that contains 0 or more number of closing brackets followed by 0 or more numbers of opening brackets.
      * <p>
      * How many minimum reversals are required for an expression of the form “}}..}{{..{” ?.
      * Let m be the total number of closing brackets and n be the number of opening brackets. We need ⌈m/2⌉ + ⌈n/2⌉ reversals.
      * For example }}}}{{ requires 2+1 reversals.
-     *
+     * ⌈⌉ means ceil
      * @param expression
      * @return
      */

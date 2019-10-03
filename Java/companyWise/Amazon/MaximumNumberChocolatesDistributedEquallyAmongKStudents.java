@@ -64,7 +64,7 @@ public class MaximumNumberChocolatesDistributedEquallyAmongKStudents {
      * Algo:
      * Brute Force:
      * Find the sum of all the sub-array and choose the sub-array which follow the property; sum % k == 0
-     * O(n^2)
+     * O(n^3)
      * <p>
      * Optimized:
      * To find the sum efficiently of a sub-array we can use prefix-sum table

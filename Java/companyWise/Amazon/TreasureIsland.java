@@ -30,7 +30,8 @@ import java.util.*;
  *
  * <p>
  * Similar {@link Java.LeetCode.island.NumberIslands}
- * Similar {@link RemoveObstacleRobotMinimumDistance} In current question we need to find the path as well.
+ * Similar {@link RemoveObstacleRobotMinimumDistance} 
+ In current question we need to find the path as well.
  */
 
 
@@ -159,7 +160,7 @@ public class TreasureIsland {
                 int d = Integer.MAX_VALUE;
                 int x = i, y = j; //Will tell from where we reached i and j
 
-                //Find the location from where we reach here; which gives minimum distance
+                //Find the location from where we reach here (i,j); the minimum distance 
                 for (int k = 0; k < row.length; k++) {
 
                     int r = row[k] + i;

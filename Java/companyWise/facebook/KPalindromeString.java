@@ -59,7 +59,7 @@ public class KPalindromeString {
  * This solution is given through using LPS;
  * Find the longest palindrome sub-sequence say L
  * given string length is n and k
- * if (n-l-k)> 1 then its not possible
+ * if (n-L) <=k, then possible
  * <p>
  * {@link Java.LeetCode.Palindroms.LongestPalindromicSubsequence}
  */
@@ -89,7 +89,7 @@ class KPalindromeStringUsingLPS {
      * <p>
      * Lets translate it to 1D array
      * lps[i] length of longest palindrome sub-sequence from till i
-     * we can note that in above equation when we say
+     * we can note that in above equation 
      * lps[i+1][j] -> is just a below row of current
      * lps[i][j-1] -> is the same row but previous column
      * lps[i+1][j-1] -> is the below row with previous column.

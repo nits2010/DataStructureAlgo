@@ -3,7 +3,8 @@ package Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-19
- * Description:https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/
+ * Description:https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/
+ https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/
  * Problem:
  * The API: int read4(char *buf) reads 4 characters at a time from a file.
  * The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters
@@ -41,6 +42,7 @@ package Java.companyWise.facebook;
  * 5, buf = "bcdef"
  *
  * https://aonecode.com/facebook-phone-interview-questions-2019
+ [Facebook] [LinkedIn] [Amazon] [Google]
  */
 public class ReadNCharactersGivenRead4 {
 

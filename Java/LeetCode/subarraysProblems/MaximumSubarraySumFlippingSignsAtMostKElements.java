@@ -61,7 +61,7 @@ public class MaximumSubarraySumFlippingSignsAtMostKElements {
      * *                   }
      * <p>
      * Let
-     * Dp[i][k] defines the maximum sum sub-array from i we get by j flips
+     * Dp[i][k] defines the maximum sum sub-array from i we get by k flips
      * <p>
      * Since our dp says from i then we need to try every i in order to find the sub-array.
      *

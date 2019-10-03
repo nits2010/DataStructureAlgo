@@ -128,7 +128,7 @@ class RemoveDuplicateIPv4UsingBitMask {
         //O(1)
         for (String ipv4 : ipv4Addresses) {
 
-            String[] portions = ipv4.split("\\.");
+            String[] portions = ipv4.split(".");
 
             boolean duplicate = mapAndFindPortions(portions, portionA, portionB, portionC, portionD);
             if (!duplicate)

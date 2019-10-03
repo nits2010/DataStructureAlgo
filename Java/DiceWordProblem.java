@@ -6,12 +6,15 @@ import java.util.*;
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 12/04/19
  * Description: https://www.careercup.com/question?id=5690892925534208
+ Given a word lenth n , a dice array. find out that this word possible to make usin
  */
 public class DiceWordProblem {
 
     public static void main(String []args) {
         String word = "xniu";
-        char dices[][] = {{'a', 'b', 'c', 'd', 'x', 'y'},
+        char dices[][] = 
+        {
+                {'a', 'b', 'c', 'd', 'x', 'y'},
                 {'e', 'f', 'g', 'h', 'i', 'j'},
                 {'k', 'l', 'm', 'n', 'o', 'p'},
                 {'q', 'r', 's', 't', 'u', 'v'}};

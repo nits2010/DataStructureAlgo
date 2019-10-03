@@ -99,8 +99,8 @@ class RegularExpressionMatchDP {
      * Deduction 2: if both character in pattern and text match, then we say they “match Probably” [ I’ll explain probably in  a while ]
      * <p>
      * Example 4: text=”ab” and pattern = “a”
-     * Approach: We see at index 0 in both they match, but there still some character left in pattern ( not ‘.’ And ‘*’ ) so they don’t match.
-     * Deduction 3: if there is some character remaining in pattern after matching complete text then they don’t match= false ; provided that remaining characters are not ‘.’ And ‘*’
+     * Approach: We see at index 0 in both they match, but there still some character left in text ( not ‘.’ And ‘*’ ) so they don’t match.
+     * Deduction 3: if there is some character remaining in text after matching complete text then they don’t match= false ; provided that remaining characters are not ‘.’ And ‘*’
      * <p>
      * I think, now you have pretty good idea about character vs character
      * <p>
@@ -150,11 +150,6 @@ class RegularExpressionMatchDP {
      * <p>
      * Example: text = “xaabyc” pattern = “xa*b.c” [ has 1 * and 1 “.” ]
      * Lets match
-     * <p>
-     * <p>
-     * <p>
-     * <p>
-     * <p>
      * “xaabyc” -> “xa*b.c” => “aabyc” -> “a*b.c”
      * => “abyc” -> “*b.c” OR
      * => “abyc” -> “ab.c”
@@ -165,10 +160,10 @@ class RegularExpressionMatchDP {
      * [Please note, for simplicity I did not wrote all the paths, when ever we hit “*” we have two path.]
      * <p>
      * Now lets come to more difficult pattern; where you have like this “**…*” or “.*” Or “..*” or “.**” … like this
-     * We can assume it same as “.*” -> “$*” where $ represent any character, now again your problem reduce to same, isn’t it 
+     * We can assume it same as “.*” -> “$*” where $ represent any character, now again your problem reduce to same, isn’t it 
      * <p>
      * Last but not least, there is one special case like
-     * Text =”abc” and pattern =”*df”
+     * Text =”abc” and pattern =”a*df”
      * In this case we need to look before what was the solution as there is no character previous to “*”.
      * <p>
      * Let’s write a recurrence relation and base case.
@@ -248,7 +243,7 @@ class RegularExpressionMatchDP {
 
         /**
          * Last but not least, there is one special case like
-         * Text =”abc” and pattern =”*df”
+         * Text =”abc” and pattern =”a*df”
          * In this case we need to loop before what was the solution as there is no character previous to “*”.
          */
 

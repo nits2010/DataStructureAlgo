@@ -5,6 +5,7 @@ package Java;
  * Date: 26/04/19
  * Description:
  * https://www.careercup.com/question?id=6194336212451328
+ Given two numbers X and Y and a integer array. find the longest sub-array that contains equal number of X and Y.
  */
 public class EqualXandY {
 

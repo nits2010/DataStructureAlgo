@@ -182,7 +182,7 @@ class DetectCycleDFS {
 
     public static boolean detectCycle(final int vertices, final List<Integer>[] adjacencyList) {
 
-        int visited[] = new int[vertices]; //initially all are false;
+        int visited[] = new int[vertices]; //initially all are 0
 
         /**
          * Visit each vertices

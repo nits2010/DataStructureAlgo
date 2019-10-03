@@ -96,8 +96,8 @@ class GroupIsomorphicStringsUsingHash {
 
 
     /**
-     * There is a limitation on above has. when the counter become >= 11 { two or more digits }
-     * the it is difficult to distiguish between counter =11 and whne counter =1 but
+     * There is a limitation on above hash. when the counter become >= 11 { two or more digits }
+     * the it is difficult to distiguish between counter =11 and whne counter =1 
      * <p>
      * example:
      * ...aa... -> ..44..
