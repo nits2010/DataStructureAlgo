@@ -1,6 +1,6 @@
 package Java.LeetCode.LargetstRectangle;
 
-import Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+import Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
 
 import java.util.Arrays;
 

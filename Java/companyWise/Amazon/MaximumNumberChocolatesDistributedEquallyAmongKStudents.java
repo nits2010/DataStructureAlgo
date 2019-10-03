@@ -29,7 +29,7 @@ import java.util.Map;
  * with indexes {1, 2, 3, 4}.
  * Source: Asked in [Amazon].
  * <p>
- * {@link Java.LeetCode.sumsubarrayproblems.LongestSubArraySumK}
+ * {@link Java.LeetCode.subarrays.LongestSubArraySumK}
  */
 public class MaximumNumberChocolatesDistributedEquallyAmongKStudents {
 

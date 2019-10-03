@@ -32,7 +32,7 @@ public class MaximumSumSubArrayAtLeastKElements {
     }
 
     /**
-     * {@link Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * {@link Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
      * @param num
      * @param k
      * @return

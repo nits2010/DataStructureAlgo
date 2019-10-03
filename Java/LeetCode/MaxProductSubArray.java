@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.LeetCode.sumsubarrayproblems.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+import Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

@@ -1,4 +1,4 @@
-package Java.LeetCode.sumsubarrayproblems;
+package Java.LeetCode.subarrays;
 
 import java.util.Arrays;
 

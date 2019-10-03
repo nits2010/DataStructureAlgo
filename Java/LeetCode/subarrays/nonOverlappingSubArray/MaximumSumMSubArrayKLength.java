@@ -1,4 +1,4 @@
-package Java.LeetCode.nonOverlappingSubArray;
+package Java.LeetCode.subarrays.nonOverlappingSubArray;
 
 import Java.HelpersToPrint.GenericPrinter;
 
@@ -10,7 +10,7 @@ import Java.HelpersToPrint.GenericPrinter;
  * {@link MaximumSumThreeNonOverlappingSubarrays}
  * <p>
  * Generalization of
- * {@link MaximumSumTwoNonOverlappingSubarraysKSize}
+ * {@link MaximumSumTwoNonOverlappingSubarrayKSize}
  * <p>
  * https://www.geeksforgeeks.org/max-sum-of-m-non-overlapping-subarrays-of-size-k/
  * Given an array, Given an array and two numbers M and K. We need to find sum of max M subarrays of size K (non-overlapping) in the array. (Order of array remains unchanged). K is the size of subarrays and M is the count of subarray. It may be assumed that size of array is more than m*k. If total array size is not multiple of k, then we can take partial last array.

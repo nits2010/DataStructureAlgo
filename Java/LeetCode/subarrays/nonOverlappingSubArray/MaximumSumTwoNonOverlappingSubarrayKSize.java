@@ -1,4 +1,4 @@
-package Java.LeetCode.nonOverlappingSubArray;
+package Java.LeetCode.subarrays.nonOverlappingSubArray;
 
 import Java.HelpersToPrint.GenericPrinter;
 
@@ -23,7 +23,7 @@ import Java.HelpersToPrint.GenericPrinter;
  * Output : 3 15 30
  * 40 4 50
  */
-public class MaximumSumTwoNonOverlappingSubarraysKSize {
+public class MaximumSumTwoNonOverlappingSubarrayKSize {
 
     public static void main(String[] args) {
         test(new int[]{2, 5, 1, 2, 7, 3, 0}, 2, 17);
