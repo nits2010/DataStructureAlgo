@@ -1,5 +1,6 @@
-package Java.companyWise.facebook.intervalRelatedProblems;
+package Java.LeetCode.intervalRelatedProblems.multitasking;
 
+import Java.LeetCode.templates.Interval;
 import javafx.util.Pair;
 
 import java.util.*;
@@ -13,7 +14,7 @@ import java.util.*;
  * 1. in what intervals you are working (at least 1 task on-going): https://leetcode.com/problems/merge-intervals
  * <p>
  * 2. in what intervals you are multi-tasking (at least 2 tasks on-going): https://i.imgur.com/nkY1cO9.png
-
+ * <p>
  * Input: [[1, 10], [2, 6], [9, 12], [14, 16], [16, 17]]
  * Output:
  * union [[1, 12], [14, 17]]
@@ -23,21 +24,6 @@ import java.util.*;
  * [FACEBOOK]
  */
 
-
-class Interval {
-    int start, end;
-
-
-    public Interval(int start, int end) {
-        this.start = start;
-        this.end = end;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + start + "," + end + ']';
-    }
-}
 
 public class IntervalWorkingOnMultiTasking {
 
@@ -103,7 +89,7 @@ public class IntervalWorkingOnMultiTasking {
     }
 
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
 
 
         test(buildInput1());
@@ -144,7 +130,7 @@ class WorkingMultiTasking {
      * @param intervals
      * @return
      */
-   public Pair<List<Interval>, List<Interval>> workingMultiTasking(List<Interval> intervals) {
+    public Pair<List<Interval>, List<Interval>> workingMultiTasking(List<Interval> intervals) {
 
 
         Map<Integer, Integer> map = new TreeMap<>();
@@ -194,7 +180,7 @@ class WorkingMultiTasking {
      * @param intervals
      * @return
      */
-   public Pair<LinkedList<Interval>, LinkedList<Interval>> workingMultiTaskingLinear(final List<Interval> intervals) {
+    public Pair<LinkedList<Interval>, LinkedList<Interval>> workingMultiTaskingLinear(final List<Interval> intervals) {
 
 
         /**

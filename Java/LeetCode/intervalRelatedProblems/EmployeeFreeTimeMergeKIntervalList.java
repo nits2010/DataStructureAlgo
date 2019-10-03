@@ -1,5 +1,7 @@
 package Java.LeetCode.intervalRelatedProblems;
 
+import Java.LeetCode.templates.Interval;
+
 import java.util.*;
 import java.util.stream.Collectors;
 

@@ -24,18 +24,20 @@ import java.util.*;
  * <p>
  * Input: ")("
  * Output: [""]
- *
- *
+ * <p>
+ * Solutions : {@link RemoveInvalidPretensesBackTrackingBFS} & {@link RemoveInvalidPretensesBackTrackingEfficientDFS}
  */
 public class RemoveInvalidPretenses {
 
-    public static void main(String []args) {
 
-        BackTrackingDFS dfs = new BackTrackingDFS();
-        BackTrackingBFS bfs = new BackTrackingBFS();
-        BackTrackingEfficientDFS edfs = new BackTrackingEfficientDFS();
+    public static void main(String[] args) {
+
+        RemoveInvalidPretensesBackTrackingDFS dfs = new RemoveInvalidPretensesBackTrackingDFS();
+        RemoveInvalidPretensesBackTrackingDFS2 dfs2 = new RemoveInvalidPretensesBackTrackingDFS2();
+        RemoveInvalidPretensesBackTrackingBFS bfs = new RemoveInvalidPretensesBackTrackingBFS();
+        RemoveInvalidPretensesBackTrackingEfficientDFS edfs = new RemoveInvalidPretensesBackTrackingEfficientDFS();
         System.out.println("DFS By removing any number of parenthesis : " + dfs.removeInvalidParenthesis("()())()"));
-        System.out.println("DFS By removing minimum of parenthesis : " + dfs.removeInvalidParenthesesDFS("()())()"));
+        System.out.println("DFS By removing minimum of parenthesis : " + dfs2.removeInvalidParenthesis("()())()"));
         System.out.println("Efficient  DFS By removing minimum of parenthesis : " + edfs.removeInvalidParentheses("()())()"));
         System.out.println("BFS By removing minimum of parenthesis : " + bfs.removeInvalidParenthesis("()())()"));
 
@@ -46,36 +48,45 @@ public class RemoveInvalidPretenses {
 /**
  * Remove as many number of parenthesis
  */
-class BackTrackingDFS {
+class RemoveInvalidPretensesBackTrackingDFS {
 
 
-    public Set<String> removeInvalidParenthesis(String str) {
+    public List<String> removeInvalidParenthesis(String str) {
 
-        Set<String> output = new HashSet<>();
+        Set<String> all = new HashSet<>();
+        List<String> output = new ArrayList<>();
 
-        removeInvalidParenthesis(str, output, new HashSet<>());
+        removeInvalidParenthesis(str, all);
+
+        //Keep only which has highest Length;
+        int maxLength = 0;
+        for (String s : all)
+            maxLength = Math.max(maxLength, s.length());
+
+        for (String s : all)
+            if (s.length() == maxLength)
+                output.add(s);
+
         return output;
 
     }
 
-    private void removeInvalidParenthesis(String str, Set<String> output, Set<String> visited) {
+    private void removeInvalidParenthesis(String str, Set<String> output) {
 
         if (isValid(str)) {
             if (!str.isEmpty())
                 output.add(str);
         }
 
-        visited.add(str);
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == '(' || str.charAt(i) == ')') {
 
                 String temp = str.substring(0, i) + str.substring(i + 1);
-                removeInvalidParenthesis(temp, output, visited);
+                removeInvalidParenthesis(temp, output);
             }
 
         }
 
-        visited.remove(str);
 
     }
 
@@ -101,12 +112,19 @@ class BackTrackingDFS {
 
     }
 
-    public List<String> removeInvalidParenthesesDFS(String s) {
+
+}
+
+
+class RemoveInvalidPretensesBackTrackingDFS2 {
+
+
+    public List<String> removeInvalidParenthesis(String s) {
 
         Set<String> validExpressions = new HashSet<>();
-        int minimumRemoved[] = {Integer.MAX_VALUE};
+        int[] minimumRemoved = {Integer.MAX_VALUE};
         this.recurse(s, 0, 0, 0, new StringBuilder(), 0, validExpressions, minimumRemoved);
-        return new ArrayList(validExpressions);
+        return new ArrayList<>(validExpressions);
     }
 
 
@@ -170,7 +188,7 @@ class BackTrackingDFS {
 /**
  * Remove the minimum number of invalid parentheses
  */
-class BackTrackingBFS {
+class RemoveInvalidPretensesBackTrackingBFS {
 
 
     public List<String> removeInvalidParenthesis(String str) {
@@ -250,7 +268,7 @@ class BackTrackingBFS {
 
 }
 
-class BackTrackingEfficientDFS {
+class RemoveInvalidPretensesBackTrackingEfficientDFS {
 
 
     private void recurse(String s, int index, int leftCount, int rightCount, int leftRem, int rightRem, StringBuilder expression, Set<String> validExpressions) {

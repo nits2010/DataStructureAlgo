@@ -36,6 +36,7 @@ Leetcode Premium questions solutions
 https://tonycao.gitbooks.io/leetcode-locked
 http://tiancao.me/Leetcode-Unlocked/
 https://www.cnblogs.com/lightwindy/p/8476874.html
+https://kennyzhuang.gitbooks.io/leetcode-lock/content/index.html
 
 
 All questions

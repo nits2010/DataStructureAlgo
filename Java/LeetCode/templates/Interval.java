@@ -1,4 +1,4 @@
-package Java.LeetCode.intervalRelatedProblems;
+package Java.LeetCode.templates;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -23,7 +23,7 @@ public class Interval implements Cloneable {
 
 
     @Override
-    protected Interval clone() {
+    public Interval clone()  {
         return new Interval(this.start, this.end);
     }
 

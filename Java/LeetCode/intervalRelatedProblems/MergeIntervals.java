@@ -1,4 +1,6 @@
-package Java.companyWise.facebook.intervalRelatedProblems;
+package Java.LeetCode.intervalRelatedProblems;
+
+import Java.LeetCode.templates.Interval;
 
 import java.util.*;
 

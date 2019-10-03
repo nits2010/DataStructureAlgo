@@ -1,6 +1,6 @@
 package Java.LeetCode.intervalRelatedProblems.meeting.room;
 
-import Java.LeetCode.intervalRelatedProblems.Interval;
+import Java.LeetCode.templates.Interval;
 
 import java.util.*;
 
