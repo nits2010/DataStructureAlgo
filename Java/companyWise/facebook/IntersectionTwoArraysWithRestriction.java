@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.intersection.arrays.IntersectionTwoArrays;
 
 import java.util.*;

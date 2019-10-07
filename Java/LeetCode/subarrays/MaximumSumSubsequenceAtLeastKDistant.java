@@ -1,5 +1,7 @@
 package Java.LeetCode.subarrays;
 
+import Java.nonleetcode.LongestIncreasingSubSequence;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-26
@@ -41,7 +43,7 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
      * 1. Instead longest we need to put constraint as Maximum Sum
      * 2. instead of choosing element one after other in distance 0 we need to choose which has distance k.
      * <p>
-     * Lets revise Longest increasing sub-sequence {@link Java.LongestIncreasingSubSequence}
+     * Lets revise Longest increasing sub-sequence {@link LongestIncreasingSubSequence}
      * LIS[i] is length of longest increasing sub-sequence ending at i
      * <p>
      * LIS[i] = { 1 + MAX {LIS[j]} 0<=j<i and A[i] > A[j] and 0<=i<N [length of array]

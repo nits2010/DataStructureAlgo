@@ -1,8 +1,8 @@
 package Java.companyWise.Amazon;
 
-import Java.HelpersToPrint.GenericPrinter;
-import Java.NextGreaterElementOnRightSide;
-import Java.SmallerElementOnLeftSide;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.NextGreaterElementOnRightSide;
+import Java.nonleetcode.SmallerElementOnLeftSide;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

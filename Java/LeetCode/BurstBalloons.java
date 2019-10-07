@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-06-28
@@ -90,7 +92,7 @@ public class BurstBalloons {
      * closely look into the solution, its a matrix chain multiplication derivation.
      * Complexity O(n^3)
      * <p>
-     * {@link Java.InterviewBit.MatrixChainMultiplication}
+     * {@link MatrixChainMultiplication}
      *
      * @param nums
      * @return

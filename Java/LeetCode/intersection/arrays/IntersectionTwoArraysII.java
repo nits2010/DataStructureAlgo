@@ -1,6 +1,6 @@
 package Java.LeetCode.intersection.arrays;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.*;
 

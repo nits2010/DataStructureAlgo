@@ -1,5 +1,8 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.Combinations;
+import Java.nonleetcode.Permutation;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,7 +25,7 @@ import java.util.Set;
  * 1 <= tiles.length <= 7
  * tiles consists of uppercase English letters.
  * <p>
- * Combination of  {@link Java.Combinations} and {@link Java.Permutation},
+ * Combination of  {@link Combinations} and {@link Permutation},
  * We need to avoid duplicate string though
  * <p>
  * Best solution {@link LetterTilePossibilitiesBackTrackingCounting}

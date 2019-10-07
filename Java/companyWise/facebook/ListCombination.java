@@ -1,5 +1,6 @@
 package Java.companyWise.facebook;
 
+import Java.LeetCode.braceExpansion.BraceExpansionI;
 import com.sun.tools.corba.se.idl.InvalidArgument;
 
 import java.util.*;
@@ -133,7 +134,7 @@ public class ListCombination {
     }
 
     /**
-     * similar to {@link Java.LeetCode.BraceExpansionI}
+     * similar to {@link BraceExpansionI}
      *
      * @param input
      * @param index

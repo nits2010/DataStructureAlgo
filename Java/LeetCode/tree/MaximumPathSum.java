@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.Tree.TreeNode;
+import Java.nonleetcode.Tree.TreeNode;
 import javafx.util.Pair;
 
 /**
@@ -10,17 +10,17 @@ import javafx.util.Pair;
  */
 public class MaximumPathSum {
 
-    public static int maximumPathSum(Java.Tree.TreeNode root) {
+    public static int maximumPathSum(TreeNode root) {
         MaximumPathSumAnyNode sum = new MaximumPathSumAnyNode();
         return sum.maximumPathSumAnyNode(root);
     }
 
-    public static int maximumPathSumLeafToLeaf(Java.Tree.TreeNode root) {
+    public static int maximumPathSumLeafToLeaf(TreeNode root) {
         MaximumPathSumLeafToLeaf sum = new MaximumPathSumLeafToLeaf();
         return sum.maximumPathSumLeafToLeaf(root);
     }
 
-    public static int maximumEvenPathSum(Java.Tree.TreeNode root) {
+    public static int maximumEvenPathSum(TreeNode root) {
         MaximumEvenPathSum sum = new MaximumEvenPathSum();
         return sum.maximumEvenPathSum(root);
     }
@@ -260,7 +260,7 @@ class MaximumPathSumLeafToLeaf {
  */
 class MaximumPathSumAnyNode {
 
-    int maximumPathSumAnyNode(Java.Tree.TreeNode root) {
+    int maximumPathSumAnyNode(TreeNode root) {
         if (root == null)
             return 0;
 

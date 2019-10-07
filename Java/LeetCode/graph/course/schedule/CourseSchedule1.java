@@ -1,8 +1,8 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.GenericPrinter;
-import Java.graph.graph.types.DirectedGraph;
-import Java.graph.questions.AlienLanguageOrder;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.graph.graph.types.DirectedGraph;
+import Java.nonleetcode.graph.questions.AlienLanguageOrder;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

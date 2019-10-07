@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.fourSum;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.*;
 

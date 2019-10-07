@@ -1,5 +1,8 @@
 package Java.companyWise.Google;
 
+import Java.LeetCode.braceExpansion.BraceExpansionI;
+import Java.LeetCode.braceExpansion.BraceExpansionII;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,8 +20,8 @@ import java.util.List;
  * a_dog_is_with_sarah
  * a_dog_is_with_mike
  * <p>
- * {@link Java.LeetCode.BraceExpansionI}
- * {@link Java.LeetCode.BraceExpansionII}
+ * {@link BraceExpansionI}
+ * {@link BraceExpansionII}
  */
 public class BraceExpansion {
     public static void main(String[] args) {

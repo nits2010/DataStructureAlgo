@@ -1,6 +1,7 @@
 package Java.LeetCode.graph.course.schedule;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.Knapsack;
 
 import java.util.*;
 
@@ -67,7 +68,7 @@ public class CourseSchedule3 {
  * 1. Course length (t) -> Bag size
  * 2. Max course number:  -> Value
  * <p>
- * {@link Java.Knapsack} #Knapsack0Or1#Recursive
+ * {@link Knapsack} #Knapsack0Or1#Recursive
  * <p>
  * <p>
  * Algorithm:

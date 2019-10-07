@@ -1,6 +1,6 @@
 package Java.LeetCode.stockPrices;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.companyWise.Amazon.MaximumDifferenceInIndex;
 
 /**

@@ -1,8 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
-import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;

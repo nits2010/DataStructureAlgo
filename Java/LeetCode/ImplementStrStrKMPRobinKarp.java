@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.KMP_KnuthMorrisPratt;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-19
@@ -23,7 +25,7 @@ package Java.LeetCode;
  * <p>
  * For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
  * <p>
- * {@link Java.KMP_KnuthMorrisPratt}
+ * {@link KMP_KnuthMorrisPratt}
  */
 public class ImplementStrStrKMPRobinKarp {
 

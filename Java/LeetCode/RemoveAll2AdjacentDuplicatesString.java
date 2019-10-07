@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.RemoveAllAdjacentDuplicatesString;
+
 import java.util.Stack;
 
 /**
@@ -28,7 +30,7 @@ import java.util.Stack;
  * 1 <= S.length <= 20000
  * S consists only of English lowercase letters.
  *
- * {@link Java.RemoveAllAdjacentDuplicatesString}
+ * {@link RemoveAllAdjacentDuplicatesString}
  */
 public class RemoveAll2AdjacentDuplicatesString {
 

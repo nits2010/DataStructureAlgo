@@ -1,6 +1,6 @@
 package Java.LeetCode.pair.element.problems.modulo;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,6 +1,7 @@
 package Java.companyWise.thoughtspot;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.graph.questions.shortest.path.DijkstraShortestPath;
 
 import java.util.*;
 
@@ -234,7 +235,7 @@ class ShortestPathRoadFlightAtMostNFlightBacktracking {
 }
 
 /**
- * {@link Java.graph.questions.shortest.path.DijkstraShortestPath} + BFS
+ * {@link DijkstraShortestPath} + BFS
  * <p>
  * Complexity: O((m*n)^2)
  */

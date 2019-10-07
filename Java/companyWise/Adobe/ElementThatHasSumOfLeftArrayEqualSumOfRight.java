@@ -1,6 +1,6 @@
 package Java.companyWise.Adobe;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.Arrays;
 

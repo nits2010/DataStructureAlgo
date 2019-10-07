@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
-import com.sun.tools.javah.Gen;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.StringCompression2;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -63,7 +63,7 @@ import com.sun.tools.javah.Gen;
  * All characters have an ASCII value in [35, 126].
  * 1 <= len(chars) <= 1000.
  * <p>
- * First part of it from {@link Java.StringCompression2}
+ * First part of it from {@link StringCompression2}
  */
 public class StringCompressionRunLengthEncoding {
 

@@ -1,6 +1,6 @@
 package Java.LeetCode.matrix.search;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 
 /**

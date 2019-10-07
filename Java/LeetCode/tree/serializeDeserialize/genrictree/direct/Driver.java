@@ -1,6 +1,6 @@
 package Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 import java.util.Arrays;

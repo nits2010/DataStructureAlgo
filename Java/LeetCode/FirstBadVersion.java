@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.BinarySearch;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-09-02
@@ -58,7 +60,7 @@ class FirstBadVersionBinarySearch extends VersionControl {
     }
 
     /**
-     * {@link Java.BinarySearch} #Overlow
+     * {@link BinarySearch} #Overlow
      */
     public int firstBadVersion(int n) {
         int s = 1, e = n;

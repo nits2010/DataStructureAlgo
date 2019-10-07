@@ -1,7 +1,8 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.WordWrapProblem;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -61,7 +62,7 @@ import java.util.List;
  * "do                  "
  * ]
  * <p>
- * For finding the optimal solution see {@link Java.WordWrapProblem}
+ * For finding the optimal solution see {@link WordWrapProblem}
  *
  * [Amazon]
  */

@@ -1,5 +1,7 @@
 package Java.companyWise.Google;
 
+import Java.nonleetcode.PainterPartitionProblem;
+
 import java.util.Arrays;
 
 /**
@@ -22,7 +24,7 @@ import java.util.Arrays;
  * [7, 5] -> 7 + 5 = 12
  * Your other two friends will take the sweetest chunk, so they will take 12 and 10. The maximum sweetness level you could get is 9.
  * <p>
- * Similar to {@link Java.PainterPartitionProblem}
+ * Similar to {@link PainterPartitionProblem}
  */
 public class ChocolateSweetnessChunk {
 
@@ -37,7 +39,7 @@ public class ChocolateSweetnessChunk {
 }
 
 /**
- * For explanation see {@link Java.PainterPartitionProblem Dp solution}
+ * For explanation see {@link PainterPartitionProblem Dp solution}
  * M[i][k] defines the sweetness of chocolates i chocolate with k people
  * <p>
  * *       M[i][k] = Min {

@@ -1,6 +1,7 @@
 package Java.LeetCode.nextGreaterElement;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.*;
 
@@ -102,7 +103,7 @@ class NextGreaterElementIUBruteForce {
 }
 
 /**
- * Sub-routine {@link Java.NextGreaterElementOnRightSide}
+ * Sub-routine {@link NextGreaterElementOnRightSide}
  * Runtime: 3 ms, faster than 80.20% of Java online submissions for Next Greater Element I.
  * Memory Usage: 37.6 MB, less than 96.30% of Java online submissions for Next Greater Element I.
  */

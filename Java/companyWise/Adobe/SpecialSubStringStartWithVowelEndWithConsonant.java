@@ -1,6 +1,6 @@
 package Java.companyWise.Adobe;
 
-import Java.SuffixArray;
+import Java.nonleetcode.SuffixArray;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package Java.LeetCode.matrixPrint.dignoal.forward.downward;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

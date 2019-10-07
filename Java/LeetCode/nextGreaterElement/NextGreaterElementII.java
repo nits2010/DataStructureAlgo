@@ -1,6 +1,7 @@
 package Java.LeetCode.nextGreaterElement;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -59,9 +60,9 @@ public class NextGreaterElementII {
 }
 
 /**
- * We'll utilize the {@link Java.NextGreaterElementOnRightSide}.
+ * We'll utilize the {@link NextGreaterElementOnRightSide}.
  * Algorithm:
- * 1. Build NGE array using {@link Java.NextGreaterElementOnRightSide}.
+ * 1. Build NGE array using {@link NextGreaterElementOnRightSide}.
  * 2. Then for remaining elements { whose greater element we did not find on right}. We'll start searching greater element from left
  * * 2.1 if current element is not calculated { whose greater element we did not find on right} then search from start of the array
  * *   till you find an element greater then this element.

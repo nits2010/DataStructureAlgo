@@ -1,7 +1,8 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
+import Java.nonleetcode.Tree.FlipTreeUpSideDown;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -54,7 +55,7 @@ import Java.LeetCode.templates.TreeNode;
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.13.html
  * * https://www.geeksforgeeks.org/flip-binary-tree/
  * * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
- * {@link Java.Tree.FlipTreeUpSideDown}
+ * {@link FlipTreeUpSideDown}
  */
 public class BinaryTreeUpsideDown {
 

@@ -1,6 +1,6 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 import java.util.*;

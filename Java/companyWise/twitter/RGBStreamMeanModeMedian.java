@@ -1,6 +1,6 @@
 package Java.companyWise.twitter;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

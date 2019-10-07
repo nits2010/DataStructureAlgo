@@ -1,6 +1,6 @@
 package Java.LeetCode.Palindroms;
 
-import Java.MaxA;
+import Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -125,7 +125,7 @@ class MinimumInsertionsPalindromeBruteForce implements IMinimumInsertionsPalindr
  * *                     otherwise;
  * *            1 + Min ( dp[i][j-1] , dp[i+1][j] )
  * <p>
- * To compute use similar algo like {@link Java.InterviewBit.MatrixChainMultiplication}
+ * To compute use similar algo like {@link MatrixChainMultiplication}
  * complexity: O(n^2)/O(n^2) as we have two dimension where the each test can go. Testing all the possibilities
  */
 class MinimumInsertionsPalindromeDP implements IMinimumInsertionsPalindrome {

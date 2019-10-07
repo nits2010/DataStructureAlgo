@@ -1,6 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.SmallerElementOnLeftSide;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -216,7 +217,7 @@ class AsteroidCollisionBruteForce implements AsteroidCollisionSolution {
  * This means, if we know is there any asteroid on left side of current  asteroid[i] (and -ve) which is smaller(equal) to this asteroid[i], then we can take the decision about this asteroid[i].
  * Otherwise we'll wait till we find a negative asteroid which comes and destroy it.
  * <p>
- * This reminds us a similar problem {@link Java.SmallerElementOnLeftSide}.
+ * This reminds us a similar problem {@link SmallerElementOnLeftSide}.
  * <p>
  * To find efficiently information about the left side asteroid, we can use stack.
  * <p>

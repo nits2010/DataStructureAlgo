@@ -1,6 +1,7 @@
 package Java.companyWise.facebook;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.SimpleMovingAverage;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -8,7 +9,7 @@ import Java.HelpersToPrint.GenericPrinter;
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.
  * <p>
- * {@link Java.SimpleMovingAverage}
+ * {@link SimpleMovingAverage}
  */
 public class MovingAverage {
 

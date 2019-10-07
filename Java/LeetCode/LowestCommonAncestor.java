@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
@@ -17,7 +17,7 @@ import java.util.*;
  * 236. Lowest Common Ancestor of a Binary Tree
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
  * <p>
- * {@link Java.Tree.LowestCommonAncestor}
+ * {@link Java.nonleetcode.Tree.LowestCommonAncestor}
  */
 public class LowestCommonAncestor {
 

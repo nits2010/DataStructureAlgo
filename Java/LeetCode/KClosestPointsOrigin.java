@@ -1,6 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.KthLargestElement;
 import javafx.util.Pair;
 
 import java.util.*;
@@ -227,7 +228,7 @@ class KClosestPointsOriginPartition {
 
 /**
  * Avoid below algorithm as though its O(n) but has more computation then needed. Its good for very huge array.
- * {@link Java.KthLargestElement} #KthSmallest
+ * {@link KthLargestElement} #KthSmallest
  * We'll apply same logic as finding the kthSmallest element. Once we partition the array at index 'partition'
  * 1. if partition = k then all the element on left side of this index would be lesser than elements on right side of partition
  * 2. otherwise either we need to go left or right based on partition vs k

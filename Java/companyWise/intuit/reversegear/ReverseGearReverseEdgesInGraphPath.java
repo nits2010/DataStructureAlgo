@@ -1,6 +1,7 @@
 package Java.companyWise.intuit.reversegear;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.graph.questions.shortest.path.DijkstraShortestPath;
 
 import java.util.*;
 
@@ -58,7 +59,7 @@ public class ReverseGearReverseEdgesInGraphPath {
  * but if we move toward reverse edge 1 cost is added. So if we apply Dijkstra’s shortest path on this modified graph from given source,
  * then that will give us minimum cost to reach from source to destination i.e. minimum edge reversal from source to destination.
  *
- * {@link Java.graph.questions.shortest.path.DijkstraShortestPath}
+ * {@link DijkstraShortestPath}
  *
  */
 class MinimumEdgesToReverseMakePathFromSourceToDestination {

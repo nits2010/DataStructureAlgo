@@ -1,6 +1,7 @@
 package Java.LeetCode.Palindroms;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.KMP_KnuthMorrisPratt;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -55,7 +56,7 @@ public class ShortestPalindrome_MinimumNumberCharacterAppendsMakeStringPalindrom
  * 3. total character need to add is n - length
  * <p>
  * <p>
- * {@link Java.KMP_KnuthMorrisPratt}
+ * {@link KMP_KnuthMorrisPratt}
  * <p>
  * Runtime: 3 ms, faster than 76.30% of Java online submissions for Shortest Palindrome.
  * Memory Usage: 35.8 MB, less than 100.00% of Java online submissions for Shortest Palindrome.

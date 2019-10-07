@@ -1,5 +1,7 @@
 package Java.companyWise.facebook;
 
+import Java.nonleetcode.EditDistance;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-07-16
@@ -180,7 +182,7 @@ class KPalindromeStringUsingLPS {
  * if
  * 2*N <= 2*k then we can make k-palindrome string from "S"
  *
- * {@link Java.EditDistance}
+ * {@link EditDistance}
  */
 class KPalindromeStringUsingEditDistance {
 

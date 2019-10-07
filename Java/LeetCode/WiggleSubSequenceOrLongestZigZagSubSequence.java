@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.LongestIncreasingSubSequence;
+
 import java.util.Arrays;
 
 /**
@@ -54,7 +56,7 @@ public class WiggleSubSequenceOrLongestZigZagSubSequence {
 
 
 /**
- * base idea {@link Java.LongestIncreasingSubSequence}
+ * base idea {@link LongestIncreasingSubSequence}
  */
 class WiggleSubSequencePoly {
 

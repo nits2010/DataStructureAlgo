@@ -1,7 +1,8 @@
 package Java.LeetCode.tree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
+import Java.nonleetcode.Tree.traversal.MoriesTreeTraversal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -244,7 +245,7 @@ class RecoverBinarySearchTreeConstantRecursive {
  * Runtime: 2 ms, faster than 99.76% of Java online submissions for Recover Binary Search Tree.
  * Memory Usage: 39.9 MB, less than 80.77% of Java online submissions for Recover Binary Search Tree.
  * <p>
- * {@link Java.Tree.traversal.MoriesTreeTraversal}
+ * {@link MoriesTreeTraversal}
  */
 class RecoverBinarySearchTreeConstantMories {
 

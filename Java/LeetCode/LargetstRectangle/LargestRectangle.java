@@ -1,6 +1,6 @@
 package Java.LeetCode.LargetstRectangle;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.Stack;
 

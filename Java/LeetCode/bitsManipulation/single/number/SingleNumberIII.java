@@ -1,6 +1,6 @@
 package Java.LeetCode.bitsManipulation.single.number;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

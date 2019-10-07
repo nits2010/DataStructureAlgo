@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.KMP_KnuthMorrisPratt;
+
 import java.util.*;
 
 /**
@@ -50,7 +52,7 @@ public class RepeatedDNASequences {
  * 1. Take L length of sub-string, search in remaining string it exist or not.
  * 2. if found, add in your set and move ahead in a string.
  * <p>
- * Complexity: Each time we take L length sub-string which takes O(L) time, to search in remaining string takes O(N) time {@link Java.KMP_KnuthMorrisPratt}.
+ * Complexity: Each time we take L length sub-string which takes O(L) time, to search in remaining string takes O(N) time {@link KMP_KnuthMorrisPratt}.
  * Hence: O(L*(N))
  * Space:O(1)
  * <p>
@@ -89,7 +91,7 @@ class RepeatedDNASequencesRollingHashBrute {
 
 /**
  * In above we brute forcely search ahead every time. We can avoid by computing hash see those hash occurred already.
- * * Complexity: Each time we take L length sub-string hash which takes O(L) time, to search in remaining string takes O(N-L) time {@link Java.KMP_KnuthMorrisPratt}.
+ * * Complexity: Each time we take L length sub-string hash which takes O(L) time, to search in remaining string takes O(N-L) time {@link KMP_KnuthMorrisPratt}.
  * * Hence: O(L*(N-L))
  * * Space:O(N-L)
  * <p>

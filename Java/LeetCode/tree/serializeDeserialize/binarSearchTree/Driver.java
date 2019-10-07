@@ -1,9 +1,8 @@
 package Java.LeetCode.tree.serializeDeserialize.binarSearchTree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
-import Java.LeetCode.tree.serializeDeserialize.binaryTree.SerializeDeSerializeBinaryTree;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

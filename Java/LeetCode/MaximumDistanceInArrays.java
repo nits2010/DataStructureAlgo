@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.Arrays;
 import java.util.Comparator;

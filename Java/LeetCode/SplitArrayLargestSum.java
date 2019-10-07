@@ -1,5 +1,7 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.PainterPartitionProblem;
+
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
  * Date: 2019-08-05
@@ -27,7 +29,7 @@ package Java.LeetCode;
  * where the largest sum among the two subarrays is only 18.
  * <p>
  * Similar to these
- * {@link Java.PainterPartitionProblem}
+ * {@link PainterPartitionProblem}
  * {@link Java.companyWise.Google.ChocolateSweetnessChunk}
  */
 public class SplitArrayLargestSum {

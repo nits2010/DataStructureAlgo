@@ -1,6 +1,6 @@
 package Java.LeetCode.flatten.tree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 

@@ -1,8 +1,8 @@
 package Java.LeetCode;
 
+import Java.nonleetcode.LongestIncreasingSubSequence;
+
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -47,7 +47,7 @@ public class ConvertToStrictlyIncreasingArray {
      * Complexity is nearly 2^n
      * <p>
      * Better Solution: Say array length is 'N'
-     * 1. Instead of generating all strictly increasing seq in nature, we can use {@link Java.LongestIncreasingSubSequence} to find the longest one.
+     * 1. Instead of generating all strictly increasing seq in nature, we can use {@link LongestIncreasingSubSequence} to find the longest one.
      * The only change we would require is to make sure the sequence is strictly increasing (not just increasing ).
      * And N- len would be your answer as those element is not participating in SLIS.
      * <p>

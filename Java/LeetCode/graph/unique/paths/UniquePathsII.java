@@ -1,6 +1,6 @@
 package Java.LeetCode.graph.unique.paths;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.Arrays;
 

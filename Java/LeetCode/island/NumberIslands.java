@@ -1,9 +1,9 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.companyWise.GroupOn.IslandsSizeCount;
 
-import static Java.HelpersToPrint.GenericPrinter.*;
+import static Java.helpers.GenericPrinter.*;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)

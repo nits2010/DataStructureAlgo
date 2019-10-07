@@ -1,6 +1,6 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;

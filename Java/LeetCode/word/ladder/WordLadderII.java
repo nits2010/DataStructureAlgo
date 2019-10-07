@@ -1,6 +1,6 @@
 package Java.LeetCode.word.ladder;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.*;
 

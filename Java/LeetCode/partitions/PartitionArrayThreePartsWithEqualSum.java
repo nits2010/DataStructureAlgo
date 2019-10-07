@@ -1,6 +1,6 @@
 package Java.LeetCode.partitions;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.HashMap;
 import java.util.Map;

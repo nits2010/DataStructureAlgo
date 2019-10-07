@@ -1,6 +1,6 @@
 package Java.LeetCode.tree.serializeDeserialize.binaryTree;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 

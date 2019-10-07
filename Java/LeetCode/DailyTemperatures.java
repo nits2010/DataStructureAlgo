@@ -1,6 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -17,7 +18,7 @@ import java.util.Stack;
  * <p>
  * Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range [30, 100].
  * <p>
- * Similar to {@link Java.NextGreaterElementOnRightSide}
+ * Similar to {@link NextGreaterElementOnRightSide}
  * https://leetcode.com/problems/daily-temperatures/discuss/389422/3-solution-or-Explanation-or-100-beat-or-Java
  */
 public class DailyTemperatures {
@@ -45,7 +46,7 @@ public class DailyTemperatures {
     /**
      * Using Implicit stack
      * <p>
-     * This is similar to {@link Java.NextGreaterElementOnRightSide}
+     * This is similar to {@link NextGreaterElementOnRightSide}
      * the only difference is we don't need to put the element but the distance of greater element on right side from current element
      * Distance can be calculated as 'i' as current element index and 'j' is element on right side which is next greater then 'i'
      * distance = j-i

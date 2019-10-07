@@ -1,6 +1,7 @@
 package Java.LeetCode.island;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.UnionFindDisjointSets;
 
 import java.util.*;
 
@@ -136,7 +137,7 @@ class NumberIslandsIIBuildAndCount {
  * Since, an island can be connected through 4 directions {horizontal and vertical} i.e. means we need to attach those valid position to old island as well to correctly evaluate
  * the new position as potential island.
  * <p>
- * Union-Find {@link Java.UnionFindDisjointSets}
+ * Union-Find {@link UnionFindDisjointSets}
  * -----------
  * Using union-Find we can find out that two points are connected or not by checking there parent.
  * <p>

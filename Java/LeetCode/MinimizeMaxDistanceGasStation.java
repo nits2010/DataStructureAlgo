@@ -1,6 +1,7 @@
 package Java.LeetCode;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.PainterPartitionProblem;
 
 /**
  * Author: Nitin Gupta(nitin.gupta@walmart.com)
@@ -26,7 +27,7 @@ import Java.HelpersToPrint.GenericPrinter;
  * K will be an integer in range [1, 10^6].
  * Answers within 10^-6 of the true value will be accepted as correct.
  * <p>
- * Similar to {@link Java.PainterPartitionProblem}
+ * Similar to {@link PainterPartitionProblem}
  */
 public class MinimizeMaxDistanceGasStation {
 
@@ -49,7 +50,7 @@ public class MinimizeMaxDistanceGasStation {
 }
 
 /**
- * Similar idea as {@link Java.PainterPartitionProblem}.
+ * Similar idea as {@link PainterPartitionProblem}.
  * here; painter = station to be added
  * and board = stations given.
  * <p>
@@ -119,7 +120,7 @@ class MinimizeMaxDistanceGasStationDPBottomUp {
 
 
 /**
- * Similar idea as {@link Java.PainterPartitionProblem}. #Optimized
+ * Similar idea as {@link PainterPartitionProblem}. #Optimized
  * we can apply binary search algo here.
  * <p>
  * We know the minimum distance we can make between any two stations 0 {hypothetically putting infinite stations between two stations}

@@ -1,6 +1,6 @@
 package Java.LeetCode.combination.sum;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 import java.util.Arrays;
 

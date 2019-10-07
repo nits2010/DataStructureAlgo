@@ -1,6 +1,7 @@
 package Java.LeetCode.longestShortestCommon;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
+import Java.nonleetcode.LongestIncreasingSubSequence;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -97,7 +98,7 @@ class LongestCommonIncreasingSubSequence2D implements ILongestCommonIncreasingSu
      * *                     1 + Max ( LCIS [i-1][k] where A(i) > B(k) and 0<=k<j )
      * *                 }
      * <p>
-     * {@link Java.LongestIncreasingSubSequence}
+     * {@link LongestIncreasingSubSequence}
      * {@link LongestCommonSubSequence}
      *
      * @param a

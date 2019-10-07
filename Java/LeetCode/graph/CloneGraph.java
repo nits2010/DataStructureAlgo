@@ -1,6 +1,6 @@
 package Java.LeetCode.graph;
 
-import Java.graph.questions.clone.GraphClone;
+import Java.nonleetcode.graph.questions.clone.GraphClone;
 
 import java.util.*;
 

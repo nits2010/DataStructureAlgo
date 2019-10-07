@@ -1,6 +1,6 @@
 package Java.LeetCode.graph;
 
-import Java.HelpersToPrint.GenericPrinter;
+import Java.helpers.GenericPrinter;
 
 /**
  * TODO : copy pasted
