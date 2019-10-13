@@ -1,4 +1,4 @@
-package Java.LeetCode.connectNodesTree;
+package Java.LeetCode.tree.connectNodesTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

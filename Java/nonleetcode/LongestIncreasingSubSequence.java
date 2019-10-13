@@ -158,7 +158,7 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
 
     }
 
-    public int ceilIndex(int a[], int l, int r, int item) {
+    public int ceilIndex(int[] a, int l, int r, int item) {
         while (l < r) {
             int mid = (l + r) >> 1;
 
