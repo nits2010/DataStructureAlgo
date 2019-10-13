@@ -27,7 +27,7 @@ public class WordAndSeek {
         int m = scanner.nextInt();
         int n = scanner.nextInt();
 
-        final char board[][] = new char[m][n];
+        final char[][] board = new char[m][n];
 
         for (int i = 0; i < m; i++) {
 
@@ -48,15 +48,15 @@ public class WordAndSeek {
             return new ArrayList<>();
 
         Trie trie = new Trie();
-        Arrays.stream(dictionary).forEach(s -> trie.insert(s));
+        Arrays.stream(dictionary).forEach(trie::insert);
 
         return search(board, trie.root);
 
     }
 
 
-    static int row[] = {-1, 1, 0, 0, -1, -1, 1, 1};
-    static int col[] = {0, 0, -1, 1, -1, 1, -1, 1};
+    static int[] row = {-1, 1, 0, 0, -1, -1, 1, 1};
+    static int[] col = {0, 0, -1, 1, -1, 1, -1, 1};
 
 
     static class TrieNode {
@@ -109,7 +109,7 @@ public class WordAndSeek {
         int m = boggle[0].length;
 
         Set<String> boggleInDic = new HashSet<>();
-        boolean visited[][] = new boolean[n][m];
+        boolean[][] visited = new boolean[n][m];
 
 
         for (int i = 0; i < n; i++) {
@@ -164,9 +164,7 @@ public class WordAndSeek {
 
     private static boolean isSafe(int r, int c, boolean[][] visited, int n, int m) {
 
-        if (r >= n || c >= m || r < 0 || c < 0 || visited[r][c])
-            return false;
-        return true;
+        return r < n && c < m && r >= 0 && c >= 0 && !visited[r][c];
     }
 
 
