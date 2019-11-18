@@ -6,7 +6,7 @@ import Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-11
  * Description: https://www.geeksforgeeks.org/remove-minimum-elements-either-side-2min-max/
  * Given an unsorted array, trim the array such that twice of minimum is greater than maximum in the trimmed array. Elements should be removed either end of the array.

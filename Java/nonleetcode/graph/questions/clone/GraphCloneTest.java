@@ -6,7 +6,7 @@ import Java.nonleetcode.graph.graph.node.base.GraphNode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-19
  * Description:
  */

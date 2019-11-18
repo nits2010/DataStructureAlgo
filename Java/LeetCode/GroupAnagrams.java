@@ -6,7 +6,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-02
  * Description: https://leetcode.com/problems/group-anagrams/
  * 49. Group Anagrams

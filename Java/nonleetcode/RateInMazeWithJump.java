@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/12/18
  * Description: https://www.geeksforgeeks.org/rat-in-a-maze-with-multiple-steps-jump-allowed/
  * <p>

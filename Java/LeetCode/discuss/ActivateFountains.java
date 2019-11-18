@@ -6,7 +6,7 @@ import Java.LeetCode.MinimumJumpToReachLastJumpGame;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-22
  * Description: https://leetcode.com/discuss/interview-question/363036/walmart-oa-2019-activate-fountains
  * Min number of fountains needed to water the array:

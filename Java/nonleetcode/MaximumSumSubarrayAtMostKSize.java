@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-27
  * Description:https://www.geeksforgeeks.org/maximum-sum-of-non-overlapping-subarrays-of-length-atmost-k/
  * Given an integer array ‘arr’ of length N and an integer ‘k’, select some non-overlapping subarrays such that each sub-array if of length at most ‘k’, no two sub-arrays are adjacent and sum of all the elements of the selected sub-arrays are maximum.

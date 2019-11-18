@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description: https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/
  * <p>

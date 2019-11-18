@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-24
  * Description: https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
  * <p>

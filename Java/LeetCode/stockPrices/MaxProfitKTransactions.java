@@ -3,7 +3,7 @@ package Java.LeetCode.stockPrices;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description:https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-k-times/
  * <p>

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-08
  * Description: https://www.geeksforgeeks.org/longest-increasing-consecutive-subsequence/
  * Given N elements, write a program that prints the length of the longest increasing subsequence whose adjacent element difference is one.

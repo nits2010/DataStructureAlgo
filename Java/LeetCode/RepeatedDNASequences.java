@@ -5,7 +5,7 @@ import Java.nonleetcode.KMP_KnuthMorrisPratt;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-12
  * Description: https://leetcode.com/problems/repeated-dna-sequences/
  * 187. Repeated DNA Sequences

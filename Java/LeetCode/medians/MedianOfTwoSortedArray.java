@@ -1,7 +1,7 @@
 package Java.LeetCode.medians;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-19
  * Description: https://leetcode.com/problems/median-of-two-sorted-arrays/
  * 4. Median of Two Sorted Arrays

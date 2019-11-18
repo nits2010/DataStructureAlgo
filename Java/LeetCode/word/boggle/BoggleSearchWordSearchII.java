@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description: https://leetcode.com/problems/word-search-ii/
  * <p>

@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-05-20
  * Description: https://leetcode.com/problems/maximum-subarray/
  * Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.

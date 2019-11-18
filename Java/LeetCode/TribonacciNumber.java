@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description: https://leetcode.com/problems/n-th-tribonacci-number/
  * The Tribonacci sequence Tn is defined as follows:

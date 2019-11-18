@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description:
  * <p>

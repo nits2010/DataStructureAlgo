@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-19
  * Description: https://leetcode.com/problems/subsets/
  * Power set

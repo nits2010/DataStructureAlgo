@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 03/04/19
  * Description:
  * similar to this {@link SortStringsBasedCustomAlphabetOrder}

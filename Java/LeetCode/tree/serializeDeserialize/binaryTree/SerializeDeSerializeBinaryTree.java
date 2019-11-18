@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-04
  * Description: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
  * <p>

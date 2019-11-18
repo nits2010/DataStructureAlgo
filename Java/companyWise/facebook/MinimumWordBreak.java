@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description: https://www.geeksforgeeks.org/minimum-word-break/
  * <p>

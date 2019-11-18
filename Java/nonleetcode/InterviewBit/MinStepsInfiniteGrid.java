@@ -3,7 +3,7 @@ package Java.nonleetcode.InterviewBit;
 import java.util.ArrayList;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-05-20
  * Description:
  * https://www.interviewbit.com/problems/min-steps-in-infinite-grid/

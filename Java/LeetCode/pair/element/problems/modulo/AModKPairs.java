@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:https://www.geeksforgeeks.org/find-pairs-b-array-b-k/
  * Find all pairs (a, b) in an array such that a % b = k

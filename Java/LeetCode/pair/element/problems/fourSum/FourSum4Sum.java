@@ -7,7 +7,7 @@ import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/4sum/
  * Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target?

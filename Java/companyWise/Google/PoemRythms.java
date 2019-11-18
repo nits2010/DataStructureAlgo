@@ -3,7 +3,7 @@ package Java.companyWise.Google;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 11/05/19
  * Description: Given n number of lines in a poem, return all possible rhythm in a poem.
  * <p>

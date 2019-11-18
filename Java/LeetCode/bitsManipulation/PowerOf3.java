@@ -1,7 +1,7 @@
 package Java.LeetCode.bitsManipulation;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-20
  * Description: https://leetcode.com/problems/power-of-three/
  * Given an integer, write a function to determine if it is a power of three.

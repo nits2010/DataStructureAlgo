@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays;
 import java.util.TreeSet;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-25
  * Description:
  * Given an array of integers A and an integer k,

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-22
  * Description:https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree
  * http://leetcode.liangjiateng.cn/leetcode/serialize-and-deserialize-n-ary-tree/description

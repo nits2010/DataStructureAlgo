@@ -6,7 +6,7 @@ import Java.nonleetcode.graph.graph.types.Edges;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-08
  * Description:https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
  * <p>

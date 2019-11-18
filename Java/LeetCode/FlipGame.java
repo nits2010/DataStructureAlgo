@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-23
  * Description:
  * You are playing the following Flip Game with your friend: Given a string that contains only these two characters: + and -,

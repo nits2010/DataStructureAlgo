@@ -6,7 +6,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 03/04/19
  * Description: https://leetcode.com/problems/palindrome-pairs/
  * 336. Palindrome Pairs

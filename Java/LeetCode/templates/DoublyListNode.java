@@ -3,7 +3,7 @@ package Java.LeetCode.templates;
 import java.util.Objects;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 13/09/19
  * Description:
  */

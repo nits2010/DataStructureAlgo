@@ -3,7 +3,7 @@ package Java.LeetCode.tree.completeBinaryTree;
 import Java.LeetCode.templates.TreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-13
  * Description:
  */

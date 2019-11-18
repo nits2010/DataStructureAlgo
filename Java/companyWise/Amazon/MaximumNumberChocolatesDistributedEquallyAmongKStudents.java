@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-24
  * Description: https://www.geeksforgeeks.org/maximum-number-chocolates-distributed-equally-among-k-students/
  * Maximum number of chocolates to be distributed equally among k students

@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-17
  * Description: https://leetcode.com/problems/valid-palindrome/ [Asked in Facebook]
  * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.

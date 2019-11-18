@@ -5,7 +5,7 @@ import Java.LeetCode.templates.TreeNode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-23
  * Description: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  * <p>

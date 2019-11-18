@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-31
  * Description: https://www.geeksforgeeks.org/bipartite-graph/
  * <p>

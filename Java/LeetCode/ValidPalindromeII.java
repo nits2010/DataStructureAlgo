@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description: https://leetcode.com/problems/valid-palindrome-ii/
  * Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.

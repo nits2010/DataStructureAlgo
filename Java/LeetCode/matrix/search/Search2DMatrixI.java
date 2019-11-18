@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-02
  * Description: https://leetcode.com/problems/search-a-2d-matrix/
  * <p>

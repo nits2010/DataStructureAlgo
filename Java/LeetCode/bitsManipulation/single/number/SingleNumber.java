@@ -1,7 +1,7 @@
 package Java.LeetCode.bitsManipulation.single.number;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-28
  * Description: https://leetcode.com/problems/single-number/
  * Given a non-empty array of integers, every element appears twice except for one. Find that single one.

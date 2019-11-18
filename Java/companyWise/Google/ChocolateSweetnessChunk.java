@@ -5,7 +5,7 @@ import Java.nonleetcode.PainterPartitionProblem;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://leetcode.com/discuss/interview-question/350800/google-onsite-chocolate-sweetness
  * Given an array chocolate of n non-negative integers, where the values are sweetness levels of the chocolate. You are also given a value k which denotes the number of friends you will share this chocolate with. Your friends are greedy so they will always take the highest sweetness chunk. Find out what is the maximum sweetness level you could get.

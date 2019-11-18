@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-04
  * Description: https://aonecode.com/amazon-online-assessment-oa2-move-obstacle
  *

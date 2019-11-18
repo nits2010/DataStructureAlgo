@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 /**
  * TODO : copy pasted
  * <p>
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-06
  * Description: https://leetcode.com/problems/cherry-pickup/
  * 741. Cherry Pickup [Hard]

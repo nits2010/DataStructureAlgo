@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays.nonOverlappingSubArray;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-09
  * Description: https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
  * Given an array A of non-negative integers, return the maximum sum of elements in two non-overlapping (contiguous) subarrays, which have lengths L and M.  (For clarification, the L-length subarray could occur before or after the M-length subarray.)

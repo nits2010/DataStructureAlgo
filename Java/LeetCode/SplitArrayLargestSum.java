@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.nonleetcode.PainterPartitionProblem;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://leetcode.com/problems/split-array-largest-sum/
  * <p>

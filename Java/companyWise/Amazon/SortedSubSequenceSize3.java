@@ -5,7 +5,7 @@ import Java.nonleetcode.NextGreaterElementOnRightSide;
 import Java.nonleetcode.SmallerElementOnLeftSide;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-11
  * Description: https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/
  * Given an array of n integers, find the 3 elements such that a[i] < a[j] < a[k] and i < j < k in 0(n) time. If there are multiple such triplets, then print any one of them.

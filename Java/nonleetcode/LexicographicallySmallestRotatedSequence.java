@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-06
  * Description: https://www.geeksforgeeks.org/lexicographically-smallest-rotated-sequence-set-2/
  * <p>

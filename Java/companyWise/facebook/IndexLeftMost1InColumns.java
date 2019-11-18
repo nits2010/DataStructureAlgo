@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-18
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Question 1.2 Given a 2d array sorted row and column of 0 and 1, find the indexes of left most 1 in columns

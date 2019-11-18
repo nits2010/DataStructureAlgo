@@ -1,7 +1,7 @@
 package Java.LeetCode.bitsManipulation;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-03
  * Description: https://leetcode.com/problems/divide-two-integers/
  * 29. Divide Two Integers

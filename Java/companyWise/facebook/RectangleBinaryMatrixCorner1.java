@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-16
  * Description: https://www.geeksforgeeks.org/find-rectangle-binary-matrix-corners-1/
  * Find if there is a rectangle in binary matrix with corners as 1

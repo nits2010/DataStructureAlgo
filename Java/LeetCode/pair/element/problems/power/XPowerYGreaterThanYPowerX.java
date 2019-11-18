@@ -3,7 +3,7 @@ package Java.LeetCode.pair.element.problems.power;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:
  * Find number of pairs (x, y) in an array such that x^y > y^x

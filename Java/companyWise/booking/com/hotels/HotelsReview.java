@@ -3,7 +3,7 @@ package Java.companyWise.booking.com.hotels;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-31
  * Description:
  */

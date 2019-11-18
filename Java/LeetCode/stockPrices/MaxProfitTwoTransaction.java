@@ -1,7 +1,7 @@
 package Java.LeetCode.stockPrices;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description:
  */

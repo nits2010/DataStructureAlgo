@@ -7,7 +7,7 @@ import Java.nonleetcode.SmallerElementOnLeftSide;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-11
  * Description:
  * Given an array of n integers, find the k elements such that

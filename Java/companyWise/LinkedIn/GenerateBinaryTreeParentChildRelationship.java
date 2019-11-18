@@ -3,7 +3,7 @@ package Java.companyWise.LinkedIn;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-04
  * Description: https://leetcode.com/discuss/interview-question/algorithms/125080/generate-a-binary-tree-from-parent-child-relationship
  * <p>

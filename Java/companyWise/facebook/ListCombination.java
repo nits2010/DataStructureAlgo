@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 03/04/19
  * Description: https://www.careercup.com/question?id=5634222671790080
  * <p>

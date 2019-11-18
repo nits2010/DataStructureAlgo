@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-02
  * Description: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * 19. Remove Nth Node From End of List

@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-21
  * Description: https://www.geeksforgeeks.org/efficiently-merging-two-sorted-arrays-with-o1-extra-space/
  * Efficiently merging two sorted arrays with O(1) extra space

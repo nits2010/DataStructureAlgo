@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-24
  * Description:
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/

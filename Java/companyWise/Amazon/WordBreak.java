@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-25
  * Description: https://www.geeksforgeeks.org/minimum-word-break/
  * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.

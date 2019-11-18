@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-23
  * Description: https://leetcode.com/problems/longest-arithmetic-sequence/
  * Given an array A of integers, return the length of the longest arithmetic subsequence in A.

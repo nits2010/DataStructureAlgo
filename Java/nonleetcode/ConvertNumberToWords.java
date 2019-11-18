@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.text.DecimalFormat;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/03/19
  * Description:
  */

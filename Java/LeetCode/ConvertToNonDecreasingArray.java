@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-08
  * Description: https://leetcode.com/problems/non-decreasing-array/
  * Given an array with n integers, your task is to check if it could become non-decreasing by modifying at most 1 element.

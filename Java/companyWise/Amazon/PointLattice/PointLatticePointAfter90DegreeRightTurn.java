@@ -1,7 +1,7 @@
 package Java.companyWise.Amazon.PointLattice;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-07
  * Description: https://stackoverflow.com/questions/55482917/points-on-a-lattice
  * <p>

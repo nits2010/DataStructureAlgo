@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-07
  * Description:https://leetcode.com/problems/maximize-distance-to-closest-person/
  * n a row of seats, 1 represents a person sitting in that seat, and 0 represents that the seat is empty.

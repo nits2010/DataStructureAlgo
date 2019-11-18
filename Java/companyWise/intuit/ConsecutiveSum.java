@@ -1,7 +1,7 @@
 package Java.companyWise.intuit;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/09/19
  * Description:
  * https://www.geeksforgeeks.org/count-ways-express-number-sum-consecutive-numbers/

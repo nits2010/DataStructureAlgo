@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-31
  * Description: https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
  * http://leetcode.liangjiateng.cn/leetcode/longest-substring-with-at-most-k-distinct-characters/description

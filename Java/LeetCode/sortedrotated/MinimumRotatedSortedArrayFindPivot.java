@@ -1,7 +1,7 @@
 package Java.LeetCode.sortedrotated;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.

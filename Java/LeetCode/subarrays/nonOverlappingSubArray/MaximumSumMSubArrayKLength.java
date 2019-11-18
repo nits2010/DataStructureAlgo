@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays.nonOverlappingSubArray;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-14
  * Description:
  * {@link MaximumSumTwoNonOverlappingSubarrays}

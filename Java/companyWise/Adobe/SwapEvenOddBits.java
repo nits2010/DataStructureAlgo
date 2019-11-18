@@ -1,7 +1,7 @@
 package Java.companyWise.Adobe;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:
  * https://www.geeksforgeeks.org/swap-all-odd-and-even-bits/

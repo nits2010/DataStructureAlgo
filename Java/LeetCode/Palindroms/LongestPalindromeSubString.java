@@ -1,7 +1,7 @@
 package Java.LeetCode.Palindroms;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description: https://leetcode.com/problems/longest-palindromic-substring/
  * 5. Longest Palindromic Substring

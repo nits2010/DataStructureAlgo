@@ -5,7 +5,7 @@ import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.TreeBuilder;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description: https://leetcode.com/problems/house-robber-iii/
  * <p>

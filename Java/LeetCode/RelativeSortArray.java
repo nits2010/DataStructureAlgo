@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-11
  * Description:https://leetcode.com/problems/relative-sort-array/
  * https://www.geeksforgeeks.org/sort-array-according-order-defined-another-array/

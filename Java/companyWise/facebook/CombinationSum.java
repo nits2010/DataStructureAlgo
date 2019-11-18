@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-19
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/8817620605028273663
  * Given many coins of 3 different face values, print the combination sums of the coins up to 1000. Must be printed in order.

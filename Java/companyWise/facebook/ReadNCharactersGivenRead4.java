@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-19
  * Description:https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/
  https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/

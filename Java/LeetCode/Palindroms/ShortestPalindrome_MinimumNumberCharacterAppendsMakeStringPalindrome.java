@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.nonleetcode.KMP_KnuthMorrisPratt;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description: https://www.geeksforgeeks.org/minimum-number-appends-needed-make-string-palindrome/
  * Minimum number of Appends needed to make a string palindrome

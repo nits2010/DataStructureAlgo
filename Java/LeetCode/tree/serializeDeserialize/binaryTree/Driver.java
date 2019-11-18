@@ -5,7 +5,7 @@ import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description:
  */

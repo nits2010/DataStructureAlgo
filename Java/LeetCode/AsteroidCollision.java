@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-03
  * Description: https://leetcode.com/problems/asteroid-collision/
  * 735. Asteroid Collision

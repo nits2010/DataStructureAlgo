@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-12
  * Description: https://leetcode.com/problems/peeking-iterator/
  * Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterators that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().

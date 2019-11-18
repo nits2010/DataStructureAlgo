@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.nonleetcode.StringCompression2;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-30
  * Description: https://leetcode.com/problems/string-compression/
  * 443. String Compression [EASY]

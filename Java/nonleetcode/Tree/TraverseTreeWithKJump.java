@@ -3,7 +3,7 @@ package Java.nonleetcode.Tree;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-18
  * Description:
  * https://www.geeksforgeeks.org/traversal-tree-ability-jump-nodes-height/

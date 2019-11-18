@@ -3,7 +3,7 @@ package Java.LeetCode.partitions;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-25
  * Description:https://leetcode.com/problems/partition-equal-subset-sum
  *

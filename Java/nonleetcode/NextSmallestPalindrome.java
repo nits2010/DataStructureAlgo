@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-01
  * Description:https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/
  * Given a number, find the next smallest palindrome

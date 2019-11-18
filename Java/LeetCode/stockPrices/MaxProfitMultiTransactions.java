@@ -1,7 +1,7 @@
 package Java.LeetCode.stockPrices;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * Say you have an array for which the ith element is the price of a given stock on day i.

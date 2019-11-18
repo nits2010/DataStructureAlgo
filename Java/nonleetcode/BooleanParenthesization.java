@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description: https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/
  * Given a boolean expression with following symbols.

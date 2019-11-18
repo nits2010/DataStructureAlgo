@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-26
  * Description: https://www.geeksforgeeks.org/find-element-array-sum-left-array-equal-sum-right-array/
  * Find an element in array such that sum of left array is equal to sum of right array

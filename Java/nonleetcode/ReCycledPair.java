@@ -6,7 +6,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-07
  * Description: https://www.geeksforgeeks.org/number-recycled-pairs-array/
  * Given an array of integers arr[], find the number of recycled pairs in the array. A recycled pair of two numbers {a, b} has the following properties :

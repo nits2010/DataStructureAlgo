@@ -3,7 +3,7 @@ package Java.LeetCode.Palindroms;
 import Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description: https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
  * Minimum insertions to form a palindrome | DP-28

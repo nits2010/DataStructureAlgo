@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-31
  * Description: You’re given an array of integer and a number "sum", find does any subarray exist which sum up to given "sum".
  * Facebook 2019

@@ -1,7 +1,7 @@
 package Java.companyWise.GoldManSacs2019;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-01
  * Description:
  * LongestUniformSubString

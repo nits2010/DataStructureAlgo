@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 11/04/19
  * Description:
  * https://stackoverflow.com/questions/46832383/algorithm-to-find-how-many-times-a-string-a-needs-to-be-stated-such-that-it-cont

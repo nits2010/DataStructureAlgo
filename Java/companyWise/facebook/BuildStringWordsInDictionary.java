@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-18
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Question: Can you break the given string into words, provided by a given hashmap of frequency of word as <word: n>

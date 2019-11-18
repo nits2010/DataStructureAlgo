@@ -3,7 +3,7 @@ package Java.LeetCode.nextGreaterElement;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-03
  * Description: https://leetcode.com/problems/next-greater-element-iii/
  * 556. Next Greater Element III [Medium]

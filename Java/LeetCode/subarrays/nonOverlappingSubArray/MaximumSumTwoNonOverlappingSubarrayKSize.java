@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays.nonOverlappingSubArray;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-09
  * Description: https://www.geeksforgeeks.org/maximum-sum-two-non-overlapping-subarrays-of-given-size/
  * Given an array, we need to find two subarrays with a specific length K such that sum of these subarrays is maximum among all possible choices of subarrays.

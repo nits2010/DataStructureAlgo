@@ -1,7 +1,7 @@
 package Java.LeetCode.longestShortestCommon;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://leetcode.com/problems/longest-common-subsequence/
  * Given two strings text1 and text2, return the length of their longest common subsequence.

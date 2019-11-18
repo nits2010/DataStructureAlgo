@@ -4,7 +4,7 @@ package Java.LeetCode;
 import Java.LeetCode.templates.TreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-20
  * Description:https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
  * 270. Closest Binary Search Tree Value

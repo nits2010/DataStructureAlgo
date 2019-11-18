@@ -3,7 +3,7 @@ package Java.LeetCode.graph.unique.paths;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-04
  * Description:
  * *

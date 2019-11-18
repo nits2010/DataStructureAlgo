@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 26/12/18
  * Description:
  * <p>

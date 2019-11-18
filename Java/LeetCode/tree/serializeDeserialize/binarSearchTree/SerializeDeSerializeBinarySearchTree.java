@@ -4,7 +4,7 @@ import Java.LeetCode.templates.TreeNode;
 import Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-22
  * Description:https://leetcode.com/problems/serialize-and-deserialize-bst/
  * <p>

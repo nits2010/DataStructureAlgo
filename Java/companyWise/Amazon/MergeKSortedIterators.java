@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-12
  * Description: https://leetcode.com/discuss/interview-question/345744
  * Given a list of k sorted iterators. Implement MergingIterator to merge them.

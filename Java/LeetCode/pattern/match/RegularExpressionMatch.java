@@ -1,7 +1,7 @@
 package Java.LeetCode.pattern.match;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-08
  * Description: https://leetcode.com/problems/regular-expression-matching/
  * Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.

@@ -3,7 +3,7 @@ package Java.companyWise.Adobe;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-24
  * Description: https://www.geeksforgeeks.org/adobe-interview-experience-set-26-on-campus-for-mts-1/#targetText=A%20CEO%20of%20a%20company,much%20cookies%20one%20person%20needs.
  * You are given the waste at certain positions with values between x and y and you can carry atmost y kg at one time.

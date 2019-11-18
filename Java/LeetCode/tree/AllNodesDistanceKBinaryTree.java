@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-24
  * Description: https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/#_=_
  * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/

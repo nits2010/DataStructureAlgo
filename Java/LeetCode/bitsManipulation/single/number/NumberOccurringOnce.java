@@ -1,7 +1,7 @@
 package Java.LeetCode.bitsManipulation.single.number;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-18
  *
  * Description: https://www.geeksforgeeks.org/find-the-element-that-appears-once/

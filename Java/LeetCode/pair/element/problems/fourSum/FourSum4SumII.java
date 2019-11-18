@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/4sum-ii/
  * Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are

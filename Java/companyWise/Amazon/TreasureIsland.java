@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-20
  * Description: https://leetcode.com/discuss/interview-question/347457/Amazon-or-OA-2019-or-Treasure-Island
  * You have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs.

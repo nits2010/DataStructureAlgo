@@ -5,7 +5,7 @@ import Java.LeetCode.templates.Interval;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-19
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/7798119161075951615
  * # There's a room with a TV and people are coming in and out to watch it. The TV is on only when there's at least a person in the room.

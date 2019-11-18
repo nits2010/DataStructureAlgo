@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-02
  * Description: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
  * 34. Find First and Last Position of Element in Sorted Array

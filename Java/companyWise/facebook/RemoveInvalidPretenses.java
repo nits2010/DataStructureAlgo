@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-19
  * Description: https://leetcode.com/problems/remove-invalid-parentheses/
  * https://www.geeksforgeeks.org/remove-invalid-parentheses/

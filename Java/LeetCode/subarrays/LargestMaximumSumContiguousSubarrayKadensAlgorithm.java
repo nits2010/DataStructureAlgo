@@ -1,7 +1,7 @@
 package Java.LeetCode.subarrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-14
  * Description: https://leetcode.com/problems/maximum-subarray/
  * Given an integer array nums, find the contiguous subarray (containing at least one number)

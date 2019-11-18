@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description: https://www.geeksforgeeks.org/replace-every-element-with-the-greatest-on-right-side/
  * <p>

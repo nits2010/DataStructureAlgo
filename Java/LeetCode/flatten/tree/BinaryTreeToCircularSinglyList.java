@@ -3,7 +3,7 @@ package Java.LeetCode.flatten.tree;
 import Java.LeetCode.templates.TreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-01
  * Description:
  * Driver {@link Java.LeetCode.flatten.tree.BinaryTreeToList}

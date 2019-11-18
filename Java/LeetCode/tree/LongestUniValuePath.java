@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-27
  * Description: https://leetcode.com/problems/longest-univalue-path/
  * <p>

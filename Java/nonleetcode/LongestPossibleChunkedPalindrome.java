@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 09/04/19
  * Description:
  * https://www.geeksforgeeks.org/longest-possible-chunked-palindrome/

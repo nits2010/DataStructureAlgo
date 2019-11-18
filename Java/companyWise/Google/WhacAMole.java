@@ -3,7 +3,7 @@ package Java.companyWise.Google;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-08
  * Description: https://leetcode.com/discuss/interview-question/350139/Google-or-Phone-Screen-or-Whac-A-Mole
  * Given an int array holes where 1 means there is a mole, 0 means no mole. Find out the max number of moles you can hit with a mallet of width w.

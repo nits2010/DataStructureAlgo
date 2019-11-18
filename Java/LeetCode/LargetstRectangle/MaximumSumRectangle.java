@@ -5,7 +5,7 @@ import Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorith
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-26
  * Description: https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/
  * Given a 2D array, find the maximum sum subarray in it. For example, in the following 2D array,

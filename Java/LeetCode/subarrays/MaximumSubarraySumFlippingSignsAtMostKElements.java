@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-25
  * Description: https://www.geeksforgeeks.org/maximum-subarray-sum-by-flipping-signs-of-at-most-k-array-elements/
  * Given an array arr[] of N integers and an integer K. The task is to find the maximum sub-array sum by flipping signs of at most K array elements.

@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-04
  * Description: https://www.geeksforgeeks.org/find-nth-item-set-formed-sum-two-arrays/
  * Given two sorted arrays, we can get a set of sums(add one element from the first and one from second).

@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/12/18
  * Description: https://www.geeksforgeeks.org/check-given-string-sum-string/
  * Check if a given string is sum-string

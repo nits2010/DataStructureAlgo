@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 14/09/19
  * Description: https://leetcode.com/problems/reorder-data-in-log-files/
  * 937. Reorder Data in Log Files

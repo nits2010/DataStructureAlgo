@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 11/12/18
  * Description: https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/
  * Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array

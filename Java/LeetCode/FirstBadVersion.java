@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.nonleetcode.BinarySearch;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-02
  * Description: 278. First Bad Version
  * <p>

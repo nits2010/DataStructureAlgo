@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description: https://leetcode.com/problems/min-cost-climbing-stairs/
  * On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).

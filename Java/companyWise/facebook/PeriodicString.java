@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import javafx.util.Pair;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-20
  * Description: https://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/
  * <p>

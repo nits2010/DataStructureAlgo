@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description:https://leetcode.com/problems/maximum-distance-in-arrays/
  * http://leetcode.liangjiateng.cn/leetcode/maximum-distance-in-arrays/description

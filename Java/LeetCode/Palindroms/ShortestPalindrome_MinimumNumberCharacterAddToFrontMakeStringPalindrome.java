@@ -3,7 +3,7 @@ package Java.LeetCode.Palindroms;
 import Java.nonleetcode.KMP_KnuthMorrisPratt;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description: https://leetcode.com/problems/shortest-palindrome/
  * https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/

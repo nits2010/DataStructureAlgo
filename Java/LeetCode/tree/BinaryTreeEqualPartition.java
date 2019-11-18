@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-11
  * Description: https://leetcode.com/articles/equal-tree-partition/
  * http://leetcode.liangjiateng.cn/leetcode/equal-tree-partition/description

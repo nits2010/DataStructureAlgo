@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-26
  * Description:https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
  * Given an array A of integers, return true if and only if we can partition the array into three non-empty parts with equal sums.

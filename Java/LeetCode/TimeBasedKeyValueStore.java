@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 14/09/19
  * Description: https://leetcode.com/problems/time-based-key-value-store/
  * 981. Time Based Key-Value Store [Medium]

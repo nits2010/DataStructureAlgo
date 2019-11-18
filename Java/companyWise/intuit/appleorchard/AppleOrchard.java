@@ -3,7 +3,7 @@ package Java.companyWise.intuit.appleorchard;
 import java.util.Scanner;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-07
  * Description:
  * I need some help to grow apples in my friends's orchard.

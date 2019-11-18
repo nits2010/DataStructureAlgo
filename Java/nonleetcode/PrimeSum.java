@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/12/18
  * Description:
  * https://www.geeksforgeeks.org/prime-numbers-after-prime-p-with-sum-s/

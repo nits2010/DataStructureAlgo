@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-20
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/4630517297687979583
  * Give a binary tree, find if it's possible to cut the tree into two halves of equal sum. You can only cut one edge.

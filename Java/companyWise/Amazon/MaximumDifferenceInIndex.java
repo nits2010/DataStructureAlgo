@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description: https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
  * Given an array arr[], find the maximum j – i such that arr[j] > arr[i]

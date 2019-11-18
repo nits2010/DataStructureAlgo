@@ -6,7 +6,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-19
  * Description: https://leetcode.com/discuss/interview-experience/301164/Facebook-onsite-interview-experience-2019
  * <p>

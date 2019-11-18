@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/12/18
  * Description:
  * Question:  https://www.geeksforgeeks.org/longest-possible-route-in-a-matrix-with-hurdles/

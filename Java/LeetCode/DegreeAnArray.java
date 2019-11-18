@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-02
  * Description: https://leetcode.com/problems/degree-of-an-array/
  * Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.

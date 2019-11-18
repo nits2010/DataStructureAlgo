@@ -5,7 +5,7 @@ import Java.nonleetcode.graph.graph.IGraph;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/02/19
  * Description:
  */

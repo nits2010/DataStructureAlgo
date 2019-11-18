@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-29
  * Description:
  * https://www.geeksforgeeks.org/maximum-subset-sum-such-that-no-two-elements-in-set-have-same-digit-in-them/

@@ -6,7 +6,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 12/04/19
  * Description: https://www.careercup.com/question?id=5763748409638912
  * <p>

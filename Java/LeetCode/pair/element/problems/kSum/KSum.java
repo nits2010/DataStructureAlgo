@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-16
  * Description:
  * This is generalization of {@link TwoSum2Sum}, {@link ThreeSum3Sum}, {@link FourSum4Sum} to K-sum

@@ -3,7 +3,7 @@ package Java.nonleetcode.Tree;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-14
  * Description:
  * Binary Indexed Tree or Fenwick Tree

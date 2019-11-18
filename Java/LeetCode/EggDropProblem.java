@@ -2,7 +2,7 @@ package Java.LeetCode;
 
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-02
  * Description: https://leetcode.com/problems/super-egg-drop/
  * You are given K eggs, and you have access to a building with N floors from 1 to N.

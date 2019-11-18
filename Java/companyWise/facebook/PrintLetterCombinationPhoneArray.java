@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-26
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/602
  * Question: Given an integer array, output all combinations of cell phone text-ing letters with the given numbers.

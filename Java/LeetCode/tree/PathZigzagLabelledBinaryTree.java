@@ -3,7 +3,7 @@ package Java.LeetCode.tree;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-13
  * Description: https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/
  * In an infinite binary tree where every node has two children, the nodes are labelled in row order.

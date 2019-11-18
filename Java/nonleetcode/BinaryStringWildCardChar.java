@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-09
  * Description:https://www.geeksforgeeks.org/generate-all-binary-strings-from-given-pattern/
  * <p>

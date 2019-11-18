@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-27
  * Description: https://www.geeksforgeeks.org/maximize-sum-selected-numbers-performing-following-operation/
  * Maximize the sum of selected numbers from an array to make it empty

@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-24
  * Description:https://www.geeksforgeeks.org/maximum-weight-transformation-of-a-given-string/
  * <p>

@@ -3,7 +3,7 @@ package Java.companyWise.intuit.reversegear;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-07
  * Description:https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/
  * <p>

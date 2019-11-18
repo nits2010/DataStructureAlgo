@@ -6,7 +6,7 @@ import Java.LeetCode.templates.TreeNode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-10
  * Description: https://leetcode.com/problems/maximum-width-of-binary-tree/
  * 662. Maximum Width of Binary Tree

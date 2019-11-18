@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-26
  * Description:https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
  */

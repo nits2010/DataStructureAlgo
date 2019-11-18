@@ -5,7 +5,7 @@ import Java.nonleetcode.RemoveAllAdjacentDuplicatesString;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-20
  * Description:https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
  * <p>

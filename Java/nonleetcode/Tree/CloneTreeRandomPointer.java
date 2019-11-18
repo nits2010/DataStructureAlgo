@@ -3,7 +3,7 @@ package Java.nonleetcode.Tree;
 import Java.LeetCode.CloneListRandomPointer;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-22
  * Description:
  * https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree

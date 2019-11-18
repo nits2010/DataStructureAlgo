@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 13/09/19
  * Description: https://leetcode.com/problems/flood-fill/
  * 733. Flood Fill [EASY]

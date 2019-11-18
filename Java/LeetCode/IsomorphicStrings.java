@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-27
  * Description:https://leetcode.com/problems/isomorphic-strings/
  * Given two strings s and t, determine if they are isomorphic.

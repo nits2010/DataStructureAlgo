@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-25
  * Description: https://www.geeksforgeeks.org/total-number-of-odd-length-palindrome-sub-sequence-around-each-centre/
  * Given a string str, the task is to find the number of odd length palindromic sub-sequences around of str with str[i] as centre i.e. every index will be considered as the centre one by one.

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description:https://www.geeksforgeeks.org/greatest-contiguous-sub-array-of-size-k/
  * Given an array arr[] of integers and an integer K, the task is to find the greatest contiguous sub-array of size K. Sub-array X is said to be greater than sub-array Y if the first non-matching element in both the sub-arrays has a greater value in X than in Y.

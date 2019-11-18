@@ -3,7 +3,7 @@ package Java.LeetCode.tree;
 import Java.LeetCode.templates.TreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-18
  * Description:
  */

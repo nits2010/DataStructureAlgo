@@ -6,7 +6,7 @@ import Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/3sum/
  * Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.

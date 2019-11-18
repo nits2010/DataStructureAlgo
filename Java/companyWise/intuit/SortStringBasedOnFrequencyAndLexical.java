@@ -3,7 +3,7 @@ package Java.companyWise.intuit;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description: Given a string,
  * 1. Sort this string based on frequency of each character (increasing order)

@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description: https://www.geeksforgeeks.org/an-in-place-algorithm-for-string-transformation/
  * Given a string, move all even positioned elements to end of string. While moving elements, keep the relative order of all even positioned

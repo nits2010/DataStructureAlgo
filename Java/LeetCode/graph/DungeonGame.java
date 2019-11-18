@@ -3,7 +3,7 @@ package Java.LeetCode.graph;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-06
  * Description:https://leetcode.com/problems/dungeon-game/
  * 174. Dungeon Game[Hard]

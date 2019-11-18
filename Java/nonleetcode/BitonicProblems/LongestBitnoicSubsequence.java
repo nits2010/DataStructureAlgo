@@ -3,7 +3,7 @@ package Java.nonleetcode.BitonicProblems;
 import Java.nonleetcode.LongestIncreasingSubSequence;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-22
  * Description: https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15/
  * Input arr[] = {1, 11, 2, 10, 4, 5, 2, 1};

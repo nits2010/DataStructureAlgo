@@ -3,7 +3,7 @@ package Java.LeetCode.graph.unique.paths;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 14/09/19
  * Description:https://leetcode.com/problems/unique-paths-iii/
  * 980. Unique Paths III

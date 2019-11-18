@@ -5,7 +5,7 @@ import Java.LeetCode.templates.TreeNode;
 import Java.nonleetcode.Tree.FlipTreeUpSideDown;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-09
  * Description:
  * https://leetcode.com/problems/binary-tree-upside-down

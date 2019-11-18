@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description:https://aonecode.com/aplusplus/interviewctrl/getInterview/5416219315773457606
  * <p>

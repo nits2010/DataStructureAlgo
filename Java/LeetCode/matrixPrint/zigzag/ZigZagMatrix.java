@@ -3,7 +3,7 @@ package Java.LeetCode.matrixPrint.zigzag;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-11
  * Description: Build & print a matrix formed in zig-zag fashioned[See image for more info]
  */

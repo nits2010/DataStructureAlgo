@@ -3,7 +3,7 @@ package Java.LeetCode.LargetstRectangle;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-27
  * Description: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
  * Area = width * height;

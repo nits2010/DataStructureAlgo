@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description: https://www.geeksforgeeks.org/weighted-job-scheduling/
  * Given N jobs where every job is represented by following three elements of it.

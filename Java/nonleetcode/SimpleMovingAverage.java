@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-14
  * Description: https://www.geeksforgeeks.org/program-find-simple-moving-average/
  * <p>

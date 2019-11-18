@@ -1,7 +1,7 @@
 package Java.LeetCode.subarrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-24
  * Description: https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
  * <p>

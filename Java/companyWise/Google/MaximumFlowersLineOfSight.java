@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-26
  * Description:
  * Given a 2D array with F for Flowers and R for Rocks and Blank for empty spaces. If you were to stand at a spot,

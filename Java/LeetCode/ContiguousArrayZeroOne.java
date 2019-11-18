@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-06
  * Description: https://leetcode.com/problems/contiguous-array/
  * Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.

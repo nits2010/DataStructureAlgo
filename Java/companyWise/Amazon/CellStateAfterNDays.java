@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://aonecode.com/amazon-online-assessment-oa2-cell-state-after-n-days
  * <p>

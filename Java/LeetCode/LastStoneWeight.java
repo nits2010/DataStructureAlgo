@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/last-stone-weight/
  * <p>

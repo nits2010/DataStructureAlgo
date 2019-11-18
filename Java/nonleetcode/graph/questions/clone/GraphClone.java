@@ -6,7 +6,7 @@ import Java.nonleetcode.graph.graph.node.base.GraphNode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-21
  * Description:
  * https://leetcode.com/problems/clone-graph/

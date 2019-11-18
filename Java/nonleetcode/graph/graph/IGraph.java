@@ -3,7 +3,7 @@ package Java.nonleetcode.graph.graph;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/02/19
  * Description:
  */

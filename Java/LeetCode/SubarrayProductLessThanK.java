@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/subarray-product-less-than-k/
  * Your are given an array of positive integers nums.

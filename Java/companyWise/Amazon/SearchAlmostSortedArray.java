@@ -1,7 +1,7 @@
 package Java.companyWise.Amazon;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-22
  * Description: https://www.geeksforgeeks.org/search-almost-sorted-array/#_=_
  * Given an array which is sorted, but after sorting some elements are moved to either of the adjacent positions, i.e.,

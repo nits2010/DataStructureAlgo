@@ -4,7 +4,7 @@ package Java.LeetCode.flatten.flattenNestedListIterator;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description: https://leetcode.com/problems/flatten-nested-list-iterator/
  * Facebook asked

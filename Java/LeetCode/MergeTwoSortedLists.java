@@ -6,7 +6,7 @@ import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/merge-two-sorted-lists
  * 21. Merge Two Sorted Lists [EASY]

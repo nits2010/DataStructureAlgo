@@ -3,7 +3,7 @@ package Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 import Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-29
  * Description:
  */

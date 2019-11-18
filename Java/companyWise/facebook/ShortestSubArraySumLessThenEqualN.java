@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-17
  * Description: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
  * Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.

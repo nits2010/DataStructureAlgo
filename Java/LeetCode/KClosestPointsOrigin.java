@@ -7,7 +7,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/09/19
  * Description: https://leetcode.com/problems/k-closest-points-to-origin/
  * 973. K Closest Points to Origin[Medium]

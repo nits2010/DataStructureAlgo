@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-11
  * Description:https://leetcode.com/problems/statistics-from-a-large-sample/discuss/332618/Full-explanation%3A-Beat-100-and-100
  * We sampled integers between 0 and 255, and stored the results in an array count:  count[k] is the number of integers we sampled equal to k.

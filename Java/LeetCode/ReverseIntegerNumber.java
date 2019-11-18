@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-01
  * Description: https://leetcode.com/problems/reverse-integer/
  * Given a 32-bit signed integer, reverse digits of an integer.

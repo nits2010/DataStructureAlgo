@@ -3,7 +3,7 @@ package Java.LeetCode.pair.element.problems.twoSum;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-18
  * Description: https://leetcode.com/problems/two-sum/
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.

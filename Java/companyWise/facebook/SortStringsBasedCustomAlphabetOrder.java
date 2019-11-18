@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-18
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Sort the given sentence order defined by alphabet.

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-14
  * Description: https://leetcode.com/discuss/interview-question/357345/uber-phone-screen-sum-to-100/324193
  * Add the mathematical operators + or - before any of the digits in the decimal numeric string 123456789 such that the resulting mathematical expression adds up to 100. Return all possible solutions.

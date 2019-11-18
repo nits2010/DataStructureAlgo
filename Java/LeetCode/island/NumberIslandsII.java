@@ -6,7 +6,7 @@ import Java.nonleetcode.UnionFindDisjointSets;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-20
  * Description: http://leetcode.liangjiateng.cn/leetcode/number-of-islands-ii/description
  * 305.Number of Islands II

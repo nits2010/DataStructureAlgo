@@ -3,7 +3,7 @@ package Java.companyWise.Amazon;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-27
  * Description: https://leetcode.com/discuss/interview-question/368038/amazon-onsite-group-isomorphic-strings
  * <p>

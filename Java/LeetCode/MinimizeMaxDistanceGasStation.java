@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.nonleetcode.PainterPartitionProblem;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 16/09/19
  * Description: https://leetcode.com/problems/minimize-max-distance-to-gas-station/
  * http://leetcode.liangjiateng.cn/leetcode/minimize-max-distance-to-gas-station/description

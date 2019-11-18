@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-27
  * Description:
  * https://leetcode.com/problems/group-shifted-strings/

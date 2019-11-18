@@ -5,7 +5,7 @@ import Java.LeetCode.word.boggle.BoggleSearchWordSearchII;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-07
  * Description:
  * Same as {@link BoggleSearchWordSearchII}

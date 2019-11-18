@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.nonleetcode.SimpleMovingAverage;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 03/04/19
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.

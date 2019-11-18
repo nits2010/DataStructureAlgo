@@ -1,7 +1,7 @@
 package Java.LeetCode.LargetstRectangle;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-26
  * Description:https://www.geeksforgeeks.org/print-maximum-sum-square-sub-matrix-of-given-size/
  * <p>

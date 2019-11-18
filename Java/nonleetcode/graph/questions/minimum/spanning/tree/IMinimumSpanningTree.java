@@ -6,7 +6,7 @@ import Java.nonleetcode.graph.graph.types.Edges;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-08
  * Description:
  */

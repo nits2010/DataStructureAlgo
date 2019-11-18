@@ -3,7 +3,7 @@ package Java.companyWise.LinkedIn.depthSumNestedInteger;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 31/03/19
  * Description:
  */

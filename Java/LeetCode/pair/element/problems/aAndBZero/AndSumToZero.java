@@ -1,7 +1,7 @@
 package Java.LeetCode.pair.element.problems.aAndBZero;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:
  * Finding total number of pair of elements (say, a and b) from elements in an array such that a (AND) b is 0. ( use brute force approach)

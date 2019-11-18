@@ -1,7 +1,7 @@
 package Java.LeetCode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-22
  * Description: https://leetcode.com/problems/decode-string/
  * 394. Decode String [Medium]

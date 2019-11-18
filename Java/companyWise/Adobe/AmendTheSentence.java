@@ -1,7 +1,7 @@
 package Java.companyWise.Adobe;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-24
  * Description: https://www.geeksforgeeks.org/adobe-interview-experience-set-24-on-campus-for-mts/
  * Given an array of characters which is basically a sentence. However there is no space between different words and the first letter of every word is in uppercase. You need to print this sentence after following amendments:

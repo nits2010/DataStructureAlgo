@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/09/19
  * Description: https://leetcode.com/problems/consecutive-numbers-sum/
  * 829. Consecutive Numbers Sum

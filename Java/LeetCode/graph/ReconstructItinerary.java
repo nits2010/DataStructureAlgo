@@ -3,7 +3,7 @@ package Java.LeetCode.graph;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-16
  * Description: https://leetcode.com/problems/reconstruct-itinerary/
  * Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order.

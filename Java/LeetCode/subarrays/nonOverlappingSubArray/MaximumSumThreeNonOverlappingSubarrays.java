@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays.nonOverlappingSubArray;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-14
  * Description: https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
  * In a given array nums of positive integers, find three non-overlapping subarrays with maximum sum.

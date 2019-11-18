@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays;
 import Java.nonleetcode.LongestIncreasingSubSequence;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-26
  * Description: https://www.geeksforgeeks.org/maximum-sum-subsequence-least-k-distant-elements/
  * Given an array and a number k, find a subsequence such that

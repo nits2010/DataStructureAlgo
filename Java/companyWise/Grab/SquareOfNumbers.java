@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-23
  * Description:
  * Given an array of integer in sorted manner, find the resultant array which contains squares of input array in sorted manner.

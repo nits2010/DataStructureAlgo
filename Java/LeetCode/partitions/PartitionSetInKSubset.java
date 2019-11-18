@@ -3,7 +3,7 @@ package Java.LeetCode.partitions;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-25
  * Description:https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
  * https://www.geeksforgeeks.org/count-number-of-ways-to-partition-a-set-into-k-subsets/

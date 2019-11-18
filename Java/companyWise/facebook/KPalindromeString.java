@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import Java.nonleetcode.EditDistance;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-16
  * Description: https://www.geeksforgeeks.org/find-if-string-is-k-palindrome-or-not/
  * <p>

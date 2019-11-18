@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-15
  * Description: https://www.geeksforgeeks.org/sort-an-array-of-string-of-dates-in-ascending-order/
  * Given an array of strings dates[], the task is to sort these dates in ascending order.

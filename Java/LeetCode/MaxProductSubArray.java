@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-23
  * Description: https://leetcode.com/problems/maximum-product-subarray/submissions/
  * Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.

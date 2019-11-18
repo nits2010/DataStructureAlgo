@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-21
  * Description: https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
  * <p>

@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-27
  * Description: https://leetcode.com/problems/house-robber/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed,

@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-11
  * Description: https://www.geeksforgeeks.org/number-of-ways-to-divide-a-binary-tree-into-two-halves/
  * Number of ways to divide a Binary tree into two halves

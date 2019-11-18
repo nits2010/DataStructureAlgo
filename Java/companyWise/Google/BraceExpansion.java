@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-13
  * Description:https://leetcode.com/discuss/interview-question/354944/google-phone-screen-brace-expansion
  * <p>

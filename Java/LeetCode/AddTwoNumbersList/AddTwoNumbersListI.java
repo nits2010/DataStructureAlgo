@@ -5,7 +5,7 @@ import Java.LeetCode.listToBST.ListBuilder;
 import Java.LeetCode.templates.ListNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-11
  * Description: https://leetcode.com/problems/add-two-numbers/
  * 2. Add Two Numbers

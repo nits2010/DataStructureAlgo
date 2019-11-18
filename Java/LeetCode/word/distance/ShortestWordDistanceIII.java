@@ -3,7 +3,7 @@ package Java.LeetCode.word.distance;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-09
  * Description: https://leetcode.com/problems/shortest-word-distance-iii/
  * 245.Shortest Word Distance III

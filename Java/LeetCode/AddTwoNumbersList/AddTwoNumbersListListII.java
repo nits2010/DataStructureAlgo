@@ -7,7 +7,7 @@ import Java.LeetCode.templates.ListNode;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-11
  * Description: https://leetcode.com/problems/add-two-numbers-ii/
  * 445. Add Two Numbers II

@@ -1,7 +1,7 @@
 package Java.companyWise.GoldManSacs2019;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 18/04/19
  * Description:
  * Carer cup Persons A and B uses an encryption based system for their conversation.

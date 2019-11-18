@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-30
  * Description: https://leetcode.com/problems/fraction-to-recurring-decimal/
  * Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.

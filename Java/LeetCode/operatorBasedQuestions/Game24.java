@@ -1,7 +1,7 @@
 package Java.LeetCode.operatorBasedQuestions;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-07
  * Description: https://leetcode.com/problems/24-game/
  * You have 4 cards each containing a number from 1 to 9. You need to judge whether they could operated through *, /, +, -, (, ) to get the value of 24.

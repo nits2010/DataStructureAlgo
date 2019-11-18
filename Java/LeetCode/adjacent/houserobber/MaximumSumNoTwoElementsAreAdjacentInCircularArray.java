@@ -3,7 +3,7 @@ package Java.LeetCode.adjacent.houserobber;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-28
  * Description: https://leetcode.com/problems/house-robber-ii/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed.

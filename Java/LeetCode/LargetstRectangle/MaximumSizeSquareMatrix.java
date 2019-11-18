@@ -3,7 +3,7 @@ package Java.LeetCode.LargetstRectangle;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-27
  * Description:
  * https://leetcode.com/problems/maximal-square/

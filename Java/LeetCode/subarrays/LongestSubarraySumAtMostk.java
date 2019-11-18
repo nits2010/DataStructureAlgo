@@ -3,7 +3,7 @@ package Java.LeetCode.subarrays;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-24
  * Description: https://www.geeksforgeeks.org/longest-subarray-sum-elements-atmost-k/
  * <p>

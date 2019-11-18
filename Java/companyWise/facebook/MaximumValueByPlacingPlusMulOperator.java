@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description:
  * https://www.geeksforgeeks.org/calculate-maximum-value-using-sign-two-numbers-string/

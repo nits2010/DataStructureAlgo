@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-30
  * Description:https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
  * <p>

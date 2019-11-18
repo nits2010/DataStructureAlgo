@@ -1,7 +1,7 @@
 package Java.LeetCode.templates;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-18
  * Description: https://medium.com/algorithm-and-datastructure/employee-free-time-795c7682c973
  * Each employee has a list of non-overlapping Intervals, and these intervals are in sorted order.

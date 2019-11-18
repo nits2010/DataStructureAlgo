@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-23
  * Description: https://leetcode.com/problems/sort-characters-by-frequency/
  * Given a string, sort it in decreasing order based on the frequency of characters.

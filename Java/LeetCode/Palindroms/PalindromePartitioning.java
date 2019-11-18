@@ -1,7 +1,7 @@
 package Java.LeetCode.Palindroms;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-22
  * Description:https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/
  * <p>

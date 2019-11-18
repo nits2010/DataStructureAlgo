@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-24
  * Description: https://leetcode.com/problems/longest-valid-parentheses/
  * <p>

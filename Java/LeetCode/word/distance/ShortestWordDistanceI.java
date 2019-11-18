@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-09
  * Description: https://leetcode.com/problems/shortest-word-distance/
  * http://leetcode.liangjiateng.cn/leetcode/shortest-word-distance/description

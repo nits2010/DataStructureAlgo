@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 14/09/19
  * Description:
  */

@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 04/04/19
  * Description:  https://leetcode.com/problems/decode-string/
  * 394. Decode String [Medium]

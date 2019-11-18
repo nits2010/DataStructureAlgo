@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.Stack;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-05
  * Description: https://www.geeksforgeeks.org/form-minimum-number-from-given-sequence/
  * <p>

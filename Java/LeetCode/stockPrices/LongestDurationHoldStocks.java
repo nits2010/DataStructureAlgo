@@ -4,7 +4,7 @@ import Java.helpers.GenericPrinter;
 import Java.companyWise.Amazon.MaximumDifferenceInIndex;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-30
  * Description:
  * Given stocks value for each day, find the longest duration at which you can hold the stocks such that you don't incur any loss.

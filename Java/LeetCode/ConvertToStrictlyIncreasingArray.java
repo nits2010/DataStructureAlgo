@@ -5,7 +5,7 @@ import Java.nonleetcode.LongestIncreasingSubSequence;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-08
  * Description: https://www.geeksforgeeks.org/convert-to-strictly-increasing-integer-array-with-minimum-changes/
  * Given an array of n integers. Write a program to find minimum number of changes in array so that array is strictly increasing of integers. In strictly increasing array A[i] < A[i+1] for 0 <= i < n

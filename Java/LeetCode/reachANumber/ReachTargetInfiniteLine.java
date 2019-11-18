@@ -1,7 +1,7 @@
 package Java.LeetCode.reachANumber;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-12
  * Description: https://leetcode.com/problems/reach-a-number/
  * ou are standing at position 0 on an infinite number line. There is a goal at position target.

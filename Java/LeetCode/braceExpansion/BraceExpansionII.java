@@ -3,7 +3,7 @@ package Java.LeetCode.braceExpansion;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-29
  * Description:https://leetcode.com/problems/brace-expansion-ii/
  * https://leetcode.com/problems/brace-expansion-ii/discuss/322741/Explanation-and-thought-process-to-solve-Using-stacks-java

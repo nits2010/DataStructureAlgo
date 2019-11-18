@@ -1,7 +1,7 @@
 package Java.companyWise.Google;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://leetcode.com/discuss/interview-question/349416/goolge-onsite-guess-pin-code
  * <p>

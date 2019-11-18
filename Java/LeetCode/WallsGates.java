@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description: http://leetcode.liangjiateng.cn/leetcode/walls-and-gates/description
  * 286.Walls and Gates

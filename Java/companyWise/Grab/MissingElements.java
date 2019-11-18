@@ -3,7 +3,7 @@ package Java.companyWise.Grab;
 import javafx.util.Pair;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-18
  * Description: https://www.geeksforgeeks.org/find-two-missing-numbers-set-2-xor-based-solution/
  * Given an array of n unique integers where each element in the array is in range [1, n].

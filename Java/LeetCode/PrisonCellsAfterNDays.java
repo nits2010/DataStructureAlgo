@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-12
  * Description:https://leetcode.com/problems/prison-cells-after-n-days/
  * <p>

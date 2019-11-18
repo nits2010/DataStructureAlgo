@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-09
  * Description: https://leetcode.com/problems/strobogrammatic-number-iii
  * http://leetcode.liangjiateng.cn/leetcode/strobogrammatic-number-iii/description

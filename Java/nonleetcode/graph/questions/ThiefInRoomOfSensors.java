@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 13/04/19
  * Description: https://www.careercup.com/question?id=6266160824188928
  * Given a room with thief on left side of the room with finite number of sensors.

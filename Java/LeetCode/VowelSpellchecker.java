@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/09/19
  * Description: https://leetcode.com/problems/vowel-spellchecker/
  * 966. Vowel Spellchecker [Medium]

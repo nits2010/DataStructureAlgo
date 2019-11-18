@@ -3,7 +3,7 @@ package Java.LeetCode;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-06
  * Description: https://leetcode.com/problems/orderly-queue/
  */

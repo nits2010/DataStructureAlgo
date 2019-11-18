@@ -3,7 +3,7 @@ package Java.LeetCode.caches;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-26
  * Description: https://leetcode.com/problems/lfu-cache/
  * Design and implement a data structure for Least Frequently Used (LFU) cache.

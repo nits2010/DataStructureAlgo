@@ -3,7 +3,7 @@ package Java.companyWise.twitter;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-24
  * Description: https://leetcode.com/discuss/interview-question/336848/Twitter-or-Phone-Screen-or-RGB-Stream
  * You have a set of users visiting your website. Each user picks a color represented by RGB. R, G, B can take values between 0 and 255.

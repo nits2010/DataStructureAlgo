@@ -1,7 +1,7 @@
 package Java.LeetCode.bitsManipulation;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-20
  * Description: https://leetcode.com/problems/number-of-1-bits/
  * Write a function that takes an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).

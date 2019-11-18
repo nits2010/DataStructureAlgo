@@ -3,7 +3,7 @@ package Java.LeetCode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-14
  * Description: https://leetcode.com/problems/product-of-array-except-self/
  * Given an array nums of n integers where n > 1,  return an array output such that output[i]

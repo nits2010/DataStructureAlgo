@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-22
  * Description: https://leetcode.com/problems/set-matrix-zeroes/
  * Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.

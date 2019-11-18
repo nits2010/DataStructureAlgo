@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-15
  * Description: https://leetcode.com/problems/3sum-smaller/
  * http://leetcode.liangjiateng.cn/leetcode/3sum-smaller/description

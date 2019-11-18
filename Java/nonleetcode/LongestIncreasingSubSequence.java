@@ -5,7 +5,7 @@ import Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-21
  * Description: https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
  * <p>

@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 20/01/19
  * Description:
  * https://www.geeksforgeeks.org/find-minimum-possible-size-of-array-with-given-rules-for-removal/

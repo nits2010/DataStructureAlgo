@@ -1,7 +1,7 @@
 package Java.nonleetcode.graph.graph.types;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-08
  * Description:
  */

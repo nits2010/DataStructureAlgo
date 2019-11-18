@@ -3,7 +3,7 @@ package Java.LeetCode.island;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-12
  * Description: https://leetcode.com/problems/island-perimeter/
  * 463. Island Perimeter

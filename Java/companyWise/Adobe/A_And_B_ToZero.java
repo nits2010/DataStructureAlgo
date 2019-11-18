@@ -6,7 +6,7 @@ import Java.LeetCode.pair.element.problems.aAndBZero.AndSumToZero;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description: https://leetcode.com/discuss/interview-experience/133715/Adobe-MTS-1
  * Finding total number of pair of elements (say, a and b) from elements in an array such that a (AND) b is 0. ( use brute force approach)

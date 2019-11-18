@@ -6,7 +6,7 @@ import Java.LeetCode.templates.DoublyListNode;
 import Java.LeetCode.templates.ListNode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-12
  * Description: https://leetcode.com/problems/reverse-linked-list/
  * 206. Reverse Linked List

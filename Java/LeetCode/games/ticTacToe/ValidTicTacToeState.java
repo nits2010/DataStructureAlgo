@@ -1,7 +1,7 @@
 package Java.LeetCode.games.ticTacToe;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-04
  * Description: https://leetcode.com/problems/valid-tic-tac-toe-state/
  * A Tic-Tac-Toe board is given as a string array board. Return True if and only if it is possible to reach this board position during the course of a valid tic-tac-toe game.

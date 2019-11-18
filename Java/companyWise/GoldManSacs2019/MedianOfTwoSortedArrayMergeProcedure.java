@@ -3,7 +3,7 @@ package Java.companyWise.GoldManSacs2019;
 import Java.LeetCode.medians.MedianOfTwoSortedArray;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-01
  * Description:
  * <p>

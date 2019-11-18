@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-31
  * Description: Given two integers x and n, write a function to compute x^n. Overflow can happen.
  */

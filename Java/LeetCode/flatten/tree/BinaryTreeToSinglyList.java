@@ -1,7 +1,7 @@
 package Java.LeetCode.flatten.tree;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-09-01
  * Description:
  * Driver {@link Java.LeetCode.flatten.tree.BinaryTreeToList}

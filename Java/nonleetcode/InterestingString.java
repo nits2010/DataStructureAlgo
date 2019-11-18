@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-09
  * Description: https://leetcode.com/discuss/interview-question/350312/google-onsite-interesting-string
  * Given a string s consisting of digits 0-9 and lowercase English letters a-z.

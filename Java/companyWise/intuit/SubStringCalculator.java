@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 15/09/19
  * Description: Given a String s, a sub-string is defined as a non-empty string that can be obtained by applying following operation
  * 1. Remove zero or 1 character from left side of s

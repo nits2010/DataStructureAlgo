@@ -1,7 +1,7 @@
 package Java.LeetCode.longestShortestCommon;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-05
  * Description: https://www.geeksforgeeks.org/longest-common-substring-dp-29/
  * Given two strings ‘X’ and ‘Y’, find the length of the longest common substring.

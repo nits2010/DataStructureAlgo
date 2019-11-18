@@ -1,7 +1,7 @@
 package Java.companyWise.facebook;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-15
  * Description: https://www.geeksforgeeks.org/facebook-nyc-onsite-interview-experience/
  * there’s some function that can “compress” strings like FACEBOOK -> F6K or

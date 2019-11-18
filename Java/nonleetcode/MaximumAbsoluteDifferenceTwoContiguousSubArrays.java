@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import Java.helpers.GenericPrinter;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-06
  * Description: https://www.geeksforgeeks.org/maximum-absolute-difference-between-sum-of-two-contiguous-sub-arrays/
  * Maximum absolute difference between sum of two contiguous sub-arrays

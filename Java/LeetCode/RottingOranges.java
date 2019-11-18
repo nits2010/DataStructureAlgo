@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-03
  * Description:https://leetcode.com/problems/rotting-oranges/
  * In a given grid, each cell can have one of three values:

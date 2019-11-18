@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-06-30
  * Description:http://javabypatel.blogspot.com/2016/07/string-compression-in-place-run-length-encoding-program.html
  * Compress a given string "aacccddd" to "a2c3d3"

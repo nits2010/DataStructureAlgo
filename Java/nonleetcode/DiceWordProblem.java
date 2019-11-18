@@ -3,7 +3,7 @@ package Java.nonleetcode;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 12/04/19
  * Description: https://www.careercup.com/question?id=5690892925534208
  Given a word lenth n , a dice array. find out that this word possible to make usin

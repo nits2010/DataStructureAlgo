@@ -3,7 +3,7 @@ package Java.companyWise.facebook;
 import java.util.*;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 01/04/19
  * Description: https://www.careercup.com/question?id=5630954857562112
  * Given a list of Contacts, where each contact consists of a contact ID and a list of email IDs.

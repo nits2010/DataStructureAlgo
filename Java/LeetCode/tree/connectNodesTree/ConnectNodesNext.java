@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-07-10
  * Description:
  * 1.Perfect tree: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/submissions/

@@ -1,7 +1,7 @@
 package Java.companyWise.Google;
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 09/04/19
  * Description:
  * https://www.geeksforgeeks.org/ways-transforming-one-string-removing-0-characters/

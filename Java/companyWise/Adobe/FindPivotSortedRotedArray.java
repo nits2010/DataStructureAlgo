@@ -2,7 +2,7 @@ package Java.companyWise.Adobe;
 
 
 /**
- * Author: Nitin Gupta(nitin.gupta@walmart.com)
+ * Author: Nitin Gupta
  * Date: 2019-08-25
  * Description:
  * Find the index of pivot point
