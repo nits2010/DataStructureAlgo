@@ -1,7 +1,5 @@
 package Java.companyWise.facebook;
 
-import com.sun.tools.corba.se.idl.InvalidArgument;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
@@ -26,14 +24,14 @@ public class WordOrdering {
             System.out.println(test1);
             boolean test2 = areFollowOrder(words, ordering2);
             System.out.println(test2);
-        } catch (InvalidArgument invalidArgument) {
-            invalidArgument.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
 
 
     }
 
-    private static boolean areFollowOrder(String[] words, char[] ordering) throws InvalidArgument {
+    private static boolean areFollowOrder(String[] words, char[] ordering) throws Exception {
 
         Map<Character, Integer> characterOrderIndexMap = new HashMap<>();
 
@@ -42,7 +40,7 @@ public class WordOrdering {
          */
         for (int i = 0; i < ordering.length; i++) {
             if (characterOrderIndexMap.containsKey(ordering[i]))
-                throw new InvalidArgument("Can't have order duplicated");
+                throw new Exception("Can't have order duplicated");
             characterOrderIndexMap.put(ordering[i], i);
         }
 

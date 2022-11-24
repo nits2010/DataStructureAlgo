@@ -2,7 +2,7 @@ package Java.LeetCode;
 
 import Java.helpers.GenericPrinter;
 import Java.nonleetcode.KthLargestElement;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.*;
 

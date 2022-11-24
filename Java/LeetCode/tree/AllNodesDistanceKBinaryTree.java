@@ -2,7 +2,7 @@ package Java.LeetCode.tree;
 
 import Java.helpers.GenericPrinter;
 import Java.LeetCode.templates.TreeNode;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.ArrayList;
 import java.util.List;

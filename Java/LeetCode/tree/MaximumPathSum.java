@@ -1,7 +1,7 @@
 package Java.LeetCode.tree;
 
 import Java.nonleetcode.Tree.TreeNode;
-import javafx.util.Pair;
+import Java.Pair;
 
 /**
  * Author: Nitin Gupta

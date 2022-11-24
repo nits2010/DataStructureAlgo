@@ -2,7 +2,6 @@ package Java.companyWise.facebook;
 
 import Java.helpers.GenericPrinter;
 import Java.LeetCode.LetterCombinationsPhoneNumber;
-import com.sun.javaws.exceptions.InvalidArgumentException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -95,9 +94,9 @@ public class PrintLetterCombinationPhoneArray {
      * @param combinations
      * @param current
      * @param map
-     * @throws InvalidArgumentException
+     * @throws Exception
      */
-    private static void combinationsByNumbers(int[] nums, int index, List<String> combinations, StringBuilder current, String[] map) throws InvalidArgumentException {
+    private static void combinationsByNumbers(int[] nums, int index, List<String> combinations, StringBuilder current, String[] map) throws Exception {
 
         if (index == nums.length) {
             combinations.add(current.toString());
@@ -106,7 +105,7 @@ public class PrintLetterCombinationPhoneArray {
 
         int number = nums[index];
         if (number > map.length)
-            throw new InvalidArgumentException(new String[]{"Invalid input"});
+            throw new Exception(String.valueOf(new String[]{"Invalid input"}));
 
         String combination = map[number];
 

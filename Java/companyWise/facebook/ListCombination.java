@@ -1,7 +1,6 @@
 package Java.companyWise.facebook;
 
 import Java.LeetCode.braceExpansion.BraceExpansionI;
-import com.sun.tools.corba.se.idl.InvalidArgument;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -45,14 +44,14 @@ public class ListCombination {
             System.out.println(output);
 
 
-        } catch (InvalidArgument invalidArgument) {
-            invalidArgument.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
 
 
     }
 
-    private static List<String> generateCombination(Map<String, char[]> input, String test) throws InvalidArgument {
+    private static List<String> generateCombination(Map<String, char[]> input, String test) throws Exception {
 
         if (null == input || input.isEmpty() || null == test || test.isEmpty())
             return Collections.EMPTY_LIST;
@@ -64,7 +63,7 @@ public class ListCombination {
 
     }
 
-    private static List<List<String>> buildConsiderList(Map<String, char[]> map, String pattern) throws InvalidArgument {
+    private static List<List<String>> buildConsiderList(Map<String, char[]> map, String pattern) throws Exception {
 
         List<List<String>> toConsider = new LinkedList<>();
 
@@ -97,7 +96,7 @@ public class ListCombination {
                 String testThis = String.valueOf(remainingPattern.charAt(i));
                 //if this does not present in map; map is corrupt
                 if (!map.containsKey(testThis))
-                    throw new InvalidArgument("Input " + pattern + "is invalid");
+                    throw new Exception("Input " + pattern + "is invalid");
 
                 subListsToConsider.add(new String(map.get(testThis)));
 

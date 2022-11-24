@@ -1,7 +1,7 @@
 package Java.companyWise.Google;
 
 import Java.nonleetcode.graph.questions.TopologicalSorts;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.*;
 

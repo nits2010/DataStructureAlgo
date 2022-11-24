@@ -1,7 +1,7 @@
 package Java.companyWise.Amazon;
 
 import Java.LeetCode.iterators.PeekingIterators;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.*;
 import java.util.stream.Collectors;

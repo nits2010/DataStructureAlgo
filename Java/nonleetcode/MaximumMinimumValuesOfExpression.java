@@ -1,6 +1,6 @@
 package Java.nonleetcode;
 
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.ArrayList;
 import java.util.List;

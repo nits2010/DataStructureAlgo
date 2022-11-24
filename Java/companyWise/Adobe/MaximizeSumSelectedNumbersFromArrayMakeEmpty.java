@@ -1,9 +1,8 @@
 package Java.companyWise.Adobe;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
 
+import javax.naming.directory.InvalidAttributesException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta
@@ -133,7 +132,7 @@ public class MaximizeSumSelectedNumbersFromArrayMakeEmpty {
         System.out.println("\n Greedy " + maxSumSmartGreedy(nums) + " expected " + expected);
         try {
             System.out.println("Frequency " + maxSumByMaximumValue(nums) + " expected " + expected);
-        } catch (InvalidArgumentException e) {
+        } catch ( InvalidAttributesException e) {
            System.out.println(e.getMessage());
         }
     }
@@ -226,7 +225,7 @@ public class MaximizeSumSelectedNumbersFromArrayMakeEmpty {
      * @param nums
      * @return
      */
-    public static int maxSumByMaximumValue(int nums[]) throws InvalidArgumentException {
+    public static int maxSumByMaximumValue(int nums[]) throws InvalidAttributesException {
 
 
         int maxElement = Arrays.stream(nums).max().getAsInt();
@@ -236,7 +235,7 @@ public class MaximizeSumSelectedNumbersFromArrayMakeEmpty {
         //Base case: whatever element we choose, its is sure that at least that number we'll get as our sum { freq(i) * i}
         for (int e : nums) {
             if (e < 0)
-                throw new InvalidArgumentException(new String[]{"Neg number not supported"});
+                throw new InvalidAttributesException("Neg number not supported");
             freq[e]++;
         }
 

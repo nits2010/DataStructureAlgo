@@ -1,6 +1,6 @@
 package Java.companyWise.facebook;
 
-import javafx.util.Pair;
+import Java.Pair;;
 
 /**
  * Author: Nitin Gupta

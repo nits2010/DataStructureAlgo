@@ -1,7 +1,7 @@
 package Java.LeetCode.intervalRelatedProblems.multitasking;
 
 import Java.LeetCode.templates.Interval;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.*;
 

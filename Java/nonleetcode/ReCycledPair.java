@@ -1,7 +1,7 @@
 package Java.nonleetcode;
 
 import Java.helpers.GenericPrinter;
-import javafx.util.Pair;
+import Java.Pair;
 
 import java.util.*;
 
