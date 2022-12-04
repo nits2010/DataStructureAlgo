@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode.island;
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
 import  DataStructureAlgo.Java.companyWise.GroupOn.IslandsSizeCount;
 
-import static Java.helpers.GenericPrinter.*;
+import static DataStructureAlgo.Java.helpers.GenericPrinter.*;
 
 /**
  * Author: Nitin Gupta
