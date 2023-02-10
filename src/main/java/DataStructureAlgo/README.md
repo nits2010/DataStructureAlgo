@@ -25,9 +25,6 @@ https://www.happygirlzt.com/post/1087braceexpansion/
 
 
 
-company wise question
-http://leetcode.liangjiateng.cn/leetcode/algorithm
-
 
 
 
