@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 03/04/19
- * Description: https://www.careercup.com/question?id=5634222671790080
+ * Description: <a href="https://www.careercup.com/question?id=5634222671790080">...</a>
  * <p>
  * <p>
  * Given a string as input, return the list of all the patterns possible:
