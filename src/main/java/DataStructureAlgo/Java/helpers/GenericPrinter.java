@@ -21,6 +21,10 @@ public class GenericPrinter {
         System.out.println(toString(a));
     }
 
+    public static <T> void print(final T []a) {
+        System.out.println(toString(a));
+    }
+
     public static void print(final int[][] a) {
         System.out.println(toString(a));
     }
@@ -525,6 +529,46 @@ public class GenericPrinter {
         return equal;
     }
 
+    public static <T extends Comparable<T>> boolean equalsValuesWithoutOrder(T[]... arrays) {
+        if (arrays.length <= 1) // At least 2 arrays needed
+            return true;
+
+        // Sort the first array
+        T[] firstArray = arrays[0];
+        Arrays.sort(firstArray);
+
+        // Compare sorted arrays
+        for (int i = 1; i < arrays.length; i++) {
+            T[] currentArray = arrays[i];
+            Arrays.sort(currentArray);
+
+            if (!Arrays.equals(firstArray, currentArray)) {
+                return false; // Not equal if any sorted array doesn't match
+            }
+        }
+        return true; // All arrays are equal
+    }
+
+    public static boolean equalsValuesWithoutOrder(int[]... a) {
+        if (a.length <= 1) // at least 2 length
+            return true;
+
+        // Sort the first array
+        int[] firstArray = a[0];
+        Arrays.sort(firstArray);
+
+        // Compare sorted arrays
+        for (int i = 1; i < a.length; i++) {
+            int[] currentArray = a[i];
+            Arrays.sort(currentArray);
+
+            if (!Arrays.equals(firstArray, currentArray)) {
+                return false; // Not equal if any sorted array doesn't match
+            }
+        }
+        return true; // All arrays are equal
+    }
+
     @SafeVarargs
     public static <T> boolean equalsValuesArray(T[]... a) {
 
@@ -576,9 +620,24 @@ public class GenericPrinter {
 
     }
 
+    public static <I,E,R> void resultPrint(I input, E expected, E output, String msg, R result){
+        if (input instanceof int[]) {
+            print((int[]) input);
+            print((int[]) expected);
+            print((int[]) output);
+        } else {
+            print((Object[]) input);
+        }
+
+
+        System.out.println(msg + ":" + result);
+
+    }
+
     public static void main(String[] args) {
 
         int[] x = {1, 2, 3};
+        resultPrint(x,new int[]{1,1}, new int[]{1,1}, "hello", true);
         System.out.println(toString(copyOf(x)));
 
         int[][] x2 = {{1, 2, 3}, {4, 5, 6}};
