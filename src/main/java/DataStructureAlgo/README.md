@@ -23,6 +23,9 @@ https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode
 https://www.happygirlzt.com/post/1087braceexpansion/
 
 
+company wise
+https://github.com/krishnadey30/LeetCode-Questions-CompanyWise
+
 
 
 
