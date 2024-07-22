@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/RomanIntegerConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/LongestCommonPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +45,10 @@
     "Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor": "Debug",
     "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
     "Application.GenericPrinter.executor": "Run",
+    "Application.LongestCommonPrefix.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
+    "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.TwoSum.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -61,7 +65,7 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion">
+  <component name="RunManager" selected="Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum">
     <configuration name="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
       <module name="DataStructureAndAlgo" />
@@ -75,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataStructureAlgo.Java.LeetCode.PalindromeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode.PalindromeNumber" />
+    <configuration name="LongestCommonPrefix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.LongestCommonPrefix" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,8 +118,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.TwoSum" />
+    <configuration name="SmallestMissingIntegerGreaterThanSequentialPrefixSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -129,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
+        <item itemvalue="Application.LongestCommonPrefix" />
         <item itemvalue="Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
         <item itemvalue="Application.RomanIntegerConversion" />
         <item itemvalue="Application.PalindromeNumber" />
-        <item itemvalue="Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber" />
-        <item itemvalue="Application.TwoSum" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +186,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
           <line>623</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
