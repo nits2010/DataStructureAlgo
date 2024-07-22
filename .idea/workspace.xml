@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/LongestCommonPrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProductOfArrayExceptSelf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,7 @@
     "Application.GenericPrinter.executor": "Run",
     "Application.LongestCommonPrefix.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
+    "Application.ProductOfArrayExceptSelf.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
     "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.TwoSum.executor": "Run",
@@ -65,7 +65,7 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum">
+  <component name="RunManager" selected="Application.ProductOfArrayExceptSelf">
     <configuration name="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
       <module name="DataStructureAndAlgo" />
@@ -92,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PalindromeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.PalindromeNumber" />
+    <configuration name="ProductOfArrayExceptSelf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.ProductOfArrayExceptSelf" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -133,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductOfArrayExceptSelf" />
         <item itemvalue="Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
         <item itemvalue="Application.LongestCommonPrefix" />
         <item itemvalue="Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
         <item itemvalue="Application.RomanIntegerConversion" />
-        <item itemvalue="Application.PalindromeNumber" />
       </list>
     </recent_temporary>
   </component>
