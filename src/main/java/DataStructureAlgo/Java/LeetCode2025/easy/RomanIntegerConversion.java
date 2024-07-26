@@ -1,10 +1,7 @@
-package DataStructureAlgo.Java.LeetCode2025;
+package DataStructureAlgo.Java.LeetCode2025.easy;
 
 
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
-
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 

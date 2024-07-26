@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProductOfArrayExceptSelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/FindTheIndexOfTheFirstOccurrenceInAString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/IntersectionOfTwoLinkedLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/LongestCommonPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LongestCommonPrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/PalindromeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProductOfArrayExceptSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ProductOfArrayExceptSelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/RomanIntegerConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RomanIntegerConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseDoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseDoublyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseSinglyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ReverseSinglyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +37,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Amazon Corretto/jdk11.0.15_9/lib/src.zip!/java.base/java/lang/StringIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,13 +61,16 @@
     "Application.A_And_B_ToZero.executor": "Run",
     "Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor": "Debug",
     "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
+    "Application.FindTheIndexOfTheFirstOccurrenceInAString.executor": "Run",
     "Application.GenericPrinter.executor": "Run",
     "Application.LongestCommonPrefix.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
     "Application.ProductOfArrayExceptSelf.executor": "Run",
+    "Application.ReverseLinkedList.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
     "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.TwoSum.executor": "Run",
+    "Application.ValidParentheses.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -57,7 +78,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/git/DataStructureAlgo",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,26 +86,13 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductOfArrayExceptSelf">
-    <configuration name="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
+  <component name="RunManager" selected="Application.ReverseLinkedList">
+    <configuration name="FindTheIndexOfTheFirstOccurrenceInAString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.FindTheIndexOfTheFirstOccurrenceInAString" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LongestCommonPrefix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.LongestCommonPrefix" />
-      <module name="DataStructureAndAlgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,11 +101,11 @@
       </method>
     </configuration>
     <configuration name="ProductOfArrayExceptSelf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.ProductOfArrayExceptSelf" />
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.ProductOfArrayExceptSelf" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,8 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RomanIntegerConversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode.RomanIntegerConversion" />
+    <configuration name="ReverseLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode.ReverseLinkedList" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -119,11 +127,24 @@
       </method>
     </configuration>
     <configuration name="SmallestMissingIntegerGreaterThanSequentialPrefixSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidParentheses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.ValidParentheses" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReverseLinkedList" />
+        <item itemvalue="Application.FindTheIndexOfTheFirstOccurrenceInAString" />
+        <item itemvalue="Application.ValidParentheses" />
         <item itemvalue="Application.ProductOfArrayExceptSelf" />
         <item itemvalue="Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum" />
-        <item itemvalue="Application.LongestCommonPrefix" />
-        <item itemvalue="Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion" />
-        <item itemvalue="Application.RomanIntegerConversion" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +189,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/TwoSum.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum.java</url>
           <line>54</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -188,9 +209,29 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java</url>
           <line>59</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/FindTheIndexOfTheFirstOccurrenceInAString.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
