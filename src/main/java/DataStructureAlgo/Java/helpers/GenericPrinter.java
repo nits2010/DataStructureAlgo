@@ -596,6 +596,22 @@ public class GenericPrinter {
     }
 
 
+    public static boolean equalsValues(ListNode a, ListNode b) {
+
+        if (a == null && b == null)
+            return true;
+        if (a == null || b == null)
+            return false;
+        while (a != null && b != null) {
+            if (a.val != b.val)
+                return false;
+            a = a.next;
+            b = b.next;
+        }
+        return true;
+
+    }
+
     public static String levelOrder(NArrayTreeNode root) {
         if (root == null)
             return null;

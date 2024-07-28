@@ -31,6 +31,7 @@ package DataStructureAlgo.Java.LeetCode2025.easy;
  * Constraints:
  *
  * -231 <= x <= 231 - 1
+ * Duplicate {@link PalindromeNumber}
  */
 public class PalindromeNumber {
 
