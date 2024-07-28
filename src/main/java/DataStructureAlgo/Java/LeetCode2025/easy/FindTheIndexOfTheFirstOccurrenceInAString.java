@@ -25,6 +25,8 @@ package DataStructureAlgo.Java.LeetCode2025.easy;
  * <p>
  * 1 <= haystack.length, needle.length <= 104
  * haystack and needle consist of only lowercase English characters.
+ *
+ * duplicate {@link  DataStructureAlgo.Java.LeetCode.ImplementStrStrKMPRobinKarp}
  */
 public class FindTheIndexOfTheFirstOccurrenceInAString {
 
