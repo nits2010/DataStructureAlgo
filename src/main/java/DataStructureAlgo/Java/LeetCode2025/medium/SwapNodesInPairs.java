@@ -8,7 +8,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * Author: Nitin Gupta
  * Date: 2024-07-28
  * Description: https://leetcode.com/problems/swap-nodes-in-pairs
- * 24. Swap Nodes in Pairs [medium]
+ * 24. Swap Nodes in Pairs [medium] | Pairwise Swap Nodes of a given Linked List
  * Given a linked list, swap every two adjacent nodes and return its head.
  * You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
  *
@@ -61,7 +61,7 @@ public class SwapNodesInPairs {
     static class Solution {
         /**
          * O(n)/O(n)
-         * https://leetcode.com/problems/swap-nodes-in-pairs/submissions/1336122021/
+         * <a href="https://leetcode.com/problems/swap-nodes-in-pairs/submissions/1336122021/">...</a>
          * @param head
          * @return
          */

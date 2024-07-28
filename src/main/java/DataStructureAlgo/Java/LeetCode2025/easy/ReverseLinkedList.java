@@ -66,7 +66,7 @@ class ReverseSinglyLinkedList {
      * // 1-2-3-4; n_1 = 2-3-4 ; head = 1
      * //  2-3-4 ; n_1 = 3-4 ; head = 2
      * // 3-4; n_1 = 4; head= 3
-     * // 4 -> return ; newHead = 4, 4->3
+     * // 4 -> return ; newHead = 4, 4->3 { n_1_list.next = head;}
      * // 4-3-2; newHead = 4
      * // 4-3-2-1, newHEad = 4
      */
