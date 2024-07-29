@@ -33,6 +33,10 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  *
  * The number of nodes in the list is in the range [0, 100].
  * 0 <= Node.val <= 100
+ *
+ * * aka
+ *  * 1. reverse linked list pairwise
+ *  * 1. reverse linked list in group of 2 nodes
  */
 public class SwapNodesInPairs {
 

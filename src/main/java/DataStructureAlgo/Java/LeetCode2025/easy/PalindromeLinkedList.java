@@ -60,7 +60,8 @@ import java.util.Stack;
  * @Apple
  * @Bloomberg
  *
- * @Editorial : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
+ * @Editorial
+ * : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
  *
  */
 public class PalindromeLinkedList {
