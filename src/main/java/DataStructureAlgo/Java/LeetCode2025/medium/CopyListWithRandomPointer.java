@@ -5,7 +5,9 @@ import DataStructureAlgo.Java.Pair;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Author: Nitin Gupta
@@ -101,23 +103,69 @@ public class CopyListWithRandomPointer {
     private static void test(List<Pair<Integer, Integer>> input, List<Pair<Integer, Integer>> expected) {
         Node inputList = GenericPrinter.listWithRandomNode(input);
         System.out.println("\n\ninput\n");
-        GenericPrinter.printWithRef(inputList);
+        GenericPrinter.print(inputList);
 
         CopyListRandomPointer3PhaseSol copyListRandomPointer3PhaseSol = new CopyListRandomPointer3PhaseSol();
         Node output = copyListRandomPointer3PhaseSol.copyRandomList(inputList);
         System.out.println("\n\nCopyListRandomPointer3PhaseSol output");
-        GenericPrinter.printWithRef(output);
+        GenericPrinter.print(output);
 
         CopyListRandomPointer3PhaseSol2 copyListRandomPointer3PhaseSol2 = new CopyListRandomPointer3PhaseSol2();
         output = copyListRandomPointer3PhaseSol2.copyRandomList(GenericPrinter.listWithRandomNode(input));
         System.out.println("\n\nCopyListRandomPointer2PhaseSol output");
-        GenericPrinter.printWithRef(output);
+        GenericPrinter.print(output);
+
+        CopyListRandomPointer2PhaseSolUsingHashMap copyListRandomPointer2PhaseSolUsingHashMap = new CopyListRandomPointer2PhaseSolUsingHashMap();
+        output = copyListRandomPointer2PhaseSolUsingHashMap.copyRandomList(GenericPrinter.listWithRandomNode(input));
+        System.out.println("\n\nCopyListRandomPointer2PhaseSolUsingHashMap output");
+        GenericPrinter.print(output);
 
     }
 
 
 }
 
+class CopyListRandomPointer2PhaseSolUsingHashMap {
+    /**
+     * O(2n)/O(n)
+     *
+     * @param head
+     * @return
+     */
+    public Node copyRandomList(Node head) {
+        if (head == null)
+            return null;
+
+        Map<Node, Node> originalToClone = new HashMap<>();
+
+        createMapOriginalToClone(head, originalToClone);
+        Node cloneHead = originalToClone.get(head);
+        updateNextRandomOfClone(head,originalToClone);
+        return cloneHead;
+    }
+
+    private void createMapOriginalToClone(Node head, Map<Node, Node> map) {
+
+        while(head!=null){
+            Node clone = new Node(head.val, null, null);
+            map.put(head,clone);
+            head = head.next;
+        }
+    }
+
+    private void updateNextRandomOfClone(Node head, Map<Node, Node> originalToClone) {
+        while (head!=null){
+
+            Node clone = originalToClone.get(head);
+            clone.next = originalToClone.get(head.next);
+            clone.random = originalToClone.get(head.random);
+
+            head = head.next;
+        }
+    }
+
+
+}
 
 class CopyListRandomPointer3PhaseSol2 {
 
