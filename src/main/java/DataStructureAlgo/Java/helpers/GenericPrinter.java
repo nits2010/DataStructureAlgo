@@ -6,6 +6,7 @@ import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.flatten.list.Node;
 import  DataStructureAlgo.Java.LeetCode.flatten.list.SinglyNode;
 import  DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
+import DataStructureAlgo.Java.Pair;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -650,20 +651,100 @@ public class GenericPrinter {
 
     }
 
+
+    public static DataStructureAlgo.Java.Node listWithRandomNode(List<Pair<Integer,Integer>> input){
+        if(input == null || input.isEmpty())
+            return null;
+
+        Map<Integer,DataStructureAlgo.Java.Node> mapOfIndexVsNode = new HashMap<>();
+
+        int i=0 ;
+        for (Pair<Integer, Integer> pair : input) {
+            Integer value = pair.getKey();
+            DataStructureAlgo.Java.Node node = new DataStructureAlgo.Java.Node(value, null, null);
+            mapOfIndexVsNode.put(i, node);
+            i++;
+
+        }
+
+        for (i=0; i<input.size(); i++){
+
+           DataStructureAlgo.Java.Node node = mapOfIndexVsNode.get(i);
+
+            if(i+1 < input.size())
+                node.next = mapOfIndexVsNode.get(i+1);
+
+            if(input.get(i).getValue()!=null)
+                node.random = mapOfIndexVsNode.get(input.get(i).getValue());
+        }
+        return mapOfIndexVsNode.get(0);
+
+    }
+
+    public static void print(DataStructureAlgo.Java.Node node){
+        DataStructureAlgo.Java.Node temp = node;
+
+        while (temp!=null){
+            System.out.print(temp.val +"-->");
+            temp =temp.next;
+        }
+        System.out.println();
+        temp = node;
+        while (temp!=null){
+            System.out.print(temp.val +"=>" );
+            if(temp.random!=null)
+                System.out.print(temp.random.val +" ");
+            else
+                System.out.print(temp.random  +" ");
+            temp =temp.next;
+        }
+    }
+
+    public static void printWithRef(DataStructureAlgo.Java.Node node){
+        DataStructureAlgo.Java.Node temp = node;
+
+        while (temp!=null){
+            System.out.print(temp.val + "("+ temp +")" +"-->");
+            temp =temp.next;
+        }
+        System.out.println();
+        temp = node;
+        while (temp!=null){
+            System.out.print(temp.val+ "("+ temp +")" +"=>" );
+            if(temp.random!=null)
+                System.out.print(temp.random.val + "("+ temp.random +")"+" ");
+            else
+                System.out.print(temp.random  +" ");
+            temp =temp.next;
+        }
+    }
+
     public static void main(String[] args) {
 
-        int[] x = {1, 2, 3};
-        resultPrint(x,new int[]{1,1}, new int[]{1,1}, "hello", true);
-        System.out.println(toString(copyOf(x)));
+//        int[] x = {1, 2, 3};
+//        resultPrint(x,new int[]{1,1}, new int[]{1,1}, "hello", true);
+//        System.out.println(toString(copyOf(x)));
+//
+//        int[][] x2 = {{1, 2, 3}, {4, 5, 6}};
+//        int[][] x2d = copyOf(x2);
+//        System.out.println(x2 == x2d);
+//
+//        System.out.println(toString(new int[]{1, 3, 4}));
+//        System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));
+//        System.out.println(toString(new char[]{'a', 'b', 'c'}));
+//        System.out.println(toString(new char[][]{{'a', 'b', 'c'}, {'x', 'y', 'z'}, {'t', 'y', 'p'}}));
 
-        int[][] x2 = {{1, 2, 3}, {4, 5, 6}};
-        int[][] x2d = copyOf(x2);
-        System.out.println(x2 == x2d);
+        List<Pair<Integer,Integer>> input = new ArrayList<>(5);
+//        [[7,null],[13,0],[11,4],[10,2],[1,0]]
+        input.add(new Pair<>(7, null));
+        input.add(new Pair<>(13, 0));
+        input.add(new Pair<>(11, 4));
+        input.add(new Pair<>(10, 2));
+        input.add(new Pair<>(1, 0));
 
-        System.out.println(toString(new int[]{1, 3, 4}));
-        System.out.println(toString(new int[][]{{1, 3, 4}, {7, 8, 9}, {10, 11, 12}}));
-        System.out.println(toString(new char[]{'a', 'b', 'c'}));
-        System.out.println(toString(new char[][]{{'a', 'b', 'c'}, {'x', 'y', 'z'}, {'t', 'y', 'p'}}));
+      DataStructureAlgo.Java.Node head = listWithRandomNode(input);
+        printWithRef(head);
+
     }
 
 
