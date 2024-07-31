@@ -4,8 +4,13 @@ import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
+
 /**
- * 2074. Reverse Nodes in Even Length Groups [Medium]
+ * Author: Nitin Gupta
+ * Date: 7/31/2024
+ * Question Category: 2074. Reverse Nodes in Even Length Groups [Medium]
+ * Description: https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/
+ * <p>
  * You are given the head of a linked list.
  *
  * The nodes in the linked list are sequentially assigned to non-empty groups whose lengths form the sequence of the natural numbers (1, 2, 3, 4, ...). The length of a group is the number of nodes assigned to it. In other words,
@@ -47,7 +52,23 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * - The length of the first group is 1. No reversal occurs.
  * - The length of the second group is 2. The nodes are reversed.
  * - The length of the last group is 2. The nodes are reversed.
+ * <p>
  *
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link ReverseLinkedListII} {@link DataStructureAlgo.Java.LeetCode2025.hard.ReverseNodesInKGroup}
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.hard.ReverseNodesInKGroup}
+ * <p>
+ * Tags
+ * -----
+ * @hard
+ * @LinkedList
+ * @Recursion
+ *
+ * <p>
+ * Company Tags
+ * -----
  * @Editorial <a href="https://leetcode.com/problems/reverse-nodes-in-even-length-groups/solutions/5562445/easy-solution-extension-of-reversenodesinkgroup-o-n/">...</a>
  */
 public class ReverseNodesInEvenLengthGroups_2074 {
@@ -108,6 +129,7 @@ class Solution {
 
 
     /**
+     * <a href="https://leetcode.com/problems/reverse-nodes-in-even-length-groups/solutions/5562445/easy-solution-extension-of-reversenodesinkgroup-o-n/">...</a>
      * The idea is to keep track of the previous group tail, and the next group head and its tail and next group that will be consider later. Additionally, since last
      * group may have lesser element then sequence which can turn to be even length, hence we need to track the length of each group we are considering.
      *
@@ -119,9 +141,7 @@ class Solution {
      * if so, then detach the list from prevGroupTail and nextGroup. Reverse the list.
      * 4. Continue this activity for next group as well.
      *
-     * https://leetcode.com/problems/reverse-nodes-in-even-length-groups/submissions/1339322108/?envType=problem-list-v2&envId=m4ly4d57
-     * 7 ms
-     * Beats 42.71%
+     * 7 ms Beats 42.71% https://leetcode.com/problems/reverse-nodes-in-even-length-groups/submissions/1339322108/?envType=problem-list-v2&envId=m4ly4d57
      * @param head
      * @return
      */
@@ -198,7 +218,6 @@ class Solution {
         //c=1,n=2,ca=3, 2->1 ; c=2,n=3
         //ca=4, 3->2-1; c=3,n=4
         //ca=null, 4->3->2->1; c=4, n=null
-        //
         while (next != null) {
 
             ListNode cache = next.next; //cache next node
