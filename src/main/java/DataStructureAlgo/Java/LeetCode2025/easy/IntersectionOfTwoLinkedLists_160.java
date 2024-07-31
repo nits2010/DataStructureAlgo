@@ -1,16 +1,15 @@
 package DataStructureAlgo.Java.LeetCode2025.easy;
 
-import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
 
-import java.util.List;
 import java.util.Stack;
 
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-26
- * Description:Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+ * Question Category: 160. Intersection of Two Linked Lists [easy]
+ * Description: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+ Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
  *
  * For example, the following two linked lists begin to intersect at node c1:
  *
@@ -69,8 +68,32 @@ import java.util.Stack;
  *
  *
  * Follow up: Could you write a solution that runs in O(m + n) time and use only O(1) memory?
+ * <p>
+ *
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ *
+ * Tags
+ * -----
+ * @easy
+ * @HashTable
+ * @LinkedList
+ * @TwoPointers
+ *
+ * Company Tags
+ * -----
+ * @Microsoft
+ * @Amazon
+ * @LinkedIn
+ * @Facebook
+ * @Adobe
  */
-public class IntersectionOfTwoLinkedLists {
+
+public class IntersectionOfTwoLinkedLists_160 {
 
 
     public static class Solution {

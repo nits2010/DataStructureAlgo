@@ -2,33 +2,51 @@ package DataStructureAlgo.Java.LeetCode2025.easy;
 
 /**
  * Author: Nitin Gupta
- * * Date: 2024-07-23
- * * Description: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+ * Date: 2024-07-23
+ * Question Category: 28. Find the Index of the First Occurrence in a String [easy]
+ * Description: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
  * Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ *  * <p>
+ *  * <p>
+ *  * <p>
+ *  * Example 1:
+ *  * <p>
+ *  * Input: haystack = "sadbutsad", needle = "sad"
+ *  * Output: 0
+ *  * Explanation: "sad" occurs at index 0 and 6.
+ *  * The first occurrence is at index 0, so we return 0.
+ *  * Example 2:
+ *  * <p>
+ *  * Input: haystack = "leetcode", needle = "leeto"
+ *  * Output: -1
+ *  * Explanation: "leeto" did not occur in "leetcode", so we return -1.
+ *  * <p>
+ *  * <p>
+ *  * Constraints:
+ *  * <p>
+ *  * 1 <= haystack.length, needle.length <= 104
+ *  * haystack and needle consist of only lowercase English characters.
+ *  *
  * <p>
- * <p>
- * <p>
- * Example 1:
- * <p>
- * Input: haystack = "sadbutsad", needle = "sad"
- * Output: 0
- * Explanation: "sad" occurs at index 0 and 6.
- * The first occurrence is at index 0, so we return 0.
- * Example 2:
- * <p>
- * Input: haystack = "leetcode", needle = "leeto"
- * Output: -1
- * Explanation: "leeto" did not occur in "leetcode", so we return -1.
- * <p>
- * <p>
- * Constraints:
- * <p>
- * 1 <= haystack.length, needle.length <= 104
- * haystack and needle consist of only lowercase English characters.
  *
- * duplicate {@link  DataStructureAlgo.Java.LeetCode.ImplementStrStrKMPRobinKarp}
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link  DataStructureAlgo.Java.LeetCode.ImplementStrStrKMPRobinKarp}
+ * Similar {@link}
+ * extension {@link }
+ *
+ * Tags
+ * -----
+ * @easy
+ * @TwoPointers
+ * @String
+ * @StringMatching
+ *
+ * Company Tags
+ * -----
  */
-public class FindTheIndexOfTheFirstOccurrenceInAString {
+public class FindTheIndexOfTheFirstOccurrenceInAString_28 {
 
     public static void main(String[] args) {
         test("sadbutsad", "sad", 0);

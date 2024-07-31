@@ -100,6 +100,89 @@ public class ReverseNodesInEvenLengthGroups_2074 {
 
 }
 
+
+class ReverseNodesInEvenLengthGroupsGroupLengthBasedIterative {
+
+    public ListNode reverseEvenLengthGroups(ListNode head) {
+
+        if(head == null || head.next == null)
+            return head;
+
+        ListNode prevGroupTail = null;
+        ListNode currentGroupHead = null;
+        ListNode currentGroupTail = null;
+        ListNode nextGroup = null;
+        ListNode temp = head;
+        int sequence = 1;
+
+        while (temp!=null){
+
+            //odd sequence, move ahead and update pointers
+            if(sequence%2!=0){
+
+                int moveHeadCount = sequence - 1 ; //current node counted as 1
+
+                while (temp!=null && moveHeadCount >=0){
+                    prevGroupTail = temp;
+                    temp = temp.next;
+                    moveHeadCount--;
+                }
+
+            }else {
+
+                currentGroupHead = temp;
+                currentGroupTail = getKNodes(temp, sequence);
+
+                //if there is not enough nodes
+                if (currentGroupTail == null) {
+                    break;
+                }
+
+                //detach lists
+                prevGroupTail.next = null;
+                nextGroup = currentGroupTail.next;
+                currentGroupTail.next = null;
+
+                currentGroupTail = currentGroupHead; //post reversal they will swap position
+                currentGroupHead = reverse(currentGroupHead);
+
+                //attach lists
+                prevGroupTail.next = currentGroupHead;
+                currentGroupTail.next = nextGroup;
+
+                //move next group
+                temp = nextGroup;
+            }
+
+            sequence++;
+        }
+
+
+        return head; // since we need to reverse only even sequence and first node is always odd sequence.
+    }
+
+    private ListNode getKNodes(ListNode head, int k) {
+        k = k-1; //head is counted as one
+        while (head != null && k>0){
+            head = head.next;
+            k--;
+        }
+        return head;
+    }
+
+    private ListNode reverse(ListNode head){
+        if(head == null || head.next == null)
+            return head;
+
+        ListNode n_1_list = head.next;
+        head.next = null;
+
+        ListNode newHead = reverse(n_1_list);
+        n_1_list.next = head;
+        return newHead;
+    }
+}
+
 class Solution {
 
     //Sample run
