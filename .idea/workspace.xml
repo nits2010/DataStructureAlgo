@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="refactors">
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MaximumTwinSumOfALinkedList_2130.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MaximumTwinSumOfALinkedList_2130.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Amazon Corretto/jdk11.0.15_9/lib/src.zip!/java.base/java/lang/StringIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2jBRyH1U4ZRLASArYRoNMStz1Ue" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.A_And_B_ToZero.executor": "Run",
+    "Application.CopyListWithRandomPointer.executor": "Run",
+    "Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor": "Debug",
+    "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
+    "Application.FindTheIndexOfTheFirstOccurrenceInAString.executor": "Run",
+    "Application.GenericPrinter.executor": "Run",
+    "Application.LongestCommonPrefix.executor": "Run",
+    "Application.MaximumTwinSumOfALinkedList_2130.executor": "Run",
+    "Application.MergeTwoSortedLists.executor": "Run",
+    "Application.PalindromeLinkedList.executor": "Run",
+    "Application.PalindromeNumber.executor": "Run",
+    "Application.ProductOfArrayExceptSelf.executor": "Run",
+    "Application.RemoveNthNodeFromEndOfList.executor": "Run",
+    "Application.ReverseLinkedList.executor": "Run",
+    "Application.ReverseLinkedListII.executor": "Run",
+    "Application.ReverseNodesInEvenLengthGroups.executor": "Run",
+    "Application.ReverseNodesInKGroup.executor": "Run",
+    "Application.RomanIntegerConversion.executor": "Run",
+    "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
+    "Application.SwapNodesInPairs.executor": "Run",
+    "Application.SwappingNodesInALinkedList.executor": "Run",
+    "Application.TwoSum.executor": "Run",
+    "Application.ValidParentheses.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "preparation-2025",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/git/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy",
+    "settings.editor.selected.configurable": "fileTemplates"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\git\DataStructureAlgo\src\main\java\DataStructureAlgo\Java\LeetCode2025\easy" />
+      <recent name="E:\git\DataStructureAlgo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MaximumTwinSumOfALinkedList_2130">
+    <configuration name="CopyListWithRandomPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.CopyListWithRandomPointer" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenericPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.helpers.GenericPrinter" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaximumTwinSumOfALinkedList_2130" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.MaximumTwinSumOfALinkedList_2130" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseLinkedListII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.ReverseLinkedListII" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseNodesInEvenLengthGroups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.ReverseNodesInEvenLengthGroups" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MaximumTwinSumOfALinkedList_2130" />
+        <item itemvalue="Application.ReverseNodesInEvenLengthGroups" />
+        <item itemvalue="Application.CopyListWithRandomPointer" />
+        <item itemvalue="Application.GenericPrinter" />
+        <item itemvalue="Application.ReverseLinkedListII" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="" />
+      <created>1720858736914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720858736914</updated>
+    </task>
+    <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
+      <option name="closed" value="true" />
+      <created>1722168152112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722168152112</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tags updated !!">
+      <option name="closed" value="true" />
+      <created>1722168217754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722168217754</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tags updated !!">
+      <option name="closed" value="true" />
+      <created>1722168281654</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722168281654</updated>
+    </task>
+    <task id="LOCAL-00004" summary="July 28th 2024, 6 questions.">
+      <option name="closed" value="true" />
+      <created>1722189395803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722189395803</updated>
+    </task>
+    <task id="LOCAL-00005" summary="July 29th 2024, 1-hard questions.">
+      <option name="closed" value="true" />
+      <created>1722271889624</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722271889625</updated>
+    </task>
+    <task id="LOCAL-00006" summary="July 29th 2024, 1-medium, 1-hard questions.">
+      <option name="closed" value="true" />
+      <created>1722277653289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722277653289</updated>
+    </task>
+    <task id="LOCAL-00007" summary="July 29th 2024, 1-medium">
+      <option name="closed" value="true" />
+      <created>1722336273007</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722336273007</updated>
+    </task>
+    <task id="LOCAL-00008" summary="July 29th 2024, 1-medium">
+      <option name="closed" value="true" />
+      <created>1722337889859</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722337889859</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactors">
+      <option name="closed" value="true" />
+      <created>1722432738421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722432738421</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="July 28th 2024, 5 questions." />
+    <MESSAGE value="tags updated !!" />
+    <MESSAGE value="July 28th 2024, 6 questions." />
+    <MESSAGE value="July 29th 2024, 1-hard questions." />
+    <MESSAGE value="July 29th 2024, 1-medium, 1-hard questions." />
+    <MESSAGE value="July 29th 2024, 1-medium" />
+    <MESSAGE value="refactors" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactors" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
+          <line>725</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/PalindromeNumber.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
+          <line>515</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
+          <line>640</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/FindTheIndexOfTheFirstOccurrenceInAString_28.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MergeTwoSortedLists.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeLinkedList.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
+          <line>745</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer.java</url>
+          <line>306</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MaximumTwinSumOfALinkedList_2130.java</url>
+          <line>231</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MaximumTwinSumOfALinkedList_2130.java</url>
+          <line>258</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="DataStructureAlgo.Java.Node" memberName="val" />
+        <PinnedItemInfo parentTag="DataStructureAlgo.Java.Node" memberName="next" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

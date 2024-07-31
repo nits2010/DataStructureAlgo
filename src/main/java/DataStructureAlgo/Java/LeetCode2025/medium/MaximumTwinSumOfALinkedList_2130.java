@@ -76,7 +76,7 @@ import java.util.Stack;
  * -----
  * @Amazon
  *
- * @Editorial
+ * @Editorial <a href="https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/solutions/5563826/interesting-solution-approach-towards-best-slowly-fully-explained/">...</a>
  */
 public class MaximumTwinSumOfALinkedList_2130 {
 
@@ -85,6 +85,7 @@ public class MaximumTwinSumOfALinkedList_2130 {
         testResult &= test(new Integer[]{5,4,2,1}, 6);
         testResult &= test(new Integer[]{4,2,2,3}, 7);
         testResult &= test(new Integer[]{4,2,2,3,5,7,8,9,2,9}, 13);
+        testResult &= test(new Integer[]{4,2}, 6);
 
         System.out.println("\nTest result = " + (testResult ? "Pass" : "Fail"));
 
@@ -96,15 +97,20 @@ public class MaximumTwinSumOfALinkedList_2130 {
 
         MaximumTwinSumOfALinkedListUsingHashMap.Solution usingHashMap = new MaximumTwinSumOfALinkedListUsingHashMap.Solution();
         MaximumTwinSumOfALinkedListUsingStacksAndTwoPointers.Solution usingStacks = new MaximumTwinSumOfALinkedListUsingStacksAndTwoPointers.Solution();
+        MaximumTwinSumOfALinkedListTwoPointers.Solution usingTwoPointer = new MaximumTwinSumOfALinkedListTwoPointers.Solution();
         int outputUsingHashMap = usingHashMap.pairSum(originalList);
         int outputUsingStacks = usingStacks.pairSum(originalList);
+        int outputTwoPointer = usingTwoPointer.pairSum(originalList);
 
         boolean result = expected == outputUsingHashMap;
-        System.out.println(" Output :" + outputUsingHashMap + " Expected :" + expected +" Result match : " + result );
-
+        System.out.println("\noutputUsingHashMap :" + outputUsingHashMap + " Expected :" + expected +" Result match : " + result );
+        System.out.println("---------------------------------------------------");
         result = expected == outputUsingStacks;
-        System.out.println(" Output :" + outputUsingStacks + " Expected :" + expected +" Result match : " + result );
-
+        System.out.println("\noutputUsingStacks :" + outputUsingStacks + " Expected :" + expected +" Result match : " + result );
+        System.out.println("---------------------------------------------------");
+        result = expected == outputTwoPointer;
+        System.out.println("\noutputTwoPointer :" + outputTwoPointer + " Expected :" + expected +" Result match : " + result );
+        System.out.println("---------------------------------------------------");
 
         return result;
 
@@ -211,25 +217,58 @@ class MaximumTwinSumOfALinkedListUsingStacksAndTwoPointers {
  *
  * Surprisingly, we can do this by first reversing the first half of the list and then start computing the value of first half with second half.
  * But how to reverse first half of the list in the same call we are trying to find the length ?
- * Can we utilize the behaviour of above solution, where we compute length using fast/slow. ?
+ * Can we utilize the behaviour of above solution, where we compute length using fast/slow and using this just reverse the list as well?
  *
- * f
- * s
- * 4 -> 2 -> 2 -> 3 -> 5 -> 7 -> 8 -> 9 -> 2 -> 9
+
  *
- *           f
- * s
- * 4 -> 2 -> 2 -> 3 -> 5 -> 7 -> 8 -> 9 -> 2 -> 9 ; s=2, 4-> null
- *
- *
- * O(n) / O(n/2)
- * 20 ms Beats 14.29%: https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/submissions/1339482378/?envType=problem-list-v2&envId=m4ly4d57
+ * Best
+ * O(n) / O(1)
+ * 4 ms Beats 96.48%
  */
 class MaximumTwinSumOfALinkedListTwoPointers {
     static class Solution {
 
         public int pairSum(ListNode head) {
-            return 0;
+            if(head==null || head.next == null)
+                return -1;
+
+            ListNode fast = head;
+            ListNode slow = head;
+            ListNode prev = null;
+            ListNode next;
+
+            while (fast!=null){
+                fast = fast.next.next;
+                //reverse list
+                {
+                    //cache next to move slow one step later
+                    next = slow.next;
+
+                    //reverse list
+                    slow.next = prev;
+                    prev = slow;
+
+                    slow = next;
+                }
+
+
+            }
+
+            //at this point, prev will be holding the head of first list
+            // while next and slow both holding the head of second list;
+            ListNode p1 = prev;
+            ListNode p2 = slow;
+
+            int max = Integer.MIN_VALUE;
+
+            //now slow and next will be twin
+            while (p1!=null && p2!=null){
+                max = Math.max(max, p1.val + p2.val);
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+
+            return max;
         }
     }
 }
