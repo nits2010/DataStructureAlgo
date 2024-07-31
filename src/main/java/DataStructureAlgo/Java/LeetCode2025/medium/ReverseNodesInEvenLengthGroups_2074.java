@@ -62,7 +62,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * <p>
  * Tags
  * -----
- * @hard
+ * @medium
  * @LinkedList
  * @Recursion
  *
