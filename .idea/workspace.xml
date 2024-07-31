@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="MaximumTwinSumOfALinkedList_2130">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LinkedListCycle_141.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="LinkedListCycle">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/KthNodeFromEndOfLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RemoveDuplicatesFromSortedList_83.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/LinkedListCycleII_142.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveDuplicatesFromSortedListII_82.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RotateList_61.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LinkedListCycle_141.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LinkedListCycle_141.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +57,24 @@
     "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
     "Application.FindTheIndexOfTheFirstOccurrenceInAString.executor": "Run",
     "Application.GenericPrinter.executor": "Run",
+    "Application.LinkedListCycleII_142.executor": "Run",
+    "Application.LinkedListCycle_141.executor": "Run",
     "Application.LongestCommonPrefix.executor": "Run",
     "Application.MaximumTwinSumOfALinkedList_2130.executor": "Run",
     "Application.MergeTwoSortedLists.executor": "Run",
     "Application.PalindromeLinkedList.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
     "Application.ProductOfArrayExceptSelf.executor": "Run",
+    "Application.RemoveDuplicatesFromSortedListII_82.executor": "Run",
+    "Application.RemoveDuplicatesFromSortedList_83.executor": "Run",
     "Application.RemoveNthNodeFromEndOfList.executor": "Run",
+    "Application.RemoveNthNodeFromEndOfList_19.executor": "Run",
     "Application.ReverseLinkedList.executor": "Run",
     "Application.ReverseLinkedListII.executor": "Run",
     "Application.ReverseNodesInEvenLengthGroups.executor": "Run",
     "Application.ReverseNodesInKGroup.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
+    "Application.RotateList_61.executor": "Debug",
     "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.SwapNodesInPairs.executor": "Run",
     "Application.SwappingNodesInALinkedList.executor": "Run",
@@ -74,7 +87,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/git/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy",
-    "settings.editor.selected.configurable": "fileTemplates"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -83,9 +96,9 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MaximumTwinSumOfALinkedList_2130">
-    <configuration name="CopyListWithRandomPointer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.CopyListWithRandomPointer" />
+  <component name="RunManager" selected="Application.RemoveNthNodeFromEndOfList_19">
+    <configuration name="LinkedListCycleII_142" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.LinkedListCycleII_142" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -97,21 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.helpers.GenericPrinter" />
-      <module name="DataStructureAndAlgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.helpers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaximumTwinSumOfALinkedList_2130" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.MaximumTwinSumOfALinkedList_2130" />
+    <configuration name="RemoveDuplicatesFromSortedListII_82" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveDuplicatesFromSortedListII_82" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +123,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseLinkedListII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.ReverseLinkedListII" />
+    <configuration name="RemoveDuplicatesFromSortedList_83" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.RemoveDuplicatesFromSortedList_83" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveNthNodeFromEndOfList_19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveNthNodeFromEndOfList_19" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +149,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseNodesInEvenLengthGroups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.ReverseNodesInEvenLengthGroups" />
+    <configuration name="RotateList_61" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RotateList_61" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -151,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MaximumTwinSumOfALinkedList_2130" />
-        <item itemvalue="Application.ReverseNodesInEvenLengthGroups" />
-        <item itemvalue="Application.CopyListWithRandomPointer" />
-        <item itemvalue="Application.GenericPrinter" />
-        <item itemvalue="Application.ReverseLinkedListII" />
+        <item itemvalue="Application.RemoveNthNodeFromEndOfList_19" />
+        <item itemvalue="Application.RotateList_61" />
+        <item itemvalue="Application.RemoveDuplicatesFromSortedListII_82" />
+        <item itemvalue="Application.RemoveDuplicatesFromSortedList_83" />
+        <item itemvalue="Application.LinkedListCycleII_142" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722437156009</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="LinkedListCycle">
+      <option name="closed" value="true" />
+      <created>1722444382232</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722444382232</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +299,8 @@
     <MESSAGE value="July 29th 2024, 1-medium" />
     <MESSAGE value="refactors" />
     <MESSAGE value="MaximumTwinSumOfALinkedList_2130" />
-    <option name="LAST_COMMIT_MESSAGE" value="MaximumTwinSumOfALinkedList_2130" />
+    <MESSAGE value="LinkedListCycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinkedListCycle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -350,12 +372,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
-          <line>161</line>
+          <line>159</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList.java</url>
-          <line>78</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java</url>
+          <line>93</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -397,6 +419,41 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MaximumTwinSumOfALinkedList_2130.java</url>
           <line>258</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/LinkedListCycleII_142.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/LinkedListCycleII_142.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListBuilder.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RotateList_61.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

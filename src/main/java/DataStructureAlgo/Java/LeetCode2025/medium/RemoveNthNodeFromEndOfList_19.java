@@ -6,9 +6,11 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 /**
  * Author: Nitin Gupta
- * Date: 2024-07-28
- * Description: https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
- * 19. Remove Nth Node From End of List [medium]
+ * Date:  2024-07-28
+ * Question Category: 19. Remove Nth Node From End of List [ medium ]
+ * Description:https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+ *
+ * <p>
  * Given the head of a linked list, remove the nth node from the end of the list and return its head.
  * <p>
  * <p>
@@ -34,10 +36,25 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * 1 <= sz <= 30
  * 0 <= Node.val <= 100
  * 1 <= n <= sz
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.RemoveNthNodeFromEnd}
- * Extension of {@link SwappingNodesInALinkedList.Solution #kthNodeFromEndFromLinkedList}
+ * <p>
+ * File reference
+ * -----------
+ *
+ * Duplicate  {@link DataStructureAlgo.Java.LeetCode.RemoveNthNodeFromEnd}
+ * Similar {@link}
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.medium.SwappingNodesInALinkedList #kthNodeFromEndFromLinkedList}
+ *
+ * Tags
+ * -----
+ * @easy @medium @hard
+ *
+ * Company Tags
+ * -----
+ *
+ * @Editorial https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/5565232/multiple-solutions-easy-to-understand/
  */
-public class RemoveNthNodeFromEndOfList {
+
+public class RemoveNthNodeFromEndOfList_19 {
 
     public static void main(String[] args) {
         boolean testResult = true;
@@ -47,6 +64,8 @@ public class RemoveNthNodeFromEndOfList {
         testResult &= test(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 11, null);
         testResult &= test(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 0, new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
         testResult &= test(new Integer[]{1}, 1, new Integer[]{});
+        testResult &= test(new Integer[]{1,2}, 2, new Integer[]{2});
+        testResult &= test(new Integer[]{1,2}, 1, new Integer[]{1});
 
         System.out.println("\nTest result =" + (testResult ? "Pass" : "Fail"));
 
@@ -58,7 +77,7 @@ public class RemoveNthNodeFromEndOfList {
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
         System.out.println("\n Input :" + GenericPrinter.print(originalList) + " k = " + k + "\nexpected :" + GenericPrinter.print(expectedList));
 
-        Solution solution = new Solution();
+        RemoveNthNodeFromEndOfListSimplified.Solution solution = new RemoveNthNodeFromEndOfListSimplified.Solution();
         ListNode output = solution.removeNthFromEnd(originalList, k);
         boolean result = false;
         System.out.println(" Output :" + GenericPrinter.print(output) + " Result match : " + (result = GenericPrinter.equalsValues(expectedList, output)));
@@ -66,6 +85,8 @@ public class RemoveNthNodeFromEndOfList {
 
 
     }
+}
+class RemoveNthNodeFromEndOfList{
 
     static class Solution {
         /**
@@ -83,9 +104,7 @@ public class RemoveNthNodeFromEndOfList {
 
 
             ListNode kthFromEnd = head;
-            ListNode prev = head;
             while (kthFromEnd != null && k > 0) {
-                prev = kthFromEnd;
                 kthFromEnd = kthFromEnd.next;
                 k--;
             }
@@ -94,13 +113,14 @@ public class RemoveNthNodeFromEndOfList {
             if (kthFromEnd == null && k == 0)
                 return null;
 
-            //if head node itself is kthnodefromEnd.{only 1 node in list and k =1 }
+            //if head node itself is kthFromEnd.{k = n }
             if (kthFromEnd == null || kthFromEnd.next == null)
                 return head.next;
 
 
             //get kth node from end
             ListNode temp = head;
+            ListNode prev = null;
             while (kthFromEnd.next != null) {
                 prev = temp;
                 temp = temp.next;
@@ -108,17 +128,71 @@ public class RemoveNthNodeFromEndOfList {
             }
             kthFromEnd = temp;
 
-            //if we went beyond list
-            if (kthFromEnd == null)
-                return null;
-
-            ListNode next = kthFromEnd.next;
+            //attach
+            prev.next =  kthFromEnd.next;
 
             //detach
             kthFromEnd.next = null;
-            prev.next = next;
+
+
 
             return head;
         }
+
     }
 }
+
+class RemoveNthNodeFromEndOfListSimplified {
+
+    static class Solution {
+
+        public ListNode removeNthFromEnd(ListNode head, int k) {
+
+            if (head == null || k <= 0)
+                return head;
+
+            //if one node in list and k = 1
+            if(head.next == null && k == 1)
+                return null;
+
+            ListNode prevOfKthNodeFromTheEndOfLinkedList = prevOfKthNodeFromTheEndOfLinkedList(head, k);
+
+
+            if(prevOfKthNodeFromTheEndOfLinkedList == null) // means k is multiple of list length, k = n
+                return head.next;// as kth element from the end will be head itself
+            // and prev to head is null, since we need to delete kth element, hence sending head back will delete it
+
+            if(prevOfKthNodeFromTheEndOfLinkedList.val == -1) // k was greater than list length
+                return null;
+
+            prevOfKthNodeFromTheEndOfLinkedList.next = prevOfKthNodeFromTheEndOfLinkedList.next.next;
+            return head;
+
+        }
+        private ListNode prevOfKthNodeFromTheEndOfLinkedList(ListNode head, int k) {
+            ListNode fast = head;
+            ListNode slow = head;
+
+            while(fast!=null && k>0){
+                fast = fast.next;
+                k--;
+            }
+
+            if(k>0)
+                return new ListNode(-1);
+
+//            if(k == 0 && fast == null) { // k was equal to list length
+//                return null; // as kth element from the end will be head itself
+//                // and prev to head is null, since we need to delete kth element, hence sending head back will delete it
+//            }
+            ListNode prev = null;
+            while(fast!=null){
+                fast = fast.next;
+                prev = slow;
+                slow = slow.next;
+            }
+            return prev;
+        }
+    }
+}
+

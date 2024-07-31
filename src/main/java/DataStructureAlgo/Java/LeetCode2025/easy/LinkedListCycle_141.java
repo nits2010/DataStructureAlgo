@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy;
 
+import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 
 /**
@@ -71,11 +72,29 @@ import DataStructureAlgo.Java.LeetCode.templates.ListNode;
  * @Editorial
  */
 public class LinkedListCycle_141 {
+    public static void main(String[] args) {
+        boolean testResult = true;
+        testResult &= test(new Integer[]{1, 2, 3, 4, 5}, 2, true);
+        testResult &= test(new Integer[]{1, 2, 3, 4, 5}, -1, false);
+        testResult &= test(new Integer[]{1, 2, 3, 4, 5,7,8,9}, 2, true);
+        testResult &= test(new Integer[]{1}, 0, true);
 
+        System.out.println("\nTest result = " + (testResult ? "Pass" : "Fail"));
+
+    }
+
+    private static boolean test(Integer[] input, int pos, boolean expectedValue) {
+        ListNode originalList = ListBuilder.arrayToCyclicSinglyList(input, pos);
+
+        LinkedListCycleUsingTwoPointers.Solution solution = new LinkedListCycleUsingTwoPointers().new Solution();
+        boolean result = solution.hasCycle(originalList);
+        System.out.println("\n expected = " + expectedValue + " Obtained = " + result);
+        return  (result == expectedValue) ;
+    }
 
 }
 
-class LinkedListCycleUsingFastSlow {
+class LinkedListCycleUsingTwoPointers {
 
     public class Solution {
         public boolean hasCycle(ListNode head) {

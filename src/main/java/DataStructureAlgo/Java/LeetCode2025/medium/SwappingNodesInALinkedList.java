@@ -96,7 +96,7 @@ public class SwappingNodesInALinkedList {
 
          ListNode kthFromFirst = kthFromEnd; //at this point kthFromEnd is sitting at kth node from start
 
-         //get kth node from end
+         //get prev of kth node from end
          ListNode temp = head;
          while (kthFromEnd.next != null){
              temp = temp.next;
@@ -123,7 +123,7 @@ public class SwappingNodesInALinkedList {
             if(head == null || k <= 0)
                 return head;
 
-            final ListNode kthNodeFromEnd = kthNodeFromEndFromLinkedList(head, k-1);
+            final ListNode kthNodeFromEnd = prevOfKthNodeFromEndFromLinkedList(head, k-1);
             final ListNode kthNodeFromStart  = kthNodeFromStartFromLinkedList(head,k-1); // n-k=1 is from end
 
             if(kthNodeFromEnd == null || kthNodeFromStart == null)
@@ -143,8 +143,6 @@ public class SwappingNodesInALinkedList {
                 head = head.next;
                 k--;
             }
-            if(head == null || k > 0)
-                return null;
 
             return head;
 
@@ -158,7 +156,7 @@ public class SwappingNodesInALinkedList {
          * @param k
          * @return
          */
-        private ListNode kthNodeFromEndFromLinkedList(ListNode head, int k) {
+        private ListNode prevOfKthNodeFromEndFromLinkedList(ListNode head, int k) {
             ListNode kth = head;
             while(kth!=null && k>0){
                 kth = kth.next;

@@ -13,6 +13,38 @@ import java.util.List;
  */
 public class ListBuilder {
 
+    public static ListNode arrayToCyclicSinglyList(Integer[] elements, int indexOfCycle) {
+
+        if (elements == null || elements.length == 0)
+            return null;
+
+        ListNode head = new ListNode(elements[0]);
+
+        if(indexOfCycle == 0){
+            head.next = head;
+            return head;
+        }
+
+        ListNode tail = head;
+        ListNode temp = head;
+        ListNode cycleNode = null;
+        int i = 1;
+
+        while (i < elements.length) {
+            temp.next = new ListNode(elements[i]);
+
+            if(indexOfCycle == i){
+                cycleNode = temp.next;
+            }
+            temp = temp.next;
+            i++;
+        }
+        tail = temp;
+        tail.next = cycleNode;
+
+        return head;
+    }
+
     public static ListNode arrayToSinglyList(Integer[] elements) {
 
         if (elements == null || elements.length == 0)
