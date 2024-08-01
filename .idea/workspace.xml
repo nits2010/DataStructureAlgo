@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="SegregateOddAndEvenNodesInList">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/PartitionList_86.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java" afterDir="false" />
     </list>
@@ -71,6 +72,7 @@
     "Application.OddEvenLinkedList_328.executor": "Run",
     "Application.PalindromeLinkedList.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
+    "Application.PartitionList_86.executor": "Run",
     "Application.ProductOfArrayExceptSelf.executor": "Run",
     "Application.RemoveDuplicatesFromSortedListII_82.executor": "Run",
     "Application.RemoveDuplicatesFromSortedList_83.executor": "Run",
@@ -109,7 +111,7 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SegregateOddAndEvenNodesInList">
+  <component name="RunManager" selected="Application.PartitionList_86">
     <configuration name="AddTwoNumbersII_445" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.AddList.AddTwoNumbersII_445" />
       <module name="DataStructureAndAlgo" />
@@ -149,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveNthNodeFromEndOfList_19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveNthNodeFromEndOfList_19" />
+    <configuration name="PartitionList_86" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.PartitionList_86" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.AddList.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PartitionList_86" />
         <item itemvalue="Application.SegregateOddAndEvenNodesInList" />
         <item itemvalue="Application.OddEvenLinkedList_328" />
         <item itemvalue="Application.AddTwoNumbersII_445" />
         <item itemvalue="Application.AddTwoNumbers_2" />
-        <item itemvalue="Application.RemoveNthNodeFromEndOfList_19" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +203,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720858736914</updated>
-      <workItem from="1722494292131" duration="21918000" />
+      <workItem from="1722494292131" duration="22791000" />
     </task>
     <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
       <option name="closed" value="true" />
@@ -339,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722521764774</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="SegregateOddAndEvenNodesInList">
+      <option name="closed" value="true" />
+      <created>1722524763615</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722524763615</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,6 +585,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java</url>
           <line>165</line>
           <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/PartitionList_86.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

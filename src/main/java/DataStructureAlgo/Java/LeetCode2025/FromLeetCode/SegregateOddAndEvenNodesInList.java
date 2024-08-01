@@ -165,6 +165,8 @@ public class SegregateOddAndEvenNodesInList {
 
         if (evenTail != null) {
             evenTail.next = oddHead;
+        }else{
+            return oddHead;
         }
         return finalHead;
     }
