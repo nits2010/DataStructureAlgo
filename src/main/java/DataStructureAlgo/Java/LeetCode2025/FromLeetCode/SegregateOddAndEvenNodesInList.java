@@ -36,30 +36,34 @@ public class SegregateOddAndEvenNodesInList {
 
     public static void main(String[] args) {
         boolean testResult = true;
-        testResult &= test(new Integer[]{17,15,8,9,2,4,6}, new Integer[]{8,2,4,6,17,15,9});
-        testResult &= test(new Integer[]{17,2}, new Integer[]{2,17});
+        testResult &= test(new Integer[]{17, 15, 8, 9, 2, 4, 6}, new Integer[]{8, 2, 4, 6, 17, 15, 9});
+        testResult &= test(new Integer[]{17, 2}, new Integer[]{2, 17});
         testResult &= test(new Integer[]{17}, new Integer[]{17});
         testResult &= test(new Integer[]{2}, new Integer[]{2});
-        testResult &= test(new Integer[]{2,4,6,8}, new Integer[]{2,4,6,8});
-        testResult &= test(new Integer[]{1,3,5,7}, new Integer[]{1,3,5,7});
+        testResult &= test(new Integer[]{2, 4, 6, 8}, new Integer[]{2, 4, 6, 8});
+        testResult &= test(new Integer[]{1, 3, 5, 7}, new Integer[]{1, 3, 5, 7});
         System.out.println("Tests passed : " + (testResult ? "Yes" : "No"));
     }
 
-    private static boolean test(Integer[] input, Integer[]expected){
+    private static boolean test(Integer[] input, Integer[] expected) {
         ListNode head = ListBuilder.arrayToSinglyList(input);
         ListNode expectedNode = ListBuilder.arrayToSinglyList(expected);
         System.out.println("\nInput :" + GenericPrinter.print(head) + " expected :" + GenericPrinter.print(expectedNode));
         SegregateOddAndEvenNodesInList solution = new SegregateOddAndEvenNodesInList();
-        ListNode output = solution.segregateOddAndEvenNodesInList(head);
+        ListNode output = solution.segregateOddAndEvenNodesInList(ListBuilder.arrayToSinglyList(input));
+        ListNode outputSepList = solution.segregateOddAndEvenNodesInListSepList(ListBuilder.arrayToSinglyList(input));
         System.out.println("Obtained :" + GenericPrinter.print(output));
-        boolean testResult =  GenericPrinter.equalsValues(expectedNode, output);
-        System.out.println("Test passed: " + testResult);
-        return testResult;
+        System.out.println("OutputSepList Obtained :" + GenericPrinter.print(outputSepList));
+        boolean testResult = GenericPrinter.equalsValues(expectedNode, output);
+        boolean testResultSepList = GenericPrinter.equalsValues(expectedNode, outputSepList);
+        System.out.println("Test passed: " + testResult + " | " + testResultSepList);
+        return (testResult == testResultSepList);
     }
 
     /**
-6,8, 2,4,6,
-
+     * Since we need not to maintain order, we can simply scan the list, if the current node is odd, simply append at the end, however if its even, skip it.
+     * Maintain the pointer, specially when the odd node is b/w the nodes.
+     *
      * @param head
      * @return
      */
@@ -83,7 +87,7 @@ public class SegregateOddAndEvenNodesInList {
             //cache next node
             ListNode next = temp.next;
             if (temp.val % 2 != 0) {
-                if(temp == finalHead)
+                if (temp == finalHead)
                     finalHead = next;
 
                 temp.next = null;
@@ -93,14 +97,74 @@ public class SegregateOddAndEvenNodesInList {
                 oddTail = temp;
 
                 //if this node is in b/w then detach it from prev node as well
-                if(prev!=null)
+                if (prev != null)
                     prev.next = next;
-            }else {
+            } else {
                 prev = temp;
             }
             temp = next;
             i++;
 
+        }
+        return finalHead;
+    }
+
+    /**
+     * Keep tracking the list, if you encounter a even node, then add it in even list otherwise add in odd list.
+     * While adding in list, we can add both type of node in its list at tail. Keep track of oddHead and oddTail while keep track evenTail.
+     * At last join both list.
+     *
+     * @param head
+     * @return
+     */
+    public ListNode segregateOddAndEvenNodesInListSepList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+
+        ListNode evenTail = null;
+        ListNode oddHead = null;
+        ListNode oddTail = null;
+        ListNode current = head;
+        ListNode finalHead = head;
+
+
+        while (current != null) {
+
+            ListNode next = current.next;
+            current.next = null; //we are adding at tail, hence need to disconnect node.
+            if (current.val % 2 != 0) {
+                //detach lists
+
+
+                //add node to tail
+                if (oddTail != null)
+                    oddTail.next = current;
+
+                //updated tail
+                oddTail = current;
+
+                //if oddHead found
+                if (oddHead == null) {
+                    oddHead = oddTail;
+                }
+            } else {
+                // get final head
+                if (evenTail == null)
+                    finalHead = current;
+
+                //add node to tail
+                if (evenTail != null)
+                    evenTail.next = current;
+
+                //updated tail
+                evenTail = current;
+            }
+            current = next;
+        }
+
+        if (evenTail != null) {
+            evenTail.next = oddHead;
         }
         return finalHead;
     }
