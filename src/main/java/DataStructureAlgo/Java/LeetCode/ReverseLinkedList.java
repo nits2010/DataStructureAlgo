@@ -133,6 +133,41 @@ class ReverseSinglyLinkedList {
         return current;
 
     }
+
+    /**
+     *
+     * @param head
+     * @return
+     * 1-2-3-4
+     * c=1, p=null, n=2 ; 1 2-3-4
+     * p=1, c=2, n=3; 2-1 3-4;
+     * p=2, c=3, n=4; 3-2-1 4
+     * p=3, c=4, n=null; 4-3-2-1
+     * p=4, c=null, n=null; 4-3-2-1
+     */
+    private ListNode reverseListIterative3(ListNode head){
+        if(head == null || head.next == null)
+            return head;
+
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = head.next;
+        current.next = null;
+
+        while (current!=null){
+            //join current node to previous list at head
+            current.next = prev;
+
+            //update prev list head
+            prev = current;
+
+            //move to next chunk
+            current = next;
+            if(next!=null)
+                next = next.next;
+        }
+        return prev;
+    }
 }
 
 
