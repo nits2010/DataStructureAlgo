@@ -609,6 +609,8 @@ public class GenericPrinter {
             a = a.next;
             b = b.next;
         }
+        if(a != null || b != null)
+            return false;
         return true;
 
     }
