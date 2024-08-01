@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="Add-Two-Number-List I &amp; II">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/OddEvenLinkedList_328.java" afterDir="false" />
+    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="OddEvenLinkedList_328">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/OddEvenLinkedList_328.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/OddEvenLinkedList_328.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +83,7 @@
     "Application.ReverseNodesInKGroup.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
     "Application.RotateList_61.executor": "Debug",
+    "Application.SegregateOddAndEvenNodesInList.executor": "Debug",
     "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.SwapNodesInPairs.executor": "Run",
     "Application.SwappingNodesInALinkedList.executor": "Run",
@@ -109,7 +110,7 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OddEvenLinkedList_328">
+  <component name="RunManager" selected="Application.SegregateOddAndEvenNodesInList">
     <configuration name="AddTwoNumbersII_445" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.AddList.AddTwoNumbersII_445" />
       <module name="DataStructureAndAlgo" />
@@ -162,12 +163,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RotateList_61" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RotateList_61" />
+    <configuration name="SegregateOddAndEvenNodesInList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.FromLeetCode.SegregateOddAndEvenNodesInList" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.AddList.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.FromLeetCode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SegregateOddAndEvenNodesInList" />
         <item itemvalue="Application.OddEvenLinkedList_328" />
         <item itemvalue="Application.AddTwoNumbersII_445" />
         <item itemvalue="Application.AddTwoNumbers_2" />
         <item itemvalue="Application.RemoveNthNodeFromEndOfList_19" />
-        <item itemvalue="Application.RotateList_61" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720858736914</updated>
-      <workItem from="1722494292131" duration="15907000" />
+      <workItem from="1722494292131" duration="18932000" />
     </task>
     <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
       <option name="closed" value="true" />
@@ -323,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722505248485</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="OddEvenLinkedList_328">
+      <option name="closed" value="true" />
+      <created>1722511161275</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722511161275</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +362,8 @@
     <MESSAGE value="ytc" />
     <MESSAGE value="refactor" />
     <MESSAGE value="Add-Two-Number-List I &amp; II" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add-Two-Number-List I &amp; II" />
+    <MESSAGE value="OddEvenLinkedList_328" />
+    <option name="LAST_COMMIT_MESSAGE" value="OddEvenLinkedList_328" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,6 +557,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/OddEvenLinkedList_328.java</url>
           <line>100</line>
           <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
