@@ -5,9 +5,11 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  * Author: Nitin Gupta
  * Date: 7/14/2024
+ * Question Category: 1. Two Sum [easy]
  * Description: https://leetcode.com/problems/two-sum/description/
  * <p>
  * 1. Two Sum
@@ -36,19 +38,41 @@ import java.util.Map;
  * -109 <= nums[i] <= 109
  * -109 <= target <= 109
  * Only one valid answer exists.
+ * File reference
+ * -----------
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @easy
+ * @Array
+ * @HashTable
+ *
+ *
+ * <p>
+ * Company Tags
+ * -----
+
+ *
+ * @Editorial
+ */
+
+
+/**
+ * Author: Nitin Gupta
+ * Date: 7/14/2024
+ * Description:
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum}
  */
-public class TwoSum {
+public class TwoSum_1 {
 
     public static void main(String[] args) {
        test(new int[]{1, 8, 5, 4}, new int[]{1,0}, 9);
        test(new int[]{2,7,11,15}, new int[]{0,1}, 9);
        test(new int[]{3,2,4}, new int[]{1,2}, 6);
        test(new int[]{3,3}, new int[]{0,1}, 6);
-
-
-
-
 
     }
 

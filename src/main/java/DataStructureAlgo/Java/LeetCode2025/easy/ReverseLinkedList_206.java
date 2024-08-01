@@ -5,11 +5,14 @@ import DataStructureAlgo.Java.LeetCode.templates.DoublyListNode;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
+
+
 /**
  * Author: Nitin Gupta
- * Date: 2024-07-26
- * Description: https://leetcode.com/problems/reverse-linked-list/
- * 206. Reverse Linked List
+ * Date:  2024-07-26
+ * Question Category: 206. Reverse Linked List [easy]
+ * Description:  https://leetcode.com/problems/reverse-linked-list/
+ *
  * Reverse a singly linked list.
  * <p>
  * Example:
@@ -19,10 +22,33 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * Follow up:
  * <p>
  * A linked list can be reversed either iteratively or recursively. Could you implement both?
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @easy
+ * @LinkedList
+ * @Recursion
+ *
+ * <p>
+ * Company Tags
+ * -----
+ * @Amazon
+ * @Microsoft
+ * @Apple
+ * @Bloomberg
+ * @Facebook
+
+ *
+ * @Editorial
  */
 
-
-public class ReverseLinkedList {
+public class ReverseLinkedList_206 {
 
     public static void main(String[] args) {
         test(new Integer[]{1, 2, 3, 4, 5});

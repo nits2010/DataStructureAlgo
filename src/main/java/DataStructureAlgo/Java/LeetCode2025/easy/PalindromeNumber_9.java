@@ -1,13 +1,12 @@
 package DataStructureAlgo.Java.LeetCode2025.easy;
 
-
 /**
  * Author: Nitin Gupta
  * Date: 7/14/2024
+ * Question Category: 9. Palindrome Number [easy]
  * Description: https://leetcode.com/problems/palindrome-number/description/
  * Given an integer x, return true if x is a
- * palindrome
- * , and false otherwise.
+ * palindrome and false otherwise.
  *
  *
  *
@@ -31,9 +30,34 @@ package DataStructureAlgo.Java.LeetCode2025.easy;
  * Constraints:
  *
  * -231 <= x <= 231 - 1
- * Duplicate {@link PalindromeNumber}
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link PalindromeNumber_9}
+ * Similar {@link}
+ * <p>
+ *
+ * Tags
+ * -----
+ * @easy
+ * @LinkedList
+ * @TwoPointers
+ * @Stack
+ * @Recursion
+ *
+ * Company Tags
+ * ------------
+ * @Google
+ * @Facebook
+ * @Amazon
+ * @Bloomberg
+ * @Adobe
+ *
+ * @Editorial
+ * : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
+ *
  */
-public class PalindromeNumber {
+public class PalindromeNumber_9 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

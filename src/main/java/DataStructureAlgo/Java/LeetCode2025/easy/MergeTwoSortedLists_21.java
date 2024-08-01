@@ -9,18 +9,41 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-27
+ * Question Category: 21. Merge Two Sorted Lists [EASY]
  * Description: https://leetcode.com/problems/merge-two-sorted-lists
- * 21. Merge Two Sorted Lists [EASY]
- * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+ *  *
+ *  * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+ *  * <p>
+ *  * Example:
+ *  * <p>
+ *  * Input: 1->2->4, 1->3->4
+ *  * Output: 1->1->2->3->4->4
  * <p>
- * Example:
+ * File reference
+ * -----------
+ * Duplicate {@link MergeTwoSortedLists_21}
+ * Similar {@link}
  * <p>
- * Input: 1->2->4, 1->3->4
- * Output: 1->1->2->3->4->4
+ * Tags
+ * -----
+ * @medium
+ * @LinkedList
+ * @Recursion
  *
- * duplicate {@link MergeTwoSortedLists}
+ * <p>
+ * Company Tags
+ * -----
+ * @Microsoft
+ * @Amazon
+ * @Facebook
+ * @Adobe
+ * @Oracle
+ *
+ * @Editorial
  */
-public class MergeTwoSortedLists {
+
+
+public class MergeTwoSortedLists_21 {
 
     public static void main(String[] args) {
         test(new Integer[]{1, 2, 4}, new Integer[]{1, 3, 4}, new Integer[]{1, 1, 2, 3, 4, 4});

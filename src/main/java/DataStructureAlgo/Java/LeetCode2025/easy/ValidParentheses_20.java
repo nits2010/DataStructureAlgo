@@ -1,13 +1,13 @@
 package DataStructureAlgo.Java.LeetCode2025.easy;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
 
-import java.util.Arrays;
 import java.util.Stack;
+
 
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-23
+ * Question Category: 20. Valid Parentheses [easy]
  * Description: https://leetcode.com/problems/valid-parentheses/description/
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
  * <p>
@@ -36,10 +36,31 @@ import java.util.Stack;
  * <p>
  * 1 <= s.length <= 104
  * s consists of parentheses only '()[]{}'.
- * [Amazon] [Adobe] [Linkdin} {facebook} [microsoft] [bloomberg]
- * {@link DataStructureAlgo.Java.LeetCode.ValidParenthesesBalancedParenthesesExpression}
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.ValidParenthesesBalancedParenthesesExpression}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ *
+ *
+ * <p>
+ * Company Tags
+ * -----
+ * @Amazon
+ * @LinkedIn
+ * @Facebook
+ * @Microsoft
+ * @Bloomberg
+
+ *
+ * @Editorial
  */
-public class ValidParentheses {
+
+public class ValidParentheses_20 {
 
     public static void main(String[] args) {
         test("()", true);
