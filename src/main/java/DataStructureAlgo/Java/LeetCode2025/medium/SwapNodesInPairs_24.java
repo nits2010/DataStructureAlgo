@@ -4,7 +4,6 @@ import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
-
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-28
@@ -12,9 +11,6 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * Description: https://leetcode.com/problems/swap-nodes-in-pairs
  * Given a linked list, swap every two adjacent nodes and return its head.
  * You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
- *
- *
- *
  * Example 1:
  *
  *
