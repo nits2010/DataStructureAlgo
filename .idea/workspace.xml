@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="LinkedListCycle">
+    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MergeTwoSortedLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MergeTwoSortedLists_21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeLinkedList_234.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeNumber_9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ReverseLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ReverseLinkedList_206.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RomanIntegerConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RomanIntegerConversion_13.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses_20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup_25.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer_138.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ProductOfArrayExceptSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ProductOfArrayExceptSelf_238.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseNodesInEvenLengthGroups_2074.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseNodesInEvenLengthGroups_2074.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwapNodesInPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwapNodesInPairs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +204,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720858736914</updated>
-      <workItem from="1722494292131" duration="1255000" />
+      <workItem from="1722494292131" duration="1997000" />
     </task>
     <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
       <option name="closed" value="true" />
@@ -296,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722444382232</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1722495559777</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722495559777</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +330,8 @@
     <MESSAGE value="MaximumTwinSumOfALinkedList_2130" />
     <MESSAGE value="LinkedListCycle" />
     <MESSAGE value="ytc" />
-    <option name="LAST_COMMIT_MESSAGE" value="ytc" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -386,17 +393,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
-          <line>125</line>
+          <line>147</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
-          <line>141</line>
+          <line>163</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
-          <line>159</line>
+          <line>181</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -410,18 +417,18 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup_25.java</url>
           <line>175</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
-          <line>64</line>
+          <line>68</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
-          <line>102</line>
+          <line>106</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -430,7 +437,7 @@
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer_138.java</url>
           <line>306</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>

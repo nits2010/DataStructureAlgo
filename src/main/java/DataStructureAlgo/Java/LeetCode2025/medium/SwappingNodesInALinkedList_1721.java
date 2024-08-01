@@ -4,11 +4,13 @@ import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
+
 /**
  * Author: Nitin Gupta
- * Date: 2024-07-28
+ * Date: 7/31/2024
+ * Question Category: 1721. Swapping Nodes in a Linked List [medium]
  * Description: https://leetcode.com/problems/swapping-nodes-in-a-linked-list
- * 1721. Swapping Nodes in a Linked List [medium]
+ *
  * You are given the head of a linked list, and an integer k.
  *
  * Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
@@ -32,12 +34,32 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * 1 <= k <= n <= 105
  * 0 <= Node.val <= 100
  *
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @medium
  * @LinkedList
  * @TwoPointers
  *
+ *
+ * <p>
+ * Company Tags
+ * -----
+ * @Amazon
+ * @Facebook
+ * @Bloomberg
 
+ *
+ * @Editorial
  */
-public class SwappingNodesInALinkedList {
+
+public class SwappingNodesInALinkedList_1721 {
 
     public static void main(String[] args) {
        boolean testResult = true;

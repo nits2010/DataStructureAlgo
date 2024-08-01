@@ -2,13 +2,13 @@ package DataStructureAlgo.Java.LeetCode2025.hard;
 
 import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
-import DataStructureAlgo.Java.LeetCode2025.medium.SwapNodesInPairs;
+import DataStructureAlgo.Java.LeetCode2025.medium.SwapNodesInPairs_24;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 /**
  * Author: Nitin Gupta
  * Date: 7/28/2024
- * Question Category: 25. Reverse Nodes in k-Group [ hard ]
+ * Question Category:  25. Reverse Nodes in k-Group [hard]
  * Description: https://leetcode.com/problems/reverse-nodes-in-k-group/description/
  *
  * <p>
@@ -45,8 +45,8 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link SwapNodesInPairs}
- * extension {@link SwapNodesInPairs}
+ * Similar {@link SwapNodesInPairs_24}
+ * extension {@link SwapNodesInPairs_24}
  * <p>
  * Tags
  * -----
@@ -60,7 +60,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  *
  * @Editorial <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/solutions/5553863/easy-pissy-chissy-super-tizy-to-understand/">...</a>
  */
-public class ReverseNodesInKGroup {
+public class ReverseNodesInKGroup_25 {
 
     public static void main(String[] args) {
         boolean testResult = test(new Integer[]{1, 2, 3, 4, 5}, 2,new Integer[]{2, 1, 4, 3, 5});

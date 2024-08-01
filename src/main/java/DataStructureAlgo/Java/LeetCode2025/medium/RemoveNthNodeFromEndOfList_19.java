@@ -42,7 +42,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  *
  * Duplicate  {@link DataStructureAlgo.Java.LeetCode.RemoveNthNodeFromEnd}
  * Similar {@link}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.medium.SwappingNodesInALinkedList #kthNodeFromEndFromLinkedList}
+ * extension {@link SwappingNodesInALinkedList_1721 #kthNodeFromEndFromLinkedList}
  *
  * Tags
  * -----
