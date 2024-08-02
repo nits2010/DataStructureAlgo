@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.FromLeetCode;
+package DataStructureAlgo.Java.LeetCode2025.Discuss;
 
 
 import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;

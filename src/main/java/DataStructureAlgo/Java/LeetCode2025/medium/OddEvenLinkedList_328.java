@@ -40,7 +40,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.FromLeetCode.SegregateOddAndEvenNodesInList}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.Discuss.SegregateOddAndEvenNodesInList}
  * extension {@link }
  * <p>
  * Tags

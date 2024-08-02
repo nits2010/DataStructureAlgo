@@ -3,7 +3,6 @@ package DataStructureAlgo.Java.LeetCode2025.medium;
 
 import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
-import DataStructureAlgo.Java.LeetCode2025.FromLeetCode.SegregateOddAndEvenNodesInList;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 /**

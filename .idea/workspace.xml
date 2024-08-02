@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="SegregateOddAndEvenNodesInList">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/PartitionList_86.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/FromLeetCode/SegregateOddAndEvenNodesInList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,18 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nits2010"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nits2010&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nits2010/DataStructureAlgo.git",
-    "accountId": "b069c410-e269-4256-bc55-a419e54ab131"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nits2010/DataStructureAlgo.git&quot;,
+    &quot;accountId&quot;: &quot;b069c410-e269-4256-bc55-a419e54ab131&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Amazon Corretto/jdk11.0.15_9/lib/src.zip!/java.base/java/lang/StringIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
   </component>
@@ -53,58 +51,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.A_And_B_ToZero.executor": "Run",
-    "Application.AddTwoNumbersII_445.executor": "Run",
-    "Application.AddTwoNumbers_2.executor": "Run",
-    "Application.CopyListWithRandomPointer.executor": "Run",
-    "Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor": "Debug",
-    "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
-    "Application.FindTheIndexOfTheFirstOccurrenceInAString.executor": "Run",
-    "Application.GenericPrinter.executor": "Run",
-    "Application.LinkedListCycleII_142.executor": "Run",
-    "Application.LinkedListCycle_141.executor": "Run",
-    "Application.LongestCommonPrefix.executor": "Run",
-    "Application.MaximumTwinSumOfALinkedList_2130.executor": "Run",
-    "Application.MergeTwoSortedLists.executor": "Run",
-    "Application.OddEvenLinkedList_328.executor": "Run",
-    "Application.PalindromeLinkedList.executor": "Run",
-    "Application.PalindromeNumber.executor": "Run",
-    "Application.PartitionList_86.executor": "Run",
-    "Application.ProductOfArrayExceptSelf.executor": "Run",
-    "Application.RemoveDuplicatesFromSortedListII_82.executor": "Run",
-    "Application.RemoveDuplicatesFromSortedList_83.executor": "Run",
-    "Application.RemoveNthNodeFromEndOfList.executor": "Run",
-    "Application.RemoveNthNodeFromEndOfList_19.executor": "Run",
-    "Application.ReverseLinkedList.executor": "Run",
-    "Application.ReverseLinkedListII.executor": "Run",
-    "Application.ReverseNodesInEvenLengthGroups.executor": "Run",
-    "Application.ReverseNodesInKGroup.executor": "Run",
-    "Application.RomanIntegerConversion.executor": "Run",
-    "Application.RotateList_61.executor": "Debug",
-    "Application.SegregateOddAndEvenNodesInList.executor": "Run",
-    "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
-    "Application.SwapNodesInPairs.executor": "Run",
-    "Application.SwappingNodesInALinkedList.executor": "Run",
-    "Application.TwoSum.executor": "Run",
-    "Application.ValidParentheses.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "preparation-2025",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/git/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.A_And_B_ToZero.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AddTwoNumbersII_445.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AddTwoNumbers_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CopyListWithRandomPointer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FindTheIndexOfTheFirstOccurrenceInAString.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GenericPrinter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LinkedListCycleII_142.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LinkedListCycle_141.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LongestCommonPrefix.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MaximumTwinSumOfALinkedList_2130.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MergeTwoSortedLists.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OddEvenLinkedList_328.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PalindromeLinkedList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PalindromeNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PartitionList_86.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductOfArrayExceptSelf.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RemoveDuplicatesFromSortedListII_82.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RemoveDuplicatesFromSortedList_83.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RemoveNthNodeFromEndOfList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RemoveNthNodeFromEndOfList_19.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReverseLinkedList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReverseLinkedListII.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReverseNodesInEvenLengthGroups.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReverseNodesInKGroup.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RomanIntegerConversion.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RotateList_61.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SegregateOddAndEvenNodesInList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SwapNodesInPairs.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SwappingNodesInALinkedList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TwoSum.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ValidParentheses.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;preparation-2025&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/git/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\git\DataStructureAlgo\src\main\java\DataStructureAlgo\Java\LeetCode2025\easy" />
@@ -204,6 +202,8 @@
       <option name="presentableId" value="Default" />
       <updated>1720858736914</updated>
       <workItem from="1722494292131" duration="22791000" />
+      <workItem from="1722579530238" duration="117000" />
+      <workItem from="1722581526665" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
       <option name="closed" value="true" />
