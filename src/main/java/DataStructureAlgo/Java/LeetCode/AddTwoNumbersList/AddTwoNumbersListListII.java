@@ -122,7 +122,7 @@ class AddTwoNumbersListListIIUsingDiff {
     /**
      * Algo 1:
      * 1. Find the length of both linked list.
-     * 2. If length are same, then use {@link AddTwoNumbersListI} but using recursion so that you need to reverse the linked list
+     * 2. If length are same, then use {@link AddTwoNumbersListI} but using recursion so that you don't need to reverse the linked list
      * 3. if length are not same, then move bigger list ahead for the difference, and apply step 2.
      * 4. if carry exist, then propagate carry
      *
@@ -139,7 +139,7 @@ class AddTwoNumbersListListIIUsingDiff {
             return l1;
 
         //1. Find the length of both linked list.
-        int size[] = size(l1, l2);
+        int []size = size(l1, l2);
 
         //Keep the head of bigger list
         ListNode head = null;
@@ -170,13 +170,13 @@ class AddTwoNumbersListListIIUsingDiff {
 
         final ListNode[] current = {null};
 
-        //2. If length are same, then use {@link AddTwoNumbersListI} but using recursion so that you need to reverse the linked list
+        /* 2. If length are same, then use {@link AddTwoNumbersListI} but using recursion so that you need to reverse the linked list */
         int carry = addTwoNumbersSame(l1, l2, current);
 
 
         //if size were same, then add this carry node only
         if (size[0] != size[1]) {
-            int c[] = {carry};
+            int []c = {carry};
             propagateCarry(head, c, current);
             carry = c[0];
         }

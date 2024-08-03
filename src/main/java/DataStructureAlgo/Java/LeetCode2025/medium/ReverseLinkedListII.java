@@ -5,12 +5,15 @@ import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
+
+
 /**
  * Author: Nitin Gupta
- * Date: 7/29/2024
- * Question Category: @medium [easy | medium | hard ]
+ * Date: 7/31/2024
+ * Question Category: 92. Reverse Linked List II [ medium ]
  * Description: https://leetcode.com/problems/reverse-linked-list-ii
- * Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+ * Given the head of a singly linked list and two integers left and right where left <= right,
+ * reverse the nodes of the list from position left to position right, and return the reversed list.
  * <p>
  * <p>
  * <p>
@@ -35,18 +38,17 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * <p>
  * Follow up: Could you do it in one pass?
  * <p>
- *
- * <p>
  * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link ReverseLinkedList}
+ * extension {@link }
  * <p>
  * Tags
  * -----
- *
  * @medium
- * @LinkedList <p>
+ * @LinkedList
+ * <p>
  * Company Tags
  * -----
  * @Facebook
@@ -54,9 +56,11 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * @Amazon
  * @Google
  * @Apple
+
  *
  * @Editorial https://leetcode.com/problems/reverse-linked-list-ii/solutions/5554807/just-use-reverselist-as-subfunction
  */
+
 public class ReverseLinkedListII {
 
     public static void main(String[] args) {

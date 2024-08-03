@@ -4,7 +4,6 @@ import DataStructureAlgo.Java.Node;
 import DataStructureAlgo.Java.Pair;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,7 +80,7 @@ import java.util.Map;
 
 
 
-public class CopyListWithRandomPointer {
+public class CopyListWithRandomPointer_138 {
 
     public static void main(String[] args) {
         List<Pair<Integer,Integer>> input = List.of(

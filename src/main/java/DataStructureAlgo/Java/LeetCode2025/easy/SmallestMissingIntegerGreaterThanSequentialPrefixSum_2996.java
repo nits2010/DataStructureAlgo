@@ -6,7 +6,8 @@ import java.util.Set;
 
 /**
  * Author: Nitin Gupta
- * Date: 7/22/2024
+ * Date:  7/22/2024
+ * Question Category: 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum [easy]
  * Description: https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/description/
  * You are given a 0-indexed array of integers nums.
  * <p>
@@ -27,8 +28,29 @@ import java.util.Set;
  * Input: nums = [3,4,5,1,12,14,13]
  * Output: 15
  * Explanation: The longest sequential prefix of nums is [3,4,5] with a sum of 12. 12, 13, and 14 belong to the array while 15 does not. Therefore 15 is the smallest missing integer greater than or equal to the sum of the longest sequential prefix.
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ *
+ * Tags
+ * -----
+ * @easy
+ * @Array
+ * @HashTable
+ * @Sorting
+ *
+ * <p>
+ * Company Tags
+ * -----
+
+ *
+ * @Editorial
  */
-public class SmallestMissingIntegerGreaterThanSequentialPrefixSum {
+public class SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996 {
 
     public static void main(String[] args) {
         test(new int[]{1, 2, 3, 2, 5}, 6);

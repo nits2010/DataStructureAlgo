@@ -2,6 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium;
 
 import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import DataStructureAlgo.Java.LeetCode2025.hard.ReverseNodesInKGroup_25;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 
@@ -57,8 +58,8 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link ReverseLinkedListII} {@link DataStructureAlgo.Java.LeetCode2025.hard.ReverseNodesInKGroup}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.hard.ReverseNodesInKGroup}
+ * Similar {@link ReverseLinkedListII} {@link ReverseNodesInKGroup_25}
+ * extension {@link ReverseNodesInKGroup_25}
  * <p>
  * Tags
  * -----

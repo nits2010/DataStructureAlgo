@@ -10,17 +10,12 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 7/28/2024
- * Question Category: easy
- * Description: <a href="https://leetcode.com/problems/palindrome-linked-list/description/">...</a>
+ * Question Category: 234. Palindrome Linked List [easy]
+ * Description: https://leetcode.com/problems/palindrome-linked-list/description
  * Given the head of a singly linked list, return true if it is a
- * palindrome
- *  or false otherwise.
- *
- *
- *
+ * palindrome or false otherwise.
+
  * Example 1:
- *
- *
  * Input: head = [1,2,2,1]
  * Output: true
  * Example 2:
@@ -54,17 +49,12 @@ import java.util.Stack;
  *
  * Company Tags
  * ------------
- * @Facebook
- * @Amazon
- * @Microsoft
- * @Apple
- * @Bloomberg
  *
  * @Editorial
  * : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
  *
  */
-public class PalindromeLinkedList {
+public class PalindromeLinkedList_234 {
 
     public static void main(String[] args) {
         boolean testResult = true;

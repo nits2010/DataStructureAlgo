@@ -5,9 +5,10 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 import java.util.Arrays;
 
 /**
- *  Author: Nitin Gupta
- *  * Date: 7/22/2024
- *  * Description: https://leetcode.com/problems/product-of-array-except-self/description/
+ * Author: Nitin Gupta
+ * Date:  7/22/2024
+ * Question Category: 238. Product of Array Except Self [ medium ]
+ * Description: https://leetcode.com/problems/product-of-array-except-self/description/
  *
  *  Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
  *
@@ -35,8 +36,34 @@ import java.util.Arrays;
  *
  *
  * Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @medium
+ * @Array
+ * @PrefixSum
+ *
+ *
+ * <p>
+ * Company Tags
+ * -----
+ * @Amazon
+ * @Facebook
+ * @Microsoft
+ * @Asana
+ * @Apple
+
+ *
+ * @Editorial
  */
-public class ProductOfArrayExceptSelf {
+
+public class ProductOfArrayExceptSelf_238 {
 
     public static void main(String[] args) {
         test(new int[]{1,2,3,4}, new int[]{24,12,8,6});

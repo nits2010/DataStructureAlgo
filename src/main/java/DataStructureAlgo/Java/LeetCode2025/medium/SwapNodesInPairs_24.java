@@ -7,13 +7,10 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-28
+ * Question Category: 24. Swap Nodes in Pairs [medium] | Pairwise Swap Nodes of a given Linked List [medium]
  * Description: https://leetcode.com/problems/swap-nodes-in-pairs
- * 24. Swap Nodes in Pairs [medium] | Pairwise Swap Nodes of a given Linked List
  * Given a linked list, swap every two adjacent nodes and return its head.
  * You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
- *
- *
- *
  * Example 1:
  *
  *
@@ -37,8 +34,29 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * * aka
  *  * 1. reverse linked list pairwise
  *  * 1. reverse linked list in group of 2 nodes
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @medium
+ * @LinkedList
+ * @Recursion
+ *
+ *
+ * <p>
+ * Company Tags
+ * -----
+
+ *
+ * @Editorial
  */
-public class SwapNodesInPairs {
+
+public class SwapNodesInPairs_24 {
 
     public static void main(String[] args) {
         test(new Integer[]{1, 2, 3, 4, 5}, new Integer[]{2, 1, 4, 3, 5});
