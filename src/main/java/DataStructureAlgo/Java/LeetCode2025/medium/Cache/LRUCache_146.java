@@ -1,47 +1,80 @@
-package DataStructureAlgo.Java.LeetCode.caches;
+package DataStructureAlgo.Java.LeetCode2025.medium.Cache;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Author: Nitin Gupta
- * Date: 2019-07-26
- * Description: https://leetcode.com/problems/lru-cache/
+ * Date: 8/3/2024
+ * Question Category: 146. LRU Cache [ medium ]
+ * Description: https://leetcode.com/problems/lru-cache
+ * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
  * <p>
- * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+ * Implement the LRUCache class:
  * <p>
- * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
- * put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
- * <p>
- * The cache is initialized with a positive capacity.
- * <p>
- * Follow up:
- * Could you do both operations in O(1) time complexity?
- * <p>
- * Example:
- * <p>
- * LRUCache cache = new LRUCache( 2 /* capacity
+ * LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
+ * int get(int key) Return the value of the key if the key exists, otherwise return -1.
+ * void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
+ * The functions get and put must each run in O(1) average time complexity.
  * <p>
  * <p>
- * cache.put(1,1);
- * cache.put(2,2);
- * cache.get(1);       // returns 1
- * cache.put(3,3);    // evicts key 2
- * cache.get(2);       // returns -1 (not found)
- * cache.put(4,4);    // evicts key 1
- * cache.get(1);       // returns -1 (not found)
- * cache.get(3);       // returns 3
- * cache.get(4);       // returns 4
+ * <p>
+ * Example 1:
+ * <p>
+ * Input
+ * ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+ * [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+ * Output
+ * [null, null, null, 1, null, -1, null, -1, 3, 4]
+ * <p>
+ * Explanation
+ * LRUCache lRUCache = new LRUCache(2);
+ * lRUCache.put(1, 1); // cache is {1=1}
+ * lRUCache.put(2, 2); // cache is {1=1, 2=2}
+ * lRUCache.get(1);    // return 1
+ * lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+ * lRUCache.get(2);    // returns -1 (not found)
+ * lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+ * lRUCache.get(1);    // return -1 (not found)
+ * lRUCache.get(3);    // return 3
+ * lRUCache.get(4);    // return 4
+ * <p>
+ * <p>
+ * Constraints:
+ * <p>
+ * 1 <= capacity <= 3000
+ * 0 <= key <= 104
+ * 0 <= value <= 105
+ * At most 2 * 105 calls will be made to get and put.
+ * <p>
  *
- * [Amazon]
+ * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ *
+ * @medium
+ * @HashTable
+ * @LinkedList
+ * @Design
+ * @DoublyLinkedList <p>
+ * Company Tags
+ * -----
+ * @Amazon
+ * @Facebook
+ * @Microsoft
+ * @Apple
+ * @Bloomberg
  */
-
-
-public class MyLRUCache {
-
+public class LRUCache_146 {
     public static void main(String[] args) {
         boolean testResult =
-                test()
+                        test()
                         &&
                         test2()
                         &&
@@ -207,12 +240,13 @@ public class MyLRUCache {
 
 
 class LRUCache {
+
     private class Node {
 
         int key;
         int value;
 
-       Node prev;
+        Node prev;
         Node next;
 
         Node(int key, int value) {
@@ -251,8 +285,13 @@ class LRUCache {
 
             node.next = head;
             head.prev = node;
-            node.prev = null;
+
             head = node;
+
+            //cleanup
+            node.prev = null;
+
+
 
         }
 
@@ -304,7 +343,7 @@ class LRUCache {
                 removeBetween(node);
             }
 
-            size--;
+           size--;
 
         }
 
@@ -368,12 +407,4 @@ class LRUCache {
         }
 
     }
-
-}
-
-/**
- * {@link DataStructureAlgo.Java.MultiLevelCache.LRUCache}
- */
-class LRUUsingLinkedHashMap {
-
 }
