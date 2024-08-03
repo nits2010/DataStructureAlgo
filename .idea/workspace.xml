@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MiddleOfTheLinkedList_876.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RemoveLinkedListElements_203.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/DeleteTheMiddleNodeOfALinkedList_2095.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="a241416b-1d4e-426b-a313-b9311848d07a" name="Changes" comment="LinkedListCycle">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/KthNodeFromEndOfLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/RemoveDuplicatesFromSortedList_83.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/LinkedListCycleII_142.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveDuplicatesFromSortedListII_82.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RotateList_61.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LinkedListCycle_141.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/LinkedListCycle_141.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,29 +27,10 @@
         <option value="Class" />
       </list>
     </option>
-    <option name="SCHEME" value="Project" />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;nits2010&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/nits2010/DataStructureAlgo.git&quot;,
-    &quot;accountId&quot;: &quot;b069c410-e269-4256-bc55-a419e54ab131&quot;
-  }
-}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Amazon Corretto/jdk11.0.15_9/lib/src.zip!/java.base/java/lang/StringIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
   </component>
@@ -66,12 +52,9 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.A_And_B_ToZero.executor": "Run",
-    "Application.AddTwoNumbersII_445.executor": "Run",
-    "Application.AddTwoNumbers_2.executor": "Run",
     "Application.CopyListWithRandomPointer.executor": "Run",
     "Application.DataStructureAlgo.Java.LeetCode.PalindromeNumber.executor": "Debug",
     "Application.DataStructureAlgo.Java.LeetCode2025.RomanIntegerConversion.executor": "Run",
-    "Application.DeleteTheMiddleNodeOfALinkedList_2095.executor": "Run",
     "Application.FindTheIndexOfTheFirstOccurrenceInAString.executor": "Run",
     "Application.GenericPrinter.executor": "Run",
     "Application.LinkedListCycleII_142.executor": "Run",
@@ -79,15 +62,11 @@
     "Application.LongestCommonPrefix.executor": "Run",
     "Application.MaximumTwinSumOfALinkedList_2130.executor": "Run",
     "Application.MergeTwoSortedLists.executor": "Run",
-    "Application.MiddleOfTheLinkedList_876.executor": "Run",
-    "Application.OddEvenLinkedList_328.executor": "Run",
     "Application.PalindromeLinkedList.executor": "Run",
     "Application.PalindromeNumber.executor": "Run",
-    "Application.PartitionList_86.executor": "Run",
     "Application.ProductOfArrayExceptSelf.executor": "Run",
     "Application.RemoveDuplicatesFromSortedListII_82.executor": "Run",
     "Application.RemoveDuplicatesFromSortedList_83.executor": "Run",
-    "Application.RemoveLinkedListElements_203.executor": "Run",
     "Application.RemoveNthNodeFromEndOfList.executor": "Run",
     "Application.RemoveNthNodeFromEndOfList_19.executor": "Run",
     "Application.ReverseLinkedList.executor": "Run",
@@ -96,7 +75,6 @@
     "Application.ReverseNodesInKGroup.executor": "Run",
     "Application.RomanIntegerConversion.executor": "Run",
     "Application.RotateList_61.executor": "Debug",
-    "Application.SegregateOddAndEvenNodesInList.executor": "Run",
     "Application.SmallestMissingIntegerGreaterThanSequentialPrefixSum.executor": "Run",
     "Application.SwapNodesInPairs.executor": "Run",
     "Application.SwappingNodesInALinkedList.executor": "Run",
@@ -109,15 +87,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/git/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -126,9 +96,9 @@
       <recent name="E:\git\DataStructureAlgo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RemoveLinkedListElements_203">
-    <configuration name="DeleteTheMiddleNodeOfALinkedList_2095" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.DeleteTheMiddleNodeOfALinkedList_2095" />
+  <component name="RunManager" selected="Application.RemoveNthNodeFromEndOfList_19">
+    <configuration name="LinkedListCycleII_142" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.LinkedListCycleII_142" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -140,21 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiddleOfTheLinkedList_876" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.MiddleOfTheLinkedList_876" />
-      <module name="DataStructureAndAlgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.easy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PartitionList_86" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.PartitionList_86" />
+    <configuration name="RemoveDuplicatesFromSortedListII_82" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveDuplicatesFromSortedListII_82" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -166,8 +123,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveLinkedListElements_203" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.RemoveLinkedListElements_203" />
+    <configuration name="RemoveDuplicatesFromSortedList_83" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.RemoveDuplicatesFromSortedList_83" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -179,12 +136,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SegregateOddAndEvenNodesInList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.Discuss.SegregateOddAndEvenNodesInList" />
+    <configuration name="RemoveNthNodeFromEndOfList_19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveNthNodeFromEndOfList_19" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.Discuss.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotateList_61" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RotateList_61" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,19 +164,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RemoveLinkedListElements_203" />
-        <item itemvalue="Application.MiddleOfTheLinkedList_876" />
-        <item itemvalue="Application.DeleteTheMiddleNodeOfALinkedList_2095" />
-        <item itemvalue="Application.PartitionList_86" />
-        <item itemvalue="Application.SegregateOddAndEvenNodesInList" />
+        <item itemvalue="Application.RemoveNthNodeFromEndOfList_19" />
+        <item itemvalue="Application.RotateList_61" />
+        <item itemvalue="Application.RemoveDuplicatesFromSortedListII_82" />
+        <item itemvalue="Application.RemoveDuplicatesFromSortedList_83" />
+        <item itemvalue="Application.LinkedListCycleII_142" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
       </set>
     </attachedChunks>
   </component>
@@ -218,11 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720858736914</updated>
-      <workItem from="1722494292131" duration="22791000" />
-      <workItem from="1722579530238" duration="117000" />
-      <workItem from="1722581526665" duration="43000" />
-      <workItem from="1722591827263" duration="475000" />
-      <workItem from="1722592736852" duration="3338000" />
     </task>
     <task id="LOCAL-00001" summary="July 28th 2024, 5 questions.">
       <option name="closed" value="true" />
@@ -312,75 +276,8 @@
       <option name="project" value="LOCAL" />
       <updated>1722444382232</updated>
     </task>
-    <task id="LOCAL-00012" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1722495559777</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1722495559777</updated>
-    </task>
-    <task id="LOCAL-00013" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1722496610024</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1722496610024</updated>
-    </task>
-    <task id="LOCAL-00014" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1722496665819</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1722496665819</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add-Two-Number-List I &amp; II">
-      <option name="closed" value="true" />
-      <created>1722505248485</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1722505248485</updated>
-    </task>
-    <task id="LOCAL-00016" summary="OddEvenLinkedList_328">
-      <option name="closed" value="true" />
-      <created>1722511161275</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1722511161275</updated>
-    </task>
-    <task id="LOCAL-00017" summary="SegregateOddAndEvenNodesInList">
-      <option name="closed" value="true" />
-      <created>1722521764774</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1722521764774</updated>
-    </task>
-    <task id="LOCAL-00018" summary="SegregateOddAndEvenNodesInList">
-      <option name="closed" value="true" />
-      <created>1722524763615</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1722524763615</updated>
-    </task>
-    <task id="LOCAL-00019" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1722592294220</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1722592294220</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="12" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -403,24 +300,19 @@
     <MESSAGE value="refactors" />
     <MESSAGE value="MaximumTwinSumOfALinkedList_2130" />
     <MESSAGE value="LinkedListCycle" />
-    <MESSAGE value="ytc" />
-    <MESSAGE value="Add-Two-Number-List I &amp; II" />
-    <MESSAGE value="OddEvenLinkedList_328" />
-    <MESSAGE value="SegregateOddAndEvenNodesInList" />
-    <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinkedListCycle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
-          <line>727</line>
+          <line>725</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum_1.java</url>
-          <line>79</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/TwoSum.java</url>
+          <line>55</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -435,17 +327,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
-          <line>642</line>
+          <line>640</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996.java</url>
-          <line>81</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/SmallestMissingIntegerGreaterThanSequentialPrefixSum.java</url>
+          <line>59</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses_20.java</url>
-          <line>105</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/ValidParentheses.java</url>
+          <line>84</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -464,23 +356,23 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MergeTwoSortedLists_21.java</url>
-          <line>178</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/MergeTwoSortedLists.java</url>
+          <line>156</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList_1721.java</url>
-          <line>147</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>125</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList_1721.java</url>
-          <line>163</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>141</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList_1721.java</url>
-          <line>181</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SwappingNodesInALinkedList.java</url>
+          <line>159</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -489,32 +381,32 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeLinkedList_234.java</url>
-          <line>188</line>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/PalindromeLinkedList.java</url>
+          <line>193</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup_25.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/ReverseNodesInKGroup.java</url>
           <line>175</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
-          <line>68</line>
+          <line>64</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ReverseLinkedListII.java</url>
-          <line>106</line>
+          <line>102</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/helpers/GenericPrinter.java</url>
-          <line>747</line>
+          <line>745</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer_138.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/CopyListWithRandomPointer.java</url>
           <line>306</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -562,61 +454,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNthNodeFromEndOfList_19.java</url>
           <line>150</line>
           <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbers_2.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>196</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>312</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>358</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/AddList/AddTwoNumbersII_445.java</url>
-          <line>355</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/OddEvenLinkedList_328.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/Discuss/SegregateOddAndEvenNodesInList.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/Discuss/SegregateOddAndEvenNodesInList.java</url>
-          <line>165</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/PartitionList_86.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
