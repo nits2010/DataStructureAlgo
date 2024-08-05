@@ -68,7 +68,7 @@ import java.util.Stack;
  * @Editorial
  */
 
-public class OnlineStockSpan {
+public class OnlineStockSpan_901 {
 
     public static void main(String[] args) {
         boolean testResult = true;
