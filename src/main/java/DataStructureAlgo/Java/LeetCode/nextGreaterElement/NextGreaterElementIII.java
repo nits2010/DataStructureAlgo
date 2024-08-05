@@ -48,7 +48,7 @@ public class NextGreaterElementIII {
         if (firstDigitIndex == -1)
             return -1;
 
-        //Find the index of element after @code firstDigitIndex which is greater then element at firstIndex but smallest among all on right side
+        //Find the index of element after firstDigitIndex which is greater than an element at firstIndex but smallest among all on the right side
         int secondDigitIndex = elementGreaterThanThisButSmallest(tokens, firstDigitIndex);
 
         //swap element

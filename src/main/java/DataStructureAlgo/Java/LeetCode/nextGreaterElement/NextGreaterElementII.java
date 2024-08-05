@@ -113,16 +113,16 @@ class NextGreaterElementIIThreeScan {
      */
     private static void nextGreaterElementsLeft(int[] nums, int[] nge) {
         int i = nums.length - 1;
-        int j = 0;
-        while (j < i) {
+        int k = 0;
+        while (k < i) {
             //If we did not found the greater element on right for this
             if (nge[i] == Integer.MAX_VALUE) {
                 //find on left side
-                if (nums[j] > nums[i]) {
-                    nge[i] = nums[j];
+                if (nums[k] > nums[i]) {
+                    nge[i] = nums[k];
                     i--;
                 } else
-                    j++; //this element is smaller then current element move forward
+                    k++; //this element is smaller then current element move forward
 
             } else {
                 if (nge[i] == Integer.MAX_VALUE)

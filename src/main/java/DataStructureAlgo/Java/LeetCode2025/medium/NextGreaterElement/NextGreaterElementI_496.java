@@ -53,7 +53,7 @@ import java.util.Stack;
  * <p>
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementI}
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementII}
  * Similar {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures_739}
  * extension {@link }
  * <p>
@@ -190,6 +190,9 @@ class NextGreaterElementI{
                 }
                 stack[++top] = nums2[j];
                 j++;
+            }
+            while (top >=0 ){
+                nextGreaterElement.put(stack[top--], -1);
             }
 
             return nextGreaterElement;
