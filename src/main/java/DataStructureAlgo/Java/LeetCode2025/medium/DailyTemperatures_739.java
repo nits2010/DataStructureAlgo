@@ -130,7 +130,7 @@ class DailyTemperatures {
         // We can run from left to right as well.
         // To calculate the warmer ith day we can look all the days post ith day starting from jth day.
         // If we find any day j which is warmer then ith day, then we can calculate the warmer day for ith day as j-i.
-        public int[] dailyTemperatures2(int[] temperatures) {
+        public int[] dailyTemperaturesForward(int[] temperatures) {
             if(temperatures == null || temperatures.length == 0)
                 return temperatures;
 

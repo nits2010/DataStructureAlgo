@@ -48,7 +48,7 @@ import java.util.Set;
  * -----
 
  *
- * @Editorial
+ * @Editorial <a href="https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/solutions/5518850/simple-solution-beats-100">...</a>
  */
 public class SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996 {
 
