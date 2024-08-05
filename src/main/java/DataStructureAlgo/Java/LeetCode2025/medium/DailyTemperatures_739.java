@@ -57,7 +57,7 @@ import java.util.Stack;
  * @C3IoT
  * @Uber
  *
- * @Editorial
+ * @Editorial <a href="https://leetcode.com/problems/next-greater-element-i/solutions/5592349/easy-solution-to-beat-100-optimized-solution-using-stacks/">...</a>
  */
 
 public class DailyTemperatures_739 {

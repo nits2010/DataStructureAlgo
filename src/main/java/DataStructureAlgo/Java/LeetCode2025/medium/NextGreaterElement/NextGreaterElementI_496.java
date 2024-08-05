@@ -77,12 +77,16 @@ public class NextGreaterElementI_496 {
 
     private static boolean test(int[] nums1, int[] nums2, int[] expected) {
         NextGreaterElementI.SolutionUsingStack solution = new NextGreaterElementI.SolutionUsingStack();
+        NextGreaterElementI.SolutionWithDS solutionWithDS = new NextGreaterElementI.SolutionWithDS();
         System.out.println("\nNum1:" + Arrays.toString(nums1) + "\nNum2:" + Arrays.toString(nums2) + "\nExpected:" + Arrays.toString(expected));
-        int[] actual = solution.nextGreaterElement(nums1, nums2);
-        System.out.println("Output  :" + Arrays.toString(actual));
-        boolean testOutCome =  GenericPrinter.equalsValues(expected, actual);
-        System.out.println(testOutCome ? " Passed" : " Failed");
-        return testOutCome;
+        int[] usingStacks = solution.nextGreaterElement(nums1, nums2);
+        int[] actualWithoutDS = solutionWithDS.nextGreaterElement(nums1, nums2);
+        System.out.println("usingStacks  :" + Arrays.toString(usingStacks) + "\nactualWithoutDS:" + Arrays.toString(actualWithoutDS));
+        boolean testResultUsingStacks =  GenericPrinter.equalsValues(expected, usingStacks);
+        boolean testResultNoDS =  GenericPrinter.equalsValues(expected, actualWithoutDS);
+        System.out.println("testResultUsingStacks :" + (testResultUsingStacks ? " Passed" : " Failed"));
+        System.out.println("testResultNoDS :" + (testResultNoDS ? " Passed" : " Failed"));
+        return testResultUsingStacks == testResultNoDS;
     }
 }
 
@@ -127,7 +131,7 @@ class NextGreaterElementI{
          * @param nums2
          * @return
          *
-         * {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures.SolutionUsingStacks #dailyTemperatures}
+         * {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures.SolutionUsingStacks#dailyTemperatures}
          */
        private Map<Integer, Integer> nextGreaterElementValues( int[] nums2) {
            final Map<Integer,Integer> nextGreaterElement = new HashMap<>();
@@ -164,7 +168,7 @@ class NextGreaterElementI{
        }
 
         /**
-         * {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures.SolutionUsingStacks #dailyTemperaturesForward}
+         * {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures.SolutionUsingStacks#dailyTemperaturesForward}
          * @param nums2
          * @return
          */
@@ -193,4 +197,27 @@ class NextGreaterElementI{
 
         }
    }
+
+    static class SolutionWithDS {
+       //O(m*n)/O(1)
+        public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+                final int [] indexCache = new int[10000];
+                for (int i=0; i<nums2.length; i++)
+                    indexCache[nums2[i]] =  i;
+
+                for (int i = 0; i<nums1.length; i++){
+                    nums1[i] = nextGreaterElement(indexCache[nums1[i]], nums2);
+                }
+                return nums1;
+        }
+
+        //O(n)/O(1)
+        private int nextGreaterElement(int index, int []nums){
+            for (int i=index+1; i<nums.length; i++){
+                if (nums[i] > nums[index])
+                    return nums[i];
+            }
+            return -1;
+        }
+    }
 }
