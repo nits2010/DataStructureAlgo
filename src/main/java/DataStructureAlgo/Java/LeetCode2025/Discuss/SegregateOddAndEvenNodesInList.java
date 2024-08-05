@@ -26,7 +26,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * -----
  *
  * @medium
- * @LinkedList <p>
+ * @LinkedList
  * Company Tags
  * -----
  * @Google

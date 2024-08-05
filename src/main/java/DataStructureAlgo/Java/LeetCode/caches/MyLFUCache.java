@@ -457,7 +457,7 @@ class LFUCacheConstantTime {
         /**
          * This is Frequency to DLL ; i avoid making own dll to simplify the code.
          * Key: frequency the item(key)
-         * Value: Caches in First in First out manner (FIFO) to achieve Least Recently Used
+         * Value: Caches in FIFO  manner to achieve Least Recently Used
          */
         private final Map<Integer, LinkedHashSet<Cache>> lfu;
 
@@ -504,7 +504,7 @@ class LFUCacheConstantTime {
             lfu.get(oldFrequency).remove(item);
 
             //does any more item left at this frequency? , if not then leastFrequency will be the next one for sure
-            if (oldFrequency == leastFrequency && lfu.get(leastFrequency).size() == 0)
+            if (oldFrequency == leastFrequency && lfu.get(leastFrequency).isEmpty())
                 leastFrequency++;
 
             if (!lfu.containsKey(oldFrequency + 1))
