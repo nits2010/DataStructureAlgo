@@ -58,7 +58,8 @@ import java.util.Stack;
  * @Stack
  * @Design
  * @MonotonicStack
- * @DataStream <p>
+ * @DataStream
+ * <p>
  * Company Tags
  * -----
  * @Amazon
@@ -101,7 +102,7 @@ public class OnlineStockSpan {
 
 class StockSpanner {
 
-    class Node {
+    static class Node {
         final int stockPrice;
         final int day;
 
