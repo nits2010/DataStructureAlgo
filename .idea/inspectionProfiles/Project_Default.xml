@@ -2,7 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="JavadocDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ADDITIONAL_TAGS" value="easy,LinkedList,TwoPointers,Stack,Recursion,Facebook,Amazon,Microsoft,Apple,Bloomberg,Editorial,hard,medium,Google,HashTable,Zopsmart,StringMatching,String,LinkedIn,Adobe,Trie,Spotify,Visa,Oracle,Design,DoublyLinkedList,Snapchat" />
+      <option name="ADDITIONAL_TAGS" value="easy,LinkedList,TwoPointers,Stack,Recursion,Facebook,Amazon,Microsoft,Apple,Bloomberg,Editorial,hard,medium,Google,HashTable,Zopsmart,StringMatching,String,LinkedIn,Adobe,Trie,Spotify,Visa,Oracle,Design,DoublyLinkedList,Snapchat,MonotonicStack,DataStream,Array" />
     </inspection_tool>
   </profile>
 </component>
