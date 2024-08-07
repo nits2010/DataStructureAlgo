@@ -58,8 +58,13 @@ import java.util.Map;
  * <p>
  * Tags
  * -----
+ * @easy
+ * @Array
+ * @HashTable
+ * @Stack
+ * @MonotonicStack
  *
- * @easy @medium @hard
+ *
  * <p>
  * Company Tags
  * -----

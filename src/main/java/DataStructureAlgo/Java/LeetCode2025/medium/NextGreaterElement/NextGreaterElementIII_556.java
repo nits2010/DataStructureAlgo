@@ -37,7 +37,6 @@ import DataStructureAlgo.Java.nonleetcode.SuffixArray;
  * <p>
  * Tags
  * -----
- *
  * @medium
  * @Math
  * @TwoPointers

@@ -207,6 +207,65 @@ class RemoveNodesFromLinkedList {
 
 
     /**
+     * Keep two stacks, one for getting nge and one for getting prev of last popped element
+     */
+    static class SolutionUsingStacksOneScans {
+        public ListNode removeNodes(ListNode head) {
+            if (head == null || head.next == null)
+                return head;
+
+            ListNode current = head, prev = null;
+
+            Stack<ListNode> nge = new Stack<>();
+            Stack<ListNode> prevStack = new Stack<>();
+
+            //Push current node, as this will be under investigation
+            nge.push(current);
+
+            //there is no previous of current
+            prevStack.push(null);
+
+            //move to next node.
+            prev = current;
+            current = current.next;
+
+            while (current != null) {
+
+                //pop till we need to delete nodes
+                while (!nge.isEmpty() && nge.peek().val < current.val) {
+
+                    //get node to be deleted
+                    ListNode nodeToDelete = nge.pop();
+
+                    //prev of node to be deleted
+                    ListNode prevNode = prevStack.pop();
+
+                    //if we are going to delete head, updated head
+                    if (nodeToDelete == head)
+                        head = head.next;
+
+                    //if there is a prev exist (only when its not head) then connect it.
+                    if (prevNode != null) {
+                        prevNode.next = current;
+
+                    }
+                    //now prevNode become previous of current node.
+                    prev = prevNode;
+                }
+
+                nge.push(current);
+                prevStack.push(prev);
+                prev = current;
+                current = current.next;
+            }
+
+            return head;
+
+        }
+
+    }
+
+    /**
      * T/S: O(n)/O(2n)
      * Compute nge using {@link DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.NextGreaterElementII.SolutionUsingStack3Scans#nextGreaterElementsOnRight(int[], int[])}
      * keep it in a hash and scan again the original list and delete node present in map.
@@ -271,64 +330,7 @@ class RemoveNodesFromLinkedList {
 
     }
 
-    /**
-     * Keep two stacks, one for getting nge and one for getting prev of last poped element
-     */
-    static class SolutionUsingStacksOneScans {
-        public ListNode removeNodes(ListNode head) {
-            if (head == null || head.next == null)
-                return head;
 
-            ListNode current = head, prev = null;
-
-            Stack<ListNode> nge = new Stack<>();
-            Stack<ListNode> prevStack = new Stack<>();
-
-            //Push current node, as this will be under investigation
-            nge.push(current);
-
-            //there is no previous of current
-            prevStack.push(null);
-
-            //move to next node.
-            prev = current;
-            current = current.next;
-
-            while (current != null) {
-
-                //pop till we need to delete nodes
-                while (!nge.isEmpty() && nge.peek().val < current.val) {
-
-                    //get node to be deleted
-                    ListNode nodeToDelete = nge.pop();
-
-                    //prev of node to be deleted
-                    ListNode prevNode = prevStack.pop();
-
-                    //if we are going to delete head, updated head
-                    if (nodeToDelete == head)
-                        head = head.next;
-
-                    //if there is a prev exist (only when its not head) then connect it.
-                    if (prevNode != null) {
-                        prevNode.next = current;
-
-                    }
-                    //now prevNode become previous of current node.
-                    prev = prevNode;
-                }
-
-                nge.push(current);
-                prevStack.push(prev);
-                prev = current;
-                current = current.next;
-            }
-
-            return head;
-
-        }
-
-    }
 }
 
 
