@@ -5,7 +5,6 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * Author: Nitin Gupta
@@ -133,7 +132,7 @@ class NextGreaterElementI{
          *
          * {@link DataStructureAlgo.Java.LeetCode2025.medium.DailyTemperatures.SolutionUsingStacks#dailyTemperatures}
          */
-       private Map<Integer, Integer> nextGreaterElementValues( int[] nums2) {
+       private Map<Integer, Integer> nextGreaterElementValuesBackWard(int[] nums2) {
            final Map<Integer,Integer> nextGreaterElement = new HashMap<>();
 
             int top = -1;
