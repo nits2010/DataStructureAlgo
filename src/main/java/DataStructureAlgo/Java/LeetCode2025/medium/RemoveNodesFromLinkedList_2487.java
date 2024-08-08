@@ -63,7 +63,7 @@ import java.util.Stack;
  * Company Tags
  * -----
  *
- * @Editorial https://leetcode.com/problems/remove-nodes-from-linked-list/solutions/5602470/best-solution-step-by-step-improvement-o-2n-o-n-to-o-n-o-1-only/
+ * @Editorial <a href="https://leetcode.com/problems/remove-nodes-from-linked-list/solutions/5602470/best-solution-step-by-step-improvement-o-2n-o-n-to-o-n-o-1-only/">...</a>
  */
 
 public class RemoveNodesFromLinkedList_2487 {

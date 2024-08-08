@@ -47,7 +47,7 @@ public class ListBuilder {
 
     public static ListNode arrayToSinglyList(Integer[] elements) {
 
-        if (elements == null || elements.length == 0)
+        if (elements == null || elements.length == 0 || elements[0] == null)
             return null;
 
         ListNode head = new ListNode(elements[0]);

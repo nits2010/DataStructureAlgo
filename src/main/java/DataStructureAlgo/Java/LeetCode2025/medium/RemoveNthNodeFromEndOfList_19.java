@@ -46,12 +46,12 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  *
  * Tags
  * -----
- * @easy @medium @hard
+ * @medium
  *
  * Company Tags
  * -----
  *
- * @Editorial https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/5565232/multiple-solutions-easy-to-understand/
+ * @Editorial <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/5565232/multiple-solutions-easy-to-understand/">...</a>
  */
 
 public class RemoveNthNodeFromEndOfList_19 {

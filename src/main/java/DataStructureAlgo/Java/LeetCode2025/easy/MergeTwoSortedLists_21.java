@@ -138,13 +138,10 @@ public class MergeTwoSortedLists_21 {
             if(list1.val <= list2.val){
                 result = list1;
                 list1.next = mergeTwoListsRecursive(list1.next, list2);
-
-
-
             }else {
                 result = list2;
                 list2.next = mergeTwoListsRecursive(list1, list2.next);
-                           }
+            }
             return result;
 
         }
@@ -167,11 +164,11 @@ public class MergeTwoSortedLists_21 {
             if(list1.val <= list2.val){
                 result = list1;
                 list1.next = mergeTwoListsRecursive(list1.next, list2);
-                result.next.prev = result;
             }else {
                 result = list2;
                 list2.next = mergeTwoListsRecursive(list1,list2.next);
             }
+            result.next.prev = result;
             return result;
         }
 

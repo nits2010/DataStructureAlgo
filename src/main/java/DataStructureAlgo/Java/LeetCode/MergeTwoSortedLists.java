@@ -113,12 +113,11 @@ class MergeTwoSortedDoublyLists {
         if (l1.val <= l2.val) {
             result = l1;
             result.next = mergeTwoListsRecursive(l1.next, l2);
-            result.next.prev = result;
         } else {
             result = l2;
             result.next = mergeTwoListsRecursive(l1, l2.next);
-            result.next.prev = result;
         }
+        result.next.prev = result;
         return result;
 
     }
