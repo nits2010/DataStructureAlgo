@@ -6,6 +6,7 @@ import java.util.Stack;
  * Author: Nitin Gupta
  * Date: 2019-06-27
  * Description: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+ * https://leetcode.com/problems/largest-rectangle-in-histogram
  * Area = width * height;
  * <p>
  * Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a
@@ -18,10 +19,10 @@ import java.util.Stack;
 public class LargestHistogram {
 
     public static void main(String []args) {
-        int input[] = {2, 1, 5, 6, 2, 3};
+        int[] input = {2, 1, 5, 6, 2, 3};
         System.out.println(largestRectangleAreaIn1D(input));
 
-        int input2[] = {1, 1};
+        int[] input2 = {1, 1};
         System.out.println(largestRectangleAreaIn1D(input2));
     }
 
