@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="LargestRectangleInHistogram_84" />
+    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +31,31 @@
     "assignee": "nits2010"
   }
 }]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="preparation-2025" />
+                    <option name="lastUsedInstant" value="1723181591" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1723181581" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/nits2010/DataStructureAlgo.git",
@@ -53,7 +81,7 @@
     "Application.NextGreaterElementII_503.executor": "Run",
     "Application.RemoveNodesFromLinkedList_2487.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "preparation-2025",
+    "git-widget-placeholder": "#2 on preparation-2025",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ngupta14/Documents/Workspace/Personal/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025",
     "node.js.detected.package.eslint": "true",
@@ -64,6 +92,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.LargestRectangleInHistogram_84">
     <configuration name="LargestRectangleInHistogram_84" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.LargestRectangleInHistogram_84" />
@@ -156,7 +189,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723011131987</updated>
-      <workItem from="1723011133605" duration="28748000" />
+      <workItem from="1723011133605" duration="29868000" />
     </task>
     <task id="LOCAL-00001" summary="RemoveNodesFromLinkedList_2487">
       <option name="closed" value="true" />
@@ -182,7 +215,39 @@
       <option name="project" value="LOCAL" />
       <updated>1723117606114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="readme">
+      <option name="closed" value="true" />
+      <created>1723181528310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723181528310</updated>
+    </task>
+    <task id="LOCAL-00005" summary="readme">
+      <option name="closed" value="true" />
+      <created>1723181634907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723181634907</updated>
+    </task>
+    <task id="LOCAL-00006" summary="readme">
+      <option name="closed" value="true" />
+      <created>1723181674193</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723181674193</updated>
+    </task>
+    <task id="LOCAL-00007" summary="readme">
+      <option name="closed" value="true" />
+      <created>1723182771668</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723182771668</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +269,8 @@
     <MESSAGE value="RemoveNodesFromLinkedList_2487" />
     <MESSAGE value="MergeKSortedLists" />
     <MESSAGE value="LargestRectangleInHistogram_84" />
-    <option name="LAST_COMMIT_MESSAGE" value="LargestRectangleInHistogram_84" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -233,11 +299,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
           <line>117</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MaxArea/LargestRectangleInHistogram_84.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

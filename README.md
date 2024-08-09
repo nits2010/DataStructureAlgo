@@ -12,14 +12,14 @@
     https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode
       
 
-* Company wise Questions 
+* Company wise Questions [`Important`]
   * https://github.com/krishnadey30/LeetCode-Questions-CompanyWise
 
-* Top Questions
+* Top Questions [`Important`]
   - 450 top quality questions : https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view 
   - Top 100 https://topswe.com/
 
-* TakeYouForwardList
+* TakeYouForwardList [`Important`]
   * https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
 
 * System Design
@@ -33,7 +33,8 @@
 
 * Premium questions
   * https://www.cnblogs.com/lightwindy/p/8476874.html		
-  http://guozet.me/leetcode/ solution https://github.com/guozetang/leetcode"		
+  http://guozet.me/leetcode/ 
+    * solution https://github.com/guozetang/leetcode		
 
 * lintcode solutions
   * https://github.com/awangdev/LintCode		
