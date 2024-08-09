@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="readme">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/EvaluateReversePolishNotation_150.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MinStack_155.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SimplifyPath_71.java" afterDir="false" />
+    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="MinStack, PostFixEval, unixPath">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/BasicCalculator_224.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +75,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BasicCalculator_224.executor": "Run",
     "Application.EvaluateReversePolishNotation_150.executor": "Run",
     "Application.LargestRectangleInHistogram_84.executor": "Run",
     "Application.MergeKSortedLists_23.executor": "Run",
@@ -102,7 +101,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EvaluateReversePolishNotation_150">
+  <component name="RunManager" selected="Application.BasicCalculator_224">
+    <configuration name="BasicCalculator_224" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.BasicCalculator_224" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EvaluateReversePolishNotation_150" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.EvaluateReversePolishNotation_150" />
       <module name="DataStructureAndAlgo" />
@@ -122,19 +134,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MergeKSortedLists_23" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MergeKSortedLists_23" />
-      <module name="DataStructureAndAlgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BasicCalculator_224" />
         <item itemvalue="Application.EvaluateReversePolishNotation_150" />
         <item itemvalue="Application.MinStack_155" />
         <item itemvalue="Application.SimplifyPath_71" />
         <item itemvalue="Application.LargestRectangleInHistogram_84" />
-        <item itemvalue="Application.MergeKSortedLists_23" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723011131987</updated>
-      <workItem from="1723011133605" duration="36258000" />
+      <workItem from="1723011133605" duration="43434000" />
     </task>
     <task id="LOCAL-00001" summary="RemoveNodesFromLinkedList_2487">
       <option name="closed" value="true" />
@@ -260,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723182853110</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="MinStack, PostFixEval, unixPath">
+      <option name="closed" value="true" />
+      <created>1723195085690</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723195085690</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +290,8 @@
     <MESSAGE value="MergeKSortedLists" />
     <MESSAGE value="LargestRectangleInHistogram_84" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="MinStack, PostFixEval, unixPath" />
+    <option name="LAST_COMMIT_MESSAGE" value="MinStack, PostFixEval, unixPath" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -322,6 +330,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/EvaluateReversePolishNotation_150.java</url>
           <line>108</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/BasicCalculator_224.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
