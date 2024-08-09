@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="readme">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/EvaluateReversePolishNotation_150.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MinStack_155.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/SimplifyPath_71.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +77,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.EvaluateReversePolishNotation_150.executor": "Run",
     "Application.LargestRectangleInHistogram_84.executor": "Run",
     "Application.MergeKSortedLists_23.executor": "Run",
     "Application.MergeTwoSortedLists_21.executor": "Run",
+    "Application.MinStack_155.executor": "Run",
     "Application.NextGreaterElementII_503.executor": "Run",
     "Application.RemoveNodesFromLinkedList_2487.executor": "Run",
+    "Application.SimplifyPath_71.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "#2 on preparation-2025",
     "kotlin-language-version-configured": "true",
@@ -97,7 +102,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LargestRectangleInHistogram_84">
+  <component name="RunManager" selected="Application.EvaluateReversePolishNotation_150">
+    <configuration name="EvaluateReversePolishNotation_150" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.EvaluateReversePolishNotation_150" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LargestRectangleInHistogram_84" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.LargestRectangleInHistogram_84" />
       <module name="DataStructureAndAlgo" />
@@ -124,12 +142,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeTwoSortedLists_21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.MergeTwoSortedLists_21" />
+    <configuration name="MinStack_155" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.MinStack_155" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.easy.*" />
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,21 +155,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NextGreaterElementII_503" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.NextGreaterElementII_503" />
-      <module name="DataStructureAndAlgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemoveNodesFromLinkedList_2487" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveNodesFromLinkedList_2487" />
+    <configuration name="SimplifyPath_71" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.SimplifyPath_71" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
@@ -165,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EvaluateReversePolishNotation_150" />
+        <item itemvalue="Application.MinStack_155" />
+        <item itemvalue="Application.SimplifyPath_71" />
         <item itemvalue="Application.LargestRectangleInHistogram_84" />
         <item itemvalue="Application.MergeKSortedLists_23" />
-        <item itemvalue="Application.MergeTwoSortedLists_21" />
-        <item itemvalue="Application.RemoveNodesFromLinkedList_2487" />
-        <item itemvalue="Application.NextGreaterElementII_503" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723011131987</updated>
-      <workItem from="1723011133605" duration="29868000" />
+      <workItem from="1723011133605" duration="36258000" />
     </task>
     <task id="LOCAL-00001" summary="RemoveNodesFromLinkedList_2487">
       <option name="closed" value="true" />
@@ -247,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723182771668</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="readme">
+      <option name="closed" value="true" />
+      <created>1723182853110</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723182853110</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +312,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
           <line>117</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/MinStack_155.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/EvaluateReversePolishNotation_150.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
