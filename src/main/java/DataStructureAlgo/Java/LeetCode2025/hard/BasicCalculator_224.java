@@ -6,7 +6,7 @@ import java.util.Stack;
  * Author: Nitin Gupta
  * Date:09/08/24
  * Question Category: 224. Basic Calculator @hard
- * Description: https://leetcode.com/problems/basic-calculator/description
+ * Description: <a href="https://leetcode.com/problems/basic-calculator/description">...</a>
  * <p>
  * Given a string s representing a valid expression, implement a basic calculator to evaluate it, and return the result of the evaluation.
  * <p>
