@@ -23,6 +23,9 @@ https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode
 https://www.happygirlzt.com/post/1087braceexpansion/
 
 
+company wise
+https://github.com/krishnadey30/LeetCode-Questions-CompanyWise
+
 
 
 
@@ -47,3 +50,11 @@ http://guozet.me/leetcode/ & solution https://github.com/guozetang/leetcode
 lintcode solutions: https://github.com/awangdev/LintCode
 
 https://ondrej-kvasnovsky.gitbooks.io/algorithms/
+
+450 top quality questions
+https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
+
+system design
+https://workat.tech/system-design/practice?difficulty=all
+
+Top 100 https://topswe.com/
