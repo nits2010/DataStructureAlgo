@@ -45,6 +45,7 @@ public class ReverseLinkedList {
         ReverseSinglyLinkedList solution = new ReverseSinglyLinkedList();
         System.out.println(" Recursive :" + GenericPrinter.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
         System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
     }
 
     private static void testDoubly(DoublyListNode list, DoublyListNode expected) {
@@ -53,6 +54,7 @@ public class ReverseLinkedList {
         ReverseDoublyLinkedList solution = new ReverseDoublyLinkedList();
         System.out.println(" Recursive :" + GenericPrinter.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
         System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
     }
 
 }
@@ -110,6 +112,62 @@ class ReverseSinglyLinkedList {
         return current;
 
     }
+
+    ListNode reverseListIterative2(ListNode head) {
+
+        if (null == head || head.next == null)
+            return head;
+
+        ListNode current = head;
+        ListNode next = current.next;
+        ListNode cache;
+        current.next = null;
+
+        while (next != null) {
+            cache = next.next;
+            next.next = current;
+            current = next;
+            next = cache;
+        }
+
+        return current;
+
+    }
+
+    /**
+     *
+     * @param head
+     * @return
+     * 1-2-3-4
+     * c=1, p=null, n=2 ; 1 2-3-4
+     * p=1, c=2, n=3; 2-1 3-4;
+     * p=2, c=3, n=4; 3-2-1 4
+     * p=3, c=4, n=null; 4-3-2-1
+     * p=4, c=null, n=null; 4-3-2-1
+     */
+    private ListNode reverseListIterative3(ListNode head){
+        if(head == null || head.next == null)
+            return head;
+
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = head.next;
+        current.next = null;
+
+        while (current!=null){
+            //join current node to previous list at head
+            current.next = prev;
+
+            //update prev list head
+            prev = current;
+
+            //move to next chunk
+            current = next;
+            if(next!=null)
+                next = next.next;
+        }
+        return prev;
+    }
 }
 
 
@@ -129,7 +187,7 @@ class ReverseDoublyLinkedList {
         DoublyListNode newHead = reverseListRecursive(n_1_head);
 
         n_1_head.next = head;
-        n_1_head.next.prev = n_1_head;
+        head.prev = n_1_head;
 
         return newHead;
     }
@@ -159,6 +217,31 @@ class ReverseDoublyLinkedList {
                 current = next;
                 next = temp;
             }
+
+        }
+
+        return current;
+    }
+
+
+    DoublyListNode reverseListIterative2(DoublyListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        DoublyListNode current = head;
+        DoublyListNode next = head.next;
+        current.next = null;
+        next.prev = null;
+
+
+        while (next != null) {
+           DoublyListNode cache = next.next;
+
+           next.next = current;
+           current.prev = next;
+           next.prev = null;
+           current = next;
+           next = cache;
 
         }
 

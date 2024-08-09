@@ -19,7 +19,7 @@ import java.util.Stack;
  * Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range [30, 100].
  * <p>
  * Similar to {@link NextGreaterElementOnRightSide}
- * https://leetcode.com/problems/daily-temperatures/discuss/389422/3-solution-or-Explanation-or-100-beat-or-Java
+ * @Editorial https://leetcode.com/problems/daily-temperatures/discuss/389422/3-solution-or-Explanation-or-100-beat-or-Java
  */
 public class DailyTemperatures {
 

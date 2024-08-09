@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="LargestRectangleInHistogram_84" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+    <option name="SCHEME" value="Project" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nits2010"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nits2010/DataStructureAlgo.git",
+    "accountId": "b069c410-e269-4256-bc55-a419e54ab131"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2kJodzGXlFkkuIs1pMUVnCIswYu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LargestRectangleInHistogram_84.executor": "Run",
+    "Application.MergeKSortedLists_23.executor": "Run",
+    "Application.MergeTwoSortedLists_21.executor": "Run",
+    "Application.NextGreaterElementII_503.executor": "Run",
+    "Application.RemoveNodesFromLinkedList_2487.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "preparation-2025",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ngupta14/Documents/Workspace/Personal/DataStructureAlgo/src/main/java/DataStructureAlgo/Java/LeetCode2025",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.LargestRectangleInHistogram_84">
+    <configuration name="LargestRectangleInHistogram_84" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.LargestRectangleInHistogram_84" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeKSortedLists_23" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MergeKSortedLists_23" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeTwoSortedLists_21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.easy.MergeTwoSortedLists_21" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NextGreaterElementII_503" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.NextGreaterElementII_503" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveNodesFromLinkedList_2487" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.RemoveNodesFromLinkedList_2487" />
+      <module name="DataStructureAndAlgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LargestRectangleInHistogram_84" />
+        <item itemvalue="Application.MergeKSortedLists_23" />
+        <item itemvalue="Application.MergeTwoSortedLists_21" />
+        <item itemvalue="Application.RemoveNodesFromLinkedList_2487" />
+        <item itemvalue="Application.NextGreaterElementII_503" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="Temprature" />
+      <created>1723011131987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723011131987</updated>
+      <workItem from="1723011133605" duration="28748000" />
+    </task>
+    <task id="LOCAL-00001" summary="RemoveNodesFromLinkedList_2487">
+      <option name="closed" value="true" />
+      <created>1723037621237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723037621237</updated>
+    </task>
+    <task id="LOCAL-00002" summary="MergeKSortedLists">
+      <option name="closed" value="true" />
+      <created>1723108352712</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723108352712</updated>
+    </task>
+    <task id="LOCAL-00003" summary="LargestRectangleInHistogram_84">
+      <option name="closed" value="true" />
+      <created>1723117606114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723117606114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Temprature" />
+    <MESSAGE value="RemoveNodesFromLinkedList_2487" />
+    <MESSAGE value="MergeKSortedLists" />
+    <MESSAGE value="LargestRectangleInHistogram_84" />
+    <option name="LAST_COMMIT_MESSAGE" value="LargestRectangleInHistogram_84" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNodesFromLinkedList_2487.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
+          <line>246</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MergeKSortedLists_23.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/MaxArea/LargestRectangleInHistogram_84.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="DataStructureAlgo.Java.Node" memberName="val" />
+        <PinnedItemInfo parentTag="DataStructureAlgo.Java.Node" memberName="next" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

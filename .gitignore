@@ -1,0 +1,6 @@
+# Default ignored files
+/shelf/
+*target*
+*.class
+*target/
+target/

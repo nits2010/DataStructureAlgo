@@ -113,12 +113,11 @@ class MergeTwoSortedDoublyLists {
         if (l1.val <= l2.val) {
             result = l1;
             result.next = mergeTwoListsRecursive(l1.next, l2);
-            result.next.prev = result;
         } else {
             result = l2;
             result.next = mergeTwoListsRecursive(l1, l2.next);
-            result.next.prev = result;
         }
+        result.next.prev = result;
         return result;
 
     }
@@ -150,5 +149,50 @@ class MergeTwoSortedDoublyLists {
             h.next.prev = h;
         }
         return ans.next;
+    }
+
+    private DoublyListNode mergeTwoListsIterative2(DoublyListNode list1, DoublyListNode list2) {
+
+        if(list1 == null)
+            return list2;
+
+        if(list2 == null)
+            return list1;
+
+        DoublyListNode finalList, resultHead;
+
+        if(list1.val <= list2.val){
+            finalList = list1;
+            list1 = list1.next;
+        }else {
+            finalList = list2;
+            list2 = list2.next;
+        }
+        resultHead = finalList;
+
+        while (list1!=null && list2!=null){
+
+            if(list1.val <= list2.val){
+                finalList.next = list1;
+                list1.prev = finalList;
+                list1 = list1.next;
+            }else {
+                finalList.next = list2;
+                list2.prev = finalList;
+                list2 = list2.next;
+            }
+            finalList  = finalList.next;
+        }
+
+        if(list1!=null){
+            finalList.next = list1;
+            list1.prev = finalList;
+        }
+        if(list2!=null){
+            finalList.next = list2;
+            list2.prev = finalList;
+        }
+
+        return resultHead;
     }
 }

@@ -17,6 +17,8 @@ package DataStructureAlgo.Java.LeetCode;
  *
  * All
  * https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree
+ *
+ * @Editorial https://leetcode.com/problems/copy-list-with-random-pointer/solutions/5558157/easy-multiple-solution-with-3-pass-and-without-space/
  */
 
 class Node {
@@ -50,10 +52,7 @@ class CopyListRandomPointerThreePhaseSol1 {
         if (null == head)
             return null;
 
-
-        /**
-         * Pass 1: Create a deep copy of node and use original list next pointer to point this node and copy node next will point original list next node
-         */
+        //Pass 1: Create a deep copy of node and use original list random pointer to point this node and copy node next will point original list random node
         creteCopyAdjustNextRandomPointer(head);
 
         Node cloneHead = head.random;//as head random's pointing to the node of clone list head

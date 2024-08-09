@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode;
 
+import DataStructureAlgo.Java.LeetCode2025.easy.ValidParentheses_20;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -19,7 +21,8 @@ import java.util.Stack;
  * Input: exp = “[(])”
  * Output: Not Balanced
  * <p>
- * [Amazon] [Adobe]
+ * [Amazon] [Adobe] [Linkdin} {facebook} [microsoft] [bloomberg]
+ * {@link ValidParentheses_20}
  */
 public class ValidParenthesesBalancedParenthesesExpression {
 
