@@ -16,7 +16,7 @@
 * Top Questions
   450 top quality questions : https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view 
   Top 100 https://topswe.com/
-
+  Top 174 company wise https://seanprashad.com/leetcode-patterns/
 * TakeYouForwardList
   https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
 
