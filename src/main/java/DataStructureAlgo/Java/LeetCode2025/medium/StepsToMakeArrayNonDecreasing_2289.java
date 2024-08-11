@@ -46,15 +46,16 @@ import java.util.Stack;
  * <p>
  * Tags
  * -----
- *
- * @medium <p>
- * Company Tags
- * -----
  * @Array
  * @LinkedList
  * @Stack
  * @MonotonicStack
  * @DynamicProgramming
+ * @medium
+ *
+ * Company Tags
+ * -----
+
  *
  *
  * @Editorial <a href="https://www.youtube.com/watch?v=XirZ8GtWxWA">...</a>
