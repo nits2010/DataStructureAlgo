@@ -3,6 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.Discuss;
 
 import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import DataStructureAlgo.Java.LeetCode2025.medium.List.OddEvenLinkedList_328;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 
 /**
@@ -19,7 +20,7 @@ import DataStructureAlgo.Java.helpers.GenericPrinter;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.medium.OddEvenLinkedList_328}
+ * Similar {@link OddEvenLinkedList_328}
  * extension {@link }
  * <p>
  * Tags
