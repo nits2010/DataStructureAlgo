@@ -134,28 +134,6 @@ public class SimplifyPath_71 {
         return true;
     }
 
-    /**
-     * Author: Nitin Gupta
-     * Date:11/08/24
-     * Question Category:
-     * Description:
-     * <p>
-     * File reference
-     * -----------
-     * Duplicate {@link}
-     * Similar {@link}
-     * extension {@link }
-     * <p>
-     * Tags
-     * -----
-     *
-     *
-     * <p>
-     * Company Tags
-     * -----
-     *
-     * @Editorial
-     */
     static class SimplifyPath {
         static class SolutionUsingStacks {
             public String simplifyPath(String path) {
