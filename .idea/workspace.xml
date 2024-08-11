@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="MinStack, PostFixEval, unixPath">
       <change afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/BasicCalculator_224.java" afterDir="false" />
+    <list default="true" id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="BasicCalculator_224">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
     <list default="true" id="58a273c2-82f8-450f-a20a-5293b1a8cf45" name="Changes" comment="NextGreaterElementI, II, III">
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/graph/ReconstructItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode/graph/ReconstructItinerary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/StepsToMakeArrayNonDecreasing_2289.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/StepsToMakeArrayNonDecreasing_2289.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/MoriesTreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/MoriesTreeTraversal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/TreeTraversalIterative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/TreeTraversalIterative.java" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +27,15 @@
         <option value="Class" />
       </list>
     </option>
-<<<<<<< Updated upstream
+
     <option name="SCHEME" value="Project" />
-=======
->>>>>>> Stashed changes
+
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< Updated upstream
+
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
     "state": "OPEN",
@@ -79,7 +77,7 @@
   "associatedIndex": 4
 }]]></component>
   <component name="ProjectId" id="2kJodzGXlFkkuIs1pMUVnCIswYu" />
-=======
+
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -88,7 +86,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2kLLIPhpMT0okrLXvpuKojmYESW" />
->>>>>>> Stashed changes
+
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -96,7 +94,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BasicCalculator_224.executor": "Run",
@@ -132,7 +130,7 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.*" />
-=======
+
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.DailyTemperatures_739.executor&quot;: &quot;Run&quot;,
@@ -165,21 +163,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
+
     <configuration name="EvaluateReversePolishNotation_150" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.EvaluateReversePolishNotation_150" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
-=======
+
     <configuration name="NextGreaterElementIII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementIII" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode.nextGreaterElement.*" />
->>>>>>> Stashed changes
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,21 +185,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
+
     <configuration name="LargestRectangleInHistogram_84" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.LargestRectangleInHistogram_84" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.hard.MaxArea.*" />
-=======
+
     <configuration name="NextGreaterElementIII_556" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.NextGreaterElementIII_556" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.*" />
->>>>>>> Stashed changes
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,21 +207,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
+
     <configuration name="MinStack_155" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.MinStack_155" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.*" />
-=======
+
     <configuration name="NextGreaterElementII_503" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.NextGreaterElementII_503" />
       <module name="DataStructureAndAlgo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DataStructureAlgo.Java.LeetCode2025.medium.NextGreaterElement.*" />
->>>>>>> Stashed changes
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -231,10 +229,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
+
     <configuration name="SimplifyPath_71" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.SimplifyPath_71" />
-=======
+
     <configuration name="StepsToMakeArrayNonDecreasing_2289" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructureAlgo.Java.LeetCode2025.medium.StepsToMakeArrayNonDecreasing_2289" />
 >>>>>>> Stashed changes
@@ -251,44 +249,44 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< Updated upstream
+
         <item itemvalue="Application.BasicCalculator_224" />
         <item itemvalue="Application.EvaluateReversePolishNotation_150" />
         <item itemvalue="Application.MinStack_155" />
         <item itemvalue="Application.SimplifyPath_71" />
         <item itemvalue="Application.LargestRectangleInHistogram_84" />
-=======
+
         <item itemvalue="Application.StepsToMakeArrayNonDecreasing_2289" />
         <item itemvalue="Application.NextGreaterElementIII_556" />
         <item itemvalue="Application.NextGreaterElementIII" />
         <item itemvalue="Application.NextGreaterElementII_503" />
         <item itemvalue="Application.NextGreaterElementII" />
->>>>>>> Stashed changes
+
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-<<<<<<< Updated upstream
+
         <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
         <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
-=======
+
         <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
->>>>>>> Stashed changes
+
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-<<<<<<< Updated upstream
+
     <task active="true" id="Default" summary="Default task">
       <changelist id="6ed328f7-d86a-494f-8c5a-fdcdd3983010" name="Changes" comment="Temprature" />
       <created>1723011131987</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723011131987</updated>
-      <workItem from="1723011133605" duration="43434000" />
+      <workItem from="1723011133605" duration="46611000" />
     </task>
     <task id="LOCAL-00001" summary="RemoveNodesFromLinkedList_2487">
       <option name="closed" value="true" />
@@ -361,7 +359,7 @@
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1723195085690</updated>
-=======
+
     <task id="LOCAL-00001" summary="merge">
       <option name="closed" value="true" />
       <created>1722865622334</created>
@@ -440,17 +438,32 @@
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1723058731974</updated>
->>>>>>> Stashed changes
+
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="BasicCalculator_224">
+      <option name="closed" value="true" />
+      <created>1723204422069</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723204422069</updated>
+    </task>
+    <task id="LOCAL-00011" summary="BasicCalculator_224">
+      <option name="closed" value="true" />
+      <created>1723227734484</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723227734484</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
-<<<<<<< Updated upstream
+
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-=======
->>>>>>> Stashed changes
+
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -463,15 +476,17 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-<<<<<<< Updated upstream
+
     <MESSAGE value="Temprature" />
     <MESSAGE value="RemoveNodesFromLinkedList_2487" />
     <MESSAGE value="MergeKSortedLists" />
     <MESSAGE value="LargestRectangleInHistogram_84" />
     <MESSAGE value="readme" />
     <MESSAGE value="MinStack, PostFixEval, unixPath" />
+    <MESSAGE value="BasicCalculator_224" />
+    <option name="LAST_COMMIT_MESSAGE" value="BasicCalculator_224" />
     <option name="LAST_COMMIT_MESSAGE" value="MinStack, PostFixEval, unixPath" />
-=======
+
     <MESSAGE value="caches" />
     <MESSAGE value="merge" />
     <MESSAGE value="minor" />
@@ -480,13 +495,13 @@
     <MESSAGE value="NextGreaterElementI_496" />
     <MESSAGE value="NextGreaterElementI, II, III" />
     <option name="LAST_COMMIT_MESSAGE" value="NextGreaterElementI, II, III" />
->>>>>>> Stashed changes
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-<<<<<<< Updated upstream
+
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/RemoveNodesFromLinkedList_2487.java</url>
           <line>170</line>
           <option name="timeStamp" value="7" />
@@ -525,7 +540,7 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/BasicCalculator_224.java</url>
           <line>105</line>
           <option name="timeStamp" value="23" />
-=======
+
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/NextGreaterElement/NextGreaterElementII_503.java</url>
           <line>116</line>
           <option name="timeStamp" value="58" />
@@ -539,7 +554,7 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/StepsToMakeArrayNonDecreasing_2289.java</url>
           <line>102</line>
           <option name="timeStamp" value="63" />
->>>>>>> Stashed changes
+
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -550,11 +565,10 @@
       </pinned-members>
     </pin-to-top-manager>
   </component>
-<<<<<<< Updated upstream
+
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
-=======
->>>>>>> Stashed changes
+
 </project>
