@@ -3,7 +3,9 @@ package DataStructureAlgo.Java.helpers;
 import DataStructureAlgo.Java.LeetCode.templates.TreeNode;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 
 /**
  * Author: Nitin Gupta
@@ -36,12 +38,23 @@ public class TreeBuilder {
             return null;
 
         TreeNode root = new TreeNode(elements[0]);
-        int i = 1;
-        int n = elements.length;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
 
-        while (i < n) {
-            TreeNode node = new TreeNode(elements[i]);
-            root = insertNodeAtFirstAvailablePlace(root, node);
+        int i = 1;
+        while (i < elements.length) {
+            TreeNode current = queue.poll();
+
+            if (elements[i] != null) {
+                current.left = new TreeNode(elements[i]);
+                queue.add(current.left);
+            }
+            i++;
+
+            if (i < elements.length && elements[i] != null) {
+                current.right = new TreeNode(elements[i]);
+                queue.add(current.right);
+            }
             i++;
         }
 

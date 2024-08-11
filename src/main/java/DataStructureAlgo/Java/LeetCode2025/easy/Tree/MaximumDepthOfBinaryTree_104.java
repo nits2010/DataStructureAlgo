@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
 
 import DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.TreeBuilder;
 
 /**
  * Author: Nitin Gupta
@@ -59,6 +60,21 @@ import DataStructureAlgo.Java.LeetCode.templates.TreeNode;
 
 public class MaximumDepthOfBinaryTree_104 {
 
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test(new Integer[]{1,2,3,4,5,6,7}, 3);
+        test &= test(new Integer[]{1,2,3,4}, 3);
+        test &= test(new Integer[]{1,2,3}, 2);
+        System.out.println("\nTest result = " + (test ? "Pass" : "Fail"));
+    }
+
+    private static boolean test(Integer[] input, int expected) {
+        Solution solution = new Solution();
+        TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
+        int output = solution.maxDepth(root);
+        System.out.println("Expected : " + expected + " Obtained : " + output);
+        return expected == solution.maxDepth(root);
+    }
 
     static class Solution {
         public int maxDepth(TreeNode root) {
@@ -66,7 +82,7 @@ public class MaximumDepthOfBinaryTree_104 {
         }
 
         private int maxDepthOrHeightOfBinaryTree(TreeNode root){
-            return (root == null ? 0: Math.max(maxDepthOrHeightOfBinaryTree(root.left) , maxDepthOrHeightOfBinaryTree(root.right) )+ 1);
+            return (root == null) ? 0 : Math.max(maxDepthOrHeightOfBinaryTree(root.left), maxDepthOrHeightOfBinaryTree(root.right)) + 1;
         }
     }
 }
