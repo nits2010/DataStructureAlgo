@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode;
 
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
 import  DataStructureAlgo.Java.LeetCode.templates.ListNode;
-import  DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
+import DataStructureAlgo.Java.helpers.ListBuilder;
 
 import java.util.Arrays;
 import java.util.List;

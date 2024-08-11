@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 
-import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
+import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 
 import java.util.ArrayList;

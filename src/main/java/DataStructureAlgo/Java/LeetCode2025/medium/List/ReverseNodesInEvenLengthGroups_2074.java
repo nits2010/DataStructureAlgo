@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
-import DataStructureAlgo.Java.LeetCode.listToBST.ListBuilder;
+import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.LeetCode.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.hard.List.ReverseNodesInKGroup_25;
 import DataStructureAlgo.Java.helpers.GenericPrinter;

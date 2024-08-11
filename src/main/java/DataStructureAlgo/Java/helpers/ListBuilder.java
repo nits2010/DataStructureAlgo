@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode.listToBST;
+package DataStructureAlgo.Java.helpers;
 
 import  DataStructureAlgo.Java.LeetCode.templates.DoublyListNode;
 import  DataStructureAlgo.Java.LeetCode.templates.ListNode;
