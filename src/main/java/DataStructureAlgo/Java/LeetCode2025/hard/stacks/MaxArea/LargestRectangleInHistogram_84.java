@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.hard.MaxArea;
+package DataStructureAlgo.Java.LeetCode2025.hard.stacks.MaxArea;
 
 import java.util.Arrays;
 

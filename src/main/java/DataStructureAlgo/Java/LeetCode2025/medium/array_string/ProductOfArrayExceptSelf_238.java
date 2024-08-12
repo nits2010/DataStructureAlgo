@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.medium;
+package DataStructureAlgo.Java.LeetCode2025.medium.array_string;
 
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 

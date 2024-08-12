@@ -1,7 +1,6 @@
-package DataStructureAlgo.Java.LeetCode2025.medium;
+package DataStructureAlgo.Java.LeetCode2025.medium.array_string;
 
 import java.util.Arrays;
-import java.util.Map;
 import java.util.Stack;
 
 /**

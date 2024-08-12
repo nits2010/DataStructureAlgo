@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.easy;
+package DataStructureAlgo.Java.LeetCode2025.easy.sumProblem;
 
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 

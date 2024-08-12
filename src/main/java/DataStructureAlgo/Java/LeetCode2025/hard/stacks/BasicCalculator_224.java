@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.hard;
+package DataStructureAlgo.Java.LeetCode2025.hard.stacks;
 
 import java.util.Stack;
 
