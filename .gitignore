@@ -4,3 +4,8 @@
 *.class
 *target/
 target/
+*workspace.xml
+*/workspace.xml
+/*workspace.xml
+
+
