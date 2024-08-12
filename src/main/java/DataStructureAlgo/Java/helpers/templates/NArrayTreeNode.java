@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree;
+package DataStructureAlgo.Java.helpers.templates;
 
 import java.util.ArrayList;
 import java.util.List;

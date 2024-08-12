@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 
-import  DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
+import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 
 /**
  * Author: Nitin Gupta

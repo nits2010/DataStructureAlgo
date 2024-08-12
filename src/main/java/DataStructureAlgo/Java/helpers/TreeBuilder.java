@@ -1,11 +1,11 @@
 package DataStructureAlgo.Java.helpers;
 
+
+
+import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta
@@ -31,6 +31,36 @@ import java.util.Queue;
  */
 
 public class TreeBuilder {
+
+    public static class NaryTree {
+
+        public static NArrayTreeNode buildTreeFromLevelOrder(Integer[] elements) {
+            if (elements == null || elements.length == 0 || elements[0] == null)
+                return null;
+
+            NArrayTreeNode root = new NArrayTreeNode(elements[0]);
+            Queue<NArrayTreeNode> queue = new LinkedList<>();
+            queue.add(root);
+            int i = 2;
+            while(!queue.isEmpty() && i<elements.length) {
+                NArrayTreeNode current = queue.poll();
+                List<NArrayTreeNode> children = current.children;
+                if (children == null)
+                    children = new ArrayList<>();
+
+                while(i<elements.length && elements[i]!=null){
+                    NArrayTreeNode child = new NArrayTreeNode(elements[i]);
+                    children.add(child);
+                    queue.add(child);
+                    i++;
+                }
+                i++; // skip the null
+            }
+
+            return root;
+        }
+    }
+
     private static int preIndex = 0, postIndex;
 
     public static TreeNode buildTreeFromLevelOrder(Integer[] elements) {
@@ -45,13 +75,13 @@ public class TreeBuilder {
         while (i < elements.length) {
             TreeNode current = queue.poll();
 
-            if (elements[i] != null) {
+            if (elements[i] != null && current!=null) {
                 current.left = new TreeNode(elements[i]);
                 queue.add(current.left);
             }
             i++;
 
-            if (i < elements.length && elements[i] != null) {
+            if (i < elements.length && elements[i] != null && current!=null) {
                 current.right = new TreeNode(elements[i]);
                 queue.add(current.right);
             }

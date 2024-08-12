@@ -8,5 +8,6 @@ target/
 */workspace.xml
 /*workspace.xml
 workspace.xml
-
+compiler.xml
+Uncommited_*.xml
 
