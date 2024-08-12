@@ -1,9 +1,9 @@
-package DataStructureAlgo.Java.LeetCode.templates;
+package DataStructureAlgo.Java.helpers.templates;
 
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-29
- * Description:
+ * Description: https://www.geeksforgeeks.org/treap-a-randomized-binary-search-tree/
  */
 public class TreapNode {
 

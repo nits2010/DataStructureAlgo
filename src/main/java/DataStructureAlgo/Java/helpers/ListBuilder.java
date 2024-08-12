@@ -1,8 +1,8 @@
 package DataStructureAlgo.Java.helpers;
 
-import  DataStructureAlgo.Java.LeetCode.templates.DoublyListNode;
-import  DataStructureAlgo.Java.LeetCode.templates.ListNode;
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.DoublyListNode;
+import  DataStructureAlgo.Java.helpers.templates.ListNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.List;
 

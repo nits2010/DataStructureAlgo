@@ -1,16 +1,23 @@
 package DataStructureAlgo.Java.companyWise.Google;
 
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
-import  DataStructureAlgo.Java.LeetCode.templates.TreapNode;
+import  DataStructureAlgo.Java.helpers.templates.TreapNode;
 
 import java.util.*;
 
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-29
- * Description:
+ * Description: https://leetcode.com/discuss/interview-question/363945/google-special-binary-tree
  * <p>
- * A binary tree has the binary search tree property (BST property) if, for every node, the keys in its left subtree are smaller than its own key, and the keys in its right subtree are larger than its own key. It has the heap property if, for every node, the keys of its children are all smaller than its own key. You are given a set of binary tree nodes (i, j) where each node contains an integer i and an integer j. No two i values are equal and no two j values are equal. We must assemble the nodes into a single binary tree where the i values obey the BST property and the j values obey the heap property. If you pay attention only to the second key in each node, the tree looks like a heap, and if you pay attention only to the first key in each node, it looks like a binary search tree.
+ * A binary tree has the binary search tree property (BST property) if,
+ * for every node, the keys in its left subtree are smaller than its own key,
+ * and the keys in its right subtree are larger than its own key. It has the heap property if, for every node,
+ * the keys of its children are all smaller than its own key. You are given a set of binary tree nodes (i, j) where each node
+ * contains an integer i and an integer j. No two i values are equal and no two j values are equal.
+ * We must assemble the nodes into a single binary tree where the i values obey the BST property and the j values obey the heap property.
+ * If you pay attention only to the second key in each node, the tree looks like a heap, and if you pay attention only to the first key in each node,
+ * it looks like a binary search tree.
  * <p>
  * Example 1:
  * <p>

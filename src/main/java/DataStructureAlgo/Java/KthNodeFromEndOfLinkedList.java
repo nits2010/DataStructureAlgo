@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java;
 
-import DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import DataStructureAlgo.Java.helpers.templates.ListNode;
 
 /**
  * Author: Nitin Gupta

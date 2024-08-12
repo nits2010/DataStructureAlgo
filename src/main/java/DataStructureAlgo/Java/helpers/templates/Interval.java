@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode.templates;
+package DataStructureAlgo.Java.helpers.templates;
 
 /**
  * Author: Nitin Gupta

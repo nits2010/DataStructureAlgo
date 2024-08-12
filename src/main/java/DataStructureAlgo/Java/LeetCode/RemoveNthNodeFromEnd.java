@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode;
 
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
-import  DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import  DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 
 import java.util.Arrays;

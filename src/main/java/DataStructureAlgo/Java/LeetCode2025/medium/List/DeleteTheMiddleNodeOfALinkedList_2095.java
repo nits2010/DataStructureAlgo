@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
-import DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.easy.List.MiddleOfTheLinkedList_876;
 import DataStructureAlgo.Java.helpers.GenericPrinter;
 

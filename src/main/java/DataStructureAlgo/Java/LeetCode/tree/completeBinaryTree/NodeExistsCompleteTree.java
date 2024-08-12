@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree.completeBinaryTree;
 
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

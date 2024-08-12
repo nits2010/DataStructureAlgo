@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode.templates;
+package DataStructureAlgo.Java.helpers.templates;
 
 import java.util.Objects;
 

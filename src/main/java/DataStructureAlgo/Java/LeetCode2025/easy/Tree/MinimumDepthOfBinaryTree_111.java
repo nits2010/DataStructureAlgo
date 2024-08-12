@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
 
-import DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 
 import java.util.LinkedList;

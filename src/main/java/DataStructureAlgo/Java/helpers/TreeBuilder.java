@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.helpers;
 
-import DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.HashMap;
 import java.util.LinkedList;

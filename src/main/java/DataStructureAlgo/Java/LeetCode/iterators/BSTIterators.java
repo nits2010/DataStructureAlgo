@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode.iterators;
 
 
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

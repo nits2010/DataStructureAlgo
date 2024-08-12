@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.List;
 
-import DataStructureAlgo.Java.LeetCode.templates.ListNode;
+import DataStructureAlgo.Java.helpers.templates.ListNode;
 
 import java.util.Stack;
 
