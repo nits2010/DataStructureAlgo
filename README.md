@@ -18,12 +18,14 @@
     * https://github.com/hxu296/leetcode-company-wise-problems-2022
   * https://leetracer.com/screener
 
-* Top Questions [`Important`]
-  - 450 top quality questions : https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view 
-  - Top 100 https://topswe.com/
 
-* TakeYouForwardList [`Important`]
-  * https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+* Top Questions  [`Important`]
+  450 top quality questions : https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view 
+  Top 100 https://topswe.com/
+  Top 174 company wise https://seanprashad.com/leetcode-patterns/
+* TakeYouForwardList
+  https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+
 
 * System Design
   * https://workat.tech/system-design/practice?difficulty=all
