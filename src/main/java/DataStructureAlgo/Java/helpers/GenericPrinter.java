@@ -5,7 +5,7 @@ import  DataStructureAlgo.Java.helpers.templates.ListNode;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.flatten.list.Node;
 import  DataStructureAlgo.Java.LeetCode.flatten.list.SinglyNode;
-import  DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
+import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.Pair;
 
 import java.util.*;

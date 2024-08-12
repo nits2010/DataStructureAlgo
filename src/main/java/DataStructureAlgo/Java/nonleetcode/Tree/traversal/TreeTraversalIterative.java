@@ -1,10 +1,10 @@
 package DataStructureAlgo.Java.nonleetcode.Tree.traversal;
 
+import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
+
 import  DataStructureAlgo.Java.nonleetcode.Tree.TreeNode;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta
@@ -163,16 +163,60 @@ public class TreeTraversalIterative {
             }
 
             //it may possible the right node of current "right" hasn't process yet [since there is right subtree exist]
-            // then push the root again in order to process that right node
+            // then push the root again to process that right node
 
             stack.push(root);
 
             //go to right for processing
-            root = root.getRight();
+            if(root!=null)
+                root = root.getRight();
 
         }
 
         return postOrder;
     }
+
+    /****************** LevelOrder - public static implementation Traversal For N-ary Tree *******************/
+
+    public static List<List<Integer>> levelOrder(NArrayTreeNode root) {
+
+        List<List<Integer>> levelOrder = new ArrayList<>();
+        if (null == root)
+            return levelOrder;
+
+        Queue<NArrayTreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        queue.add(null);
+
+        while (!queue.isEmpty()) {
+            NArrayTreeNode temp = queue.poll();
+
+            if(temp == null){
+                if(queue.isEmpty())
+                    return levelOrder;
+                else
+                    queue.offer(null);
+
+                levelOrder.add(new LinkedList<>());
+
+            }else {
+                if (levelOrder.isEmpty()) {
+                    levelOrder.add(new LinkedList<>());
+                }
+
+                List<Integer> children = levelOrder.get(levelOrder.size() - 1);
+                children.add( temp.val);
+
+                for(NArrayTreeNode child : temp.children)
+                    queue.offer(child);
+
+
+            }
+
+
+        }
+        return levelOrder;
+    }
+
 
 }

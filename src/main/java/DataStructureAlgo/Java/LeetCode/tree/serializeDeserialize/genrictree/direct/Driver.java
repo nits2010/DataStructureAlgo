@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
-import  DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.NArrayTreeNode;
+import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 
 import java.util.Arrays;
 import java.util.Collections;
