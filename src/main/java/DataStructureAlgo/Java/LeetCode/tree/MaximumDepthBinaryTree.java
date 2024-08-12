@@ -1,12 +1,14 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-18
  * Description:
  */
+
+
 public class MaximumDepthBinaryTree {
     public int maxDepthT(TreeNode root) {
         if (root == null)

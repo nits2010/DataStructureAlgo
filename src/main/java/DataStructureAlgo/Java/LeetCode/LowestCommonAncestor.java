@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode;
 
 import  DataStructureAlgo.Java.helpers.GenericPrinter;
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 
 import java.util.*;

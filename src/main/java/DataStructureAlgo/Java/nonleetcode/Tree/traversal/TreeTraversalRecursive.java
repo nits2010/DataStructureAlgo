@@ -6,10 +6,49 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+
 /**
  * Author: Nitin Gupta
- * Date: 2019-08-30
+ * Date: 11/8/2024 & 2019-08-30
+ * Question Category:
+ * A) 145. Binary Tree Postorder Traversal
+ * B) 94. Binary Tree Inorder Traversal
+ * C) 144. Binary Tree Preorder Traversal
  * Description:
+ * <a href="https://leetcode.com/problems/binary-tree-postorder-traversal/description/">...</a>
+ * <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/description/">...</a>
+ * <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/description/">...</a>
+ *
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * <p>
+ * Tags
+ * -----
+ * @easy
+ * @Stack
+ * @Tree
+ * @Depth-FirstSearch
+ * @BinaryTree
+ *
+ * Company Tags
+ * -----
+ * @Adobe
+ * @Google
+ * @Facebook
+ * @TuSimple
+ * @Microsoft
+ * @Amazon
+ * @Apple
+ *
+
+ *
+ *
+ * @Editorial
+ * <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/solutions/5620461/recursive-easy-iterative-with-stack-iterative-without-stack-o-n-o-1">...</a>
+ * <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/5620435/recursive-easy-iterative-with-stack-iterative-without-stack-o-n-o-1">...</a>
  */
 public class TreeTraversalRecursive {
 

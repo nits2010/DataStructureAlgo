@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.intervalRelatedProblems;
 
-import  DataStructureAlgo.Java.LeetCode.templates.Interval;
+import  DataStructureAlgo.Java.helpers.templates.Interval;
 
 import java.util.*;
 import java.util.stream.Collectors;

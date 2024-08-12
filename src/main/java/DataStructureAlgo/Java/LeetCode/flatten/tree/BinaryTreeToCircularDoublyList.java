@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.flatten.tree;
 
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta

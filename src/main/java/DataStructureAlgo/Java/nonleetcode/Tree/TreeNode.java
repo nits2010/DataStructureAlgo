@@ -7,15 +7,15 @@ package DataStructureAlgo.Java.nonleetcode.Tree;
  */
 public abstract class TreeNode<T> {
 
-    abstract public TreeNode getLeft();
+    abstract public TreeNode<T> getLeft();
 
     abstract public T getData();
 
-    abstract public TreeNode getRight();
+    abstract public TreeNode<T> getRight();
 
     abstract public void setData(T data);
 
-    abstract public void setLeft(TreeNode left);
+    abstract public void setLeft(TreeNode<T> left);
 
-    abstract public void setRight(TreeNode right);
+    abstract public void setRight(TreeNode<T> right);
 }

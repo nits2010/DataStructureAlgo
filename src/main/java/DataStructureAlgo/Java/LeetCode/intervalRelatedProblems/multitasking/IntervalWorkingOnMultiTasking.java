@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.intervalRelatedProblems.multitasking;
 
-import  DataStructureAlgo.Java.LeetCode.templates.Interval;
+import  DataStructureAlgo.Java.helpers.templates.Interval;
 import DataStructureAlgo.Java.Pair;
 
 import java.util.*;

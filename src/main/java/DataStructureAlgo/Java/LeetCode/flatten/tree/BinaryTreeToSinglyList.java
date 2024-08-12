@@ -7,7 +7,7 @@ package DataStructureAlgo.Java.LeetCode.flatten.tree;
  * Driver {@link DataStructureAlgo.Java.LeetCode.flatten.tree.BinaryTreeToList}
  */
 
-import  DataStructureAlgo.Java.LeetCode.templates.TreeNode;
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
  * One of the variation to convert BT to Singly list is {@link FlattenBinaryTreeLinkedList},

@@ -118,4 +118,56 @@ public class MoriesTreeTraversal {
 
     }
 
+    public List<Integer> postOrderMorris(TreeNode<Integer> root, List<Integer> postOrder) {
+
+        if (root == null) return postOrder;
+
+        TreeNode<Integer> curr = root, pred;
+
+        while (curr != null) {
+            if (curr.getLeft() == null) {
+                curr = curr.getRight();
+            } else {
+                pred = curr.getLeft();
+                while (pred.getRight() != null && pred.getRight() != curr) {
+                    pred = pred.getRight();
+                }
+
+                if (pred.getRight() == null) {
+                    pred.setRight(curr);
+                    curr = curr.getLeft();
+                } else {
+                    reverseAddNodes(curr.getLeft(), pred, postOrder);
+                    pred.setRight(null);
+                    curr = curr.getRight();
+                }
+            }
+        }
+        return postOrder;
+    }
+
+    private static void reverseAddNodes(TreeNode<Integer> from, TreeNode<Integer> to, List<Integer> result) {
+        reverseNodes(from, to);
+
+        TreeNode<Integer> node = to;
+        while (true) {
+            result.add(node.getData());
+            if (node == from) break;
+            node = node.getRight();
+        }
+
+        reverseNodes(to, from);
+    }
+
+    private static void reverseNodes(TreeNode<Integer> from, TreeNode<Integer> to) {
+        if (from == to) return;
+
+        TreeNode<Integer> x = from, y = from.getRight(), z;
+        while (x != to) {
+            z = y.getRight();
+            y.setRight(x);
+            x = y;
+            y = z;
+        }
+    }
 }

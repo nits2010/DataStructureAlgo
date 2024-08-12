@@ -53,6 +53,8 @@ import java.util.*;
  * Must Watch:
  * Eulerian Path - Intro to Algorithms: https://www.youtube.com/watch?v=ycRuO-u6rt8
  * Eulerian Path Solution - Intro to Algorithms: https://www.youtube.com/watch?v=Dx1lpbpSHwI
+ *
+ * @Editorial <a href="https://leetcode.com/problems/reconstruct-itinerary/solutions/359942/Awesome-question-or-new-algo-to-learn-or-Full-explanation-or-Code">...</a>
  */
 public class ReconstructItinerary {
 
