@@ -74,14 +74,19 @@ public class MaximumDepthOfNAryTree_559 {
     }
 
     private static boolean test(Integer[] input, int expected) {
-        System.out.println("Input: " + Arrays.toString(input) + " Expected: " + expected);
+        System.out.println("----------------------------------------------------");
+        System.out.println("Input: " + Arrays.toString(input) + "\n Expected: " + expected);
         NArrayTreeNode root = TreeBuilder.NaryTree.buildTreeFromLevelOrder(input);
         System.out.println(" level order traversal of n-ary tree :"+ TreeTraversalRecursive.levelOrder(root));
 
         SolutionUsingLevelOrder solutionUsingLevelOrder = new SolutionUsingLevelOrder();
+        SolutionUsingPostorder solutionUsingPostorder = new SolutionUsingPostorder();
+
         int actualLevelOrder = solutionUsingLevelOrder.maxDepth(root);
-        System.out.println("actualLevelOrder: " + actualLevelOrder);
-        return  (actualLevelOrder == expected);
+        int actualPostOrder = solutionUsingPostorder.maxDepth(root);
+        System.out.println("outputLevelOrder: " + actualLevelOrder);
+        System.out.println("actualPostOrder: " + actualPostOrder);
+        return  (actualLevelOrder == expected) && (expected == actualPostOrder);
 
     }
 
@@ -116,5 +121,19 @@ public class MaximumDepthOfNAryTree_559 {
 
         }
 
+    }
+
+    static class SolutionUsingPostorder {
+
+        public int maxDepth(NArrayTreeNode root) {
+            if(root == null)
+                return 0;
+
+            int maxDepth = 0;
+            for(NArrayTreeNode child: root.children)
+                maxDepth = Math.max(maxDepth(child), maxDepth); //just like max of a left and right child
+
+            return maxDepth+1;
+        }
     }
 }
