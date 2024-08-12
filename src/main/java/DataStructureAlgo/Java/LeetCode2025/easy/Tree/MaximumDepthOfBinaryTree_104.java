@@ -7,7 +7,7 @@ import DataStructureAlgo.Java.helpers.TreeBuilder;
  * Author: Nitin Gupta
  * Date:11/08/24
  * Question Category: 104. Maximum Depth of Binary Tree @easy
- * Description:
+ * Description: https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
  * <p>
  * Given the root of a binary tree, return its maximum depth.
  *
