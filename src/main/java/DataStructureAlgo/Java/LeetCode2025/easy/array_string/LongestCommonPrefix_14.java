@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.easy;
+package DataStructureAlgo.Java.LeetCode2025.easy.array_string;
 
 import java.util.Arrays;
 /**
