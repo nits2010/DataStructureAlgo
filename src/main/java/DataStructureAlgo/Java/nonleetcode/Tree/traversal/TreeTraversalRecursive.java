@@ -88,6 +88,30 @@ public class TreeTraversalRecursive {
 
     }
 
+
+    public static List<Integer> inOrder(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
+        final List<Integer> inOrder = new LinkedList<>();
+
+        if (null == root)
+            return inOrder;
+
+        inorderUtil(root, inOrder);
+
+        return inOrder;
+    }
+
+    private static void inorderUtil(DataStructureAlgo.Java.helpers.templates.TreeNode root, final List<Integer> inorder) {
+
+        if (null == root)
+            return;
+
+        inorderUtil(root.left, inorder);
+        inorder.add(root.val);
+        inorderUtil(root.right, inorder);
+
+
+    }
+
     /****************** PostOrder  - public static  implementation Traversal *******************/
 
     public static List<Integer> postOrder(TreeNode<Integer> root) {
@@ -108,6 +132,26 @@ public class TreeTraversalRecursive {
         postOrderUtil(root.getLeft(), postorder);
         postOrderUtil(root.getRight(), postorder);
         postorder.add(root.getData());
+    }
+
+    public static List<Integer> postOrder(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
+        final List<Integer> postOrder = new LinkedList<>();
+
+        if (null == root)
+            return postOrder;
+
+        postOrderUtil(root, postOrder);
+
+        return postOrder;
+    }
+
+    private static void postOrderUtil(DataStructureAlgo.Java.helpers.templates.TreeNode root, List<Integer> postorder) {
+        if (null == root)
+            return;
+
+        postOrderUtil(root.left, postorder);
+        postOrderUtil(root.right, postorder);
+        postorder.add(root.val);
     }
 
     /****************** PreOrder - public static  implementation Traversal *******************/
@@ -132,6 +176,29 @@ public class TreeTraversalRecursive {
         preorder.add(root.getData());
         preOrderUtil(root.getLeft(), preorder);
         preOrderUtil(root.getRight(), preorder);
+
+    }
+
+    public static List<Integer> preOrder(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
+        final List<Integer> preOrder = new LinkedList<>();
+
+        if (null == root)
+            return preOrder;
+
+        preOrderUtil(root, preOrder);
+
+        return preOrder;
+    }
+
+
+    private static void preOrderUtil(DataStructureAlgo.Java.helpers.templates.TreeNode root, List<Integer> preorder) {
+
+        if (null == root)
+            return;
+
+        preorder.add(root.val);
+        preOrderUtil(root.left, preorder);
+        preOrderUtil(root.right, preorder);
 
     }
 
@@ -201,6 +268,76 @@ public class TreeTraversalRecursive {
         }
         return levelOrder;
     }
+
+
+
+
+
+    public static List<Integer> levelOrder(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
+
+        if (null == root)
+            return null;
+
+        List<Integer> levelOrder = new LinkedList<>();
+        Queue<DataStructureAlgo.Java.helpers.templates.TreeNode> queue = new LinkedList<>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
+            levelOrder.add((Integer) temp.val);
+
+            if (null != temp.left)
+                queue.add(temp.left);
+
+            if (null != temp.right)
+                queue.add(temp.right);
+
+
+        }
+        return levelOrder;
+    }
+
+    public static List<List<Integer>> levelOrder2(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
+
+        List<List<Integer>> levelOrder = new ArrayList<>();
+        if (null == root)
+            return levelOrder;
+
+        Queue<DataStructureAlgo.Java.helpers.templates.TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        queue.add(null);
+
+        while (!queue.isEmpty()) {
+            DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
+
+            if(temp == null){
+                if(queue.isEmpty())
+                    return levelOrder;
+                else
+                    queue.offer(null);
+                List<Integer> nextChildren = new LinkedList<>();
+                levelOrder.add(nextChildren);
+
+            }else {
+                if (levelOrder.isEmpty()) {
+                    levelOrder.add(new LinkedList<>());
+                }
+
+                List<Integer> children = levelOrder.get(levelOrder.size() - 1);
+                children.add((Integer) temp.val);
+
+                if(temp.left!=null)
+                    queue.offer(temp.left);
+                if(temp.right!=null)
+                    queue.offer(temp.right);
+            }
+
+
+        }
+        return levelOrder;
+    }
+
 
     /****************** PreOrder - public static  implementation Traversal For N-ary Tree *******************/
     public static List<Integer> preOrder(NArrayTreeNode root) {

@@ -1,6 +1,11 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
 
+import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
+
+import java.util.Arrays;
 
 /**
  * Author: Nitin Gupta
@@ -63,7 +68,37 @@ import DataStructureAlgo.Java.helpers.templates.TreeNode;
  */
 public class SameTree_100 {
 
-    class Solution {
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test(new Integer[]{1,2,3,4,5,6}, new Integer[]{1,2,3,4,5,6}, true);
+        test &= test(new Integer[]{1,2,3,4,5,6}, new Integer[]{1,2,3,4,5}, false);
+        test &= test(new Integer[]{1,2,3,4,5,6}, new Integer[]{2,1,4,3,6,5}, false);
+        test &= test(new Integer[]{}, new Integer[]{2,1,4,3,6,5}, false);
+        test &= test(new Integer[]{}, new Integer[]{}, true);
+        test &= test(new Integer[]{1}, new Integer[]{1}, true);
+        test &= test(new Integer[]{1}, new Integer[]{}, false);
+
+        System.out.println(test ? "\nAll passed" : "\nSomething Failed");
+    }
+
+    private static boolean test(Integer[] tree1, Integer[] tree2, boolean expected) {
+        System.out.println("-------------------------");
+        System.out.println("Input 1 "+ Arrays.toString(tree1) + "\nInput 2 "+ Arrays.toString(tree2) +"\n expected :"+expected );
+        final TreeNode root1 = TreeBuilder.buildTreeFromLevelOrder(tree1);
+        final TreeNode root2 = TreeBuilder.buildTreeFromLevelOrder(tree2);
+
+        System.out.println("Tree 1 {pre-order} : "+ TreeTraversalRecursive.preOrder(root1));
+        System.out.println("Tree 2 {pre-order} : "+ TreeTraversalRecursive.preOrder(root2));
+
+        Solution solution = new Solution()  ;
+        boolean result = solution.isSameTree(root1, root2);
+        System.out.println(" isSameTree : "+result +" expected :"+expected);
+        return expected == result;
+
+    }
+
+
+    static class Solution {
         public boolean isSameTree(TreeNode p, TreeNode q) {
 
             if(p == null && q == null)
