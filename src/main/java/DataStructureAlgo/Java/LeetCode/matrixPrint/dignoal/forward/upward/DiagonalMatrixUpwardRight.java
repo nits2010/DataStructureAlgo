@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.dignoal.forward.upward;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,7 +35,7 @@ public class DiagonalMatrixUpwardRight {
     }
 
     private static void test(int[][] matrix, List<Integer> expected) {
-        System.out.println("\nMatrix:\n" + GenericPrinter.toString(matrix));
+        System.out.println("\nMatrix:\n" + CommonMethods.toString(matrix));
         System.out.println("expected:\n" + expected);
         System.out.println("Obtained:\n" + diagonalPrint(matrix));
     }

@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List.AddList;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -80,9 +80,9 @@ public class AddTwoNumbers_2 {
         ListNode expectedNode = ListBuilder.arrayToSinglyList(expected);
         Solution solution = new Solution();
         ListNode output = solution.addTwoNumbers(l1Node, l2Node);
-        boolean result = GenericPrinter.equalsValues(output, expectedNode);
-        System.out.println("\n L1 :" + GenericPrinter.print(l1Node) + "\n L2 :" + GenericPrinter.print(l2Node) + "\n Expected :" + GenericPrinter.print(expectedNode));
-        System.out.println("Obtained :" + GenericPrinter.print(output));
+        boolean result = CommonMethods.equalsValues(output, expectedNode);
+        System.out.println("\n L1 :" + CommonMethods.print(l1Node) + "\n L2 :" + CommonMethods.print(l2Node) + "\n Expected :" + CommonMethods.print(expectedNode));
+        System.out.println("Obtained :" + CommonMethods.print(output));
         System.out.println("Test passed: " + result);
         return result;
     }

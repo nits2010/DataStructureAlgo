@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.direct;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 
 import java.util.Arrays;
@@ -25,13 +25,13 @@ public class Driver {
 
     private static void test(NArrayTreeNode root) {
         System.out.println();
-        System.out.println("Original Tree       : " + GenericPrinter.levelOrder(root));
+        System.out.println("Original Tree       : " + CommonMethods.levelOrder(root));
 
         ISerializeDeserializeNArrayTree nArrayTree = new SerializeDeserializeNAryTree();
         String serialized = nArrayTree.serialize(root);
         System.out.println("serialized          : " + serialized);
         NArrayTreeNode de = nArrayTree.deserialize(serialized);
-        System.out.println("Deserialize         : " + GenericPrinter.levelOrder(de));
+        System.out.println("Deserialize         : " + CommonMethods.levelOrder(de));
 
     }
 

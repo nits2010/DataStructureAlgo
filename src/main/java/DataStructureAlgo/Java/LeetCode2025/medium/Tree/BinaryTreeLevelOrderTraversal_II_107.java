@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.Tree;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -72,7 +72,7 @@ public class BinaryTreeLevelOrderTraversal_II_107 {
         System.out.println("---------------------------------");
         System.out.println("\n Input :" + Arrays.toString(input));
         System.out.print("\n expected :");
-        GenericPrinter.print(expected);
+        CommonMethods.print(expected);
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
         System.out.println("\n Input Tree preOrder:" + TreeTraversalRecursive.preOrder(root));
@@ -90,9 +90,9 @@ public class BinaryTreeLevelOrderTraversal_II_107 {
         System.out.println(" resultUsingLevelOrder :" + resultUsingLevelOrder);
         System.out.println(" resultRecursive :" + resultRecursive);
 
-        boolean testResultUsingLevelOrderReverse = GenericPrinter.equals(expected, resultUsingLevelOrderReverse);
-        boolean testResultUsingLevelOrder = GenericPrinter.equals(expected, resultUsingLevelOrder);
-        boolean testResultRecursive = GenericPrinter.equals(expected, resultRecursive);
+        boolean testResultUsingLevelOrderReverse = CommonMethods.equals(expected, resultUsingLevelOrderReverse);
+        boolean testResultUsingLevelOrder = CommonMethods.equals(expected, resultUsingLevelOrder);
+        boolean testResultRecursive = CommonMethods.equals(expected, resultRecursive);
 
 
         System.out.println("\n testResultUsingLevelOrderReverse :" + testResultUsingLevelOrderReverse);

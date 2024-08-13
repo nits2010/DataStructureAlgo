@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -33,7 +33,7 @@ public class MaximumSumTwoNonOverlappingSubarrayKSize {
     }
 
     private static void test(int[] nums, int k, int expected) {
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println(" for k :" + k + " obtained :" + maximumSumNonOverlappingKSize(nums, k) + " expected :" + expected);
     }
 

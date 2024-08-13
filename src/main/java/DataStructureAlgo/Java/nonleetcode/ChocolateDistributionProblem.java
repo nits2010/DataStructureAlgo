@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -54,7 +54,7 @@ public class ChocolateDistributionProblem {
     }
 
     private static void test(int[] chocolates, int m, int expected) {
-        System.out.println("\n chocolates :" + GenericPrinter.toString(chocolates) + " students :" + m);
+        System.out.println("\n chocolates :" + CommonMethods.toString(chocolates) + " students :" + m);
         System.out.println("minimumDifference :" + minimumDifference(chocolates, m) + " expected :" + expected);
     }
 

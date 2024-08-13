@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -33,7 +33,7 @@ public class MinimumPossibleSizeArrayGivenRulesRemovingElements {
     }
 
     private static void test(int a[], int k, int expected) {
-        GenericPrinter.print(a);
+        CommonMethods.print(a);
         System.out.println(minimumPossibleSizeArrayGivenRulesRemovingElements(a, k) + " expected " + expected);
     }
 

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
@@ -108,8 +108,8 @@ public class SubtreeAnotherTree {
     }
 
     private static boolean test(TreeNode s, TreeNode t, boolean expected) {
-        System.out.println("\nS: " + GenericPrinter.preOrder(s));
-        System.out.println("T: " + GenericPrinter.preOrder(t));
+        System.out.println("\nS: " + CommonMethods.preOrder(s));
+        System.out.println("T: " + CommonMethods.preOrder(t));
         System.out.println("Expected            :" + expected);
 
         boolean recursive = new SubtreeAnotherTreeRecursiveMatch().isSubtree(s, t);
@@ -119,7 +119,7 @@ public class SubtreeAnotherTree {
         System.out.println("subString           :" + subString);
         System.out.println("serialize           :" + serialize);
 
-        return GenericPrinter.equalsValues(recursive, expected, subString, serialize);
+        return CommonMethods.equalsValues(recursive, expected, subString, serialize);
     }
 }
 

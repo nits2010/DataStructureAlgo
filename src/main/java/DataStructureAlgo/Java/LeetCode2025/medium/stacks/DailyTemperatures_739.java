@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.stacks;
 
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -79,7 +79,7 @@ public class DailyTemperatures_739 {
         boolean testResult = true;
         DailyTemperatures.SolutionUsingStacks tempStack = new DailyTemperatures.SolutionUsingStacks();
         int[] output = tempStack.dailyTemperatures(tem);
-        testResult = GenericPrinter.equalsValues(output,expected);
+        testResult = CommonMethods.equalsValues(output,expected);
         System.out.println("Output: " + Arrays.toString(output) + " Test Pass " + (testResult ? "All passed" : "Failed"));
         return testResult;
 

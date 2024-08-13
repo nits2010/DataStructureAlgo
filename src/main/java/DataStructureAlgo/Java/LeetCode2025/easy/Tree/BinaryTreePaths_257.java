@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
@@ -74,8 +74,8 @@ public class BinaryTreePaths_257 {
         List<String> outputRecursiveSimplified = solutionRecursiveSimplified.binaryTreePaths(root);
         System.out.println("outputRecursive : " + outputRecursive);
         System.out.println("outputRecursiveSimplified : " + outputRecursiveSimplified);
-        boolean resultRecursive = GenericPrinter.equalsValues(outputRecursive, expected);
-        boolean resultRecursiveSimplified = GenericPrinter.equalsValues(outputRecursiveSimplified, expected);
+        boolean resultRecursive = CommonMethods.equalsValues(outputRecursive, expected);
+        boolean resultRecursiveSimplified = CommonMethods.equalsValues(outputRecursiveSimplified, expected);
         System.out.println("resultRecursive | resultRecursiveSimplified : " + resultRecursive + " | " + resultRecursiveSimplified);
 
         return resultRecursiveSimplified && resultRecursive;

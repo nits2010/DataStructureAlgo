@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrix.search;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -48,7 +48,7 @@ public class Search2DMatrixII {
     }
 
     private static void test(int[][] mat, int target, boolean expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(mat) + " target : " + target + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(mat) + " target : " + target + " expected :" + expected);
         System.out.println(" obtained :" + searchMatrix(mat, target));
     }
 

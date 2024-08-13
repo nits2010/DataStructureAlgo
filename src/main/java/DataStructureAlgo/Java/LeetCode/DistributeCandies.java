@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -35,7 +35,7 @@ public class DistributeCandies {
     }
 
     private static void test(int[] candies) {
-        System.out.println("Input : " + GenericPrinter.toString(candies));
+        System.out.println("Input : " + CommonMethods.toString(candies));
         DistributeCandiesUsingHash hash = new DistributeCandiesUsingHash();
         DistributeCandiesUsingBit bitSet = new DistributeCandiesUsingBit();
         DistributeCandiesUsingBoolean booleanArray = new DistributeCandiesUsingBoolean();

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Stack;
 
@@ -33,8 +33,8 @@ public class SmallerElementOnLeftSide {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("\nNums:" + GenericPrinter.toString(nums) + "\nExpected:" + GenericPrinter.toString(expected));
-        System.out.println("Obtained:" + GenericPrinter.toString(immediateSmallerElementOnLeftSide(nums)));
+        System.out.println("\nNums:" + CommonMethods.toString(nums) + "\nExpected:" + CommonMethods.toString(expected));
+        System.out.println("Obtained:" + CommonMethods.toString(immediateSmallerElementOnLeftSide(nums)));
 
     }
 

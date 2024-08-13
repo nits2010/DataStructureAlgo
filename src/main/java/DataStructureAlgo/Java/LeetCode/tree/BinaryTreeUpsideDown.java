@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.nonleetcode.Tree.FlipTreeUpSideDown;
 
@@ -64,7 +64,7 @@ public class BinaryTreeUpsideDown {
     }
 
     private static void test(Integer[] tree, Integer[] expected) {
-        System.out.println("\n Given tree " + GenericPrinter.toString(tree) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Given tree " + CommonMethods.toString(tree) + " expected :" + CommonMethods.toString(expected));
 
         System.out.println("Recursive :");
         test(new BinaryTreeUpsideDownRecursive(), TreeBuilder.arrayToTree(tree));
@@ -76,7 +76,7 @@ public class BinaryTreeUpsideDown {
 
     private static void test(IBinaryTreeUpsideDown impl, TreeNode root) {
         final TreeNode flipped = impl.upsideDownBinaryTree(root);
-        System.out.println(" Obtained :" + GenericPrinter.preOrder(flipped));
+        System.out.println(" Obtained :" + CommonMethods.preOrder(flipped));
 
     }
 }

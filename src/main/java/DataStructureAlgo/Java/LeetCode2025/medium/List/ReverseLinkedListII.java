@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 import DataStructureAlgo.Java.LeetCode.ReverseLinkedList;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
 
@@ -77,12 +77,12 @@ public class ReverseLinkedListII {
         ListNode originalList = ListBuilder.arrayToSinglyList(elements);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
 
-        System.out.println("\nInput :" + GenericPrinter.print(originalList) + " left=" + left + " right =" + right + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\nInput :" + CommonMethods.print(originalList) + " left=" + left + " right =" + right + "\nexpected :" + CommonMethods.print(expectedList));
 
         Solution solution = new Solution();
         ListNode output = solution.reverseBetween(originalList, left, right);
-        boolean result = GenericPrinter.equalsValues(expectedList, output);
-        System.out.println("Output :" + GenericPrinter.print(output) + "\nResult match : " +  (result ? "Pass" : "Fail"));
+        boolean result = CommonMethods.equalsValues(expectedList, output);
+        System.out.println("Output :" + CommonMethods.print(output) + "\nResult match : " +  (result ? "Pass" : "Fail"));
         return result;
 
 

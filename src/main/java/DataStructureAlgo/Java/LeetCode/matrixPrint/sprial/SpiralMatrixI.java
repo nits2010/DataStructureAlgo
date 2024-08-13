@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.sprial;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,7 +46,7 @@ public class SpiralMatrixI {
     }
 
     private static boolean test(int[][] matrix, List<Integer> expected) {
-        System.out.println("\nMatrix:\n" + GenericPrinter.toString(matrix));
+        System.out.println("\nMatrix:\n" + CommonMethods.toString(matrix));
         System.out.println("Expected: " + expected);
         List<Integer> obtained = spiralOrder(matrix);
         System.out.println("Obtained: " + obtained);

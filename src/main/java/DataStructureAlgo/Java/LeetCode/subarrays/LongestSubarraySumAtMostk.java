@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -43,7 +43,7 @@ public class LongestSubarraySumAtMostk {
 
 
         System.out.println("\n \n Input k: " + k);
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         int maxSize = 0;
 
         int sum = 0;

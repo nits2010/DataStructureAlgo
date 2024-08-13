@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -117,14 +117,14 @@ public class OptimizeMemoryUsage {
             System.out.println("Not found");
 
         System.out.println("\n\nForeground :");
-        GenericPrinter.print(foreground);
+        CommonMethods.print(foreground);
         System.out.println("Background :");
-        GenericPrinter.print(background);
+        CommonMethods.print(background);
 
 
         List<int[]> usages = OptimalMemoryUsage.optimizeMemoryUsage(foreground, background, memory);
         System.out.println("Optimal -> ");
-        GenericPrinter.print(usages);
+        CommonMethods.print(usages);
 
     }
 

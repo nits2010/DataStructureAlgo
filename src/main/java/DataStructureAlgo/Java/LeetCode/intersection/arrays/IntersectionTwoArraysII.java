@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.intersection.arrays;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -51,10 +51,10 @@ public class IntersectionTwoArraysII {
     }
 
     private static void test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\n Input; nums1 :" + GenericPrinter.toString(nums1) + " nums2 :" + GenericPrinter.toString(nums2) + " expected :" + GenericPrinter.toString(expected));
-        System.out.println("Map   :" + GenericPrinter.toString(IntersectionTwoArraysIIMap.intersect(nums1, nums2)));
-        System.out.println("Sort 1  :" + GenericPrinter.toString(IntersectionTwoArraysIISort.intersect(nums1, nums2)));
-        System.out.println("Linear  search :" + GenericPrinter.toString(IntersectionTwoArraysIILinear.intersect(nums1, nums2)));
+        System.out.println("\n Input; nums1 :" + CommonMethods.toString(nums1) + " nums2 :" + CommonMethods.toString(nums2) + " expected :" + CommonMethods.toString(expected));
+        System.out.println("Map   :" + CommonMethods.toString(IntersectionTwoArraysIIMap.intersect(nums1, nums2)));
+        System.out.println("Sort 1  :" + CommonMethods.toString(IntersectionTwoArraysIISort.intersect(nums1, nums2)));
+        System.out.println("Linear  search :" + CommonMethods.toString(IntersectionTwoArraysIILinear.intersect(nums1, nums2)));
 
     }
 

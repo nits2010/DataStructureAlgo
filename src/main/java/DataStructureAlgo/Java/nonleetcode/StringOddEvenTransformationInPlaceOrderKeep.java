@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -50,7 +50,7 @@ public class StringOddEvenTransformationInPlaceOrderKeep {
 
     private static String[] transform(String[] input) {
 
-        String[] str = GenericPrinter.copyOf(input);
+        String[] str = CommonMethods.copyOf(input);
         int shift = 0;
         int length = input.length;
         int currentStringLength;

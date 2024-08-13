@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -81,7 +81,7 @@ public class RemoveNodesFromLinkedList_2487 {
     private static boolean test(Integer[] input, Integer[] expected) {
         ListNode inputList = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n Input :" + GenericPrinter.print(inputList) + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\n Input :" + CommonMethods.print(inputList) + "\nexpected :" + CommonMethods.print(expectedList));
 
         RemoveNodesFromLinkedList.SolutionUsingStacksTwoScans solutionUsingTwoScans = new RemoveNodesFromLinkedList.SolutionUsingStacksTwoScans();
         RemoveNodesFromLinkedList.SolutionUsingStacksOneScans solutionUsingOneScans = new RemoveNodesFromLinkedList.SolutionUsingStacksOneScans();
@@ -91,14 +91,14 @@ public class RemoveNodesFromLinkedList_2487 {
         ListNode obtainedOneScan = solutionUsingOneScans.removeNodes(ListBuilder.arrayToSinglyList(input));
         ListNode obtainedWithoutStacks= solutionWithoutStacks.removeNodes(ListBuilder.arrayToSinglyList(input));
         ListNode obtainedWithoutStacksFaster = solutionWithoutStacks.removeNodesFaster(ListBuilder.arrayToSinglyList(input));
-        System.out.println("obtainedTwoScan :" + GenericPrinter.print(obtainedTwoScan));
-        System.out.println("obtainedOneScan :" + GenericPrinter.print(obtainedOneScan));
-        System.out.println("obtainedWithoutStacks :" + GenericPrinter.print(obtainedWithoutStacks));
-        System.out.println("obtainedWithoutStacksFaster :" + GenericPrinter.print(obtainedWithoutStacksFaster));
-        boolean resultTwoScan = GenericPrinter.equalsValues(expectedList, obtainedTwoScan);
-        boolean resultOneScan = GenericPrinter.equalsValues(expectedList, obtainedOneScan);
-        boolean resultWithoutStacks = GenericPrinter.equalsValues(expectedList, obtainedWithoutStacks);
-        boolean resultWithoutStacksFaster = GenericPrinter.equalsValues(expectedList, obtainedWithoutStacksFaster);
+        System.out.println("obtainedTwoScan :" + CommonMethods.print(obtainedTwoScan));
+        System.out.println("obtainedOneScan :" + CommonMethods.print(obtainedOneScan));
+        System.out.println("obtainedWithoutStacks :" + CommonMethods.print(obtainedWithoutStacks));
+        System.out.println("obtainedWithoutStacksFaster :" + CommonMethods.print(obtainedWithoutStacksFaster));
+        boolean resultTwoScan = CommonMethods.equalsValues(expectedList, obtainedTwoScan);
+        boolean resultOneScan = CommonMethods.equalsValues(expectedList, obtainedOneScan);
+        boolean resultWithoutStacks = CommonMethods.equalsValues(expectedList, obtainedWithoutStacks);
+        boolean resultWithoutStacksFaster = CommonMethods.equalsValues(expectedList, obtainedWithoutStacksFaster);
         System.out.println(" Result match : " + resultTwoScan + " | " + resultOneScan + " | " + resultWithoutStacks + " | " + resultWithoutStacksFaster);
 
         return resultTwoScan && resultOneScan && resultWithoutStacks && resultWithoutStacksFaster;

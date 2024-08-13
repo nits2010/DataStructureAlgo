@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Google;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -76,7 +76,7 @@ public class ShortestPathBreakingThroughWalls {
     }
 
     private static void test(int[][] grid, int k, int expected) {
-        System.out.println("\nGrid:\n" + GenericPrinter.toString(grid) + " Walls :" + k);
+        System.out.println("\nGrid:\n" + CommonMethods.toString(grid) + " Walls :" + k);
         System.out.println("Expected                :" + expected);
         System.out.println("BFS                     :" + ShortestPathBreakingThroughWallsBFS.minDist(grid, 0, 0, grid.length - 1, grid[0].length - 1, k));
         System.out.println("BFS                     :" + ShortestPathBreakingThroughWallsDijkstraAlgo.minDist(grid, 0, 0, grid.length - 1, grid[0].length - 1, k));

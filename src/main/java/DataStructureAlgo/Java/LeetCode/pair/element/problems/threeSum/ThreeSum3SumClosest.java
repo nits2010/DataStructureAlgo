@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.threeSum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -32,7 +32,7 @@ public class ThreeSum3SumClosest {
     private static void test(int[] nums, int target) {
 
         IThreeSum3SumClosest sorting = new IThreeSum3SumClosestSorting();
-        System.out.println("Input: " + GenericPrinter.toString(nums));
+        System.out.println("Input: " + CommonMethods.toString(nums));
         System.out.println(" Closest :" + sorting.threeSumClosest(nums, target));
 
     }

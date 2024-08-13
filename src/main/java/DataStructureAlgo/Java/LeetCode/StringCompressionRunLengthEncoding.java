@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.StringCompression2;
 
 /**
@@ -74,9 +74,9 @@ public class StringCompressionRunLengthEncoding {
     }
 
     public static void test(char[] chars, char[] expected) {
-        System.out.println("\nGiven:" + GenericPrinter.toString(chars) + "\nexpected:" + GenericPrinter.toString(expected));
+        System.out.println("\nGiven:" + CommonMethods.toString(chars) + "\nexpected:" + CommonMethods.toString(expected));
         int len = compress(chars);
-        System.out.println("Obtained:" + GenericPrinter.toString(chars, 0, len - 1));
+        System.out.println("Obtained:" + CommonMethods.toString(chars, 0, len - 1));
     }
 
 

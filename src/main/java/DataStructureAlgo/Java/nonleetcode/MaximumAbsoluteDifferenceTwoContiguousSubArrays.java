@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -36,7 +36,7 @@ public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 class SolutionMaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public int maximumAbsoluteDifferenceTwoContiguousSubArrays(int a[]) {
-        GenericPrinter.print(a);
+        CommonMethods.print(a);
 
 
         if (a == null || a.length == 0)

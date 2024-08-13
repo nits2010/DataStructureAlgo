@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -30,7 +30,7 @@ public class ContainerWithMostWater {
     }
 
     private static void test(int[] height, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(height) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(height) + " expected :" + expected);
         Solution solution = new Solution();
         System.out.println("brute :" + solution.maxAreaBruteForce(height));
         System.out.println("maxAreaOptimized :" + solution.maxAreaOptimized(height));

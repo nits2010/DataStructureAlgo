@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -90,7 +90,7 @@ public class GraphDivideTwoSetsOrBipartiteGraph {
 
     private static void test(int[][] graph) {
         System.out.println("Given Graph");
-        GenericPrinter.print(graph);
+        CommonMethods.print(graph);
 
         System.out.println(BipartiteGraphDFSBackTracking.isBipartiteGraph(graph));
 

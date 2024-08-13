@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -109,12 +109,12 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
 
     public int lengthOfLIS(int nums[]) {
         System.out.println("\n input ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         System.out.println("\n LIS -> ");
         LIS lis = lengthOfLISHelper(nums);
 
-        GenericPrinter.print(lis.lis);
+        CommonMethods.print(lis.lis);
 
         return lis.length;
     }

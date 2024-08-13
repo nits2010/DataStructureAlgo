@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.hard.List.ReverseNodesInKGroup_25;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
 /**
@@ -87,12 +87,12 @@ public class ReverseNodesInEvenLengthGroups_2074 {
     private static boolean test(Integer[] elements, Integer[] expected ) {
         ListNode originalList = ListBuilder.arrayToSinglyList(elements);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n Input :"+ GenericPrinter.print(originalList)  + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\n Input :"+ CommonMethods.print(originalList)  + "\nexpected :" + CommonMethods.print(expectedList));
 
         Solution solution = new Solution();
         ListNode output =  solution.reverseEvenLengthGroups(originalList);
         boolean result = false;
-        System.out.println(" Output :"+GenericPrinter.print(output) + " Result match : "+(result = GenericPrinter.equalsValues(expectedList,output)));
+        System.out.println(" Output :"+ CommonMethods.print(output) + " Result match : "+(result = CommonMethods.equalsValues(expectedList,output)));
         return result;
 
 

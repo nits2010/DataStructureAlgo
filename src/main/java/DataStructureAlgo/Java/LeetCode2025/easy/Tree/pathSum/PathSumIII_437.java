@@ -1,11 +1,9 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree.pathSum;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Author: Nitin Gupta

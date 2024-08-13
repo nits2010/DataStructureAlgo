@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -38,9 +38,9 @@ public class NextGreaterElementOnRightSide {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("\nNums:" + GenericPrinter.toString(nums) + "\nExpected:" + GenericPrinter.toString(expected));
-        System.out.println("Obtained                :" + GenericPrinter.toString(immediateGreaterElementOnRightSide(nums)));
-        System.out.println("ObtainedSimplified      :" + GenericPrinter.toString(immediateGreaterElementOnRightSideSimplified(nums)));
+        System.out.println("\nNums:" + CommonMethods.toString(nums) + "\nExpected:" + CommonMethods.toString(expected));
+        System.out.println("Obtained                :" + CommonMethods.toString(immediateGreaterElementOnRightSide(nums)));
+        System.out.println("ObtainedSimplified      :" + CommonMethods.toString(immediateGreaterElementOnRightSideSimplified(nums)));
 
 
     }

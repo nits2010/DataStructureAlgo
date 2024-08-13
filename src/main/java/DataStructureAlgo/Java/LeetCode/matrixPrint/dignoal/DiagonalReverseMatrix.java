@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.dignoal;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -48,10 +48,10 @@ public class DiagonalReverseMatrix {
     }
 
     private static boolean test(int[][] given, int[][] expected) {
-        System.out.println("\nGiven:\n" + GenericPrinter.toString(given));
-        System.out.println("expected:\n" + GenericPrinter.toString(expected));
+        System.out.println("\nGiven:\n" + CommonMethods.toString(given));
+        System.out.println("expected:\n" + CommonMethods.toString(expected));
         final int[][] output = reverseTheDiagonalOfMatrix(given);
-        System.out.println("Obtained:\n" + GenericPrinter.toString(output));
+        System.out.println("Obtained:\n" + CommonMethods.toString(output));
         return Arrays.deepEquals(expected, output);
 
     }
@@ -70,7 +70,7 @@ public class DiagonalReverseMatrix {
         if (input == null || input.length == 0)
             return input;
 
-        int[][] matrix = GenericPrinter.copyOf(input);
+        int[][] matrix = CommonMethods.copyOf(input);
         int i = 0;
         int j = matrix[0].length;
 

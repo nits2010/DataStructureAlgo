@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.adjacent.houserobber;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -57,7 +57,7 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\nInput :" + GenericPrinter.toString(nums) + " Expected :" + expected);
+        System.out.println("\nInput :" + CommonMethods.toString(nums) + " Expected :" + expected);
 
         System.out.println("Idea 1: Two array DPS :" + HouseRobberIIDP.rob(nums));
         System.out.println("Idea 2: Two array DPS :" + HouseRobberIIDP.rob(nums));

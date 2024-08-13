@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -75,10 +75,10 @@ public class OddEvenLinkedList_328 {
         Solution solution = new Solution();
         ListNode head = ListBuilder.arrayToSinglyList(list);
         ListNode expectedHead = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\nInput :" + GenericPrinter.print(head) + " expected :" + GenericPrinter.print(expectedHead));
+        System.out.println("\nInput :" + CommonMethods.print(head) + " expected :" + CommonMethods.print(expectedHead));
         ListNode actual = solution.oddEvenList(head);
-        System.out.println("Obtained :" + GenericPrinter.print(actual));
-        boolean testResult = GenericPrinter.equalsValues(expectedHead, actual);;
+        System.out.println("Obtained :" + CommonMethods.print(actual));
+        boolean testResult = CommonMethods.equalsValues(expectedHead, actual);;
         System.out.println("Test result :" + testResult);
         return testResult;
     }

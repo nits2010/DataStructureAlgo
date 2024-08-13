@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.LeetCode.LetterCombinationsPhoneNumber;
 
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class PrintLetterCombinationPhoneArray {
 
     //Follow-up: Check whether the given text matches with a given integer array.
     private static void testGivenTextMatchesWithArray(int[] nums, String text) {
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println("Testing text :" + text + " matches with " + match(nums, text, 0, text));
     }
 
@@ -74,7 +74,7 @@ public class PrintLetterCombinationPhoneArray {
      */
     private static void testIndividualNumbersArray(int[] nums) {
         System.out.println("Testing ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         List<String> combinations = new ArrayList<>();
 

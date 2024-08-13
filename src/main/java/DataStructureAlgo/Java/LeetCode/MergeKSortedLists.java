@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import  DataStructureAlgo.Java.helpers.templates.ListNode;
 
@@ -39,20 +39,20 @@ public class MergeKSortedLists {
 
     private static void testPQ(ListNode[] list) {
         IMergeKSortedLists pq = new MergeKSortedListsPriorityQueue();
-        System.out.println("\n Input : " + GenericPrinter.print(list));
+        System.out.println("\n Input : " + CommonMethods.print(list));
         System.out.println("PQ->");
         ListNode head = pq.mergeKLists(list);
-        System.out.println(GenericPrinter.print(head));
+        System.out.println(CommonMethods.print(head));
     }
 
     private static void testKWay(ListNode[] list) {
         IMergeKSortedLists kWayMerge = new MergeKSortedListsDC();
-        System.out.println("\n Input : " + GenericPrinter.print(list));
+        System.out.println("\n Input : " + CommonMethods.print(list));
 
 
         System.out.println("KWay->");
         ListNode head = kWayMerge.mergeKLists(list);
-        System.out.println(GenericPrinter.print(head));
+        System.out.println(CommonMethods.print(head));
 
     }
 }

@@ -1,9 +1,9 @@
 package DataStructureAlgo.Java.LeetCode.island;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.companyWise.GroupOn.IslandsSizeCount;
 
-import static DataStructureAlgo.Java.helpers.GenericPrinter.*;
+import static DataStructureAlgo.Java.helpers.CommonMethods.*;
 
 /**
  * Author: Nitin Gupta
@@ -48,7 +48,7 @@ public class NumberIslands {
     }
 
     private static void test(char[][] grid, int expected) {
-        System.out.println("\nInput \n" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\nInput \n" + CommonMethods.toString(grid) + " expected :" + expected);
         NumberIslandsDFS dfs = new NumberIslandsDFS();
         NumberIslandsDFSV2 dfs2 = new NumberIslandsDFSV2();
         NumberIslandsDFSDirectIteration dfs3 = new NumberIslandsDFSDirectIteration();

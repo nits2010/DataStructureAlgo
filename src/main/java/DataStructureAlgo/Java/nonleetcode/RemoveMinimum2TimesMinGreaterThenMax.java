@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplication;
 
 import java.util.Arrays;
@@ -52,7 +52,7 @@ public class RemoveMinimum2TimesMinGreaterThenMax {
     }
 
     public static void test(int[] nums, int expected) {
-        System.out.println("-------\nNums:" + GenericPrinter.toString(nums) + "\nExpected  : " + expected);
+        System.out.println("-------\nNums:" + CommonMethods.toString(nums) + "\nExpected  : " + expected);
         RemoveMinimum2TimesMinGreaterThenMaxBacktrack backtrack = new RemoveMinimum2TimesMinGreaterThenMaxBacktrack();
         RemoveMinimum2TimesMinGreaterThenMaxDP dp = new RemoveMinimum2TimesMinGreaterThenMaxDP();
         RemoveMinimum2TimesMinGreaterThenMaxIterate iterate = new RemoveMinimum2TimesMinGreaterThenMaxIterate();

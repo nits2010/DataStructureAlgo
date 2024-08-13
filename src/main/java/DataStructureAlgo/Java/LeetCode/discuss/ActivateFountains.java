@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.discuss;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.LeetCode.MinimumJumpToReachLastJumpGame;
 
 import java.util.Arrays;
@@ -41,7 +41,7 @@ public class ActivateFountains {
     }
 
     private static void test(int[] fountains, int expected) {
-        System.out.println("\nfountains: " + GenericPrinter.toString(fountains));
+        System.out.println("\nfountains: " + CommonMethods.toString(fountains));
 
         ActivateFountainsIntervalMerge intervalsMerge = new ActivateFountainsIntervalMerge();
         ActivateFountainsIntervalMergeOptimized optimized = new ActivateFountainsIntervalMergeOptimized();

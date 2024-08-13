@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.nonleetcode;
 
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 public class Sorts {
 
@@ -103,7 +103,7 @@ public class Sorts {
         System.out.println("SDF");
         int[] input = {2, 3, 5, 6, 4, 8, 6, 3, 8, 7, 8};
         int[] temp = new int[input.length];
-        GenericPrinter.print(input);
+        CommonMethods.print(input);
 
 
         Sorts s = new Sorts();
@@ -111,17 +111,17 @@ public class Sorts {
 
         mergeSort.mergeSort(input, temp, 0, input.length - 1);
         System.out.println();
-        GenericPrinter.print(input);
+        CommonMethods.print(input);
 
 
         System.out.println("\n\nQuickSort");
         int[] input2 = {2, 3, 6, 2, 4, 8, 0, 3, 8, 7, 8};
-        GenericPrinter.print(input2);
+        CommonMethods.print(input2);
 
         System.out.println();
         QuickSort quickSort = s.new QuickSort();
         quickSort.quickSort(input2, 0, input2.length - 1);
-        GenericPrinter.print(input2);
+        CommonMethods.print(input2);
 
 
     }

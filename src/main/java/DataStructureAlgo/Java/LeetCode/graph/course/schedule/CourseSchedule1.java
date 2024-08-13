@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph.course.schedule;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.types.DirectedGraph;
 import  DataStructureAlgo.Java.nonleetcode.graph.questions.AlienLanguageOrder;
 
@@ -54,7 +54,7 @@ public class CourseSchedule1 {
 
     private static void test(int numCourses, int[][] prerequisites, boolean expected) {
 
-        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + GenericPrinter.toString(prerequisites));
+        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + CommonMethods.toString(prerequisites));
 
         ICourseSchedule bfs = new CourseScheduleITopologicalBFS();
         ICourseSchedule bfsOptimized = new CourseScheduleITopologicalBFSOptimized();

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -36,9 +36,9 @@ public class FindFirstLastPositionElementSortedArray {
     }
 
     private static void test(int[] nums, int target, int[] expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " target :" + target + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Input :" + CommonMethods.toString(nums) + " target :" + target + " expected :" + CommonMethods.toString(expected));
         BinarySearchFirstLastIndex firstLastIndex = new BinarySearchFirstLastIndex();
-        System.out.println("Binary search :" + GenericPrinter.toString(firstLastIndex.searchRange(nums, target)));
+        System.out.println("Binary search :" + CommonMethods.toString(firstLastIndex.searchRange(nums, target)));
     }
 }
 

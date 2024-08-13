@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -24,9 +24,9 @@ public class SuffixArray {
 
 
     private static void test(String text, int expected[]) {
-        System.out.println("\nText :" + text + " Expected " + GenericPrinter.toString(expected));
-        System.out.println(GenericPrinter.toString(suffixArrayPolynomial(text)));
-        System.out.println(GenericPrinter.toString(suffixArray(text)));
+        System.out.println("\nText :" + text + " Expected " + CommonMethods.toString(expected));
+        System.out.println(CommonMethods.toString(suffixArrayPolynomial(text)));
+        System.out.println(CommonMethods.toString(suffixArray(text)));
     }
 
     public static int[] suffixArrayPolynomial(String text) {

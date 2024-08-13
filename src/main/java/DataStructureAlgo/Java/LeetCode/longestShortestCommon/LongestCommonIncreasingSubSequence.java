@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
 
 import java.util.ArrayList;
@@ -53,10 +53,10 @@ public class LongestCommonIncreasingSubSequence {
     private static void test(int[] arr1, int[] arr2, ILongestCommonIncreasingSubSequence sol, ILongestCommonIncreasingSubSequence sol2) {
         System.out.println("2D");
         System.out.println("First array : ");
-        GenericPrinter.print(arr1);
+        CommonMethods.print(arr1);
 
         System.out.println("Second array : ");
-        GenericPrinter.print(arr2);
+        CommonMethods.print(arr2);
 
         System.out.println("\n LCIS length 2D " + sol.longestCommonIncreasingSubSequence(arr1, arr2));
         System.out.println("\n LCIS length 1D " + sol2.longestCommonIncreasingSubSequence(arr1, arr2));

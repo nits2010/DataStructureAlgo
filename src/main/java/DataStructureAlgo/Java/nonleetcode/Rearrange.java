@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -32,9 +32,9 @@ public class Rearrange {
         int[] arr = {2, 0, 1, 4, 5, 3};
         int n = arr.length;
 
-        System.out.println("Given array is : " + GenericPrinter.toString(arr));
+        System.out.println("Given array is : " + CommonMethods.toString(arr));
         rearrange(arr, n);
-        System.out.println("Modified array is :" + GenericPrinter.toString(arr));
+        System.out.println("Modified array is :" + CommonMethods.toString(arr));
 
     }
 }

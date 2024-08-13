@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * Date: 2019-07-24
  * Description:
  */
-public class GenericPrinter {
+public class CommonMethods {
 
     public static void print(final int[] a) {
         System.out.println(toString(a));
@@ -453,62 +453,62 @@ public class GenericPrinter {
 
     public static <I, E> void inputPrint(I[] input, E expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + GenericPrinter.toString(input));
+        System.out.println(inputString + ": " + CommonMethods.toString(input));
         System.out.println("Expected :" + expected);
 
     }
 
     public static <I, E> void inputPrint(I[] input, E[] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + GenericPrinter.toString(input));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString + ": " + CommonMethods.toString(input));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
     public static <I, E> void inputPrint(I[][] input, E[] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + GenericPrinter.toString(input));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString + ": " + CommonMethods.toString(input));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
 
     public static <I, E> void inputPrint(I[][] input, E[][] expected, String inputString) {
         System.out.println("-----------");
-        System.out.println(inputString + ": " + GenericPrinter.toString(input));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString + ": " + CommonMethods.toString(input));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[] input1, I2[] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
-        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString1 + ": " + CommonMethods.toString(input1));
+        System.out.println(inputString2 + ": " + CommonMethods.toString(input2));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
-        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString1 + ": " + CommonMethods.toString(input1));
+        System.out.println(inputString2 + ": " + CommonMethods.toString(input2));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
-        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString1 + ": " + CommonMethods.toString(input1));
+        System.out.println(inputString2 + ": " + CommonMethods.toString(input2));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 
     public static <I, I2, E> void inputPrint(I[][] input1, I2[][] input2, E[][] expected, String inputString1, String inputString2) {
         System.out.println("-----------");
-        System.out.println(inputString1 + ": " + GenericPrinter.toString(input1));
-        System.out.println(inputString2 + ": " + GenericPrinter.toString(input2));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println(inputString1 + ": " + CommonMethods.toString(input1));
+        System.out.println(inputString2 + ": " + CommonMethods.toString(input2));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
     }
 

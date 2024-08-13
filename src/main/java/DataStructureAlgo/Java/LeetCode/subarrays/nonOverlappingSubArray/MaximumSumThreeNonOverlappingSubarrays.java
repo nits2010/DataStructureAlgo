@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -34,9 +34,9 @@ public class MaximumSumThreeNonOverlappingSubarrays {
     }
 
     private static void test(int[] nums, int k, int[] expected) {
-        System.out.println("Input : " + GenericPrinter.toString(nums) + " k :" + k);
+        System.out.println("Input : " + CommonMethods.toString(nums) + " k :" + k);
         MaximumSum3NonOverlappingSubarrays sol = new MaximumSum3NonOverlappingSubarrays();
-        System.out.println("Obtained :" + GenericPrinter.toString(sol.maxSumOfThreeSubarrays(nums, k)) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("Obtained :" + CommonMethods.toString(sol.maxSumOfThreeSubarrays(nums, k)) + " expected :" + CommonMethods.toString(expected));
     }
 }
 
@@ -146,7 +146,7 @@ class MaximumSum3NonOverlappingSubarrays {
             j--;
         }
 
-        System.out.println("Left " + GenericPrinter.toString(leftWindowSum) + " \n right " + GenericPrinter.toString(rightWindowSum));
+        System.out.println("Left " + CommonMethods.toString(leftWindowSum) + " \n right " + CommonMethods.toString(rightWindowSum));
 
         /**
          * left -> represent the index of left sub-array

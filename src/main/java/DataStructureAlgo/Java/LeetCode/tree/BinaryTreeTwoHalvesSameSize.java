@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
@@ -52,7 +52,7 @@ public class BinaryTreeTwoHalvesSameSize {
     }
 
     private static void test(TreeNode root, int nodeAtBreak[]) {
-        System.out.println("\n Input tree :" + GenericPrinter.preOrder(root) + " expected Size break :" + GenericPrinter.toString(nodeAtBreak));
+        System.out.println("\n Input tree :" + CommonMethods.preOrder(root) + " expected Size break :" + CommonMethods.toString(nodeAtBreak));
 
         final TreeNode[] treeNodes = binaryTreeTwoHalvesSameSize(root);
 

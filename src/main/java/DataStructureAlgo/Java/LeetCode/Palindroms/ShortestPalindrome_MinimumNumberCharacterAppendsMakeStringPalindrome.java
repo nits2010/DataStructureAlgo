@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.Palindroms;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
 
 /**
@@ -90,8 +90,8 @@ class ShortestPalindromeAppendsEndKMP {
         String joined = rev + "$" + s;
 
         int prefixWhichIsAlsoSuffix[] = prefixWhichIsAlsoSuffix(joined);
-        System.out.println(GenericPrinter.toString(joined.toCharArray()));
-        System.out.println(GenericPrinter.toString(prefixWhichIsAlsoSuffix));
+        System.out.println(CommonMethods.toString(joined.toCharArray()));
+        System.out.println(CommonMethods.toString(prefixWhichIsAlsoSuffix));
 
         int lengthOfLongestPrefixAlsoSuffix = prefixWhichIsAlsoSuffix[joined.length() - 1];
 

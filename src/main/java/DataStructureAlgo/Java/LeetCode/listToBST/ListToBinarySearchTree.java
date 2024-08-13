@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.listToBST;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.ListNode;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.helpers.ListBuilder;
@@ -36,14 +36,14 @@ public class ListToBinarySearchTree {
 
 
     private static void testSinglyListToBST(ListNode head, List<Integer> inOrderTraversal, int expectedHeight) {
-        System.out.println("\n Input :" + GenericPrinter.print(head) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
+        System.out.println("\n Input :" + CommonMethods.print(head) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
 
         ConvertSortedSinglyListBinarySearchTree listBinarySearchTree = new ConvertSortedSinglyListBinarySearchTree();
         final TreeNode treeNode = listBinarySearchTree.sortedListToBST(head);
 
         int height = height(treeNode);
 
-        System.out.println("\n Singly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Singly Inorder Traversal :" + CommonMethods.inOrder(treeNode) + " Height :" + height);
     }
 
     private static void testDoublyListToBST(TreeNode head, List<Integer> inOrderTraversal, int expectedHeight) {
@@ -55,7 +55,7 @@ public class ListToBinarySearchTree {
 
         int height = height(treeNode);
 
-        System.out.println("\n Doubly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Doubly Inorder Traversal :" + CommonMethods.inOrder(treeNode) + " Height :" + height);
     }
 
 

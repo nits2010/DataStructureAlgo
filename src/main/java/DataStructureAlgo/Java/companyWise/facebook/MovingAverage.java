@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.SimpleMovingAverage;
 
 /**
@@ -71,8 +71,8 @@ public class MovingAverage {
     }
 
     private static void test(int[] nums, int n, double[] expected) {
-        System.out.println("\nNums:" + GenericPrinter.toString(nums) + ", n:" + n + "\nExpected:" + GenericPrinter.toString(expected));
-        System.out.println("Obtained:" + GenericPrinter.toString(movingAverage(nums, n)));
+        System.out.println("\nNums:" + CommonMethods.toString(nums) + ", n:" + n + "\nExpected:" + CommonMethods.toString(expected));
+        System.out.println("Obtained:" + CommonMethods.toString(movingAverage(nums, n)));
     }
 
     private static double[] movingAverage(int[] arr, int n) {

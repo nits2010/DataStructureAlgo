@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.partitions;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +47,7 @@ public class PartitionArrayThreePartsWithEqualSum {
     }
 
     private static void test(int[] nums, boolean expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected " + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(nums) + " expected " + expected);
         PartitionArrayThreePartsWithEqualSumPrefixSumArray prefixSumArray = new PartitionArrayThreePartsWithEqualSumPrefixSumArray();
         PartitionArrayThreePartsWithEqualSumPrefixSumArrayOptimized prefixSumArrayOptimized = new PartitionArrayThreePartsWithEqualSumPrefixSumArrayOptimized();
         PartitionArrayThreePartsWithEqualSumIndex sumIndex = new PartitionArrayThreePartsWithEqualSumIndex();

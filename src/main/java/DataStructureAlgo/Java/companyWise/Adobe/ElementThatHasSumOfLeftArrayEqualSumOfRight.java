@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Adobe;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -39,7 +39,7 @@ public class ElementThatHasSumOfLeftArrayEqualSumOfRight {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\nInput : " + GenericPrinter.toString(nums) + " expected :" + expected);
+        System.out.println("\nInput : " + CommonMethods.toString(nums) + " expected :" + expected);
         System.out.println("Prefix/Suffix: Obtained :" + partitionIndexOfElementPrefixSuffixSum(nums));
         System.out.println("Constant: Obtained :" + partitionIndexOfElement(nums));
     }

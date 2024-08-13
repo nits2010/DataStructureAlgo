@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -48,7 +48,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
     }
 
     private static void test(int[] nums, int L, int M, int expected) {
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         MaximumSumTwoNonOverlapUsingBuySellStocksIdea buySellStocksIdea = new MaximumSumTwoNonOverlapUsingBuySellStocksIdea();
         MaximumSumTwoNonOverlapDP dp = new MaximumSumTwoNonOverlapDP();
         System.out.println(" L : " + L + " M :" + M + " obtained :" + buySellStocksIdea.maxSumTwoNoOverlap(nums, L, M) + " Expected :" + expected);
@@ -184,7 +184,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
             for (int i = 1; i < nums.length; ++i)
                 nums[i] += nums[i - 1];
 
-            GenericPrinter.print(nums);
+            CommonMethods.print(nums);
             System.out.println("........................................");
 
             int res = nums[L + M - 1], Lmax = nums[L - 1], Mmax = nums[M - 1];

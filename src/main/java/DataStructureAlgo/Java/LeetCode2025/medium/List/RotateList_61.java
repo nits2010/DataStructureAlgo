@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -63,12 +63,12 @@ public class RotateList_61 {
     private static boolean test(Integer[] input, int k, Integer[] expected) {
         ListNode inputList = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n Input :" + GenericPrinter.print(inputList) + " k = " + k + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\n Input :" + CommonMethods.print(inputList) + " k = " + k + "\nexpected :" + CommonMethods.print(expectedList));
 
         RotateList.Solution solution = new RotateList.Solution();
         ListNode output = solution.rotateRight(inputList, k);
-        boolean result = GenericPrinter.equalsValues(expectedList, output);
-        System.out.println(" Output :" + GenericPrinter.print(output) + " Result match : " + result);
+        boolean result = CommonMethods.equalsValues(expectedList, output);
+        System.out.println(" Output :" + CommonMethods.print(output) + " Result match : " + result);
 
         return result;
     }

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.nextGreaterElement;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.*;
@@ -44,14 +44,14 @@ public class NextGreaterElementI {
     }
 
     private static boolean test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\nNum1:" + GenericPrinter.toString(nums1));
-        System.out.println("Num2:" + GenericPrinter.toString(nums2));
-        System.out.println("Expected            :" + GenericPrinter.toString(expected));
+        System.out.println("\nNum1:" + CommonMethods.toString(nums1));
+        System.out.println("Num2:" + CommonMethods.toString(nums2));
+        System.out.println("Expected            :" + CommonMethods.toString(expected));
 
         int[] bruteForce = NextGreaterElementIUBruteForce.nextGreaterElement(nums1, nums2);
         int[] obtainedUsingNextGreaterElement = NextGreaterElementIUsingNGERight.nextGreaterElement(nums1, nums2);
-        System.out.println("using bruteForce    :" + GenericPrinter.toString(bruteForce));
-        System.out.println("using NGE           :" + GenericPrinter.toString(obtainedUsingNextGreaterElement));
+        System.out.println("using bruteForce    :" + CommonMethods.toString(bruteForce));
+        System.out.println("using NGE           :" + CommonMethods.toString(obtainedUsingNextGreaterElement));
 
         return Arrays.equals(expected, obtainedUsingNextGreaterElement) && Arrays.equals(expected, bruteForce);
 

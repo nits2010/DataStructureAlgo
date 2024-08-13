@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.threeSum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
 import java.util.*;
@@ -53,7 +53,7 @@ public class ThreeSum3SumMultiplicity {
     }
 
     private static void test(int[] nums, int target, int expected) {
-        System.out.println("Input :" + GenericPrinter.toString(nums));
+        System.out.println("Input :" + CommonMethods.toString(nums));
 
         IThreeSum3SumMultiplicity sorting = new ThreeSum3SumMultiplicitySorting();
         IThreeSum3SumMultiplicity counting = new ThreeSum3SumMultiplicityCounting();

@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.easy.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -73,7 +73,7 @@ public class PalindromeLinkedList_234 {
 
     private static boolean test(Integer[] elements, boolean expected ) {
         ListNode originalList = ListBuilder.arrayToSinglyList(elements);
-        System.out.println("\n Input :"+ GenericPrinter.print(originalList) + "\nexpected :" +expected);
+        System.out.println("\n Input :"+ CommonMethods.print(originalList) + "\nexpected :" +expected);
 
         Solution solution = new Solution();
         boolean output=  solution.isPalindrome(originalList);

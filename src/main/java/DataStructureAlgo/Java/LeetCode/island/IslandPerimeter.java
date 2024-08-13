@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.island;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -37,7 +37,7 @@ public class IslandPerimeter {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Grid :\n" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\n Grid :\n" + CommonMethods.toString(grid) + " expected :" + expected);
         IslandPerimeterNeighbourCount neighbourCount = new IslandPerimeterNeighbourCount();
         IslandPerimeterEdgeCount edgeCount = new IslandPerimeterEdgeCount();
         IslandPerimeterNeighbourCount2 edgeCount2 = new IslandPerimeterNeighbourCount2();

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -37,7 +37,7 @@ public class MaximumDistanceInArrays {
     }
 
     private static void test(int[][] list, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(list) + " expected :" + expected + "\n");
+        System.out.println("\n Input :" + CommonMethods.toString(list) + " expected :" + expected + "\n");
 
         MaximumDistanceInArraysBruteForce bruteForce = new MaximumDistanceInArraysBruteForce();
         MaximumDistanceInArraysBruteForceOptimized bruteForceOptimized = new MaximumDistanceInArraysBruteForceOptimized();

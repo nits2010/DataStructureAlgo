@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -39,7 +39,7 @@ public class PainterPartitionProblem {
     }
 
     private static void test(int[] boards, int painters, int expected) {
-        System.out.println("\nBoards:" + GenericPrinter.toString(boards) + ", Painters: " + painters + "\nExpected      :" + expected);
+        System.out.println("\nBoards:" + CommonMethods.toString(boards) + ", Painters: " + painters + "\nExpected      :" + expected);
         PainterPartitionProblemDP dp = new PainterPartitionProblemDP();
         System.out.println("DP            :" + dp.minCost(boards, painters));
 

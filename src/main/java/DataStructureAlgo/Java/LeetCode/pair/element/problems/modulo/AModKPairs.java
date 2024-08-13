@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.modulo;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -30,8 +30,8 @@ public class AModKPairs {
     }
 
     private static void test(int[] nums, int k) {
-        System.out.println(GenericPrinter.toString(nums) + " k " + k);
-        System.out.println(GenericPrinter.toString(pairs(nums, k)));
+        System.out.println(CommonMethods.toString(nums) + " k " + k);
+        System.out.println(CommonMethods.toString(pairs(nums, k)));
     }
 
     /*

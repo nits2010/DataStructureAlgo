@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.Pair;
 
@@ -60,7 +60,7 @@ public class AllNodesDistanceKBinaryTree {
         KDistanceAwayFromNodeSolution solution1 = new KDistanceAwayFromNodeSolution();
         KDistanceAwayFromNodeSolutionCleaner solution1Cleaner = new KDistanceAwayFromNodeSolutionCleaner();
 
-        System.out.println(GenericPrinter.preOrder(node.getKey()));
+        System.out.println(CommonMethods.preOrder(node.getKey()));
         System.out.println("node :" + node.getValue().val + " k: " + k);
         System.out.println(solution1.distanceK(node.getKey(), node.getValue(), k));
         System.out.println(solution1Cleaner.distanceK(node.getKey(), node.getValue(), k));

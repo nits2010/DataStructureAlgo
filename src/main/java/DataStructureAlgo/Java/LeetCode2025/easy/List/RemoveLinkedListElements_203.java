@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.easy.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.medium.List.OddEvenLinkedList_328;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -77,18 +77,18 @@ public class RemoveLinkedListElements_203 {
     private static boolean test(Integer[] input, int k, Integer[] expected) {
         System.out.println("--------------");
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("Input: " + GenericPrinter.print(ListBuilder.arrayToSinglyList(input)) + " k = " + k + "\nExpected: " + GenericPrinter.print(expectedList));
+        System.out.println("Input: " + CommonMethods.print(ListBuilder.arrayToSinglyList(input)) + " k = " + k + "\nExpected: " + CommonMethods.print(expectedList));
         SolutionIterative solutionIterative = new SolutionIterative();
         SolutionRecursive solutionRecursive = new SolutionRecursive();
 
         ListNode outputIterative = solutionIterative.removeElements(ListBuilder.arrayToSinglyList(input), k);
         ListNode outputRecursive = solutionRecursive.removeElements(ListBuilder.arrayToSinglyList(input), k);
 
-        System.out.println("outputIterative: " + GenericPrinter.print(outputIterative));
-        System.out.println("outputRecursive: " + GenericPrinter.print(outputRecursive));
+        System.out.println("outputIterative: " + CommonMethods.print(outputIterative));
+        System.out.println("outputRecursive: " + CommonMethods.print(outputRecursive));
 
-        boolean testResultIterative = GenericPrinter.equalsValues(expectedList, outputIterative);
-        boolean testResultRecursive = GenericPrinter.equalsValues(expectedList, outputRecursive);
+        boolean testResultIterative = CommonMethods.equalsValues(expectedList, outputIterative);
+        boolean testResultRecursive = CommonMethods.equalsValues(expectedList, outputRecursive);
 
         boolean testResult = testResultIterative == testResultRecursive;
         System.out.println("Test result: " + testResultIterative + " | " + testResultRecursive);

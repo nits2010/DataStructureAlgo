@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.easy.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.DoublyListNode;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
 
@@ -60,27 +60,27 @@ public class ReverseLinkedList_206 {
 
     private static void test(Integer[] elements) {
 
-        testSingly(ListBuilder.arrayToSinglyList(elements), ListBuilder.arrayToSinglyList(GenericPrinter.reverse(elements)));
-        testDoubly(ListBuilder.arrayToDoublyListNode(elements), ListBuilder.arrayToDoublyListNode(GenericPrinter.reverse(elements)));
+        testSingly(ListBuilder.arrayToSinglyList(elements), ListBuilder.arrayToSinglyList(CommonMethods.reverse(elements)));
+        testDoubly(ListBuilder.arrayToDoublyListNode(elements), ListBuilder.arrayToDoublyListNode(CommonMethods.reverse(elements)));
 
     }
 
 
     private static void testSingly(ListNode list, ListNode expected) {
-        System.out.println("\n Singly Input :" + GenericPrinter.print(list) + " expected :" + GenericPrinter.print(expected));
+        System.out.println("\n Singly Input :" + CommonMethods.print(list) + " expected :" + CommonMethods.print(expected));
         ReverseSinglyLinkedList solution = new ReverseSinglyLinkedList();
-        System.out.println(" Recursive :" + GenericPrinter.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
-        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
-        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
+        System.out.println(" Recursive :" + CommonMethods.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + CommonMethods.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + CommonMethods.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
     }
 
     private static void testDoubly(DoublyListNode list, DoublyListNode expected) {
-        System.out.println("\n Doubly Input :" + GenericPrinter.print(list) + " expected :" + GenericPrinter.print(expected));
+        System.out.println("\n Doubly Input :" + CommonMethods.print(list) + " expected :" + CommonMethods.print(expected));
 
         ReverseDoublyLinkedList solution = new ReverseDoublyLinkedList();
-        System.out.println(" Recursive :" + GenericPrinter.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
-        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
-        System.out.println(" Iterative :" + GenericPrinter.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
+        System.out.println(" Recursive :" + CommonMethods.print(solution.reverseListRecursive(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + CommonMethods.print(solution.reverseListIterative(ListBuilder.copyOf(list))));
+        System.out.println(" Iterative :" + CommonMethods.print(solution.reverseListIterative2(ListBuilder.copyOf(list))));
     }
 
 }

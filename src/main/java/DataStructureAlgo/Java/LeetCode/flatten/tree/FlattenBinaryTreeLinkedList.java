@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.flatten.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 
@@ -92,11 +92,11 @@ public class FlattenBinaryTreeLinkedList {
     }
 
     private static void testPostOrder(TreeNode root, List<Integer> expected) {
-        System.out.println(" \n Input " + GenericPrinter.preOrder(root) + " expected :" + expected);
+        System.out.println(" \n Input " + CommonMethods.preOrder(root) + " expected :" + expected);
 
         FlattenBinaryTreeLinkedListPostOrder postOrder = new FlattenBinaryTreeLinkedListPostOrder();
         postOrder.flatten(root);
-        System.out.println("\n PostOrder  :" + GenericPrinter.preOrder(root));
+        System.out.println("\n PostOrder  :" + CommonMethods.preOrder(root));
     }
 
 
@@ -105,7 +105,7 @@ public class FlattenBinaryTreeLinkedList {
 
         FlattenBinaryTreeLinkedListPostOrderShort postOrder = new FlattenBinaryTreeLinkedListPostOrderShort();
         postOrder.flatten(root);
-        System.out.println("\n PostOrder short:" + GenericPrinter.preOrder(root));
+        System.out.println("\n PostOrder short:" + CommonMethods.preOrder(root));
     }
 
 

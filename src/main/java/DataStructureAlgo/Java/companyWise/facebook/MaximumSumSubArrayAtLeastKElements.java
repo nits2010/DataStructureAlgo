@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -40,7 +40,7 @@ public class MaximumSumSubArrayAtLeastKElements {
     static int maxSum(int num[], int k) {
         if (num == null || num.length == 0)
             return 0;
-        GenericPrinter.print(num);
+        CommonMethods.print(num);
 
         int max = Integer.MIN_VALUE;
 

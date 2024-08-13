@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode;
 
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -58,11 +58,11 @@ public class VowelSpellchecker {
     }
 
     private static void test(String[] wordList, String[] queries, String[] expected) {
-        System.out.println("\nWordlist :" + GenericPrinter.toString(wordList) + "\nQuries :" + GenericPrinter.toString(queries) + "\nExpected :" + GenericPrinter.toString(expected));
+        System.out.println("\nWordlist :" + CommonMethods.toString(wordList) + "\nQuries :" + CommonMethods.toString(queries) + "\nExpected :" + CommonMethods.toString(expected));
         VowelSpellcheckerUsingMap usingMap = new VowelSpellcheckerUsingMap();
         VowelSpellcheckerUsingMap2 usingMap2 = new VowelSpellcheckerUsingMap2();
-        System.out.println("usingMap  :" + GenericPrinter.toString(usingMap.spellchecker(wordList, queries)));
-        System.out.println("usingMap2 :" + GenericPrinter.toString(usingMap2.spellchecker(wordList, queries)));
+        System.out.println("usingMap  :" + CommonMethods.toString(usingMap.spellchecker(wordList, queries)));
+        System.out.println("usingMap2 :" + CommonMethods.toString(usingMap2.spellchecker(wordList, queries)));
     }
 }
 

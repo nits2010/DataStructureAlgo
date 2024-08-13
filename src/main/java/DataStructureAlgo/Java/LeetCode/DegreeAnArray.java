@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,7 +44,7 @@ public class DegreeAnArray {
     }
 
     private static void test(int[] nums) {
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println();
         System.out.println("Simple Count -> " + DegreeAnArraySimpleCount.findShortestSubArray(nums));
         System.out.println("Single scan -> " + DegreeAnArraySingleScan.findShortestSubArray(nums));

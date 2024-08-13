@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -67,9 +67,9 @@ public class RateInMazeWithJump {
 
     private static void test(int[][] maze, int[][] expected) {
         int n = maze.length, m = maze[0].length;
-        System.out.println("\n Maze :\n" + GenericPrinter.toString(maze) + " \n expected :\n" + GenericPrinter.toString(expected));
+        System.out.println("\n Maze :\n" + CommonMethods.toString(maze) + " \n expected :\n" + CommonMethods.toString(expected));
         int[][] result = rateInMazeWithJump(maze, 0, 0, n - 1, m - 1);
-        System.out.println("\n Obtained :\n" + GenericPrinter.toString(result) + "\nMatch :" + isCorrect(result, expected));
+        System.out.println("\n Obtained :\n" + CommonMethods.toString(result) + "\nMatch :" + isCorrect(result, expected));
 
     }
 

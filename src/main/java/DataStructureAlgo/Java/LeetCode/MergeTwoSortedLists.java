@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import  DataStructureAlgo.Java.helpers.templates.DoublyListNode;
 import  DataStructureAlgo.Java.helpers.templates.ListNode;
@@ -30,19 +30,19 @@ public class MergeTwoSortedLists {
     }
 
     private static void testSingly(ListNode l1, ListNode l2, ListNode expected) {
-        System.out.println("\nSingly \n  L1 :" + GenericPrinter.print(l1) + " L2 :" + GenericPrinter.print(l1) + " expected :" + GenericPrinter.print(expected));
+        System.out.println("\nSingly \n  L1 :" + CommonMethods.print(l1) + " L2 :" + CommonMethods.print(l1) + " expected :" + CommonMethods.print(expected));
 
         MergeTwoSortedSinglyLists singlyLists = new MergeTwoSortedSinglyLists();
-        System.out.println(" Recursive :" + GenericPrinter.print(singlyLists.mergeTwoListsRecursive(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
-        System.out.println(" Iterative :" + GenericPrinter.print(singlyLists.mergeTwoListsIterative(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
+        System.out.println(" Recursive :" + CommonMethods.print(singlyLists.mergeTwoListsRecursive(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
+        System.out.println(" Iterative :" + CommonMethods.print(singlyLists.mergeTwoListsIterative(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
     }
 
     private static void testDoubly(DoublyListNode l1, DoublyListNode l2, DoublyListNode expected) {
-        System.out.println("\nDoubly \n L1 :" + GenericPrinter.print(l1) + " L2 :" + GenericPrinter.print(l1) + " expected :" + GenericPrinter.print(expected));
+        System.out.println("\nDoubly \n L1 :" + CommonMethods.print(l1) + " L2 :" + CommonMethods.print(l1) + " expected :" + CommonMethods.print(expected));
 
         MergeTwoSortedDoublyLists doublyLists = new MergeTwoSortedDoublyLists();
-        System.out.println(" Recursive :" + GenericPrinter.print(doublyLists.mergeTwoListsRecursive(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
-        System.out.println(" Iterative :" + GenericPrinter.print(doublyLists.mergeTwoListsIterative(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
+        System.out.println(" Recursive :" + CommonMethods.print(doublyLists.mergeTwoListsRecursive(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
+        System.out.println(" Iterative :" + CommonMethods.print(doublyLists.mergeTwoListsIterative(ListBuilder.copyOf(l1), ListBuilder.copyOf(l2))));
 
     }
 }

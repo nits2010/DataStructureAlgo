@@ -1,6 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;

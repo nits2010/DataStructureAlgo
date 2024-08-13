@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -33,7 +33,7 @@ public class MaximumDifferenceInIndex {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(nums) + " expected :" + expected);
 
         MaximumDifferenceInIndexBruteForce bruteForce = new MaximumDifferenceInIndexBruteForce();
         MaximumDifferenceInIndexPrefixSuffixArray prefixSuffixArray = new MaximumDifferenceInIndexPrefixSuffixArray();

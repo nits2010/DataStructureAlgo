@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -51,7 +51,7 @@ public class TreasureIsland {
     private static void test(char[][] grid) {
         BFS bfs = new BFS();
         List<int[]> path = bfs.shortestPathToTreasureIsland(grid);
-        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + GenericPrinter.toString(path));
+        System.out.println("Minimum Distance :" + (path.size() - 1) + " Path -> " + CommonMethods.toString(path));
     }
 
 

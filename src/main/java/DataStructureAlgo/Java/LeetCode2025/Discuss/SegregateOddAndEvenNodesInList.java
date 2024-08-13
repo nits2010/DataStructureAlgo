@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.LeetCode2025.Discuss;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.medium.List.OddEvenLinkedList_328;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -49,14 +49,14 @@ public class SegregateOddAndEvenNodesInList {
     private static boolean test(Integer[] input, Integer[] expected) {
         ListNode head = ListBuilder.arrayToSinglyList(input);
         ListNode expectedNode = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\nInput :" + GenericPrinter.print(head) + " expected :" + GenericPrinter.print(expectedNode));
+        System.out.println("\nInput :" + CommonMethods.print(head) + " expected :" + CommonMethods.print(expectedNode));
         SegregateOddAndEvenNodesInList solution = new SegregateOddAndEvenNodesInList();
         ListNode output = solution.segregateOddAndEvenNodesInList(ListBuilder.arrayToSinglyList(input));
         ListNode outputSepList = solution.segregateOddAndEvenNodesInListSepList(ListBuilder.arrayToSinglyList(input));
-        System.out.println("Obtained :" + GenericPrinter.print(output));
-        System.out.println("OutputSepList Obtained :" + GenericPrinter.print(outputSepList));
-        boolean testResult = GenericPrinter.equalsValues(expectedNode, output);
-        boolean testResultSepList = GenericPrinter.equalsValues(expectedNode, outputSepList);
+        System.out.println("Obtained :" + CommonMethods.print(output));
+        System.out.println("OutputSepList Obtained :" + CommonMethods.print(outputSepList));
+        boolean testResult = CommonMethods.equalsValues(expectedNode, output);
+        boolean testResultSepList = CommonMethods.equalsValues(expectedNode, outputSepList);
         System.out.println("Test passed: " + testResult + " | " + testResultSepList);
         return (testResult == testResultSepList);
     }

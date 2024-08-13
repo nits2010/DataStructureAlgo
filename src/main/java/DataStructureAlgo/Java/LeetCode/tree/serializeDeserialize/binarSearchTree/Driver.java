@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.binarSearchTree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.ISerializeDeserialize;
 
@@ -40,14 +40,14 @@ public class Driver {
         System.out.println("\n\n Pre order ");
         TreeNode root = getTree();
 
-        System.out.println("Original            : " + GenericPrinter.inOrder(root));
+        System.out.println("Original            : " + CommonMethods.inOrder(root));
         ISerializeDeserialize preOrder = new SerializeDeSerializeBinarySearchTree.PreOrder();
 
         String vv = preOrder.serialize(root);
         System.out.println("Serialized          : " + vv);
 
         TreeNode r = preOrder.deserialize(vv);
-        System.out.println("Deserialize         : " + GenericPrinter.inOrder(r));
+        System.out.println("Deserialize         : " + CommonMethods.inOrder(r));
 
 
     }
@@ -56,14 +56,14 @@ public class Driver {
         System.out.println("\n\n Post order ");
         TreeNode root = getTree();
 
-        System.out.println("Original            : " + GenericPrinter.inOrder(root));
+        System.out.println("Original            : " + CommonMethods.inOrder(root));
         ISerializeDeserialize postOrder = new SerializeDeSerializeBinarySearchTree.PostOrder();
 
         String vv = postOrder.serialize(root);
         System.out.println("Serialized          : " + vv);
 
         TreeNode r = postOrder.deserialize(vv);
-        System.out.println("Deserialize         : " + GenericPrinter.inOrder(r));
+        System.out.println("Deserialize         : " + CommonMethods.inOrder(r));
 
 
     }

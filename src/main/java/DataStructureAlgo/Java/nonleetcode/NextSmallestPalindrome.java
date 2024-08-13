@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -30,10 +30,10 @@ public class NextSmallestPalindrome {
     }
 
     private static boolean test(int[] num, int[] expected) {
-        System.out.println("\nNum:" + GenericPrinter.toString(num));
-        System.out.println("Expected:" + GenericPrinter.toString(expected));
+        System.out.println("\nNum:" + CommonMethods.toString(num));
+        System.out.println("Expected:" + CommonMethods.toString(expected));
         int[] obtained = nextPalindrome(num, num.length);
-        System.out.println("obtained:" + GenericPrinter.toString(obtained));
+        System.out.println("obtained:" + CommonMethods.toString(obtained));
 
         return Arrays.equals(expected, obtained);
 

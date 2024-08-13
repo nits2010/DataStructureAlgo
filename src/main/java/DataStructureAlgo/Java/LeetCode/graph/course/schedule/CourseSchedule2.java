@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph.course.schedule;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -53,13 +53,13 @@ public class CourseSchedule2 {
 
     private static void test(int numCourses, int[][] prerequisites, int[] expected) {
 
-        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + GenericPrinter.toString(prerequisites));
+        System.out.println("\n Input : Courses " + numCourses + " prerequisites: \n" + CommonMethods.toString(prerequisites));
 
         ICourseSchedule bfs = new CourseScheduleIIBFS();
         ICourseSchedule dfs = new CourseScheduleIIDFS();
 
-        System.out.println("BFS Order:" + GenericPrinter.toString(bfs.findOrder(numCourses, prerequisites)) + " expected :" + GenericPrinter.toString(expected));
-        System.out.println("DFS Order:" + GenericPrinter.toString(dfs.findOrder(numCourses, prerequisites)) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("BFS Order:" + CommonMethods.toString(bfs.findOrder(numCourses, prerequisites)) + " expected :" + CommonMethods.toString(expected));
+        System.out.println("DFS Order:" + CommonMethods.toString(dfs.findOrder(numCourses, prerequisites)) + " expected :" + CommonMethods.toString(expected));
 
     }
 

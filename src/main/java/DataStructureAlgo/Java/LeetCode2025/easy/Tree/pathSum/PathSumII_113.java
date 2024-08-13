@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.Tree.pathSum;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
@@ -84,7 +84,7 @@ public class PathSumII_113 {
         System.out.println("-----------------------");
         System.out.println("Input :" + Arrays.toString(input) + " targetSum : " + targetSum);
         System.out.println("expected :");
-        GenericPrinter.print(expected);
+        CommonMethods.print(expected);
 
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
@@ -92,7 +92,7 @@ public class PathSumII_113 {
         SolutionRecursive solution = new SolutionRecursive();
         List<List<Integer>> output = solution.pathSum(root, targetSum);
 
-        boolean result = GenericPrinter.equals(expected, output);
+        boolean result = CommonMethods.equals(expected, output);
         System.out.println("\nOutput : " + output + " Result : " + result);
         return result;
 

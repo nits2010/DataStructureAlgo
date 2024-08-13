@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -64,7 +64,7 @@ public class LongestAbsoluteFilePath {
         System.out.println("Stack:      " + stackObtained);
         System.out.println("Stack2:     " + stack2Obtained);
 
-        return GenericPrinter.equalsValues(mapObtained, stack2Obtained, stackObtained, expected);
+        return CommonMethods.equalsValues(mapObtained, stack2Obtained, stackObtained, expected);
     }
 }
 

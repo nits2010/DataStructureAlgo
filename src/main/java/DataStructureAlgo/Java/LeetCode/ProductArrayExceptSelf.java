@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -34,7 +34,7 @@ public class ProductArrayExceptSelf {
 
     private static void test(int[] nums) {
         System.out.println("Input: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println("outputs: ");
 
         IProductArrayExceptSelf division = new ProductArrayExceptSelfUsingDivision();

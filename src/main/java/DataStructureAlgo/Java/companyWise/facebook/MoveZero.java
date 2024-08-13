@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -37,30 +37,30 @@ public class MoveZero {
 
     static void test1(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         Sol1 sol1 = new Sol1();
         sol1.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
     }
 
 
     static void test2(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         Sol2 sol2 = new Sol2();
         sol2.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
     }
 
     static void test3(int nums[]) {
         System.out.println("Array before pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         Sol3 sol = new Sol3();
         sol.moveZeroes(nums);
         System.out.println("Array after pushing zeros to the back: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
     }
 }
 

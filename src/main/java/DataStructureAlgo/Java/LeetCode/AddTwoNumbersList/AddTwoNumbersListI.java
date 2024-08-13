@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.AddTwoNumbersList;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import  DataStructureAlgo.Java.helpers.templates.ListNode;
 
@@ -31,8 +31,8 @@ public class AddTwoNumbersListI {
     }
 
     private static void test(ListNode l1, ListNode l2, ListNode expected) {
-        System.out.println("\n L1 :" + GenericPrinter.print(l1) + "\n L2 :" + GenericPrinter.print(l2) + "\n Expected :" + GenericPrinter.print(expected));
-        System.out.println("\n Obtained :" + GenericPrinter.print(addTwoNumbers(l1, l2)));
+        System.out.println("\n L1 :" + CommonMethods.print(l1) + "\n L2 :" + CommonMethods.print(l2) + "\n Expected :" + CommonMethods.print(expected));
+        System.out.println("\n Obtained :" + CommonMethods.print(addTwoNumbers(l1, l2)));
     }
 
 

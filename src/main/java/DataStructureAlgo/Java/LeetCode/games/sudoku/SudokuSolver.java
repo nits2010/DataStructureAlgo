@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.games.sudoku;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -55,7 +55,7 @@ public class SudokuSolver {
     private static void test(char[][] board) {
         ISudokuSolver solver = new SudoSolverBacktrackingWithRestriction();
         solver.solveSudoku(board);
-        System.out.println(GenericPrinter.toString(board));
+        System.out.println(CommonMethods.toString(board));
     }
 }
 

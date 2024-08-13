@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.stockPrices;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.companyWise.Amazon.MaximumDifferenceInIndex;
 
 /**
@@ -36,7 +36,7 @@ public class LongestDurationHoldStocks {
     }
 
     private static void test(int[] nums, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(nums) + " expected :" + expected);
 
         LongestDurationHoldStocksBruteForce bruteForce = new LongestDurationHoldStocksBruteForce();
         LongestDurationHoldStocksPrefixSuffixArray prefixSuffixArray = new LongestDurationHoldStocksPrefixSuffixArray();

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode.BitonicProblems;/* package whatever; // don't place package name! */
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 //MaximumLengthBitonicSubarray
 class MaximumLengthBitonicSubArrayHelper {
@@ -34,7 +34,7 @@ class MaximumLengthBitonicSubArrayHelper {
     }
 
     public void print() {
-        GenericPrinter.print(input);
+        CommonMethods.print(input);
     }
 
     //false if no subarray exist otherwise true

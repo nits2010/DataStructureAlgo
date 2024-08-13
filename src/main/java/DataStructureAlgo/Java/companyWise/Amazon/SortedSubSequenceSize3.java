@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.NextGreaterElementOnRightSide;
 import  DataStructureAlgo.Java.nonleetcode.SmallerElementOnLeftSide;
 
@@ -34,7 +34,7 @@ public class SortedSubSequenceSize3 {
     private static void test(int[] nums) {
 
         System.out.println();
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         int[] seq = sortedSubSequenceSize3(nums);
         if (seq.length == 0)
             System.out.println(" No such triplet");

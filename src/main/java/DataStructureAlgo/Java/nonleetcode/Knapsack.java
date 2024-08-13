@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -29,7 +29,7 @@ public class Knapsack {
     }
 
     private static void testKnapsackFractional(int[] val, int[] wt, int W, double expected) {
-        System.out.println("\n Input ; V:" + GenericPrinter.toString(val) + " weights: " + GenericPrinter.toString(wt) + " Bag size: " + W);
+        System.out.println("\n Input ; V:" + CommonMethods.toString(val) + " weights: " + CommonMethods.toString(wt) + " Bag size: " + W);
         KnapsackFractional.Greedy greedy = new KnapsackFractional.Greedy();
         System.out.println("Greedy ; Obtained :" + greedy.maximumValue(val, wt, W) + " expected :" + expected);
 
@@ -48,7 +48,7 @@ public class Knapsack {
         Knapsack0Or1.Recursive recursive = new Knapsack0Or1.Recursive();
         Knapsack0Or1.DP dp = new Knapsack0Or1.DP();
         Knapsack0Or1.DPSpaceOptimized dpSpaceOptiized = new Knapsack0Or1.DPSpaceOptimized();
-        System.out.println("\n Input ; V:" + GenericPrinter.toString(v) + " weights: " + GenericPrinter.toString(w) + " Bag size: " + W);
+        System.out.println("\n Input ; V:" + CommonMethods.toString(v) + " weights: " + CommonMethods.toString(w) + " Bag size: " + W);
 
         System.out.println("Recursive ; Obtained :" + recursive.maximumValue(v, w, W) + " expected :" + expected);
         System.out.println("DP; Obtained :" + dp.maximumValue(v, w, W) + " expected :" + expected);

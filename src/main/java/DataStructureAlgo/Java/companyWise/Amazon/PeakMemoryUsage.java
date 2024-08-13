@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -44,13 +44,13 @@ public class PeakMemoryUsage {
     }
 
     private static boolean test(int[][] intervals, int[] expected) {
-        System.out.println("\nIntervals :" + GenericPrinter.toString(intervals));
-        System.out.println("Expected :" + GenericPrinter.toString(expected));
+        System.out.println("\nIntervals :" + CommonMethods.toString(intervals));
+        System.out.println("Expected :" + CommonMethods.toString(expected));
 
         int[] obtained = peakMemoryUsage(intervals);
-        System.out.println("Obtained :" + GenericPrinter.toString(obtained));
+        System.out.println("Obtained :" + CommonMethods.toString(obtained));
 
-        return GenericPrinter.equalsValues(expected, obtained);
+        return CommonMethods.equalsValues(expected, obtained);
 
 
     }

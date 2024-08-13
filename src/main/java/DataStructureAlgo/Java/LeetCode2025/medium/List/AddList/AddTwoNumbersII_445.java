@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List.AddList;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Stack;
 
@@ -81,7 +81,7 @@ public class AddTwoNumbersII_445 {
         ListNode l1Node = ListBuilder.arrayToSinglyList(l1);
         ListNode l2Node = ListBuilder.arrayToSinglyList(l2);
         ListNode expectedNode = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n L1 :" + GenericPrinter.print(l1Node) + "\n L2 :" + GenericPrinter.print(l2Node) + "\n Expected :" + GenericPrinter.print(expectedNode));
+        System.out.println("\n L1 :" + CommonMethods.print(l1Node) + "\n L2 :" + CommonMethods.print(l2Node) + "\n Expected :" + CommonMethods.print(expectedNode));
 
         AddTwoNumbersIIUsingReverse.Solution solutionUsingReverse = new AddTwoNumbersIIUsingReverse.Solution();
         AddTwoNumbersIIUsingStack.Solution solutionUsingStacks = new AddTwoNumbersIIUsingStack.Solution();
@@ -91,13 +91,13 @@ public class AddTwoNumbersII_445 {
         ListNode outputUsingBasic = solutionUsingBasic.addTwoNumbers(l1Node, l2Node);
         ListNode outputUsingReverse = solutionUsingReverse.addTwoNumbers(l1Node, l2Node);
 
-        boolean resultStack = GenericPrinter.equalsValues(outputUsingStack, expectedNode);
-        boolean resultSReverse = GenericPrinter.equalsValues(outputUsingReverse, expectedNode);
-        boolean resultBasic = GenericPrinter.equalsValues(outputUsingBasic, expectedNode);
+        boolean resultStack = CommonMethods.equalsValues(outputUsingStack, expectedNode);
+        boolean resultSReverse = CommonMethods.equalsValues(outputUsingReverse, expectedNode);
+        boolean resultBasic = CommonMethods.equalsValues(outputUsingBasic, expectedNode);
 
-        System.out.println("Obtained Stack:" + GenericPrinter.print(outputUsingStack));
-        System.out.println("Obtained Reverse:" + GenericPrinter.print(outputUsingReverse));
-        System.out.println("Obtained Basic:" + GenericPrinter.print(outputUsingBasic));
+        System.out.println("Obtained Stack:" + CommonMethods.print(outputUsingStack));
+        System.out.println("Obtained Reverse:" + CommonMethods.print(outputUsingReverse));
+        System.out.println("Obtained Basic:" + CommonMethods.print(outputUsingBasic));
 
         System.out.println("Test passed: " + resultStack + "|" + resultSReverse + "|"+ resultBasic);
         return (resultStack == resultSReverse)==resultBasic;

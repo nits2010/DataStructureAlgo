@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.adjacent.houserobber;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 
@@ -48,7 +48,7 @@ public class HouseRobberIII {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\n Input " + GenericPrinter.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Input " + CommonMethods.preOrder(root) + " expected :" + expected);
 
         HouseRobberIIIPostOrder postOrder = new HouseRobberIIIPostOrder();
         System.out.println("Max rob :" + postOrder.rob(root));

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,7 +50,7 @@ public class OddLengthPalindromeSubSequenceAroundCentre {
         System.out.println("dpBottomUpObtained      :" + dpBottomUpObtained);
         System.out.println("dpTopDownObtained       :" + dpTopDownObtained);
 
-        return GenericPrinter.equalsValues(dpBottomUpObtained, expected, recursiveObtained, dpTopDownObtained);
+        return CommonMethods.equalsValues(dpBottomUpObtained, expected, recursiveObtained, dpTopDownObtained);
     }
 
 

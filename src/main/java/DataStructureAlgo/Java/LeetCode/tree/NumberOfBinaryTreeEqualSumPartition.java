@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
@@ -81,7 +81,7 @@ public class NumberOfBinaryTreeEqualSumPartition {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\n Tree :" + GenericPrinter.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Tree :" + CommonMethods.preOrder(root) + " expected :" + expected);
         System.out.println("Obtained :" + partitions(root));
     }
 

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -36,7 +36,7 @@ public class LongestSubArraySumK {
         if (nums == null || nums.length == 0)
             return Collections.EMPTY_LIST;
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         /**
          * This will tell at what index(value) we saw a sum(key)
          */

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -41,19 +41,19 @@ public class RelativeSortArray {
 
     static void test(int a[], int b[]) {
         System.out.println("\nInput ");
-        GenericPrinter.print(a);
-        GenericPrinter.print(b);
+        CommonMethods.print(a);
+        CommonMethods.print(b);
         int[] usingMap = SortArrayAccordingToOrderDefinedAnotherArray.relativeSortArray(a, b);
         System.out.println("usingMap ");
-        GenericPrinter.print(usingMap);
+        CommonMethods.print(usingMap);
 
         int[] bucketSort = SortArrayAccordingToOrderDefinedAnotherArrayUsingBuckets.relativeSortArray(a, b);
         System.out.println("bucketSort ");
-        GenericPrinter.print(bucketSort);
+        CommonMethods.print(bucketSort);
 
         int[] customSort = SortArrayAccordingToOrderDefinedAnotherArrayUsingCustomSort.relativeSortArray(a, b);
         System.out.println("customSort ");
-        GenericPrinter.print(customSort);
+        CommonMethods.print(customSort);
     }
 }
 

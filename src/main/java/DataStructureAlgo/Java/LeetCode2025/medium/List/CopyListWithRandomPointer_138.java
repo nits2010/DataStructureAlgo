@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.Node;
 import DataStructureAlgo.Java.Pair;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.List;
@@ -100,24 +100,24 @@ public class CopyListWithRandomPointer_138 {
     }
 
     private static void test(List<Pair<Integer, Integer>> input, List<Pair<Integer, Integer>> expected) {
-        Node inputList = GenericPrinter.listWithRandomNode(input);
+        Node inputList = CommonMethods.listWithRandomNode(input);
         System.out.println("\n\ninput\n");
-        GenericPrinter.print(inputList);
+        CommonMethods.print(inputList);
 
         CopyListRandomPointer3PhaseSol copyListRandomPointer3PhaseSol = new CopyListRandomPointer3PhaseSol();
         Node output = copyListRandomPointer3PhaseSol.copyRandomList(inputList);
         System.out.println("\n\nCopyListRandomPointer3PhaseSol output");
-        GenericPrinter.print(output);
+        CommonMethods.print(output);
 
         CopyListRandomPointer3PhaseSol2 copyListRandomPointer3PhaseSol2 = new CopyListRandomPointer3PhaseSol2();
-        output = copyListRandomPointer3PhaseSol2.copyRandomList(GenericPrinter.listWithRandomNode(input));
+        output = copyListRandomPointer3PhaseSol2.copyRandomList(CommonMethods.listWithRandomNode(input));
         System.out.println("\n\nCopyListRandomPointer2PhaseSol output");
-        GenericPrinter.print(output);
+        CommonMethods.print(output);
 
         CopyListRandomPointer2PhaseSolUsingHashMap copyListRandomPointer2PhaseSolUsingHashMap = new CopyListRandomPointer2PhaseSolUsingHashMap();
-        output = copyListRandomPointer2PhaseSolUsingHashMap.copyRandomList(GenericPrinter.listWithRandomNode(input));
+        output = copyListRandomPointer2PhaseSolUsingHashMap.copyRandomList(CommonMethods.listWithRandomNode(input));
         System.out.println("\n\nCopyListRandomPointer2PhaseSolUsingHashMap output");
-        GenericPrinter.print(output);
+        CommonMethods.print(output);
 
     }
 

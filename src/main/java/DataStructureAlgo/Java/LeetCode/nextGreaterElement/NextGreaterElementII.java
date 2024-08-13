@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.nextGreaterElement;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.Arrays;
@@ -44,15 +44,15 @@ public class NextGreaterElementII {
 
     private static boolean test(int[] nums, int[] expected) {
         System.out.println("----------------");
-        System.out.println("Nums:               :" + GenericPrinter.toString(nums));
-        System.out.println("Expected            :" + GenericPrinter.toString(expected));
+        System.out.println("Nums:               :" + CommonMethods.toString(nums));
+        System.out.println("Expected            :" + CommonMethods.toString(expected));
 
         int[] nge3Scan = NextGreaterElementIIThreeScan.nextGreaterElements(nums);
         int[] nge1Scan = NextGreaterElementII1Scan.nextGreaterElements(nums);
         int[] nge1Scan2 = NextGreaterElementII1ScanExplicitStack.nextGreaterElements(nums);
-        System.out.println("Obtained3scan       :" + GenericPrinter.toString(nge3Scan) + "; Pass:" + Arrays.equals(nge3Scan, expected));
-        System.out.println("Obtained1scan       :" + GenericPrinter.toString(nge1Scan) + "; Pass:" + Arrays.equals(nge1Scan, expected));
-        System.out.println("Obtained1scan2      :" + GenericPrinter.toString(nge1Scan2) + "; Pass:" + Arrays.equals(nge1Scan2, expected));
+        System.out.println("Obtained3scan       :" + CommonMethods.toString(nge3Scan) + "; Pass:" + Arrays.equals(nge3Scan, expected));
+        System.out.println("Obtained1scan       :" + CommonMethods.toString(nge1Scan) + "; Pass:" + Arrays.equals(nge1Scan, expected));
+        System.out.println("Obtained1scan2      :" + CommonMethods.toString(nge1Scan2) + "; Pass:" + Arrays.equals(nge1Scan2, expected));
 
         return Arrays.equals(nge3Scan, expected) && Arrays.equals(nge1Scan, expected) && Arrays.equals(nge1Scan2, expected);
 

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.stacks.NextGreaterElement;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -83,8 +83,8 @@ public class NextGreaterElementII_503 {
         int[] usingCon = solutionCon.nextGreaterElements(nums1);
         System.out.println("usingStacks  :" + Arrays.toString(usingStacks));
         System.out.println("usingCon  :" + Arrays.toString(usingCon));
-        boolean testResultUsingStacks =  GenericPrinter.equalsValues(expected, usingStacks);
-        boolean testResultUsingCon =  GenericPrinter.equalsValues(expected, usingCon);
+        boolean testResultUsingStacks =  CommonMethods.equalsValues(expected, usingStacks);
+        boolean testResultUsingCon =  CommonMethods.equalsValues(expected, usingCon);
         System.out.println("testResultUsingStacks :" + (testResultUsingStacks ? " Passed" : " Failed"));
         System.out.println("testResultUsingCon :" + (testResultUsingCon ? " Passed" : " Failed"));
         return testResultUsingStacks == testResultUsingCon;

@@ -2,7 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
 /**
@@ -77,12 +77,12 @@ public class SwappingNodesInALinkedList_1721 {
     private static boolean test(Integer[] elements,int k, Integer[] expected ) {
         ListNode originalList = ListBuilder.arrayToSinglyList(elements);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n Input :"+ GenericPrinter.print(originalList) + " k = " + k + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\n Input :"+ CommonMethods.print(originalList) + " k = " + k + "\nexpected :" + CommonMethods.print(expectedList));
 
         Solution solution = new Solution();
         ListNode output =  solution.swapNodes(originalList, k);
         boolean result = false;
-        System.out.println(" Output :"+GenericPrinter.print(output) + " Result match : "+(result = GenericPrinter.equalsValues(expectedList,output)));
+        System.out.println(" Output :"+ CommonMethods.print(output) + " Result match : "+(result = CommonMethods.equalsValues(expectedList,output)));
         return result;
 
 
