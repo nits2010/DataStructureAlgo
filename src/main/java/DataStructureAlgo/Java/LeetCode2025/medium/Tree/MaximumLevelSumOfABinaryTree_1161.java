@@ -44,8 +44,14 @@ import java.util.*;
  * <p>
  * Tags
  * -----
+ * @medium
+ * @Tree
+ * @Depth-FirstSearch
+ * @Breadth-FirstSearch
+ * @BinaryTree
  *
- * @medium <p>
+ *
+ *
  * Company Tags
  * -----
  * @Facebook
