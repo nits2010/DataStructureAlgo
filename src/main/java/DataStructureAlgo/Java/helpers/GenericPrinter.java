@@ -26,6 +26,13 @@ public class GenericPrinter {
         System.out.println(toString(a));
     }
 
+    public static <T> void print(final T [][]a) {
+
+        for(T[] x:a) {
+            System.out.print("["+toString(x) + "],");
+        }
+    }
+
     public static void print(final int[][] a) {
         System.out.println(toString(a));
     }
