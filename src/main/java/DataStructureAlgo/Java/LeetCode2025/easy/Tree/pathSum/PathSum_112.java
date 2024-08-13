@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.easy.Tree;
+package DataStructureAlgo.Java.LeetCode2025.easy.Tree.pathSum;
 
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;

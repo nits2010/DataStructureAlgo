@@ -756,5 +756,20 @@ public class GenericPrinter {
 
     }
 
+    public static boolean equals(Integer[][] expected, List<List<Integer>> result) {
+        boolean test = true;
+
+        if(expected.length != result.size() )
+            return false;
+
+        for (int i = 0; i < expected.length; i++) {
+            if(expected[i].length != result.get(i).size())
+                return false;
+            for (int j = 0; j < expected[i].length; j++) {
+                test &= (expected[i][j].equals(result.get(i).get(j)));
+            }
+        }
+        return test;
+    }
 
 }

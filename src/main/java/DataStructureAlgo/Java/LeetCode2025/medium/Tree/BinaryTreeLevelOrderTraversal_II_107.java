@@ -90,9 +90,9 @@ public class BinaryTreeLevelOrderTraversal_II_107 {
         System.out.println(" resultUsingLevelOrder :" + resultUsingLevelOrder);
         System.out.println(" resultRecursive :" + resultRecursive);
 
-        boolean testResultUsingLevelOrderReverse = test(expected, resultUsingLevelOrderReverse);
-        boolean testResultUsingLevelOrder = test(expected, resultUsingLevelOrder);
-        boolean testResultRecursive = test(expected, resultRecursive);
+        boolean testResultUsingLevelOrderReverse = GenericPrinter.equals(expected, resultUsingLevelOrderReverse);
+        boolean testResultUsingLevelOrder = GenericPrinter.equals(expected, resultUsingLevelOrder);
+        boolean testResultRecursive = GenericPrinter.equals(expected, resultRecursive);
 
 
         System.out.println("\n testResultUsingLevelOrderReverse :" + testResultUsingLevelOrderReverse);
@@ -103,21 +103,6 @@ public class BinaryTreeLevelOrderTraversal_II_107 {
 
     }
 
-    private static boolean test(Integer[][] expected, List<List<Integer>> result) {
-        boolean test = true;
-
-        if(expected.length != result.size() )
-            return false;
-
-        for (int i = 0; i < expected.length; i++) {
-            if(expected[i].length != result.get(i).size())
-                return false;
-            for (int j = 0; j < expected[i].length; j++) {
-                test &= (expected[i][j].equals(result.get(i).get(j)));
-            }
-        }
-        return test;
-    }
 
 
     /**
