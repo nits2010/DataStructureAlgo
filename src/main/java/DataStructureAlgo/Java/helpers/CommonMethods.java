@@ -792,6 +792,21 @@ public class CommonMethods {
 
     }
 
+    public static TreeNode searchNodeByValueBST(TreeNode root, Integer value){
+        if(root == null)
+            return null;
+
+        if(root.val == value)
+            return root;
+
+        if(value < root.val)
+            return searchNodeByValueBST(root.left, value);
+        else
+            return searchNodeByValueBST(root.right, value);
+
+
+    }
+
     public static void printBinaryTree(TreeNode root) {
         printBinaryTree(root, 0);
     }
