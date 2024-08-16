@@ -11,7 +11,11 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date:16/08/24
  * Question Category: 1644. Lowest Common Ancestor of a Binary Tree II
- * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/
+ * Description:
+ * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/
+ * https://leetcode.ca/all/1644.html
+ *
+ *
  * Given the root of a binary tree, return the lowest common ancestor (LCA) of two given nodes, p and q. If either node p or q does not exist in the tree, return null. All values of the nodes in the tree are unique.
  * <p>
  * According to the definition of LCA on Wikipedia: "The lowest common ancestor of two nodes p and q in a binary tree T is the lowest node that has both p and q as descendants (where we allow a node to be a descendant of itself)". A descendant of a node x is a node y that is on the path from node x to some leaf node.
@@ -60,7 +64,6 @@ import java.util.Arrays;
  * <p>
  * Tags
  * -----
- *
  * @medium
  * @Tree
  * @Depth-FirstSearch
@@ -72,7 +75,7 @@ import java.util.Arrays;
  * -----
  * @LinkedIn
  * @Microsoft
- * @Editorial https://leetcode.ca/2020-05-31-1644-Lowest-Common-Ancestor-of-a-Binary-Tree-II/
+ * @Editorial <a href="https://leetcode.ca/2020-05-31-1644-Lowest-Common-Ancestor-of-a-Binary-Tree-II/">...</a>
  */
 
 public class LowestCommonAncestorOfABinaryTreeII_1644 {
