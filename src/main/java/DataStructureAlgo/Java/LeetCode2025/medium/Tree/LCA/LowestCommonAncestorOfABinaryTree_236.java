@@ -99,18 +99,23 @@ public class LowestCommonAncestorOfABinaryTree_236 {
         final TreeNode qNode = CommonMethods.searchNodeByValue(root, q);
         final TreeNode expectedNode = CommonMethods.searchNodeByValue(root, expected);
         System.out.println("Tree {pre-order} : " + TreeTraversalRecursive.preOrder(root) + " p : " + pNode + " q: " + qNode + " expected :" + expectedNode);
+
         SolutionRecursive solutionRecursive = new SolutionRecursive();
-        SolutionIterative solutionIterative = new SolutionIterative();
-        SolutionUsingPath iterativeUsingPath = new SolutionUsingPath();
         TreeNode resultTreeRecursive = solutionRecursive.lowestCommonAncestor(root, pNode, qNode);
-        TreeNode resultTreeIterative = solutionIterative.lowestCommonAncestor(root, pNode, qNode);
-        TreeNode resultTreeUsingPath = iterativeUsingPath.lowestCommonAncestor(root, pNode, qNode);
         boolean testResultRecursive = resultTreeRecursive == expectedNode;
-        boolean testResultIterative = resultTreeIterative == expectedNode;
-        boolean testResultUsingPath = resultTreeUsingPath == expectedNode;
         System.out.println("resultTreeRecursive : " + resultTreeRecursive + " result : " + testResultRecursive);
+
+        SolutionIterative solutionIterative = new SolutionIterative();
+        TreeNode resultTreeIterative = solutionIterative.lowestCommonAncestor(root, pNode, qNode);
+        boolean testResultIterative = resultTreeIterative == expectedNode;
         System.out.println("resultTreeIterative : " + resultTreeIterative + " result : " + testResultIterative);
+
+
+        SolutionUsingPath iterativeUsingPath = new SolutionUsingPath();
+        TreeNode resultTreeUsingPath = iterativeUsingPath.lowestCommonAncestor(root, pNode, qNode);
+        boolean testResultUsingPath = resultTreeUsingPath == expectedNode;
         System.out.println("resultTreeUsingPath : " + resultTreeUsingPath + " result : " + testResultUsingPath);
+
         return testResultRecursive && testResultIterative && testResultUsingPath;
 
     }

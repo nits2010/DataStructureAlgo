@@ -779,7 +779,7 @@ public class CommonMethods {
     }
 
     public static TreeNode searchNodeByValue(TreeNode root, Integer value){
-        if(root == null)
+        if(root == null || value == null)
             return null;
 
         if(root.val == value)
@@ -793,7 +793,7 @@ public class CommonMethods {
     }
 
     public static TreeNode searchNodeByValueBST(TreeNode root, Integer value){
-        if(root == null)
+        if(root == null || value == null)
             return null;
 
         if(root.val == value)
