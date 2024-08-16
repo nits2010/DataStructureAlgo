@@ -778,4 +778,45 @@ public class CommonMethods {
         return solution.isSameTree(root1, root2);
     }
 
+    public static TreeNode searchNodeByValue(TreeNode root, Integer value){
+        if(root == null)
+            return null;
+
+        if(root.val == value)
+            return root;
+
+        TreeNode left = searchNodeByValue(root.left, value);
+        TreeNode right = searchNodeByValue(root.right, value);
+
+        return left == null ? right : left;
+
+    }
+
+    public static void printBinaryTree(TreeNode root) {
+        printBinaryTree(root, 0);
+    }
+
+    // Recursive helper method to print the tree structure
+    private static void printBinaryTree(TreeNode node, int level) {
+        if (node == null) {
+            return;
+        }
+
+        // Print right subtree
+        printBinaryTree(node.right, level + 1);
+
+        // Print current node with indentation
+        if (level != 0) {
+            for (int i = 0; i < level - 1; i++) {
+                System.out.print("|\t");
+            }
+            System.out.println("|-------" + node.val);
+        } else {
+            System.out.println(node.val);
+        }
+
+        // Print left subtree
+        printBinaryTree(node.left, level + 1);
+    }
+
 }
