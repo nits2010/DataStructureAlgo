@@ -66,7 +66,9 @@ import java.util.Arrays;
  * @Depth-FirstSearch
  * @BinaryTree
  * @PremimumQuestion
- * @LeetCodeLockedProblem Company Tags
+ * @LeetCodeLockedProblem
+ *
+ * Company Tags
  * -----
  * @LinkedIn
  * @Microsoft
