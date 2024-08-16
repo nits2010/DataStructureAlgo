@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.helpers;
 
+import DataStructureAlgo.Java.LeetCode2025.easy.Tree.SameTree_100;
 import  DataStructureAlgo.Java.helpers.templates.DoublyListNode;
 import  DataStructureAlgo.Java.helpers.templates.ListNode;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -770,6 +771,11 @@ public class CommonMethods {
             }
         }
         return test;
+    }
+
+    public static boolean isSameTree(TreeNode root1, TreeNode root2){
+        SameTree_100.Solution solution = new SameTree_100.Solution();
+        return solution.isSameTree(root1, root2);
     }
 
 }

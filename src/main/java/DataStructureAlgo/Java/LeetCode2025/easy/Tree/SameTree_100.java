@@ -97,7 +97,7 @@ public class SameTree_100 {
     }
 
 
-    static class Solution {
+    public static class Solution {
         public boolean isSameTree(TreeNode p, TreeNode q) {
 
             if(p == null && q == null)
