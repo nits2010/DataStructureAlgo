@@ -29,5 +29,10 @@ public class TreeNodeWithParent extends TreeNode {
     public TreeNodeWithParent(int val) {
         super(val);
     }
+
+    public TreeNodeWithParent(int val, TreeNode parent) {
+        super(val);
+        this.parent = parent;
+    }
 }
 

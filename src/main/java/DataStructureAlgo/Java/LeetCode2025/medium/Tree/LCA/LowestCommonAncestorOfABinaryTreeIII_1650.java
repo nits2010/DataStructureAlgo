@@ -3,9 +3,12 @@ package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNodeWithParent;
 import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Author: Nitin Gupta
@@ -13,47 +16,47 @@ import java.util.Arrays;
  * Question Category: 1650. Lowest Common Ancestor of a Binary Tree III
  * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/
  * https://leetcode.ca/all/1650.html
- *
+ * <p>
  * Given two nodes of a binary tree p and q, return their lowest common ancestor (LCA).
- *
+ * <p>
  * Each node will have a reference to its parent node. The definition for Node is below:
- *
+ * <p>
  * class Node {
- *     public int val;
- *     public Node left;
- *     public Node right;
- *     public Node parent;
+ * public int val;
+ * public Node left;
+ * public Node right;
+ * public Node parent;
  * }
  * According to the definition of LCA on Wikipedia: "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow a node to be a descendant of itself)."
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
- *
+ * <p>
+ * <p>
  * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
  * Output: 3
  * Explanation: The LCA of nodes 5 and 1 is 3.
  * Example 2:
- *
- *
+ * <p>
+ * <p>
  * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
  * Output: 5
  * Explanation: The LCA of nodes 5 and 4 is 5 since a node can be a descendant of itself according to the LCA definition.
  * Example 3:
- *
+ * <p>
  * Input: root = [1,2], p = 1, q = 2
  * Output: 1
- *
- *
+ * <p>
+ * <p>
  * Constraints:
- *
+ * <p>
  * The number of nodes in the tree is in the range [2, 105].
  * -109 <= Node.val <= 109
  * All Node.val are unique.
  * p != q
  * p and q exist in the tree.
- *
+ * <p>
  * File reference
  * -----------
  * Duplicate {@link}
@@ -67,30 +70,19 @@ import java.util.Arrays;
  * @Depth-FirstSearch
  * @BinaryTree
  * @PremimumQuestion
- * @LeetCodeLockedProblem
- *
- *
- *
- * <p>
+ * @LeetCodeLockedProblem <p>
  * Company Tags
  * -----
- *
  * @Facebook
  * @LinkedIn
  * @Microsoft
+ *
  *
  * @Editorial <a href="https://leetcode.ca/2020-06-06-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III">...</a>
  */
 
 public class LowestCommonAncestorOfABinaryTreeIII_1650 {
 
-    class TreeNodeWithParent extends TreeNode {
-        public TreeNode parent;
-
-        public TreeNodeWithParent(int val) {
-            super(val);
-        }
-    }
 
     public static void main(String[] args) {
         boolean test = true;
@@ -99,33 +91,170 @@ public class LowestCommonAncestorOfABinaryTreeIII_1650 {
         test &= test(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}, 5, 1, 3);
         test &= test(new Integer[]{1, 2}, 1, 2, 1);
 
-        System.out.println(" test -> " + (test ? "All passed" : "Something Failed"));
+        System.out.println("========================================");
+        System.out.println("========================================");
+
+        System.out.println((test ? "All passed" : "Something Failed"));
     }
 
     private static boolean test(Integer[] tree, int p, int q, Integer expected) {
+        System.out.println("========================================");
         System.out.println("Input " + Arrays.toString(tree) + " P : " + p + " Q :" + q);
 
-        final TreeNode root = TreeBuilder.buildTreeFromLevelOrder(tree);
-        final TreeNode pNode = CommonMethods.searchNodeByValue(root, p);
-        final TreeNode qNode = CommonMethods.searchNodeByValue(root, q);
-        final TreeNode expectedNode = CommonMethods.searchNodeByValue(root, expected);
+        final TreeNodeWithParent root = TreeBuilder.buildTreeFromLevelOrderWithParent(tree);
+        final TreeNodeWithParent pNode = (TreeNodeWithParent) CommonMethods.searchNodeByValue(root, p);
+        final TreeNodeWithParent qNode = (TreeNodeWithParent) CommonMethods.searchNodeByValue(root, q);
+        final TreeNodeWithParent expectedNode = (TreeNodeWithParent) CommonMethods.searchNodeByValue(root, expected);
 
         System.out.println("Tree {pre-order} : " + TreeTraversalRecursive.preOrder(root) + " p : " + pNode + " q: " + qNode + " expected :" + expectedNode);
+
+        SolutionUsingSet solutionUsingSet = new SolutionUsingSet();
+        TreeNode lcaUsingSet = solutionUsingSet.lowestCommonAncestor(pNode, qNode);
+        boolean testResultUsingSet = lcaUsingSet == expectedNode;
+        System.out.println("Using Set : " + lcaUsingSet + " expected :" + expectedNode + " Test Passed :" + testResultUsingSet);
+
+
+        SolutionTwoPointer solutionUsingTwoPointer = new SolutionTwoPointer();
+        TreeNode lcaUsingTwoPointer = solutionUsingTwoPointer.lowestCommonAncestor(pNode, qNode);
+        boolean testResultUsingTwoPointer = lcaUsingTwoPointer == expectedNode;
+        System.out.println("Using Two Pointer : " + lcaUsingTwoPointer + " expected :" + expectedNode + " Test Passed :" + testResultUsingTwoPointer);
+
+        boolean finalTestResult = testResultUsingSet && testResultUsingTwoPointer;
+        System.out.println("\nFinal test result " + (finalTestResult ? "Passed" : "Failed"));
+        return finalTestResult;
 
     }
 
 
-
+    /**
+     * Algo: inspired by this {@link DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.LowestCommonAncestorOfABinaryTree_236.SolutionIterative}
+     * This is just extension of that, in the reference problem, we had to find all the parent of the node p and q by traversing tree from top to bottom.
+     * However, since with parentNode, we can traverse bottom up.
+     * <p>
+     * 1. Create a set of node for node p by going upwards till root
+     * 2. traverse the other node, and check for parent match.
+     * <p>
+     * T/S: O(n)/O(n) for set { worst case skewed tree }
+     */
     static class SolutionUsingSet {
 
         /**
          * O(2n)/O(n)
          */
-        public TreeNode lowestCommonAncestor(TreeNodeWithParent root, TreeNodeWithParent p, TreeNodeWithParent q) {
-            if (root == null)
+        public TreeNode lowestCommonAncestor(TreeNodeWithParent p, TreeNodeWithParent q) {
+
+            if (p == null || q == null)
                 return null;
 
-          return null;
+            if (p == q)
+                return p; // if both are same, then return that node as LCA
+
+            TreeNodeWithParent temp = p;
+            Set<TreeNodeWithParent> set = new HashSet<>();
+
+            while (temp != null) {
+                set.add(temp);
+                temp = (TreeNodeWithParent) temp.parent;
+            }
+
+            TreeNodeWithParent lca = q;
+            while (lca != null && !set.contains(lca)) {
+                lca = (TreeNodeWithParent) lca.parent;
+            }
+
+            return lca;
 
         }
+    }
+
+    /**
+     * Since we have direct pointer to both node and that has parent node, we can  traverse both the pointer up.
+     * However, we need to make sure they don't crosse each other, otherwise lca will be lost.
+     * <p>
+     * This leads to the same problem we solved aka intersection of linked list. {@link  DataStructureAlgo.Java.LeetCode2025.easy.List.IntersectionOfTwoLinkedLists_160}
+     * Approach IntersectionOfTwoLinkedLists
+     * 1. Get the length wrt to first head and second head.
+     * 2. Get the difference.
+     * 3. The bigger list will move ahead by difference
+     * 4. Both will run parellely till meet.
+     * <p>
+     * Approach for Tree
+     * 1. Get the depth of both the node wrt root ( aka length )
+     * 2. Get the difference of depth
+     * 3. The bigger depth node will run up by difference
+     * 4. both traverse same till meet.
+     * <p>
+     * <p>
+     * T/S: O(2n)/O(n)
+     */
+    static class SolutionTwoPointer {
+
+        /**
+         * O(2n)/O(n)
+         */
+        public TreeNode lowestCommonAncestor(TreeNodeWithParent p, TreeNodeWithParent q) {
+
+            if (p == null || q == null)
+                return null;
+
+            if (p == q)
+                return p; // if both are same, then return that node as LCA
+
+            final int []depths = depthImproved(p, q);
+            final int depthP = depths[0];
+            final int depthQ = depths[1];
+
+            int depthDiff = Math.abs(depthP - depthQ);
+
+            if (depthP > depthQ) {
+                while (depthDiff > 0) {
+                    p = (TreeNodeWithParent) p.parent;
+                    depthDiff--;
+                }
+            } else {
+                while (depthDiff > 0) {
+                    q = (TreeNodeWithParent) q.parent;
+                    depthDiff--;
+                }
+            }
+
+            //now both are at same depth
+            while (p != q) {
+                p = (TreeNodeWithParent) p.parent;
+                q = (TreeNodeWithParent) q.parent;
+            }
+            return p;
+
+
+        }
+
+        private int depth(TreeNodeWithParent node) {
+            int depth = 0;
+            while (node != null) {
+                depth++;
+                node = (TreeNodeWithParent) node.parent;
+            }
+            return depth;
+        }
+
+        private int[] depthImproved(TreeNodeWithParent p, TreeNodeWithParent q) {
+            int depthP = 0;
+            int depthQ = 0;
+
+            while (p != null || q != null) {
+                if (p != null) {
+                    depthP++;
+                    p = (TreeNodeWithParent) p.parent;
+                }
+                if (q != null) {
+                    depthQ++;
+                    q = (TreeNodeWithParent) q.parent;
+                }
+            }
+
+            return new int[]{depthP, depthQ};
+
+
+        }
+    }
 }
