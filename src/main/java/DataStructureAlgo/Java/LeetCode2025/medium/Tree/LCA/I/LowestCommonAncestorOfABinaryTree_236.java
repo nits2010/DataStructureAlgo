@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA;
+package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.I;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
@@ -80,7 +80,7 @@ import java.util.Stack;
  * @Editorial <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solutions/5644286/3-solution-improve-thinking-skills-beats-100">...</a>
  */
 
-public class LowestCommonAncestorOfABinaryTree_236 {
+public class  LowestCommonAncestorOfABinaryTree_236 {
 
     public static void main(String[] args) {
         boolean test = true;
@@ -105,7 +105,7 @@ public class LowestCommonAncestorOfABinaryTree_236 {
         boolean testResultRecursive = resultTreeRecursive == expectedNode;
         System.out.println("resultTreeRecursive : " + resultTreeRecursive + " result : " + testResultRecursive);
 
-        SolutionIterative solutionIterative = new SolutionIterative();
+        SolutionUsingParentsMap solutionIterative = new SolutionUsingParentsMap();
         TreeNode resultTreeIterative = solutionIterative.lowestCommonAncestor(root, pNode, qNode);
         boolean testResultIterative = resultTreeIterative == expectedNode;
         System.out.println("resultTreeIterative : " + resultTreeIterative + " result : " + testResultIterative);
@@ -161,7 +161,7 @@ public class LowestCommonAncestorOfABinaryTree_236 {
      * <p>
      * How do we store the parents, we'll store all the parents for each node.
      */
-    static class SolutionIterative {
+    static class SolutionUsingParentsMap {
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
             if (root == null)
                 return null;

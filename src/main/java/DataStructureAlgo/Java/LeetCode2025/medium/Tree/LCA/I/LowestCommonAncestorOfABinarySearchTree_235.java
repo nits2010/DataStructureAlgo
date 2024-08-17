@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA;
+package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.I;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
@@ -139,7 +139,7 @@ public class LowestCommonAncestorOfABinarySearchTree_235 {
     }
 
     /**
-     * {@link  LowestCommonAncestorOfABinaryTree_236.SolutionIterative}
+     * {@link  LowestCommonAncestorOfABinaryTree_236.SolutionUsingParentsMap}
      */
     static class SolutionIterative {
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

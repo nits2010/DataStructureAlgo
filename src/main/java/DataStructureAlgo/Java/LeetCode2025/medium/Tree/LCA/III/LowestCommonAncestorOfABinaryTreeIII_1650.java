@@ -1,5 +1,7 @@
-package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA;
+package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.III;
 
+import DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.I.LowestCommonAncestorOfABinaryTree_236;
+import DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.II.LowestCommonAncestorOfABinaryTreeII_1644;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -70,7 +72,9 @@ import java.util.Set;
  * @Depth-FirstSearch
  * @BinaryTree
  * @PremimumQuestion
- * @LeetCodeLockedProblem <p>
+ * @LeetCodeLockedProblem
+ *
+ *
  * Company Tags
  * -----
  * @Facebook
@@ -133,7 +137,7 @@ public class LowestCommonAncestorOfABinaryTreeIII_1650 {
 
 
     /**
-     * Algo: inspired by this {@link DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.LowestCommonAncestorOfABinaryTree_236.SolutionIterative}
+     * Algo: inspired by this {@link LowestCommonAncestorOfABinaryTree_236.SolutionIterative}
      * This is just extension of that, in the reference problem, we had to find all the parent of the node p and q by traversing tree from top to bottom.
      * However, since with parentNode, we can traverse bottom up.
      * <p>

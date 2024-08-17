@@ -1,5 +1,6 @@
-package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA;
+package DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.II;
 
+import DataStructureAlgo.Java.LeetCode2025.medium.Tree.LCA.I.LowestCommonAncestorOfABinaryTree_236;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;

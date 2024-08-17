@@ -793,6 +793,21 @@ public class CommonMethods {
     }
 
 
+    public static TreeNode[] searchNodeByValues(TreeNode root, Integer[] values){
+        if(root == null || values == null)
+            return null;
+
+        TreeNode [] nodes = new TreeNode[values.length];
+        int i = 0;
+        for (Integer value : values){
+            nodes[i++] = searchNodeByValue(root, value);
+        }
+
+        return nodes;
+
+    }
+
+
 
     public static TreeNode searchNodeByValueBST(TreeNode root, Integer value){
         if(root == null || value == null)
