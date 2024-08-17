@@ -111,15 +111,21 @@ public class LowestCommonAncestorOfABinaryTreeIII_1650 {
         SolutionUsingSet solutionUsingSet = new SolutionUsingSet();
         TreeNode lcaUsingSet = solutionUsingSet.lowestCommonAncestor(pNode, qNode);
         boolean testResultUsingSet = lcaUsingSet == expectedNode;
-        System.out.println("Using Set : " + lcaUsingSet + " expected :" + expectedNode + " Test Passed :" + testResultUsingSet);
+        System.out.println("Using Set : " + lcaUsingSet + " expected :" + expectedNode + " Test Passed :" + (testResultUsingSet ? "Passed" : "Failed"));
 
 
         SolutionTwoPointer solutionUsingTwoPointer = new SolutionTwoPointer();
         TreeNode lcaUsingTwoPointer = solutionUsingTwoPointer.lowestCommonAncestor(pNode, qNode);
         boolean testResultUsingTwoPointer = lcaUsingTwoPointer == expectedNode;
-        System.out.println("Using Two Pointer : " + lcaUsingTwoPointer + " expected :" + expectedNode + " Test Passed :" + testResultUsingTwoPointer);
+        System.out.println("Using Two Pointer : " + lcaUsingTwoPointer + " expected :" + expectedNode + " Test Passed :" + (testResultUsingTwoPointer ? "Passed" : "Failed"));
 
-        boolean finalTestResult = testResultUsingSet && testResultUsingTwoPointer;
+
+        SolutionTwoPointerImproved solutionUsingTwoPointerImroved = new SolutionTwoPointerImproved();
+        TreeNode lcaUsingTwoPointerImproved = solutionUsingTwoPointerImroved.lowestCommonAncestor(pNode, qNode);
+        boolean testResultUsingTwoPointerImproved = lcaUsingTwoPointerImproved == expectedNode;
+        System.out.println("Using Two Pointer Improved : " + lcaUsingTwoPointerImproved + " expected : " + expectedNode + " Test Passed : " + (testResultUsingTwoPointerImproved ? "Passed" : "Failed"));
+
+        boolean finalTestResult = testResultUsingSet && testResultUsingTwoPointer && testResultUsingTwoPointerImproved;
         System.out.println("\nFinal test result " + (finalTestResult ? "Passed" : "Failed"));
         return finalTestResult;
 
@@ -256,5 +262,58 @@ public class LowestCommonAncestorOfABinaryTreeIII_1650 {
 
 
         }
+    }
+
+    /**
+     * This is same as {@link SolutionTwoPointer} but with improved code.
+     * In above code, we first get the depth of both the node and then traverse the node to get the depth.
+     * if you notice, that post finding the depthdiff, we are moving the bigger depth node up so that both node reaches the same depth wrt root.
+     *
+     * Which is same as the fact that, we move both the node up at the same time, the smaller depth node will reach its parent first then the other.
+     * and if we reset the smaller depth node to its original position then the other node would have travelled the depthDiff by then.
+     * Which makes both the node at the same position.
+     *
+     * Algo;
+     * 1. Start both the node from its original position till they meet.
+     * 2. if a node reaches root first (i.e. no parent) then reset that node to its original position
+     * 3. continue the above.
+     *
+     * T/S: O(n)/O(n)
+     *
+     */
+    static class SolutionTwoPointerImproved {
+
+        /**
+         * O(2n)/O(n)
+         */
+        public TreeNode lowestCommonAncestor(TreeNodeWithParent p, TreeNodeWithParent q) {
+
+            if (p == null || q == null)
+                return null;
+
+            if (p == q)
+                return p; // if both are same, then return that node as LCA
+
+
+            //now both are at same depth
+            TreeNodeWithParent pTemp = p, qTemp = q;
+
+            while (pTemp != qTemp) {
+
+                pTemp = pTemp.parent == null   //if p reaches its parent first, i.e. p is on shorter depth, reset it to its original position
+                        ? p
+                        : (TreeNodeWithParent) pTemp.parent;
+
+                qTemp = qTemp.parent == null //if q reaches its parent first, i.e. q is on shorter depth, reset it to its original position
+                        ? q
+                        : (TreeNodeWithParent) qTemp.parent;
+
+            }
+            return pTemp;
+
+
+        }
+
+
     }
 }
