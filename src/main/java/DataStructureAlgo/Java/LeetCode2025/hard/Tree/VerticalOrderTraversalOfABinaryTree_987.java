@@ -135,7 +135,13 @@ public class VerticalOrderTraversalOfABinaryTree_987 {
             if (root == null)
                 return verticalTraversal;
 
-
+            /**
+             * We could use TreeMap instead of HashMap and avoid int[] col
+             * TreeMap is another implementation of the Map interface in Java.
+             * Unlike HashMap and LinkedHashMap, TreeMap does not preserve the insertion order.
+             * Instead, it orders its entries based on the natural ordering of the keys, or by a Comparator provided at map creation time.
+             * When you iterate over the entries of a TreeMap, they are returned in ascending order of their keys, according to the natural ordering or the Comparator
+             */
             Map<Integer, Map<Integer, List<Integer>>> columnVsElements = new HashMap<>();
 
             int[] col = {Integer.MAX_VALUE, Integer.MIN_VALUE};
