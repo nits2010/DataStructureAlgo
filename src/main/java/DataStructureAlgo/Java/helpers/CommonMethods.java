@@ -1,11 +1,11 @@
 package DataStructureAlgo.Java.helpers;
 
 import DataStructureAlgo.Java.LeetCode2025.easy.Tree.SameTree_100;
-import  DataStructureAlgo.Java.helpers.templates.DoublyListNode;
-import  DataStructureAlgo.Java.helpers.templates.ListNode;
-import  DataStructureAlgo.Java.helpers.templates.TreeNode;
-import  DataStructureAlgo.Java.LeetCode.flatten.list.Node;
-import  DataStructureAlgo.Java.LeetCode.flatten.list.SinglyNode;
+import DataStructureAlgo.Java.helpers.templates.DoublyListNode;
+import DataStructureAlgo.Java.helpers.templates.ListNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.LeetCode.flatten.list.Node;
+import DataStructureAlgo.Java.LeetCode.flatten.list.SinglyNode;
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.Pair;
 
@@ -23,14 +23,14 @@ public class CommonMethods {
         System.out.println(toString(a));
     }
 
-    public static <T> void print(final T []a) {
+    public static <T> void print(final T[] a) {
         System.out.println(toString(a));
     }
 
-    public static <T> void print(final T [][]a) {
+    public static <T> void print(final T[][] a) {
 
-        for(T[] x:a) {
-            System.out.print("["+toString(x) + "],");
+        for (T[] x : a) {
+            System.out.print("[" + toString(x) + "],");
         }
     }
 
@@ -605,6 +605,35 @@ public class CommonMethods {
     }
 
 
+    public static <T> boolean equalsValues(List<List<T>> a, List<List<T>> b) {
+
+        if (a == null && b == null)
+            return true;
+        if (a == null || b == null)
+            return false;
+
+        if (a.size() != b.size())
+            return false;
+
+        for (int i = 0; i < a.size(); i++) {
+            List<T> x = a.get(i);
+            List<T> y = b.get(i);
+
+            if (x.size() != y.size())
+                return false;
+
+            for (int j = 0; j < x.size(); j++) {
+                if (!x.get(j).equals(y.get(j)))
+                    return false;
+            }
+        }
+
+        return true;
+
+
+    }
+
+
     public static boolean equalsValues(ListNode a, ListNode b) {
 
         if (a == null && b == null)
@@ -617,7 +646,7 @@ public class CommonMethods {
             a = a.next;
             b = b.next;
         }
-        if(a != null || b != null)
+        if (a != null || b != null)
             return false;
         return true;
 
@@ -647,7 +676,7 @@ public class CommonMethods {
 
     }
 
-    public static <I,E,R> void resultPrint(I input, E expected, E output, String msg, R result){
+    public static <I, E, R> void resultPrint(I input, E expected, E output, String msg, R result) {
         if (input instanceof int[]) {
             print((int[]) input);
             print((int[]) expected);
@@ -662,13 +691,13 @@ public class CommonMethods {
     }
 
 
-    public static DataStructureAlgo.Java.Node listWithRandomNode(List<Pair<Integer,Integer>> input){
-        if(input == null || input.isEmpty())
+    public static DataStructureAlgo.Java.Node listWithRandomNode(List<Pair<Integer, Integer>> input) {
+        if (input == null || input.isEmpty())
             return null;
 
-        Map<Integer,DataStructureAlgo.Java.Node> mapOfIndexVsNode = new HashMap<>();
+        Map<Integer, DataStructureAlgo.Java.Node> mapOfIndexVsNode = new HashMap<>();
 
-        int i=0 ;
+        int i = 0;
         for (Pair<Integer, Integer> pair : input) {
             Integer value = pair.getKey();
             DataStructureAlgo.Java.Node node = new DataStructureAlgo.Java.Node(value, null, null);
@@ -677,55 +706,55 @@ public class CommonMethods {
 
         }
 
-        for (i=0; i<input.size(); i++){
+        for (i = 0; i < input.size(); i++) {
 
-           DataStructureAlgo.Java.Node node = mapOfIndexVsNode.get(i);
+            DataStructureAlgo.Java.Node node = mapOfIndexVsNode.get(i);
 
-            if(i+1 < input.size())
-                node.next = mapOfIndexVsNode.get(i+1);
+            if (i + 1 < input.size())
+                node.next = mapOfIndexVsNode.get(i + 1);
 
-            if(input.get(i).getValue()!=null)
+            if (input.get(i).getValue() != null)
                 node.random = mapOfIndexVsNode.get(input.get(i).getValue());
         }
         return mapOfIndexVsNode.get(0);
 
     }
 
-    public static void print(DataStructureAlgo.Java.Node node){
+    public static void print(DataStructureAlgo.Java.Node node) {
         DataStructureAlgo.Java.Node temp = node;
 
-        while (temp!=null){
-            System.out.print(temp.val +"-->");
-            temp =temp.next;
+        while (temp != null) {
+            System.out.print(temp.val + "-->");
+            temp = temp.next;
         }
         System.out.println();
         temp = node;
-        while (temp!=null){
-            System.out.print(temp.val +"=>" );
-            if(temp.random!=null)
-                System.out.print(temp.random.val +" ");
+        while (temp != null) {
+            System.out.print(temp.val + "=>");
+            if (temp.random != null)
+                System.out.print(temp.random.val + " ");
             else
-                System.out.print(temp.random  +" ");
-            temp =temp.next;
+                System.out.print(temp.random + " ");
+            temp = temp.next;
         }
     }
 
-    public static void printWithRef(DataStructureAlgo.Java.Node node){
+    public static void printWithRef(DataStructureAlgo.Java.Node node) {
         DataStructureAlgo.Java.Node temp = node;
 
-        while (temp!=null){
-            System.out.print(temp.val + "("+ temp +")" +"-->");
-            temp =temp.next;
+        while (temp != null) {
+            System.out.print(temp.val + "(" + temp + ")" + "-->");
+            temp = temp.next;
         }
         System.out.println();
         temp = node;
-        while (temp!=null){
-            System.out.print(temp.val+ "("+ temp +")" +"=>" );
-            if(temp.random!=null)
-                System.out.print(temp.random.val + "("+ temp.random +")"+" ");
+        while (temp != null) {
+            System.out.print(temp.val + "(" + temp + ")" + "=>");
+            if (temp.random != null)
+                System.out.print(temp.random.val + "(" + temp.random + ")" + " ");
             else
-                System.out.print(temp.random  +" ");
-            temp =temp.next;
+                System.out.print(temp.random + " ");
+            temp = temp.next;
         }
     }
 
@@ -744,7 +773,7 @@ public class CommonMethods {
 //        System.out.println(toString(new char[]{'a', 'b', 'c'}));
 //        System.out.println(toString(new char[][]{{'a', 'b', 'c'}, {'x', 'y', 'z'}, {'t', 'y', 'p'}}));
 
-        List<Pair<Integer,Integer>> input = new ArrayList<>(5);
+        List<Pair<Integer, Integer>> input = new ArrayList<>(5);
 //        [[7,null],[13,0],[11,4],[10,2],[1,0]]
         input.add(new Pair<>(7, null));
         input.add(new Pair<>(13, 0));
@@ -752,7 +781,7 @@ public class CommonMethods {
         input.add(new Pair<>(10, 2));
         input.add(new Pair<>(1, 0));
 
-      DataStructureAlgo.Java.Node head = listWithRandomNode(input);
+        DataStructureAlgo.Java.Node head = listWithRandomNode(input);
         printWithRef(head);
 
     }
@@ -760,11 +789,11 @@ public class CommonMethods {
     public static boolean equals(Integer[][] expected, List<List<Integer>> result) {
         boolean test = true;
 
-        if(expected.length != result.size() )
+        if (expected.length != result.size())
             return false;
 
         for (int i = 0; i < expected.length; i++) {
-            if(expected[i].length != result.get(i).size())
+            if (expected[i].length != result.get(i).size())
                 return false;
             for (int j = 0; j < expected[i].length; j++) {
                 test &= (expected[i][j].equals(result.get(i).get(j)));
@@ -773,16 +802,16 @@ public class CommonMethods {
         return test;
     }
 
-    public static boolean isSameTree(TreeNode root1, TreeNode root2){
+    public static boolean isSameTree(TreeNode root1, TreeNode root2) {
         SameTree_100.Solution solution = new SameTree_100.Solution();
         return solution.isSameTree(root1, root2);
     }
 
-    public static TreeNode searchNodeByValue(TreeNode root, Integer value){
-        if(root == null || value == null)
+    public static TreeNode searchNodeByValue(TreeNode root, Integer value) {
+        if (root == null || value == null)
             return null;
 
-        if(root.val == value)
+        if (root.val == value)
             return root;
 
         TreeNode left = searchNodeByValue(root.left, value);
@@ -793,13 +822,13 @@ public class CommonMethods {
     }
 
 
-    public static TreeNode[] searchNodeByValues(TreeNode root, Integer[] values){
-        if(root == null || values == null)
+    public static TreeNode[] searchNodeByValues(TreeNode root, Integer[] values) {
+        if (root == null || values == null)
             return null;
 
-        TreeNode [] nodes = new TreeNode[values.length];
+        TreeNode[] nodes = new TreeNode[values.length];
         int i = 0;
-        for (Integer value : values){
+        for (Integer value : values) {
             nodes[i++] = searchNodeByValue(root, value);
         }
 
@@ -808,15 +837,14 @@ public class CommonMethods {
     }
 
 
-
-    public static TreeNode searchNodeByValueBST(TreeNode root, Integer value){
-        if(root == null || value == null)
+    public static TreeNode searchNodeByValueBST(TreeNode root, Integer value) {
+        if (root == null || value == null)
             return null;
 
-        if(root.val == value)
+        if (root.val == value)
             return root;
 
-        if(value < root.val)
+        if (value < root.val)
             return searchNodeByValueBST(root.left, value);
         else
             return searchNodeByValueBST(root.right, value);
