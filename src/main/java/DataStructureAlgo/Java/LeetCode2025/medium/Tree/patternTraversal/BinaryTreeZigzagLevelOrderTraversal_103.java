@@ -77,8 +77,9 @@ public class BinaryTreeZigzagLevelOrderTraversal_103 {
         final Solution.SolutionUsingTwoDS.SolutionUsingTwoStacks solutionUsingTwoStacks = new Solution.SolutionUsingTwoDS.SolutionUsingTwoStacks();
         final Solution.SolutionUsingTwoDS.SolutionUsingStackAndQueue solutionUsingStackAndQueue = new Solution.SolutionUsingTwoDS.SolutionUsingStackAndQueue();
         final Solution.SolutionUsingOneDS.SolutionUsingDeque solutionUsingDeque = new Solution.SolutionUsingOneDS.SolutionUsingDeque();
-        final Solution.SolutionUsingOneDS.SolutionUsingHeight solutinoUsingHeight = new Solution.SolutionUsingOneDS.SolutionUsingHeight();
-        final Solution.SolutionUsingOneDS.SolutionUsingHeight2 solutinoUsingHeight2 = new Solution.SolutionUsingOneDS.SolutionUsingHeight2();
+        final Solution.SolutionUsingOneDS.SolutionUsingHeight solutionUsingHeight = new Solution.SolutionUsingOneDS.SolutionUsingHeight();
+        final Solution.SolutionUsingOneDS.SolutionUsingHeight2 solutionUsingHeight2 = new Solution.SolutionUsingOneDS.SolutionUsingHeight2();
+        final Solution.SolutionUsingOneDS.SolutionUsingHeightSimplified solutionUsingHeightSimplified = new Solution.SolutionUsingOneDS.SolutionUsingHeightSimplified();
 
         final List<List<Integer>> outputUsingTwoStacks = solutionUsingTwoStacks.zigzagLevelOrder(root);
         boolean testResultUsingTwoStack = CommonMethods.equalsValues(expected, outputUsingTwoStacks);
@@ -93,17 +94,26 @@ public class BinaryTreeZigzagLevelOrderTraversal_103 {
         System.out.println("output Using Deque  :" + outputUsingDeque + " testResult :" + (testResultUsingDeque ? " Passed " : "Failed"));
 
 
-        final List<List<Integer>> outputUsingHeight = solutinoUsingHeight.zigzagLevelOrder(root);
+        final List<List<Integer>> outputUsingHeight = solutionUsingHeight.zigzagLevelOrder(root);
         boolean testResultUsingHeight = CommonMethods.equalsValues(expected, outputUsingHeight);
         System.out.println("output Using Height  :" + outputUsingHeight + " testResult :" + (testResultUsingHeight ? " Passed " : "Failed"));
 
 
-        final List<List<Integer>> outputUsingHeight2 = solutinoUsingHeight2.zigzagLevelOrder(root);
+        final List<List<Integer>> outputUsingHeight2 = solutionUsingHeight2.zigzagLevelOrder(root);
         boolean testResultUsingHeight2 = CommonMethods.equalsValues(expected, outputUsingHeight2);
         System.out.println("output Using Height 2 :" + outputUsingHeight2 + " testResult :" + (testResultUsingHeight2 ? " Passed " : "Failed"));
 
 
-        boolean finalTestResult = testResultUsingTwoStack && testResultUsingStackQueue && testResultUsingDeque && testResultUsingHeight && testResultUsingHeight2;
+        final List<List<Integer>> outputUsingHeightSimplified = solutionUsingHeightSimplified.zigzagLevelOrder(root);
+        boolean testResultUsingHeightSimplified = CommonMethods.equalsValues(expected, outputUsingHeightSimplified);
+        System.out.println("output Using Height Simplified :" + outputUsingHeightSimplified + " testResult :" + (testResultUsingHeightSimplified ? " Passed " : "Failed"));
+
+        boolean finalTestResult = testResultUsingTwoStack
+                && testResultUsingStackQueue
+                && testResultUsingDeque
+                && testResultUsingHeight
+                && testResultUsingHeight2
+                && testResultUsingHeightSimplified;
         System.out.println("\n Final Test Result " + (finalTestResult ? " Passed " : " Failed "));
         return finalTestResult;
     }
@@ -401,6 +411,39 @@ public class BinaryTreeZigzagLevelOrderTraversal_103 {
 
 
             }
+
+            static class SolutionUsingHeightSimplified {
+                public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+                    List<List<Integer>> zigZag = new LinkedList<>();
+
+                    if (root == null)
+                        return zigZag;
+
+                    zigzagLevelOrder(root, zigZag, true, 0);
+                    return zigZag;
+                }
+
+                private void zigzagLevelOrder(TreeNode root, List<List<Integer>> zigZag, boolean leftToRight, int height) {
+                    if (root == null)
+                        return;
+
+                    //if new level, then add a list for the element
+                    if (zigZag.size() == height)
+                        zigZag.add(new LinkedList<>());
+
+                    List<Integer> zig = zigZag.get(height);
+
+                    if (leftToRight)
+                        zig.add(root.val);
+                    else
+                        zig.add(0, root.val);
+
+                    zigzagLevelOrder(root.left, zigZag, !leftToRight, height + 1);
+                    zigzagLevelOrder(root.right, zigZag, !leftToRight, height + 1);
+
+                }
+            }
+
         }
     }
 }
