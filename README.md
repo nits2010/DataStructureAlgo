@@ -25,6 +25,8 @@
   Top 174 company wise https://seanprashad.com/leetcode-patterns/
 * TakeYouForwardList
   https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+* Naukri.com
+  https://www.naukri.com/code360/problems
 
 
 * System Design
