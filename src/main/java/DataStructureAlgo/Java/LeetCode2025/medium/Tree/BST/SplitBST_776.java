@@ -81,6 +81,7 @@ public class SplitBST_776 {
         test &= test(new Integer[]{4, 2, 6, 1, 3, 5, 7}, 4, new Integer[]{4, 2, 1, 3}, new Integer[]{6, 5, 7});
         test &= test(new Integer[]{4, 2, 6, 1, 3, 5, 7}, 1, new Integer[]{1}, new Integer[]{4, 2, 6, 3, 5, 7});
         test &= test(new Integer[]{4, 2, 6, 1, 3, 5, 7}, 0, new Integer[]{}, new Integer[]{4, 2, 6, 1, 3, 5, 7});
+        test &= test(new Integer[]{40, 20, 50, 10, 35, 60, null, null, 25, null, 55}, 35, new Integer[]{20, 10, 35, 25}, new Integer[]{40, 55, 50, 60});
         System.out.println("============================");
         System.out.println(test ? " All Passed " : " Something Failed ");
     }

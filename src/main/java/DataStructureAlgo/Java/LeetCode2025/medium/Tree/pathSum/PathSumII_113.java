@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.easy.Tree.pathSum;
+package DataStructureAlgo.Java.LeetCode2025.medium.Tree.pathSum;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
@@ -52,12 +52,12 @@ import java.util.List;
  * <p>
  * Tags
  * -----
- *
+ * @medium
  * @Backtracking
  * @Tree
  * @Depth-FirstSearch
  * @BinaryTree
- * @medium <p>
+ * <p>
  * Company Tags
  * -----
  * @Amazon
