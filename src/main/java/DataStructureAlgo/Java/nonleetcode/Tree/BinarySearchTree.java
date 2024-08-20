@@ -88,20 +88,16 @@ public class BinarySearchTree implements IBinarySearchTree {
              */
 
             TreeNode<Integer> successor = root.getRight();
-            TreeNode<Integer> successorParent = root.getRight();
 
             //find successor of root, that lies in right subtree, left most child
             while (null != successor.getLeft()) {
-                successorParent = successor;
                 successor = successor.getLeft();
             }
 
-            //Since the successor is always as left child of successorParent (because of above loop),
-            // the reset the left child only, carry the successor right child
-            successorParent.setLeft(successor.getRight());
-
             //update the value of root from successor
             root.setData(successor.getData());
+
+            root.setRight(delete(successor.getData(), root.getRight()));
 
             //carry root to its parent
             return root;

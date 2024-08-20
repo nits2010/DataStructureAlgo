@@ -600,7 +600,11 @@ public class CommonMethods {
         List<T> temp = a[0];
         int i = 1;
         while (i < a.length)
-            equal &= temp.equals(a[i++]);
+            if(temp!=null) {
+                equal &= temp.equals(a[i++]);
+            } else if(a[i]!=null) {
+                return false;
+            }
         return equal;
     }
 

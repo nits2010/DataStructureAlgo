@@ -266,10 +266,10 @@ public class TreeTraversalRecursive {
 
     public static List<Integer> levelOrder(DataStructureAlgo.Java.helpers.templates.TreeNode root) {
 
-        if (null == root)
-            return null;
-
         List<Integer> levelOrder = new LinkedList<>();
+        if (null == root)
+            return levelOrder;
+
         Queue<DataStructureAlgo.Java.helpers.templates.TreeNode> queue = new LinkedList<>();
 
         queue.add(root);
