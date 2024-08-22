@@ -83,11 +83,11 @@ public class LongestUnivaluePath_687 {
     }
 
     /**
-     * We need to count the edges between the univalue path. THere is no edge to self node, hence the univalue path of each self node would be 0;
-     * We can start doing a post order traversal,
-     * 1. and if this is a leaf node, then its univalue path length would be 0
-     * 2. if this is not a leaf node, then we can compare it's value to either left child or right child or both, for each equal value, it gain 1 length path.
-     * 3. return maximum of either left or right to parent, as this will be maximum edge we can add.
+     * We need to count the edges between the univalue path. THere is no edge to self-node, hence the unique path of each self-node would be 0;
+     * We can start doing a post-order traversal,
+     * 1. and if this is a leaf node, then its unique path length would be 0
+     * 2. if this is not a leaf node, then we can compare its value to either left child or right child or both; for each equal value, it gains 1 length path.
+     * 3. return maximum of either left or right to parent, as this will be a maximum edge we can add.
      * 4. Keep track of the maximum
      */
     static class Solution {
