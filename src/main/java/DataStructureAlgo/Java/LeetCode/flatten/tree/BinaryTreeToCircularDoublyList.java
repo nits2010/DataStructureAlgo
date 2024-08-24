@@ -27,7 +27,7 @@ public class BinaryTreeToCircularDoublyList {
 
     /**
      * We process tree in right to left manner.
-     * Initially the rightmost node would be head of our list as there is no node left.
+     * Initially, the rightmost node would be head of our list as there is no node left.
      * But as we move on left side, we keep updating our head.
      * <p>
      * The all logic to convert tree to list is based on adding node on head of the list every time and keep updating head
