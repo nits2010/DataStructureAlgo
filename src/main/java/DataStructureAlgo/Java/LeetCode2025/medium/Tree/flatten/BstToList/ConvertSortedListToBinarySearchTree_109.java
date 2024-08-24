@@ -59,7 +59,9 @@ import java.util.List;
  * @Amazon
  * @Microsoft
  * @Google
- * @Editorial
+ *
+ *
+ * @Editorial <a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/solutions/372294/short-java-bottom-up-build-100-100">...</a>
  */
 public class ConvertSortedListToBinarySearchTree_109 {
     public static void main(String[] args) {
