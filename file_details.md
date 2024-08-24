@@ -1,704 +1,704 @@
-| File Name                                                                    | GitHub Link   |
-|:-----------------------------------------------------------------------------|:--------------|
-| Class.java                                                                   | GitHub Link   |
-| KthNodeFromEndOfLinkedList.java                                              | GitHub Link   |
-| Node.java                                                                    | GitHub Link   |
-| Pair.java                                                                    | GitHub Link   |
-| AmendTheSentence.java                                                        | GitHub Link   |
-| A_And_B_ToZero.java                                                          | GitHub Link   |
-| ElementThatHasSumOfLeftArrayEqualSumOfRight.java                             | GitHub Link   |
-| FindPivotSortedRotedArray.java                                               | GitHub Link   |
-| MaximizeSumSelectedNumbersFromArrayMakeEmpty.java                            | GitHub Link   |
-| MinimiseTheMaximumDifferenceBetweenHeightsTower.java                         | GitHub Link   |
-| SpecialSubStringStartWithVowelEndWithConsonant.java                          | GitHub Link   |
-| SwapEvenOddBits.java                                                         | GitHub Link   |
-| WasteMinimumBag.java                                                         | GitHub Link   |
-| CellStateAfterNDays.java                                                     | GitHub Link   |
-| FaceToFaceCodingRound.java                                                   | GitHub Link   |
-| GroupIsomorphicStrings.java                                                  | GitHub Link   |
-| MaximumDifferenceInIndex.java                                                | GitHub Link   |
-| MaximumNumberChocolatesDistributedEquallyAmongKStudents.java                 | GitHub Link   |
-| MergeKSortedIterators.java                                                   | GitHub Link   |
-| OptimizeMemoryUsage.java                                                     | GitHub Link   |
-| PeakMemoryUsage.java                                                         | GitHub Link   |
-| RemoveDuplicateIPv4.java                                                     | GitHub Link   |
-| RemoveObstacleRobotMinimumDistance.java                                      | GitHub Link   |
-| ReplaceGreatestElementOnRightSide.java                                       | GitHub Link   |
-| SearchAlmostSortedArray.java                                                 | GitHub Link   |
-| SortedSequenceSizeK.java                                                     | GitHub Link   |
-| SortedSubSequenceSize3.java                                                  | GitHub Link   |
-| TreasureIsland.java                                                          | GitHub Link   |
-| WordBreak.java                                                               | GitHub Link   |
-| BinaryPeriod.java                                                            | GitHub Link   |
-| CarsAndDispensers.java                                                       | GitHub Link   |
-| PointLatticePointAfter90DegreeRightTurn.java                                 | GitHub Link   |
-| Encoding.java                                                                | GitHub Link   |
-| LookAndSay.java                                                              | GitHub Link   |
-| RobotMove.java                                                               | GitHub Link   |
-| SubList.java                                                                 | GitHub Link   |
-| BookingCares.java                                                            | GitHub Link   |
-| HotelsReview.java                                                            | GitHub Link   |
-| Multiple.java                                                                | GitHub Link   |
-| Reservation.java                                                             | GitHub Link   |
-| AllInterpretationOfSequence.java                                             | GitHub Link   |
-| AnagramPermutationSearch.java                                                | GitHub Link   |
-| ArithmeticPower.java                                                         | GitHub Link   |
-| BuildStringWordsInDictionary.java                                            | GitHub Link   |
-| CombinationSum.java                                                          | GitHub Link   |
-| CompressChecker.java                                                         | GitHub Link   |
-| ContactCleaner.java                                                          | GitHub Link   |
-| ContiguousSum.java                                                           | GitHub Link   |
-| CutBinaryTree.java                                                           | GitHub Link   |
-| DecodedInCodedString.java                                                    | GitHub Link   |
-| FractionRecurringDecimal.java                                                | GitHub Link   |
-| GraphDivideTwoSetsOrBipartiteGraph.java                                      | GitHub Link   |
-| IndexLeftMost1InColumns.java                                                 | GitHub Link   |
-| InterleavedListOfList.java                                                   | GitHub Link   |
-| IntersectionTwoArraysWithRestriction.java                                    | GitHub Link   |
-| KPalindromeString.java                                                       | GitHub Link   |
-| ListCombination.java                                                         | GitHub Link   |
-| LongestArithmeticSequence.java                                               | GitHub Link   |
-| LongestConsecutiveSequence.java                                              | GitHub Link   |
-| MaximumSumSubArrayAtLeastKElements.java                                      | GitHub Link   |
-| MaximumValueByPlacingPlusMulOperator.java                                    | GitHub Link   |
-| MinimumFlips1OnLeft0OnRight.java                                             | GitHub Link   |
-| MinimumWordBreak.java                                                        | GitHub Link   |
-| MoveZero.java                                                                | GitHub Link   |
-| MovingAverage.java                                                           | GitHub Link   |
-| MultiplyTwoNumbersStringFormat.java                                          | GitHub Link   |
-| NumberSubArraysBoundedMaximum.java                                           | GitHub Link   |
-| PairOfPalindrome.java                                                        | GitHub Link   |
-| PeriodicString.java                                                          | GitHub Link   |
-| PrintLetterCombinationPhoneArray.java                                        | GitHub Link   |
-| ReadNCharactersGivenRead4.java                                               | GitHub Link   |
-| RectangleBinaryMatrixCorner1.java                                            | GitHub Link   |
-| RemoveInvalidPretenses.java                                                  | GitHub Link   |
-| ShortestSubArraySumGreaterThenN.java                                         | GitHub Link   |
-| ShortestSubArraySumLessThenEqualN.java                                       | GitHub Link   |
-| SimilarRGBColor.java                                                         | GitHub Link   |
-| SortStringsBasedCustomAlphabetOrder.java                                     | GitHub Link   |
-| TernaryExpressionToBinaryTree.java                                           | GitHub Link   |
-| WordOrdering.java                                                            | GitHub Link   |
-| LongestUniformSubString.java                                                 | GitHub Link   |
-| MedianOfTwoSortedArrayMergeProcedure.java                                    | GitHub Link   |
-| Product.java                                                                 | GitHub Link   |
-| SecureChannel.java                                                           | GitHub Link   |
-| BinarySearchTreeHeap.java                                                    | GitHub Link   |
-| BraceExpansion.java                                                          | GitHub Link   |
-| BullsCowExtended.java                                                        | GitHub Link   |
-| ChocolateSweetnessChunk.java                                                 | GitHub Link   |
-| LongestSubStringKUniqueChar.java                                             | GitHub Link   |
-| MaximumFlowersLineOfSight.java                                               | GitHub Link   |
-| PoemRythms.java                                                              | GitHub Link   |
-| SetMatrixZerosEraseOrbsXs.java                                               | GitHub Link   |
-| ShortestPathBreakingThroughWalls.java                                        | GitHub Link   |
-| ShortestSequence.java                                                        | GitHub Link   |
-| StringRotationMatch.java                                                     | GitHub Link   |
-| StringToStringTransformEvenOdd.java                                          | GitHub Link   |
-| WaysOfTransformingOneStringToOther.java                                      | GitHub Link   |
-| WhacAMole.java                                                               | GitHub Link   |
-| MinimumBracketReversal.java                                                  | GitHub Link   |
-| MissingElements.java                                                         | GitHub Link   |
-| SquareOfNumbers.java                                                         | GitHub Link   |
-| ValidPushPopSequenceInStack.java                                             | GitHub Link   |
-| ExpressionEvaluator.java                                                     | GitHub Link   |
-| IslandsSizeCount.java                                                        | GitHub Link   |
-| MathHomework.java                                                            | GitHub Link   |
-| MinimumMoves.java                                                            | GitHub Link   |
-| ConsecutiveSum.java                                                          | GitHub Link   |
-| SortStringBasedOnFrequencyAndLexical.java                                    | GitHub Link   |
-| SubStringCalculator.java                                                     | GitHub Link   |
-| AppleOrchard.java                                                            | GitHub Link   |
-| ReverseGearReverseEdgesInGraphPath.java                                      | GitHub Link   |
-| WordAndSeek.java                                                             | GitHub Link   |
-| GenerateBinaryTreeParentChildRelationship.java                               | GitHub Link   |
-| DepthSum.java                                                                | GitHub Link   |
-| IDepthSum.java                                                               | GitHub Link   |
-| Main.java                                                                    | GitHub Link   |
-| NestedInteger.java                                                           | GitHub Link   |
-| NestedIntegerValue.java                                                      | GitHub Link   |
-| NestedIntegerValues.java                                                     | GitHub Link   |
-| CustomConcurrentHashMap.java                                                 | GitHub Link   |
-| CustomKey.java                                                               | GitHub Link   |
-| CustomList.java                                                              | GitHub Link   |
-| CustomNode.java                                                              | GitHub Link   |
-| CustomValue.java                                                             | GitHub Link   |
-| Driver.java                                                                  | GitHub Link   |
-| ICustomList.java                                                             | GitHub Link   |
-| ICustomMap.java                                                              | GitHub Link   |
-| IKeyValueStore.java                                                          | GitHub Link   |
-| KeyValueStore.java                                                           | GitHub Link   |
-| ListNode.java                                                                | GitHub Link   |
-| EqualExpense.java                                                            | GitHub Link   |
-| EqualSplit.java                                                              | GitHub Link   |
-| Expense.java                                                                 | GitHub Link   |
-| ExpenseService.java                                                          | GitHub Link   |
-| ExpenseType.java                                                             | GitHub Link   |
-| Group.java                                                                   | GitHub Link   |
-| Main.java                                                                    | GitHub Link   |
-| PercentExpense.java                                                          | GitHub Link   |
-| PercentSplit.java                                                            | GitHub Link   |
-| Split.java                                                                   | GitHub Link   |
-| SplitExpenseManager.java                                                     | GitHub Link   |
-| User.java                                                                    | GitHub Link   |
-| BinaryStringOperationRequireToMakeZero.java                                  | GitHub Link   |
-| CombinationSumProduct.java                                                   | GitHub Link   |
-| ShortestPathRoadFlightAtMostNFlight.java                                     | GitHub Link   |
-| RGBStreamMeanModeMedian.java                                                 | GitHub Link   |
-| SubArrays.java                                                               | GitHub Link   |
-| SumTo100.java                                                                | GitHub Link   |
-| FindCompletePrefixes.java                                                    | GitHub Link   |
-| ReverseDiagonalOrder.java                                                    | GitHub Link   |
-| SubarrayProductLessThanEqualK.java                                           | GitHub Link   |
-| KDifference.java                                                             | GitHub Link   |
-| Triplets.java                                                                | GitHub Link   |
-| CommonMethods.java                                                           | GitHub Link   |
-| ListBuilder.java                                                             | GitHub Link   |
-| TreeBuilder.java                                                             | GitHub Link   |
-| DoublyListNode.java                                                          | GitHub Link   |
-| Interval.java                                                                | GitHub Link   |
-| ListNode.java                                                                | GitHub Link   |
-| NArrayTreeNode.java                                                          | GitHub Link   |
-| TreapNode.java                                                               | GitHub Link   |
-| TreeNode.java                                                                | GitHub Link   |
-| TreeNodeWithParent.java                                                      | GitHub Link   |
-| AddString.java                                                               | GitHub Link   |
-| AllConstantTimeDataStructureInsertDeleteMinMax.java                          | GitHub Link   |
-| AsteroidCollision.java                                                       | GitHub Link   |
-| BombEnemy.java                                                               | GitHub Link   |
-| BullsCow.java                                                                | GitHub Link   |
-| BurstBalloons.java                                                           | GitHub Link   |
-| ClimbingStairs.java                                                          | GitHub Link   |
-| CloneListRandomPointer.java                                                  | GitHub Link   |
-| ClosestBinarySearchTreeValue.java                                            | GitHub Link   |
-| CoinChangeProblem.java                                                       | GitHub Link   |
-| ConsecutiveSum.java                                                          | GitHub Link   |
-| ContainerWithMostWater.java                                                  | GitHub Link   |
-| ContiguousArrayZeroOne.java                                                  | GitHub Link   |
-| ConvertToNonDecreasingArray.java                                             | GitHub Link   |
-| ConvertToStrictlyIncreasingArray.java                                        | GitHub Link   |
-| CustomSortString.java                                                        | GitHub Link   |
-| DailyTemperatures.java                                                       | GitHub Link   |
-| DecodeString.java                                                            | GitHub Link   |
-| DecodeWays.java                                                              | GitHub Link   |
-| DegreeAnArray.java                                                           | GitHub Link   |
-| DeleteOperationTwoStrings.java                                               | GitHub Link   |
-| DesignMinStack.java                                                          | GitHub Link   |
-| DistributeCandies.java                                                       | GitHub Link   |
-| DivisorGame.java                                                             | GitHub Link   |
-| EggDropProblem.java                                                          | GitHub Link   |
-| FibonacciNumber.java                                                         | GitHub Link   |
-| FindAllAnagramsString.java                                                   | GitHub Link   |
-| FindFirstLastPositionElementSortedArray.java                                 | GitHub Link   |
-| FindPivotIndex.java                                                          | GitHub Link   |
-| FirstBadVersion.java                                                         | GitHub Link   |
-| FirstUniqueCharacterString.java                                              | GitHub Link   |
-| FlipGame.java                                                                | GitHub Link   |
-| FloodFill.java                                                               | GitHub Link   |
-| GameOfLife.java                                                              | GitHub Link   |
-| GenerateValidParenthesis.java                                                | GitHub Link   |
-| GroupAnagrams.java                                                           | GitHub Link   |
-| GroupShiftedString.java                                                      | GitHub Link   |
-| ImplementStrStrKMPRobinKarp.java                                             | GitHub Link   |
-| IntegerToEnglishWords.java                                                   | GitHub Link   |
-| InterleavingString.java                                                      | GitHub Link   |
-| IsGraphBipartite.java                                                        | GitHub Link   |
-| IsomorphicStrings.java                                                       | GitHub Link   |
-| IsValidInteger.java                                                          | GitHub Link   |
-| JewelsStones.java                                                            | GitHub Link   |
-| KClosestPointsOrigin.java                                                    | GitHub Link   |
-| LargestNumberAtLeastTwiceOthers.java                                         | GitHub Link   |
-| LastStoneWeight.java                                                         | GitHub Link   |
-| LetterCombinationsPhoneNumber.java                                           | GitHub Link   |
-| LetterTilePossibilities.java                                                 | GitHub Link   |
-| LongestAbsoluteFilePath.java                                                 | GitHub Link   |
-| LongestArithmeticSequence.java                                               | GitHub Link   |
-| LongestIncreasingPath.java                                                   | GitHub Link   |
-| LongestValidParentheses.java                                                 | GitHub Link   |
-| LowestCommonAncestor.java                                                    | GitHub Link   |
-| MaximizeDistanceClosestPerson.java                                           | GitHub Link   |
-| MaximumDistanceInArrays.java                                                 | GitHub Link   |
-| MaximumSubarrayKadans.java                                                   | GitHub Link   |
-| MaxProductSubArray.java                                                      | GitHub Link   |
-| MergeKSortedLists.java                                                       | GitHub Link   |
-| MergeTwoSortedLists.java                                                     | GitHub Link   |
-| MinCapacityOfShipMinimumNumberPagesStudent.java                              | GitHub Link   |
-| MinCostClimbingStairs.java                                                   | GitHub Link   |
-| MinimizeMaxDistanceGasStation.java                                           | GitHub Link   |
-| MinimumJumpToReachLastJumpGame.java                                          | GitHub Link   |
-| NumberOfTriangles.java                                                       | GitHub Link   |
-| NumberSubarraysBoundedMaximum.java                                           | GitHub Link   |
-| OrderlyQueueSmallestStringRotationKFirstCharacter.java                       | GitHub Link   |
-| PaintFence.java                                                              | GitHub Link   |
-| PalindromeNumber.java                                                        | GitHub Link   |
-| PrisonCellsAfterNDays.java                                                   | GitHub Link   |
-| ProductArrayExceptSelf.java                                                  | GitHub Link   |
-| ReachingPoints.java                                                          | GitHub Link   |
-| RectangleArea.java                                                           | GitHub Link   |
-| RelativeSortArray.java                                                       | GitHub Link   |
-| RemoveAll2AdjacentDuplicatesString.java                                      | GitHub Link   |
-| RemoveNthNodeFromEnd.java                                                    | GitHub Link   |
-| ReorderDataLogFiles.java                                                     | GitHub Link   |
-| RepeatedDNASequences.java                                                    | GitHub Link   |
-| RepeatedSubstringPattern.java                                                | GitHub Link   |
-| ReverseIntegerNumber.java                                                    | GitHub Link   |
-| ReverseLinkedList.java                                                       | GitHub Link   |
-| ReverseString.java                                                           | GitHub Link   |
-| RomanIntegerConversion.java                                                  | GitHub Link   |
-| RottingOranges.java                                                          | GitHub Link   |
-| SetMatrixZeroes.java                                                         | GitHub Link   |
-| SlidingWindowMaximum.java                                                    | GitHub Link   |
-| SmallestMissingNumber.java                                                   | GitHub Link   |
-| SortCharactersByFrequency.java                                               | GitHub Link   |
-| SplitArrayLargestSum.java                                                    | GitHub Link   |
-| StatisticsLargeSample.java                                                   | GitHub Link   |
-| StringCompressionRunLengthEncoding.java                                      | GitHub Link   |
-| StringIntegerATOI.java                                                       | GitHub Link   |
-| SubarrayProductLessThanK.java                                                | GitHub Link   |
-| SubDomainVisitCount.java                                                     | GitHub Link   |
-| SubSet.java                                                                  | GitHub Link   |
-| TextJustification.java                                                       | GitHub Link   |
-| TimeBasedKeyValueStore.java                                                  | GitHub Link   |
-| TrappingRainWater.java                                                       | GitHub Link   |
-| TribonacciNumber.java                                                        | GitHub Link   |
-| ValidAnagram.java                                                            | GitHub Link   |
-| ValidateBinarySearchTree.java                                                | GitHub Link   |
-| ValidPalindromeII.java                                                       | GitHub Link   |
-| ValidPalindromeInSentence.java                                               | GitHub Link   |
-| ValidParenthesesBalancedParenthesesExpression.java                           | GitHub Link   |
-| VowelSpellchecker.java                                                       | GitHub Link   |
-| WallsGates.java                                                              | GitHub Link   |
-| WiggleSubSequenceOrLongestZigZagSubSequence.java                             | GitHub Link   |
-| WordBreak.java                                                               | GitHub Link   |
-| ZigZagNRowString.java                                                        | GitHub Link   |
-| ZigZagTraversalBinaryTree.java                                               | GitHub Link   |
-| AddTwoNumbersListI.java                                                      | GitHub Link   |
-| AddTwoNumbersListListII.java                                                 | GitHub Link   |
-| HouseRobberIII.java                                                          | GitHub Link   |
-| MaximumSumNoThreeElementsAreAdjacent.java                                    | GitHub Link   |
-| MaximumSumNoTwoElementsAreAdjacent.java                                      | GitHub Link   |
-| MaximumSumNoTwoElementsAreAdjacentInCircularArray.java                       | GitHub Link   |
-| DivideTwoIntegers.java                                                       | GitHub Link   |
-| HammingDistance.java                                                         | GitHub Link   |
-| NumberOfSetBits.java                                                         | GitHub Link   |
-| PowerOf2.java                                                                | GitHub Link   |
-| PowerOf3.java                                                                | GitHub Link   |
-| NumberOccurringOnce.java                                                     | GitHub Link   |
-| SingleNumber.java                                                            | GitHub Link   |
-| SingleNumberII.java                                                          | GitHub Link   |
-| SingleNumberIII.java                                                         | GitHub Link   |
-| BraceExpansionI.java                                                         | GitHub Link   |
-| BraceExpansionII.java                                                        | GitHub Link   |
-| MyLFUCache.java                                                              | GitHub Link   |
-| MyLRUCache.java                                                              | GitHub Link   |
-| CombinationSumI.java                                                         | GitHub Link   |
-| CombinationSumII.java                                                        | GitHub Link   |
-| CombinationSumIII.java                                                       | GitHub Link   |
-| CombinationSumIV.java                                                        | GitHub Link   |
-| ActivateFountains.java                                                       | GitHub Link   |
-| FlattenNestedListIterator.java                                               | GitHub Link   |
-| NestedInteger.java                                                           | GitHub Link   |
-| NestedIntegerValue.java                                                      | GitHub Link   |
-| NestedIntegerValues.java                                                     | GitHub Link   |
-| Base.java                                                                    | GitHub Link   |
-| FlattenMultilevelDoublyLinkedList.java                                       | GitHub Link   |
-| FlattenMultilevelSinglyLinkedList.java                                       | GitHub Link   |
-| MultiLevelListBuilder.java                                                   | GitHub Link   |
-| Node.java                                                                    | GitHub Link   |
-| SinglyNode.java                                                              | GitHub Link   |
-| Triple.java                                                                  | GitHub Link   |
-| BinaryTreeToCircularDoublyList.java                                          | GitHub Link   |
-| BinaryTreeToCircularSinglyList.java                                          | GitHub Link   |
-| BinaryTreeToDoublyList.java                                                  | GitHub Link   |
-| BinaryTreeToList.java                                                        | GitHub Link   |
-| BinaryTreeToSinglyList.java                                                  | GitHub Link   |
-| FlattenBinaryTreeLinkedList.java                                             | GitHub Link   |
-| SudokuSolver.java                                                            | GitHub Link   |
-| ValidSudoku.java                                                             | GitHub Link   |
-| ValidTicTacToeState.java                                                     | GitHub Link   |
-| CherryPickup.java                                                            | GitHub Link   |
-| CloneGraph.java                                                              | GitHub Link   |
-| DungeonGame.java                                                             | GitHub Link   |
-| MinimumPathSum.java                                                          | GitHub Link   |
-| ReconstructItinerary.java                                                    | GitHub Link   |
-| CourseSchedule1.java                                                         | GitHub Link   |
-| CourseSchedule2.java                                                         | GitHub Link   |
-| CourseSchedule3.java                                                         | GitHub Link   |
-| ICourseSchedule.java                                                         | GitHub Link   |
-| UniquePaths.java                                                             | GitHub Link   |
-| UniquePathsI.java                                                            | GitHub Link   |
-| UniquePathsII.java                                                           | GitHub Link   |
-| UniquePathsIII.java                                                          | GitHub Link   |
-| InsertDeleteGetRandomDuplicatesO1.java                                       | GitHub Link   |
-| InsertDeleteGetRandomO1.java                                                 | GitHub Link   |
-| IRandomizedSet.java                                                          | GitHub Link   |
-| IntersectionTwoArrays.java                                                   | GitHub Link   |
-| IntersectionTwoArraysII.java                                                 | GitHub Link   |
-| EmployeeFreeTimeMergeKIntervalList.java                                      | GitHub Link   |
-| IntervalListInterSections.java                                               | GitHub Link   |
-| MergeIntervals.java                                                          | GitHub Link   |
-| MergeIntervalsUnionIntersection.java                                         | GitHub Link   |
-| MeetingRoomI.java                                                            | GitHub Link   |
-| MeetingRoomII.java                                                           | GitHub Link   |
-| IntervalWorkingOnMultiTasking.java                                           | GitHub Link   |
-| IslandPerimeter.java                                                         | GitHub Link   |
-| MaxAreaIsland.java                                                           | GitHub Link   |
-| NumberIslands.java                                                           | GitHub Link   |
-| NumberIslandsII.java                                                         | GitHub Link   |
-| BSTIterators.java                                                            | GitHub Link   |
-| PeekingIterators.java                                                        | GitHub Link   |
-| ZigZagOrCycleIterators.java                                                  | GitHub Link   |
-| LargestHistogram.java                                                        | GitHub Link   |
-| LargestRectangle.java                                                        | GitHub Link   |
-| MaximumSizeSquareMatrix.java                                                 | GitHub Link   |
-| MaximumSumRectangle.java                                                     | GitHub Link   |
-| MaximumSumSubSquareOfSizeK.java                                              | GitHub Link   |
-| ConvertSortedArrayBinarySearchTree.java                                      | GitHub Link   |
-| ListToBinarySearchTree.java                                                  | GitHub Link   |
-| LongestCommonIncreasingSubSequence.java                                      | GitHub Link   |
-| LongestCommonSubSequence.java                                                | GitHub Link   |
-| LongestCommonSubString.java                                                  | GitHub Link   |
-| LongestSubstringAtMostKDistinctCharacters.java                               | GitHub Link   |
-| LongestSubstringWithoutRepeatingCharacters.java                              | GitHub Link   |
-| ShortestCommonSuperSequence.java                                             | GitHub Link   |
-| Search2DMatrixI.java                                                         | GitHub Link   |
-| Search2DMatrixII.java                                                        | GitHub Link   |
-| DiagonalReverseMatrix.java                                                   | GitHub Link   |
-| ReverseDiagonalDownward.java                                                 | GitHub Link   |
-| DiagonalMatrixDownwardLeft.java                                              | GitHub Link   |
-| DiagonalMatrixDownwardRight.java                                             | GitHub Link   |
-| DiagonalMatrixUpwardLeft.java                                                | GitHub Link   |
-| DiagonalMatrixUpwardRight.java                                               | GitHub Link   |
-| AntiSpiralMatrix.java                                                        | GitHub Link   |
-| SpiralMatrixI.java                                                           | GitHub Link   |
-| SpiralMatrixII.java                                                          | GitHub Link   |
-| ZigZagMatrix.java                                                            | GitHub Link   |
-| MedianOfStream.java                                                          | GitHub Link   |
-| MedianOfTwoSortedArray.java                                                  | GitHub Link   |
-| SlidingWindowMedian.java                                                     | GitHub Link   |
-| NextGreaterElementI.java                                                     | GitHub Link   |
-| NextGreaterElementII.java                                                    | GitHub Link   |
-| NextGreaterElementIII.java                                                   | GitHub Link   |
-| AddOperatorsPlusMinusMultiply.java                                           | GitHub Link   |
-| AddOperatorsPlusMinusMultiplyDivide.java                                     | GitHub Link   |
-| Game24.java                                                                  | GitHub Link   |
-| AndSumToZero.java                                                            | GitHub Link   |
-| FourSum4Sum.java                                                             | GitHub Link   |
-| FourSum4SumII.java                                                           | GitHub Link   |
-| KSum.java                                                                    | GitHub Link   |
-| AModKPairs.java                                                              | GitHub Link   |
-| XPowerYGreaterThanYPowerX.java                                               | GitHub Link   |
-| ThreeSum3Sum.java                                                            | GitHub Link   |
-| ThreeSum3SumClosest.java                                                     | GitHub Link   |
-| ThreeSum3SumMultiplicity.java                                                | GitHub Link   |
-| ThreeSumSmaller.java                                                         | GitHub Link   |
-| TwoSum2Sum.java                                                              | GitHub Link   |
-| LongestPalindromeSubString.java                                              | GitHub Link   |
-| LongestPalindromicSubsequence.java                                           | GitHub Link   |
-| MinimumInsertionsPalindrome.java                                             | GitHub Link   |
-| PalindromePartitioning.java                                                  | GitHub Link   |
-| PalindromePartitions.java                                                    | GitHub Link   |
-| ShortestPalindrome_MinimumNumberCharacterAddToFrontMakeStringPalindrome.java | GitHub Link   |
-| ShortestPalindrome_MinimumNumberCharacterAppendsMakeStringPalindrome.java    | GitHub Link   |
-| PartitionArrayThreePartsWithEqualSum.java                                    | GitHub Link   |
-| PartitionSetInKSubset.java                                                   | GitHub Link   |
-| PartitionSetIntoKSubsetEqualSum.java                                         | GitHub Link   |
-| PartitionSetIntoTwoSubsetDiffferenceMinimum.java                             | GitHub Link   |
-| PartitionSetIntoTwoSubsetEqualSum.java                                       | GitHub Link   |
-| RegularExpressionMatch.java                                                  | GitHub Link   |
-| WildcardMatching.java                                                        | GitHub Link   |
-| ReachTargetInfiniteLine.java                                                 | GitHub Link   |
-| MinimumRotatedSortedArrayFindPivot.java                                      | GitHub Link   |
-| SearchRotatedSortedArray.java                                                | GitHub Link   |
-| LongestDurationHoldStocks.java                                               | GitHub Link   |
-| MaxProfitKTransactions.java                                                  | GitHub Link   |
-| MaxProfitMultiTransactions.java                                              | GitHub Link   |
-| MaxProfitSingleTransaction.java                                              | GitHub Link   |
-| MaxProfitTwoTransaction.java                                                 | GitHub Link   |
-| StrobogrammaticNumberI.java                                                  | GitHub Link   |
-| StrobogrammaticNumberII.java                                                 | GitHub Link   |
-| StrobogrammaticNumberIII.java                                                | GitHub Link   |
-| LargestMaximumSumContiguousSubarrayKadensAlgorithm.java                      | GitHub Link   |
-| LargestSumSubArrayAtLeastKElements.java                                      | GitHub Link   |
-| LargestSumSubArraySumAtMostK.java                                            | GitHub Link   |
-| LongestSubarraySumAtMostk.java                                               | GitHub Link   |
-| LongestSubArraySumK.java                                                     | GitHub Link   |
-| MaximumSubarraySumFlippingSignsAtMostKElements.java                          | GitHub Link   |
-| MaximumSumNonOverlappingSubarraysLengthAtmostK.java                          | GitHub Link   |
-| MaximumSumSubsequenceAtLeastKDistant.java                                    | GitHub Link   |
-| NumberSubArraysSumExactlyK.java                                              | GitHub Link   |
-| MaximumSumMSubArrayKLength.java                                              | GitHub Link   |
-| MaximumSumThreeNonOverlappingSubarrays.java                                  | GitHub Link   |
-| MaximumSumTwoNonOverlappingSubarrayKSize.java                                | GitHub Link   |
-| MaximumSumTwoNonOverlappingSubarrays.java                                    | GitHub Link   |
-| AllNodesDistanceKBinaryTree.java                                             | GitHub Link   |
-| AllRootToLeafPathBinaryTree.java                                             | GitHub Link   |
-| BinaryTreeEqualPartition.java                                                | GitHub Link   |
-| BinaryTreeTwoHalvesSameSize.java                                             | GitHub Link   |
-| BinaryTreeUpsideDown.java                                                    | GitHub Link   |
-| LongestUniValuePath.java                                                     | GitHub Link   |
-| MaximumDepthBinaryTree.java                                                  | GitHub Link   |
-| MaximumPathSum.java                                                          | GitHub Link   |
-| MaximumWidthBinaryTree.java                                                  | GitHub Link   |
-| NumberOfBinaryTreeEqualSumPartition.java                                     | GitHub Link   |
-| PathZigzagLabelledBinaryTree.java                                            | GitHub Link   |
-| RecoverBinarySearchTree.java                                                 | GitHub Link   |
-| SplitBST.java                                                                | GitHub Link   |
-| SubtreeAnotherTree.java                                                      | GitHub Link   |
-| TreeBuilder.java                                                             | GitHub Link   |
-| TrimBinarySearchTree.java                                                    | GitHub Link   |
-| CountNodesInCompleteBinaryTree.java                                          | GitHub Link   |
-| GetLastNodeInCompleteBinaryTree.java                                         | GitHub Link   |
-| Helper.java                                                                  | GitHub Link   |
-| IsCompleteBinaryTree.java                                                    | GitHub Link   |
-| NodeExistsCompleteTree.java                                                  | GitHub Link   |
-| ConnectNodesNext.java                                                        | GitHub Link   |
-| ISerializeDeserialize.java                                                   | GitHub Link   |
-| Driver.java                                                                  | GitHub Link   |
-| SerializeDeSerializeBinarySearchTree.java                                    | GitHub Link   |
-| Driver.java                                                                  | GitHub Link   |
-| SerializeDeSerializeBinaryTree.java                                          | GitHub Link   |
-| Driver.java                                                                  | GitHub Link   |
-| ISerializeDeserializeNArrayTree.java                                         | GitHub Link   |
-| SerializeDeserializeNAryTree.java                                            | GitHub Link   |
-| EncodeNAryTreeToBinaryTree.java                                              | GitHub Link   |
-| BoggleSearchWordSearchI.java                                                 | GitHub Link   |
-| BoggleSearchWordSearchII.java                                                | GitHub Link   |
-| ShortestWordDistanceI.java                                                   | GitHub Link   |
-| ShortestWordDistanceII.java                                                  | GitHub Link   |
-| ShortestWordDistanceIII.java                                                 | GitHub Link   |
-| WordLadderI.java                                                             | GitHub Link   |
-| WordLadderII.java                                                            | GitHub Link   |
-| SegregateOddAndEvenNodesInList.java                                          | GitHub Link   |
-| FindTheIndexOfTheFirstOccurrenceInAString_28.java                            | GitHub Link   |
-| LongestCommonPrefix_14.java                                                  | GitHub Link   |
-| PalindromeNumber_9.java                                                      | GitHub Link   |
-| RomanIntegerConversion_13.java                                               | GitHub Link   |
-| SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996.java               | GitHub Link   |
-| IntersectionOfTwoLinkedLists_160.java                                        | GitHub Link   |
-| LinkedListCycle_141.java                                                     | GitHub Link   |
-| MergeTwoSortedLists_21.java                                                  | GitHub Link   |
-| MiddleOfTheLinkedList_876.java                                               | GitHub Link   |
-| PalindromeLinkedList_234.java                                                | GitHub Link   |
-| RemoveDuplicatesFromSortedList_83.java                                       | GitHub Link   |
-| RemoveLinkedListElements_203.java                                            | GitHub Link   |
-| ReverseLinkedList_206.java                                                   | GitHub Link   |
-| ValidParentheses_20.java                                                     | GitHub Link   |
-| TwoSum_1.java                                                                | GitHub Link   |
-| BinaryTreePaths_257.java                                                     | GitHub Link   |
-| BinaryTreePathToANode.java                                                   | GitHub Link   |
-| FindModeInBinarySearchTree_501.java                                          | GitHub Link   |
-| MaximumDepthOfBinaryTree_104.java                                            | GitHub Link   |
-| MaximumDepthOfNAryTree_559.java                                              | GitHub Link   |
-| MinimumAbsoluteDifferenceInBST_530.java                                      | GitHub Link   |
-| MinimumDepthOfBinaryTree_111.java                                            | GitHub Link   |
-| MinimumDistanceBetweenBSTNodes_783.java                                      | GitHub Link   |
-| SameTree_100.java                                                            | GitHub Link   |
-| InvertTree_MirrorTree_226.java                                               | GitHub Link   |
-| SymmetricTree_IsMirrorTree_101.java                                          | GitHub Link   |
-| LFUCache_460.java                                                            | GitHub Link   |
-| MergeKSortedLists_23.java                                                    | GitHub Link   |
-| ReverseNodesInKGroup_25.java                                                 | GitHub Link   |
-| BasicCalculator_224.java                                                     | GitHub Link   |
-| LargestRectangleInHistogram_84.java                                          | GitHub Link   |
-| VerticalOrderTraversalOfABinaryTree_987.java                                 | GitHub Link   |
-| ValidateBinarySearchTree_98.java                                             | GitHub Link   |
-| ProductOfArrayExceptSelf_238.java                                            | GitHub Link   |
-| StepsToMakeArrayNonDecreasing_2289.java                                      | GitHub Link   |
-| CopyListWithRandomPointer_138.java                                           | GitHub Link   |
-| DeleteTheMiddleNodeOfALinkedList_2095.java                                   | GitHub Link   |
-| LinkedListCycleII_142.java                                                   | GitHub Link   |
-| LinkedListRandomNode_382.java                                                | GitHub Link   |
-| MaximumTwinSumOfALinkedList_2130.java                                        | GitHub Link   |
-| OddEvenLinkedList_328.java                                                   | GitHub Link   |
-| PartitionList_86.java                                                        | GitHub Link   |
-| RemoveDuplicatesFromSortedListII_82.java                                     | GitHub Link   |
-| RemoveNodesFromLinkedList_2487.java                                          | GitHub Link   |
-| RemoveNthNodeFromEndOfList_19.java                                           | GitHub Link   |
-| ReverseLinkedListII.java                                                     | GitHub Link   |
-| ReverseNodesInEvenLengthGroups_2074.java                                     | GitHub Link   |
-| RotateList_61.java                                                           | GitHub Link   |
-| SwapNodesInPairs_24.java                                                     | GitHub Link   |
-| SwappingNodesInALinkedList_1721.java                                         | GitHub Link   |
-| AddTwoNumbersII_445.java                                                     | GitHub Link   |
-| AddTwoNumbers_2.java                                                         | GitHub Link   |
-| LFUCache_460.java                                                            | GitHub Link   |
-| LRUCache_146.java                                                            | GitHub Link   |
-| DailyTemperatures_739.java                                                   | GitHub Link   |
-| EvaluateReversePolishNotation_150.java                                       | GitHub Link   |
-| MinStack_155.java                                                            | GitHub Link   |
-| SimplifyPath_71.java                                                         | GitHub Link   |
-| NextGreaterElementIII_556.java                                               | GitHub Link   |
-| NextGreaterElementII_503.java                                                | GitHub Link   |
-| NextGreaterElementI_496.java                                                 | GitHub Link   |
-| OnlineStockSpan_901.java                                                     | GitHub Link   |
-| BinaryTreeLevelOrderTraversal_II_107.java                                    | GitHub Link   |
-| CountUnivalueSubtree_250.java                                                | GitHub Link   |
-| LongestUnivaluePath_687.java                                                 | GitHub Link   |
-| MaximumLevelSumOfABinaryTree_1161.java                                       | GitHub Link   |
-| PopulatingNextRightPointersInEachNodeII_117.java                             | GitHub Link   |
-| PopulatingNextRightPointersInEachNode_116.java                               | GitHub Link   |
-| ReverseOddLevelsOfBinaryTree_2415.java                                       | GitHub Link   |
-| VerticalOrderSumOfABinaryTree.java                                           | GitHub Link   |
-| DeleteNodeInABST_450.java                                                    | GitHub Link   |
-| SplitBST_776.java                                                            | GitHub Link   |
-| AllNodesDistanceKInBinaryTree_863.java                                       | GitHub Link   |
-| ConvertBinarySearchTreeToSortedDoublyLinkedList_426.java                     | GitHub Link   |
-| ConvertSortedDoublyLinkedListToBinarySearchTree.java                         | GitHub Link   |
-| LowestCommonAncestorOfABinarySearchTree_235.java                             | GitHub Link   |
-| LowestCommonAncestorOfABinaryTree_236.java                                   | GitHub Link   |
-| LowestCommonAncestorOfABinaryTreeII_1644.java                                | GitHub Link   |
-| LowestCommonAncestorOfABinaryTreeIII_1650.java                               | GitHub Link   |
-| LowestCommonAncestorOfABinaryTreeIV_1676.java                                | GitHub Link   |
-| PathSumIII_437.java                                                          | GitHub Link   |
-| PathSumII_113.java                                                           | GitHub Link   |
-| PathSum_112.java                                                             | GitHub Link   |
-| PthSumIV_666.java                                                            | GitHub Link   |
-| BinaryTreeZigzagLevelOrderTraversal_103.java                                 | GitHub Link   |
-| BinaryTreeBottomView.java                                                    | GitHub Link   |
-| BinaryTreeLeftSideView.java                                                  | GitHub Link   |
-| BinaryTreeRightSideView_199.java                                             | GitHub Link   |
-| BinaryTreeTopView.java                                                       | GitHub Link   |
-| BoundaryOfBinaryTree_545.java                                                | GitHub Link   |
-| AllPrimeNumbers.java                                                         | GitHub Link   |
-| AlphanumericAbbreviations.java                                               | GitHub Link   |
-| ATimesToContainB.java                                                        | GitHub Link   |
-| BinarySearch.java                                                            | GitHub Link   |
-| BinaryStringWildCardChar.java                                                | GitHub Link   |
-| BooleanParenthesization.java                                                 | GitHub Link   |
-| ChainMatrixMultiplication.java                                               | GitHub Link   |
-| ChocolateDistributionProblem.java                                            | GitHub Link   |
-| ClosestBike.java                                                             | GitHub Link   |
-| ClosestPairPoints.java                                                       | GitHub Link   |
-| CodeAthon.java                                                               | GitHub Link   |
-| Combinations.java                                                            | GitHub Link   |
-| ConvertNumberToWords.java                                                    | GitHub Link   |
-| CountMinimumRightFlipsBulbsSwitch.java                                       | GitHub Link   |
-| CutARoad.java                                                                | GitHub Link   |
-| DiceWordProblem.java                                                         | GitHub Link   |
-| EditDistance.java                                                            | GitHub Link   |
-| EqualXandY.java                                                              | GitHub Link   |
-| FindMaximumNumberWithKSwaps.java                                             | GitHub Link   |
-| FindSortedSubsequenceSizeKLinearTime.java                                    | GitHub Link   |
-| FormMinimumNumberFromGivenSequence.java                                      | GitHub Link   |
-| GearSelection.java                                                           | GitHub Link   |
-| GearSelection_submited.java                                                  | GitHub Link   |
-| GreatestContiguousSubArrayKSize.java                                         | GitHub Link   |
-| HappyPoter2.java                                                             | GitHub Link   |
-| InterestingString.java                                                       | GitHub Link   |
-| JobScheduling.java                                                           | GitHub Link   |
-| KMP_KnuthMorrisPratt.java                                                    | GitHub Link   |
-| Knapsack.java                                                                | GitHub Link   |
-| KthLargestElement.java                                                       | GitHub Link   |
-| KthSmallestSumContinuousSubarrays.java                                       | GitHub Link   |
-| LexicographicallySmallestRotatedSequence.java                                | GitHub Link   |
-| LongestConsecutiveIncreasingSubSequence.java                                 | GitHub Link   |
-| LongestIncreasingSubSequence.java                                            | GitHub Link   |
-| LongestPossibleChunkedPalindrome.java                                        | GitHub Link   |
-| LongestPossibleRouteMatrixWithHurdles.java                                   | GitHub Link   |
-| LongestRepeatingNonOverlappingSubString.java                                 | GitHub Link   |
-| MainClass.java                                                               | GitHub Link   |
-| MaxA.java                                                                    | GitHub Link   |
-| MaximumAbsoluteDifferenceTwoContiguousSubArrays.java                         | GitHub Link   |
-| MaximumDistance.java                                                         | GitHub Link   |
-| MaximumMinimumValuesOfExpression.java                                        | GitHub Link   |
-| MaximumSubsetSumNoTwoElementsCommonDigits.java                               | GitHub Link   |
-| MaximumSumIncreasingSequence.java                                            | GitHub Link   |
-| MaximumSumSubarrayAtMostKSize.java                                           | GitHub Link   |
-| MaximumWeightTransformation.java                                             | GitHub Link   |
-| MergeSortedArrayConstantSpace.java                                           | GitHub Link   |
-| MergeSortedListOfInterval.java                                               | GitHub Link   |
-| MinimumAdjustmentCost.java                                                   | GitHub Link   |
-| MinimumNumberIAndD.java                                                      | GitHub Link   |
-| MinimumPossibleSizeArray.java                                                | GitHub Link   |
-| MinimumPossibleSizeArrayGivenRulesRemovingElements.java                      | GitHub Link   |
-| MinimumSplitsBinaryStringSubStringPowerOfN.java                              | GitHub Link   |
-| NextGreaterElementOnRightSide.java                                           | GitHub Link   |
-| NextSmallestPalindrome.java                                                  | GitHub Link   |
-| NoPairSumDivisibleByK.java                                                   | GitHub Link   |
-| NthItemInSumOfTwoArrays.java                                                 | GitHub Link   |
-| OddLengthPalindromeSubSequenceAroundCentre.java                              | GitHub Link   |
-| OptimalGameStrategy.java                                                     | GitHub Link   |
-| PainterPartitionProblem.java                                                 | GitHub Link   |
-| Permutation.java                                                             | GitHub Link   |
-| PermutationsSortedLexicographicOrder.java                                    | GitHub Link   |
-| PrimeSum.java                                                                | GitHub Link   |
-| PrintAllPossibleWordsFromPhoneDigits.java                                    | GitHub Link   |
-| RateInMazeWithJump.java                                                      | GitHub Link   |
-| Rearrange.java                                                               | GitHub Link   |
-| ReCycledPair.java                                                            | GitHub Link   |
-| RemoveAllAdjacentDuplicatesString.java                                       | GitHub Link   |
-| RemoveMinimum2TimesMinGreaterThenMax.java                                    | GitHub Link   |
-| SimpleMovingAverage.java                                                     | GitHub Link   |
-| SmallerElementOnLeftSide.java                                                | GitHub Link   |
-| SortDates.java                                                               | GitHub Link   |
-| Sorts.java                                                                   | GitHub Link   |
-| StringCompression2.java                                                      | GitHub Link   |
-| StringOddEvenTransformationInPlaceOrderKeep.java                             | GitHub Link   |
-| SuffixArray.java                                                             | GitHub Link   |
-| SumGame2.java                                                                | GitHub Link   |
-| SumString.java                                                               | GitHub Link   |
-| UnionFindDisjointSets.java                                                   | GitHub Link   |
-| WeightedJobScheduling.java                                                   | GitHub Link   |
-| WordWrapProblem.java                                                         | GitHub Link   |
-| LongestBitnoicSubsequence.java                                               | GitHub Link   |
-| MaximumLengthBitonicSubArray.java                                            | GitHub Link   |
-| MaximumLengthBitonicSubArrayWithDual.java                                    | GitHub Link   |
-| DominoesArrangementProblem.java                                              | GitHub Link   |
-| IGraph.java                                                                  | GitHub Link   |
-| IWeightedGraph.java                                                          | GitHub Link   |
-| Graph.java                                                                   | GitHub Link   |
-| GraphNode.java                                                               | GitHub Link   |
-| DirectedGraph.java                                                           | GitHub Link   |
-| Edges.java                                                                   | GitHub Link   |
-| UnDirectedGraph.java                                                         | GitHub Link   |
-| WeightedDirectedGraph.java                                                   | GitHub Link   |
-| WeightedUnDirectedGraph.java                                                 | GitHub Link   |
-| AlienLanguageOrder.java                                                      | GitHub Link   |
-| DetectCycleGraph.java                                                        | GitHub Link   |
-| SourceToDestinationWithCycleNecessaryConnected.java                          | GitHub Link   |
-| ThiefInRoomOfSensors.java                                                    | GitHub Link   |
-| TopologicalSorts.java                                                        | GitHub Link   |
-| GraphClone.java                                                              | GitHub Link   |
-| GraphCloneTest.java                                                          | GitHub Link   |
-| IMinimumSpanningTree.java                                                    | GitHub Link   |
-| KruskalMinimumSpanningTree.java                                              | GitHub Link   |
-| MinimumSpanningTreeTest.java                                                 | GitHub Link   |
-| PrimMinimumSpanningTree.java                                                 | GitHub Link   |
-| BellmanFordShortestPath.java                                                 | GitHub Link   |
-| DijkstraShortestPath.java                                                    | GitHub Link   |
-| IShortestPath.java                                                           | GitHub Link   |
-| ShortestPathTest.java                                                        | GitHub Link   |
-| Add1.java                                                                    | GitHub Link   |
-| MatrixChainMultiplication.java                                               | GitHub Link   |
-| MaximumAbsoluteDifference.java                                               | GitHub Link   |
-| MinStepsInfiniteGrid.java                                                    | GitHub Link   |
-| RepetedMissing.java                                                          | GitHub Link   |
-| AVLTree.java                                                                 | GitHub Link   |
-| AVLTreeNode.java                                                             | GitHub Link   |
-| BinaryIndexedTreeFenwickTree.java                                            | GitHub Link   |
-| BinarySearchTree.java                                                        | GitHub Link   |
-| BinaryTree.java                                                              | GitHub Link   |
-| BinaryTreeNode.java                                                          | GitHub Link   |
-| CloneTreeRandomPointer.java                                                  | GitHub Link   |
-| DriverProgramAVLTree.java                                                    | GitHub Link   |
-| DriverProgramBinarySearchTree.java                                           | GitHub Link   |
-| DriverProgramBinaryTree.java                                                 | GitHub Link   |
-| FlipTreeUpSideDown.java                                                      | GitHub Link   |
-| IBinarySearchTree.java                                                       | GitHub Link   |
-| IBinaryTree.java                                                             | GitHub Link   |
-| LargestBSTInBinaryTree.java                                                  | GitHub Link   |
-| LowestCommonAncestor.java                                                    | GitHub Link   |
-| MinMaxObject.java                                                            | GitHub Link   |
-| TestHelper.java                                                              | GitHub Link   |
-| TraverseTreeWithKJump.java                                                   | GitHub Link   |
-| TreeBoundaryTraversal.java                                                   | GitHub Link   |
-| TreeElementHelper.java                                                       | GitHub Link   |
-| TreeNode.java                                                                | GitHub Link   |
-| EulerTour.java                                                               | GitHub Link   |
-| MoriesTreeTraversal.java                                                     | GitHub Link   |
-| TreeTraversalIterative.java                                                  | GitHub Link   |
-| TreeTraversalRecursive.java                                                  | GitHub Link   |
-| Main.java                                                                    | GitHub Link   |
-| Trie.java                                                                    | GitHub Link   |
-| TrieNode.java                                                                | GitHub Link   |
+| File Name | GitHub Link |
+|-----------|-------------|
+| Class.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/.idea/fileTemplates/internal/Class.java) |
+| KthNodeFromEndOfLinkedList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/KthNodeFromEndOfLinkedList.java) |
+| Node.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/Node.java) |
+| Pair.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/Pair.java) |
+| AmendTheSentence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/AmendTheSentence.java) |
+| A_And_B_ToZero.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/A_And_B_ToZero.java) |
+| ElementThatHasSumOfLeftArrayEqualSumOfRight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/ElementThatHasSumOfLeftArrayEqualSumOfRight.java) |
+| FindPivotSortedRotedArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/FindPivotSortedRotedArray.java) |
+| MaximizeSumSelectedNumbersFromArrayMakeEmpty.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/MaximizeSumSelectedNumbersFromArrayMakeEmpty.java) |
+| MinimiseTheMaximumDifferenceBetweenHeightsTower.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/MinimiseTheMaximumDifferenceBetweenHeightsTower.java) |
+| SpecialSubStringStartWithVowelEndWithConsonant.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/SpecialSubStringStartWithVowelEndWithConsonant.java) |
+| SwapEvenOddBits.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/SwapEvenOddBits.java) |
+| WasteMinimumBag.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Adobe/WasteMinimumBag.java) |
+| CellStateAfterNDays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/CellStateAfterNDays.java) |
+| FaceToFaceCodingRound.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/FaceToFaceCodingRound.java) |
+| GroupIsomorphicStrings.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/GroupIsomorphicStrings.java) |
+| MaximumDifferenceInIndex.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/MaximumDifferenceInIndex.java) |
+| MaximumNumberChocolatesDistributedEquallyAmongKStudents.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/MaximumNumberChocolatesDistributedEquallyAmongKStudents.java) |
+| MergeKSortedIterators.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/MergeKSortedIterators.java) |
+| OptimizeMemoryUsage.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/OptimizeMemoryUsage.java) |
+| PeakMemoryUsage.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/PeakMemoryUsage.java) |
+| RemoveDuplicateIPv4.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/RemoveDuplicateIPv4.java) |
+| RemoveObstacleRobotMinimumDistance.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/RemoveObstacleRobotMinimumDistance.java) |
+| ReplaceGreatestElementOnRightSide.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/ReplaceGreatestElementOnRightSide.java) |
+| SearchAlmostSortedArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/SearchAlmostSortedArray.java) |
+| SortedSequenceSizeK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/SortedSequenceSizeK.java) |
+| SortedSubSequenceSize3.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/SortedSubSequenceSize3.java) |
+| TreasureIsland.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/TreasureIsland.java) |
+| WordBreak.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/WordBreak.java) |
+| BinaryPeriod.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/BinaryPeriod/BinaryPeriod.java) |
+| CarsAndDispensers.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/CarsAndDispensers/CarsAndDispensers.java) |
+| PointLatticePointAfter90DegreeRightTurn.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Amazon/PointLattice/PointLatticePointAfter90DegreeRightTurn.java) |
+| Encoding.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Atlassian/Encoding.java) |
+| LookAndSay.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Atlassian/LookAndSay.java) |
+| RobotMove.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Atlassian/RobotMove.java) |
+| SubList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Atlassian/SubList.java) |
+| BookingCares.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/booking/com/booking/BookingCares.java) |
+| HotelsReview.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/booking/com/hotels/HotelsReview.java) |
+| Multiple.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/booking/com/multiple/Multiple.java) |
+| Reservation.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/booking/com/reservation/Reservation.java) |
+| AllInterpretationOfSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/AllInterpretationOfSequence.java) |
+| AnagramPermutationSearch.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/AnagramPermutationSearch.java) |
+| ArithmeticPower.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ArithmeticPower.java) |
+| BuildStringWordsInDictionary.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/BuildStringWordsInDictionary.java) |
+| CombinationSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/CombinationSum.java) |
+| CompressChecker.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/CompressChecker.java) |
+| ContactCleaner.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ContactCleaner.java) |
+| ContiguousSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ContiguousSum.java) |
+| CutBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/CutBinaryTree.java) |
+| DecodedInCodedString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/DecodedInCodedString.java) |
+| FractionRecurringDecimal.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/FractionRecurringDecimal.java) |
+| GraphDivideTwoSetsOrBipartiteGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/GraphDivideTwoSetsOrBipartiteGraph.java) |
+| IndexLeftMost1InColumns.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/IndexLeftMost1InColumns.java) |
+| InterleavedListOfList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/InterleavedListOfList.java) |
+| IntersectionTwoArraysWithRestriction.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/IntersectionTwoArraysWithRestriction.java) |
+| KPalindromeString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/KPalindromeString.java) |
+| ListCombination.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ListCombination.java) |
+| LongestArithmeticSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/LongestArithmeticSequence.java) |
+| LongestConsecutiveSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/LongestConsecutiveSequence.java) |
+| MaximumSumSubArrayAtLeastKElements.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MaximumSumSubArrayAtLeastKElements.java) |
+| MaximumValueByPlacingPlusMulOperator.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MaximumValueByPlacingPlusMulOperator.java) |
+| MinimumFlips1OnLeft0OnRight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MinimumFlips1OnLeft0OnRight.java) |
+| MinimumWordBreak.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MinimumWordBreak.java) |
+| MoveZero.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MoveZero.java) |
+| MovingAverage.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MovingAverage.java) |
+| MultiplyTwoNumbersStringFormat.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/MultiplyTwoNumbersStringFormat.java) |
+| NumberSubArraysBoundedMaximum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/NumberSubArraysBoundedMaximum.java) |
+| PairOfPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/PairOfPalindrome.java) |
+| PeriodicString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/PeriodicString.java) |
+| PrintLetterCombinationPhoneArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/PrintLetterCombinationPhoneArray.java) |
+| ReadNCharactersGivenRead4.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ReadNCharactersGivenRead4.java) |
+| RectangleBinaryMatrixCorner1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/RectangleBinaryMatrixCorner1.java) |
+| RemoveInvalidPretenses.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/RemoveInvalidPretenses.java) |
+| ShortestSubArraySumGreaterThenN.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ShortestSubArraySumGreaterThenN.java) |
+| ShortestSubArraySumLessThenEqualN.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/ShortestSubArraySumLessThenEqualN.java) |
+| SimilarRGBColor.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/SimilarRGBColor.java) |
+| SortStringsBasedCustomAlphabetOrder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/SortStringsBasedCustomAlphabetOrder.java) |
+| TernaryExpressionToBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/TernaryExpressionToBinaryTree.java) |
+| WordOrdering.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/facebook/WordOrdering.java) |
+| LongestUniformSubString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GoldManSacs2019/LongestUniformSubString.java) |
+| MedianOfTwoSortedArrayMergeProcedure.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GoldManSacs2019/MedianOfTwoSortedArrayMergeProcedure.java) |
+| Product.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GoldManSacs2019/Product.java) |
+| SecureChannel.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GoldManSacs2019/SecureChannel.java) |
+| BinarySearchTreeHeap.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/BinarySearchTreeHeap.java) |
+| BraceExpansion.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/BraceExpansion.java) |
+| BullsCowExtended.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/BullsCowExtended.java) |
+| ChocolateSweetnessChunk.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/ChocolateSweetnessChunk.java) |
+| LongestSubStringKUniqueChar.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/LongestSubStringKUniqueChar.java) |
+| MaximumFlowersLineOfSight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/MaximumFlowersLineOfSight.java) |
+| PoemRythms.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/PoemRythms.java) |
+| SetMatrixZerosEraseOrbsXs.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/SetMatrixZerosEraseOrbsXs.java) |
+| ShortestPathBreakingThroughWalls.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/ShortestPathBreakingThroughWalls.java) |
+| ShortestSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/ShortestSequence.java) |
+| StringRotationMatch.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/StringRotationMatch.java) |
+| StringToStringTransformEvenOdd.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/StringToStringTransformEvenOdd.java) |
+| WaysOfTransformingOneStringToOther.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/WaysOfTransformingOneStringToOther.java) |
+| WhacAMole.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Google/WhacAMole.java) |
+| MinimumBracketReversal.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Grab/MinimumBracketReversal.java) |
+| MissingElements.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Grab/MissingElements.java) |
+| SquareOfNumbers.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Grab/SquareOfNumbers.java) |
+| ValidPushPopSequenceInStack.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/Grab/ValidPushPopSequenceInStack.java) |
+| ExpressionEvaluator.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GroupOn/ExpressionEvaluator.java) |
+| IslandsSizeCount.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GroupOn/IslandsSizeCount.java) |
+| MathHomework.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GroupOn/MathHomework.java) |
+| MinimumMoves.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/GroupOn/MinimumMoves.java) |
+| ConsecutiveSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/ConsecutiveSum.java) |
+| SortStringBasedOnFrequencyAndLexical.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/SortStringBasedOnFrequencyAndLexical.java) |
+| SubStringCalculator.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/SubStringCalculator.java) |
+| AppleOrchard.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/appleorchard/AppleOrchard.java) |
+| ReverseGearReverseEdgesInGraphPath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/reversegear/ReverseGearReverseEdgesInGraphPath.java) |
+| WordAndSeek.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/intuit/wordSeek/WordAndSeek.java) |
+| GenerateBinaryTreeParentChildRelationship.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/GenerateBinaryTreeParentChildRelationship.java) |
+| DepthSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/DepthSum.java) |
+| IDepthSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/IDepthSum.java) |
+| Main.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/Main.java) |
+| NestedInteger.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/NestedInteger.java) |
+| NestedIntegerValue.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/NestedIntegerValue.java) |
+| NestedIntegerValues.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/LinkedIn/depthSumNestedInteger/NestedIntegerValues.java) |
+| CustomConcurrentHashMap.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/CustomConcurrentHashMap.java) |
+| CustomKey.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/CustomKey.java) |
+| CustomList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/CustomList.java) |
+| CustomNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/CustomNode.java) |
+| CustomValue.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/CustomValue.java) |
+| Driver.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/Driver.java) |
+| ICustomList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/ICustomList.java) |
+| ICustomMap.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/ICustomMap.java) |
+| IKeyValueStore.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/IKeyValueStore.java) |
+| KeyValueStore.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/KeyValueStore.java) |
+| ListNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/keyValueStore/ListNode.java) |
+| EqualExpense.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/EqualExpense.java) |
+| EqualSplit.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/EqualSplit.java) |
+| Expense.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/Expense.java) |
+| ExpenseService.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/ExpenseService.java) |
+| ExpenseType.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/ExpenseType.java) |
+| Group.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/Group.java) |
+| Main.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/Main.java) |
+| PercentExpense.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/PercentExpense.java) |
+| PercentSplit.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/PercentSplit.java) |
+| Split.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/Split.java) |
+| SplitExpenseManager.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/SplitExpenseManager.java) |
+| User.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/phonepe/splitwise/src/User.java) |
+| BinaryStringOperationRequireToMakeZero.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/thoughtspot/BinaryStringOperationRequireToMakeZero.java) |
+| CombinationSumProduct.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/thoughtspot/CombinationSumProduct.java) |
+| ShortestPathRoadFlightAtMostNFlight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/thoughtspot/ShortestPathRoadFlightAtMostNFlight.java) |
+| RGBStreamMeanModeMedian.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/twitter/RGBStreamMeanModeMedian.java) |
+| SubArrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/uber/SubArrays.java) |
+| SumTo100.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/uber/SumTo100.java) |
+| FindCompletePrefixes.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/visa/FindCompletePrefixes.java) |
+| ReverseDiagonalOrder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/visa/ReverseDiagonalOrder.java) |
+| SubarrayProductLessThanEqualK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/visa/SubarrayProductLessThanEqualK.java) |
+| KDifference.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/visa/kdifference/KDifference.java) |
+| Triplets.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/companyWise/visa/triplets/Triplets.java) |
+| CommonMethods.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/CommonMethods.java) |
+| ListBuilder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/ListBuilder.java) |
+| TreeBuilder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/TreeBuilder.java) |
+| DoublyListNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/DoublyListNode.java) |
+| Interval.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/Interval.java) |
+| ListNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/ListNode.java) |
+| NArrayTreeNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/NArrayTreeNode.java) |
+| TreapNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/TreapNode.java) |
+| TreeNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/TreeNode.java) |
+| TreeNodeWithParent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/helpers/templates/TreeNodeWithParent.java) |
+| AddString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/AddString.java) |
+| AllConstantTimeDataStructureInsertDeleteMinMax.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/AllConstantTimeDataStructureInsertDeleteMinMax.java) |
+| AsteroidCollision.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/AsteroidCollision.java) |
+| BombEnemy.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/BombEnemy.java) |
+| BullsCow.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/BullsCow.java) |
+| BurstBalloons.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/BurstBalloons.java) |
+| ClimbingStairs.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ClimbingStairs.java) |
+| CloneListRandomPointer.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/CloneListRandomPointer.java) |
+| ClosestBinarySearchTreeValue.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ClosestBinarySearchTreeValue.java) |
+| CoinChangeProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/CoinChangeProblem.java) |
+| ConsecutiveSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ConsecutiveSum.java) |
+| ContainerWithMostWater.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ContainerWithMostWater.java) |
+| ContiguousArrayZeroOne.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ContiguousArrayZeroOne.java) |
+| ConvertToNonDecreasingArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ConvertToNonDecreasingArray.java) |
+| ConvertToStrictlyIncreasingArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ConvertToStrictlyIncreasingArray.java) |
+| CustomSortString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/CustomSortString.java) |
+| DailyTemperatures.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DailyTemperatures.java) |
+| DecodeString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DecodeString.java) |
+| DecodeWays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DecodeWays.java) |
+| DegreeAnArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DegreeAnArray.java) |
+| DeleteOperationTwoStrings.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DeleteOperationTwoStrings.java) |
+| DesignMinStack.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DesignMinStack.java) |
+| DistributeCandies.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DistributeCandies.java) |
+| DivisorGame.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/DivisorGame.java) |
+| EggDropProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/EggDropProblem.java) |
+| FibonacciNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FibonacciNumber.java) |
+| FindAllAnagramsString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FindAllAnagramsString.java) |
+| FindFirstLastPositionElementSortedArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FindFirstLastPositionElementSortedArray.java) |
+| FindPivotIndex.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FindPivotIndex.java) |
+| FirstBadVersion.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FirstBadVersion.java) |
+| FirstUniqueCharacterString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FirstUniqueCharacterString.java) |
+| FlipGame.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FlipGame.java) |
+| FloodFill.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/FloodFill.java) |
+| GameOfLife.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/GameOfLife.java) |
+| GenerateValidParenthesis.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/GenerateValidParenthesis.java) |
+| GroupAnagrams.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/GroupAnagrams.java) |
+| GroupShiftedString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/GroupShiftedString.java) |
+| ImplementStrStrKMPRobinKarp.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ImplementStrStrKMPRobinKarp.java) |
+| IntegerToEnglishWords.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/IntegerToEnglishWords.java) |
+| InterleavingString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/InterleavingString.java) |
+| IsGraphBipartite.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/IsGraphBipartite.java) |
+| IsomorphicStrings.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/IsomorphicStrings.java) |
+| IsValidInteger.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/IsValidInteger.java) |
+| JewelsStones.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/JewelsStones.java) |
+| KClosestPointsOrigin.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/KClosestPointsOrigin.java) |
+| LargestNumberAtLeastTwiceOthers.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargestNumberAtLeastTwiceOthers.java) |
+| LastStoneWeight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LastStoneWeight.java) |
+| LetterCombinationsPhoneNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LetterCombinationsPhoneNumber.java) |
+| LetterTilePossibilities.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LetterTilePossibilities.java) |
+| LongestAbsoluteFilePath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LongestAbsoluteFilePath.java) |
+| LongestArithmeticSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LongestArithmeticSequence.java) |
+| LongestIncreasingPath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LongestIncreasingPath.java) |
+| LongestValidParentheses.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LongestValidParentheses.java) |
+| LowestCommonAncestor.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LowestCommonAncestor.java) |
+| MaximizeDistanceClosestPerson.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MaximizeDistanceClosestPerson.java) |
+| MaximumDistanceInArrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MaximumDistanceInArrays.java) |
+| MaximumSubarrayKadans.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MaximumSubarrayKadans.java) |
+| MaxProductSubArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MaxProductSubArray.java) |
+| MergeKSortedLists.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MergeKSortedLists.java) |
+| MergeTwoSortedLists.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MergeTwoSortedLists.java) |
+| MinCapacityOfShipMinimumNumberPagesStudent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MinCapacityOfShipMinimumNumberPagesStudent.java) |
+| MinCostClimbingStairs.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MinCostClimbingStairs.java) |
+| MinimizeMaxDistanceGasStation.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MinimizeMaxDistanceGasStation.java) |
+| MinimumJumpToReachLastJumpGame.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/MinimumJumpToReachLastJumpGame.java) |
+| NumberOfTriangles.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/NumberOfTriangles.java) |
+| NumberSubarraysBoundedMaximum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/NumberSubarraysBoundedMaximum.java) |
+| OrderlyQueueSmallestStringRotationKFirstCharacter.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/OrderlyQueueSmallestStringRotationKFirstCharacter.java) |
+| PaintFence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/PaintFence.java) |
+| PalindromeNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/PalindromeNumber.java) |
+| PrisonCellsAfterNDays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/PrisonCellsAfterNDays.java) |
+| ProductArrayExceptSelf.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ProductArrayExceptSelf.java) |
+| ReachingPoints.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ReachingPoints.java) |
+| RectangleArea.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RectangleArea.java) |
+| RelativeSortArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RelativeSortArray.java) |
+| RemoveAll2AdjacentDuplicatesString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RemoveAll2AdjacentDuplicatesString.java) |
+| RemoveNthNodeFromEnd.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RemoveNthNodeFromEnd.java) |
+| ReorderDataLogFiles.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ReorderDataLogFiles.java) |
+| RepeatedDNASequences.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RepeatedDNASequences.java) |
+| RepeatedSubstringPattern.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RepeatedSubstringPattern.java) |
+| ReverseIntegerNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseIntegerNumber.java) |
+| ReverseLinkedList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseLinkedList.java) |
+| ReverseString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ReverseString.java) |
+| RomanIntegerConversion.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RomanIntegerConversion.java) |
+| RottingOranges.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/RottingOranges.java) |
+| SetMatrixZeroes.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SetMatrixZeroes.java) |
+| SlidingWindowMaximum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SlidingWindowMaximum.java) |
+| SmallestMissingNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SmallestMissingNumber.java) |
+| SortCharactersByFrequency.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SortCharactersByFrequency.java) |
+| SplitArrayLargestSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SplitArrayLargestSum.java) |
+| StatisticsLargeSample.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/StatisticsLargeSample.java) |
+| StringCompressionRunLengthEncoding.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/StringCompressionRunLengthEncoding.java) |
+| StringIntegerATOI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/StringIntegerATOI.java) |
+| SubarrayProductLessThanK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SubarrayProductLessThanK.java) |
+| SubDomainVisitCount.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SubDomainVisitCount.java) |
+| SubSet.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/SubSet.java) |
+| TextJustification.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/TextJustification.java) |
+| TimeBasedKeyValueStore.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/TimeBasedKeyValueStore.java) |
+| TrappingRainWater.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/TrappingRainWater.java) |
+| TribonacciNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/TribonacciNumber.java) |
+| ValidAnagram.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ValidAnagram.java) |
+| ValidateBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ValidateBinarySearchTree.java) |
+| ValidPalindromeII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ValidPalindromeII.java) |
+| ValidPalindromeInSentence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ValidPalindromeInSentence.java) |
+| ValidParenthesesBalancedParenthesesExpression.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ValidParenthesesBalancedParenthesesExpression.java) |
+| VowelSpellchecker.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/VowelSpellchecker.java) |
+| WallsGates.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/WallsGates.java) |
+| WiggleSubSequenceOrLongestZigZagSubSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/WiggleSubSequenceOrLongestZigZagSubSequence.java) |
+| WordBreak.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/WordBreak.java) |
+| ZigZagNRowString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ZigZagNRowString.java) |
+| ZigZagTraversalBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/ZigZagTraversalBinaryTree.java) |
+| AddTwoNumbersListI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/AddTwoNumbersList/AddTwoNumbersListI.java) |
+| AddTwoNumbersListListII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/AddTwoNumbersList/AddTwoNumbersListListII.java) |
+| HouseRobberIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/HouseRobberIII.java) |
+| MaximumSumNoThreeElementsAreAdjacent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoThreeElementsAreAdjacent.java) |
+| MaximumSumNoTwoElementsAreAdjacent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoTwoElementsAreAdjacent.java) |
+| MaximumSumNoTwoElementsAreAdjacentInCircularArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoTwoElementsAreAdjacentInCircularArray.java) |
+| DivideTwoIntegers.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/DivideTwoIntegers.java) |
+| HammingDistance.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/HammingDistance.java) |
+| NumberOfSetBits.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/NumberOfSetBits.java) |
+| PowerOf2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/PowerOf2.java) |
+| PowerOf3.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/PowerOf3.java) |
+| NumberOccurringOnce.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/single/number/NumberOccurringOnce.java) |
+| SingleNumber.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/single/number/SingleNumber.java) |
+| SingleNumberII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/single/number/SingleNumberII.java) |
+| SingleNumberIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/single/number/SingleNumberIII.java) |
+| BraceExpansionI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/braceExpansion/BraceExpansionI.java) |
+| BraceExpansionII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/braceExpansion/BraceExpansionII.java) |
+| MyLFUCache.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/caches/MyLFUCache.java) |
+| MyLRUCache.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/caches/MyLRUCache.java) |
+| CombinationSumI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumI.java) |
+| CombinationSumII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumII.java) |
+| CombinationSumIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumIII.java) |
+| CombinationSumIV.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumIV.java) |
+| ActivateFountains.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/discuss/ActivateFountains.java) |
+| FlattenNestedListIterator.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/flattenNestedListIterator/FlattenNestedListIterator.java) |
+| NestedInteger.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/flattenNestedListIterator/NestedInteger.java) |
+| NestedIntegerValue.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/flattenNestedListIterator/NestedIntegerValue.java) |
+| NestedIntegerValues.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/flattenNestedListIterator/NestedIntegerValues.java) |
+| Base.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/Base.java) |
+| FlattenMultilevelDoublyLinkedList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/FlattenMultilevelDoublyLinkedList.java) |
+| FlattenMultilevelSinglyLinkedList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/FlattenMultilevelSinglyLinkedList.java) |
+| MultiLevelListBuilder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/MultiLevelListBuilder.java) |
+| Node.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/Node.java) |
+| SinglyNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/SinglyNode.java) |
+| Triple.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/list/Triple.java) |
+| BinaryTreeToCircularDoublyList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/BinaryTreeToCircularDoublyList.java) |
+| BinaryTreeToCircularSinglyList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/BinaryTreeToCircularSinglyList.java) |
+| BinaryTreeToDoublyList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/BinaryTreeToDoublyList.java) |
+| BinaryTreeToList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/BinaryTreeToList.java) |
+| BinaryTreeToSinglyList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/BinaryTreeToSinglyList.java) |
+| FlattenBinaryTreeLinkedList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/flatten/tree/FlattenBinaryTreeLinkedList.java) |
+| SudokuSolver.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/games/sudoku/SudokuSolver.java) |
+| ValidSudoku.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/games/sudoku/ValidSudoku.java) |
+| ValidTicTacToeState.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/games/ticTacToe/ValidTicTacToeState.java) |
+| CherryPickup.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/CherryPickup.java) |
+| CloneGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/CloneGraph.java) |
+| DungeonGame.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/DungeonGame.java) |
+| MinimumPathSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/MinimumPathSum.java) |
+| ReconstructItinerary.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/ReconstructItinerary.java) |
+| CourseSchedule1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/course/schedule/CourseSchedule1.java) |
+| CourseSchedule2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/course/schedule/CourseSchedule2.java) |
+| CourseSchedule3.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/course/schedule/CourseSchedule3.java) |
+| ICourseSchedule.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/course/schedule/ICourseSchedule.java) |
+| UniquePaths.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/unique/paths/UniquePaths.java) |
+| UniquePathsI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/unique/paths/UniquePathsI.java) |
+| UniquePathsII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/unique/paths/UniquePathsII.java) |
+| UniquePathsIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/graph/unique/paths/UniquePathsIII.java) |
+| InsertDeleteGetRandomDuplicatesO1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/insertdeleterandom/InsertDeleteGetRandomDuplicatesO1.java) |
+| InsertDeleteGetRandomO1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/insertdeleterandom/InsertDeleteGetRandomO1.java) |
+| IRandomizedSet.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/insertdeleterandom/IRandomizedSet.java) |
+| IntersectionTwoArrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intersection/arrays/IntersectionTwoArrays.java) |
+| IntersectionTwoArraysII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intersection/arrays/IntersectionTwoArraysII.java) |
+| EmployeeFreeTimeMergeKIntervalList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/EmployeeFreeTimeMergeKIntervalList.java) |
+| IntervalListInterSections.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/IntervalListInterSections.java) |
+| MergeIntervals.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/MergeIntervals.java) |
+| MergeIntervalsUnionIntersection.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/MergeIntervalsUnionIntersection.java) |
+| MeetingRoomI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/meeting/room/MeetingRoomI.java) |
+| MeetingRoomII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/meeting/room/MeetingRoomII.java) |
+| IntervalWorkingOnMultiTasking.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/intervalRelatedProblems/multitasking/IntervalWorkingOnMultiTasking.java) |
+| IslandPerimeter.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/island/IslandPerimeter.java) |
+| MaxAreaIsland.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/island/MaxAreaIsland.java) |
+| NumberIslands.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/island/NumberIslands.java) |
+| NumberIslandsII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/island/NumberIslandsII.java) |
+| BSTIterators.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/iterators/BSTIterators.java) |
+| PeekingIterators.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/iterators/PeekingIterators.java) |
+| ZigZagOrCycleIterators.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/iterators/ZigZagOrCycleIterators.java) |
+| LargestHistogram.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargetstRectangle/LargestHistogram.java) |
+| LargestRectangle.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargetstRectangle/LargestRectangle.java) |
+| MaximumSizeSquareMatrix.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargetstRectangle/MaximumSizeSquareMatrix.java) |
+| MaximumSumRectangle.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargetstRectangle/MaximumSumRectangle.java) |
+| MaximumSumSubSquareOfSizeK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/LargetstRectangle/MaximumSumSubSquareOfSizeK.java) |
+| ConvertSortedArrayBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ConvertSortedArrayBinarySearchTree.java) |
+| ListToBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/listToBST/ListToBinarySearchTree.java) |
+| LongestCommonIncreasingSubSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/LongestCommonIncreasingSubSequence.java) |
+| LongestCommonSubSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/LongestCommonSubSequence.java) |
+| LongestCommonSubString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/LongestCommonSubString.java) |
+| LongestSubstringAtMostKDistinctCharacters.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/LongestSubstringAtMostKDistinctCharacters.java) |
+| LongestSubstringWithoutRepeatingCharacters.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/LongestSubstringWithoutRepeatingCharacters.java) |
+| ShortestCommonSuperSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/longestShortestCommon/ShortestCommonSuperSequence.java) |
+| Search2DMatrixI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrix/search/Search2DMatrixI.java) |
+| Search2DMatrixII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrix/search/Search2DMatrixII.java) |
+| DiagonalReverseMatrix.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/DiagonalReverseMatrix.java) |
+| ReverseDiagonalDownward.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/ReverseDiagonalDownward.java) |
+| DiagonalMatrixDownwardLeft.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/forward/downward/DiagonalMatrixDownwardLeft.java) |
+| DiagonalMatrixDownwardRight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/forward/downward/DiagonalMatrixDownwardRight.java) |
+| DiagonalMatrixUpwardLeft.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/forward/upward/DiagonalMatrixUpwardLeft.java) |
+| DiagonalMatrixUpwardRight.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/dignoal/forward/upward/DiagonalMatrixUpwardRight.java) |
+| AntiSpiralMatrix.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/sprial/AntiSpiralMatrix.java) |
+| SpiralMatrixI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/sprial/SpiralMatrixI.java) |
+| SpiralMatrixII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/sprial/SpiralMatrixII.java) |
+| ZigZagMatrix.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/matrixPrint/zigzag/ZigZagMatrix.java) |
+| MedianOfStream.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/medians/MedianOfStream.java) |
+| MedianOfTwoSortedArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/medians/MedianOfTwoSortedArray.java) |
+| SlidingWindowMedian.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/medians/SlidingWindowMedian.java) |
+| NextGreaterElementI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/nextGreaterElement/NextGreaterElementI.java) |
+| NextGreaterElementII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/nextGreaterElement/NextGreaterElementII.java) |
+| NextGreaterElementIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/nextGreaterElement/NextGreaterElementIII.java) |
+| AddOperatorsPlusMinusMultiply.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/operatorBasedQuestions/AddOperatorsPlusMinusMultiply.java) |
+| AddOperatorsPlusMinusMultiplyDivide.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/operatorBasedQuestions/AddOperatorsPlusMinusMultiplyDivide.java) |
+| Game24.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/operatorBasedQuestions/Game24.java) |
+| AndSumToZero.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/aAndBZero/AndSumToZero.java) |
+| FourSum4Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/fourSum/FourSum4Sum.java) |
+| FourSum4SumII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/fourSum/FourSum4SumII.java) |
+| KSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/kSum/KSum.java) |
+| AModKPairs.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/modulo/AModKPairs.java) |
+| XPowerYGreaterThanYPowerX.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/power/XPowerYGreaterThanYPowerX.java) |
+| ThreeSum3Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSum3Sum.java) |
+| ThreeSum3SumClosest.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSum3SumClosest.java) |
+| ThreeSum3SumMultiplicity.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSum3SumMultiplicity.java) |
+| ThreeSumSmaller.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSumSmaller.java) |
+| TwoSum2Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/twoSum/TwoSum2Sum.java) |
+| LongestPalindromeSubString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/LongestPalindromeSubString.java) |
+| LongestPalindromicSubsequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/LongestPalindromicSubsequence.java) |
+| MinimumInsertionsPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/MinimumInsertionsPalindrome.java) |
+| PalindromePartitioning.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/PalindromePartitioning.java) |
+| PalindromePartitions.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/PalindromePartitions.java) |
+| ShortestPalindrome_MinimumNumberCharacterAddToFrontMakeStringPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/ShortestPalindrome_MinimumNumberCharacterAddToFrontMakeStringPalindrome.java) |
+| ShortestPalindrome_MinimumNumberCharacterAppendsMakeStringPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/Palindroms/ShortestPalindrome_MinimumNumberCharacterAppendsMakeStringPalindrome.java) |
+| PartitionArrayThreePartsWithEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionArrayThreePartsWithEqualSum.java) |
+| PartitionSetInKSubset.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetInKSubset.java) |
+| PartitionSetIntoKSubsetEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoKSubsetEqualSum.java) |
+| PartitionSetIntoTwoSubsetDiffferenceMinimum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoTwoSubsetDiffferenceMinimum.java) |
+| PartitionSetIntoTwoSubsetEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoTwoSubsetEqualSum.java) |
+| RegularExpressionMatch.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pattern/match/RegularExpressionMatch.java) |
+| WildcardMatching.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/pattern/match/WildcardMatching.java) |
+| ReachTargetInfiniteLine.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/reachANumber/ReachTargetInfiniteLine.java) |
+| MinimumRotatedSortedArrayFindPivot.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/sortedrotated/MinimumRotatedSortedArrayFindPivot.java) |
+| SearchRotatedSortedArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/sortedrotated/SearchRotatedSortedArray.java) |
+| LongestDurationHoldStocks.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/LongestDurationHoldStocks.java) |
+| MaxProfitKTransactions.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/MaxProfitKTransactions.java) |
+| MaxProfitMultiTransactions.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/MaxProfitMultiTransactions.java) |
+| MaxProfitSingleTransaction.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/MaxProfitSingleTransaction.java) |
+| MaxProfitTwoTransaction.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/MaxProfitTwoTransaction.java) |
+| StrobogrammaticNumberI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/strobogrammatic/number/StrobogrammaticNumberI.java) |
+| StrobogrammaticNumberII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/strobogrammatic/number/StrobogrammaticNumberII.java) |
+| StrobogrammaticNumberIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/strobogrammatic/number/StrobogrammaticNumberIII.java) |
+| LargestMaximumSumContiguousSubarrayKadensAlgorithm.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/LargestMaximumSumContiguousSubarrayKadensAlgorithm.java) |
+| LargestSumSubArrayAtLeastKElements.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/LargestSumSubArrayAtLeastKElements.java) |
+| LargestSumSubArraySumAtMostK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/LargestSumSubArraySumAtMostK.java) |
+| LongestSubarraySumAtMostk.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/LongestSubarraySumAtMostk.java) |
+| LongestSubArraySumK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/LongestSubArraySumK.java) |
+| MaximumSubarraySumFlippingSignsAtMostKElements.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/MaximumSubarraySumFlippingSignsAtMostKElements.java) |
+| MaximumSumNonOverlappingSubarraysLengthAtmostK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/MaximumSumNonOverlappingSubarraysLengthAtmostK.java) |
+| MaximumSumSubsequenceAtLeastKDistant.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/MaximumSumSubsequenceAtLeastKDistant.java) |
+| NumberSubArraysSumExactlyK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/NumberSubArraysSumExactlyK.java) |
+| MaximumSumMSubArrayKLength.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/nonOverlappingSubArray/MaximumSumMSubArrayKLength.java) |
+| MaximumSumThreeNonOverlappingSubarrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/nonOverlappingSubArray/MaximumSumThreeNonOverlappingSubarrays.java) |
+| MaximumSumTwoNonOverlappingSubarrayKSize.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/nonOverlappingSubArray/MaximumSumTwoNonOverlappingSubarrayKSize.java) |
+| MaximumSumTwoNonOverlappingSubarrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/subarrays/nonOverlappingSubArray/MaximumSumTwoNonOverlappingSubarrays.java) |
+| AllNodesDistanceKBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/AllNodesDistanceKBinaryTree.java) |
+| AllRootToLeafPathBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/AllRootToLeafPathBinaryTree.java) |
+| BinaryTreeEqualPartition.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/BinaryTreeEqualPartition.java) |
+| BinaryTreeTwoHalvesSameSize.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/BinaryTreeTwoHalvesSameSize.java) |
+| BinaryTreeUpsideDown.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/BinaryTreeUpsideDown.java) |
+| LongestUniValuePath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/LongestUniValuePath.java) |
+| MaximumDepthBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/MaximumDepthBinaryTree.java) |
+| MaximumPathSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/MaximumPathSum.java) |
+| MaximumWidthBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/MaximumWidthBinaryTree.java) |
+| NumberOfBinaryTreeEqualSumPartition.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/NumberOfBinaryTreeEqualSumPartition.java) |
+| PathZigzagLabelledBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/PathZigzagLabelledBinaryTree.java) |
+| RecoverBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/RecoverBinarySearchTree.java) |
+| SplitBST.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/SplitBST.java) |
+| SubtreeAnotherTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/SubtreeAnotherTree.java) |
+| TreeBuilder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/TreeBuilder.java) |
+| TrimBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/TrimBinarySearchTree.java) |
+| CountNodesInCompleteBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/completeBinaryTree/CountNodesInCompleteBinaryTree.java) |
+| GetLastNodeInCompleteBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/completeBinaryTree/GetLastNodeInCompleteBinaryTree.java) |
+| Helper.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/completeBinaryTree/Helper.java) |
+| IsCompleteBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/completeBinaryTree/IsCompleteBinaryTree.java) |
+| NodeExistsCompleteTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/completeBinaryTree/NodeExistsCompleteTree.java) |
+| ConnectNodesNext.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/connectNodesTree/ConnectNodesNext.java) |
+| ISerializeDeserialize.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/ISerializeDeserialize.java) |
+| Driver.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/binarSearchTree/Driver.java) |
+| SerializeDeSerializeBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/binarSearchTree/SerializeDeSerializeBinarySearchTree.java) |
+| Driver.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/binaryTree/Driver.java) |
+| SerializeDeSerializeBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/binaryTree/SerializeDeSerializeBinaryTree.java) |
+| Driver.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/genrictree/direct/Driver.java) |
+| ISerializeDeserializeNArrayTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/genrictree/direct/ISerializeDeserializeNArrayTree.java) |
+| SerializeDeserializeNAryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/genrictree/direct/SerializeDeserializeNAryTree.java) |
+| EncodeNAryTreeToBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/tree/serializeDeserialize/genrictree/vaiBinarytree/EncodeNAryTreeToBinaryTree.java) |
+| BoggleSearchWordSearchI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/boggle/BoggleSearchWordSearchI.java) |
+| BoggleSearchWordSearchII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/boggle/BoggleSearchWordSearchII.java) |
+| ShortestWordDistanceI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/distance/ShortestWordDistanceI.java) |
+| ShortestWordDistanceII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/distance/ShortestWordDistanceII.java) |
+| ShortestWordDistanceIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/distance/ShortestWordDistanceIII.java) |
+| WordLadderI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/ladder/WordLadderI.java) |
+| WordLadderII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode/word/ladder/WordLadderII.java) |
+| SegregateOddAndEvenNodesInList.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/Discuss/SegregateOddAndEvenNodesInList.java) |
+| FindTheIndexOfTheFirstOccurrenceInAString_28.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/array_string/FindTheIndexOfTheFirstOccurrenceInAString_28.java) |
+| LongestCommonPrefix_14.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/array_string/LongestCommonPrefix_14.java) |
+| PalindromeNumber_9.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/array_string/PalindromeNumber_9.java) |
+| RomanIntegerConversion_13.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/array_string/RomanIntegerConversion_13.java) |
+| SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/array_string/SmallestMissingIntegerGreaterThanSequentialPrefixSum_2996.java) |
+| IntersectionOfTwoLinkedLists_160.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/IntersectionOfTwoLinkedLists_160.java) |
+| LinkedListCycle_141.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/LinkedListCycle_141.java) |
+| MergeTwoSortedLists_21.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/MergeTwoSortedLists_21.java) |
+| MiddleOfTheLinkedList_876.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/MiddleOfTheLinkedList_876.java) |
+| PalindromeLinkedList_234.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/PalindromeLinkedList_234.java) |
+| RemoveDuplicatesFromSortedList_83.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/RemoveDuplicatesFromSortedList_83.java) |
+| RemoveLinkedListElements_203.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/RemoveLinkedListElements_203.java) |
+| ReverseLinkedList_206.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/List/ReverseLinkedList_206.java) |
+| ValidParentheses_20.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/stacks/ValidParentheses_20.java) |
+| TwoSum_1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/sumProblem/TwoSum_1.java) |
+| BinaryTreePaths_257.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/BinaryTreePaths_257.java) |
+| BinaryTreePathToANode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/BinaryTreePathToANode.java) |
+| FindModeInBinarySearchTree_501.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/FindModeInBinarySearchTree_501.java) |
+| MaximumDepthOfBinaryTree_104.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MaximumDepthOfBinaryTree_104.java) |
+| MaximumDepthOfNAryTree_559.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MaximumDepthOfNAryTree_559.java) |
+| MinimumAbsoluteDifferenceInBST_530.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MinimumAbsoluteDifferenceInBST_530.java) |
+| MinimumDepthOfBinaryTree_111.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MinimumDepthOfBinaryTree_111.java) |
+| MinimumDistanceBetweenBSTNodes_783.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MinimumDistanceBetweenBSTNodes_783.java) |
+| SameTree_100.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/SameTree_100.java) |
+| InvertTree_MirrorTree_226.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MirrorTree/InvertTree_MirrorTree_226.java) |
+| SymmetricTree_IsMirrorTree_101.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/easy/Tree/MirrorTree/SymmetricTree_IsMirrorTree_101.java) |
+| LFUCache_460.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/List/LFUCache_460.java) |
+| MergeKSortedLists_23.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/List/MergeKSortedLists_23.java) |
+| ReverseNodesInKGroup_25.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/List/ReverseNodesInKGroup_25.java) |
+| BasicCalculator_224.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/stacks/BasicCalculator_224.java) |
+| LargestRectangleInHistogram_84.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/stacks/MaxArea/LargestRectangleInHistogram_84.java) |
+| VerticalOrderTraversalOfABinaryTree_987.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/hard/Tree/VerticalOrderTraversalOfABinaryTree_987.java) |
+| ValidateBinarySearchTree_98.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/ValidateBinarySearchTree_98.java) |
+| ProductOfArrayExceptSelf_238.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/array_string/ProductOfArrayExceptSelf_238.java) |
+| StepsToMakeArrayNonDecreasing_2289.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/array_string/StepsToMakeArrayNonDecreasing_2289.java) |
+| CopyListWithRandomPointer_138.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/CopyListWithRandomPointer_138.java) |
+| DeleteTheMiddleNodeOfALinkedList_2095.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/DeleteTheMiddleNodeOfALinkedList_2095.java) |
+| LinkedListCycleII_142.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/LinkedListCycleII_142.java) |
+| LinkedListRandomNode_382.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/LinkedListRandomNode_382.java) |
+| MaximumTwinSumOfALinkedList_2130.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/MaximumTwinSumOfALinkedList_2130.java) |
+| OddEvenLinkedList_328.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/OddEvenLinkedList_328.java) |
+| PartitionList_86.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/PartitionList_86.java) |
+| RemoveDuplicatesFromSortedListII_82.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/RemoveDuplicatesFromSortedListII_82.java) |
+| RemoveNodesFromLinkedList_2487.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/RemoveNodesFromLinkedList_2487.java) |
+| RemoveNthNodeFromEndOfList_19.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/RemoveNthNodeFromEndOfList_19.java) |
+| ReverseLinkedListII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/ReverseLinkedListII.java) |
+| ReverseNodesInEvenLengthGroups_2074.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/ReverseNodesInEvenLengthGroups_2074.java) |
+| RotateList_61.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/RotateList_61.java) |
+| SwapNodesInPairs_24.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/SwapNodesInPairs_24.java) |
+| SwappingNodesInALinkedList_1721.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/SwappingNodesInALinkedList_1721.java) |
+| AddTwoNumbersII_445.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/AddList/AddTwoNumbersII_445.java) |
+| AddTwoNumbers_2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/AddList/AddTwoNumbers_2.java) |
+| LFUCache_460.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/Cache/LFUCache_460.java) |
+| LRUCache_146.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/List/Cache/LRUCache_146.java) |
+| DailyTemperatures_739.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/DailyTemperatures_739.java) |
+| EvaluateReversePolishNotation_150.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/EvaluateReversePolishNotation_150.java) |
+| MinStack_155.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/MinStack_155.java) |
+| SimplifyPath_71.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/SimplifyPath_71.java) |
+| NextGreaterElementIII_556.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/NextGreaterElement/NextGreaterElementIII_556.java) |
+| NextGreaterElementII_503.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/NextGreaterElement/NextGreaterElementII_503.java) |
+| NextGreaterElementI_496.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/NextGreaterElement/NextGreaterElementI_496.java) |
+| OnlineStockSpan_901.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/stacks/StockSpan/OnlineStockSpan_901.java) |
+| BinaryTreeLevelOrderTraversal_II_107.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/BinaryTreeLevelOrderTraversal_II_107.java) |
+| CountUnivalueSubtree_250.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/CountUnivalueSubtree_250.java) |
+| LongestUnivaluePath_687.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LongestUnivaluePath_687.java) |
+| MaximumLevelSumOfABinaryTree_1161.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/MaximumLevelSumOfABinaryTree_1161.java) |
+| PopulatingNextRightPointersInEachNodeII_117.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/PopulatingNextRightPointersInEachNodeII_117.java) |
+| PopulatingNextRightPointersInEachNode_116.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/PopulatingNextRightPointersInEachNode_116.java) |
+| ReverseOddLevelsOfBinaryTree_2415.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/ReverseOddLevelsOfBinaryTree_2415.java) |
+| VerticalOrderSumOfABinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/VerticalOrderSumOfABinaryTree.java) |
+| DeleteNodeInABST_450.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/BST/DeleteNodeInABST_450.java) |
+| SplitBST_776.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/BST/SplitBST_776.java) |
+| AllNodesDistanceKInBinaryTree_863.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/Distance/AllNodesDistanceKInBinaryTree_863.java) |
+| ConvertBinarySearchTreeToSortedDoublyLinkedList_426.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/ConvertBinarySearchTreeToSortedDoublyLinkedList_426.java) |
+| ConvertSortedDoublyLinkedListToBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/ConvertSortedDoublyLinkedListToBinarySearchTree.java) |
+| LowestCommonAncestorOfABinarySearchTree_235.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LCA/I/LowestCommonAncestorOfABinarySearchTree_235.java) |
+| LowestCommonAncestorOfABinaryTree_236.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LCA/I/LowestCommonAncestorOfABinaryTree_236.java) |
+| LowestCommonAncestorOfABinaryTreeII_1644.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LCA/II/LowestCommonAncestorOfABinaryTreeII_1644.java) |
+| LowestCommonAncestorOfABinaryTreeIII_1650.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LCA/III/LowestCommonAncestorOfABinaryTreeIII_1650.java) |
+| LowestCommonAncestorOfABinaryTreeIV_1676.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/LCA/IV/LowestCommonAncestorOfABinaryTreeIV_1676.java) |
+| PathSumIII_437.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/pathSum/PathSumIII_437.java) |
+| PathSumII_113.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/pathSum/PathSumII_113.java) |
+| PathSum_112.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/pathSum/PathSum_112.java) |
+| PthSumIV_666.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/pathSum/PthSumIV_666.java) |
+| BinaryTreeZigzagLevelOrderTraversal_103.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/patternTraversal/BinaryTreeZigzagLevelOrderTraversal_103.java) |
+| BinaryTreeBottomView.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/viewOfTree/BinaryTreeBottomView.java) |
+| BinaryTreeLeftSideView.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/viewOfTree/BinaryTreeLeftSideView.java) |
+| BinaryTreeRightSideView_199.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/viewOfTree/BinaryTreeRightSideView_199.java) |
+| BinaryTreeTopView.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/viewOfTree/BinaryTreeTopView.java) |
+| BoundaryOfBinaryTree_545.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/viewOfTree/BoundaryOfBinaryTree_545.java) |
+| AllPrimeNumbers.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/AllPrimeNumbers.java) |
+| AlphanumericAbbreviations.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/AlphanumericAbbreviations.java) |
+| ATimesToContainB.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ATimesToContainB.java) |
+| BinarySearch.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BinarySearch.java) |
+| BinaryStringWildCardChar.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BinaryStringWildCardChar.java) |
+| BooleanParenthesization.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BooleanParenthesization.java) |
+| ChainMatrixMultiplication.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ChainMatrixMultiplication.java) |
+| ChocolateDistributionProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ChocolateDistributionProblem.java) |
+| ClosestBike.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ClosestBike.java) |
+| ClosestPairPoints.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ClosestPairPoints.java) |
+| CodeAthon.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/CodeAthon.java) |
+| Combinations.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Combinations.java) |
+| ConvertNumberToWords.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ConvertNumberToWords.java) |
+| CountMinimumRightFlipsBulbsSwitch.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/CountMinimumRightFlipsBulbsSwitch.java) |
+| CutARoad.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/CutARoad.java) |
+| DiceWordProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/DiceWordProblem.java) |
+| EditDistance.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/EditDistance.java) |
+| EqualXandY.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/EqualXandY.java) |
+| FindMaximumNumberWithKSwaps.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/FindMaximumNumberWithKSwaps.java) |
+| FindSortedSubsequenceSizeKLinearTime.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/FindSortedSubsequenceSizeKLinearTime.java) |
+| FormMinimumNumberFromGivenSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/FormMinimumNumberFromGivenSequence.java) |
+| GearSelection.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/GearSelection.java) |
+| GearSelection_submited.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/GearSelection_submited.java) |
+| GreatestContiguousSubArrayKSize.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/GreatestContiguousSubArrayKSize.java) |
+| HappyPoter2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/HappyPoter2.java) |
+| InterestingString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterestingString.java) |
+| JobScheduling.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/JobScheduling.java) |
+| KMP_KnuthMorrisPratt.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/KMP_KnuthMorrisPratt.java) |
+| Knapsack.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Knapsack.java) |
+| KthLargestElement.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/KthLargestElement.java) |
+| KthSmallestSumContinuousSubarrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/KthSmallestSumContinuousSubarrays.java) |
+| LexicographicallySmallestRotatedSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LexicographicallySmallestRotatedSequence.java) |
+| LongestConsecutiveIncreasingSubSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LongestConsecutiveIncreasingSubSequence.java) |
+| LongestIncreasingSubSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LongestIncreasingSubSequence.java) |
+| LongestPossibleChunkedPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LongestPossibleChunkedPalindrome.java) |
+| LongestPossibleRouteMatrixWithHurdles.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LongestPossibleRouteMatrixWithHurdles.java) |
+| LongestRepeatingNonOverlappingSubString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/LongestRepeatingNonOverlappingSubString.java) |
+| MainClass.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MainClass.java) |
+| MaxA.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaxA.java) |
+| MaximumAbsoluteDifferenceTwoContiguousSubArrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumAbsoluteDifferenceTwoContiguousSubArrays.java) |
+| MaximumDistance.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumDistance.java) |
+| MaximumMinimumValuesOfExpression.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumMinimumValuesOfExpression.java) |
+| MaximumSubsetSumNoTwoElementsCommonDigits.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumSubsetSumNoTwoElementsCommonDigits.java) |
+| MaximumSumIncreasingSequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumSumIncreasingSequence.java) |
+| MaximumSumSubarrayAtMostKSize.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumSumSubarrayAtMostKSize.java) |
+| MaximumWeightTransformation.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MaximumWeightTransformation.java) |
+| MergeSortedArrayConstantSpace.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MergeSortedArrayConstantSpace.java) |
+| MergeSortedListOfInterval.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MergeSortedListOfInterval.java) |
+| MinimumAdjustmentCost.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MinimumAdjustmentCost.java) |
+| MinimumNumberIAndD.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MinimumNumberIAndD.java) |
+| MinimumPossibleSizeArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MinimumPossibleSizeArray.java) |
+| MinimumPossibleSizeArrayGivenRulesRemovingElements.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MinimumPossibleSizeArrayGivenRulesRemovingElements.java) |
+| MinimumSplitsBinaryStringSubStringPowerOfN.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/MinimumSplitsBinaryStringSubStringPowerOfN.java) |
+| NextGreaterElementOnRightSide.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/NextGreaterElementOnRightSide.java) |
+| NextSmallestPalindrome.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/NextSmallestPalindrome.java) |
+| NoPairSumDivisibleByK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/NoPairSumDivisibleByK.java) |
+| NthItemInSumOfTwoArrays.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/NthItemInSumOfTwoArrays.java) |
+| OddLengthPalindromeSubSequenceAroundCentre.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/OddLengthPalindromeSubSequenceAroundCentre.java) |
+| OptimalGameStrategy.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/OptimalGameStrategy.java) |
+| PainterPartitionProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/PainterPartitionProblem.java) |
+| Permutation.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Permutation.java) |
+| PermutationsSortedLexicographicOrder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/PermutationsSortedLexicographicOrder.java) |
+| PrimeSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/PrimeSum.java) |
+| PrintAllPossibleWordsFromPhoneDigits.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/PrintAllPossibleWordsFromPhoneDigits.java) |
+| RateInMazeWithJump.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/RateInMazeWithJump.java) |
+| Rearrange.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Rearrange.java) |
+| ReCycledPair.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/ReCycledPair.java) |
+| RemoveAllAdjacentDuplicatesString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/RemoveAllAdjacentDuplicatesString.java) |
+| RemoveMinimum2TimesMinGreaterThenMax.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/RemoveMinimum2TimesMinGreaterThenMax.java) |
+| SimpleMovingAverage.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SimpleMovingAverage.java) |
+| SmallerElementOnLeftSide.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SmallerElementOnLeftSide.java) |
+| SortDates.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SortDates.java) |
+| Sorts.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Sorts.java) |
+| StringCompression2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/StringCompression2.java) |
+| StringOddEvenTransformationInPlaceOrderKeep.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/StringOddEvenTransformationInPlaceOrderKeep.java) |
+| SuffixArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SuffixArray.java) |
+| SumGame2.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SumGame2.java) |
+| SumString.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/SumString.java) |
+| UnionFindDisjointSets.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/UnionFindDisjointSets.java) |
+| WeightedJobScheduling.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/WeightedJobScheduling.java) |
+| WordWrapProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/WordWrapProblem.java) |
+| LongestBitnoicSubsequence.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BitonicProblems/LongestBitnoicSubsequence.java) |
+| MaximumLengthBitonicSubArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BitonicProblems/MaximumLengthBitonicSubArray.java) |
+| MaximumLengthBitonicSubArrayWithDual.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/BitonicProblems/MaximumLengthBitonicSubArrayWithDual.java) |
+| DominoesArrangementProblem.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/dominoArragement/DominoesArrangementProblem.java) |
+| IGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/IGraph.java) |
+| IWeightedGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/IWeightedGraph.java) |
+| Graph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/node/base/Graph.java) |
+| GraphNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/node/base/GraphNode.java) |
+| DirectedGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/types/DirectedGraph.java) |
+| Edges.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/types/Edges.java) |
+| UnDirectedGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/types/UnDirectedGraph.java) |
+| WeightedDirectedGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/types/WeightedDirectedGraph.java) |
+| WeightedUnDirectedGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/graph/types/WeightedUnDirectedGraph.java) |
+| AlienLanguageOrder.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/AlienLanguageOrder.java) |
+| DetectCycleGraph.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/DetectCycleGraph.java) |
+| SourceToDestinationWithCycleNecessaryConnected.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/SourceToDestinationWithCycleNecessaryConnected.java) |
+| ThiefInRoomOfSensors.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/ThiefInRoomOfSensors.java) |
+| TopologicalSorts.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/TopologicalSorts.java) |
+| GraphClone.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/clone/GraphClone.java) |
+| GraphCloneTest.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/clone/GraphCloneTest.java) |
+| IMinimumSpanningTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/minimum/spanning/tree/IMinimumSpanningTree.java) |
+| KruskalMinimumSpanningTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/minimum/spanning/tree/KruskalMinimumSpanningTree.java) |
+| MinimumSpanningTreeTest.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/minimum/spanning/tree/MinimumSpanningTreeTest.java) |
+| PrimMinimumSpanningTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/minimum/spanning/tree/PrimMinimumSpanningTree.java) |
+| BellmanFordShortestPath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/shortest/path/BellmanFordShortestPath.java) |
+| DijkstraShortestPath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/shortest/path/DijkstraShortestPath.java) |
+| IShortestPath.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/shortest/path/IShortestPath.java) |
+| ShortestPathTest.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/shortest/path/ShortestPathTest.java) |
+| Add1.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterviewBit/Add1.java) |
+| MatrixChainMultiplication.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterviewBit/MatrixChainMultiplication.java) |
+| MaximumAbsoluteDifference.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterviewBit/MaximumAbsoluteDifference.java) |
+| MinStepsInfiniteGrid.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterviewBit/MinStepsInfiniteGrid.java) |
+| RepetedMissing.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/InterviewBit/RepetedMissing.java) |
+| AVLTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/AVLTree.java) |
+| AVLTreeNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/AVLTreeNode.java) |
+| BinaryIndexedTreeFenwickTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/BinaryIndexedTreeFenwickTree.java) |
+| BinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/BinarySearchTree.java) |
+| BinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/BinaryTree.java) |
+| BinaryTreeNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/BinaryTreeNode.java) |
+| CloneTreeRandomPointer.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/CloneTreeRandomPointer.java) |
+| DriverProgramAVLTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/DriverProgramAVLTree.java) |
+| DriverProgramBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/DriverProgramBinarySearchTree.java) |
+| DriverProgramBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/DriverProgramBinaryTree.java) |
+| FlipTreeUpSideDown.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/FlipTreeUpSideDown.java) |
+| IBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/IBinarySearchTree.java) |
+| IBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/IBinaryTree.java) |
+| LargestBSTInBinaryTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/LargestBSTInBinaryTree.java) |
+| LowestCommonAncestor.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/LowestCommonAncestor.java) |
+| MinMaxObject.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/MinMaxObject.java) |
+| TestHelper.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TestHelper.java) |
+| TraverseTreeWithKJump.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TraverseTreeWithKJump.java) |
+| TreeBoundaryTraversal.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TreeBoundaryTraversal.java) |
+| TreeElementHelper.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TreeElementHelper.java) |
+| TreeNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/TreeNode.java) |
+| EulerTour.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/EulerTour.java) |
+| MoriesTreeTraversal.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/MoriesTreeTraversal.java) |
+| TreeTraversalIterative.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/TreeTraversalIterative.java) |
+| TreeTraversalRecursive.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Tree/traversal/TreeTraversalRecursive.java) |
+| Main.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Trie/Main.java) |
+| Trie.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Trie/Trie.java) |
+| TrieNode.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/080ed36bcb73960e0cd0fb80d408f13620798b2e/src/main/java/DataStructureAlgo/Java/nonleetcode/Trie/TrieNode.java) |
