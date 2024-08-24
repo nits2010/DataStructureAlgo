@@ -47,7 +47,7 @@ import java.util.Arrays;
  * <p>
  * Tags
  * -----
- *
+ * @medium
  * @Tree
  * @Depth-FirstSearch
  * @BinarySearchTree
