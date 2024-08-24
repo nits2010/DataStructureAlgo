@@ -1,6 +1,10 @@
 package DataStructureAlgo.Java.LeetCode;
 
+import DataStructureAlgo.Java.LeetCode2025.medium.ValidateBinarySearchTree_98;
+import DataStructureAlgo.Java.helpers.TreeBuilder;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
+
+import java.util.Arrays;
 
 /**
  * Author: Nitin Gupta
@@ -37,6 +41,31 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * Explanation: The root node's value is 5 but its right child's value is 4.
  */
 public class ValidateBinarySearchTree {
+
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test(new Integer[]{2,1,3}, true);
+        test &= test(new Integer[]{5,1,4,null,null,3,6}, false);
+        test &= test(new Integer[]{2,2,2}, false);
+        test &= test(new Integer[]{}, true);
+        test &= test(new Integer[]{2147483647}, true);
+        System.out.println("===========================");
+        System.out.println(test ? "All passed" : "Something Failed");
+    }
+
+    private static boolean test(Integer[] input, boolean expected) {
+        System.out.println("------------------------------");
+        System.out.println("Input : "+ Arrays.toString(input) + "\nexpected : "+ expected);
+        TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
+
+        boolean output = new ValidateBinarySearchTree().isValidBST(root);
+        boolean result = output == expected;
+        System.out.println("output : "+ output + " testResult "+(result ? "Pass" : "Fail"));
+        return result;
+
+
+    }
+
 
     /**
      * Complexity: O(n) / O(n)
