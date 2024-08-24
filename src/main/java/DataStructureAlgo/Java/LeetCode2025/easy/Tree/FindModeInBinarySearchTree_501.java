@@ -58,7 +58,9 @@ import java.util.*;
  * Company Tags
  * -----
  * @Google
- * @Editorial
+ *
+ * <p>
+ * @Editorial <a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/solutions/5682469/simple-inorder-traversal-algorithm-beat-100">...</a>
  */
 public class FindModeInBinarySearchTree_501 {
 
