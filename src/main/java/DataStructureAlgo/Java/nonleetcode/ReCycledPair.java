@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.Pair;
 
 import java.util.*;
@@ -36,12 +36,12 @@ public class ReCycledPair {
     }
 
     private static void test(int[] nums, int[][] expected) {
-        System.out.println("\nNums: " + GenericPrinter.toString(nums) + "\nExpected    :" + GenericPrinter.toString(expected));
+        System.out.println("\nNums: " + CommonMethods.toString(nums) + "\nExpected    :" + CommonMethods.toString(expected));
 
         SolutionReCycledPair sol = new SolutionReCycledPair();
 
-        System.out.println("Solution1   :" + GenericPrinter.toString(sol.recycledPairs1(nums)));
-        System.out.println("Solution2   :" + GenericPrinter.toString(sol.recycledPairs2(nums)));
+        System.out.println("Solution1   :" + CommonMethods.toString(sol.recycledPairs1(nums)));
+        System.out.println("Solution2   :" + CommonMethods.toString(sol.recycledPairs2(nums)));
     }
 
 

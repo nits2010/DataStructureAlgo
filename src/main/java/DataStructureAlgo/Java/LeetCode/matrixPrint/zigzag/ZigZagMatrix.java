@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.zigzag;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -50,7 +50,7 @@ public class ZigZagMatrix {
 
     public static void print(int[][] zigZag) {
 
-        GenericPrinter.print(zigZag);
+        CommonMethods.print(zigZag);
         System.out.println("\n\n");
         int n = zigZag.length;
         int i = 1;

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -62,20 +62,20 @@ public class GameOfLife {
     }
 
     private static void test(int[][] game, int[][] expected) {
-        System.out.println("\nGiven Game:\n" + GenericPrinter.toString(game));
+        System.out.println("\nGiven Game:\n" + CommonMethods.toString(game));
 
         System.out.println("After one iteration");
-        System.out.println("Expected\n" + GenericPrinter.toString(expected));
-        System.out.println("Using memory\n" + test(GenericPrinter.copyOf(game), new GameOfLifeUsingMemory()));
-        System.out.println("Less memory  More processing\n" + test(GenericPrinter.copyOf(game), new GameOfLifeInPlace2Scan()));
-        System.out.println("Less memory  Less processing\n" + test(GenericPrinter.copyOf(game), new GameOfLifeLessMemoryLessLessProcessing()));
+        System.out.println("Expected\n" + CommonMethods.toString(expected));
+        System.out.println("Using memory\n" + test(CommonMethods.copyOf(game), new GameOfLifeUsingMemory()));
+        System.out.println("Less memory  More processing\n" + test(CommonMethods.copyOf(game), new GameOfLifeInPlace2Scan()));
+        System.out.println("Less memory  Less processing\n" + test(CommonMethods.copyOf(game), new GameOfLifeLessMemoryLessLessProcessing()));
 
 
     }
 
     private static String test(int[][] game, IGameOfLife gameOfLife) {
         gameOfLife.gameOfLife(game);
-        return (GenericPrinter.toString(game));
+        return (CommonMethods.toString(game));
 
     }
 

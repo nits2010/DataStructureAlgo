@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -57,7 +57,7 @@ public class BombEnemy {
     }
 
     private static void test(char[][] grid, int expected) {
-        System.out.println("\ngrid :\n" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\ngrid :\n" + CommonMethods.toString(grid) + " expected :" + expected);
 
         BombEnemyBruteForce enemyBruteForce = new BombEnemyBruteForce();
         BombEnemyMemo bombEnemyMemo = new BombEnemyMemo();

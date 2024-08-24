@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.NextGreaterElementOnRightSide;
 
 import java.util.Arrays;
@@ -32,13 +32,13 @@ public class DailyTemperatures {
     }
 
     private static boolean test(int[] T, int[] expected) {
-        System.out.println("\nT:" + GenericPrinter.toString(T));
-        System.out.println("Expected    :" + GenericPrinter.toString(expected));
+        System.out.println("\nT:" + CommonMethods.toString(T));
+        System.out.println("Expected    :" + CommonMethods.toString(expected));
         int[] warmer2 = dailyTemperatures2(T);
         int[] warmer1 = dailyTemperatures(T);
 
-        System.out.println("Obtained1   :" + GenericPrinter.toString(warmer1));
-        System.out.println("Obtained2   :" + GenericPrinter.toString(warmer2));
+        System.out.println("Obtained1   :" + CommonMethods.toString(warmer1));
+        System.out.println("Obtained2   :" + CommonMethods.toString(warmer2));
         return Arrays.equals(expected, warmer1) && Arrays.equals(expected, warmer2);
 
     }

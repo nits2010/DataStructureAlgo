@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -45,7 +45,7 @@ public class LargestNumberAtLeastTwiceOthers {
     }
 
     private static boolean test(int[] nums, int expected) {
-        System.out.println("\nNums :" + GenericPrinter.toString(nums));
+        System.out.println("\nNums :" + CommonMethods.toString(nums));
 
         System.out.println("Expected :" + expected);
         int obtained = dominantIndex(nums);

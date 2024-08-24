@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.easy.sumProblem;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -79,8 +79,8 @@ public class TwoSum_1 {
     private static void test(int[] nums, int[] expected, int target){
         Solution solution = new Solution();
         int []x = solution.twoSum(nums, target);
-        boolean result = GenericPrinter.equalsValuesWithoutOrder(x,expected);
-        GenericPrinter.resultPrint(nums, expected, x,"outcome", result);
+        boolean result = CommonMethods.equalsValuesWithoutOrder(x,expected);
+        CommonMethods.resultPrint(nums, expected, x,"outcome", result);
 
 
     }

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -47,7 +47,7 @@ public class FindPivotIndex {
     }
 
     private static boolean test(int[] nums, int expected) {
-        System.out.println("\nNums: " + GenericPrinter.toString(nums));
+        System.out.println("\nNums: " + CommonMethods.toString(nums));
 
         System.out.println("Expected                            : " + expected);
         int linearObtained = new FindPivotIndexLinear().pivotIndex(nums);
@@ -55,7 +55,7 @@ public class FindPivotIndex {
         System.out.println("Linear obtained                     : " + linearObtained);
         System.out.println("Linear obtained Constant Memory     : " + linearObtainedConstantMemory);
 
-        return GenericPrinter.equalsValues(expected, linearObtained, linearObtainedConstantMemory);
+        return CommonMethods.equalsValues(expected, linearObtained, linearObtainedConstantMemory);
     }
 
 

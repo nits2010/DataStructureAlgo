@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
 
 /**
@@ -41,7 +41,7 @@ public class MinimizeMaxDistanceGasStation {
     }
 
     private static void test(int[] stations, int k, Double expected) {
-        System.out.println("\n stations :" + GenericPrinter.toString(stations) + " k:" + k + "\nexpected:" + expected);
+        System.out.println("\n stations :" + CommonMethods.toString(stations) + " k:" + k + "\nexpected:" + expected);
         MinimizeMaxDistanceGasStationDPBottomUp bottomUp = new MinimizeMaxDistanceGasStationDPBottomUp();
         MinimizeMaxDistanceGasStationBinarySearch binarySearch = new MinimizeMaxDistanceGasStationBinarySearch();
         System.out.println("bottomUp :" + bottomUp.minmaxGasDist(stations, k));

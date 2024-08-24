@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.LeetCode.intersection.arrays.IntersectionTwoArrays;
 
 import java.util.*;
@@ -32,7 +32,7 @@ public class IntersectionTwoArraysWithRestriction {
     }
 
     private static void test(int[] nums1, int[] nums2, int[] expected) {
-        System.out.println("\n Input; nums1 :" + GenericPrinter.toString(nums1) + " nums2 :" + GenericPrinter.toString(nums2) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Input; nums1 :" + CommonMethods.toString(nums1) + " nums2 :" + CommonMethods.toString(nums2) + " expected :" + CommonMethods.toString(expected));
         System.out.println("Set Obtained :" + intersection(nums1, nums2));
     }
 

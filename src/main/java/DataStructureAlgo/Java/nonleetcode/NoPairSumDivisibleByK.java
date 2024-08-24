@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubSet(int[] nums, int k, SubSetNoPairSumDivisibleByK subset) {
         System.out.println("Input ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         List<Integer> modulo = subset.maximumSizeSubSetNoPairSumDivisibleByKElements(nums, k);
         System.out.println("Size : " + modulo.size() + " array " + modulo);
     }
@@ -52,10 +52,10 @@ public class NoPairSumDivisibleByK {
 
     private static void testSubArray(int[] nums, int k, SubArrayNoPairSumDivisibleByK array) {
         System.out.println("Input ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         int[] modulo = array.maximumSizeSubSetNoPairSumDivisibleByK(nums, k);
         System.out.println("output ");
-        GenericPrinter.print(modulo);
+        CommonMethods.print(modulo);
     }
 }
 

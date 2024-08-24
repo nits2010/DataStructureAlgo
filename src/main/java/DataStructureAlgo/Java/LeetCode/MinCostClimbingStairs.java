@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -32,7 +32,7 @@ public class MinCostClimbingStairs {
     }
 
     private static void test(int[] cost, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(cost) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(cost) + " expected :" + expected);
 
         System.out.println("Left to right :" + minCostClimbingStairs(cost));
         System.out.println("Right to Left :" + minCostClimbingStairsFromBack(cost));

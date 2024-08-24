@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,12 +49,12 @@ public class ReorderDataLogFiles {
     }
 
     private static void test(String[] logs, String[] expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(logs));
-        System.out.println(" Expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Input :" + CommonMethods.toString(logs));
+        System.out.println(" Expected :" + CommonMethods.toString(expected));
         ReorderDataLogFilesSeparateSortIndexOf separateSortIndexOf = new ReorderDataLogFilesSeparateSortIndexOf();
         ReorderDataLogFilesWithInSortIndexOf withInSortIndexOf = new ReorderDataLogFilesWithInSortIndexOf();
-        System.out.println(" separateSortIndexOf    :" + GenericPrinter.toString(separateSortIndexOf.reorderLogFiles(GenericPrinter.copyOf(logs))));
-        System.out.println(" withInSortIndexOf      :" + GenericPrinter.toString(withInSortIndexOf.reorderLogFiles(GenericPrinter.copyOf(logs))));
+        System.out.println(" separateSortIndexOf    :" + CommonMethods.toString(separateSortIndexOf.reorderLogFiles(CommonMethods.copyOf(logs))));
+        System.out.println(" withInSortIndexOf      :" + CommonMethods.toString(withInSortIndexOf.reorderLogFiles(CommonMethods.copyOf(logs))));
 
     }
 }

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.nonleetcode.Tree.traversal.MoriesTreeTraversal;
 
@@ -67,8 +67,8 @@ public class RecoverBinarySearchTree {
     }
 
     private static void test(TreeNode root, TreeNode expected) {
-        System.out.println("\nInput :" + GenericPrinter.inOrder(root));
-        System.out.println("Expected :" + GenericPrinter.inOrder(expected));
+        System.out.println("\nInput :" + CommonMethods.inOrder(root));
+        System.out.println("Expected :" + CommonMethods.inOrder(expected));
 
 //        RecoverBinarySearchTreeUsingMemory usingMemory = new RecoverBinarySearchTreeUsingMemory();
 //        usingMemory.recoverTree(root);
@@ -81,7 +81,7 @@ public class RecoverBinarySearchTree {
 
         RecoverBinarySearchTreeConstantMories constantMemoryMories = new RecoverBinarySearchTreeConstantMories();
         constantMemoryMories.recoverTree(root);
-        System.out.println(" Constant Memory Mories:" + GenericPrinter.inOrder(root));
+        System.out.println(" Constant Memory Mories:" + CommonMethods.inOrder(root));
 
 
     }

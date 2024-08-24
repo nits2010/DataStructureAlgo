@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph.unique.paths;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -46,11 +46,11 @@ public class UniquePathsIII {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Input grid :" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\n Input grid :" + CommonMethods.toString(grid) + " expected :" + expected);
         final UniquePathsIIIBacktracking backtracking = new UniquePathsIIIBacktracking();
         UniquePathsIIITopDownDP topDownDP = new UniquePathsIIITopDownDP();
-        System.out.println("\n Backtracking dfs :" + backtracking.uniquePathsIII(GenericPrinter.copyOf(grid)));
-        System.out.println("\n topDownDP dfs :" + topDownDP.uniquePathsIII(GenericPrinter.copyOf(grid)));
+        System.out.println("\n Backtracking dfs :" + backtracking.uniquePathsIII(CommonMethods.copyOf(grid)));
+        System.out.println("\n topDownDP dfs :" + topDownDP.uniquePathsIII(CommonMethods.copyOf(grid)));
     }
 }
 

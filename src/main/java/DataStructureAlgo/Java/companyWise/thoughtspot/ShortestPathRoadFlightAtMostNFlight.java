@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.thoughtspot;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.graph.questions.shortest.path.DijkstraShortestPath;
 
 import java.util.*;
@@ -139,7 +139,7 @@ public class ShortestPathRoadFlightAtMostNFlight {
     }
 
     private static void test(CityCell[][] cityMap, int flightCount, int expected) {
-        System.out.println("\nCity Map :\n" + GenericPrinter.toStringT2D(cityMap) + " flightCount " + flightCount);
+        System.out.println("\nCity Map :\n" + CommonMethods.toStringT2D(cityMap) + " flightCount " + flightCount);
         System.out.println("Expected                :" + expected);
         System.out.println("BackTracking            :" + new ShortestPathRoadFlightAtMostNFlightBacktracking(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));
         System.out.println("DijkstraShortestPath    :" + new ShortestPathRoadFlightAtMostNFlightDijkstraShortestPath(cityMap.length).shortestPathCost(cityMap, 0, 4, flightCount));

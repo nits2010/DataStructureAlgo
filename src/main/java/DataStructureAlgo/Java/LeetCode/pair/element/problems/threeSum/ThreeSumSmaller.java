@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.threeSum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -35,7 +35,7 @@ public class ThreeSumSmaller {
     }
 
     private static void test(int[] nums, int target) {
-        System.out.println("Input :" + GenericPrinter.toString(nums));
+        System.out.println("Input :" + CommonMethods.toString(nums));
 
         ThreeSumSmallerSorting sorting = new ThreeSumSmallerSorting();
         System.out.println("Sorting " + sorting.threeSumSmaller(nums, target));

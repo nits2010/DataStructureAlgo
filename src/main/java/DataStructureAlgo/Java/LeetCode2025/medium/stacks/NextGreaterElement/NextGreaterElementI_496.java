@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.stacks.NextGreaterElement;
 
 import DataStructureAlgo.Java.LeetCode2025.medium.stacks.DailyTemperatures_739;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -87,8 +87,8 @@ public class NextGreaterElementI_496 {
         int[] usingStacks = solution.nextGreaterElement(nums1, nums2);
         int[] actualWithoutDS = solutionWithDS.nextGreaterElement(nums1, nums2);
         System.out.println("usingStacks  :" + Arrays.toString(usingStacks) + "\nactualWithoutDS:" + Arrays.toString(actualWithoutDS));
-        boolean testResultUsingStacks =  GenericPrinter.equalsValues(expected, usingStacks);
-        boolean testResultNoDS =  GenericPrinter.equalsValues(expected, actualWithoutDS);
+        boolean testResultUsingStacks =  CommonMethods.equalsValues(expected, usingStacks);
+        boolean testResultNoDS =  CommonMethods.equalsValues(expected, actualWithoutDS);
         System.out.println("testResultUsingStacks :" + (testResultUsingStacks ? " Passed" : " Failed"));
         System.out.println("testResultNoDS :" + (testResultNoDS ? " Passed" : " Failed"));
         return testResultUsingStacks == testResultNoDS;

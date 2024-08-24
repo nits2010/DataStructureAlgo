@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -52,7 +52,7 @@ public class MinimumPathSum {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(grid) + " expected :" + expected);
         System.out.println(" Backtracking : " + MinimumPathSumBacktracking.minPathSum(grid));
         System.out.println(" Top Down DP : " + MinimumPathSumDPTopDown.minPathSum(grid));
         System.out.println(" Bottom up DP : " + MinimumPathSumDPBottomUp.minPathSum(grid));

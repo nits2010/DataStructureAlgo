@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -51,7 +51,7 @@ public class ContiguousArrayZeroOne {
 
     private static void test(int[] nums, int expectedOutput) {
         System.out.print("Input: ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         LargestSubArrayWithEqualZeroAndOneBruteForce bruteForce = new LargestSubArrayWithEqualZeroAndOneBruteForce();
         LargestSubArrayWithEqualZeroAndOneUsingArray usingArray = new LargestSubArrayWithEqualZeroAndOneUsingArray();

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +50,7 @@ public class NumberSubArraysSumExactlyK {
      */
     static int numberSubArraysSumExactlyK(int nums[], int sum) {
         System.out.println("Input sum :" + sum);
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         if (nums == null || nums.length == 0)
             return 0;

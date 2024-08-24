@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.ArrayList;
@@ -69,7 +69,7 @@ public class BinaryTreeEqualPartition {
     }
 
     private static void test(TreeNode root, boolean expected) {
-        System.out.println("\n Input :" + GenericPrinter.preOrder(root) + " expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.preOrder(root) + " expected :" + expected);
         EqualTreePartitionFlatAndCount flatAndCount = new EqualTreePartitionFlatAndCount();
         EqualTreePartitionFlatAndCount2 flatAndCount2 = new EqualTreePartitionFlatAndCount2();
         System.out.println("flatAndCount : " + flatAndCount.checkEqualTree(root));

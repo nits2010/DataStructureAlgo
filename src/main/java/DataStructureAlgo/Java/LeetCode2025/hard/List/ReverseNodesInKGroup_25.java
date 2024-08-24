@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.hard.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.medium.List.SwapNodesInPairs_24;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -78,12 +78,12 @@ public class ReverseNodesInKGroup_25 {
         ListNode originalList = ListBuilder.arrayToSinglyList(elements);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
 
-        System.out.println("\nInput :"+ GenericPrinter.print(originalList) + " k="+k + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\nInput :"+ CommonMethods.print(originalList) + " k="+k + "\nexpected :" + CommonMethods.print(expectedList));
 
         Solution solution = new Solution();
         ListNode output =  solution.reverseKGroup(originalList, k);
         boolean result ;
-        System.out.println("Output :"+GenericPrinter.print(output) + "\nResult match : "+(result= GenericPrinter.equalsValues(expectedList,output)));
+        System.out.println("Output :"+ CommonMethods.print(output) + "\nResult match : "+(result= CommonMethods.equalsValues(expectedList,output)));
         return result;
 
 

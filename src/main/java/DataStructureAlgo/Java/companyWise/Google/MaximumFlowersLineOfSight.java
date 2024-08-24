@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Google;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -57,7 +57,7 @@ public class MaximumFlowersLineOfSight {
 
     private static void test(char[][] garden) {
 
-        System.out.println(GenericPrinter.toString(garden));
+        System.out.println(CommonMethods.toString(garden));
         System.out.println("Max flower visibile :" + maximumFlower(garden));
     }
 

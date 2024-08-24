@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -56,8 +56,8 @@ import  DataStructureAlgo.Java.helpers.GenericPrinter;
  */
 public class CellStateAfterNDays {
     public static void main(String[] args) {
-        GenericPrinter.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
-        GenericPrinter.print(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
+        CommonMethods.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));
+        CommonMethods.print(cellAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
     }
 
 
@@ -73,7 +73,7 @@ public class CellStateAfterNDays {
      */
     static int[] cellAfterNDays(int[] houses, int N) {
         System.out.println("Given N: " + N);
-        GenericPrinter.print(houses);
+        CommonMethods.print(houses);
         N = (N - 1) % 14 + 1;
         final int houseSize = 8;
 

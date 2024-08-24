@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.combination.sum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,7 +49,7 @@ public class CombinationSumI {
     }
 
     private static void test(int[] candidates, int target, List<List<Integer>> expected) {
-        System.out.println("\n Candidates :" + GenericPrinter.toString(candidates) + " Target :" + target + " expected :" + expected);
+        System.out.println("\n Candidates :" + CommonMethods.toString(candidates) + " Target :" + target + " expected :" + expected);
         CombinationSumIDFS combinationSumIDFS = new CombinationSumIDFS();
         CombinationSumISortedDFS sortedDFS = new CombinationSumISortedDFS();
         CombinationSumIReverseDFS reverseDFS = new CombinationSumIReverseDFS();

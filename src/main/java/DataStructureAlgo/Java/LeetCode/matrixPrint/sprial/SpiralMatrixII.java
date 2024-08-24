@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.sprial;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -36,9 +36,9 @@ public class SpiralMatrixII {
 
     private static boolean test(int n, int[][] expected) {
         System.out.println("\nN:" + n);
-        System.out.println("Expected:\n" + GenericPrinter.toString(expected));
+        System.out.println("Expected:\n" + CommonMethods.toString(expected));
         int[][] obtained = generateMatrix(n);
-        System.out.println("Obtained:\n" + GenericPrinter.toString(obtained));
+        System.out.println("Obtained:\n" + CommonMethods.toString(obtained));
 
         return Arrays.deepEquals(obtained, expected);
 

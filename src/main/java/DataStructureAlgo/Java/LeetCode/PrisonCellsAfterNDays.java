@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -54,8 +54,8 @@ public class PrisonCellsAfterNDays {
 
     public static void main(String []args) {
         SolutionPrisonCellsAfterNDays sol = new SolutionPrisonCellsAfterNDays();
-        GenericPrinter.print(sol.prisonAfterNDays(new int[]{0, 1, 0, 1, 1, 0, 0, 1}, 7));
-        GenericPrinter.print(sol.prisonAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
+        CommonMethods.print(sol.prisonAfterNDays(new int[]{0, 1, 0, 1, 1, 0, 0, 1}, 7));
+        CommonMethods.print(sol.prisonAfterNDays(new int[]{1, 1, 1, 0, 1, 1, 1, 1}, 2));
 
 
     }

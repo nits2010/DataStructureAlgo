@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -42,15 +42,15 @@ public class NthItemInSumOfTwoArrays {
     }
 
     private static boolean test(int[] a, int[] b, int n, int expected) {
-        System.out.println("\nA:" + GenericPrinter.toString(a));
-        System.out.println("\nB:" + GenericPrinter.toString(b) + "\nN=" + n);
+        System.out.println("\nA:" + CommonMethods.toString(a));
+        System.out.println("\nB:" + CommonMethods.toString(b) + "\nN=" + n);
 
         SolutionNthItemInSumOfTwoArraysDuplicateSumNotAllowed duplicateSumNotAllowed = new SolutionNthItemInSumOfTwoArraysDuplicateSumNotAllowed();
         int obtained = duplicateSumNotAllowed.nthItem(a, b, n);
         System.out.println("Expected:" + expected);
         System.out.println("Obtained:" + obtained);
 
-        return GenericPrinter.equalsValues(obtained, expected);
+        return CommonMethods.equalsValues(obtained, expected);
 
     }
 

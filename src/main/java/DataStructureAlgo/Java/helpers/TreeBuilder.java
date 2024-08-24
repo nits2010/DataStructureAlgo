@@ -4,6 +4,7 @@ package DataStructureAlgo.Java.helpers;
 
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNodeWithParent;
 
 import java.util.*;
 
@@ -83,6 +84,35 @@ public class TreeBuilder {
 
             if (i < elements.length && elements[i] != null && current!=null) {
                 current.right = new TreeNode(elements[i]);
+                queue.add(current.right);
+            }
+            i++;
+        }
+
+        return root;
+    }
+
+    public static TreeNodeWithParent buildTreeFromLevelOrderWithParent(Integer[] elements) {
+        if (elements == null || elements.length == 0 || elements[0] == null)
+            return null;
+
+        TreeNodeWithParent root = new TreeNodeWithParent(elements[0], null);
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        int i = 1;
+        while (i < elements.length) {
+            TreeNode current = queue.poll();
+
+            if (elements[i] != null && current!=null) {
+                current.left = new TreeNodeWithParent(elements[i], current);
+                queue.add(current.left);
+            }
+            i++;
+
+            if (i < elements.length && elements[i] != null && current!=null) {
+                current.right = new TreeNodeWithParent(elements[i], current);
                 queue.add(current.right);
             }
             i++;

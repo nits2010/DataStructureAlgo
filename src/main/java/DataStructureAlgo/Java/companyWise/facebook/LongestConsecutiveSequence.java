@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -39,7 +39,7 @@ public class LongestConsecutiveSequence {
         Sort sort = new Sort();
         UsingMap map = new UsingMap();
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println("Sort" + sort.longestConsecutive(nums));
         System.out.println("Map " + map.longestConsecutive(nums));
 

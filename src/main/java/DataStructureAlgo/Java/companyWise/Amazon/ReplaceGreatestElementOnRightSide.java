@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -20,8 +20,8 @@ public class ReplaceGreatestElementOnRightSide {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("\n input :" + GenericPrinter.toString(nums) + " expected :" + GenericPrinter.toString(expected));
-        System.out.println("\n Obtained :" + GenericPrinter.toString(greatestElementOnRightSide(nums)));
+        System.out.println("\n input :" + CommonMethods.toString(nums) + " expected :" + CommonMethods.toString(expected));
+        System.out.println("\n Obtained :" + CommonMethods.toString(greatestElementOnRightSide(nums)));
     }
 
     /**

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,13 +45,13 @@ public class WallsGates {
     private static void testDFS(int room[][]) {
 
         System.out.println("\nGiven room");
-        System.out.println(GenericPrinter.toString(room));
+        System.out.println(CommonMethods.toString(room));
 
         WallsGatesDFS dfs = new WallsGatesDFS();
         dfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        System.out.println(GenericPrinter.toString(room));
+        System.out.println(CommonMethods.toString(room));
 
 
     }
@@ -60,13 +60,13 @@ public class WallsGates {
     private static void testBFS(int room[][]) {
 
         System.out.println("\nGiven room");
-        System.out.println(GenericPrinter.toString(room));
+        System.out.println(CommonMethods.toString(room));
 
         WallsGatesBFS bfs = new WallsGatesBFS();
         bfs.wallsAndGates(room);
 
         System.out.println("\nOutput room");
-        System.out.println(GenericPrinter.toString(room));
+        System.out.println(CommonMethods.toString(room));
 
 
     }

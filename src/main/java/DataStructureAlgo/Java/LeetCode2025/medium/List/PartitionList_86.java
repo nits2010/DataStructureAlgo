@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -68,13 +68,13 @@ public class PartitionList_86 {
         ListNode head = ListBuilder.arrayToSinglyList(input);
         ListNode expectedNode = ListBuilder.arrayToSinglyList(expected);
 
-        System.out.println("\nInput :" + GenericPrinter.print(head) + " x : "+ x + " expected :" + GenericPrinter.print(expectedNode));
+        System.out.println("\nInput :" + CommonMethods.print(head) + " x : "+ x + " expected :" + CommonMethods.print(expectedNode));
 
         PartitionList.Solution solution = new PartitionList().new Solution();
 
         ListNode output = solution.partition(head, x);
-        System.out.println("Obtained :" + GenericPrinter.print(output));
-        boolean testResult = GenericPrinter.equalsValues(expectedNode, output);
+        System.out.println("Obtained :" + CommonMethods.print(output));
+        boolean testResult = CommonMethods.equalsValues(expectedNode, output);
         System.out.println("Test passed: " + testResult );
         return (testResult);
     }

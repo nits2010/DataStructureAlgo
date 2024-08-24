@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Adobe;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -38,7 +38,7 @@ public class MinimiseTheMaximumDifferenceBetweenHeightsTower {
     }
 
     private static void test(int[] height, int b, int expected) {
-        System.out.println("Input :" + GenericPrinter.toString(height));
+        System.out.println("Input :" + CommonMethods.toString(height));
         System.out.println(" minDifference : " + MinimumDifferenceHeightTowerMinimumPossibleDifference.minDifference(height, b) + " expected " + expected);
     }
 

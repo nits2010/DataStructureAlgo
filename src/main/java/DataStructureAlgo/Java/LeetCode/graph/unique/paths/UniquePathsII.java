@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph.unique.paths;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -66,7 +66,7 @@ public class UniquePathsII {
     }
 
     private static void test(int[][] maze, int expected) {
-        System.out.println("\n grid :\n" + GenericPrinter.toString(maze) + " expected :" + expected);
+        System.out.println("\n grid :\n" + CommonMethods.toString(maze) + " expected :" + expected);
 
         UniquePathsIIBacktracking backtracking = new UniquePathsIIBacktracking();
         UniquePathIIDPTopDown pathIIDPTopDown = new UniquePathIIDPTopDown();

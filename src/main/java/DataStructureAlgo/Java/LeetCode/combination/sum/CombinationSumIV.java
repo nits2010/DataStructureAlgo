@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.combination.sum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -56,7 +56,7 @@ public class CombinationSumIV {
     }
 
     private static void test(int[] candidates, int target, int expected) {
-        System.out.println("\n Candidates :" + GenericPrinter.toString(candidates) + " Target :" + target + " expected :" + expected);
+        System.out.println("\n Candidates :" + CommonMethods.toString(candidates) + " Target :" + target + " expected :" + expected);
 
         CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS combinationSumIDFS = new CombinationSumIVBacktracking.CombinationSumIVBacktrackingDFS();
         CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS combinationSumIVDFSV2 = new CombinationSumIVBacktracking.CombinationSumIVReverseBacktrackingDFS();

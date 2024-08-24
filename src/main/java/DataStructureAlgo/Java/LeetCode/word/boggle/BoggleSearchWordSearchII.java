@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.word.boggle;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -46,8 +46,8 @@ public class BoggleSearchWordSearchII {
     }
 
     private static void test(String[] dictionary, char[][] boggle, String[] expected) {
-        GenericPrinter.inputPrint(dictionary, expected, "Dictionary");
-        System.out.println("Boggle:" + GenericPrinter.toString(boggle));
+        CommonMethods.inputPrint(dictionary, expected, "Dictionary");
+        System.out.println("Boggle:" + CommonMethods.toString(boggle));
         System.out.println("Obtained: " + new SolutionBoggleSearch().findWords(boggle, dictionary));
 
     }

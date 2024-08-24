@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -62,7 +62,7 @@ public class PairOfPalindrome {
 
 
     private static void test(String[] list, List<List<Integer>> expected) {
-        System.out.println("\nList:" + GenericPrinter.toString(list));
+        System.out.println("\nList:" + CommonMethods.toString(list));
         System.out.println("Expected :   " + expected);
         System.out.println("Trie  :      " + SolutionPairOfPalindromeUsingTrie.palindromePairs(list));
         System.out.println("Trie2 :      " + SolutionPairOfPalindromeUsingTrie2.palindromePairs(list));

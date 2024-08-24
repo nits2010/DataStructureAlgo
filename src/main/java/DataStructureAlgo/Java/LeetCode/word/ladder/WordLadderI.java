@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.word.ladder;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -81,7 +81,7 @@ public class WordLadderI {
         System.out.println("Bi-BFS      : " + biDirectionalBfs + " Pass: " + ((biDirectionalBfs == expected) ? "Passed" : "failed"));
         System.out.println("smartDfs    : " + smartDfs + " Pass: " + ((smartDfs == expected) ? "Passed" : "failed"));
 
-        return GenericPrinter.equalsValues(expected, bfs1, bfs2, biDirectionalBfs, smartDfs);
+        return CommonMethods.equalsValues(expected, bfs1, bfs2, biDirectionalBfs, smartDfs);
     }
 }
 

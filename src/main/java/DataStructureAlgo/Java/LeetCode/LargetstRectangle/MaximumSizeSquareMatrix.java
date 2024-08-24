@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.LargetstRectangle;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -36,9 +36,9 @@ public class MaximumSizeSquareMatrix {
 
 
         System.out.println("Input");
-        GenericPrinter.print(M);
+        CommonMethods.print(M);
         System.out.println("Sub-Square");
-        GenericPrinter.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
+        CommonMethods.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(M));
         System.out.println("Area :" + MaximumSizeSqureSubMatrixArea.maximalSquare((M)));
 
         char N[][] =
@@ -49,9 +49,9 @@ public class MaximumSizeSquareMatrix {
                         {'1', '0', '0', '1', '0'}
                 };
         System.out.println("Input");
-        GenericPrinter.print(N);
+        CommonMethods.print(N);
         System.out.println("Sub-Square");
-        GenericPrinter.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
+        CommonMethods.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(N));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((N)));
 
         char O[][] =
@@ -60,9 +60,9 @@ public class MaximumSizeSquareMatrix {
 
                 };
         System.out.println("Input");
-        GenericPrinter.print(O);
+        CommonMethods.print(O);
         System.out.println("Sub-Square");
-        GenericPrinter.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
+        CommonMethods.print(MaximumSizeSquareSubMatrix.calculateMaxSquareWithOnes(O));
         System.out.println("Area:" + MaximumSizeSqureSubMatrixArea.maximalSquare((O)));
 
     }

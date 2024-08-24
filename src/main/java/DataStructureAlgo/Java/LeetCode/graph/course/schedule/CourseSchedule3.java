@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph.course.schedule;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.*;
@@ -44,7 +44,7 @@ public class CourseSchedule3 {
     }
 
     private static void test(int[][] courses, int expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(courses));
+        System.out.println("\n Input :" + CommonMethods.toString(courses));
 
         ICourseSchedule recursive = new CourseSchedule3Recursive();
         ICourseSchedule dpTopDown = new CourseSchedule3DPTopDown();

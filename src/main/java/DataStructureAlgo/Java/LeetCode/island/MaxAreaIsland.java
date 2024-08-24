@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.island;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -58,7 +58,7 @@ public class MaxAreaIsland {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n Grid:\n" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\n Grid:\n" + CommonMethods.toString(grid) + " expected :" + expected);
         System.out.println("Obtained :" + maxAreaOfIsland(grid));
     }
 

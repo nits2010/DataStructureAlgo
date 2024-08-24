@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.LargetstRectangle;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Stack;
 
@@ -34,7 +34,7 @@ public class LargestRectangle {
 
 
         System.out.println("Input");
-        GenericPrinter.print(input);
+        CommonMethods.print(input);
         System.out.println(maximalRectangle(input));
 
 
@@ -44,7 +44,7 @@ public class LargestRectangle {
                 };
 
         System.out.println("Input");
-        GenericPrinter.print(input2);
+        CommonMethods.print(input2);
         System.out.println(maximalRectangle(input2));
     }
 

@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.hard.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.easy.List.MergeTwoSortedLists_21;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -106,15 +106,15 @@ public class MergeKSortedLists_23 {
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
 
         System.out.println("\nInput: ");
-        Arrays.stream(listNode).map(GenericPrinter::print).forEach(System.out::println);
-        System.out.println("Expected: "+GenericPrinter.print(expectedList));
+        Arrays.stream(listNode).map(CommonMethods::print).forEach(System.out::println);
+        System.out.println("Expected: "+ CommonMethods.print(expectedList));
 
         ListNode headPQ = pq.mergeKLists(Arrays.stream(list).map(ListBuilder::arrayToSinglyList).toArray(ListNode[]::new));
         ListNode headKWayIterative = kWayMergeIterative.mergeKLists(Arrays.stream(list).map(ListBuilder::arrayToSinglyList).toArray(ListNode[]::new));
-        System.out.println("PQ -> " + GenericPrinter.print(headPQ));
-        System.out.println("KWayIterative -> " + GenericPrinter.print(headKWayIterative));
-        boolean testPQ = GenericPrinter.equalsValues(headPQ, expectedList);
-        boolean testKWayIterative = GenericPrinter.equalsValues(headKWayIterative, expectedList);
+        System.out.println("PQ -> " + CommonMethods.print(headPQ));
+        System.out.println("KWayIterative -> " + CommonMethods.print(headKWayIterative));
+        boolean testPQ = CommonMethods.equalsValues(headPQ, expectedList);
+        boolean testKWayIterative = CommonMethods.equalsValues(headKWayIterative, expectedList);
 
         System.out.println("PQ | KWayIterative: " + testPQ + " | " + testKWayIterative);
         return testPQ && testKWayIterative;

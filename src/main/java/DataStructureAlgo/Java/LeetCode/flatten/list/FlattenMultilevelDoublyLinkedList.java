@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.flatten.list;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -20,13 +20,13 @@ public class FlattenMultilevelDoublyLinkedList {
 
         System.out.println("Level wise -> :" + head.levelWise);
         final Node levelWise = FlattenMultilevelDoublyLinkedListLevelWise.flatten(head.head);
-        System.out.println("flatten Level Wise " + GenericPrinter.print(levelWise));
+        System.out.println("flatten Level Wise " + CommonMethods.print(levelWise));
     }
 
     private static void testDepthWise(Triple<Node> head) {
         System.out.println("Depth wise -> :" + head.depthWise);
         final Node depthWise = FlattenMultilevelDoublyLinkedListDepthWise.flatten(head.head);
-        System.out.println("flatten Depth Wise " + GenericPrinter.print(depthWise));
+        System.out.println("flatten Depth Wise " + CommonMethods.print(depthWise));
     }
 }
 

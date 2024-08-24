@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.matrixPrint.sprial;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,7 +46,7 @@ public class AntiSpiralMatrix {
     }
 
     private static boolean test(int[][] matrix, List<Integer> expected) {
-        System.out.println("\nMatrix:\n" + GenericPrinter.toString(matrix));
+        System.out.println("\nMatrix:\n" + CommonMethods.toString(matrix));
         System.out.println("Expected: " + expected);
         List<Integer> obtained = antiSpiralOrder(matrix);
         System.out.println("Obtained: " + obtained);

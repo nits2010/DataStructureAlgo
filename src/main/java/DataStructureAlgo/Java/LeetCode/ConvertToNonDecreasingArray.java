@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -41,7 +41,7 @@ public class ConvertToNonDecreasingArray {
         ConvertToNonDecreasingArrayUsingSlopsV2 slopsV2 = new ConvertToNonDecreasingArrayUsingSlopsV2();
 
         System.out.println("\nInput ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println("V1 " + slops.checkPossibility(nums) + " Expected :" + expected);
         System.out.println("V2 " + slopsV2.checkPossibility(nums) + " Expected :" + expected);
     }

@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.easy.List.RemoveDuplicatesFromSortedList_83;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -67,12 +67,12 @@ public class RemoveDuplicatesFromSortedListII_82 {
     private static boolean test(Integer[] input , Integer[] expected) {
         ListNode inputList = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("\n Input :" + GenericPrinter.print(inputList) + "\nexpected :" + GenericPrinter.print(expectedList));
+        System.out.println("\n Input :" + CommonMethods.print(inputList) + "\nexpected :" + CommonMethods.print(expectedList));
 
         RemoveDuplicatesFromSortedListII.Solution solution = new RemoveDuplicatesFromSortedListII.Solution();
         ListNode result = solution.deleteDuplicates(inputList);
-        boolean testResult = GenericPrinter.equalsValues(result, expectedList);
-        System.out.println(" Output :" + GenericPrinter.print(result) + " Result match : " + testResult);
+        boolean testResult = CommonMethods.equalsValues(result, expectedList);
+        System.out.println(" Output :" + CommonMethods.print(result) + " Result match : " + testResult);
         return testResult;
 
     }

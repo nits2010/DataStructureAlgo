@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Amazon;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.NextGreaterElementOnRightSide;
 import  DataStructureAlgo.Java.nonleetcode.SmallerElementOnLeftSide;
 
@@ -49,7 +49,7 @@ public class SortedSequenceSizeK {
     private static void test(int[] nums, int k) {
 
         System.out.println();
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         SortedSequenceSizeKUsingMemory memory = new SortedSequenceSizeKUsingMemory();
 

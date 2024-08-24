@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode;
 
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class GroupAnagrams {
     }
 
     private static void test(String[] strings, List<List<String>> expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(strings) + " Expected :" + expected);
+        System.out.println("\n Input :" + CommonMethods.toString(strings) + " Expected :" + expected);
         GroupAnagramsSortCollapse sortCollapse = new GroupAnagramsSortCollapse();
         GroupAnagramsIndividualSortCollapse individualSortCollapse = new GroupAnagramsIndividualSortCollapse();
         GroupAnagramsIndividualHashCollapse hashCollapse = new GroupAnagramsIndividualHashCollapse();

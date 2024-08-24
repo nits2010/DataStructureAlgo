@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.word.ladder;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -97,7 +97,7 @@ public class WordLadderII {
         final List<List<String>> bfsLadders = new WordLadderIIBFSDFS().findLadders(beginWord, endWord, wordList);
         System.out.println("bfsLadders  : " + bfsLadders);
 
-        return GenericPrinter.equalsValues(expected, bfsLadders);
+        return CommonMethods.equalsValues(expected, bfsLadders);
 
     }
 }

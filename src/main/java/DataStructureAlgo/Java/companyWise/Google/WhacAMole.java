@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Google;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -44,7 +44,7 @@ public class WhacAMole {
         WhacAMoleMemoryEfficient withoutMemory = new WhacAMoleMemoryEfficient();
 
         System.out.println("\nWindow : " + w + " Input ");
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         System.out.println("Whac-Moles using 1 Mallet : " + memory.whacAMoleSingleMallet(nums, w));
         System.out.println("Whac-Moles using 1 Mallet (Without memory) : " + withoutMemory.whacAMoleSingleMallet(nums, w));
 

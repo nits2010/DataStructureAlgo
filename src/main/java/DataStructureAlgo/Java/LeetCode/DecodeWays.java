@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -49,7 +49,7 @@ public class DecodeWays {
 
         int decode = numDecodings(s);
         System.out.println("Decode      :" + decode + " Pass: " + (decode == expected));
-        return GenericPrinter.equalsValues(expected, decode);
+        return CommonMethods.equalsValues(expected, decode);
     }
 
 

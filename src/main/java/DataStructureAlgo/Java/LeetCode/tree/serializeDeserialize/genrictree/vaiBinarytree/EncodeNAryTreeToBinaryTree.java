@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree.serializeDeserialize.genrictree.vaiBinarytree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 
@@ -79,11 +79,11 @@ public class EncodeNAryTreeToBinaryTree {
 
     private static void test(NArrayTreeNode nArrayTreeRoot) {
 
-        System.out.println("\nN-Ary-Tree  :" + GenericPrinter.levelOrder(nArrayTreeRoot));
+        System.out.println("\nN-Ary-Tree  :" + CommonMethods.levelOrder(nArrayTreeRoot));
         final TreeNode binaryTreeRoot = encode(nArrayTreeRoot);
-        System.out.println("Encoded     :" + GenericPrinter.preOrder(binaryTreeRoot));
+        System.out.println("Encoded     :" + CommonMethods.preOrder(binaryTreeRoot));
         final NArrayTreeNode decoded = decode(binaryTreeRoot);
-        System.out.println("Decoded     :" + GenericPrinter.levelOrder(decoded));
+        System.out.println("Decoded     :" + CommonMethods.levelOrder(decoded));
 
     }
 

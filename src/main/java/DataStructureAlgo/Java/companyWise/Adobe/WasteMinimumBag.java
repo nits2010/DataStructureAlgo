@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Adobe;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -33,7 +33,7 @@ public class WasteMinimumBag {
     }
 
     private static void test(double[] waste, double capacity, int expected, int zeroOr1Expected) {
-        System.out.println("\nInput :" + GenericPrinter.toString(waste) + " capacity : " + capacity);
+        System.out.println("\nInput :" + CommonMethods.toString(waste) + " capacity : " + capacity);
         System.out.println("Partially : obtained : " + minimumBag(waste, capacity) + " expected :" + expected);
         System.out.println("0/1 : obtained : " + minimumBag0Or1(waste, capacity) + " expected :" + zeroOr1Expected);
 

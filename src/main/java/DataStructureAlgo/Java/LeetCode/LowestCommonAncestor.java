@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 
@@ -30,7 +30,7 @@ public class LowestCommonAncestor {
     }
 
     private static void test(TreeNode root, TreeNode p, TreeNode q, TreeNode expected) {
-        System.out.println(" \n Tree :" + GenericPrinter.inOrder(root) + " p : " + p + " q: " + q + " expected :" + expected);
+        System.out.println(" \n Tree :" + CommonMethods.inOrder(root) + " p : " + p + " q: " + q + " expected :" + expected);
 
         LowestCommonAncestorBinarySearchTree lcaBinarySearchTree = new LowestCommonAncestorBinarySearchTree();
         System.out.println("BST Rec:" + lcaBinarySearchTree.lowestCommonAncestorRecursive(root, p, q));

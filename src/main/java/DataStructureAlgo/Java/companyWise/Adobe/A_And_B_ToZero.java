@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Adobe;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.LeetCode.pair.element.problems.aAndBZero.AndSumToZero;
 
 import java.util.*;
@@ -22,11 +22,11 @@ public class A_And_B_ToZero {
     }
 
     private static void test(int[] nums) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums));
+        System.out.println("\n Input :" + CommonMethods.toString(nums));
 
         BruteForce bruteForce = new BruteForce();
 
-        System.out.println("Brute Force :" + GenericPrinter.toString(bruteForce.pairs(nums)));
+        System.out.println("Brute Force :" + CommonMethods.toString(bruteForce.pairs(nums)));
     }
 
     /**

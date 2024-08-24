@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.SmallerElementOnLeftSide;
 
 import java.util.Arrays;
@@ -69,7 +69,7 @@ public class AsteroidCollision {
     }
 
     private static void test(int[] asteroids, int[] expected) {
-        System.out.println("\n Input :" + GenericPrinter.toString(asteroids) + " expected :" + GenericPrinter.toString(expected));
+        System.out.println("\n Input :" + CommonMethods.toString(asteroids) + " expected :" + CommonMethods.toString(expected));
 
         AsteroidCollisionSolution bruteForce = new AsteroidCollisionBruteForce();
         AsteroidCollisionSolution stack = new AsteroidCollisionStack();
@@ -82,7 +82,7 @@ public class AsteroidCollision {
     }
 
     private static void test(int[] asteroids, AsteroidCollisionSolution solution, String type) {
-        System.out.println(type + " -> " + GenericPrinter.toString(solution.asteroidCollision(asteroids)));
+        System.out.println(type + " -> " + CommonMethods.toString(solution.asteroidCollision(asteroids)));
     }
 }
 

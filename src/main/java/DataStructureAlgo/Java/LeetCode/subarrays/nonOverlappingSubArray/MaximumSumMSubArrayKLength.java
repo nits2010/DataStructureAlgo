@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -37,7 +37,7 @@ public class MaximumSumMSubArrayKLength {
     }
 
     private static void test(int[] nums, int m, int k, int expected) {
-        System.out.println("Input :" + GenericPrinter.toString(nums) + " for m: " + m + " k: " + k);
+        System.out.println("Input :" + CommonMethods.toString(nums) + " for m: " + m + " k: " + k);
 
 
         MaximumSumMSubArrayKLengthRecursive recursive = new MaximumSumMSubArrayKLengthRecursive();
@@ -45,7 +45,7 @@ public class MaximumSumMSubArrayKLength {
 
         System.out.println("Recursive -> Obtained :" + recursive.maximumSum(nums, m, k) + " expected :" + expected);
         System.out.println("DP -> Obtained :" + dp.maximumSum(nums, m, k) + " expected :" + expected);
-        System.out.println("DP -> index :" + GenericPrinter.toString(dp.maximumSumWithIndex(nums, m, k)) + " expected :" + expected);
+        System.out.println("DP -> index :" + CommonMethods.toString(dp.maximumSumWithIndex(nums, m, k)) + " expected :" + expected);
     }
 }
 
@@ -197,8 +197,8 @@ class MaximumSumMSubArrayKLengthDP {
             subArrayIndex[i] = index[i + 1][subArrayIndex[i + 1]];
         }
 
-        System.out.println(GenericPrinter.toString(dp));
-        System.out.println(GenericPrinter.toString(index));
+        System.out.println(CommonMethods.toString(dp));
+        System.out.println(CommonMethods.toString(index));
 
         return subArrayIndex;
 

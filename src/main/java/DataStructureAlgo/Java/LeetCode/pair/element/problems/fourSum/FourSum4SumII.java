@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.fourSum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class FourSum4SumII {
 
     private static void test(int[] a, int[] b, int[] c, int[] d, int expected) {
 
-        System.out.println("input A :" + GenericPrinter.toString(a) + " B :" + GenericPrinter.toString(b) + " c :" + GenericPrinter.toString(c) + " d :" + GenericPrinter.toString(d)
+        System.out.println("input A :" + CommonMethods.toString(a) + " B :" + CommonMethods.toString(b) + " c :" + CommonMethods.toString(c) + " d :" + CommonMethods.toString(d)
                 + "\n expected :" + expected);
         IFourSum4SumII sorting = new FourSum4SumIISorting();
         IFourSum4SumII hashing = new FourSum4SumIIHashing();

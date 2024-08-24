@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -110,7 +110,7 @@ class CanJumpToReachLastBackTracking {
             return false;
 
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         return canJump(nums, 0);
 
     }
@@ -150,7 +150,7 @@ class CanJumpToReachLastBackTrackingDpTopDown {
             return false;
 
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         boolean jump[] = new boolean[nums.length];
 
@@ -201,7 +201,7 @@ class CanJumpToReachLastDPBottomUp {
 
         if (null == nums || nums.length == 0)
             return false;
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 
         int n = nums.length;
         boolean dp[] = new boolean[n];
@@ -231,7 +231,7 @@ class CanJumpToReachLastLinear {
 
 
     public static boolean canJump(int[] nums) {
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         int reachAble = nums.length - 1;
         for (int i = nums.length - 1; i >= 0; i--) {
             if (i + nums[i] >= reachAble) {
@@ -260,7 +260,7 @@ class MinimumJumpToReachLastDP {
         if (null == nums || nums.length == 0)
             return -1;
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
         int n = nums.length;
         int dp[] = new int[n];
 
@@ -299,7 +299,7 @@ class MinimumJumpToReachLastLinear {
         if (null == nums || nums.length == 0 || nums.length == 1)
             return 0;
 
-        GenericPrinter.print(nums);
+        CommonMethods.print(nums);
 //        if (nums[0] == 0)
 //            return 0;
 

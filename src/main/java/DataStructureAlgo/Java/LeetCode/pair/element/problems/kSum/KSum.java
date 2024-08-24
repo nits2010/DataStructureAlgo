@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.kSum;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.LeetCode.pair.element.problems.fourSum.FourSum4Sum;
 import  DataStructureAlgo.Java.LeetCode.pair.element.problems.threeSum.ThreeSum3Sum;
 import  DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
@@ -58,7 +58,7 @@ public class KSum {
     private static void test(int[] nums, int k, int target) {
         IKSum kSum = new KSumSorting();
 
-        System.out.println("\nInput : " + GenericPrinter.toString(nums) + " K :" + k + " Target: " + target);
+        System.out.println("\nInput : " + CommonMethods.toString(nums) + " K :" + k + " Target: " + target);
         System.out.println("Sorting: " + kSum.kSum(nums, k, target));
     }
 

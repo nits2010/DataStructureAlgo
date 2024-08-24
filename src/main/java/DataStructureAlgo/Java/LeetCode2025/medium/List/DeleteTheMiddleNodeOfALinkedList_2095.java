@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.medium.List;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.LeetCode2025.easy.List.MiddleOfTheLinkedList_876;
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -88,12 +88,12 @@ public class DeleteTheMiddleNodeOfALinkedList_2095 {
         System.out.println("--------------");
         ListNode inputList = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
-        System.out.println("Input: " + GenericPrinter.print(inputList) + "\nExpected: " + GenericPrinter.print(expectedList)) ;
+        System.out.println("Input: " + CommonMethods.print(inputList) + "\nExpected: " + CommonMethods.print(expectedList)) ;
         Solution solution = new Solution();
         ListNode output = solution.deleteMiddle(inputList);
-        System.out.println("Output: " + GenericPrinter.print(output)) ;
+        System.out.println("Output: " + CommonMethods.print(output)) ;
 
-        boolean testResult = GenericPrinter.equalsValues(expectedList, output);
+        boolean testResult = CommonMethods.equalsValues(expectedList, output);
         System.out.println("Test result: " + testResult);
         return testResult;
     }

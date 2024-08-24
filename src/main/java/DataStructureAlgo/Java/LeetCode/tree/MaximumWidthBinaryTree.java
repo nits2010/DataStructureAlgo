@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.*;
@@ -124,7 +124,7 @@ public class MaximumWidthBinaryTree {
     }
 
     private static void test(TreeNode root, int expected) {
-        System.out.println("\nInput : " + GenericPrinter.preOrder(root) + " expected :" + expected);
+        System.out.println("\nInput : " + CommonMethods.preOrder(root) + " expected :" + expected);
 
         final MaximumWidthBinaryTreeUsingMap usingMap = new MaximumWidthBinaryTreeUsingMap();
         final MaximumWidthBinaryTreeUsingList usingList = new MaximumWidthBinaryTreeUsingList();

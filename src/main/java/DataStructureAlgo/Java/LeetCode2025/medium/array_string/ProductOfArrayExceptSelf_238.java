@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.medium.array_string;
 
-import DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
 
@@ -76,7 +76,7 @@ public class ProductOfArrayExceptSelf_238 {
     private static void test(int[] input, int[] expectedOutput) {
         Solution solution = new Solution();
         int [] result = solution.productExceptSelfAvoidFill(input);
-        boolean output = GenericPrinter.equalsValues(expectedOutput, result);
+        boolean output = CommonMethods.equalsValues(expectedOutput, result);
         System.out.println("\n Input :" + Arrays.toString(input) + "\n expectedOutput : " + Arrays.toString(expectedOutput) + " returned output : " + Arrays.toString(result) + " result : " + output);
 
     }

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.KthLargestElement;
 import DataStructureAlgo.Java.Pair;
 
@@ -54,7 +54,7 @@ public class KClosestPointsOrigin {
     }
 
     private static void test(int[][] points, int k, int[][] expected) {
-        System.out.println("\n Points :\n" + GenericPrinter.toString(points) + " k: " + k + " \nexpected :\n" + GenericPrinter.toString(expected));
+        System.out.println("\n Points :\n" + CommonMethods.toString(points) + " k: " + k + " \nexpected :\n" + CommonMethods.toString(expected));
 
         final KClosestPointsOriginPriorityQueue pq = new KClosestPointsOriginPriorityQueue();
 
@@ -64,10 +64,10 @@ public class KClosestPointsOrigin {
 
         final KClosestPointsOriginPartitionMedianOfMedian kClosestPointsOriginPartitionMedianOfMedian = new KClosestPointsOriginPartitionMedianOfMedian();
 
-        System.out.println("pq :\n" + GenericPrinter.toString(pq.kClosest(GenericPrinter.copyOf(points), k)));
-        System.out.println("pqOptimized :\n" + GenericPrinter.toString(pqOptimized.kClosest(GenericPrinter.copyOf(points), k)));
-        System.out.println("partition :\n" + GenericPrinter.toString(partition.kClosest(GenericPrinter.copyOf(points), k)));
-        System.out.println("kClosestPointsOriginPartitionMedianOfMedian :\n" + GenericPrinter.toString(kClosestPointsOriginPartitionMedianOfMedian.kClosest(GenericPrinter.copyOf(points), k)));
+        System.out.println("pq :\n" + CommonMethods.toString(pq.kClosest(CommonMethods.copyOf(points), k)));
+        System.out.println("pqOptimized :\n" + CommonMethods.toString(pqOptimized.kClosest(CommonMethods.copyOf(points), k)));
+        System.out.println("partition :\n" + CommonMethods.toString(partition.kClosest(CommonMethods.copyOf(points), k)));
+        System.out.println("kClosestPointsOriginPartitionMedianOfMedian :\n" + CommonMethods.toString(kClosestPointsOriginPartitionMedianOfMedian.kClosest(CommonMethods.copyOf(points), k)));
     }
 }
 

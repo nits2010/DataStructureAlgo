@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.bitsManipulation.single.number;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -33,8 +33,8 @@ public class SingleNumberIII {
     }
 
     private static void test(int[] nums, int[] expected) {
-        System.out.println("Input :" + GenericPrinter.toString(nums) + " Expected :" + GenericPrinter.toString(expected));
-        System.out.println("Two nunbers :" + GenericPrinter.toString(singleNumber(nums)));
+        System.out.println("Input :" + CommonMethods.toString(nums) + " Expected :" + CommonMethods.toString(expected));
+        System.out.println("Two nunbers :" + CommonMethods.toString(singleNumber(nums)));
     }
 
     /**

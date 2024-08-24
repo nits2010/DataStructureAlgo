@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -47,10 +47,10 @@ public class FloodFill {
     }
 
     private static void test(int[][] image, int sr, int sc, int newColor, int[][] expectedImage) {
-        System.out.println("\nInput image :\n " + GenericPrinter.toString(image) + "(sr,sc)= (" + sc + "," + sc + ")\n Expected Image:\n" + GenericPrinter.toString(expectedImage));
+        System.out.println("\nInput image :\n " + CommonMethods.toString(image) + "(sr,sc)= (" + sc + "," + sc + ")\n Expected Image:\n" + CommonMethods.toString(expectedImage));
         FloodFillDFS dfs = new FloodFillDFS();
         final int[][] newImage = dfs.floodFill(image, sr, sc, newColor);
-        System.out.println("\n DFS new Image:\n" + GenericPrinter.toString(newImage));
+        System.out.println("\n DFS new Image:\n" + CommonMethods.toString(newImage));
     }
 }
 

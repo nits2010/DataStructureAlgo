@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.listToBST;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.Arrays;
@@ -55,13 +55,13 @@ public class ConvertSortedArrayBinarySearchTree {
     }
 
     private static void test(int[] nums, List<Integer> inOrderTraversal, int expectedHeight) {
-        System.out.println("\n Input :" + GenericPrinter.toString(nums) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
+        System.out.println("\n Input :" + CommonMethods.toString(nums) + " Expected In-order traversal :" + inOrderTraversal + " Expected Height :" + expectedHeight);
 
         final TreeNode treeNode = sortedArrayToBST(nums);
 
         int height = height(treeNode);
 
-        System.out.println("\n Singly Inorder Traversal :" + GenericPrinter.inOrder(treeNode) + " Height :" + height);
+        System.out.println("\n Singly Inorder Traversal :" + CommonMethods.inOrder(treeNode) + " Height :" + height);
     }
 
     /**

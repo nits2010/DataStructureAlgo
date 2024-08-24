@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.twitter;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -36,8 +36,8 @@ public class RGBStreamMeanModeMedian {
         for (int i = 0; i < r.length; i++) {
             streamProcessor.setRGB(r[i], g[i], b[i]);
             System.out.println("\nr:" + r[i] + " g:" + g[i] + " b:" + b[i]);
-            System.out.println("Mean:   " + GenericPrinter.toString(streamProcessor.showMean()));
-            System.out.println("Median: " + GenericPrinter.toString(streamProcessor.showMedian()));
+            System.out.println("Mean:   " + CommonMethods.toString(streamProcessor.showMean()));
+            System.out.println("Median: " + CommonMethods.toString(streamProcessor.showMedian()));
         }
 
 

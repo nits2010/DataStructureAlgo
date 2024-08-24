@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.island;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.nonleetcode.UnionFindDisjointSets;
 
 import java.util.*;
@@ -64,7 +64,7 @@ public class NumberIslandsII {
     }
 
     private static void test(int m, int n, int[][] positions) {
-        System.out.println("\nm : " + m + " n: " + n + " position :" + GenericPrinter.toString(positions));
+        System.out.println("\nm : " + m + " n: " + n + " position :" + CommonMethods.toString(positions));
         NumberIslandsIIBuildAndCount buildAndCount = new NumberIslandsIIBuildAndCount();
         NumberIslandsIIUnionFind unionFind = new NumberIslandsIIUnionFind();
 

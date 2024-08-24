@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * Author: Nitin Gupta
@@ -67,7 +67,7 @@ public class DungeonGame {
     }
 
     private static void test(int[][] dungeon, int expected) {
-        System.out.println("\n Input :\n" + GenericPrinter.toString(dungeon) + " expected :" + expected);
+        System.out.println("\n Input :\n" + CommonMethods.toString(dungeon) + " expected :" + expected);
         DungeonGameDPBack dpBack = new DungeonGameDPBack();
         DungeonGameDPBackSpaceOptimized dpBackSpaceOptimized = new DungeonGameDPBackSpaceOptimized();
         DungeonGameDPBackTopDown dungeonGameDPBackRecursive = new DungeonGameDPBackTopDown();

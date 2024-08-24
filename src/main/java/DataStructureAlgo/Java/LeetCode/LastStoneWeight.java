@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -81,7 +81,7 @@ class LastStoneWeightPriorityQueue {
         if (null == stones || stones.length == 0)
             return 0;
 
-        System.out.println(GenericPrinter.toString(stones));
+        System.out.println(CommonMethods.toString(stones));
 
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
 

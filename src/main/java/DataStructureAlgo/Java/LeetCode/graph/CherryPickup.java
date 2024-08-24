@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.graph;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
  * TODO : copy pasted
@@ -59,7 +59,7 @@ class CherryPickup {
     }
 
     private static void test(int[][] grid, int expected) {
-        System.out.println("\n grid :\n" + GenericPrinter.toString(grid) + " expected :" + expected);
+        System.out.println("\n grid :\n" + CommonMethods.toString(grid) + " expected :" + expected);
         CherryPickupDPBottomUp bottomUp = new CherryPickupDPBottomUp();
         System.out.println(" Bottom up:" + bottomUp.cherryPickup(grid));
     }

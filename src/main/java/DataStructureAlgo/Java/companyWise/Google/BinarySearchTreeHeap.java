@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.companyWise.Google;
 
-import  DataStructureAlgo.Java.helpers.GenericPrinter;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import  DataStructureAlgo.Java.helpers.templates.TreapNode;
 
 import java.util.*;
@@ -74,13 +74,13 @@ public class BinarySearchTreeHeap {
     }
 
     private static void test(int[][] input, int[][] expected) {
-        System.out.println("Input :" + GenericPrinter.toStringInline(input) + " Expected Output :" + GenericPrinter.toStringInline(expected));
+        System.out.println("Input :" + CommonMethods.toStringInline(input) + " Expected Output :" + CommonMethods.toStringInline(expected));
         TreapBSTMaxHeap bstMaxHeap = new TreapBSTMaxHeap();
         TreapBSTMinHeap bstMinHeap = new TreapBSTMinHeap();
         final TreapNode root = bstMaxHeap.buildTreapMaxHeap(input);
-        System.out.println(GenericPrinter.toString(levelOrder(root)));
+        System.out.println(CommonMethods.toString(levelOrder(root)));
         final TreapNode rootMinHeap = bstMinHeap.buildTreapMinHeap(input);
-        System.out.println(GenericPrinter.toString(levelOrder(rootMinHeap)));
+        System.out.println(CommonMethods.toString(levelOrder(rootMinHeap)));
     }
 
 
