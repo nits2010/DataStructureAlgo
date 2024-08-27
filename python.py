@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Define the base path of your local repository and GitHub URL
 base_path = r"E:\Study\DataStructureAlgo"
-base_url = "https://github.com/nits2010/DataStructureAlgo/blob/master"
+base_url = "https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025"
 
 # Path for the markdown file
 md_file_path = 'Problems.md'
