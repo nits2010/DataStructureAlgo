@@ -81,7 +81,7 @@ import java.util.List;
  * @Oracle
  * @Uber
  * @Yahoo <a href="https://walkccc.me/LeetCode/problems/114/">...</a>
- * @Editorial <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/solutions/372251/two-variation-fastest-100-long-short-code-java-full-explanation">...</a>
+ * @Editorial <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/solutions/372251/3variation-fastest-100-long-short-code-o-1-solution-java-full-explanation/">...</a>
  */
 public class FlattenBinaryTreeToLinkedList_114 {
 
@@ -99,23 +99,31 @@ public class FlattenBinaryTreeToLinkedList_114 {
         System.out.println("Input : " + Arrays.toString(input) + "\nexpected : " + Arrays.toString(expected));
 
         SolutionRecursive solutionRecursive = new SolutionRecursive();
-        SolutionRecursive2 solutionRecursive2 = new SolutionRecursive2();
+
 
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
         solutionRecursive.flatten(root);
         List<Integer> levelOrder = TreeTraversalRecursive.levelOrderWithNull(root);
         boolean testResultRecursive = CommonMethods.equalsValues(levelOrder, Arrays.asList(expected));
-        System.out.println("Tree1  : " + levelOrder + " testResultRecursive " + (testResultRecursive ? "Pass" : "Fail"));
+        System.out.println("Tree1  : " + levelOrder + " testResultRecursive1 " + (testResultRecursive ? "Pass" : "Fail"));
 
+        SolutionRecursive2 solutionRecursive2 = new SolutionRecursive2();
         root = TreeBuilder.buildTreeFromLevelOrder(input);
         solutionRecursive2.flatten(root);
         levelOrder = TreeTraversalRecursive.levelOrderWithNull(root);
         boolean testResultRecursive2 = CommonMethods.equalsValues(levelOrder, Arrays.asList(expected));
-        System.out.println("Tree2  : " + levelOrder + " testResultRecursive " + (testResultRecursive2 ? "Pass" : "Fail"));
+        System.out.println("Tree2  : " + levelOrder + " testResultRecursive2 " + (testResultRecursive2 ? "Pass" : "Fail"));
+
+        SolutionIterativeWithoutSpace solutionIterativeWithoutSpace = new SolutionIterativeWithoutSpace();
+        root = TreeBuilder.buildTreeFromLevelOrder(input);
+        solutionIterativeWithoutSpace.flatten(root);
+        levelOrder = TreeTraversalRecursive.levelOrderWithNull(root);
+        boolean testResultWithoutSpace = CommonMethods.equalsValues(levelOrder, Arrays.asList(expected));
+        System.out.println("Tree3  : " + levelOrder + " testResultWithoutSpace " + (testResultWithoutSpace ? "Pass" : "Fail"));
 
 
-        return testResultRecursive;
+        return testResultRecursive && testResultRecursive2 && testResultWithoutSpace;
 
     }
 
@@ -164,6 +172,47 @@ public class FlattenBinaryTreeToLinkedList_114 {
 
 
         }
+    }
+
+    /**
+     * The visit order of preorder traversal is “root, left subtree, right subtree”.
+     * After the last node of the left subtree is visited, the right subtree node of the root node will be visited next.
+     * <p>
+     * Therefore, for the current node, if its left child node is not null,
+     * we find the rightmost node of the left subtree as the predecessor node, and then assign the
+     * right child node of the current node to the right child node of the predecessor node.
+     * Then assign the left child node of the current node to the right child node of the current node,
+     * and set the left child node of the current node to null. Then take the right child node of the current node as the
+     * next node and continue processing until all nodes are processed.
+     * <p>
+     * The time complexity is
+     * , where
+     * is the number of nodes in the tree. The space complexity is
+     * .
+     */
+    static class SolutionIterativeWithoutSpace {
+        public void flatten(TreeNode root) {
+            if (root == null)
+                return;
+
+            TreeNode curr = root;
+
+            while (curr != null) {
+
+                if (curr.left != null) {
+
+                    TreeNode left = curr.left;
+                    while (left.right != null)
+                        left = left.right;
+
+                    left.right = curr.right;
+                    curr.right = curr.left;
+                    curr.left = null;
+                }
+                curr = curr.right;
+            }
+        }
+
     }
 }
 
