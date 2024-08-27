@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
- * Description:
+ * Description: https://leetcode.com/problems/4sum/description/
  * This is generalization of {@link TwoSum2Sum}, {@link ThreeSum3Sum}, {@link FourSum4Sum} to K-sum
  */
 public class KSum {

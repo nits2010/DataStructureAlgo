@@ -107,7 +107,7 @@ public class TwoSum2Sum {
         if (null == nums || nums.length == 0)
             return new int[]{-1, -1};
 
-        int temp[][] = new int[nums.length][2];
+        int[][] temp = new int[nums.length][2];
         for (int i = 0; i < nums.length; i++) {
             temp[i][0] = nums[i];
             temp[i][1] = i;
