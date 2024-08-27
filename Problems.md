@@ -1,5 +1,9 @@
 | File Name | GitHub Link | Creation Date |
 |-----------|-------------|---------------|
+| StretchBinaryTreeByStretchingFactorK.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/Discuss/StretchBinaryTreeByStretchingFactorK.java) | 2024-08-27 23:42:54 |
+| TwoSum2Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/twoSum/TwoSum2Sum.java) | 2024-08-27 23:08:20 |
+| KSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/kSum/KSum.java) | 2024-08-27 23:08:20 |
+| FlattenBinaryTreeToLinkedList_114.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/FlattenBinaryTreeToLinkedList_114.java) | 2024-08-27 22:31:48 |
 | ConvertSortedArrayToBinarySearchTree_108.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/ConvertSortedArrayToBinarySearchTree_108.java) | 2024-08-24 20:07:28 |
 | ConvertSortedListToBinarySearchTree_109.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/ConvertSortedListToBinarySearchTree_109.java) | 2024-08-24 19:55:13 |
 | ConvertSortedDoublyLinkedListToBinarySearchTree.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/medium/Tree/flatten/BstToList/ConvertSortedDoublyLinkedListToBinarySearchTree.java) | 2024-08-24 17:48:35 |
@@ -462,7 +466,6 @@
 | PartitionSetIntoKSubsetEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoKSubsetEqualSum.java) | 2024-08-12 22:28:15 |
 | PartitionSetIntoTwoSubsetDiffferenceMinimum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoTwoSubsetDiffferenceMinimum.java) | 2024-08-12 22:28:15 |
 | PartitionSetIntoTwoSubsetEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetIntoTwoSubsetEqualSum.java) | 2024-08-12 22:28:15 |
-| TwoSum2Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/twoSum/TwoSum2Sum.java) | 2024-08-12 22:28:15 |
 | PartitionArrayThreePartsWithEqualSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionArrayThreePartsWithEqualSum.java) | 2024-08-12 22:28:15 |
 | PartitionSetInKSubset.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/partitions/PartitionSetInKSubset.java) | 2024-08-12 22:28:15 |
 | ThreeSumSmaller.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSumSmaller.java) | 2024-08-12 22:28:15 |
@@ -472,7 +475,6 @@
 | ThreeSum3SumMultiplicity.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSum3SumMultiplicity.java) | 2024-08-12 22:28:15 |
 | FourSum4Sum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/fourSum/FourSum4Sum.java) | 2024-08-12 22:28:15 |
 | FourSum4SumII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/fourSum/FourSum4SumII.java) | 2024-08-12 22:28:15 |
-| KSum.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/kSum/KSum.java) | 2024-08-12 22:28:15 |
 | AModKPairs.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/modulo/AModKPairs.java) | 2024-08-12 22:28:15 |
 | AddOperatorsPlusMinusMultiplyDivide.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/operatorBasedQuestions/AddOperatorsPlusMinusMultiplyDivide.java) | 2024-08-12 22:28:15 |
 | Game24.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/operatorBasedQuestions/Game24.java) | 2024-08-12 22:28:15 |
