@@ -240,6 +240,7 @@ public class TreeTraversalRecursive {
 
             if(null!=temp.left || null!=temp.right) {
 
+
                 if (null != temp.left)
                     queue.add(temp.left);
                 else
