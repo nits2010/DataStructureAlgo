@@ -45,7 +45,7 @@ public class LastStoneWeight {
         LastStoneWeightPriorityQueue solution = new LastStoneWeightPriorityQueue();
         LastStoneWeightBucketSort bucketSort = new LastStoneWeightBucketSort();
 
-        test(new int[]{1, 1, 1, 1, 1000}, 0);
+        test(new int[]{1, 1, 1, 1, 1000}, 996);
 
         test(new int[]{10, 5, 4, 10, 3, 1, 7, 8}, 0);
         test(new int[]{2, 7, 4, 1, 8, 1}, 1);
@@ -157,7 +157,7 @@ class LastStoneWeightBucketSort {
         /**
          * Create 'max' number of buckets; max+1 since array has max as value
          */
-        int buckets[] = new int[max + 1];
+        int[] buckets = new int[max + 1];
 
         /**
          * Count frequency
@@ -185,16 +185,15 @@ class LastStoneWeightBucketSort {
                 if (buckets[i] % 2 == 0) {
                     buckets[i] = 0;
                     i--;
-                    continue;
                 } else {
                     /**
-                     * Otherwise find a stone whose frequency is not 0
+                     * Otherwise, find a stone whose frequency is not 0
                      * Reset j as per lasj .
                      * Case like
                      * [1,1,1,1,1000]
                      * then if we set j = i-1 then j will start again from last entry always makes it to run ~1000 times every time for i
                      */
-                    int j = i - 1 > lastJ ? lastJ : i - 1;
+                    int j = Math.min(i - 1, lastJ);
                     while (j > 0 && buckets[j] == 0) j--;
 
                     /**
@@ -217,11 +216,7 @@ class LastStoneWeightBucketSort {
                         buckets[i - j]++;
 
 
-                        if (i - j > j) {
-                            i = i - j;
-                        } else {
-                            i = j;
-                        }
+                        i = Math.max(i - j, j);
 
                     }
                 }

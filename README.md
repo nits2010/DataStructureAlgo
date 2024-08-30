@@ -47,6 +47,7 @@
   * All questions:
     * https://leetcode.ca/all/problems.html
     * https://walkccc.me/LeetCode/problems/3/
+    * https://leetcodethehardway.com/tutorials/basic-topics/heap
 
 * LeetCode Courses
   * Dynamic Programming Grandmaster
