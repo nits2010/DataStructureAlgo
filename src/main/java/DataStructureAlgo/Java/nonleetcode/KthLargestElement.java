@@ -30,13 +30,13 @@ public class KthLargestElement {
     private static int kthLargestElement(int[] arr, int n, int k) {
 
         //K can not greater then the arr length
-        if (k >= n)
+        if (k > n)
             return Integer.MIN_VALUE;
 
-        //If size is too small, then just sort and give back required result
+        //If size is too small, then just sort and give back a required result
         if (n <= 5) {
             Arrays.sort(arr);
-            return arr[k];
+            return arr[n-k];
         }
 
 
