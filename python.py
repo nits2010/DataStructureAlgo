@@ -1,9 +1,24 @@
 import os
 from datetime import datetime
+import subprocess
+
+def get_current_git_branch():
+    try:
+        # Run the 'git branch' command and capture its output
+        result = subprocess.run(["git", "branch", "--show-current"],
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                text=True,
+                                check=True)
+        # Return the branch name
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        return None
 
 # Define the base path of your local repository and GitHub URL
+branch = get_current_git_branch()
 base_path = r"E:\Study\DataStructureAlgo"
-base_url = "https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025"
+base_url = "https://github.com/nits2010/DataStructureAlgo/blob/"+branch
 
 # Path for the markdown file
 md_file_path = 'Problems.md'
@@ -36,5 +51,9 @@ with open(md_file_path, mode='w', encoding='utf-8') as md_file:
         # Format the creation time as a readable date
         creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
         md_file.write(f"| {file_name} | [link]({github_link}) | {creation_date} |\n")
+
+
+
+
 
 print(f"Markdown file has been generated at {md_file_path}")
