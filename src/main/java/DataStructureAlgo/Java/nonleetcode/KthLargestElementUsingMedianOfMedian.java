@@ -15,28 +15,31 @@ import java.util.Arrays;
  * k = 4
  * Output: 10
  */
-public class KthLargestElement {
+public class KthLargestElementUsingMedianOfMedian {
 
     public static void test1() {
-        int[] arr = {12, 3, 5, 7, 4, 19, 26};
+        int[] arr = {12, 3, 5, 7, 4, 19, 26}; //3,4,5,7,12,19,26
         int k = 3;
 
+        int[] sortedCopy = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(sortedCopy);
         int kthLargestElement = kthLargestElement(arr, arr.length, k);
+        System.out.println("kthLargestElement:" + kthLargestElement + " expected : " + sortedCopy[arr.length - k]);
         int kthSmallestElement = ktSmallestElement(arr, arr.length, k);
-        System.out.println("kthSmallestElement:" + kthSmallestElement);
-        System.out.println("kthLargestElement:" + kthLargestElement);
+        System.out.println("kthSmallestElement:" + kthSmallestElement + " expected : " + sortedCopy[k - 1]);
+
     }
 
     private static int kthLargestElement(int[] arr, int n, int k) {
 
-        //K can not greater then the arr length
+        //K cannot greater than the arr length
         if (k > n)
             return Integer.MIN_VALUE;
 
-        //If size is too small, then just sort and give back a required result
+        //If the size is too small, then sort and give back a required result
         if (n <= 5) {
             Arrays.sort(arr);
-            return arr[n-k];
+            return arr[n - k];
         }
 
 
@@ -47,14 +50,14 @@ public class KthLargestElement {
 
     private static int ktSmallestElement(int[] arr, int n, int k) {
 
-        //K can not greater then the arr length
+        //K cannot greater than the arr length
         if (k >= n)
             return Integer.MIN_VALUE;
 
-        //If size is too small, then just sort and give back required result
+        //If the size is too small, then sort and give back a required result
         if (n <= 5) {
             Arrays.sort(arr);
-            return arr[k];
+            return arr[n - k];
         }
 
 
@@ -67,21 +70,29 @@ public class KthLargestElement {
 
 
         if (k > 0 && k <= high - low + 1) {
+
             int n = high - low + 1;
+
+            //divide the array of size 5, each part will have its own median
             int[] median = new int[(n + 4) / 5];
+
             int i;
 
+            //get all median of each part
             for (i = 0; i < n / 5; i++)
                 median[i] = findMedian(arr, low + i * 5, 5);
 
 
+            //if last part has less than 5 elements
             if (i * 5 < n) {
                 median[i] = findMedian(arr, low + i * 5, n % 5);
                 i++;
             }
 
 
-            int medianOfMedian = (i == 1) ? median[i - 1] : kthSmallestElementUtil(median, 0, i - 1, i / 2);
+            int medianOfMedian = (i == 1)  //if there were only one part,
+                    ? median[i - 1]  // hence median of median would be the first element
+                    : kthSmallestElementUtil(median, 0, i - 1, i / 2); //else recursively mom
 
             int partitionPoint = partition(arr, low, high, medianOfMedian);
 
@@ -101,43 +112,55 @@ public class KthLargestElement {
 
 
     // It searches for x in arr[l..r], and
-// partitions the array around x.
-    static int partition(int arr[], int l,
-                         int r, int x) {
-        // Search for x in arr[l..r] and move it to end
-        int i;
-        for (i = l; i < r; i++)
-            if (arr[i] == x)
-                break;
-        swap(arr, i, r);
+    // partitions the array around x.
+    static int partition(int[] arr, int low,
+                         int high, int pivotElement) {
 
-        // Standard partition algorithm
-        i = l;
-        for (int j = l; j < r; j++) {
-            if (arr[j] <= x) {
-                swap(arr, i, j);
-                i++;
-            }
+        // Search for x in arr[l..r] and move it to end
+        int pivotIndex = low;
+
+        //get pivot index
+        while (pivotIndex <= high) {
+            if (arr[pivotIndex] == pivotElement)
+                break;
+            pivotIndex++;
+
         }
-        swap(arr, i, r);
-        return i;
+
+        //swap it with high
+        swap(arr, pivotIndex, low);
+
+        // Standard 2-way partition algorithm
+
+        int boundary = low;
+        int l = low + 1;
+
+        while (l <= high) {
+
+            if (arr[l] <= pivotElement) {
+                boundary++; // move boundary
+                swap(arr, l, boundary);
+            }
+            l++;
+        }
+        swap(arr, boundary, low);
+        return boundary;
     }
 
-    static int[] swap(int[] arr, int i, int j) {
+    static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-        return arr;
     }
 
     static int findMedian(int arr[], int i, int n) {
         Arrays.sort(arr, i, i + n);
-        return arr[i + n / 2]; // Return middle element
+        return arr[i + n / 2]; // Return a middle element
 
     }
 
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
         test1();
     }
 }

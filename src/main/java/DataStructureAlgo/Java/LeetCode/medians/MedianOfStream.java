@@ -73,25 +73,25 @@ class MedianOfStreamDataStructure<E> {
 
 class SolutionMedianFinder {
 
-       private MedianOfStreamDataStructure<Integer> median = new MedianOfStreamDataStructure<>();
+       private final MedianOfStreamDataStructure<Integer> medianHeap = new MedianOfStreamDataStructure<>();
 
     public void addNum(int num) {
 
-        int diff = getDiff(median.maxHeap.size(), median.minHeap.size());
+        int diff = getDiff(medianHeap.maxHeap.size(), medianHeap.minHeap.size());
 
         switch (diff) {
 
             case 1: //max heap > min heap
 
                 //is for max heap ?
-                if (num < median.median) {
+                if (num < medianHeap.median) {
 
-                    median.minHeap.offer(median.maxHeap.poll());
-                    median.maxHeap.offer(num);
+                    medianHeap.minHeap.offer(medianHeap.maxHeap.poll());
+                    medianHeap.maxHeap.offer(num);
 
                 } else {
                     //is for min heap ?
-                    median.minHeap.offer(num);
+                    medianHeap.minHeap.offer(num);
                 }
 
                 break;
@@ -100,14 +100,14 @@ class SolutionMedianFinder {
 
 
                 //is for max heap ?
-                if (num < median.median) {
+                if (num < medianHeap.median) {
 
-                    median.maxHeap.offer(num);
+                    medianHeap.maxHeap.offer(num);
 
                 } else {
                     //is for min heap ?
-                    median.maxHeap.offer(median.minHeap.poll());
-                    median.minHeap.offer(num);
+                    medianHeap.maxHeap.offer(medianHeap.minHeap.poll());
+                    medianHeap.minHeap.offer(num);
                 }
 
 
@@ -116,13 +116,13 @@ class SolutionMedianFinder {
             case 0: //equal
 
                 //is for max heap ?
-                if (num < median.median) {
+                if (num < medianHeap.median) {
 
-                    median.maxHeap.offer(num);
+                    medianHeap.maxHeap.offer(num);
 
                 } else {
                     //is for min heap ?
-                    median.minHeap.offer(num);
+                    medianHeap.minHeap.offer(num);
                 }
 
                 break;
@@ -134,17 +134,17 @@ class SolutionMedianFinder {
     }
 
     public double findMedian() {
-        int diff = getDiff(median.maxHeap.size(), median.minHeap.size());
+        int diff = getDiff(medianHeap.maxHeap.size(), medianHeap.minHeap.size());
 
         switch (diff) {
-            case 1:
-                return (median.median = median.maxHeap.peek());
-            case -1:
-                return (median.median = median.minHeap.peek());
-            case 0:
-                return (median.median = ((double) (median.minHeap.peek() + median.maxHeap.peek())) / 2);
+            case 1: //max heap > min heap
+                return (medianHeap.median = medianHeap.maxHeap.peek());
+            case -1: //min heap > max heap
+                return (medianHeap.median = medianHeap.minHeap.peek());
+            case 0: //max heap =  min heap
+                return (medianHeap.median = ((double) (medianHeap.minHeap.peek() + medianHeap.maxHeap.peek())) / 2);
         }
-        return median.median;
+        return medianHeap.median;
     }
 
     private int getDiff(int x, int y) {
