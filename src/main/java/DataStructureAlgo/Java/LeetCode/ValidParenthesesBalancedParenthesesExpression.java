@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import DataStructureAlgo.Java.LeetCode2025.easy.stacks.ValidParentheses_20;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.ValidParentheses_20;
 
 import java.util.HashMap;
 import java.util.Map;

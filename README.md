@@ -44,7 +44,10 @@
       http://tiancao.me/Leetcode-Unlocked/		
       https://www.cnblogs.com/lightwindy/p/8476874.html		
       https://kennyzhuang.gitbooks.io/leetcode-lock/content/index.html
-  * All question: https://leetcode.ca/ & https://leetcode.ca/all/problems.html
+  * All questions:
+    * https://leetcode.ca/all/problems.html
+    * https://walkccc.me/LeetCode/problems/3/
+    * https://leetcodethehardway.com/tutorials/basic-topics/heap
 
 * LeetCode Courses
   * Dynamic Programming Grandmaster

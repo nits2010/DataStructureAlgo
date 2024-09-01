@@ -38,6 +38,8 @@ import java.util.List;
  * The node 20 is replaced by three nodes, each with the value 20 / 3, extending to the left if 20 is the left child of its parent.
  * The node 30 is replaced by three nodes, each with the value 30 / 3, extending to the right if 30 is the right child of its parent.
  * <p>
+ *
+ *
  * File reference
  * -----------
  * Duplicate {@link}
@@ -46,6 +48,8 @@ import java.util.List;
  * <p>
  * Tags
  * -----
+ * @medium
+ * @Tree
  *
  * @Tree
  * @BinaryTree <p>

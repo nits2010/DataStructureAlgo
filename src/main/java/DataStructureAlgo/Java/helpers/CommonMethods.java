@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.helpers;
 
-import DataStructureAlgo.Java.LeetCode2025.easy.Tree.SameTree_100;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.SameTree_100;
 import DataStructureAlgo.Java.helpers.templates.DoublyListNode;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
