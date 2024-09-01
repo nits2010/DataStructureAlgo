@@ -1,10 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta

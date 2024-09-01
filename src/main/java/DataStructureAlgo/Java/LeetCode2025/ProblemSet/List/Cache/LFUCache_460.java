@@ -77,7 +77,7 @@ import java.util.TreeMap;
  * @HashTable
  * @LinkedList
  * @Design
- * @DoublyLinkedList
+ * @Doubly-LinkedList
  *
  * <p>
  * Company Tags

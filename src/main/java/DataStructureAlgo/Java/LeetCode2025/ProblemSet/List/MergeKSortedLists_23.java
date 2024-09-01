@@ -1,14 +1,10 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List;
 
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.CommonMethods;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta

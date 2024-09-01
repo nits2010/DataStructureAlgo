@@ -1,6 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List;
 
-import DataStructureAlgo.Java.LeetCode2025.medium.List.Cache.LRUCache_146;
 
 /**
  * Author: Nitin Gupta
@@ -74,7 +73,7 @@ import DataStructureAlgo.Java.LeetCode2025.medium.List.Cache.LRUCache_146;
  * @HashTable
  * @LinkedList
  * @Design
- * @DoublyLinkedList
+ * @Doubly-LinkedList
  *
  *
  * <p>
@@ -86,7 +85,7 @@ import DataStructureAlgo.Java.LeetCode2025.medium.List.Cache.LRUCache_146;
  * @Snapchat
  * @LinkedIn
  *
- * {@link DataStructureAlgo.Java.LeetCode2025.medium.List.Cache.LFUCache_460}
+ * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.List.Cache.LFUCache_460}
  */
 public class LFUCache_460{
 

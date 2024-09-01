@@ -1,8 +1,8 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List;
 
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
-import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
 /**

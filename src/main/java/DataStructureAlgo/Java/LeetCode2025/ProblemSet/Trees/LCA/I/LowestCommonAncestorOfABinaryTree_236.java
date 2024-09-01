@@ -7,14 +7,7 @@ import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees;
 
-import DataStructureAlgo.Java.helpers.templates.TreeNode;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
