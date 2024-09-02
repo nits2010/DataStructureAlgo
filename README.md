@@ -1,5 +1,6 @@
 # DS & Algo Resources
 
+## DS Resources 
 ## GitHub Repositories
 
 - [Kdn251 - Interviews](https://github.com/kdn251/interviews)
@@ -25,7 +26,8 @@
 - [Naukri.com Code360 Problems](https://www.naukri.com/code360/problems)
 
 ## LeetCode Premium Questions Solutions
-- [Doocs - LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solution)
+- [LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solution)
+- [List of questions](https://github.com/doocs/leetcode?tab=readme-ov-file)
 - [LeetCode.ca - All Problems](https://leetcode.ca/all/problems.html)
 - [Tony Cao's Gitbook](https://tonycao.gitbooks.io/leetcode-locked)
 - [Lightwindy Solutions](https://www.cnblogs.com/lightwindy/p/8476874.html)
