@@ -1,5 +1,9 @@
 | File Name | GitHub Link | Creation Date |
 |-----------|-------------|---------------|
+| StatisticsFromALargeSample_1033.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/StatisticsFromALargeSample_1033.java) | 2024-09-02 23:37:40 |
+| KClosestPointsToOrigin_973.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Heap/CartesianGrid/KClosestPointsToOrigin_973.java) | 2024-09-02 21:16:37 |
+| FindNearestPointThatHasTheSameXOrYCoordinate_1779.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/CartesianGrid/FindNearestPointThatHasTheSameXOrYCoordinate_1779.java) | 2024-09-02 20:51:03 |
+| SlidingWindowMaximum_239.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Heap/SlidingWindow/maximum/SlidingWindowMaximum_239.java) | 2024-09-01 14:57:55 |
 | MinHeap.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/helpers/templates/MinHeap.java) | 2024-09-01 14:18:22 |
 | KthLargestElementUsingMedianOfMedian.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/nonleetcode/KthLargestElementUsingMedianOfMedian.java) | 2024-09-01 14:18:22 |
 | Sorts.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/nonleetcode/Sorts.java) | 2024-09-01 14:18:22 |
