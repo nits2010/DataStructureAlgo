@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap.SlidingWindow.maximum;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.maximum;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
