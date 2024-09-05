@@ -171,6 +171,23 @@ public class CommonMethods {
 
     }
 
+    public static String toStringNew(int[][] nums) {
+        if (nums == null || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+        for (int i = 0; i < nums.length; i++) {
+            result.append(toString(nums[i]));
+            if (i < nums.length - 1) {
+                result.append(',');
+            }
+        }
+        result.append("]");
+
+        return result.toString();
+    }
+
     public static String toString(List<Integer>[] nums) {
         if (null == nums || nums.length == 0)
             return null;
@@ -600,9 +617,9 @@ public class CommonMethods {
         List<T> temp = a[0];
         int i = 1;
         while (i < a.length)
-            if(temp!=null) {
+            if (temp != null) {
                 equal &= temp.equals(a[i++]);
-            } else if(a[i]!=null) {
+            } else if (a[i] != null) {
                 return false;
             }
         return equal;
@@ -881,6 +898,69 @@ public class CommonMethods {
 
         // Print left subtree
         printBinaryTree(node.left, level + 1);
+    }
+
+    public static void printResult(boolean test) {
+        System.out.println("====================");
+        System.out.println(test ? "\nAll passed" : "\n Something Failed");
+    }
+
+    public static String getResultStringFinalTest(boolean test) {
+        return "\n" + "====================" + "\n" + (test ? "\nAll passed" : "\n Something Failed");
+    }
+
+    public static String getResultStringSubTest(boolean test, String prefix) {
+        return "\n" + " " + prefix + " " + (test ? " Passed" : "Failed");
+    }
+
+    public static boolean compareArrays(int[] array1, int[] array2) {
+        // Step 1: Check if the lengths of the arrays are the same
+        if (array1.length != array2.length) {
+            return false;
+        }
+
+        // Step 2: Sort both arrays
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
+        // Step 3: Compare the sorted arrays element by element
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                return false;
+            }
+        }
+
+        // If all elements match, return true
+        return true;
+    }
+
+    public static boolean compareArrays(int[][] array1, int[][] array2) {
+        if (array1.length != array2.length) {
+            return false;
+        }
+
+        // Sort the rows of both arrays
+        int[][] sortedArray1 = sortRows(array1);
+        int[][] sortedArray2 = sortRows(array2);
+
+        // Compare the sorted arrays
+        for (int i = 0; i < sortedArray1.length; i++) {
+            if (!Arrays.equals(sortedArray1[i], sortedArray2[i])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static int[][] sortRows(int[][] array) {
+        int[][] sortedArray = new int[array.length][];
+        for (int i = 0; i < array.length; i++) {
+            sortedArray[i] = array[i].clone();
+            Arrays.sort(sortedArray[i]);
+        }
+        Arrays.sort(sortedArray, Arrays::compare);
+        return sortedArray;
     }
 
 }

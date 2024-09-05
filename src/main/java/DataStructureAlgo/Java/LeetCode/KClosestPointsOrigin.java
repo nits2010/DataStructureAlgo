@@ -115,7 +115,7 @@ class KClosestPointsOriginPriorityQueue {
 
 
 /**
- * O(k*log(n))
+ * O(n*log(k)) / O(k)
  * Runtime: 66 ms, faster than 10.38% of Java online submissions for K Closest Points to Origin.
  * Memory Usage: 59.7 MB, less than 73.91% of Java online submissions for K Closest Points to Origin.
  */
@@ -227,24 +227,24 @@ class KClosestPointsOriginPartition {
 }
 
 /**
- * Avoid below algorithm as though its O(n) but has more computation then needed. Its good for very huge array.
+ * Avoid below algorithm as though its O(n) but has more computation than needed. It's good for a very huge array.
  * {@link KthLargestElementUsingMedianOfMedian} #KthSmallest
  * We'll apply same logic as finding the kthSmallest element. Once we partition the array at index 'partition'
- * 1. if partition = k then all the element on left side of this index would be lesser than elements on right side of partition
- * 2. otherwise either we need to go left or right based on partition vs k
+ * 1. If partition = k then all the elements on the left side of this index would be lesser than elements on the right side of partition
+ * 2. Otherwise, either we need to go left or right based on partition vs k
  * <p>
- * To find partition point efficiently we'll use median of median algorithm
+ * To find partition point efficiently, we'll use median of median algorithm
  * <p>
  * Runtime: 63 ms, faster than 16.80% of Java online submissions for K Closest Points to Origin.
  * Memory Usage: 63 MB, less than 34.16% of Java online submissions for K Closest Points to Origin.
  */
 class KClosestPointsOriginPartitionMedianOfMedian {
 
-    static class Pair {
+    static class Distance {
         int key;
         double distance;
 
-        public Pair(int key, double distance) {
+        public Distance(int key, double distance) {
             this.key = key;
             this.distance = distance;
         }
@@ -265,11 +265,11 @@ class KClosestPointsOriginPartitionMedianOfMedian {
         if (k == points.length)
             return points;
 
-        final Pair[] distanceList = new Pair[points.length];
+        final Distance[] distanceList = new Distance[points.length];
 
         for (int i = 0; i < points.length; i++) {
             int[] point = points[i];
-            distanceList[i] = new Pair(i, distance(point[0], point[1]));
+            distanceList[i] = new Distance(i, distance(point[0], point[1]));
         }
 
         if (distanceList.length <= 5) {
@@ -293,27 +293,27 @@ class KClosestPointsOriginPartitionMedianOfMedian {
 
     }
 
-    private int[][] getKValues(final Pair[] distanceList, int[][] points, int k) {
+    private int[][] getKValues(final Distance[] distanceList, int[][] points, int k) {
         final int[][] result = new int[k][2];
 
-        int i = 0;
         while (k > 0) {
-            result[k - 1] = points[distanceList[i++].key];
+            result[k - 1] = points[distanceList[k - 1].key];
             k--;
         }
+
 
         return result;
 
 
     }
 
-    private Double kthLargestElement(Pair[] distanceList, int l, int r, int k) {
+    private Double kthLargestElement(Distance[] distanceList, int l, int r, int k) {
 
         final int n = r - l + 1;
 
         if (k > 0 && k <= n) {
 
-            final Pair[] median = new Pair[(n + 4) / 5];
+            final Distance[] median = new Distance[(n + 4) / 5];
             int i;
             for (i = 0; i < n / 5; i++) {
                 median[i] = findMedian(distanceList, l + i * 5, 5);
@@ -326,7 +326,7 @@ class KClosestPointsOriginPartitionMedianOfMedian {
 
             final double medianOfMedian = (i == 1)
                     ? median[0].distance
-                    : kthLargestElement(median, 0, i - 1, i / 2); //find median of median array
+                    : kthLargestElement(median, 0, i - 1, i / 2); //find median of a median array
 
             final int partitionIndex = partition(distanceList, l, r, medianOfMedian);
 
@@ -342,7 +342,7 @@ class KClosestPointsOriginPartitionMedianOfMedian {
         return -1.0;
     }
 
-    private int partition(Pair[] distanceList, int l, int r, double pivot) {
+    private int partition(Distance[] distanceList, int l, int r, double pivot) {
 
         int i;
         for (i = l; i < r; i++) {
@@ -366,14 +366,14 @@ class KClosestPointsOriginPartitionMedianOfMedian {
 
     }
 
-    private void swap(Pair[] distanceList, int i, int j) {
+    private void swap(Distance[] distanceList, int i, int j) {
 
-        final Pair temp = distanceList[i];
+        final Distance temp = distanceList[i];
         distanceList[i] = distanceList[j];
         distanceList[j] = temp;
     }
 
-    private Pair findMedian(Pair[] distanceList, int i, int n) {
+    private Distance findMedian(Distance[] distanceList, int i, int n) {
         Arrays.sort(distanceList, i, i + n, Comparator.comparingDouble(o -> o.distance));
         return distanceList[i + (n / 2)];
     }

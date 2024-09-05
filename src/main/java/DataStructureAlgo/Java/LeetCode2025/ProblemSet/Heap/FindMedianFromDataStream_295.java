@@ -49,12 +49,12 @@ import java.util.PriorityQueue;
  * We can maintain an integer array of length 100 to store the count of each number along with a total count.
  * Then, we can iterate over the array to find the middle value to get our median. Time and space complexity would be O(100) = O(1).
  * REF: Time and space complexity would be O(100) = O(1).
- *  * https://leetcode.com/problems/statistics-from-a-large-sample/description/
- *  {@link DataStructureAlgo.Java.LeetCode.StatisticsLargeSample}
+ *  * <a href="https://leetcode.com/problems/statistics-from-a-large-sample/description/">...</a>
+ *  {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.StatisticsFromALargeSample_1033}
  *
  * Q-2: If 99% of all integer numbers from the stream are between 0 and 100, how would you optimize it?
  * In this case, we can keep a counter for lessThanHundred and greaterThanHundred.
- * As we know the solution will be definitely in 0-100 we don’t need to know those number which are >100 or <0, only count of them will be enough.
+ * As we know, the solution will be definitely in 0-100 we don’t need to know those numbers which are >100 or <0, only count of them will be enough.
  *
  * File reference
  * -----------
