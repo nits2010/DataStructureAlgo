@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode.graph.graph.types;
 
-import  DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -15,13 +15,15 @@ public class WeightedDirectedGraph implements IWeightedGraph {
     //To hold the edges
     private final List<Edges>[] adjList;
     private final int vertices;
+
+    private final List<Edges> edgesList;
     private int edges;
 
     //initiate the graph
     public WeightedDirectedGraph(int vertices) {
 
         adjList = new LinkedList[vertices];
-
+        edgesList = new LinkedList<>();
         for (int i = 0; i < vertices; i++)
             adjList[i] = new LinkedList<>();
 
@@ -42,7 +44,12 @@ public class WeightedDirectedGraph implements IWeightedGraph {
 
     @Override
     public void addEdge(int source, int destination, double weight) {
-        adjList[source].add(new Edges(source, destination, weight));
+
+        Edges sourceToDestinationEdge = new Edges(source, destination, weight);
+
+        adjList[source].add(sourceToDestinationEdge);
+
+        edgesList.add(sourceToDestinationEdge);
         this.edges++;
     }
 
@@ -50,8 +57,8 @@ public class WeightedDirectedGraph implements IWeightedGraph {
     public String scan() {
 
         StringBuilder graphData = new StringBuilder();
-        for (int u = 0; u < this.adjList.length; u++)
-            graphData.append(this.adjList[u] + " \n");
+        for (List<Edges> edgesList : this.adjList)
+            graphData.append(edgesList).append(" \n");
 
         return graphData.toString();
     }
@@ -59,5 +66,10 @@ public class WeightedDirectedGraph implements IWeightedGraph {
     @Override
     public int getEdges() {
         return this.edges;
+    }
+
+    @Override
+    public List<Edges> getEdgesList() {
+        return edgesList;
     }
 }
