@@ -3,6 +3,7 @@ package DataStructureAlgo.Java.nonleetcode.graph.questions.minimum.spanning.tree
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
 import DataStructureAlgo.Java.nonleetcode.graph.graph.types.Edges;
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.types.WeightedDirectedGraph;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.types.WeightedUnDirectedGraph;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 public class MinimumSpanningTreeTest {
 
     private static IWeightedGraph getGraph(int[][] edges, int vertices) {
-        IWeightedGraph graph = new WeightedDirectedGraph(vertices);
+        IWeightedGraph graph = new WeightedUnDirectedGraph(vertices);
 
         for (int[] edge : edges) {
 

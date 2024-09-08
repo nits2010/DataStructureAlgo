@@ -9,6 +9,8 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-09-08
  * Description:
+ * [minimum spanning tree (MST) doesn't apply to directed graphs]
+ *
  * A group of edges that connects two sets of vertices in a graph is called cut in graph theory.
  * So, at every step of Prim’s algorithm, we find a cut (of two sets, one contains the vertices
  * already included in MST and the other contains the rest of the verices), pick the minimum weight edge from the cut and include
@@ -133,7 +135,7 @@ public class PrimMinimumSpanningTree implements IMinimumSpanningTree {
                 // update the key value as weight of u-v
                 for (Edges edge : edges[u.vertex]) {
 
-                    int v = edge.source;
+                    int v = edge.destination;
                     if (!mstSet[v] && edgeCosts[v] > edge.weight) {
 
                         //update cost
