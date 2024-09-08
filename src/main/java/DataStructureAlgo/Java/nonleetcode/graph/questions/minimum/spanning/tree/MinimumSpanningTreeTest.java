@@ -1,7 +1,10 @@
 package DataStructureAlgo.Java.nonleetcode.graph.questions.minimum.spanning.tree;
 
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.types.Edges;
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.types.WeightedDirectedGraph;
+
+import java.util.List;
 
 /**
  * Author: Nitin Gupta
@@ -13,7 +16,7 @@ public class MinimumSpanningTreeTest {
     private static IWeightedGraph getGraph(int[][] edges, int vertices) {
         IWeightedGraph graph = new WeightedDirectedGraph(vertices);
 
-        for (int edge[] : edges) {
+        for (int[] edge : edges) {
 
             graph.addEdge(edge[0], edge[1], edge[2]);
 
@@ -24,7 +27,7 @@ public class MinimumSpanningTreeTest {
     }
 
     public static void main(String[] args) {
-         /* Let us create following weighted graph
+         /* Let us create the following weighted graph
                  10
             0--------1
             |  \     |
@@ -42,10 +45,22 @@ public class MinimumSpanningTreeTest {
         System.out.println("\n Graph :\n" + graph.scan());
 
         IMinimumSpanningTree kruskalMinimumSpanningTree = new KruskalMinimumSpanningTree();
-        IMinimumSpanningTree prIMinimumSpanningTree = new PrimMinimumSpanningTree();
+        IMinimumSpanningTree primMinimumSpanningTree = new PrimMinimumSpanningTree();
 
-        System.out.println("Kruskal MST :" + kruskalMinimumSpanningTree.mst(graph));
-        System.out.println("Prims MST :" + prIMinimumSpanningTree.mst(graph));
+        List<Edges> kruskalMST =  kruskalMinimumSpanningTree.mst(graph);
+        List<Edges> primMST = primMinimumSpanningTree.mst(graph);
+        System.out.println("Kruskal MST :" + kruskalMST);
+        System.out.println("Prims MST :" + primMST );
+
+        System.out.println("\nKruskal Edges in MST:");
+        for (Edges edge : kruskalMST) {
+            System.out.println("From " + edge.source + " to " + edge.destination + " with weight " + edge.weight);
+        }
+
+        System.out.println("\nPrims Edges in MST:");
+        for (Edges edge : primMST) {
+            System.out.println("From " + edge.source + " to " + edge.destination + " with weight " + edge.weight);
+        }
 
 
     }
