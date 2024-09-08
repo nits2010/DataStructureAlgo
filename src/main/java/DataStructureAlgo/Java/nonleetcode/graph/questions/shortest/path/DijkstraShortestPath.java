@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.nonleetcode.graph.questions.shortest.path;
 
-import  DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
-import  DataStructureAlgo.Java.nonleetcode.graph.graph.types.Edges;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.types.Edges;
 
 import java.util.*;
 
@@ -20,11 +20,11 @@ import java.util.*;
  * than weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
  * Time Complexity: O(E*log(V))
-The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops. 
-If we take a closer look, we can observe that the statements in the inner loop are executed O(V+E) times (similar to BFS). 
-The inner loop has decreaseKey() operation which takes O(LogV) time. So overall time complexity is O(E+V)*O(LogV) which is O((E+V)*LogV) = O(ELogV) 
- Space Complexity: O(V)
-* <p>
+ * The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops.
+ * If we take a closer look, we can observe that the statements in the inner loop are executed O(V+E) times (similar to BFS).
+ * The inner loop has decreaseKey() operation which takes O(LogV) time. So overall time complexity is O(E+V)*O(LogV) which is O((E+V)*LogV) = O(ELogV)
+ * Space Complexity: O(V)
+ * <p>
  * https://www.dyclassroom.com/graph/detecting-negative-cycle-using-bellman-ford-algorithm
  */
 public class DijkstraShortestPath implements IShortestPath {
@@ -44,7 +44,7 @@ public class DijkstraShortestPath implements IShortestPath {
     public List<Edges> shortestPath(IWeightedGraph graph, int source) {
         final List<Edges> shortestPath = new ArrayList<>();
 
-        if (graph.getAdjList() == null || graph.getAdjList().length == 0)
+        if (graph.getAdjList() == null || graph.getAdjList().length == 0 || source >= graph.getVertices())
             return shortestPath;
 
         final List<Edges>[] adjList = graph.getAdjList();
@@ -82,6 +82,11 @@ public class DijkstraShortestPath implements IShortestPath {
 
                 int v = edges.destination;
                 double weight = edges.weight;
+
+                //if the weight of edge is negative, then dijkstra algo fails, hence no shortest path
+                if(weight < 0)
+                    return shortestPath;
+
 
                 if (cost[v] > cost[u] + weight)
                     cost[v] = cost[u] + weight;

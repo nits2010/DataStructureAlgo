@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.nonleetcode.graph.graph.types;
 
-import  DataStructureAlgo.Java.nonleetcode.graph.graph.IGraph;
+import DataStructureAlgo.Java.nonleetcode.graph.graph.IGraph;
 
 import java.util.*;
 
@@ -13,12 +13,16 @@ public class UnDirectedGraph implements IGraph {
 
     //To hold the edges
     private final List<Integer>[] adjacencyList;
+    private final List<Edges> edgesList;
     private final int vertices;
+
+    private int edges = 0;
 
     //initiate the graph
     public UnDirectedGraph(int vertices) {
 
         adjacencyList = new LinkedList[vertices];
+        edgesList = new LinkedList<>();
         for (int i = 0; i < vertices; i++)
             adjacencyList[i] = new LinkedList<>();
 
@@ -37,8 +41,17 @@ public class UnDirectedGraph implements IGraph {
 
     @Override
     public void addEdge(int source, int destination) {
+        Edges sourceToDestinationEdge = new Edges(source, destination, 1);
+        Edges destinationEdgeToSource = new Edges(destination, source, 1);
+
         adjacencyList[source].add(destination);
         adjacencyList[destination].add(source);
+
+        edgesList.add(sourceToDestinationEdge);
+        edgesList.add(destinationEdgeToSource);
+
+        edges += 2;
+
 
     }
 

@@ -21,4 +21,6 @@ public interface IWeightedGraph {
     String scan();
 
     int getEdges();
+
+    List<Edges> getEdgesList();
 }

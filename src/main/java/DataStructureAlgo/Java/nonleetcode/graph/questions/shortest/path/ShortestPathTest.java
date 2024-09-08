@@ -16,7 +16,7 @@ public class ShortestPathTest {
     private static IWeightedGraph getGraph(int[][] edges, int vertices) {
         IWeightedGraph graph = new WeightedUnDirectedGraph(vertices);
 
-        for (int edge[] : edges) {
+        for (int[] edge : edges) {
 
             graph.addEdge(edge[0], edge[1], edge[2]);
 
@@ -39,9 +39,7 @@ public class ShortestPathTest {
 
         test(getGraph(new int[][]{{0, 1, 10}, {1, 3, 15}, {2, 3, 4}, {0, 2, 6}, {0, 3, 5}}, 4), 0);
 
-
         test(getGraph(new int[][]{{0, 1, 9}, {0, 2, 6}, {0, 3, 5}, {0, 4, 3}, {2, 1, 2}, {2, 3, 4}}, 5), 0);
-
 
         test(getGraph(new int[][]{{0, 1, 4}, {0, 7, 8}, {1, 2, 8}, {2, 3, 7}, {3, 4, 9},
                 {4, 5, 10}, {5, 6, 2}, {6, 7, 1}, {7, 8, 7}, {2, 8, 2}, {1, 7, 11}, {2, 5, 4}, {3, 5, 14}, {8, 6, 6}}, 9), 0);
@@ -49,7 +47,7 @@ public class ShortestPathTest {
         test(getGraph(new int[][]{{0, 1, 4}, {0, 7, 8}, {1, 2, 8}, {2, 3, 7}, {3, 4, 9},
                 {4, 5, 10}, {5, 6, 2}, {6, 7, 1}, {7, 8, 7}, {2, 8, 2}, {1, 7, 11}, {2, 5, 4}, {3, 5, 14}, {8, 6, 6}}, 9), 3);
 
-//        test(getGraph(new int[][]{{0,1,}}))
+        test(getGraph(new int[][]{{0, 1, -2}, {1, 2, -1}, {2, 0, 2}}, 3), 0);
 
     }
 
@@ -64,10 +62,16 @@ public class ShortestPathTest {
         final List<Edges> shortestPathBellmanFordShortestPath = bellmanFordShortestPath.shortestPath(graph, source);
 
         System.out.println("\n Dijkstra -> ");
-        shortestPathDijkstraShortestPath.forEach(System.out::println);
+        if (shortestPathDijkstraShortestPath.isEmpty())
+            System.out.println(" NO shortest path exists, Graph may have negative weights");
+        else
+            shortestPathDijkstraShortestPath.forEach(System.out::println);
 
         System.out.println("\n bellmanFord -> ");
-        shortestPathBellmanFordShortestPath.forEach(System.out::println);
+        if (shortestPathBellmanFordShortestPath.isEmpty())
+            System.out.println(" NO shortest path exists / negative weight cycle exists");
+        else
+            shortestPathBellmanFordShortestPath.forEach(System.out::println);
 
 
     }
