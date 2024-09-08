@@ -47,7 +47,7 @@ public class UnDirectedGraph implements IGraph {
 
         StringBuilder graphData = new StringBuilder();
         for (int u = 0; u < this.adjacencyList.length; u++)
-            graphData.append(u + "->" + this.adjacencyList[u] + " \n");
+            graphData.append(u).append("->").append(this.adjacencyList[u]).append(" \n");
 
         return graphData.toString();
     }

@@ -15,7 +15,7 @@ import java.util.*;
 public class GraphClone {
 
     /**
-     * This clone a graph where it has multiple components
+     * This clones a graph where it has multiple components
      *
      * @param gNode
      * @return
@@ -31,7 +31,7 @@ public class GraphClone {
                 //clone the connected component
                 cloneConnectedComponent(node, map);
 
-                //attache the cloned connected components
+                //attaché the cloned connected components
                 cloned.getNodes().add(map.get(node));
             }
         }
@@ -87,10 +87,9 @@ public class GraphClone {
         }
 
         //For To Build a graph
-        GraphNode cloneGraphNode = clone;
 
         Graph cloned = new Graph();
-        cloned.addNode(cloneGraphNode);
+        cloned.addNode(clone);
 
         return cloned;
     }

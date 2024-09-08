@@ -50,8 +50,8 @@ public class WeightedDirectedGraph implements IWeightedGraph {
     public String scan() {
 
         StringBuilder graphData = new StringBuilder();
-        for (int u = 0; u < this.adjList.length; u++)
-            graphData.append(this.adjList[u] + " \n");
+        for (List<Edges> edgesList : this.adjList)
+            graphData.append(edgesList).append(" \n");
 
         return graphData.toString();
     }
