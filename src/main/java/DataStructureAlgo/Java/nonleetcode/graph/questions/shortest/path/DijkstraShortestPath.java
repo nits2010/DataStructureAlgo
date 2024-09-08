@@ -19,8 +19,12 @@ import java.util.*;
  * …..b) For every adjacent vertex v of u, check if v is in Min Heap. If v is in Min Heap and distance value is more
  * than weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
- * Complexity: O(V*log(V))
- * <p>
+ * Time Complexity: O(E*log(V))
+The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops. 
+If we take a closer look, we can observe that the statements in the inner loop are executed O(V+E) times (similar to BFS). 
+The inner loop has decreaseKey() operation which takes O(LogV) time. So overall time complexity is O(E+V)*O(LogV) which is O((E+V)*LogV) = O(ELogV) 
+ Space Complexity: O(V)
+* <p>
  * https://www.dyclassroom.com/graph/detecting-negative-cycle-using-bellman-ford-algorithm
  */
 public class DijkstraShortestPath implements IShortestPath {
