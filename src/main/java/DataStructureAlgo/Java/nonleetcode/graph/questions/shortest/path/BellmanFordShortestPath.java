@@ -45,7 +45,7 @@ public class BellmanFordShortestPath implements IShortestPath {
         final List<Edges> shortestPath = new ArrayList<>();
 
         costs[source] = 0;
-        for (int i = 0; i <= vertices - 1; i++) {
+        for (int i = 0; i <vertices; i++) {
 
 
             for (Edges edge : adjList[i]) {
