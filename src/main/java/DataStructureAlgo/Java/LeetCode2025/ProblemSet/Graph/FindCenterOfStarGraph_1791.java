@@ -32,8 +32,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * Tags
  * -----
+ * @easy
  *
- * @easy Company Tags
+ * Company Tags
  * -----
  * @Microsoft
  * @Editorial
@@ -84,7 +85,7 @@ public class FindCenterOfStarGraph_1791 {
             return commonVertex;
         }
 
-        //As this is 100% star graph, hence there will be 100% a node which is center and this must be part of first two edge only.
+        //As this is a 100 % star graph, hence there will be 100% a node which is center and this must be part of first two edge only.
         public int findCenter2(int[][] edges) {
             if (edges == null || edges.length == 0 || edges[0].length == 0)
                 return -1;

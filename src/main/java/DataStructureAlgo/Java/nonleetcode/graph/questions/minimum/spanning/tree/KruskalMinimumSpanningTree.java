@@ -61,8 +61,8 @@ public class KruskalMinimumSpanningTree implements IMinimumSpanningTree {
             int destination = edges.destination;
             double weight = edges.weight;
 
-            //* 2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far.
-            // * If cycle is not formed, include this edge. Else, discard it.
+            // Check if it forms a cycle with the spanning tree formed so far.
+            // * If a cycle is not formed, include this edge. Else, discard it.
             if (disjointSets.unionBoth(source, destination)) {
                 mst.add(new Edges(source, destination, weight));
 
