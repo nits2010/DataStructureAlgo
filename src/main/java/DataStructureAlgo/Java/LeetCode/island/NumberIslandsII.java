@@ -128,25 +128,25 @@ class NumberIslandsIIBuildAndCount {
 }
 
 /**
- * Above algorithm first build the grid, so land, then count the island. There are two important thing
- * 1. The reason being that for each position either create a new island
+ * Above algorithm first build the grid, so land, then count the island. There are two important things
+ * 1. The reason is that for each position either creates a new island
  * or
- * 2. get connected to old island.
+ * 2. Get connected to old island.
  * <p>
- * Which turns out, if we somehow efficiently can find that two island are connected or not, then we can simply discard the new land as potential new island.
- * Since, an island can be connected through 4 directions {horizontal and vertical} i.e. means we need to attach those valid position to old island as well to correctly evaluate
+ * Which turns out, if we somehow efficiently can find that two islands are connected or not, then we can simply discard the new land as a potential new island.
+ * Since, an island can be connected through 4 directions {horizontal and vertical} i.e., means we need to attach those valid position to old island as well to correctly evaluate
  * the new position as potential island.
  * <p>
  * Union-Find {@link UnionFindDisjointSets}
  * -----------
- * Using union-Find we can find out that two points are connected or not by checking there parent.
+ * Using union-Find we can find out that two points are connected or not by checking their parent.
  * <p>
  * <p>
  * Algorithm:
- * 1. create the possible number of space available as empty parent {our water spaces}
- * 2. For each position evaluate following things
- * *  2.1 : does this land is being connected to any previous island ? if so then we should not count this as island.
- * * 2.2 : Also do same for all 4 direction
+ * 1. Create the possible amount of space available as empty parent {our water spaces}
+ * 2. For each position, evaluate the following things
+ * *  2.1 : does this land be being connected to any previous island ? if so, then we should not count this as an island.
+ * * 2.2 : Also do the same for all 4 direction
  * <p>
  * O(k* log(m*n)) / O (m*n)
  * <p>
@@ -307,9 +307,7 @@ class NumberIslandsIIUnionFind {
     }
 
     private boolean isSafe(int i, int j, int m, int n) {
-        if (i < 0 || j < 0 || i >= m || j >= n)
-            return false;
-        return true;
+        return i >= 0 && j >= 0 && i < m && j < n;
     }
 
 }

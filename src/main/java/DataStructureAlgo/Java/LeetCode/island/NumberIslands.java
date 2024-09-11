@@ -69,8 +69,8 @@ public class NumberIslands {
  * Memory Usage: 41 MB, less than 81.86% of Java online submissions for Number of Islands.
  */
 class NumberIslandsDFS {
-    private int row[] = {0, 0, 1, -1};
-    private int col[] = {-1, 1, 0, 0};
+    private final int[] row = {0, 0, 1, -1};
+    private final int[] col = {-1, 1, 0, 0};
 
     public int numIslands(char[][] grid) {
 
@@ -81,7 +81,7 @@ class NumberIslandsDFS {
         int n = grid.length;
         int m = grid[0].length;
 
-        boolean marked[][] = new boolean[n][m];
+        boolean[][] marked = new boolean[n][m];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -98,12 +98,10 @@ class NumberIslandsDFS {
     }
 
     private boolean isSafe(int i, int j, int n, int m) {
-        if (i < 0 || j < 0 || i >= n || j >= m)
-            return false;
-        return true;
+        return i >= 0 && j >= 0 && i < n && j < m;
     }
 
-    private void numIslands(char[][] grid, int i, int j, int n, int m, boolean marked[][]) {
+    private void numIslands(char[][] grid, int i, int j, int n, int m, boolean[][] marked) {
 
         marked[i][j] = true;
 
@@ -120,7 +118,7 @@ class NumberIslandsDFS {
 
 
 /**
- * Instead of using marked array, use grid it self to mark.
+ * Instead of using a marked array, use grid itself to mark.
  * for marking, make them 0
  * <p>
  * O(n*n) / O(1)
@@ -128,8 +126,8 @@ class NumberIslandsDFS {
  * Memory Usage: 39.9 MB, less than 100.00% of Java online submissions for Number of Islands.
  */
 class NumberIslandsDFSV2 {
-    private int row[] = {0, 0, 1, -1};
-    private int col[] = {-1, 1, 0, 0};
+    private final int[] row = {0, 0, 1, -1};
+    private final int[] col = {-1, 1, 0, 0};
 
     public int numIslands(char[][] grid) {
 
@@ -155,9 +153,7 @@ class NumberIslandsDFSV2 {
     }
 
     private boolean isSafe(int i, int j, int n, int m) {
-        if (i < 0 || j < 0 || i >= n || j >= m)
-            return false;
-        return true;
+        return i >= 0 && j >= 0 && i < n && j < m;
     }
 
     private void numIslands(char[][] grid, int i, int j, int n, int m) {
@@ -207,9 +203,7 @@ class NumberIslandsDFSDirectIteration {
     }
 
     private boolean isSafe(int i, int j, int n, int m) {
-        if (i < 0 || j < 0 || i >= n || j >= m)
-            return false;
-        return true;
+        return i >= 0 && j >= 0 && i < n && j < m;
     }
 
     private void numIslands(char[][] grid, int i, int j, int n, int m) {
