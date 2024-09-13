@@ -2,6 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.island;
 
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.UnionFindDisjointSets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,9 +56,9 @@ import java.util.stream.IntStream;
  *
  * File reference
  * -----------
- * Duplicate {@link}
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.island.NumberIslandsII}
  * Similar {@link}
- * extension {@link }
+ * extension {@link NumberOfIsland_200}
  * <p><p>
  * Tags
  * -----
@@ -94,7 +95,7 @@ public class NumberOfIslandII_305 {
 
     private static boolean test(int m, int n, int[][] positions, List<Integer> expected) {
         System.out.println("---------------------------------------------");
-        System.out.println("\nm : " + m + " n: " + n + " position :" + CommonMethods.toStringNew(positions) + " expected: " + expected);
+        System.out.println("\nm : " + m + " n: " + n + " position :" + CommonMethods.toStringFlat(positions) + " expected: " + expected);
 
 
         SolutionUsingIslandFinder buildAndCount = new SolutionUsingIslandFinder();
@@ -143,6 +144,32 @@ public class NumberOfIslandII_305 {
     }
 
 
+    /**
+     * Above algorithm first build the grid, so land, then count the island. There are two important things
+     * 1. The reason is that for each position either creates a new island
+     * or
+     * 2. Get connected to old island.
+     * <p>
+     * Which turns out, if we somehow efficiently can find that two islands are connected or not, then we can simply discard the new land as a potential new island.
+     * Since, an island can be connected through 4 directions {horizontal and vertical} i.e., means we need to attach those valid position to old island as well to correctly evaluate
+     * the new position as potential island.
+     * <p>
+     * Union-Find {@link UnionFindDisjointSets}
+     * -----------
+     * Using union-Find we can find out that two points are connected or not by checking their parent.
+     * <p>
+     * <p>
+     * Algorithm:
+     * 1. Create the possible amount of space available as empty parent {our water spaces}
+     * 2. For each position, evaluate the following things
+     * *  2.1 : does this land be being connected to any previous island ? if so, then we should not count this as an island.
+     * * 2.2 : Also do the same for all 4 direction
+     * <p>
+     * T/S : O(k log mn), / O (m*n) where k is the length of the positions
+     * <p>
+     * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.32.html
+     * https://segmentfault.com/a/1190000016587068
+     */
     static class SolutionUsingUnionFind {
         //all 4 directions of given position
         int[] row = {0, 0, 1, -1};
@@ -191,13 +218,13 @@ public class NumberOfIslandII_305 {
 
                 //graph of i as root is bigger as compare to j graph.
                 if (ipRank > jpRank) {
-                    parents[j].id = ip; //attach i as parent of j, this makes size no difference in i's graph
+                    parents[jp].id = ip; //attach i as parent of j, this makes size no difference in i's graph
                 } else if (jpRank > ipRank) {
-                    parents[i].id = jp; //attach j as parent of i, this makes size no difference in j's graph
+                    parents[ip].id = jp; //attach j as parent of i, this makes size no difference in j's graph
                 } else {
                     //both graph sizes are equal attached to i and j.
-                    parents[i].id = jp; // make jp as parent of i, this makes j size graph increase by 1
-                    parents[j].rank++; //increase j's graph size
+                    parents[ip].id = jp; // make jp as parent of i, this makes j size graph increase by 1
+                    parents[jp].rank++; //increase j's graph size
                 }
             }
 

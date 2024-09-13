@@ -87,7 +87,7 @@ public class MaximumStarSumOfAGraph_2497 {
 
     private static boolean test(int[] vals, int[][] edges, int k, int expected) {
         System.out.println("------------------------------------");
-        System.out.println("Values : " + CommonMethods.toString(vals) + " edges : " + CommonMethods.toStringNew(edges) + " k : " + k + " expected : " + expected);
+        System.out.println("Values : " + CommonMethods.toString(vals) + " edges : " + CommonMethods.toStringFlat(edges) + " k : " + k + " expected : " + expected);
         Solution solution = new Solution();
         int output = solution.maxStarSum(vals, edges, k);
         boolean result = output == expected;

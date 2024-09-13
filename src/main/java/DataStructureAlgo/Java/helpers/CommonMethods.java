@@ -156,6 +156,28 @@ public class CommonMethods {
     }
 
     public static String toString(int[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (int[] num : nums) {
+            result.append(toString(num));
+            result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
+        }
+
+
+        return result.toString();
+
+    }
+
+    public static String toString2DForm(int[][] nums) {
+        return toString(nums);
+    }
+
+
+
+    public static String toStringFlat(int[][] nums) {
         if (nums == null || nums.length == 0)
             return null;
 
@@ -170,10 +192,9 @@ public class CommonMethods {
         result.append("]");
 
         return result.toString();
-
     }
 
-    public static String toStringNew(int[][] nums) {
+    public static String toStringFlat(char[][] nums) {
         if (nums == null || nums.length == 0)
             return null;
 

@@ -2,8 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.CartesianGrid;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
-import java.util.Arrays;
-
 /**
  * Author: Nitin Gupta
  * Date: 9/2/2024
@@ -71,7 +69,7 @@ public class FindNearestPointThatHasTheSameXOrYCoordinate_1779 {
 
     private static boolean test(int[][] points, int x, int y, int expected) {
         System.out.println("--------------------------------");
-        System.out.println("Points : " + CommonMethods.toStringNew(points) + " x : " + x + " y : " + y + " expected : " + expected);
+        System.out.println("Points : " + CommonMethods.toStringFlat(points) + " x : " + x + " y : " + y + " expected : " + expected);
         Solution solution = new Solution();
         int output = solution.nearestValidPoint(x, y, points);
         boolean result = output == expected;

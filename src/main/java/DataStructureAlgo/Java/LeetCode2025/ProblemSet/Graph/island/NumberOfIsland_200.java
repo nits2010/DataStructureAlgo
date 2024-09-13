@@ -2,9 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.island;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
-import javax.swing.plaf.IconUIResource;
-import java.util.Arrays;
-
 /**
  * Author: Nitin Gupta
  * Date: 9/11/2024
@@ -134,7 +131,7 @@ public class NumberOfIsland_200 {
 
     private static boolean test(char[][] grid, int expected) {
         System.out.println("-------------------------------------");
-        System.out.println("Grid:\n" + CommonMethods.toString(grid) + " expected :" + expected);
+        System.out.println("Grid:\n" + CommonMethods.toStringFlat(grid) + " expected :" + expected);
 
         SolutionDFS solutiondfs = new SolutionDFS();
         int islandCount = solutiondfs.numIslands(grid);
@@ -157,6 +154,7 @@ public class NumberOfIsland_200 {
 
     /**
      *T/S ; O(n*m) / O(n*m)
+     * This can be done using {@link DataStructureAlgo.Java.nonleetcode.UnionFindDisjointSets}
      */
    static class SolutionDFS {
 

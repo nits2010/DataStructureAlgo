@@ -89,22 +89,22 @@ public class KClosestPointsToOrigin_973 {
 
     private static boolean test(int[][] points, int k, int[][] expected) {
         System.out.println("-------------------------------");
-        System.out.println("Points : " + CommonMethods.toStringNew(points) + " k: " + k + " expected :" + CommonMethods.toStringNew(expected));
+        System.out.println("Points : " + CommonMethods.toStringFlat(points) + " k: " + k + " expected :" + CommonMethods.toStringFlat(expected));
 
         final SolutionPQ pq = new SolutionPQ();
         final Solution2WayPartition solution2WayPartition = new Solution2WayPartition();
 
         int[][] outputPQ = pq.kClosest(CommonMethods.copyOf(points), k);
         boolean resultPQ = CommonMethods.compareArrays(outputPQ, expected);
-        System.out.println("pq :" + CommonMethods.toStringNew(outputPQ) + " ResultPQ : " + (resultPQ ? " Passed " : " Failed "));
+        System.out.println("pq :" + CommonMethods.toStringFlat(outputPQ) + " ResultPQ : " + (resultPQ ? " Passed " : " Failed "));
 
         int[][] outputPQV2 = pq.kClosestV2(CommonMethods.copyOf(points), k);
         boolean resultPQV2 = CommonMethods.compareArrays(outputPQV2, expected);
-        System.out.println("outputPQV2 :" + CommonMethods.toStringNew(outputPQV2) + " resultPQV2 : " + (resultPQV2 ? " Passed " : " Failed "));
+        System.out.println("outputPQV2 :" + CommonMethods.toStringFlat(outputPQV2) + " resultPQV2 : " + (resultPQV2 ? " Passed " : " Failed "));
 
         int[][] output2WayPartition = solution2WayPartition.kClosest(CommonMethods.copyOf(points), k);
         boolean result2WayPartition = CommonMethods.compareArrays(output2WayPartition, expected);
-        System.out.println("output2WayPartition :" + CommonMethods.toStringNew(output2WayPartition) + " result2WayPartition : " + (result2WayPartition ? " Passed " : " Failed "));
+        System.out.println("output2WayPartition :" + CommonMethods.toStringFlat(output2WayPartition) + " result2WayPartition : " + (result2WayPartition ? " Passed " : " Failed "));
 
 
         boolean finalResult = resultPQ && resultPQ && result2WayPartition;
