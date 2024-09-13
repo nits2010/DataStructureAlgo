@@ -33,6 +33,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Tags
  * -----
  * @easy
+ * @Graph
  *
  * Company Tags
  * -----

@@ -156,16 +156,18 @@ public class CommonMethods {
     }
 
     public static String toString(int[][] nums) {
-        if (null == nums || nums.length == 0)
+        if (nums == null || nums.length == 0)
             return null;
 
         StringBuilder result = new StringBuilder();
-        for (int[] num : nums) {
-            result.append(toString(num));
-            result.setCharAt(result.length() - 1, ']');
-            result.append("\n");
+        result.append("[");
+        for (int i = 0; i < nums.length; i++) {
+            result.append(toString(nums[i]));
+            if (i < nums.length - 1) {
+                result.append(',');
+            }
         }
-
+        result.append("]");
 
         return result.toString();
 
