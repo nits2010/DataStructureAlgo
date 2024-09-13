@@ -85,7 +85,7 @@ import java.util.stream.IntStream;
  *
  *
  *
- * @Editorial
+ * @Editorial https://leetcode.com/problems/max-area-of-island/solutions/380781/simple-easy-with-mxn-using-union-find
  */
 public class MaxAreaOfIsland_695 {
 
