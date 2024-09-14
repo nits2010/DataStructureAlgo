@@ -1,5 +1,5 @@
 # DS & Algo Resources
-
+For DSA problems, refer Problems.md
 ## DS Resources 
 ## GitHub Repositories
 
