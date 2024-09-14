@@ -18,7 +18,7 @@ def get_current_git_branch():
 # Define the base path of your local repository and GitHub URL
 branch = get_current_git_branch()
 base_path = r"E:\Study\DataStructureAlgo"
-base_url = "https://github.com/nits2010/DataStructureAlgo/blob/"+branch
+base_url = "https://github.com/nits2010/DataStructureAlgo/blob/" + branch
 
 # Path for the markdown file
 md_file_path = 'Problems.md'
@@ -37,23 +37,22 @@ for root, dirs, files in os.walk(base_path):
             # Add file details and creation time to the list
             file_details.append((file, github_link, creation_time))
 
-# Step 2: Sort files by creation time (newest first)
+# Step 2: Sort files by creation time (newest first, descending order)
 file_details.sort(key=lambda x: x[2], reverse=True)
 
 # Step 3: Create and write to the Markdown file
 with open(md_file_path, mode='w', encoding='utf-8') as md_file:
-    # Write Markdown table headers
-    md_file.write("| File Name | GitHub Link | Creation Date |\n")
-    md_file.write("|-----------|-------------|---------------|\n")
+    # Write Markdown table headers with serial number (#)
+    md_file.write("| # | File Name | GitHub Link | Creation Date |\n")
+    md_file.write("|---|-----------|-------------|---------------|\n")
 
-    # Write each file's details to the markdown file
-    for file_name, github_link, creation_time in file_details:
+    # Write each file's details to the markdown file with serial number starting from the oldest file
+    total_files = len(file_details)  # Get total number of files for reverse numbering
+    for idx, (file_name, github_link, creation_time) in enumerate(file_details):
         # Format the creation time as a readable date
         creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
-        md_file.write(f"| {file_name} | [link]({github_link}) | {creation_date} |\n")
-
-
-
-
+        # Calculate serial number in reverse order
+        serial_number = total_files - idx
+        md_file.write(f"| {serial_number} | {file_name} | [link]({github_link}) | {creation_date} |\n")
 
 print(f"Markdown file has been generated at {md_file_path}")
