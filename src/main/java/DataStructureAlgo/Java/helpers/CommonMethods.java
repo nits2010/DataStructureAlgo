@@ -171,6 +171,22 @@ public class CommonMethods {
 
     }
 
+    public static String toString2D(char[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (char[] num : nums) {
+            result.append(toString(num));
+            result.setCharAt(result.length() - 1, ']');
+            result.append("\n");
+        }
+
+
+        return result.toString();
+
+    }
+
     public static String toString2DForm(int[][] nums) {
         return toString(nums);
     }
@@ -234,6 +250,24 @@ public class CommonMethods {
 
         StringBuilder result = new StringBuilder();
         for (int[] num : nums) {
+
+
+            result.append(toString(num));
+            result.setCharAt(result.length() - 1, ']');
+            result.append(",");
+        }
+
+
+        return result.toString();
+
+    }
+
+    public static String toStringInline(char[][] nums) {
+        if (null == nums || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        for (char[] num : nums) {
 
 
             result.append(toString(num));
@@ -830,6 +864,41 @@ public class CommonMethods {
 
     }
 
+    public static boolean equals(char[] in1, char[] in2) {
+        if(in1!=null && in2 == null)
+            return false;
+        if(in1 == null && in2!= null)
+            return false;
+        if(in1.length != in2.length)
+            return false;
+
+        for(int i=0; i<in1.length; i++) {
+            if(in1[i] != in2[i])
+                return false;
+        }
+        return true;
+
+    }
+
+    public static boolean equals(char[][] in1, char[][] in2) {
+        if(in1!=null && in2 == null)
+            return false;
+        if(in1 == null && in2!= null)
+            return false;
+
+        if(in1.length != in2.length)
+            return false;
+
+        if(in1[0].length != in2[0].length)
+            return false;
+
+        for(int i=0; i<in1.length; i++) {
+            if(!equals(in1[i], in2[i]))
+                return false;
+        }
+        return true;
+
+    }
     public static boolean equals(Integer[][] expected, List<List<Integer>> result) {
         boolean test = true;
 

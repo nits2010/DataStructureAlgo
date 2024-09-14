@@ -69,6 +69,8 @@ import java.util.stream.IntStream;
  * @UnionFind
  * @Matrix
  * @Graph
+ * @LeetCodeLockedProblem
+ * @PremimumQuestion
  *
  * <p><p>
  * Company Tags
