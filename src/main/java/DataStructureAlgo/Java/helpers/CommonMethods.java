@@ -880,7 +880,43 @@ public class CommonMethods {
 
     }
 
+    public static boolean equals(int[] in1, int[] in2) {
+        if(in1!=null && in2 == null)
+            return false;
+        if(in1 == null && in2!= null)
+            return false;
+        if(in1.length != in2.length)
+            return false;
+
+        for(int i=0; i<in1.length; i++) {
+            if(in1[i] != in2[i])
+                return false;
+        }
+        return true;
+
+    }
+
     public static boolean equals(char[][] in1, char[][] in2) {
+        if(in1!=null && in2 == null)
+            return false;
+        if(in1 == null && in2!= null)
+            return false;
+
+        if(in1.length != in2.length)
+            return false;
+
+        if(in1[0].length != in2[0].length)
+            return false;
+
+        for(int i=0; i<in1.length; i++) {
+            if(!equals(in1[i], in2[i]))
+                return false;
+        }
+        return true;
+
+    }
+
+    public static boolean equals(int[][] in1, int[][] in2) {
         if(in1!=null && in2 == null)
             return false;
         if(in1 == null && in2!= null)
