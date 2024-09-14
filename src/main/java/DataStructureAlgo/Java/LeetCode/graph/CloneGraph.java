@@ -27,7 +27,7 @@ import java.util.*;
 public class CloneGraph {
 
     // Definition for a Node.
-    class Node {
+    static class Node {
         public int val;
         public List<Node> neighbors;
 
@@ -42,7 +42,7 @@ public class CloneGraph {
 
     ;
 
-    class Solution {
+    static class Solution {
         public Node cloneGraph(Node node) {
 
             return buildAndClone(node);

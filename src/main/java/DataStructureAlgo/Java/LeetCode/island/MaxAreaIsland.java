@@ -74,7 +74,7 @@ public class MaxAreaIsland {
         if (grid == null || grid.length == 0 || grid[0].length == 0)
             return 0;
 
-        int size[] = {0};
+        int[] size = {0};
         int maxSize = 0;
         int m = grid.length;
         int n = grid[0].length;
@@ -115,9 +115,7 @@ public class MaxAreaIsland {
     }
 
     private static boolean isSafe(int[][] grid, int m, int n, int r, int c) {
-        if (r >= 0 && c >= 0 && r < m && c < n && grid[r][c] == 1)
-            return true;
-        return false;
+        return r >= 0 && c >= 0 && r < m && c < n && grid[r][c] == 1;
     }
 
 

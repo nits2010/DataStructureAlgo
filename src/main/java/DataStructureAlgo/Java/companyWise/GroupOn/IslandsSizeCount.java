@@ -5,7 +5,7 @@ package DataStructureAlgo.Java.companyWise.GroupOn;
  * Date: 26/04/19
  * Description: Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.
  * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
- * You may assume all four edges of the grid are all surrounded by water.
+ * You may assume water all surrounds all four edges of the grid.
  * <p>
  * Example 1:
  * <p>
@@ -29,8 +29,8 @@ package DataStructureAlgo.Java.companyWise.GroupOn;
 public class IslandsSizeCount {
 
 
-    static int row[] = {-1, -1, -1, 0, 0, 1, 1, 1};
-    static int col[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+    static int[] row = {-1, -1, -1, 0, 0, 1, 1, 1};//digonal,row,col
+    static int[] col = {-1, 0, 1, -1, 1, -1, 0, 1};
 
     static class Islands {
         public int count;
@@ -48,18 +48,18 @@ public class IslandsSizeCount {
     }
 
     public static void main(String []args) {
-        int mat[][] = {{1, 0, 0, 0, 1, 0},
-                {0, 1, 0, 0, 1, 0},
-                {0, 0, 1, 1, 0, 0},
-                {0, 0, 0, 0, 0, 1},
-                {0, 0, 0, 0, 0, 1},
-                {0, 1, 1, 0, 1, 0}};
+        int[][] mat = { {1, 0, 0, 0, 1, 0},
+                        {0, 1, 0, 0, 1, 0},
+                        {0, 0, 1, 1, 0, 0},
+                        {0, 0, 0, 0, 0, 1},
+                        {0, 0, 0, 0, 0, 1},
+                        {0, 1, 1, 0, 1, 0}};
 
         Islands islands = islands(mat);
         System.out.println(islands);
     }
 
-    private static Islands islands(int mat[][]) {
+    private static Islands islands(int[][] mat) {
 
         if (mat == null || mat.length == 0)
             return null;
@@ -74,7 +74,7 @@ public class IslandsSizeCount {
 
         Islands islands = new Islands();
 
-        boolean marked[][] = new boolean[n][m];
+        boolean[][] marked = new boolean[n][m];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -109,7 +109,7 @@ public class IslandsSizeCount {
      * @param islands
      * @param marked
      */
-    private static void countIslands(int[][] mat, int n, int m, int r, int c, Islands islands, boolean marked[][]) {
+    private static void countIslands(int[][] mat, int n, int m, int r, int c, Islands islands, boolean[][] marked) {
 
 
         marked[r][c] = true;
@@ -127,9 +127,7 @@ public class IslandsSizeCount {
 
     private static boolean isSafe(int[][] mat, int n, int m, int r, int c, boolean[][] marked) {
 
-        if (r >= 0 && c >= 0 && r < n && c < m && !marked[r][c] && mat[r][c] == 1)
-            return true;
-        return false;
+        return r >= 0 && c >= 0 && r < n && c < m && !marked[r][c] && mat[r][c] == 1;
 
     }
 

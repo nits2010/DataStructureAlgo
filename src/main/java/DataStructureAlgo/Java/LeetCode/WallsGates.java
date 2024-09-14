@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
- * Description: http://leetcode.liangjiateng.cn/leetcode/walls-and-gates/description
+ * Description: https://leetcode.ca/all/286.html
  * 286.Walls and Gates
  * <p>
  * You are given a m x n 2D grid initialized with these three possible values.
@@ -77,8 +77,8 @@ public class WallsGates {
 class WallsGatesDFS {
 
 
-    static int row[] = {0, 0, 1, -1};
-    static int col[] = {1, -1, 0, 0};
+    static int[] row = {0, 0, 1, -1};
+    static int[] col = {1, -1, 0, 0};
 
     public void wallsAndGates(int[][] rooms) {
 
@@ -88,7 +88,7 @@ class WallsGatesDFS {
         int n = rooms.length;
         int m = rooms[0].length;
 
-        boolean visited[][] = new boolean[n][m];
+        boolean[][] visited = new boolean[n][m];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -123,9 +123,7 @@ class WallsGatesDFS {
     }
 
     private boolean isSafe(int[][] rooms, boolean[][] visited, int i, int j, int distance) {
-        if (i >= 0 && i < rooms.length && j >= 0 && j < rooms[0].length && !visited[i][j] && rooms[i][j] != -1 && distance <= rooms[i][j])
-            return true;
-        return false;
+        return i >= 0 && i < rooms.length && j >= 0 && j < rooms[0].length && !visited[i][j] && rooms[i][j] != -1 && distance <= rooms[i][j];
     }
 
 }
