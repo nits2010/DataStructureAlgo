@@ -57,7 +57,7 @@ public class WallsGates {
     }
 
 
-    private static void testBFS(int room[][]) {
+    private static void testBFS(int[][] room) {
 
         System.out.println("\nGiven room");
         System.out.println(CommonMethods.toString(room));
