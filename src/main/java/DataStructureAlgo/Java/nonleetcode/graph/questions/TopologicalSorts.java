@@ -11,9 +11,15 @@ import java.util.stream.Stream;
 public class TopologicalSorts {
 
     /**
-     * This works for both, Directed Graph
-     * and Un-Directed Graph
+     * This works for both, Directed Graph and Un-Directed Graph
      * DFS
+     *
+     * Tarjan’s Algorithms：
+     * https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm DFS based，
+     *
+     * loop through each node of the graph in an arbitrary order，
+     * initiating a depth-first search that terminates when it hits any node that has already been visited
+     * since the beginning of the topological sort or the node has no outgoing edges (i.e. a leaf node).
      *
      * @return
      */
@@ -57,6 +63,7 @@ public class TopologicalSorts {
     }
 
     /**
+     * https://takeuforward.org/data-structure/kahns-algorithm-topological-sort-algorithm-bfs-g-22/
      * This works for only, Directed Graph
      * because A DAG G has at least one vertex with in-degree 0 and one vertex with out-degree 0.
      *
