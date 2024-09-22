@@ -19,11 +19,24 @@
 
 ## Top Question Lists (Important)
 
+- [Meta Question](https://docs.google.com/spreadsheets/d/1jpve7A2R6pjoyZd5povPdZ7lATCPnoSgtNgFZ-zmtLo/edit?gid=2103329868#gid=2103329868)
 - [450 Top Quality Questions (Google Drive)](https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view)
 - [Top 100 Questions](https://topswe.com/)
 - [Top 174 Company-Wise Patterns](https://seanprashad.com/leetcode-patterns/)
 - [TakeYouForward's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
 - [Naukri.com Code360 Problems](https://www.naukri.com/code360/problems)
+
+## Here are the leetcode lists 
+
+- [Blind 75](https://leetcode.com/list/oizxjoit)
+  - [list](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
+  - [Blind 75 Solutions](https://takeuforward.org/interviews/blind-75-leetcode-problems-detailed-video-solutions)
+- [Leetcode 75 hard](https://leetcode.com/studyplan/leetcode-75/)
+- [Grind 169](https://leetcode.com/list/rabvlt31)
+- [Grind 75](https://leetcode.com/list/rab78cw1)
+- [Neetcode 150](https://leetcode.com/list/rr2ss0g5)
+- [SQL 45](https://leetcode.com/list/o2qifkts)
+- [75HARD](https://github.com/strawhatYashdeepRathi/75HARD)
 
 ## LeetCode Premium Questions Solutions
 - [LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solution)
@@ -35,6 +48,9 @@
 
 - [Walkccc - LeetCode Problems](https://walkccc.me/LeetCode/problems/3/)
 - [LeetCode The Hard Way - Heap Tutorial](https://leetcodethehardway.com/tutorials/basic-topics/heap)
+
+## LeetCode Topic wise questions and solutions
+- [Wento-shap gitbook](https://wento-shap.gitbook.io/leetcode)
 
 ## LeetCode Courses
 

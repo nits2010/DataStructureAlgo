@@ -27,7 +27,7 @@ public class TopologicalSorts {
 
         boolean visited[] = new boolean[vertices];
 
-        //visit every vertices one by one;
+        //visit every vertex one by one;
 
         Stack<Integer> stack = new Stack<>();
 
