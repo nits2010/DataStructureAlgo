@@ -70,10 +70,13 @@ import java.util.*;
  * @Bitmask <p><p>
  * Company Tags
  * -----
- * @Google <p><p>
+ * @Google
+ * @Pinterest
+ * <p><p>
  *
  *
- * @Editorial
+ * @Editorial https://leetcode.com/problems/parallel-courses-ii/solutions/1373540/detailed-explanations-diagrams-annotated-code
+ *
  * ---------
  * chatgpt
  * -----
