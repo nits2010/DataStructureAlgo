@@ -71,7 +71,7 @@
 
 
 ## System Design Practice
-
+- {IMP}[System Design Case Study](https://github.com/Sam-Si/system-design?tab=readme-ov-file#a-companies)
 - [WorkatTech - System Design Practice](https://workat.tech/system-design/practice?difficulty=all)
 - [Yushangdi - System Design Interview Tips](https://github.com/yushangdi/Leetcode-1/blob/master/Design/System_Design_interview.md#tips)
 - [Coder-World - Complete System Design](https://github.com/Coder-World04/Complete-System-Design)
