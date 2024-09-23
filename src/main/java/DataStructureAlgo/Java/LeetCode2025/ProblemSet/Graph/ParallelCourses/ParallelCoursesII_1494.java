@@ -10,7 +10,10 @@ import java.util.*;
  * Question Category: 1494. Parallel Courses II
  * Description:https://leetcode.com/problems/parallel-courses-ii/description/
  * <p>
- * You are given an integer n, which indicates that there are n courses labeled from 1 to n. You are also given an array relations where relations[i] = [prevCoursei, nextCoursei], representing a prerequisite relationship between course prevCoursei and course nextCoursei: course prevCoursei has to be taken before course nextCoursei. Also, you are given the integer k.
+ * You are given an integer n, which indicates that there are n courses labeled from 1 to n.
+ * You are also given an array relations where relations[i] = [prevCoursei, nextCoursei],
+ * representing a prerequisite relationship between course prevCoursei and course nextCoursei: course prevCoursei has to be taken before course nextCoursei.
+ * Also, you are given the integer k.
  * <p>
  * In one semester, you can take at most k courses as long as you have taken all the prerequisites in the previous semesters for the courses you are taking.
  * <p>
