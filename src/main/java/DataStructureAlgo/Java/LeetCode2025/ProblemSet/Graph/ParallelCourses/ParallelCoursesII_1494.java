@@ -75,7 +75,8 @@ import java.util.*;
  * <p><p>
  *
  *
- * @Editorial https://leetcode.com/problems/parallel-courses-ii/solutions/1373540/detailed-explanations-diagrams-annotated-code
+ * @Editorial chatgpt: https://chatgpt.com/share/66f1c46c-942c-8011-913d-800b75925028
+ * https://leetcode.com/problems/parallel-courses-ii/solutions/1373540/detailed-explanations-diagrams-annotated-code
  *
  * ---------
  * chatgpt
