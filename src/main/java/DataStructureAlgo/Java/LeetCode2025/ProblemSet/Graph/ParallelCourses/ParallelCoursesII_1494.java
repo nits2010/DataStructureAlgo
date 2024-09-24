@@ -161,6 +161,121 @@ public class ParallelCoursesII_1494 {
 
     }
 
+    static class DFS_Backtracking {
+
+        static class Backtracking {
+
+            private int minSemesters = Integer.MAX_VALUE;
+            public int minNumberOfSemesters(int n, int[][] relations, int k) {
+                if (n == 0 || k == 0)
+                    return -1;
+
+                if (relations.length == 0)
+                    return (int) Math.ceil((double) n / k);
+
+                List<List<Integer>> adjList = graph(n, relations);
+
+                dfs_backtracking(n, k , adjList, new HashSet<>(), 0);
+
+                return minSemesters;
+            }
+
+            private void dfs_backtracking(int n, int k, List<List<Integer>> adjList, Set<Integer> coursesTaken, int semester){
+                if(coursesTaken.size() == n){
+                    minSemesters = Math.min(minSemesters, semester);
+                    return;
+                }
+
+                //semester + estimated number of semesters left exceeds minSemesters
+                if (semester + (int)Math.ceil((n - coursesTaken.size()) / (double)k) >= minSemesters) {
+                    return;
+                }
+
+                List<Integer> available = availableCourses(adjList, coursesTaken);
+
+                //if we have only <= k courses available, then take them all
+                if(available.size() <= k){
+
+                    coursesTaken.addAll(available);
+
+                    dfs_backtracking(n, k, adjList, coursesTaken, semester + 1);
+
+                    //backtrack
+                    coursesTaken.removeAll(available);
+
+                }else{
+
+                    //if there are more than k courses available, then we need to choose all of the combinations
+                    List<List<Integer>> combinations = combinations(available, k);
+
+                    for(List<Integer> combination : combinations){
+                        coursesTaken.addAll(combination);
+
+                        dfs_backtracking(n, k, adjList, coursesTaken, semester + 1);
+
+                        //backtrack
+                        coursesTaken.removeAll(combination);
+                    }
+                }
+
+            }
+
+            private  List<Integer> availableCourses(List<List<Integer>> adjList, Set<Integer> coursesTaken) {
+                List<Integer> available = new ArrayList<>();
+                for (int i = 0; i< adjList.size(); i++){
+                    boolean isAvailable = !coursesTaken.contains(i); // if this is not taken earlier
+                    isAvailable = isAvailable && coursesTaken.containsAll(adjList.get(i)); // if all the prerequisites are taken
+
+                    if(isAvailable)
+                        available.add(i);
+                }
+                return available;
+            }
+
+            /**
+             * {@link DataStructureAlgo.Java.nonleetcode.Combinations}
+             * @param available
+             * @param k
+             * @return
+             */
+            private  List<List<Integer>> combinations(List<Integer> available, int k) {
+                List<List<Integer>> allCombinations = new ArrayList<>();
+                combinations(available, k, new ArrayList<>(), allCombinations, 0);
+                return allCombinations;
+            }
+
+
+            private  void combinations(List<Integer> available, int k, List<Integer> currentCombination, List<List<Integer>> allCombinations, int pickFrom) {
+                if ( k == currentCombination.size()) {
+                    allCombinations.add(new ArrayList<>(currentCombination));
+                    return;
+                }
+
+                for (int i = pickFrom; i<available.size(); i++){
+                    currentCombination.add(available.get(i));
+                    combinations(available, k, currentCombination, allCombinations, i+1);
+                    currentCombination.remove(currentCombination.size()-1);
+                }
+            }
+
+            private List<List<Integer>> graph(int n, int [][]relations){
+                List<List<Integer>> adjList = new ArrayList<>(n+1);
+
+                for (int i = 0; i < n; i++) {
+                    adjList.add(new ArrayList<>());
+                }
+
+                for(int []relation : relations) {
+                    int prevCourse = relation[0] - 1; //courses labeled from 1 to n
+                    int nextCourse = relation[1] - 1 ; //courses labeled from 1 to n
+                    adjList.get(nextCourse).add(prevCourse); // nextCourse can only be taken when prevCourse is completed
+                }
+                return adjList;
+            }
+        }
+
+    }
+
     static class DFS_BitMasking {
         static class SolutionRecursive {
 
@@ -281,8 +396,8 @@ public class ParallelCoursesII_1494 {
 
                 for (int i = 0; i < n; i++) {
                     boolean isAvailable = (mask & (1 << i)) == 0;
-                    // this will only be true, mask has the same bit set (course taken) as prerequisite[i], since prerequisite[i] hold set bit all the courses that i'th course has
-                    //dependency
+                    // this will only be true, mask has the same bit set (course taken) as prerequisite[i],
+                    // since prerequisite[i] hold set bit all the courses that i'th course has dependency
                     isAvailable = isAvailable && ((mask & prerequisites[i]) == prerequisites[i]);
 
                     if (isAvailable)
@@ -459,117 +574,5 @@ public class ParallelCoursesII_1494 {
         }
     }
 
-    static class DFS_Backtracking {
 
-        static class Backtracking {
-
-            private int minSemesters = Integer.MAX_VALUE;
-            public int minNumberOfSemesters(int n, int[][] relations, int k) {
-                if (n == 0 || k == 0)
-                    return -1;
-
-                if (relations.length == 0)
-                    return (int) Math.ceil((double) n / k);
-
-                List<List<Integer>> adjList = graph(n, relations);
-
-                dfs_backtracking(n, k , adjList, new HashSet<>(), 0);
-
-                return minSemesters;
-            }
-
-            private void dfs_backtracking(int n, int k, List<List<Integer>> adjList, Set<Integer> coursesTaken, int semester){
-                if(coursesTaken.size() == n){
-                    minSemesters = Math.min(minSemesters, semester);
-                    return;
-                }
-
-                //semester + estimated number of semesters left exceeds minSemesters
-                if (semester + (int)Math.ceil((n - coursesTaken.size()) / (double)k) >= minSemesters) {
-                    return;
-                }
-
-                List<Integer> available = availableCourses(adjList, coursesTaken);
-
-                //if we have only <= k courses available, then take them all
-                if(available.size() <= k){
-
-                    coursesTaken.addAll(available);
-
-                    dfs_backtracking(n, k, adjList, coursesTaken, semester + 1);
-
-                    //backtrack
-                    coursesTaken.removeAll(available);
-
-                }else{
-
-                    //if there are more than k courses available, then we need to choose all of the combinations
-                    List<List<Integer>> combinations = combinations(available, k);
-
-                    for(List<Integer> combination : combinations){
-                        coursesTaken.addAll(combination);
-
-                        dfs_backtracking(n, k, adjList, coursesTaken, semester + 1);
-
-                        //backtrack
-                        coursesTaken.removeAll(combination);
-                    }
-                }
-
-            }
-
-            private  List<Integer> availableCourses(List<List<Integer>> adjList, Set<Integer> coursesTaken) {
-                List<Integer> available = new ArrayList<>();
-                for (int i = 0; i< adjList.size(); i++){
-                    boolean isAvailable = !coursesTaken.contains(i); // if this is not taken earlier
-                    isAvailable = isAvailable && coursesTaken.containsAll(adjList.get(i)); // if all the prerequisites are taken
-
-                    if(isAvailable)
-                        available.add(i);
-                }
-                return available;
-            }
-
-            /**
-             * {@link DataStructureAlgo.Java.nonleetcode.Combinations}
-             * @param available
-             * @param k
-             * @return
-             */
-            private  List<List<Integer>> combinations(List<Integer> available, int k) {
-                List<List<Integer>> allCombinations = new ArrayList<>();
-                combinations(available, k, new ArrayList<>(), allCombinations, 0);
-                return allCombinations;
-            }
-
-
-            private  void combinations(List<Integer> available, int k, List<Integer> currentCombination, List<List<Integer>> allCombinations, int pickFrom) {
-                if ( k == currentCombination.size()) {
-                    allCombinations.add(new ArrayList<>(currentCombination));
-                    return;
-                }
-
-                for (int i = pickFrom; i<available.size(); i++){
-                    currentCombination.add(available.get(i));
-                    combinations(available, k, currentCombination, allCombinations, i+1);
-                    currentCombination.remove(currentCombination.size()-1);
-                }
-            }
-
-            private List<List<Integer>> graph(int n, int [][]relations){
-                List<List<Integer>> adjList = new ArrayList<>(n+1);
-
-                for (int i = 0; i < n; i++) {
-                    adjList.add(new ArrayList<>());
-                }
-
-                for(int []relation : relations) {
-                    int prevCourse = relation[0] - 1; //courses labeled from 1 to n
-                    int nextCourse = relation[1] - 1 ; //courses labeled from 1 to n
-                    adjList.get(nextCourse).add(prevCourse); // nextCourse can only be taken when prevCourse is completed
-                }
-                return adjList;
-            }
-        }
-    }
 }
