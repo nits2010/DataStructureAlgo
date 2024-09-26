@@ -39,7 +39,7 @@
 - [75HARD](https://github.com/strawhatYashdeepRathi/75HARD)
 
 ## LeetCode Premium Questions Solutions
-- [LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solution)
+- [LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solutionBottomUp)
 - [List of questions](https://github.com/doocs/leetcode?tab=readme-ov-file)
 - [LeetCode.ca - All Problems](https://leetcode.ca/all/problems.html)
 - [Tony Cao's Gitbook](https://tonycao.gitbooks.io/leetcode-locked)
