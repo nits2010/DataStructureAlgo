@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-08
- * Description:https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
+ * Description: https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
  * <p>
  * 1) Create a Min Heap of size V where V is the number of vertices in the given graph.
  * Every node of min heap contains vertex number and distance value of the vertex.
@@ -17,7 +17,7 @@ import java.util.*;
  * 3) While Min Heap is not empty, do following
  * …..a) Extract the vertex with minimum distance value node from Min Heap. Let the extracted vertex be u.
  * …..b) For every adjacent vertex v of u, check if v is in Min Heap. If v is in Min Heap and distance value is more
- * than weight of u-v plus distance value of u, then update the distance value of v.
+ *  than the weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
  * Time Complexity: O(E*log(V))
  * The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops.
