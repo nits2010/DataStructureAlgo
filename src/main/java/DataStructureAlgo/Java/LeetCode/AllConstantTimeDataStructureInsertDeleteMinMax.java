@@ -1,9 +1,9 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Design.AllOOneDataStructure_432;
+import DataStructureAlgo.Java.helpers.CommonMethods;
+
+import java.util.*;
 
 /**
  * Author: Nitin Gupta
@@ -21,12 +21,61 @@ import java.util.Set;
  */
 public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
-    public static void main(String []args) {
+
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test1(new String[]{"AllOne", "inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","getMinKey"},
+                new String[]{"a","b" ,"c" ,"d" ,"a" ,"b" ,"c" ,"d" ,"c" ,"d" ,"d" ,"a"},
+                new String[]{null,null,null,null,null,null,null,null,null,null,null,null,null,"b"});
+
+        CommonMethods.printResult(test);
+    }
+
+    private static boolean test1(String[] operations, String[] keys, String[] expected) {
+
+        System.out.println("-----------------------------------------------------------");
+        System.out.println(" Operations : " + Arrays.toString(operations) + " keys : " + Arrays.toString(keys)
+                + "\n expected : " + Arrays.toString(expected));
+
+        int resultIndex = 0;
+        int keyIndex = 0;
         AllOne allOne = new AllOne();
-        allOne.inc("");
-        allOne.dec("");
-        allOne.getMaxKey();
-        allOne.getMinKey();
+        String[] result = new String[operations.length];
+        result[resultIndex] = null;
+
+        for (String operation : operations) {
+
+            if ("inc".equals(operation)) {
+
+                allOne.inc(keys[keyIndex++]);
+                result[resultIndex] = null;
+
+            } else if ("dec".equals(operation)) {
+
+                allOne.dec(keys[keyIndex++]);
+                result[resultIndex] = null;
+
+            } else if ("getMaxKey".equals(operation)) {
+
+                String max = allOne.getMaxKey();
+                System.out.println(" getMaxKey : " + max);
+                result[resultIndex] = max;
+
+            } else if ("getMinKey".equals(operation)) {
+
+                String min = allOne.getMinKey();
+                System.out.println(" getMinKey : " + min);
+                result[resultIndex] = min;
+
+            }
+            resultIndex++;
+        }
+
+        boolean pass = Arrays.deepEquals(result, expected);
+
+        System.out.println(" Result : "+ Arrays.toString(result) + " pass : " + (pass ? "Pass" : "Fail"));
+        return pass;
+
     }
 }
 
@@ -47,10 +96,10 @@ class AllOne {
         }
     }
 
-    // head: used as handle
+    // head: used as the handle
     Node head;
 
-    // tail: used as handle
+    // tail: used as the handle
     Node tail;
 
     // key -> Node
