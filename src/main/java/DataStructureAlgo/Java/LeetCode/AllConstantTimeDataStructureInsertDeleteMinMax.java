@@ -173,12 +173,12 @@ class AllOne {
             keyVsNodeMap.remove(key);
         } else {
             /**
-             * If key has more than 1 count, decrease hte count
+             * If key has more than 1 count, decrease the count
              */
             int newCount = oldNode.val - 1;
 
             /**
-             * If this count seen first time, add it and insert after old count node, as hte count has reduced so it will be
+             * If this count seen first time, add it and insert after old count node, as the count has reduced so it will be
              * towards tail
              */
             if (!countVsNodeMap.containsKey(newCount)) {
