@@ -24,6 +24,10 @@ public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
     public static void main(String[] args) {
         boolean test = true;
+        test &= test1(new String[]{"AllOne","inc","inc","getMaxKey","getMinKey","dec","dec","getMinKey","inc","getMinKey"},
+                new String[]{"hello","hello","hello","hello","hello"},
+                new String[]{null,null,null,"hello","hello",null,null,"",null,"hello"});
+
         test &= test1(new String[]{"AllOne", "inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","getMinKey"},
                 new String[]{"a","b" ,"c" ,"d" ,"a" ,"b" ,"c" ,"d" ,"c" ,"d" ,"d" ,"a"},
                 new String[]{null,null,null,null,null,null,null,null,null,null,null,null,null,"b"});
@@ -172,8 +176,10 @@ class AllOne {
     // Remove node if it becomes empty
     private void refreshNode(Node node) {
         if (node != head && node != tail && node.keys.isEmpty()) {
+            //remove this node
             node.prev.next = node.next;
             node.next.prev = node.prev;
+
             countToNodeMap.remove(node.count);
         }
     }
