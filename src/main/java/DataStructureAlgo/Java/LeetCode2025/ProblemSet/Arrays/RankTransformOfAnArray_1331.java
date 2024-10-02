@@ -125,9 +125,9 @@ public class RankTransformOfAnArray_1331 {
             Map<Integer, Integer> keyVsRank = new HashMap<>();
 
             int rank = 1;
-            for(int i=0; i<arr.length; i++){
-                if(!keyVsRank.containsKey(arr[i])){
-                    keyVsRank.put(arr[i], rank++);
+            for (int j : arr) {
+                if (!keyVsRank.containsKey(j)) {
+                    keyVsRank.put(j, rank++);
                 }
             }
 
