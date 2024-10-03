@@ -13,35 +13,35 @@ import java.util.*;
  * Description: https://leetcode.com/problems/merge-k-sorted-lists
  * <p>
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
- *
+ * <p>
  * Merge all the linked-lists into one sorted linked-list and return it.
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: lists = [[1,4,5],[1,3,4],[2,6]]
  * Output: [1,1,2,3,4,4,5,6]
  * Explanation: The linked-lists are:
  * [
- *   1->4->5,
- *   1->3->4,
- *   2->6
+ * 1->4->5,
+ * 1->3->4,
+ * 2->6
  * ]
  * merging them into one sorted list:
  * 1->1->2->3->4->4->5->6
  * Example 2:
- *
+ * <p>
  * Input: lists = []
  * Output: []
  * Example 3:
- *
+ * <p>
  * Input: lists = [[]]
  * Output: []
- *
- *
+ * <p>
+ * <p>
  * Constraints:
- *
+ * <p>
  * k == lists.length
  * 0 <= k <= 104
  * 0 <= lists[i].length <= 500
@@ -56,14 +56,12 @@ import java.util.*;
  * <p>
  * Tags
  * -----
+ *
  * @hard
  * @LinkedList
  * @DivideandConquer
  * @Heap(PriorityQueue)
- * @MergeSort
- *
- *
- * <p>
+ * @MergeSort <p>
  * Company Tags
  * -----
  * @Facebook
@@ -71,7 +69,6 @@ import java.util.*;
  * @Microsoft
  * @Apple
  * @Google
- *
  * @Editorial <a href="https://leetcode.com/problems/merge-k-sorted-lists/solutions/5606397/beat-100-simple-easy-to-explain-solution">...</a>
  */
 
@@ -102,7 +99,7 @@ public class MergeKSortedLists_23 {
 
         System.out.println("\nInput: ");
         Arrays.stream(listNode).map(CommonMethods::print).forEach(System.out::println);
-        System.out.println("Expected: "+ CommonMethods.print(expectedList));
+        System.out.println("Expected: " + CommonMethods.print(expectedList));
 
         ListNode headPQ = pq.mergeKLists(Arrays.stream(list).map(ListBuilder::arrayToSinglyList).toArray(ListNode[]::new));
         ListNode headKWayIterative = kWayMergeIterative.mergeKLists(Arrays.stream(list).map(ListBuilder::arrayToSinglyList).toArray(ListNode[]::new));
@@ -123,17 +120,16 @@ class MergeKSortedLists {
      * 3. move to next element of the list whose node extracted from pq.
      * 4. Repeat till all the element process. if PQ still have some element, simply append at the end of final list.
      * T/S: O(n*logk) / O(k) ; n is total number of elements in all the list
-     *
      */
     static class SolutionUsingPriorityQueue {
 
         public ListNode mergeKLists(ListNode[] lists) {
-            if(lists == null || lists.length ==0)
+            if (lists == null || lists.length == 0)
                 return null;
-            if(lists.length == 1)
+            if (lists.length == 1)
                 return lists[0];
 
-            final PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o-> o.val));
+            final PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
 
             //enqueue first element for all the list
             // O(k*logK) ; since we are not given an array to pq directly, hence it will take O(k*logK)
@@ -142,17 +138,17 @@ class MergeKSortedLists {
 //                if(list!=null)
 //                    priorityQueue.offer(list);
 
-            ListNode resultHead = null, tail=null;
+            ListNode resultHead = null, tail = null;
 
             //O(n*logK) ; n is total number of elements in all the list
-            while(!priorityQueue.isEmpty()){
+            while (!priorityQueue.isEmpty()) {
 
                 final ListNode current = priorityQueue.poll();
 
-                if(resultHead == null) {
+                if (resultHead == null) {
                     resultHead = current;
                     tail = current;
-                }else{
+                } else {
                     tail.next = current;
                     tail = tail.next;
                 }
@@ -169,73 +165,73 @@ class MergeKSortedLists {
 
 
     /**
-     * In order to do the merge of k list, we have to divide the list in chunk of two list merging.
-     * One way of doing is, first merging, first two list and then merge the resultant list to next list and so on.
+     * In order to do the merge of k list, we have to divide the list in chunk of two lists merging.
+     * One way of doing is, first merging, first two lists and then merge the resultant list to the next list and so on.
      * Doing this way, will make a binary tree, left skewed. Which is not optimal in some cases.
-     *
-     * the other way is merging, by making complete binary tree. Which is merging first two list, merging next two list and so on.
-     * And apply the same to resultant list as well.
+     * <p>
+     * the other way is merging, by making complete binary tree. Which is merging the first two lists, merging next two list and so on.
+     * And apply the same to the resultant list as well.
      * This way this will become complete binary tree, which has height log(n).
-     *
-     * This is also known as Tournament binary tree.
-     *
-     * Now inorder to proceed with this solution, we have to from height 1 to height log(n) base 2. which can be done by height = 1, height = height*2
+     * <p>
+     * This is also known as a Tournament binary tree.
+     * <p>
+     * Now in order to proceed with this solution, we have to from height 1 to height log(n) base 2. which can be done by height = 1, height = height*2
      * Since we should not cross the log(n) height, the outer boundary would be size of list node array.
-     *
+     * <p>
      * Each time we'll pick the current and the current+height lists and merge them keeping the resultant list at current position.
      */
     static class SolutionKWayMergeIterative {
 
         public ListNode mergeKLists(ListNode[] lists) {
-            if(lists == null || lists.length ==0)
+            if (lists == null || lists.length == 0)
                 return null;
-            if(lists.length == 1)
+            if (lists.length == 1)
                 return lists[0];
 
 
             int height = 1;
 
-            while (height < lists.length){
+            while (height < lists.length) {
 
-                for (int i=0; i+height < lists.length; i += 2*height){
-                    lists[i] = merge2List(lists[i], lists[i+height]);
+                for (int i = 0; i + height < lists.length; i += 2 * height) {
+                    lists[i] = merge2List(lists[i], lists[i + height]);
                 }
-                height *=2;
+                height *= 2;
             }
 
             return lists[0];
         }
 
-        private ListNode merge2List(ListNode first, ListNode second){
-            if(first == null)
+        private ListNode merge2List(ListNode first, ListNode second) {
+            if (first == null)
                 return second;
-            if(second == null)
+            if (second == null)
                 return first;
 
             ListNode head, tail;
 
 
-            if(first.val <= second.val ){
+            if (first.val <= second.val) {
                 head = tail = first;
                 first = first.next;
-            }else{
+            } else {
                 head = tail = second;
                 second = second.next;
             }
 
-            while (first!=null && second!=null){
+            while (first != null && second != null) {
 
-                if(first.val <= second.val){
+                if (first.val <= second.val) {
                     tail.next = first;
                     first = first.next;
-                }else{
+                } else {
                     tail.next = second;
                     second = second.next;
                 }
                 tail = tail.next;
             }
 
-            if(first!=null)
+            if (first != null)
                 tail.next = first;
             else
                 tail.next = second;
