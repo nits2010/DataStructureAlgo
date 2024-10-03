@@ -66,7 +66,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString_28 {
     }
     static class Solution {
         /**
-         * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/1330964495/
          * O(n*m)
          * @param haystack
          * @param needle
@@ -99,7 +98,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString_28 {
         }
 
         /**
-         * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/1330967988/
          * 0
          * ms
          * Beats
