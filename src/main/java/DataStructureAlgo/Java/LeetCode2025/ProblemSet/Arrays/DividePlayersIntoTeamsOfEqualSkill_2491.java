@@ -168,7 +168,7 @@ public class DividePlayersIntoTeamsOfEqualSkill_2491 {
      * remainingSKill = (T - cs)
      * which can be looked up in the array. For which we can use the hashmaps/arrays (since skill is limited to 1000 only).
      *
-     * Now the minimum target skill is nothing but the sum of a pair skill. If we know the totalSkill (sum of elements in array ) then
+     * Now the minimum target skill is nothing but the sum of a pair skill. If we know the totalSkill (sum of elements in an array ), then
      * we can find the target skill as we need to divide the entire array in equal pairs and a total pair should be n/2;
      * Hence the target skill = totalSkill / (n/2);
      *
