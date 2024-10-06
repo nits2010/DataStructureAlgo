@@ -52,8 +52,8 @@ file_details.sort(key=lambda x: x[3], reverse=True)
 # Step 3: Create and write to the Markdown file
 with open(md_file_path, mode='w', encoding='utf-8') as md_file:
     # Write Markdown table headers with serial number (#)
-    md_file.write("| #  | File Name | GitHub Link | Creation Date |\n")
-    md_file.write("|---|-----------|-------------|---------------|\n")
+    md_file.write("| #  | File Name | GitHub Link | \n")
+    md_file.write("|---|-----------|-------------|\n")
 
     # Write each file's details to the markdown file with serial number starting from the oldest file
     total_files = len(file_details)  # Get total number of files for reverse numbering
@@ -62,6 +62,6 @@ with open(md_file_path, mode='w', encoding='utf-8') as md_file:
         creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
         # Calculate serial number in reverse order
         serial_number = total_files - idx
-        md_file.write(f"| {serial_number} | {file_name} | [link]({github_link}) | {creation_date} |\n")
+        md_file.write(f"| {serial_number} | {file_name} | [link]({github_link}) |\n")
 
 print(f"Markdown file has been generated at {md_file_path}")
