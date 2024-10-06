@@ -1,8 +1,6 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-
-import java.util.Arrays;
 
 /**
  * Author: Nitin Gupta

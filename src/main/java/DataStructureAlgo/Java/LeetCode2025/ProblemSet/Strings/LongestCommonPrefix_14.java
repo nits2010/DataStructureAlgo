@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings;
 
 import java.util.Arrays;
 /**
@@ -21,7 +21,7 @@ import java.util.Arrays;
  *  *
  *  * Input: strs = ["dog","racecar","car"]
  *  * Output: ""
- *  * Explanation: There is no common prefix among the input strings.
+ *  * Explanation: There is no common prefix amongst the input strings.
  *  *
  *  * Input: {“geeksforgeeks”, “geeks”, “geek”, “geezer”}
  *  * Output: “gee”
@@ -54,10 +54,6 @@ import java.util.Arrays;
  * -----
  *
  *
-/**
- * Author: Nitin Gupta
- * Date: 7/19/2024
- * Description:
  */
 public class LongestCommonPrefix_14 {
 
@@ -84,7 +80,7 @@ public class LongestCommonPrefix_14 {
          * https://leetcode.com/problems/longest-common-prefix/submissions/1329759019/
          * 1 ms
          * Beat 74.51%
-         *Time complexity : O (MxN) where M is length of first string and N is size of input array
+         *Time complexity : O (MxN) where M is a length of first string and N is size of input array
          *
          * 1. A slight improvement in this solution can be achieved by first finding the smallest string and consider that as candidateString
          * 2. Another improvement is that, we can pick the smallest length word, then find the next smallest length word and keep matching them.
