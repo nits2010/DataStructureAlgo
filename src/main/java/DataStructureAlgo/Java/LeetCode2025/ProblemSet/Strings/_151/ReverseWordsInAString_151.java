@@ -52,7 +52,9 @@ import java.util.Arrays;
  * Tags
  * -----
  *
- * @medium <p><p>
+ * @medium
+ * @TwoPointers
+ * @String <p><p>
  * Company Tags
  * -----
  * @Facebook
