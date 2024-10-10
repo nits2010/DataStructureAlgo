@@ -3,7 +3,7 @@
 ## DSA Pattern
 
 --------------------------------------------------------------------------
-See DSA_Pattern.md
+See [DSA_Pattern.md](https://github.com/nits2010/DataStructureAlgo/tree/master/DSA_Pattern)
 
 ## Problem list
 [Problems.md](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md)
