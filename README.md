@@ -4,7 +4,9 @@
 
 --------------------------------------------------------------------------
 See DSA_Pattern.md
-For DSA problems, refer [Problems.md](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md)
+
+## Problem list
+[Problems.md](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md)
 
 
 
