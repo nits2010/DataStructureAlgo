@@ -111,10 +111,10 @@ class CourseScheduleITopologicalBFS implements ICourseSchedule {
         for (int i = 0; i < numCourses; i++)
             adj[i] = new ArrayList<>();
 
-        for (int i = 0; i < prerequisites.length; i++) {
+        for (int[] ints : prerequisites) {
 
-            int take = prerequisites[i][0];
-            int prerequisite = prerequisites[i][1];
+            int take = ints[0];
+            int prerequisite = ints[1];
             adj[take].add(prerequisite);
         }
 
@@ -137,9 +137,9 @@ class CourseScheduleITopologicalBFS implements ICourseSchedule {
      */
     private boolean detectCycle(List<Integer>[] adjList, int numCourses) {
         /**
-         * Holds the in-degree of each vertices
+         * Holds the in-degree of each vertex
          */
-        int inDegree[] = inDegree(adjList, numCourses);
+        int[] inDegree = inDegree(adjList, numCourses);
         Queue<Integer> queue = new LinkedList<>();
 
         /**
@@ -192,7 +192,7 @@ class CourseScheduleITopologicalBFS implements ICourseSchedule {
 
 
 /**
- * We can avoid building graph and then inDegree in two different calls. Rather we'll build both of them in single call to avoid one more O(V+E)
+ * We can avoid building graph and then inDegree in two different calls. Rather, we'll build both of them in single call to avoid one more O(V+E)
  * iteration.
  * <p>
  * prerequisites Length => E at max
@@ -213,15 +213,15 @@ class CourseScheduleITopologicalBFSOptimized implements ICourseSchedule {
 
 
         final List<Integer>[] adj = new ArrayList[numCourses];
-        int inDegree[] = new int[numCourses];
+        int[] inDegree = new int[numCourses];
 
         for (int i = 0; i < numCourses; i++)
             adj[i] = new ArrayList<>();
 
-        for (int i = 0; i < prerequisites.length; i++) {
+        for (int[] ints : prerequisites) {
 
-            int take = prerequisites[i][0];
-            int prerequisite = prerequisites[i][1];
+            int take = ints[0];
+            int prerequisite = ints[1];
             adj[take].add(prerequisite);
             inDegree[prerequisite]++; //Count how many edges are landing on this course as pre-requisite
         }
@@ -358,10 +358,10 @@ class CourseScheduleITopologicalDFS implements ICourseSchedule {
         for (int i = 0; i < numCourses; i++)
             adj[i] = new ArrayList<>();
 
-        for (int i = 0; i < prerequisites.length; i++) {
+        for (int[] ints : prerequisites) {
 
-            int take = prerequisites[i][0];
-            int prerequisite = prerequisites[i][1];
+            int take = ints[0];
+            int prerequisite = ints[1];
             adj[take].add(prerequisite);
         }
 

@@ -57,7 +57,7 @@ public class BellmanFordShortestPath implements IShortestPath {
 
                 //if the old cost is not infinity && new cost is smaller than update it
                 if (distanceCost[u] != infinity
-                        && distanceCost[u] + w < distanceCost[v]) {
+                        && distanceCost[v] > distanceCost[u] + w  ) {
                     distanceCost[v] = distanceCost[u] + w;
                 }
             }
@@ -73,7 +73,7 @@ public class BellmanFordShortestPath implements IShortestPath {
 
             //if the old cost is not infinity && new cost is smaller than update it, now its negative weight cycle
             if (distanceCost[u] != infinity
-                    && distanceCost[u] + w < distanceCost[v]) {
+                    && distanceCost[v] > distanceCost[u] + w ) {
 
                 //the shortest path doesn't exist, hence empty list
                return shortestPath;

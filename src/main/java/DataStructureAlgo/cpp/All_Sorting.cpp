@@ -311,7 +311,7 @@ void Counting_Sort ( T *A , size_t size , int Range)
     for ( int i =0 ; i<size; i++)
         Temp[A[i]]+=1 ; // due to this all element which are present in A are marked
 
-    //increment the correct count so futher we can map directly : O(Range)~O(n)
+    //increment the correct count so further we can map directly : O(Range)~O(n)
     for ( int i =1 ; i<Range ; i++)
         Temp[i] = Temp[i] + Temp[i-1] ;
 

@@ -1,7 +1,7 @@
 
 All
 http://guozet.me/leetcode/
-& solution https://github.com/guozetang/leetcode
+& solutionBottomUp https://github.com/guozetang/leetcode
 
 https://evelynn.gitbooks.io
 

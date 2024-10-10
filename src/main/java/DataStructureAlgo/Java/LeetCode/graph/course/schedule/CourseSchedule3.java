@@ -219,7 +219,7 @@ class CourseSchedule3DPBottomUp implements ICourseSchedule {
 
 /**
  * We can apply greedy approach here, Once we sort the data based on end days, we can pick the course till we can pick
- * once we can't pick, then we need to see does this gives best pick{by taking this can we include more courses} by replacing previous picks
+ * once we can't pick, then we need to see does this give best pick{by taking this can we include more courses} by replacing previous picks
  * <p>
  * O(n^2) / O(n)
  */
@@ -245,7 +245,7 @@ class CourseScheduleGreedy implements ICourseSchedule {
                 count++;
                 courseList.add(courses[i][0]);
             } else {
-                //Find a course by which we can replace this course. For that j'th course duration > current duration. By doing this
+                //Find a course by which we can replace this course. For that j'th course duration > current duration. By doing this,
                 // we can make more days available as duration(j) - duration(i) will be +ve as duration(j) > duration(i)
                 //The more duration(j) is bigger than duration(i), more days can be added.
                 int best = courseList.size() - 1;
@@ -260,7 +260,7 @@ class CourseScheduleGreedy implements ICourseSchedule {
                     //remove that course duration
                     time = time - courseList.get(best);
 
-                    //add current cource duration
+                    //add current course duration
                     time = time + courses[i][0];
 
                     /**
@@ -281,12 +281,12 @@ class CourseScheduleGreedy implements ICourseSchedule {
 }
 
 /**
- * The pain point of above algorithm is to find the best course to replace.
- * For replacing we need to find the course which has maximum duration. If we somehow can find this duration fast, then we can reduce this time.
+ * The pain point of the above algorithm is to find the best course to replace.
+ * For replacing, we need to find the course which has maximum duration. If we somehow can find this duration fast, then we can reduce this time.
  * <p>
  * Which means, if we can keep our course duration sorted, we can do binary search on it.
  * <p>
- * One way is to make sure whenever we insert course duration in our list, we always place it to sorted manner only.
+ * One way is to make sure whenever we insert course duration in our list, we always place it to a sorted manner only.
  * <p>
  * Or
  * we can use Max-heap that will do this for use, and can give us max duration in O(1) time.

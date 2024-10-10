@@ -9,7 +9,8 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-07-31
  * Description: https://www.geeksforgeeks.org/anagram-substring-search-search-permutations/
- * Given a text txt[0..n-1] and a pattern pat[0..m-1], write a function search(char pat[], char txt[]) that prints all occurrences of pat[] and its permutations (or anagrams) in txt[]. You may assume that n > m.
+ * Given a text txt[0..n-1] and a pattern pat[0..m-1], write a function search(char pat[], char txt[]) that prints
+ * all occurrences of pat[] and its permutations (or anagrams) in txt[]. You may assume that n > m.
  * Expected time complexity is O(n)
  * <p>
  * Examples:
@@ -46,16 +47,16 @@ class AnagramSubstringSearch {
             return Collections.EMPTY_LIST;
 
 
-        int patternC[] = patternCounter(pattern);
+        int[] patternC = patternCounter(pattern);
 
-        int str[] = new int[256];
+        int[] str = new int[256];
 
         int n = string.length();
         int p = pattern.length();
 
 
         if (n == p)
-            return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
+            return string.equals(pattern) ? List.of(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++)
             str[string.charAt(i) - 'A']++;

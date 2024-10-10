@@ -2,10 +2,13 @@ package DataStructureAlgo.Java.LeetCode;
 
 import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
 
+import java.util.Objects;
+
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
  * Description: https://leetcode.com/problems/implement-strstr/
+ * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
  * <p>
  * Implement strStr().
  * <p>
@@ -23,7 +26,7 @@ import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
  * <p>
  * What should we return when needle is an empty string? This is a great question to ask during an interview.
  * <p>
- * For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
+ * For the purpose of this problem, we will return 0 when the needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
  * <p>
  * {@link KMP_KnuthMorrisPratt}
  */
@@ -50,7 +53,7 @@ public class ImplementStrStrKMPRobinKarp {
 
 
 /**
- * When String is are equal length, then compare it directly.
+ * When a String is are equal length, then compare it directly.
  * The important optimization is to compare both from start & middle parallel
  * <p>
  * Runtime: 0 ms, faster than 100% of Java online submissions for Implement strStr().
@@ -59,17 +62,17 @@ public class ImplementStrStrKMPRobinKarp {
 class KMPWithPreProcessing {
 
     public int strStr(String haystack, String needle) {
-        if ((haystack == null && needle == null) || (haystack.isEmpty() && needle.isEmpty()))
+        if ((haystack == null && needle == null) || (Objects.requireNonNull(haystack).isEmpty() && needle.isEmpty()))
             return 0;
 
-        if (haystack == null || haystack.isEmpty())
+        if (haystack.isEmpty())
             return -1;
 
         if (needle == null || needle.isEmpty())
             return 0;
 
         /**
-         * When Length of both are same, then its not good to apply KMP as it will take more time then just
+         * When the Lengths of both are same, then it's not good to apply KMP as it will take more time than just
          * comparing the string directly
          *
          */
@@ -80,7 +83,7 @@ class KMPWithPreProcessing {
     }
 
     /**
-     * When Length of both are same, then its not good to apply KMP as it will take more time then just
+     * When Length of both are same, then it's not good to apply KMP as it will take more time than just
      * comparing the string directly
      * <p>
      * O(n/2)
@@ -92,8 +95,8 @@ class KMPWithPreProcessing {
     private int preProcess(String haystack, String needle) {
 
         /**
-         * Since the string are same, we can compare the half part on each side. This will reduce the overall computation.
-         * This will like two pointer, one which matching from start and other is matching from middle.
+         * Since the string is same, we can compare the half-part on each side. This will reduce the overall computation.
+         * This will like two pointers, one which matching from start, and the other is matching from the middle.
          */
         for (int i = 0, len = needle.length() >> 1; i < len; i++) {
 
@@ -110,7 +113,7 @@ class KMPWithPreProcessing {
 
     private int kmpMatch(String haystack, String needle) {
 
-        int prefixWhichIsAlsoSuffix[] = prefixWhichIsAlsoSuffix(needle);
+        int[] prefixWhichIsAlsoSuffix = prefixWhichIsAlsoSuffix(needle);
 
         int i = 0;
         int j = 0;
@@ -136,7 +139,7 @@ class KMPWithPreProcessing {
 
     private int[] prefixWhichIsAlsoSuffix(final String pattern) {
 
-        int prefixWhichIsAlsoSuffix[] = new int[pattern.length()];
+        int[] prefixWhichIsAlsoSuffix = new int[pattern.length()];
         prefixWhichIsAlsoSuffix[0] = 0;
         int i = 1;
         int j = 0;
@@ -163,17 +166,17 @@ class KMPWithPreProcessing {
 class RobinKarp {
 
     public int strStr(String haystack, String needle) {
-        if ((haystack == null && needle == null) || (haystack.isEmpty() && needle.isEmpty()))
+        if ((haystack == null && needle == null) || (Objects.requireNonNull(haystack).isEmpty() && needle.isEmpty()))
             return 0;
 
-        if (haystack == null || haystack.isEmpty())
+        if (haystack.isEmpty())
             return -1;
 
         if (needle == null || needle.isEmpty())
             return 0;
 
         /**
-         * When Length of both are same, then its not good to apply KMP as it will take more time then just
+         * When the Lengths of both are same, then it's not good to apply KMP as it will take more time than just
          * comparing the string directly
          *
          */
@@ -190,7 +193,7 @@ class RobinKarp {
         for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
 
             String sub = haystack.substring(i, i + needle.length());
-            if (hash == sub.hashCode() && sub.equals(sub))
+            if (hash == sub.hashCode())
                 return i;
 
         }
@@ -199,7 +202,7 @@ class RobinKarp {
     }
 
     /**
-     * When Length of both are same, then its not good to apply KMP as it will take more time then just
+     * When Length of both are same, then it's not good to apply KMP as it will take more time then just
      * comparing the string directly
      * <p>
      * O(n/2)
@@ -211,8 +214,8 @@ class RobinKarp {
     private int preProcess(String haystack, String needle) {
 
         /**
-         * Since the string are same, we can compare the half part on each side. This will reduce the overall computation.
-         * This will like two pointer, one which matching from start and other is matching from middle.
+         * Since the string is same, we can compare the half-part on each side. This will reduce the overall computation.
+         * This will like two pointers, one which is matching from the start, and the other is matching from the middle.
          */
         for (int i = 0, len = needle.length() >> 1; i < len; i++) {
 
@@ -237,10 +240,10 @@ class RobinKarp {
 class KMPWithoutPreProcessing {
 
     public int strStr(String haystack, String needle) {
-        if ((haystack == null && needle == null) || (haystack.isEmpty() && needle.isEmpty()))
+        if ((haystack == null && needle == null) || (Objects.requireNonNull(haystack).isEmpty() && needle.isEmpty()))
             return 0;
 
-        if (haystack == null || haystack.isEmpty())
+        if (haystack.isEmpty())
             return -1;
 
         if (needle == null || needle.isEmpty())
@@ -254,7 +257,7 @@ class KMPWithoutPreProcessing {
 
     private int kmpMatch(String haystack, String needle) {
 
-        int prefixWhichIsAlsoSuffix[] = prefixWhichIsAlsoSuffix(needle);
+        int[] prefixWhichIsAlsoSuffix = prefixWhichIsAlsoSuffix(needle);
 
         int i = 0;
         int j = 0;

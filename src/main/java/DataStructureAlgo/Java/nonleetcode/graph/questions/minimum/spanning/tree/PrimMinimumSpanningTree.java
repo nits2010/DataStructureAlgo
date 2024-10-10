@@ -39,7 +39,7 @@ import java.util.*;
  */
 public class PrimMinimumSpanningTree implements IMinimumSpanningTree {
 
-    final class Node {
+    static final class Node {
 
         int source;
         int vertex;

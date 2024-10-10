@@ -119,7 +119,7 @@ class CloneTree {
         if (left != null)
             left.left = cloneLeftRight(left);
 
-        //for right node, clone it and set clone right correctly by recurring on right side
+        //for right node, clone it and set clone right correctly by recurring on the right side
         clone.right = cloneLeftRight(root.right);
 
         //return clone root node
@@ -144,11 +144,11 @@ class CloneTree {
         else
             cloneRoot.random = null;
 
-        //do for left sub-tree
+        //do for left subtree
         if (root.left != null && cloneRoot.left != null)
             cloneRandom(root.left.left, cloneRoot.left.left);
 
-        //do for right sub-tree
+        //do for right subtree
         cloneRandom(root.right, cloneRoot.right);
 
 

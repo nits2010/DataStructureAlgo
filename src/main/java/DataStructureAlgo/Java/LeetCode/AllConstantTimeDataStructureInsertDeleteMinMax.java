@@ -1,9 +1,9 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Design.AllOOneDataStructure_432;
+import DataStructureAlgo.Java.helpers.CommonMethods;
+
+import java.util.*;
 
 /**
  * Author: Nitin Gupta
@@ -21,180 +21,182 @@ import java.util.Set;
  */
 public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
-    public static void main(String []args) {
+
+    public static void main(String[] args) {
+        boolean test = true;
+        test &= test1(new String[]{"AllOne","inc","inc","getMaxKey","getMinKey","dec","dec","getMinKey","inc","getMinKey"},
+                new String[]{"hello","hello","hello","hello","hello"},
+                new String[]{null,null,null,"hello","hello",null,null,"",null,"hello"});
+
+        test &= test1(new String[]{"AllOne", "inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","inc","getMinKey"},
+                new String[]{"a","b" ,"c" ,"d" ,"a" ,"b" ,"c" ,"d" ,"c" ,"d" ,"d" ,"a"},
+                new String[]{null,null,null,null,null,null,null,null,null,null,null,null,null,"b"});
+
+        CommonMethods.printResult(test);
+    }
+
+    private static boolean test1(String[] operations, String[] keys, String[] expected) {
+
+        System.out.println("-----------------------------------------------------------");
+        System.out.println(" Operations : " + Arrays.toString(operations) + " keys : " + Arrays.toString(keys)
+                + "\n expected : " + Arrays.toString(expected));
+
+        int resultIndex = 0;
+        int keyIndex = 0;
         AllOne allOne = new AllOne();
-        allOne.inc("");
-        allOne.dec("");
-        allOne.getMaxKey();
-        allOne.getMinKey();
+        String[] result = new String[operations.length];
+        result[resultIndex] = null;
+
+        for (String operation : operations) {
+
+            if ("inc".equals(operation)) {
+
+                allOne.inc(keys[keyIndex++]);
+                result[resultIndex] = null;
+
+            } else if ("dec".equals(operation)) {
+
+                allOne.dec(keys[keyIndex++]);
+                result[resultIndex] = null;
+
+            } else if ("getMaxKey".equals(operation)) {
+
+                String max = allOne.getMaxKey();
+                System.out.println(" getMaxKey : " + max);
+                result[resultIndex] = max;
+
+            } else if ("getMinKey".equals(operation)) {
+
+                String min = allOne.getMinKey();
+                System.out.println(" getMinKey : " + min);
+                result[resultIndex] = min;
+
+            }
+            resultIndex++;
+        }
+
+        boolean pass = Arrays.deepEquals(result, expected);
+
+        System.out.println(" Result : "+ Arrays.toString(result) + " pass : " + (pass ? "Pass" : "Fail"));
+        return pass;
+
     }
 }
 
 class AllOne {
 
-    /**
-     * DLL used to return Max (from Head) or Min(tail)
-     */
-    class Node {
-        int val;
+    // Node class for doubly linked list (DLL), storing count and associated keys
+    static class Node {
+        int count;
         Set<String> keys;
-        Node pre;
-        Node next;
+        Node prev, next;
 
-        public Node(int a) {
-            val = a;
-            keys = new HashSet<>();
+        public Node(int count) {
+            this.count = count;
+            this.keys = new HashSet<>();
         }
     }
 
-    // head: used as handle
-    Node head;
+    // Head and tail of the doubly linked list
+    private final Node head;
+    private final Node tail;
 
-    // tail: used as handle
-    Node tail;
+    // Maps to track the node corresponding to each key and count
+    private final Map<String, Node> keyToNodeMap;
+    private final Map<Integer, Node> countToNodeMap;
 
-    // key -> Node
-    Map<String, Node> keyVsNodeMap;
-
-    // count -> Node
-    Map<Integer, Node> countVsNodeMap;
-
-    /**
-     * Initialize your data structure here.
-     */
+    // Constructor
     public AllOne() {
-        keyVsNodeMap = new HashMap<>();
-        countVsNodeMap = new HashMap<>();
-        head = new Node(-1);
-        tail = new Node(-1);
+        keyToNodeMap = new HashMap<>();
+        countToNodeMap = new HashMap<>();
+        head = new Node(-1); // Dummy head node
+        tail = new Node(-1); // Dummy tail node
         head.next = tail;
-        tail.pre = head;
+        tail.prev = head;
     }
 
-    /**
-     * Inserts a new key <Key> with value 1. Or increments an existing key by 1.
-     */
+    // Increment a key's value by 1
     public void inc(String key) {
-        int newCount = !keyVsNodeMap.containsKey(key) ? 1 : keyVsNodeMap.get(key).val + 1;
-        Node oldNode = !keyVsNodeMap.containsKey(key) ? tail : keyVsNodeMap.get(key);
+        int newCount = keyToNodeMap.containsKey(key) ? keyToNodeMap.get(key).count + 1 : 1;
+        Node currentNode = keyToNodeMap.getOrDefault(key, tail);
 
-        /**
-         * If this is a new count, then add to countMap and at the tail.
-         */
-        if (!countVsNodeMap.containsKey(newCount)) {
+        // If new count is not present, create a new node
+        if (!countToNodeMap.containsKey(newCount)) {
             Node newNode = new Node(newCount);
-            countVsNodeMap.put(newCount, newNode);
-            insertBefore(newNode, oldNode);
+            countToNodeMap.put(newCount, newNode);
+            insertBefore(newNode, currentNode);
         }
 
-        /**
-         * update keys for this count
-         */
-        countVsNodeMap.get(newCount).keys.add(key);
-        /**
-         * Push the node to key map
-         */
-        keyVsNodeMap.put(key, countVsNodeMap.get(newCount));
-        /**
-         * Remove keys from old node, as the count has been changed
-         */
-        oldNode.keys.remove(key);
+        // Update mappings and node keys
+        countToNodeMap.get(newCount).keys.add(key);
+        keyToNodeMap.put(key, countToNodeMap.get(newCount));
 
-        /**
-         * Modify DLL accordingly
-         */
-        refreshNode(oldNode);
+        // Remove key from old node and refresh its position
+        currentNode.keys.remove(key);
+        refreshNode(currentNode);
     }
 
-    /**
-     * Decrements an existing key by 1. If Key's value is 1, remove it from the data structure.
-     */
+    // Decrement a key's value by 1 or remove it if its value becomes 0
     public void dec(String key) {
-        if (!keyVsNodeMap.containsKey(key)) return;
+        if (!keyToNodeMap.containsKey(key)) return;
 
-        /**
-         * If key exist, we need to reduce the count
-         */
-        Node oldNode = keyVsNodeMap.get(key);
+        Node currentNode = keyToNodeMap.get(key);
+        int newCount = currentNode.count - 1;
 
-        /**
-         * if key has only one count, then remove it completely
-         */
-        if (oldNode.val == 1) {
-            keyVsNodeMap.remove(key);
+        if (newCount == 0) {
+            keyToNodeMap.remove(key); // Remove key if count becomes 0
         } else {
-            /**
-             * If key has more than 1 count, decrease hte count
-             */
-            int newCount = oldNode.val - 1;
-
-            /**
-             * If this count seen first time, add it and insert after old count node, as hte count has reduced so it will be
-             * towards tail
-             */
-            if (!countVsNodeMap.containsKey(newCount)) {
+            // If new count is not present, create a new node
+            if (!countToNodeMap.containsKey(newCount)) {
                 Node newNode = new Node(newCount);
-                countVsNodeMap.put(newCount, newNode);
-                insertAfter(newNode, oldNode);
+                countToNodeMap.put(newCount, newNode);
+                insertAfter(newNode, currentNode);
             }
-            /**
-             * update keys for this count
-             */
-            countVsNodeMap.get(newCount).keys.add(key);
-            /**
-             * Push the node to key map
-             */
-            keyVsNodeMap.put(key, countVsNodeMap.get(newCount));
+
+            // Update mappings and node keys
+            countToNodeMap.get(newCount).keys.add(key);
+            keyToNodeMap.put(key, countToNodeMap.get(newCount));
         }
-        /**
-         * Remove keys from old node, as the count has been changed
-         */
-        oldNode.keys.remove(key);
 
-
-        /**
-         * Modify DLL accordingly
-         */
-        refreshNode(oldNode);
+        // Remove key from old node and refresh its position
+        currentNode.keys.remove(key);
+        refreshNode(currentNode);
     }
 
-    /**
-     * Returns one of the keys with maximal value.
-     */
+    // Returns one of the keys with the maximal value
     public String getMaxKey() {
         return head.next == tail ? "" : head.next.keys.iterator().next();
     }
 
-    /**
-     * Returns one of the keys with Minimal value.
-     */
+    // Returns one of the keys with the minimal value
     public String getMinKey() {
-        return tail.pre == head ? "" : tail.pre.keys.iterator().next();
+        return tail.prev == head ? "" : tail.prev.keys.iterator().next();
     }
 
-    // if node.keys is empty, remove this node
-    void refreshNode(Node node) {
-        if (node == head || node == tail)
-            return;
-        if (node.keys.size() == 0) {
-            node.pre.next = node.next;
-            node.next.pre = node.pre;
-            countVsNodeMap.remove(node.val);
+    // Remove node if it becomes empty
+    private void refreshNode(Node node) {
+        if (node != head && node != tail && node.keys.isEmpty()) {
+            //remove this node
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+
+            countToNodeMap.remove(node.count);
         }
     }
 
-    void insertBefore(Node newNode, Node ref) {
-        newNode.pre = ref.pre;
-        newNode.next = ref;
-        newNode.pre.next = newNode;
-        newNode.next.pre = newNode;
+    // Insert a new node before a reference node
+    private void insertBefore(Node newNode, Node refNode) {
+        newNode.prev = refNode.prev;
+        newNode.next = refNode;
+        refNode.prev.next = newNode;
+        refNode.prev = newNode;
     }
 
-    void insertAfter(Node newNode, Node ref) {
-        newNode.next = ref.next;
-        newNode.pre = ref;
-        newNode.pre.next = newNode;
-        newNode.next.pre = newNode;
+    // Insert a new node after a reference node
+    private void insertAfter(Node newNode, Node refNode) {
+        newNode.next = refNode.next;
+        newNode.prev = refNode;
+        refNode.next.prev = newNode;
+        refNode.next = newNode;
     }
 }
-
