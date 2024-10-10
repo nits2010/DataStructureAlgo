@@ -4,12 +4,13 @@
 
 --------------------------------------------------------------------------
 See DSA_Pattern.md
+For DSA problems, refer [Problems.md](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md)
 
 
-
-## DS Resources
 
 --------------------------------------------------------------------------
+
+# DS Resources 
 
 ## GitHub Repositories
 
@@ -93,3 +94,5 @@ See DSA_Pattern.md
 - [Coders Mojo - System Design Series (Part 1)](https://medium.com/coders-mojo/complete-system-design-series-part-1-45bf9c8654bc)
 - [Naina0405 - Winning System Design](https://naina0405.substack.com/p/launched-new-winning-system-design?r=14q3sp&utm_campaign=post&utm_medium=web&triedRedirect=true)
 - [LeetCode Discussion - 105+ System Design Case Studies](https://leetcode.com/discuss/interview-question/5579827/Bookmark-%3A-105%2B-System-Design-Case-Studies/)
+
+https://aonecode.com/
