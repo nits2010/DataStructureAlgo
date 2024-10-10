@@ -1,6 +1,16 @@
 # DS & Algo Resources
 
-## DS Resources 
+## DSA Pattern
+
+--------------------------------------------------------------------------
+See DSA_Pattern.md
+
+
+
+## DS Resources
+
+--------------------------------------------------------------------------
+
 ## GitHub Repositories
 
 - [Kdn251 - Interviews](https://github.com/kdn251/interviews)
@@ -67,7 +77,9 @@
 
 ---
 
-# System Design Resources
+## System Design Resources
+
+--------------------------------------------------------------------------
 
 
 ## System Design Practice
