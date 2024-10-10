@@ -54,6 +54,7 @@ import java.util.Arrays;
 
 public class MaximumWidthRamp_962 {
 
+
     public static void main(String[] args) {
         boolean test = true;
         test &= test(new int[]{6, 0, 8, 2, 1, 5}, 4);
