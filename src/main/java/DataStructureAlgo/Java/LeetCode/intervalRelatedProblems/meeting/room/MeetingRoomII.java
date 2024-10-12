@@ -191,8 +191,6 @@ public class MeetingRoomII {
     }
 
     private boolean overlap(int end, int start) {
-        if (end > start)
-            return true;
-        return false;
+        return end > start;
     }
 }
