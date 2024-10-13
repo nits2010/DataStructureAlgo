@@ -219,7 +219,7 @@ class RemoveInvalidPretensesBackTrackingBFS {
             if (level)
                 continue;
 
-            //start removing character one by one from left side and try all possible chars
+            //start removing character one by one from the left side and try all possible chars
             for (int i = 0; i < temp.length(); i++) {
 
                 if (temp.charAt(i) == '(' || temp.charAt(i) == ')') {
