@@ -1,5 +1,6 @@
 | #  | File Name | GitHub Link | 
 |---|-----------|-------------|
+| 756 | SmallestRangeCoveringElementsFromKLists_632.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/List/_632/SmallestRangeCoveringElementsFromKLists_632.java) |
 | 755 | MeetingRoomIII_2402.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/intervals/meetingRoom/_2402/MeetingRoomIII_2402.java) |
 | 754 | MeetingRoomII_253.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/intervals/meetingRoom/_253/MeetingRoomII_253.java) |
 | 753 | MeetingRoom_252.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/intervals/meetingRoom/_252/MeetingRoom_252.java) |
