@@ -59,7 +59,7 @@ public class MeetingRoomI {
 
 
     /**
-     * If person wants to attend all meeting then there should not be any overlapping meeting.
+     * If a person wants to attend all meetings, then there should not be any overlapping meeting.
      * <p>
      * Algo: Sort the intervals by start time and see any overlapping intervals are there
      * Overlapping intervals: [s1, e1] & [s2, e2]
