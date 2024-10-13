@@ -9,7 +9,7 @@
 - [WorkatTech - System Design Practice](https://workat.tech/system-design/practice?difficulty=all)
 - [Yushangdi - System Design Interview Tips](https://github.com/yushangdi/Leetcode-1/blob/master/Design/System_Design_interview.md#tips)
 - [Coder-World - Complete System Design](https://github.com/Coder-World04/Complete-System-Design)
-
+- [leetdesign-Practice Design questions](https://leetdesign.com/)
 ## MEGA Launch - 105+ New System Design Case Studies
 
 - [Coders Mojo - System Design Series (Part 1)](https://medium.com/coders-mojo/complete-system-design-series-part-1-45bf9c8654bc)
