@@ -5,7 +5,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
- * Description:https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-k-times/
+ * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/
+ * https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-k-times/
  * <p>
  * Video: https://www.youtube.com/watch?v=oDhu5uGq_ic
  */

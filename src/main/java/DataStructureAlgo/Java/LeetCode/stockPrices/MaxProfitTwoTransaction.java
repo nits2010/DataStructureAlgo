@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode.stockPrices;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
- * Description:
+ * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
  */
 public class MaxProfitTwoTransaction {
     public static void main(String []args) {
