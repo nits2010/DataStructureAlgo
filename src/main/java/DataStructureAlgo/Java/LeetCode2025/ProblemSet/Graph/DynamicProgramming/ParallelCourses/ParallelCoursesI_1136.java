@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.ParallelCourses;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.DynamicProgramming.ParallelCourses;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 

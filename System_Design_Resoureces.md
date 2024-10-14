@@ -2,7 +2,8 @@
 ## System Design Resources
 
 --------------------------------------------------------------------------
-
+## Paid resources
+- [ByteByteGo](https://www.bytebytego.com/)
 
 ## System Design Practice
 - {IMP}[System Design Case Study](https://github.com/Sam-Si/system-design?tab=readme-ov-file#a-companies)

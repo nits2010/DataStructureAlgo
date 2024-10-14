@@ -78,11 +78,10 @@ class SolutionMergeIntervalsUnion {
         //Sort the interval on start time
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
 
-        int temp[][] = new int[intervals.length][2];
+        int[][] temp = new int[intervals.length][2];
 
-        //start with first interval
-        temp[0][0] = intervals[0][0];
-        temp[0][1] = intervals[0][1];
+        //start with the first interval
+        temp[0] = intervals[0];
 
         int k = 0;
         for (int i = 1; i < intervals.length; i++) {
@@ -93,8 +92,7 @@ class SolutionMergeIntervalsUnion {
                 temp[k][1] = Math.max(temp[k][1], intervals[i][1]);
             } else {
                 k++;
-                temp[k][0] = intervals[i][0];
-                temp[k][1] = intervals[i][1];
+                temp[++k] = intervals[i];
 
             }
         }
@@ -103,11 +101,8 @@ class SolutionMergeIntervalsUnion {
         if (k == intervals.length)
             return temp;
 
-        int res[][] = new int[k + 1][2];
-        for (int i = 0; i <= k; i++) {
-            res[i][0] = temp[i][0];
-            res[i][1] = temp[i][1];
-        }
+        int[][] res = new int[k + 1][2];
+        System.arraycopy(temp, 0, res, 0, k + 1);
 
         return res;
 
