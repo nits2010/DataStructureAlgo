@@ -10,7 +10,7 @@ import java.util.Arrays;
  * <p>
  * Video: https://www.youtube.com/watch?v=oDhu5uGq_ic
  */
-public class MaxProfitKTransactions {
+public class MaxProfitKTransactions__BestTimeToBuySellStockIV {
 
     public static void main(String []args) {
         int prices[] = {2, 1, 2, 0, 1};
