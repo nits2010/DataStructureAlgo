@@ -8,24 +8,24 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Question Category: 2938. Separate Black and White Balls
  * Description: https://leetcode.com/problems/separate-black-and-white-balls/description/?envType=daily-question&envId=2024-10-15
  * There are n balls on a table, each ball has a color black or white.
- *
+ * <p>
  * You are given a 0-indexed binary string s of length n, where 1 and 0 represent black and white balls, respectively.
- *
+ * <p>
  * In each step, you can choose two adjacent balls and swap them.
- *
+ * <p>
  * Return the minimum number of steps to group all the black balls to the right and all the white balls to the left.
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: s = "101"
  * Output: 1
  * Explanation: We can group all the black balls to the right in the following way:
  * - Swap s[0] and s[1], s = "011".
  * Initially, 1s are not grouped together, requiring at least 1 step to group them to the right.
  * Example 2:
- *
+ * <p>
  * Input: s = "100"
  * Output: 2
  * Explanation: We can group all the black balls to the right in the following way:
@@ -33,14 +33,14 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * - Swap s[1] and s[2], s = "001".
  * It can be proven that the minimum number of steps needed is 2.
  * Example 3:
- *
+ * <p>
  * Input: s = "0111"
  * Output: 0
  * Explanation: All the black balls are already grouped to the right.
- *
- *
+ * <p>
+ * <p>
  * Constraints:
- *
+ * <p>
  * 1 <= n == s.length <= 105
  * s[i] is either '0' or '1'.
  * File reference
@@ -51,14 +51,13 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * Tags
  * -----
+ *
  * @medium
  * @TwoPointers
  * @Greedy
- * @String
- * <p>
+ * @String <p>
  * Company Tags
  * -----
- *
  * @Editorial
  */
 
@@ -77,14 +76,25 @@ public class SeparateBlackAndWhiteBalls_2938 {
     private static boolean test(String s, int expected) {
         System.out.println("--------------------------------");
         System.out.println("Input:" + s + " expected:" + expected);
-        Solution solution = new Solution();
-        long output = solution.minimumSteps(s);
-        boolean pass = output == expected;
-        System.out.println("Obtained:" + output + " Pass : "+ (pass?"Passed":"Failed"));
-        return pass;
+        long output;
+        boolean pass, finalPass = true;
+
+        Solution_CountAndSweep solutionCountAndSweep = new Solution_CountAndSweep();
+        output = solutionCountAndSweep.minimumSteps(s);
+        pass = output == expected;
+        System.out.println("CountAndSweep: " + output + " Pass : " + (pass ? "Passed" : "Failed"));
+        finalPass &= pass;
+
+        SolutionSweeps solutionSweeps = new SolutionSweeps();
+        output = solutionSweeps.minimumSteps(s);
+        pass = output == expected;
+        System.out.println("Sweep: " + output + " Pass : " + (pass ? "Passed" : "Failed"));
+        finalPass &= pass;
+
+        return finalPass;
     }
 
-    static class Solution {
+    static class Solution_CountAndSweep {
         public long minimumSteps(String s) {
 
             // only opposite number can swap either we choose 0 or 1.
@@ -102,22 +112,42 @@ public class SeparateBlackAndWhiteBalls_2938 {
             // second last 0 needs to swap with 2nd and 1st index. That makes total 5 swaps.
 
 
-            char []balls = s.toCharArray();
+            char[] balls = s.toCharArray();
             int n = s.length();
-            int i = 0, j= n-1;
+            int i = 0, j = n - 1;
             long swaps = 0;
-            int zero = 0 ;
-            while ( i <= j){
+            int zero = 0;
+            while (i <= j) {
 
-                if(balls[j] == '0')
-                    zero ++; //count '0'
+                if (balls[j] == '0')
+                    zero++; //count '0'
 
-                if(balls[j] == '1'){
+                if (balls[j] == '1') {
                     //we found a 1, now ll the zero on right side of it (count = zero) needs to swap with it
                     //each will take zero * 1 swap = count(zero) swaps
                     swaps += zero;
                 }
                 j--;
+            }
+            return swaps;
+
+        }
+    }
+
+    static class SolutionSweeps {
+        public long minimumSteps(String s) {
+
+
+            char[] balls = s.toCharArray();
+            int n = s.length();
+
+            long swaps = 0;
+            int lastZeroAt = -1;
+            for (int x = 0; x < n; x++) {
+                if (balls[x] == '0') {
+                    swaps += x - lastZeroAt - 1;
+                    lastZeroAt++;
+                }
             }
             return swaps;
 
