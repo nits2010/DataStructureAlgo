@@ -13,7 +13,7 @@ https://leetcode.com/problems/find-median-from-data-stream/
 > 2. `findMedian()`: returns the median of all numbers inserted in the class
 > If the count of numbers inserted in the class is even, the median will be the average of the middle two numbers.
 
-As we know, the median is the middle value in an ordered integer list. So a brute force solution could be to maintain a sorted list of all numbers inserted in the class so that we can efficiently return the median whenever required. Inserting a number in a sorted list will take `O(N)` time if there are `N` numbers in the list. This insertion will be similar to the <b>Insertion sort</b>. Can we do better than this? Can we utilize the fact that we don’t need the fully sorted list - we are only interested in finding the middle element?
+As we know, the median is the middle value in an ordered integer list. So a brute force solutionMimicPQ could be to maintain a sorted list of all numbers inserted in the class so that we can efficiently return the median whenever required. Inserting a number in a sorted list will take `O(N)` time if there are `N` numbers in the list. This insertion will be similar to the <b>Insertion sort</b>. Can we do better than this? Can we utilize the fact that we don’t need the fully sorted list - we are only interested in finding the middle element?
 
 Assume ‘x’ is the median of a list. This means that half of the numbers in the list will be smaller than (or equal to) ‘x’ and half will be greater than (or equal to) ‘x’. This leads us to an approach where we can divide the list into two halves: one half to store all the smaller numbers (let’s call it `smallNumList`) and one half to store the larger numbers (let’s call it `largNumList`). The median of all the numbers will either be the largest number in the `smallNumList` or the smallest number in the `largNumList`. If the total number of elements is even, the median will be the average of these two numbers.
 
@@ -435,7 +435,7 @@ While selecting projects we have two constraints:
 
 1. We can select a project only when we have the required capital.
 2. There is a maximum limit on how many projects we can select.
-Since we don’t have any constraint on time, we should choose a project, among the projects for which we have enough capital, which gives us a maximum profit. Following this greedy approach will give us the best solution.
+Since we don’t have any constraint on time, we should choose a project, among the projects for which we have enough capital, which gives us a maximum profit. Following this greedy approach will give us the best solutionMimicPQ.
 
 While selecting a project, we will do two things:
 1. Find all the projects that we can choose with the available capital.
@@ -598,7 +598,7 @@ Input: Intervals [[3,4], [1,5], [4,6]]
 Output: [2, -1, -1]
 Explanation: The next interval of [3,4] is [4,6] which has index ‘2’. There is no next interval for [1,5] and [4,6].
 
-A brute force solution could be to take one interval at a time and go through all the other intervals to find the next interval. This algorithm will take `O(N^2)` where `N` is the total number of intervals. Can we do better than that?
+A brute force solutionMimicPQ could be to take one interval at a time and go through all the other intervals to find the next interval. This algorithm will take `O(N^2)` where `N` is the total number of intervals. Can we do better than that?
 
 We can utilize the Two Heaps approach. We can push all intervals into two heaps: one heap to sort the intervals on maximum start time (let’s call it maxStartHeap) and the other on maximum end time (let’s call it maxEndHeap). We can then iterate through all intervals of the maxEndHeap to find their next interval. Our algorithm will have the following steps:
 

@@ -16,7 +16,7 @@ https://leetcode.com/problems/two-sum/
 
 Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given `target`.
 
-Since the given array is sorted, a brute-force solution could be to iterate through the array, taking one number at a time and searching for the second number through <b>Binary Search</b>. The <b>time complexity</b> of this algorithm will be `O(N*logN)`. Can we do better than this?
+Since the given array is sorted, a brute-force solutionMimicPQ could be to iterate through the array, taking one number at a time and searching for the second number through <b>Binary Search</b>. The <b>time complexity</b> of this algorithm will be `O(N*logN)`. Can we do better than this?
 
 We can follow the <b>Two Pointers</b> approach. We will start with one pointer pointing to the beginning of the array and another pointing at the end. At every step, we will see if the numbers pointed by the <b>two pointers</b> add up to the `target` sum. If they do, we have found our pair; otherwise, we will do one of two things:
 1. If the sum of the two numbers pointed by the <b>two pointers</b> is greater than the `target` sum, this means that we need a pair with a smaller sum. So, to try more pairs, we can decrement the end-pointer.
@@ -318,7 +318,7 @@ function tripletSumCloseToTarget(arr, targetSum){
         smallestDifference = targetDifference
       }
       //the second part of the followinf 'if' is to handle the smallest sum
-      //when we have more than one solution
+      //when we have more than one solutionMimicPQ
       if(Math.abs(targetDifference) < Math.abs(smallestDifference) || (Math.abs(targetDifference) === Math.abs(smallestDifference) && targetDifference > smallestDifference)) {
         //save the closest and the biggest difference
         smallestDifference = targetDifference
@@ -478,7 +478,7 @@ https://leetcode.com/problems/sort-colors/
 
 The flag of the Netherlands consists of three colors: red, white and blue; and since our input array also consists of three different numbers that is why it is called <b>Dutch National Flag problem</b>.
 
-The brute force solution will be to use an <i>in-place</i> sorting algorithm like <i>Heapsort</i> which will take `O(N*logN)`. Can we do better than this? Is it possible to sort the array in one iteration?
+The brute force solutionMimicPQ will be to use an <i>in-place</i> sorting algorithm like <i>Heapsort</i> which will take `O(N*logN)`. Can we do better than this? Is it possible to sort the array in one iteration?
 
 We can use a <b>Two Pointers</b> approach while iterating through the array. Let’s say the <b>two pointers</b> are called `low` and `high` which are pointing to the first and the last element of the array respectively. So while iterating, we will move all `0`s before `low` and all `2`s after `high` so that in the end, all `1`s will be between `low` and `high`.
 

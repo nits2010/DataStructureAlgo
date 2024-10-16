@@ -9,7 +9,7 @@ from this [course](https://www.educative.io/courses/grokking-dynamic-programming
 | <b>[Pattern 4: Palindromic Subsequence](#pattern-4-palindromic-subsequence)</b> |
 | <b>[Pattern 5: Longest Common Substring](#pattern-5-longest-common-substring)</b> |
 
-<b>Dynamic Programming (DP)</b> is an algorithmic technique for solving an optimization problem by breaking it down into simpler subproblems and utilizing the fact that the optimal solution to the overall problem depends upon the optimal solution to its subproblems.
+<b>Dynamic Programming (DP)</b> is an algorithmic technique for solving an optimization problem by breaking it down into simpler subproblems and utilizing the fact that the optimal solutionMimicPQ to the overall problem depends upon the optimal solutionMimicPQ to its subproblems.
 
 Let’s take the example of the <b>Fibonacci numbers</b>. As we all know, <i>Fibonacci numbers</i> are a series of numbers in which each number is the sum of the two preceding numbers. The first few <i>Fibonacci numbers</i> are `0, 1, 1, 2, 3, 5, and 8`, and they continue on from there.
 
@@ -27,7 +27,7 @@ Before moving on to understand different methods of solving a <b>DP</b> problem,
 
 ### Overlapping Subproblems
 
-Subproblems are smaller versions of the original problem. Any problem has overlapping sub-problems if finding its solution involves solving the same subproblem multiple times. Take the example of the Fibonacci numbers; to find the `fib(4)`, we need to break it down into the following sub-problems:
+Subproblems are smaller versions of the original problem. Any problem has overlapping sub-problems if finding its solutionMimicPQ involves solving the same subproblem multiple times. Take the example of the Fibonacci numbers; to find the `fib(4)`, we need to break it down into the following sub-problems:
 
 ![](./images/fib4.png)
 
@@ -35,7 +35,7 @@ We can clearly see the overlapping subproblem pattern here, as `fib(2)` has been
 
 ### Optimal Substructure Property
 
-Any problem has optimal substructure property if its overall optimal solution can be constructed from the optimal solutions of its subproblems. For Fibonacci numbers, as we know,
+Any problem has optimal substructure property if its overall optimal solutionMimicPQ can be constructed from the optimal solutions of its subproblems. For Fibonacci numbers, as we know,
 
 ```js
 Fib(n) = Fib(n-1) + Fib(n-2)
@@ -49,9 +49,9 @@ DP offers two methods to solve a problem.
 
 ### Top-down with Memoization
 
-In this approach, we try to solve the bigger problem by recursively finding the solution to smaller sub-problems. Whenever we solve a sub-problem, we cache its result so that we don’t end up solving it repeatedly if it’s called multiple times. Instead, we can just return the saved result. This technique of storing the results of already solved subproblems is called <b>Memoization</b>.
+In this approach, we try to solve the bigger problem by recursively finding the solutionMimicPQ to smaller sub-problems. Whenever we solve a sub-problem, we cache its result so that we don’t end up solving it repeatedly if it’s called multiple times. Instead, we can just return the saved result. This technique of storing the results of already solved subproblems is called <b>Memoization</b>.
 
-We’ll see this technique in our example of Fibonacci numbers. First, let’s see the non-DP recursive solution for finding the nth Fibonacci number:
+We’ll see this technique in our example of Fibonacci numbers. First, let’s see the non-DP recursive solutionMimicPQ for finding the nth Fibonacci number:
 
 ```js
 function calculateFibonacci(n) {
@@ -91,7 +91,7 @@ console.log(`7th Fibonacci is ---> ${calculateFibonacci(7)}`);
 
 ### Bottom-up with Tabulation
 
-<b>Tabulation</b> is the opposite of the top-down approach and avoids recursion. In this approach, we solve the problem <i>“bottom-up”</i> (i.e. by solving all the related sub-problems first). This is typically done by filling up an `n`-dimensional table. Based on the results in the table, the solution to the top/original problem is then computed.
+<b>Tabulation</b> is the opposite of the top-down approach and avoids recursion. In this approach, we solve the problem <i>“bottom-up”</i> (i.e. by solving all the related sub-problems first). This is typically done by filling up an `n`-dimensional table. Based on the results in the table, the solutionMimicPQ to the top/original problem is then computed.
 
 <b>Tabulation</b> is the opposite of <b>Memoization</b>, as in <b>Memoization</b> we solve the problem and maintain a map of already solved sub-problems. In other words, in <b>memoization</b> , we do it <i>top-down</i> in the sense that we solve the top problem first (which typically recurses down to solve the sub-problems).
 
@@ -113,7 +113,7 @@ console.log(`6th Fibonacci is ---> ${calculateFibonacci(6)}`);
 console.log(`7th Fibonacci is ---> ${calculateFibonacci(7)}`);
 ```
 
-<b>In this course, we will always start with a brute-force recursive solution, which is the best way to start solving any DP problem!</b> Once we have a recursive solution then we will apply <i>memoization</i> and Tabulation techniques.
+<b>In this course, we will always start with a brute-force recursive solutionMimicPQ, which is the best way to start solving any DP problem!</b> Once we have a recursive solutionMimicPQ then we will apply <i>memoization</i> and Tabulation techniques.
 
 Let’s apply this knowledge to solve some of the frequently asked <b>DP</b> problems.
 
@@ -130,9 +130,9 @@ Let’s apply this knowledge to solve some of the frequently asked <b>DP</b> pro
 
 <b>0/1 Knapsack pattern</b> is based on the famous problem with the same name which is efficiently solved using <b>Dynamic Programming (DP)</b>.
 
-In this pattern, we will go through a set of problems to develop an understanding of <b>DP</b>. We will always start with a brute-force recursive solution to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.
+In this pattern, we will go through a set of problems to develop an understanding of <b>DP</b>. We will always start with a brute-force recursive solutionMimicPQ to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.
 
-After the recursive solution, we will modify our algorithm to apply advanced techniques of <b>Memoization</b> and <b>Bottom-Up Dynamic Programming</b> to develop a complete understanding of this pattern.
+After the recursive solutionMimicPQ, we will modify our algorithm to apply advanced techniques of <b>Memoization</b> and <b>Bottom-Up Dynamic Programming</b> to develop a complete understanding of this pattern.
 
 Let’s jump onto our first problem.
 
@@ -162,10 +162,10 @@ This shows that `Banana + Melon` is the best combination as it gives us the `max
 
 ### Basic Brute Force Soultion
 
-A basic <b>brute-force solution</b> could be to try all combinations of the given items (as we did above), allowing us to choose the one with `maximum profit` and a weight that doesn’t exceed `C`. Take the example of four items `A, B, C, and D`, as shown in the diagram below. To try all the combinations, our algorithm will look like:
+A basic <b>brute-force solutionMimicPQ</b> could be to try all combinations of the given items (as we did above), allowing us to choose the one with `maximum profit` and a weight that doesn’t exceed `C`. Take the example of four items `A, B, C, and D`, as shown in the diagram below. To try all the combinations, our algorithm will look like:
 ![](./images/knapsack.png)
 
-All <b>green boxes</b> have a total weight that is less than or equal to the capacity `7`, and all the <b>red ones</b> have a weight that is more than `7`. The best solution we have is with items `[B, D]` having a total profit of `22` and a total weight of `7`.
+All <b>green boxes</b> have a total weight that is less than or equal to the capacity `7`, and all the <b>red ones</b> have a weight that is more than `7`. The best solutionMimicPQ we have is with items `[B, D]` having a total profit of `22` and a total weight of `7`.
 
 ### Brute-Force Solution
 
@@ -313,14 +313,14 @@ console.log(
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `memo[][]` array from the above solution by working in a <b>bottom-up</b> fashion. Essentially, we want to find the `maximum profit` for every sub-array and every possible capacity. <b>This means that `dp[i][c]` will represent the maximum <b>knapsack</b> profit for capacity `c` calculated from the first `i` items</b>.
+Let’s try to populate our `memo[][]` array from the above solutionMimicPQ by working in a <b>bottom-up</b> fashion. Essentially, we want to find the `maximum profit` for every sub-array and every possible capacity. <b>This means that `dp[i][c]` will represent the maximum <b>knapsack</b> profit for capacity `c` calculated from the first `i` items</b>.
 
 So, for each item at index `i` (`0 <= i < items.length`) and capacity `c` (`0 <= c <= capacity`), we have two options:
 
 1. Exclude the item at index `i`. In this case, we will take whatever profit we get from the sub-array excluding this item => `dp[i-1][c]`
 2. Include the item at index `i` if its weight is not more than the capacity. In this case, we include its profit plus whatever profit we get from the remaining capacity and from remaining items => `profit[i] + dp[i-1][c-weight[i]]`
 
-Finally, our optimal solution will be maximum of the above two values:
+Finally, our optimal solutionMimicPQ will be maximum of the above two values:
 
 `dp[i][c] = max (dp[i-1][c], profit[i] + dp[i-1][c-weight[i]])`
 
@@ -385,7 +385,7 @@ console.log(
 
 #### Time & Space Complexity
 
-- The above solution has the time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items, and `C` is the maximum capacity.
+- The above solutionMimicPQ has the time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items, and `C` is the maximum capacity.
 
 #### How can we find the selected items?
 
@@ -487,7 +487,7 @@ console.log(
 
 ### Challenge
 
-Can we improve our <b>bottom-up DP</b> solution even further? Can you find an algorithm that has `O(C)` space complexity?
+Can we improve our <b>bottom-up DP</b> solutionMimicPQ even further? Can you find an algorithm that has `O(C)` space complexity?
 
 ```js
 function solveKnapsack(profits, weights, capacity) {
@@ -498,7 +498,7 @@ function solveKnapsack(profits, weights, capacity) {
 
   //we only need one previous row to find the optimal solutin,
   //overall we need 2 rows
-  //the above solution is similar to the previous solution
+  //the above solutionMimicPQ is similar to the previous solutionMimicPQ
   //the only difference is that
   //we use i%2 instead of i and (i-1)%2 instead of i-1
   const dp = Array(2)
@@ -568,9 +568,9 @@ console.log(
 );
 ```
 
-The solution above is similar to the previous solution; the only difference is that we use `i%2` instead of `i` and `(i-1)%2` instead of `i-1`. This solution has a <b>space complexity</b> of `O(2*C) = O(C)`, where `C` is the knapsack’s maximum capacity.
+The solutionMimicPQ above is similar to the previous solutionMimicPQ; the only difference is that we use `i%2` instead of `i` and `(i-1)%2` instead of `i-1`. This solutionMimicPQ has a <b>space complexity</b> of `O(2*C) = O(C)`, where `C` is the knapsack’s maximum capacity.
 
-This <b>space optimization solution</b> can also be implemented using a single array. It is a bit tricky, but the intuition is to use the same array for the previous and the next iteration!
+This <b>space optimization solutionMimicPQ</b> can also be implemented using a single array. It is a bit tricky, but the intuition is to use the same array for the previous and the next iteration!
 
 If you see closely, we need two values from the previous iteration: `dp[c]` and `dp[c-weight[i]]`
 
@@ -583,14 +583,14 @@ To solve the second case, we can change our inner loop to process in the reverse
 
 ```js
 function solveKnapsack(profits, weights, capacity) {
-  //space optimization solution, O(C) bottom-up dynamic programming approach
+  //space optimization solutionMimicPQ, O(C) bottom-up dynamic programming approach
   const n = profits.length;
 
   if (capacity <= 0 || n == 0 || weights.length != n) return 0;
 
   //we only need one previous row to find the optimal solutin,
   //overall we need 2 rows
-  //the above solution is similar to the previous solution
+  //the above solutionMimicPQ is similar to the previous solutionMimicPQ
   //the only difference is that
   //we use i%2 instead of i and (i-1)%2 instead of i-1
   const dp = Array(capacity + 1).fill(0);
@@ -661,7 +661,7 @@ https://leetcode.com/problems/partition-equal-subset-sum/
 
 > Given a set of positive numbers, find if we can partition it into two subsets such that the sum of elements in both subsets is equal.
 
-This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b>. A basic <b>brute-force</b> solution could be to try all combinations of partitioning the given numbers into two sets to see if any pair of sets has an equal sum.
+This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b>. A basic <b>brute-force</b> solutionMimicPQ could be to try all combinations of partitioning the given numbers into two sets to see if any pair of sets has an equal sum.
 
 Assume that `S` represents the total sum of all the given numbers. Then the two equal subsets must have a sum equal to `S/2`. This essentially transforms our problem to: <i>"Find a subset of the given numbers that has a total sum of `S/2`"</i>.
 
@@ -771,7 +771,7 @@ console.log(`Can partition: ${canPartition([2, 3, 4, 6])}`); //False
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[][]` array from the above solution by working in a <b>bottom-up</b> fashion. Essentially, we want to find if we can make all possible sums with every subset. This means, `dp[i][s]` will be `true` if we can make the sum `s` from the first `i` numbers.
+Let’s try to populate our `dp[][]` array from the above solutionMimicPQ by working in a <b>bottom-up</b> fashion. Essentially, we want to find if we can make all possible sums with every subset. This means, `dp[i][s]` will be `true` if we can make the sum `s` from the first `i` numbers.
 
 So, for each number at index `i` (`0 <= i < num.length`) and sum `s` (`0 <= s <= S/2`), we have two options:
 
@@ -834,7 +834,7 @@ console.log(`Can partition: ${canPartition([2, 3, 4, 6])}`); //False
 //The given set cannot be partitioned into two subsets with equal sum.
 ```
 
-- The above solution the has time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the total sum of all the numbers.
+- The above solutionMimicPQ the has time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the total sum of all the numbers.
 
 ## 🔎 Subset Sum (medium)
 
@@ -842,7 +842,7 @@ https://www.techiedelight.com/subset-sum-problem/
 
 > Given a set of positive numbers, determine if a subset exists whose sum is equal to a given number `S`.
 
-This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b> and is quite similar to <b>[Equal Subset Sum Partition](#equal-subset-sum-partition-medium)</b>. A basic <b>brute-force</b> solution could be to try all subsets of the given numbers to see if any set has a sum equal to `S`.
+This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b> and is quite similar to <b>[Equal Subset Sum Partition](#equal-subset-sum-partition-medium)</b>. A basic <b>brute-force</b> solutionMimicPQ could be to try all subsets of the given numbers to see if any set has a sum equal to `S`.
 
 So our <b>brute-force</b> algorithm will look like:
 
@@ -854,7 +854,7 @@ for each number 'i'
 return true if any of the above two sets has a sum equal to 'S', otherwise return false
 ```
 
-Since this problem is quite similar to <b>[Equal Subset Sum Partition](#equal-subset-sum-partition-medium)</b>, let’s jump directly to the <b>bottom-up dynamic programming</b> solution.
+Since this problem is quite similar to <b>[Equal Subset Sum Partition](#equal-subset-sum-partition-medium)</b>, let’s jump directly to the <b>bottom-up dynamic programming</b> solutionMimicPQ.
 
 ### Bottom-up Dynamic Programming
 
@@ -916,11 +916,11 @@ console.log(`Can partitioning be done: ---> ${canPartition([1, 3, 4, 8], 6)}`);
 //The given set does not have any subset whose sum is equal to '6'.
 ```
 
-- The above solution has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the required sum.
+- The above solutionMimicPQ has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the required sum.
 
 ### Challenge
 
-- [x] Can we improve our <b>bottom-up DP</b> solution even further? Can you find an algorithm that has `O(S)` space complexity?
+- [x] Can we improve our <b>bottom-up DP</b> solutionMimicPQ even further? Can you find an algorithm that has `O(S)` space complexity?
 
 ```js
 function canPartition(nums, sum) {
@@ -976,7 +976,7 @@ https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-di
 
 This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b> and can be converted into a <b>[Subset Sum](#🔎-subset-sum-medium)</b> problem.
 
-Let’s assume `str1` and `str2` are the two desired subsets. A basic <b>brute-force</b> solution could be to try adding each element either in `str1` or `str2` in order to find the combination that gives the minimum sum difference between the two sets.
+Let’s assume `str1` and `str2` are the two desired subsets. A basic <b>brute-force</b> solutionMimicPQ could be to try adding each element either in `str1` or `str2` in order to find the combination that gives the minimum sum difference between the two sets.
 
 So our <b>brute-force</b> algorithm will look like:
 
@@ -987,7 +987,7 @@ for each number 'i'
 return the minimum absolute difference of the above two sets
 ```
 
-Here is the code for the <b>brute-force</b> solution:
+Here is the code for the <b>brute-force</b> solutionMimicPQ:
 
 ```js
 function canPartition(nums) {
@@ -1175,7 +1175,7 @@ console.log(`Can partitioning be done: ---> ${canPartition([1, 3, 100, 4])}`);
 //We can partition the given set into two subsets where minimum absolute difference between the sum of numbers is '92'. Here are the two subsets: {1, 3, 4} & {100}.
 ```
 
-- The above solution has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the total sum of all the numbers.
+- The above solutionMimicPQ has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the total sum of all the numbers.
 
 ## 🌟Count of Subset Sum (hard)
 
@@ -1185,7 +1185,7 @@ https://leetcode.com/problems/combination-sum/
 
 This problem follows the <b>[0/1 Knapsack pattern](#pattern-1-01-knapsack)</b> and is quite similar to <b>[Subset Sum](#🔎-subset-sum-medium)</b>. The only difference in this problem is that we need to count the number of subsets, whereas in <b>[Subset Sum](#🔎-subset-sum-medium)</b> we only wanted to know if a subset with the given sum existed.
 
-A basic <b>brute-force</b> solution could be to try all subsets of the given numbers to count the subsets that have a sum equal to `S`. So our <b>brute-force</b> algorithm will look like:
+A basic <b>brute-force</b> solutionMimicPQ could be to try all subsets of the given numbers to count the subsets that have a sum equal to `S`. So our <b>brute-force</b> algorithm will look like:
 
 ```js
 for each number 'i'
@@ -1195,7 +1195,7 @@ for each number 'i'
 return the count of subsets who has a sum equal to 'S'
 ```
 
-Here is the code for the <b>brute-force</b> solution:
+Here is the code for the <b>brute-force</b> solutionMimicPQ:
 
 ```js
 function countSubsets(num, sum) {
@@ -1336,11 +1336,11 @@ console.log(`Count of subset sum is: ---> ${countSubsets([1, 2, 7, 1, 5], 9)}`);
 //The given set has '3' subsets whose sum is '9': {2, 7}, {1, 7, 1}, {1, 2, 1, 5}
 ```
 
-- The above solution has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the desired sum.
+- The above solutionMimicPQ has the time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the desired sum.
 
 ### Challenge
 
-- [ ] Can we improve our <b>bottom-up DP</b> solution even further? Can you find an algorithm that has `O(S)` space complexity?
+- [ ] Can we improve our <b>bottom-up DP</b> solutionMimicPQ even further? Can you find an algorithm that has `O(S)` space complexity?
 
 ```js
 function countSubsets(num, sum) {
@@ -1383,7 +1383,7 @@ https://leetcode.com/problems/target-sum/
 
 This problem follows the <b>[0/1 Knapsack pattern](#01-knapsack-medium)</b> and can be converted into <b>[Count of Subset Sum](#count-of-subset-sum-hard)</b>. Let’s dig into this.
 
-We are asked to find two subsets of the given numbers whose difference is equal to the given target `S`. Take the first example above. As we saw, one solution is `{+1-1-2+3}`. So, the two subsets we are asked to find are `{1, 3}` & `{1, 2}` because,
+We are asked to find two subsets of the given numbers whose difference is equal to the given target `S`. Take the first example above. As we saw, one solutionMimicPQ is `{+1-1-2+3}`. So, the two subsets we are asked to find are `{1, 3}` & `{1, 2}` because,
 
 ```js
     (1 + 3) - (1 + 2 ) = 1
@@ -1473,15 +1473,15 @@ console.log(
 // The given set has '2' ways to make a sum of '9': {+1+2+7-1} & {-1+2+7+1}
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the desired sum.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(N*S)`, where `N` represents total numbers and `S` is the desired sum.
 
-- We can further improve the solution to use only `O(S)` space.
+- We can further improve the solutionMimicPQ to use only `O(S)` space.
 
-Here is the code for the <b>space-optimized solution</b>, using only a single array:
+Here is the code for the <b>space-optimized solutionMimicPQ</b>, using only a single array:
 
 ```js
 function findTargetSubsets(num, s) {
-  //O(s) space optimized solution
+  //O(s) space optimized solutionMimicPQ
   let totalSum = 0;
 
   for (let i = 0; i < num.length; i++) totalSum += num[i];
@@ -1563,7 +1563,7 @@ Let’s try to put various combinations of fruits in the knapsack, such that the
 
 ### Basic Brute Force Solution
 
-A basic <b>brute-force solution</b> could be to try all combinations of the given items to choose the one with maximum profit and a weight that doesn’t exceed `C`. This is what our algorithm will look like:
+A basic <b>brute-force solutionMimicPQ</b> could be to try all combinations of the given items to choose the one with maximum profit and a weight that doesn’t exceed `C`. This is what our algorithm will look like:
 
 ```js
 for each item 'i'
@@ -1625,7 +1625,7 @@ console.log(
 - The <b>time complexity</b> of the above algorithm is exponential `O(2ᴺ⁺ᶜ)`, where `N` represents the total number of items.
 - The <b>space complexity</b> will be `O(N+C)` to store the <i>recursion stack</i>.
 
-Let’s try to find a better solution.
+Let’s try to find a better solutionMimicPQ.
 
 ### Top-down Dynamic Programming with Memoization
 
@@ -1689,14 +1689,14 @@ console.log(
 );
 ```
 
-#### What is the time and space complexity of the above solution?
+#### What is the time and space complexity of the above solutionMimicPQ?
 
 - Since our <i>memoization</i> array `dp[profits.length][capacity+1]` stores the results for all the subproblems, we can conclude that we will not have more than `N*C` subproblems (where `N` is the number of items and `C` is the <b>knapsack</b> capacity). This means that our <b>time complexity</b> will be `O(N∗C)`.
 - The above algorithm will be using `O(N*C)` space for the <i>memoization</i> array. Other than that we will use `O(N)` space for the recursion call-stack. So the total <b>space complexity</b> will be `O(N*C + N)`, which is <i>asymptotically</i> equivalent to `O(N*C)`.
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[][]` array from the above solution, working in a <i>bottom-up</i> fashion. Essentially, what we want to achieve is: <i>“Find the maximum profit for every sub-array and for every possible capacity”</i>.
+Let’s try to populate our `dp[][]` array from the above solutionMimicPQ, working in a <i>bottom-up</i> fashion. Essentially, what we want to achieve is: <i>“Find the maximum profit for every sub-array and for every possible capacity”</i>.
 
 So for every possible capacity `c` (`0 <= c <= capacity`), we have two options:
 
@@ -1760,7 +1760,7 @@ console.log(
 );
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items and `C` is the maximum capacity.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items and `C` is the maximum capacity.
 
 As we know, the final profit is at the right-bottom corner; hence we will start from there to find the items that will be going to the <b>knapsack</b>.
 
@@ -1805,7 +1805,7 @@ This problem can be mapped to the <b>[Unbounded Knapsack pattern](#unbounded-kna
 
 ### Brute Force
 
-A <b>basic brute-force solution</b> could be to try all combinations of the given rod lengths to choose the one with the maximum sale price. This is what our algorithm will look like:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all combinations of the given rod lengths to choose the one with the maximum sale price. This is what our algorithm will look like:
 
 ```js
 for each rod length 'i'
@@ -1864,7 +1864,7 @@ console.log(
 );
 ```
 
-Since this problem is quite similar to <b>[Unbounded Knapsack pattern](#unbounded-knapsack)</b>, let’s jump directly to the <b>bottom-up dynamic solution</b>.
+Since this problem is quite similar to <b>[Unbounded Knapsack pattern](#unbounded-knapsack)</b>, let’s jump directly to the <b>bottom-up dynamic solutionMimicPQ</b>.
 
 ### Bottom-up Dynamic Programming
 
@@ -1927,7 +1927,7 @@ console.log(
 );
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items and `C` is the maximum capacity.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(N*C)`, where `N` represents total items and `C` is the maximum capacity.
 
 #### Find the selected items
 
@@ -1975,7 +1975,7 @@ This problem follows the <b>[Unbounded Knapsack](#pattern-2-unbounded-knapsack)<
 
 ### Basic Brute Force Solution
 
-A basic <b>brute-force solution</b> could be to try all combinations of the given coins to select the ones that give a total sum of `T`. This is what our algorithm will look like:
+A basic <b>brute-force solutionMimicPQ</b> could be to try all combinations of the given coins to select the ones that give a total sum of `T`. This is what our algorithm will look like:
 
 ```js
 for each coin 'c'
@@ -1987,7 +1987,7 @@ return the count of sets who have a sum equal to 'T'
 
 This problem is quite similar to <b>[Count of Subset Sum](#🔎-subset-sum-medium)</b>. The only difference here is that after including the item (i.e., `coin`), we recursively call to process all the items (including the current `coin`). In <b>[Count of Subset Sum](#🔎-subset-sum-medium)</b>, however, we were recursively calling to process only the remaining items.
 
-Here is the code for the <b>brute-force</b> solution:
+Here is the code for the <b>brute-force</b> solutionMimicPQ:
 
 ```js
 function countChange(denominations, total) {
@@ -2032,7 +2032,7 @@ console.log(
 
 - The <b>time complexity</b> of the above algorithm is exponential `O(2ᶜ⁺ᵀ)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change. The <b>space complexity</b> will be `O(C+T)`.
 
-Let’s try to find a better solution.
+Let’s try to find a better solutionMimicPQ.
 
 ### Top-down Dynamic Programming with Memoization
 
@@ -2134,7 +2134,7 @@ console.log(
 );
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(C*T)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(C*T)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change.
 
 ## Minimum Coin Change
 
@@ -2166,7 +2166,7 @@ This problem follows the <b>[Unbounded Knapsack pattern](#pattern-2-unbounded-kn
 
 ### Basic Brute Force Solution
 
-A basic <b>brute-force solution</b> could be to try all combinations of the given coins to select the ones that give a total sum of `T`. This is what our algorithm will look like:
+A basic <b>brute-force solutionMimicPQ</b> could be to try all combinations of the given coins to select the ones that give a total sum of `T`. This is what our algorithm will look like:
 
 ```js
 for each coin 'c'
@@ -2176,7 +2176,7 @@ for each coin 'c'
 return the count of coins from the above two sets with a smaller number of coins
 ```
 
-Here is the code for the <b>brute-force solution:</b>
+Here is the code for the <b>brute-force solutionMimicPQ:</b>
 
 ```js
 function countChange(denominations, total) {
@@ -2220,7 +2220,7 @@ console.log(`Number of ways to make change: ---> ${countChange([3, 5], 7)}`);
 
 - The <b>time complexity</b> of the above algorithm is exponential `O(2ᶜ⁺ᵀ)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change. The <b>space complexity</b> will be `O(C+T)`.
 
-Let’s try to find a better solution.
+Let’s try to find a better solutionMimicPQ.
 
 ### Top-down Dynamic Programming with Memoization
 
@@ -2283,7 +2283,7 @@ So for every possible total `t` (`0<= t <= Total`) and for every possible `coin`
 1. Exclude the `coin`: In this case, we will take the minimum `coin` count from the previous `set => dp[index-1][t]`
 2. Include the `coin` if its value is not more than `t`: In this case, we will take the minimum count needed to get the remaining total, plus include `1` for the current `coin` => `dp[index][t-denominations[index]] + 1`
 
-Finally, we will take the minimum of the above two values for our solution:
+Finally, we will take the minimum of the above two values for our solutionMimicPQ:
 
 ```js
 dp[index][t] = min(dp[index - 1][t], dp[index][t - denominations[index]] + 1);
@@ -2333,7 +2333,7 @@ console.log(`Number of ways to make change: ---> ${countChange([1, 2, 3], 7)}`);
 console.log(`Number of ways to make change: ---> ${countChange([3, 5], 7)}`);
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(C*T)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(C*T)`, where `C` represents total `coin` denominations and `T` is the total amount that we want to make change.
 
 ## Maximum Ribbon Cut
 
@@ -2374,7 +2374,7 @@ Explanation: Ribbon pieces will be {3,3,7}.
 
 ### Basic Brute Force Solution
 
-A <b>basic brute-force solution</b> could be to try all combinations of the given lengths to select the maximum one that gives the total length of `n`. This is what our algorithm will look like:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all combinations of the given lengths to select the maximum one that gives the total length of `n`. This is what our algorithm will look like:
 
 ```js
 for each length 'l'
@@ -2384,7 +2384,7 @@ for each length 'l'
 return the number of pieces from the above two sets with a higher number of pieces
 ```
 
-Here is the code for the <b>brute-force solution:</b>
+Here is the code for the <b>brute-force solutionMimicPQ:</b>
 
 ```js
 function countRibbonPieces(ribbonLengths, total) {
@@ -2432,7 +2432,7 @@ console.log(
 
 The above algorithm’s <b>time complexity</b> is exponential `O(2 ᴸ⁺ᴺ)`, where `L` represents total ribbon lengths, and `N` is the total length that we want to cut. The <b>space complexity</b> will be `O(L+N)`.
 
-Since this problem is quite similar to <b>[Minimum Coin Change](#minimum-coin-change)</b>, let’s jump on to the <b>bottom-up dynamic programming solution</b>.
+Since this problem is quite similar to <b>[Minimum Coin Change](#minimum-coin-change)</b>, let’s jump on to the <b>bottom-up dynamic programming solutionMimicPQ</b>.
 
 ### Bottom-up Dynamic Programming
 
@@ -2443,7 +2443,7 @@ So for every possible length `len` (`0 <= len <= total`) and for every possible 
 1. <b>Exclude the ribbon length:</b> In this case, we will take the maximum piece count from the previous set => `dp[index-1][len]`
 2. <b>Include the ribbon length</b> if its value is not more than `len`: In this case, we will take the maximum pieces needed to get the remaining total, plus include `1` for the current ribbon length => `1 + dp[index][len-ribbonLengths[index]]`
 
-Finally, we will take the maximum of the above two values for our solution:
+Finally, we will take the maximum of the above two values for our solutionMimicPQ:
 
 ```js
 dp[index][len] = max(
@@ -2497,7 +2497,7 @@ console.log(
   `Maximum number of ribbons: ---> ${countRibbonPieces([3, 5], 7)}`);
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(L*N)`, where `L` represents total ribbon lengths and `N` is the total length that we want to cut.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(L*N)`, where `L` represents total ribbon lengths and `N` is the total length that we want to cut.
 
 # Pattern 3: Fibonacci Numbers
 
@@ -2574,7 +2574,7 @@ console.log(`7th Fibonacci is ---> ${calculateFibonacci(7)}`);
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in a bottom-up fashion. Since every <b>Fibonacci number</b> is the sum of the previous two numbers, we can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in a bottom-up fashion. Since every <b>Fibonacci number</b> is the sum of the previous two numbers, we can use this fact to populate our array.
 
 Here is the code for the <b>bottom-up dynamic programming approach</b>:
 
@@ -2595,11 +2595,11 @@ console.log(`6th Fibonacci is ---> ${calculateFibonacci(6)}`);
 console.log(`7th Fibonacci is ---> ${calculateFibonacci(7)}`);
 ```
 
-- The above solution has time and <b>space complexity</b> of `O(n)`.
+- The above solutionMimicPQ has time and <b>space complexity</b> of `O(n)`.
 
 #### Memory optimization
 
-We can optimize the space used in our previous solution. We don’t need to store all the <b>Fibonacci numbers</b> up to `n`, as we only need two previous numbers to calculate the next <b>Fibonacci number</b>. We can use this fact to further improve our solution:
+We can optimize the space used in our previous solutionMimicPQ. We don’t need to store all the <b>Fibonacci numbers</b> up to `n`, as we only need two previous numbers to calculate the next <b>Fibonacci number</b>. We can use this fact to further improve our solutionMimicPQ:
 
 ```js
 function calculateFibonacci(n) {
@@ -2620,7 +2620,7 @@ console.log(`6th Fibonacci is ---> ${calculateFibonacci(6)}`);
 console.log(`7th Fibonacci is ---> ${calculateFibonacci(7)}`);
 ```
 
-- The above solution has a <b>time complexity</b> of `O(n)` but a constant <b>space complexity</b> `O(1)`.
+- The above solutionMimicPQ has a <b>time complexity</b> of `O(n)` but a constant <b>space complexity</b> `O(1)`.
 
 ## 🔎👩🏽‍🦯 Staircase
 
@@ -2645,7 +2645,7 @@ Explanation: Following are the seven ways we can climb : {1,1,1,1}, {1,1,2}, {1,
 {2,2}, {1,3}, {3,1}
 ```
 
-Let’s first start with a <b>recursive brute-force solution</b>.
+Let’s first start with a <b>recursive brute-force solutionMimicPQ</b>.
 
 ### Brute-Force Solution
 
@@ -2730,14 +2730,14 @@ console.log(`Number of ways: ---> ${countWays(4)}`);
 console.log(`Number of ways: ---> ${countWays(5)}`);
 ```
 
-#### What is the time and space complexity of the above solution?
+#### What is the time and space complexity of the above solutionMimicPQ?
 
 - Since our <b>memoization</b> array `dp[n+1]` stores the results for all the subproblems, we can conclude that we will not have more than `n+1` subproblems (where `n` represents the total number of steps). This means that our <b>time complexity</b> will be `O(N)`.
 - The <b>space complexity</b> will also be `O(n)`; this space will be used to store the <i>recursion-stack</i>.
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `countWaysRecursive(n`) is the sum of the previous three counts. We can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `countWaysRecursive(n`) is the sum of the previous three counts. We can use this fact to populate our array.
 
 Here is the code for our <b>bottom-up dynamic programming approach</b>:
 
@@ -2768,11 +2768,11 @@ console.log(`Number of ways: ---> ${countWays(4)}`);
 console.log(`Number of ways: ---> ${countWays(5)}`);
 ```
 
-- The above solution has <b>time and space complexity</b> of `O(n)`.
+- The above solutionMimicPQ has <b>time and space complexity</b> of `O(n)`.
 
 #### Memory optimization
 
-We can optimize the space used in our previous solution. We don’t need to store all the counts up to `n`, as we only need three previous numbers to calculate the next count. We can use this fact to further improve our solution:
+We can optimize the space used in our previous solutionMimicPQ. We don’t need to store all the counts up to `n`, as we only need three previous numbers to calculate the next count. We can use this fact to further improve our solutionMimicPQ:
 
 ```js
 function countWays(n) {
@@ -2793,7 +2793,7 @@ console.log(`Number of ways: ---> ${countWays(4)}`);
 console.log(`Number of ways: ---> ${countWays(5)}`);
 ```
 
-- The above solution has a <b>time complexity</b> of `O(n)` and a constant <b>space complexity</b> `O(1)`.
+- The above solutionMimicPQ has a <b>time complexity</b> of `O(n)` and a constant <b>space complexity</b> `O(1)`.
 
 #### Fibonacci number pattern
 
@@ -2836,7 +2836,7 @@ Explanation: Following are the six ways we can express 'n' : {1,1,1,1,1}, {1,1,3
 
 ### Brute-Force Solution
 
-Let’s first start with a <b>recursive brute-force solution</b>.
+Let’s first start with a <b>recursive brute-force solutionMimicPQ</b>.
 
 For every number `i`, we have three option: subtract either `1`, `3`, or `4` from `i` and recursively process the remaining number. So our algorithm will look like:
 
@@ -2905,7 +2905,7 @@ console.log(`Number of ways: ---> ${countWays(6)}`);
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `CountWaysRecursive(n)` is the sum of the three counts. We can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `CountWaysRecursive(n)` is the sum of the three counts. We can use this fact to populate our array.
 
 Here is the code for our <b>bottom-up dynamic programming approach</b>:
 
@@ -2924,7 +2924,7 @@ console.log(`Number of ways: ---> ${countWays(5)}`);
 console.log(`Number of ways: ---> ${countWays(6)}`);
 ```
 
-The above solution has time and space complexity of `O(n)`.
+The above solutionMimicPQ has time and space complexity of `O(n)`.
 
 #### Fibonacci number pattern
 
@@ -2957,9 +2957,9 @@ Output = 4
 Explanation: Starting from index '0', we can reach the last index through: 0->1->2->3->8
 ```
 
-Let’s first start with a <b>recursive brute-force solution</b>.
+Let’s first start with a <b>recursive brute-force solutionMimicPQ</b>.
 
-### Basic brute-force solution
+### Basic brute-force solutionMimicPQ
 
 We will start with the `0`th index and try all options. So, if the value at the current index is `p`, we will try every jump in the range (`1` to `p`) from that index. After taking a jump, we <i>recursively</i> try all options from that index.
 
@@ -3043,7 +3043,7 @@ console.log(
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in the <i>bottom-up fashion</i>. As we saw in the above code, we were trying to find the minimum jumps needed to reach every index (if it is within the range) from the current index. We can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in the <i>bottom-up fashion</i>. As we saw in the above code, we were trying to find the minimum jumps needed to reach every index (if it is within the range) from the current index. We can use this fact to populate our array.
 
 As we know, every index within the range of current index can be reached in one jump. Therefore, we can say that we can reach every index (within the range of current index) in:
 
@@ -3079,7 +3079,7 @@ console.log(
 );
 ```
 
-- The above solution has a <b>time complexity</b> of `O(n²)` (because of the two `for` loops) and <b>space complexity</b> of `O(n)` to store `dp[]`.
+- The above solutionMimicPQ has a <b>time complexity</b> of `O(n²)` (because of the two `for` loops) and <b>space complexity</b> of `O(n)` to store `dp[]`.
 
 #### Fibonacci number pattern
 
@@ -3115,7 +3115,7 @@ Explanation: Starting from index '0', we can reach the top through: 0->1->top
 The total fee we have to pay will be (2+3).
 ```
 
-Let’s first start with a <b>recursive brute-force solution</b>.
+Let’s first start with a <b>recursive brute-force solutionMimicPQ</b>.
 
 ### Brute-Force Solution
 
@@ -3183,7 +3183,7 @@ console.log(`Minimum fee needed: ---> ${findMinFee([2, 3, 4, 5])}`);
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `findMinFeeRecursive(n)` is the minimum of the three <i>recursive calls</i>; we can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `findMinFeeRecursive(n)` is the minimum of the three <i>recursive calls</i>; we can use this fact to populate our array.
 
 Here is the code for our <b>bottom-up dynamic programming approach</b>:
 
@@ -3214,7 +3214,7 @@ console.log(`Minimum fee needed: ---> ${findMinFee([1, 2, 5, 2, 1, 2])}`);
 console.log(`Minimum fee needed: ---> ${findMinFee([2, 3, 4, 5])}`);
 ```
 
-- The above solution has <b>time and space complexity</b> of `O(n)`.
+- The above solutionMimicPQ has <b>time and space complexity</b> of `O(n)`.
 
 #### Fibonacci number pattern
 
@@ -3244,7 +3244,7 @@ Output: 18
 Explanation: The thief should steal from houses 10 + 8
 ```
 
-Let’s first start with a <b>recursive brute-force solution</b>.
+Let’s first start with a <b>recursive brute-force solutionMimicPQ</b>.
 
 ### Brute-Force Solution
 
@@ -3308,7 +3308,7 @@ console.log(`Maximum stealing: ---> ${findMaxSteal([2, 10, 14, 8, 1])}`);
 
 ### Bottom-up Dynamic Programming
 
-Let’s try to populate our `dp[]` array from the above solution, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `findMaxStealRecursive()` is the maximum of the two <i>recursive calls</i>; we can use this fact to populate our array.
+Let’s try to populate our `dp[]` array from the above solutionMimicPQ, working in a <i>bottom-up fashion</i>. As we saw in the above code, every `findMaxStealRecursive()` is the maximum of the two <i>recursive calls</i>; we can use this fact to populate our array.
 
 Here is the code for our <b>bottom-up dynamic programming approach</b>:
 
@@ -3332,11 +3332,11 @@ console.log(`Maximum stealing: ---> ${findMaxSteal([2, 5, 1, 3, 6, 2, 4])}`);
 console.log(`Maximum stealing: ---> ${findMaxSteal([2, 10, 14, 8, 1])}`);
 ```
 
-- The above solution has <b>time and space complexity</b> of `O(n)`.
+- The above solutionMimicPQ has <b>time and space complexity</b> of `O(n)`.
 
 #### Memory optimization
 
-We can optimize the space used in our previous solution. We don’t need to store all the previous numbers up to `n`, as we only need two previous numbers to calculate the next number in the <b>sequence</b>. Let’s use this fact to further improve our solution:
+We can optimize the space used in our previous solutionMimicPQ. We don’t need to store all the previous numbers up to `n`, as we only need two previous numbers to calculate the next number in the <b>sequence</b>. Let’s use this fact to further improve our solutionMimicPQ:
 
 ```js
 function findMaxSteal(wealth) {
@@ -3355,7 +3355,7 @@ console.log(`Maximum stealing: ---> ${findMaxSteal([2, 5, 1, 3, 6, 2, 4])}`);
 console.log(`Maximum stealing: ---> ${findMaxSteal([2, 10, 14, 8, 1])}`);
 ```
 
-- The above solution has a <b>time complexity</b> of `O(n)` and a constant <b>space complexity</b> `O(1)`.
+- The above solutionMimicPQ has a <b>time complexity</b> of `O(n)` and a constant <b>space complexity</b> `O(1)`.
 
 #### Fibonacci number pattern
 
@@ -3407,7 +3407,7 @@ Explanation: LPS could be "p", "q" or "r".
 
 ### Basic Brute-Force Solution
 
-A <b>basic brute-force solution</b> could be to try all the <b>subsequences</b> of the given <i>sequence</i>. We can start processing from the beginning and the end of the <i>sequence</i>. So at any step, we have two options:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all the <b>subsequences</b> of the given <i>sequence</i>. We can start processing from the beginning and the end of the <i>sequence</i>. So at any step, we have two options:
 
 1. If the element at the beginning and the end are the same, we increment our count by two and make a recursive call for the remaining <i>sequence</i>.
 2. We will skip the element either from the beginning or the end to make two recursive calls for the remaining <b>subsequence</b>.
@@ -3606,7 +3606,7 @@ Explanation: LPS could be "p", "q" or "r".
 
 This problem follows the <b>[Longest Palindromic Subsequence pattern](#pattern-4-palindromic-subsequence)</b>. The only difference is that in a <i>palindromic subsequence</i> characters can be non-adjacent, whereas in a <i>substring</i> all characters should form a <i>palindrome</i>. We will follow a similar approach though.
 
-The <b>basic brute-force solution</b> will be to try all the <i>substrings</i> of the given string. We can start processing from the beginning and the end of the string. So at any step, we will have two options:
+The <b>basic brute-force solutionMimicPQ</b> will be to try all the <i>substrings</i> of the given string. We can start processing from the beginning and the end of the string. So at any step, we will have two options:
 
 1. If the element at the beginning and the end are the same, we make a <i>recursive call</i> to check if the remaining <i>substring</i> is also a <i>palindrome</i>. If so, the <i>substring</i> is a <i>palindrome</i> from beginning to end.
 2. We will skip either the element from the beginning or the end to make two <i>recursive calls</i> for the remaining <i>substring</i>. The length of <b>LPS</b> would be the maximum of these two <i>recursive calls</i>.
@@ -3819,7 +3819,7 @@ This problem follows the <b>[Longest Palindromic Subsequence pattern](#pattern-4
 
 ### Bottom-up Dynamic Programming
 
-Let’s jump directly to the <b>bottom-up dynamic programming</b> solution:
+Let’s jump directly to the <b>bottom-up dynamic programming</b> solutionMimicPQ:
 
 ```js
 function findCPS(str) {
@@ -3899,7 +3899,7 @@ e.g. if we remove "pq", we get palindrome "r".
 
 This problem can be easily converted to the <b>[Longest Palindromic Subsequence (LPS)](#longest-palindromic-subsequence)</b> problem. We can use the fact that <b>LPS</b> is the best subsequence we can have, so any character that is not part of <b>LPS</b> must be removed. Please note that it is [‘Longest Palindromic SubSequence’](#longest-palindromic-subsequence) and not [‘Longest Palindrome Substring’](#👩🏽‍🦯-🌴-longest-palindromic-substring).
 
-So, our solution for a given string `str` will be:
+So, our solutionMimicPQ for a given string `str` will be:
 
 ```js
 Minimum_deletions_to_make_palindrome = Length(st) - LPS(st);
@@ -4168,7 +4168,7 @@ Explanation: We do not need to cut, as "pp" is a palindrome.
 
 This problem follows the <b>[Longest Palindromic Subsequence pattern](#pattern-4-palindromic-subsequence)</b> and shares a similar approach as that of the [Longest Palindromic Substring](#longest-palindromic-subsequence).
 
-The <b>brute-force solution</b> will be to try all the <i>substring combinations</i> of the given string. We can start processing from the beginning of the string and keep adding one character at a time. At any step, if we get a <i>palindrome</i>, we take it as one piece and <i>recursively</i> process the remaining length of the string to find the minimum cuts needed.
+The <b>brute-force solutionMimicPQ</b> will be to try all the <i>substring combinations</i> of the given string. We can start processing from the beginning of the string and keep adding one character at a time. At any step, if we get a <i>palindrome</i>, we take it as one piece and <i>recursively</i> process the remaining length of the string to find the minimum cuts needed.
 
 Here is the code:
 
@@ -4301,7 +4301,7 @@ console.log(`Minimum palindrome partitions ---> ${findMPPCuts('pp')}`);
 
 ### Bottom-up Dynamic Programming
 
-The above solution tells us that we need to build two tables, one for the `isPalindrome()` and one for `findMPPCuts()`.
+The above solutionMimicPQ tells us that we need to build two tables, one for the `isPalindrome()` and one for `findMPPCuts()`.
 
 If you remember, we built a table in the <b>[Longest Palindromic Substring (LPS)](#longest-palindromic-subsequence)</b> chapter that can tell us what <i>substrings</i> (of the input <i>string</i>) are <i>palindrome</i>. We will use the same approach here to build the table required for `isPalindrome()`.
 
@@ -4429,7 +4429,7 @@ Explanation: The longest common substring is "ssp".
 
 ### Brute-Force Solution
 
-A basic <b>brute-force solution</b> could be to try all substrings of `str1` and `str2` to find the longest common one. We can start matching both the strings one character at a time, so we have two options at any step:
+A basic <b>brute-force solutionMimicPQ</b> could be to try all substrings of `str1` and `str2` to find the longest common one. We can start matching both the strings one character at a time, so we have two options at any step:
 
 1. If the strings have a matching character, we can <i>recursively</i> match for the remaining lengths and keep a track of the current matching length.
 2. If the strings don’t match, we start two new <i>recursive calls</i> by skipping one character separately from each string and reset the matching length.
@@ -4623,7 +4623,7 @@ console.log(
 
 ### Challenge
 
-Can we further improve our <b>bottom-up DP</b> solution? Can you find an algorithm that has `O(n)` <b>space complexity</b>
+Can we further improve our <b>bottom-up DP</b> solutionMimicPQ? Can you find an algorithm that has `O(n)` <b>space complexity</b>
 
 ## 🔎 Longest Common Subsequence
 
@@ -4653,7 +4653,7 @@ Explanation: The longest common subsequence is "psspt".
 
 ### Basic Brute-Force Solution
 
-A <b>basic brute-force solution</b> could be to try all <i>subsequences</i> of `str1` and `str2` to find the longest one. We can match both the strings one character at a time. So for every index `index1` in `str1` and `index2` in `str2` we must choose between:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all <i>subsequences</i> of `str1` and `str2` to find the longest one. We can match both the strings one character at a time. So for every index `index1` in `str1` and `index2` in `str2` we must choose between:
 
 1. If the character `str1[index1]` matches `str2[index2`, we can <i>recursively</i> match for the remaining lengths.
 2. If the character `str1[index1]` does not match `str2[index2]`, we will start two new <i>recursive calls</i> by skipping one character separately from each string.
@@ -4830,7 +4830,7 @@ console.log(
 
 ### Challenge
 
-Can we further improve our <b>bottom-up DP solution</b>? Can you find an algorithm that has `O(n)` <b>space complexity</b>?
+Can we further improve our <b>bottom-up DP solutionMimicPQ</b>? Can you find an algorithm that has `O(n)` <b>space complexity</b>?
 
 ## Minimum Deletions & Insertions to Transform a String into another
 
@@ -4874,7 +4874,7 @@ This problem can easily be converted to the <b>[Longest Common Subsequence (LCS)
 
 ### Bottom-up Dynamic Programming Solution
 
-Let’s jump directly to the <b>bottom-up dynamic programming solution</b>:
+Let’s jump directly to the <b>bottom-up dynamic programming solutionMimicPQ</b>:
 
 ```js
 function findMDI(str1, str2) {
@@ -4947,7 +4947,7 @@ Explanation: The LIS is {-4,3,7,15}.
 
 ### Basic Brute-Force Solution
 
-A <b>basic brute-force solution</b> could be to try all the <i>subsequences</i> of the given number sequence. We can process one number at a time, so we have two options at any step:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all the <i>subsequences</i> of the given number sequence. We can process one number at a time, so we have two options at any step:
 
 1. If the current number is greater than the previous number that we included, we can <i>increment our count</i> and make a <i>recursive call</i> for the remaining array.
 2. We can skip the current number to make a <i>recursive call</i> for the remaining array.
@@ -5131,7 +5131,7 @@ Explanation: The increaseing sequences are {10, 15} and {3,7,15}.
 
 The problem is quite similar to the <b>[Longest Increasing Subsequence](#👩🏽‍🦯-🔎-longest-increasing-subsequence)</b>. The only difference is that, instead of finding the increasing subsequence with the maximum length, we need to find an increasing sequence with the maximum `sum`.
 
-A <b>basic brute-force solution</b> could be to try all the <i>subsequences</i> of the given array. We can process one number at a time, so we have two options at any step:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all the <i>subsequences</i> of the given array. We can process one number at a time, so we have two options at any step:
 
 1. If the current number is greater than the previous number that we included, we include that number in a running `sum` and make a <i>recursive call</i> for the remaining array.
 2. We can skip the current number to make a <i>recursive call</i> for the remaining array.
@@ -5335,7 +5335,7 @@ Explanation: The SCS is "dynprogrammicng".
 
 The problem is quite similar to the <b>[Longest Common Subsequence](#🔎-longest-common-subsequence)</b>.
 
-A <b>basic brute-force solution</b> could be to try all the <b>super-sequences</b> of the given <b>sequences</b>. We can process both of the <b>sequences</b> one character at a time, so at any step, we must choose between:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all the <b>super-sequences</b> of the given <b>sequences</b>. We can process both of the <b>sequences</b> one character at a time, so at any step, we must choose between:
 
 1. If the <b>sequences</b> have a matching character, we can skip one character from both the <b>sequences</b> and make a <i>recursive call</i> for the remaining lengths to get <b>SCS</b>.
 2. If the strings don’t match, we start two new <i>recursive calls</i> by skipping one character separately from each string. The minimum of these two <i>recursive calls</i> will have our answer.
@@ -5560,11 +5560,11 @@ sorted sequence. Sorted sequences are {3}, {2}, {1}, and {0}
 
 ### Basic Brute-force Solution
 
-A <b>basic brute-force solution</b> could be to try deleting all combinations of elements, one by one, and checking if that makes the <b>subsequence</b> sorted.
+A <b>basic brute-force solutionMimicPQ</b> could be to try deleting all combinations of elements, one by one, and checking if that makes the <b>subsequence</b> sorted.
 
-Alternately, we can convert this problem into a <b>[Longest Increasing Subsequence (LIS)](#👩🏽‍🦯-🔎-longest-increasing-subsequence)</b> problem. As we know that <b>LIS</b> will give us the length of the <b>longest increasing subsequence</b> (in the sorted order!), which means that the elements which are not part of the <b>LIS</b> should be removed to make the <b>sequence</b> sorted. This is exactly what we need. So we’ll get our solution by subtracting the length of <b>LIS</b> from the length of the input array: `Length-of-input-array - LIS()`
+Alternately, we can convert this problem into a <b>[Longest Increasing Subsequence (LIS)](#👩🏽‍🦯-🔎-longest-increasing-subsequence)</b> problem. As we know that <b>LIS</b> will give us the length of the <b>longest increasing subsequence</b> (in the sorted order!), which means that the elements which are not part of the <b>LIS</b> should be removed to make the <b>sequence</b> sorted. This is exactly what we need. So we’ll get our solutionMimicPQ by subtracting the length of <b>LIS</b> from the length of the input array: `Length-of-input-array - LIS()`
 
-Let’s jump directly to the <b>bottom-up dynamic programming</b> solution.
+Let’s jump directly to the <b>bottom-up dynamic programming</b> solutionMimicPQ.
 
 ### Bottom-up Dynamic Programming
 
@@ -5669,7 +5669,7 @@ The problem is quite similar to the <b>[Longest Common Subsequence (LCS)](#🔎-
 1. In <b>LCS</b>, we were trying to find the <b>longest common subsequence</b> between the <i>two strings</i>, whereas in <b>LRS</b> we are trying to find the <b>two longest common subsequences</b> within <i>one string</i>.
 2. In <b>LRS</b>, every corresponding character in the <b>subsequences</b> should not have the same <i>index</i>.
 
-A <b>basic brute-force solution</b> could be to try all <b>subsequences</b> of the given <b>sequence</b> to find <i>the longest repeating one</i>, but the problem is how to ensure that the <b>LRS</b>’s characters do not have the <i>same index</i>. For this, we can start with two <i>indices</i> in the given <b>sequence</b>, so at any step we have two choices:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all <b>subsequences</b> of the given <b>sequence</b> to find <i>the longest repeating one</i>, but the problem is how to ensure that the <b>LRS</b>’s characters do not have the <i>same index</i>. For this, we can start with two <i>indices</i> in the given <b>sequence</b>, so at any step we have two choices:
 
 1. If the <i>two indices</i> are not the same and the characters at both the <i>indices</i> are same, we can <b>recursively</b> match for the remaining length (i.e. by incrementing both the <i>indices</i>).
 2. If the characters at both the <i>indices</i> don’t match, we start two new <b>recursive calls</b> by incrementing each <i>index</i> separately. The <b>LRS</b> would be the one with the highest length from the two <b>recursive calls</b>.
@@ -5872,7 +5872,7 @@ Explanation: Following are the four occurences: {tomorrow, tomorrow, tomorrow, t
 
 This problem follows the <b>[Longest Common Subsequence (LCS) pattern](#pattern-5-longest-common-substring)</b> and is quite similar to the <b>[Longest Repeating Subsequence](#longest-repeating-subsequence)</b>; the difference is that we need to count the total occurrences of the <b>subsequence</b>.
 
-A <b>basic brute-force solution</b> could be to try all the <b>subsequences</b> of the given `string` to count all that match the given `pattern`. We can match the pattern with the given `string` one character at a time, so we can do two things at any step:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all the <b>subsequences</b> of the given `string` to count all that match the given `pattern`. We can match the pattern with the given `string` one character at a time, so we can do two things at any step:
 
 1. If the `pattern` has a matching character with the `string`, we can <b>recursively</b> match for the remaining lengths of the `pattern` and the `string`.
 2. At every step, we can always skip a character from the `string` to try to match the remaining `string` with the `pattern`. So we can start a <b>recursive call</b> by skipping one character from the `string`.
@@ -6071,7 +6071,7 @@ Explanation: The LBS is {4,5,9,7,6,3,1}.
 
 ### Basic Solution
 
-A <b>basic brute-force solution</b> could be to try finding the <b>Longest Decreasing Subsequences (LDS)</b>, starting from every number in both directions. So for every index `i` in the given array, we will do two things:
+A <b>basic brute-force solutionMimicPQ</b> could be to try finding the <b>Longest Decreasing Subsequences (LDS)</b>, starting from every number in both directions. So for every index `i` in the given array, we will do two things:
 
 1. Find <b>LDS</b> starting from `i` to the end of the array.
 2. Find <b>LDS</b> starting from `i` to the beginning of the array.
@@ -6357,7 +6357,7 @@ Explanation: The LAS is {1,3,2,4}.
 
 ### Basic Solution
 
-A <b>basic brute-force solution</b> could be to try finding the <b>LAS</b> starting from every number in both <i>ascending</i> and <i>descending</i> order. So for every index `i` in the given array, we will have three options:
+A <b>basic brute-force solutionMimicPQ</b> could be to try finding the <b>LAS</b> starting from every number in both <i>ascending</i> and <i>descending</i> order. So for every index `i` in the given array, we will have three options:
 
 1. If the element at `i` is bigger than the last element we considered, we include the element at `i` and recursively process the remaining array to find the next element in <i>descending</i> order.
 2. If the element at `i` is smaller than the last element we considered, we include the element at `i` and recursively process the remaining array to find the next element in <i>ascending</i> order.
@@ -6625,7 +6625,7 @@ Explanation: Replace 'a' with 'p', 'o' with 'q', and insert 'r'.
 
 ### Basic Solution
 
-A <b>basic brute-force solution</b> could be to try all operations (one by one) on each character of `s1`. We can iterate through `s1` and `s2` together. Let’s assume `index1` and `index2` point to the current indexes of `s1` and `s2` respectively, so we have two options at every step:
+A <b>basic brute-force solutionMimicPQ</b> could be to try all operations (one by one) on each character of `s1`. We can iterate through `s1` and `s2` together. Let’s assume `index1` and `index2` point to the current indexes of `s1` and `s2` respectively, so we have two options at every step:
 
 1. If the strings have a matching character, we can recursively match for the remaining lengths.
 2. If the strings don’t match, we start three new recursive calls representing the three edit operations. Whichever recursive call returns the minimum count of operations will be our answer.
@@ -6867,7 +6867,7 @@ Explanation: 'p' contains all the letters from 'm' and 'n' and preserves their o
 
 The problem follows the <b>[Longest Common Subsequence (LCS) pattern](#pattern-5-longest-common-substring)</b> and has some similarities with <b>[Subsequence Pattern Matching](#subsequence-pattern-matching)</b>.
 
-A <b>basic brute-force solution</b>could be to try matching `m` and `n` with `p` one letter at a time. Let’s assume `mIndex`, `nIndex`, and `pIndex` represent the current indexes of `m`, `n`, and `p` strings respectively. Therefore, we have two options at any step:
+A <b>basic brute-force solutionMimicPQ</b>could be to try matching `m` and `n` with `p` one letter at a time. Let’s assume `mIndex`, `nIndex`, and `pIndex` represent the current indexes of `m`, `n`, and `p` strings respectively. Therefore, we have two options at any step:
 
 1. If the letter at `mIndex` matches with the letter at `pIndex`, we can recursively match for the remaining lengths of `m` and `p`.
 2. If the letter at `nIndex` matches with the letter at `pIndex`, we can recursively match for the remaining lengths of `n` and `p`.

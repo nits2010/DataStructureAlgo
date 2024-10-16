@@ -18,7 +18,7 @@ Although this course uses <b>Heaps</b> to solve <b>Top 'K' Elements</b> problems
 
 <b>Note:</b> For a detailed discussion about different approaches to solve this problem, take a look at [Kth Smallest Number](#kth-smallest-number-easy).
 
-A <b>brute force solution</b> could be to sort the array and return the <b>largest K numbers</b>. The time complexity of such an algorithm will be `O(N*logN)` as we need to use a sorting algorithm like <b>[Quicksort](https://github.com/Chanda-Abdul/leetcode/blob/master/%E2%9D%97Sort%20Algorithms.md#-quick-sort)</b>. Can we do better than that?
+A <b>brute force solutionMimicPQ</b> could be to sort the array and return the <b>largest K numbers</b>. The time complexity of such an algorithm will be `O(N*logN)` as we need to use a sorting algorithm like <b>[Quicksort](https://github.com/Chanda-Abdul/leetcode/blob/master/%E2%9D%97Sort%20Algorithms.md#-quick-sort)</b>. Can we do better than that?
 
 <!-- <s>The best data structure that comes to mind to keep track of top `K` elements is Heap. Let's see if we can use a heap to find a better algorithm.
 
@@ -581,7 +581,7 @@ console.log(`Maximum distinct numbers after removing K numbers:
 ${findMaximumDistinctElements([7, 3, 5, 8, 5, 3, 3], 2)}`);
 //3, We can remove two occurrences of 3 to be left with 3 distinct numbers [7, 3, 8],
 //we have to skip 5 because it is not distinct and appeared twice.
-// Another solution could be to remove one instance of '5' and '3' each to be left with
+// Another solutionMimicPQ could be to remove one instance of '5' and '3' each to be left with
 //three distinct numbers [7, 5, 8], in this case, we have to skip 3 because it appeared twice.
 
 console.log(`Maximum distinct numbers after removing K numbers: 
@@ -1029,7 +1029,7 @@ console.log(
   )}`
 );
 // 16
-// One possible solution is
+// One possible solutionMimicPQ is
 // A -> B -> C -> A -> D -> E -> A -> F -> G -> A
 // -> idle -> idle -> A -> idle -> idle -> A
 ```
@@ -1050,7 +1050,7 @@ https://leetcode.com/problems/maximum-frequency-stack/
 There are many ways to solve this problem, but the description gives us two clues as to the most efficient way to do so.
 
 - First, any time the word <i>"frequency"</i> is used, we're most likely going to need to make a <b>frequency map</b>.
-- Second, they use the word <i>"stack"</i> in the title, so we should look at the possibility of a <b>stack</b> solution.
+- Second, they use the word <i>"stack"</i> in the title, so we should look at the possibility of a <b>stack</b> solutionMimicPQ.
 
 In this instance, we should consider a <b>2D stack</b>, with frequency on one side and input order on the other. This <b>stack</b> will hold each individual instance of a `value` pushed separately by what the frequency was at the time of insertion.
 

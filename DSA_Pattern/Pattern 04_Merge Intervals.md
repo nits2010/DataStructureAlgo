@@ -164,7 +164,7 @@ anyOverlap([[1,2]])
  
  > Given a list of non-overlapping intervals sorted by their `startTime`, <b>insert a given interval at the correct position</b> and merge all necessary intervals to produce a list that has only mutually exclusive intervals.
 
-If the given list was not sorted, we could have simply appended the new interval to it and used the `merge()` function from <b>Merge Intervals</b>. But since the given list is sorted, we should try to come up with a solution better than `O(N * logN)`
+If the given list was not sorted, we could have simply appended the new interval to it and used the `merge()` function from <b>Merge Intervals</b>. But since the given list is sorted, we should try to come up with a solutionMimicPQ better than `O(N * logN)`
 
 When inserting a new interval in a sorted list, we need to first find the correct index where the new interval can be placed. In other words, we need to skip all the intervals which end before the start of the new interval. So we can iterate through the given sorted listed of intervals and skip all the intervals with the following condition:
 `intervals[i].end < newInterval.start`
@@ -592,7 +592,7 @@ This problem follows the [Merge Intervals pattern](#pattern-4--merge-intervals).
 Input: Employee Working Hours=[[[1,3], [9,12]], [[2,4]], [[6,8]]]
 Output: [4,6], [8,9]
 ````
-One simple solution can be to put all employees' working hours in a list and sort them on the `startTime`. Then we can iterate through the list to find the gaps. Let’s dig deeper. Sorting the intervals of the above example will give us:
+One simple solutionMimicPQ can be to put all employees' working hours in a list and sort them on the `startTime`. Then we can iterate through the list to find the gaps. Let’s dig deeper. Sorting the intervals of the above example will give us:
 ````
 [1,3], [2,4], [6,8], [9,12]
 ````
@@ -636,7 +636,7 @@ findEmployeeFreeTime ([[[1,3]], [[2,4]], [[3,5], [7,9]]])//[5,7], ll employees a
 - This algorithm will take `O(N * logN)` time, where `N` is the total number of intervals. This time is needed because we need to sort all the intervals. 
 - The space complexity will be `O(N)`, which is needed for sorting. 
 
-#### Can we find a better solution?
+#### Can we find a better solutionMimicPQ?
 
 One fact that we are not utilizing is that each employee list is individually sorted!
 
