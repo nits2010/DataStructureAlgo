@@ -55,6 +55,8 @@ import java.util.PriorityQueue;
  * @Heap(PriorityQueue) <p>
  * Company Tags
  * -----
+ * @Wayfair
+ *
  * @Editorial
  * @OptimalSoltuion {@link SolutionSimple}
  */
