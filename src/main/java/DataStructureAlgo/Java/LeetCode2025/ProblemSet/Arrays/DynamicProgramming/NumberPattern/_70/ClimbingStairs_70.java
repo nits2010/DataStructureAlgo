@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.FibonacciPattern._70;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._70;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 

@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.FibonacciPattern._746;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._746;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
@@ -45,7 +45,7 @@ import java.util.Arrays;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.FibonacciPattern._70.ClimbingStairs_70}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._70.ClimbingStairs_70}
  * extension {@link DataStructureAlgo.Java.LeetCode.FibonacciNumber}
  * <p><p>
  * Tags
