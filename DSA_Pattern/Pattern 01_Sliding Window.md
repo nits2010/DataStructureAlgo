@@ -33,7 +33,7 @@ findAvgOfSubarrays([1, 3, 2, 6, -1, 4, 1, 8, 2], 5)
 
 <b>Time complexity: </b> Since for every element of the input array, we are calculating the sum of its next `K` elements, the time complexity of the above algorithm will be `O(N*K)` where `N` is the number of elements in the input array.
 
-#### Can we find a better solution? Do you see any inefficiency in the above approach?
+#### Can we find a better solutionMimicPQ? Do you see any inefficiency in the above approach?
 
 The inefficiency is that for any two consecutive subarrays of size `5`, the overlapping part (which will contain four elements) will be evaluated twice.
 
@@ -80,7 +80,7 @@ https://leetcode.com/problems/largest-subarray-length-k/
 > Given an array of positive numbers and a positive number `K`, find the maximum sum of any contiguous subarray of size `K`.
 ### Brute Force
 
-A basic brute force solution will be to calculate the sum of all `K` sized subarrays of the given array to find the subarray with the highest sum. We can start from every index of the given array and add the next `K` elements to find the subarrays sum.
+A basic brute force solutionMimicPQ will be to calculate the sum of all `K` sized subarrays of the given array to find the subarray with the highest sum. We can start from every index of the given array and add the next `K` elements to find the subarrays sum.
 ````js
 function maxSubarrayOfSizeK(arr, k) {
   //brute force

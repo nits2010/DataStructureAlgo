@@ -682,7 +682,7 @@ console.log(
 
 We can use an <i>in-place sort</i> like a <b>HeapSort</b> to sort the input array to get the `Kth` smallest number. 
 
-Following is the code for this solution:
+Following is the code for this solutionMimicPQ:
 
 ```js
 function findKthSmallestNumber(nums, k) {

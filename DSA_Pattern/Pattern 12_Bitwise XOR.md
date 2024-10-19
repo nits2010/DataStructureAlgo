@@ -70,7 +70,7 @@ function findMissingNumber(arr) {
 
 findMissingNumber([1,5,2,6,4])//3
 ````
-- The time complexity of the above algorithm is `O(n)` and the space complexity is `O(1)`. The time and space complexities are the same as that of the previous solution but, in this algorithm, we will not have any integer overflow problem.
+- The time complexity of the above algorithm is `O(n)` and the space complexity is `O(1)`. The time and space complexities are the same as that of the previous solutionMimicPQ but, in this algorithm, we will not have any integer overflow problem.
 ### Important properties of XOR to remember 
 Following are some important properties of XOR to remember:
 
@@ -87,7 +87,7 @@ Following are some important properties of XOR to remember:
 https://leetcode.com/problems/single-number/
 > In a non-empty array of integers, every number appears twice except for one, find that single number.
 
-One straight forward solution can be to use a <b>HashMap</b> kind of data structure and iterate through the input:
+One straight forward solutionMimicPQ can be to use a <b>HashMap</b> kind of data structure and iterate through the input:
 - If number is already present in <b>HashMap</b>, remove it.
 - If number is not present in <b>HashMap</b>, add it.
 - In the end, only number left in the <b>HashMap</b> is our required single number.
@@ -128,7 +128,7 @@ function singleNumber(arr) {
 findMissingNumber([1, 4, 2, 1, 3, 2, 3])//4
 findMissingNumber([7, 9, 7])//9
 ````
-Time and space complexity Time Complexity of the above solution will be `O(n)`and space complexity will also be `O(n)`.
+Time and space complexity Time Complexity of the above solutionMimicPQ will be `O(n)`and space complexity will also be `O(n)`.
 
 Can we do better than this using the <b>XOR</b> Pattern?
 
@@ -152,7 +152,7 @@ function singleNumber(arr) {
 singleNumber([1, 4, 2, 1, 3, 2, 3])//4
 singleNumber([7, 9, 7])//9
 ````
-- Time complexity of this solution is `O(n)` as we iterate through all numbers of the input once.
+- Time complexity of this solutionMimicPQ is `O(n)` as we iterate through all numbers of the input once.
 - The algorithm runs in constant space `O(1)`.
 ## 😕 Two Single Numbers (medium)
 https://leetcode.com/problems/single-number-iii/
@@ -213,7 +213,7 @@ function findSingleNumbers(nums) {
 findSingleNumbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])//[4, 6]
 findSingleNumbers([2, 1, 3, 2])//[1,3]
 ````
-- The time complexity of this solution is `O(n)` where `n` is the number of elements in the input array.
+- The time complexity of this solutionMimicPQ is `O(n)` where `n` is the number of elements in the input array.
 - The algorithm runs in constant space `O(1)`.
 ## 😕 Complement of Base 10 Number (medium)
 https://leetcode.com/problems/complement-of-base-10-integer/
@@ -268,7 +268,7 @@ function calculateBitwiseComplement(n) {
   // representation of '11' i.e., it has '2' least significant bits set to '1' 
   let allBitsSet = Math.pow(2, bitCount) -1
   
-  // from the solution description: complement = number ^ allBitsSet
+  // from the solutionMimicPQ description: complement = number ^ allBitsSet
   return n ^ allBitsSet
 }
 
@@ -276,8 +276,8 @@ calculateBitwiseComplement(8)//7,  is 1000 in binary, its complement is 0111 in 
 calculateBitwiseComplement(10)//5, 10 is 1010 in binary, its complement is 0101 in binary, which is 5 in base-10.
 ````
 
-- Time complexity of this solution is `O(b)`where `b` is the number of bits required to store the given number.
-- Space complexity of this solution is `O(1)`.
+- Time complexity of this solutionMimicPQ is `O(b)`where `b` is the number of bits required to store the given number.
+- Space complexity of this solutionMimicPQ is `O(1)`.
 ## 🌟 Flip Binary Matrix(hard)
 https://leetcode.com/problems/flipping-an-image/
 > Given a binary matrix representing an image, we want to flip the image horizontally, then invert it.
@@ -307,5 +307,5 @@ flipAndInvertImage([[1,0,1], [1,1,1], [0,1,1]])//First reverse each row: [[1,0,1
 flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]])//First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]. Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 ````
 
-- The time complexity of this solution is `O(n)` as we iterate through all elements of the input.
-- The space complexity of this solution is `O(1)`.
+- The time complexity of this solutionMimicPQ is `O(n)` as we iterate through all elements of the input.
+- The space complexity of this solutionMimicPQ is `O(1)`.

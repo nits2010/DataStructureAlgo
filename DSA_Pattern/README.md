@@ -135,9 +135,9 @@ Although this course uses <b>Heaps</b> to solve <b>Top 'K' Elements</b> problems
 ## [Pattern 15: 0/1 Knapsack (Dynamic Programming)](./%E2%9C%85%20Pattern%2015:%200-1%20Knapsack%20(Dynamic%20Programming).md)
 <b>0/1 Knapsack pattern</b> is based on the famous problem with the same name which is efficiently solved using <b>Dynamic Programming (DP)</b>.
 
-In this pattern, we will go through a set of problems to develop an understanding of <b>DP</b>. We will always start with a <b>brute-force</b> recursive solution to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.
+In this pattern, we will go through a set of problems to develop an understanding of <b>DP</b>. We will always start with a <b>brute-force</b> recursive solutionMimicPQ to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.
 
-After the recursive solution, we will modify our algorithm to apply advanced techniques of <b>Memoization</b> and <b>Bottom-Up Dynamic Programming</b> to develop a complete understanding of this pattern.
+After the recursive solutionMimicPQ, we will modify our algorithm to apply advanced techniques of <b>Memoization</b> and <b>Bottom-Up Dynamic Programming</b> to develop a complete understanding of this pattern.
 
 ## [Pattern 16: 🔎 Topological Sort (Graph)](./%E2%9C%85%20Pattern%2016%3A%20%F0%9F%94%8E%20Topological%20Sort%20(Graph).md)
 <b>Topological Sort</b> is used to find a linear ordering of elements that have dependencies on each other. For example, if event `B` is dependent on event `A`, `A` comes before `B` in topological ordering.
