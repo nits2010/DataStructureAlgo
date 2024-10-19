@@ -41,7 +41,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p><p>
  * Tags
  * -----
- *
+ * @easy
  * @DynamicProgramming
  * @Math
  * @Memoization <p><p>
