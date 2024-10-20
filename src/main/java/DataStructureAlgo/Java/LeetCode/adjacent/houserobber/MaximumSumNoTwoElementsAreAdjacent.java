@@ -82,12 +82,12 @@ public class MaximumSumNoTwoElementsAreAdjacent {
  Lets examine how we approach this problem from base.
 
  As question stated that
- 1. We need to Maximize the sum
+ 1. We need to Maximize sum
  2. We should not choose elements which are adj
 
- That leads us that if we choose the 'i'th element then we can't choose 'i-1' and 'i+1' element from the array.
- Since we need to maximize the sum then we need to smartly choose 'i'th element.
- Lets take an example
+ That leads us that if we choose the 'i'th element, then we can't choose 'i-1' and 'i+1' element from the array.
+ Since we need to maximize the sum, then we need to smartly choose 'i'th element.
+ Let's take an example
 
  Input: [2] ; n=1
  Here we can choose only 2; Hence output 2
@@ -106,14 +106,14 @@ public class MaximumSumNoTwoElementsAreAdjacent {
  case 3: if we choose 3 then
  sum = 3; left with [2] -> output is 5
 
- Which means, we need to see choosing current element gives us maximum sum or choosing next/previous element gives maximum sum
+ Which means, we need to see choosing the current element gives us maximum sum or choosing next/previous element gives maximum sum
 
  */
 
 class HouseRobber {
 
     /**
-     * Extending above process, we can solve this recursively by choosing 'i' the element as see does it gives us best solution
+     * Extending the above process, we can solve this recursively by choosing 'i' the element as seeing does it give us the best solution
      * otherwise try i+1
      * <p>
      * we do iteratively, so we don't need to look back
@@ -208,7 +208,7 @@ class HouseRobber {
             if (nums.length == 2)
                 return Math.max(nums[0], nums[1]);
 
-            int memo[] = new int[nums.length];
+            int[] memo = new int[nums.length];
             Arrays.fill(memo, -1);
             return maximumSumNoTwoElementAreAdj(nums, 0, memo);
         }
@@ -281,7 +281,7 @@ class HouseRobber {
                 return Math.max(nums[0], nums[1]);
 
             int n = nums.length;
-            int memo[] = new int[n];
+            int[] memo = new int[n];
             Arrays.fill(memo, -1);
 
             //Base case:
@@ -299,7 +299,7 @@ class HouseRobber {
 
 
     /**
-     * Problem exhibits the two things
+     * The Problem exhibits two things
      * 1. Include this element
      * 2. don't include this element
      * <p>
@@ -362,7 +362,7 @@ class HouseRobber {
             return maximumSumNoTwoElementAreAdj(nums);
         }
 
-        public int maximumSumNoTwoElementAreAdj(int nums[]) {
+        public int maximumSumNoTwoElementAreAdj(int[] nums) {
 
             if (nums == null || nums.length == 0)
                 return 0;
