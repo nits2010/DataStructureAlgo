@@ -67,7 +67,7 @@ import java.util.Stack;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSoltuion
+ * @OptimalSoltuion {@link SolutionStack}
  */
 public class ParsingABooleanExpression_1106 {
 
@@ -103,33 +103,28 @@ public class ParsingABooleanExpression_1106 {
             Stack<Character> stack = new Stack<>();
 
             char[] chars = expression.toCharArray();
+            int cFalse, cTrue;
             for (char c : chars) {
                 if (c != open && c != comma) {
                     if (c == and || c == or || c == neg || c == f || c == t)
                         stack.push(c);
                 }
                 if (c == close) {
-                    int cFalse = 0, cTrue = 0;
-                    char out = t;
-
+                    cFalse = 0; cTrue = 0;
                     while (!stack.isEmpty()) {
                         char current = stack.pop();
-
-                        if (current == and || current == or || current == neg) {
-
-                            out = operation(cTrue, cFalse, current);
-                            break;
-
+                        if (current == t) {
+                            cTrue++;
                         } else if (current == f) {
                             cFalse++;
-
-                        } else if (current == t) {
-                            cTrue++;
+                        } else {
+                            stack.push(operation(cTrue, cFalse, current));
+                            break;
 
                         }
 
                     }
-                    stack.push(out);
+
                 }
             }
             return stack.pop() == t;
