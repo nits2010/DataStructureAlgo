@@ -1,9 +1,9 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.HouseRobber._198;
 
+import DataStructureAlgo.Java.LeetCode.adjacent.houserobber.HouseRobberI;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Author: Nitin Gupta
@@ -36,7 +36,7 @@ import java.util.Comparator;
  * 0 <= nums[i] <= 400
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.adjacent.houserobber.MaximumSumNoTwoElementsAreAdjacent}
+ * Duplicate {@link HouseRobberI}
  * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._746.MinCostClimbingStairs_746}
  * extension {@link }
  * <p><p>

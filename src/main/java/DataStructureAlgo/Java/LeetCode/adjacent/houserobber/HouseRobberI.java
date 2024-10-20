@@ -46,7 +46,7 @@ import java.util.Arrays;
  * Input : arr[] = {1, 20, 3}
  * Output : 20
  */
-public class MaximumSumNoTwoElementsAreAdjacent {
+public class HouseRobberI {
 
     public static void main(String[] args) {
         test(new int[]{5, 5, 10, 100, 10, 5}, 110);

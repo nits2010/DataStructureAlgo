@@ -43,11 +43,11 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * input: [3000,6,2, 8,9,3000]
  * output:3014 [6,8,3000]  { 3000+2+9=3011 < 3014}
  * <p>
- * Extension of {@link MaximumSumNoTwoElementsAreAdjacent}
+ * Extension of {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI}
  * <p>
  * [Adobe]
  */
-public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
+public class HouseRobberII {
     public static void main(String[] args) {
         test(new int[]{7, 3, 5, 2, 9}, 14);
         test(new int[]{1000, 3, 200, 2, 400, 10000}, 10200);
@@ -71,7 +71,7 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
 }
 
 /**
- * {@link MaximumSumNoTwoElementsAreAdjacent}
+ * {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI}
  */
 class HouseRobberIIDP {
 
@@ -80,7 +80,7 @@ class HouseRobberIIDP {
     }
 
     /**
-     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent} and build two
+     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} and build two
      * array
      * 1. Left to Right {dpLR}
      * 2. Right to left {dpRL}
@@ -127,7 +127,7 @@ class HouseRobberIIDP {
 
 
     /**
-     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent} and build two
+     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} and build two
      * array
      * 1. Left to Right {dpLR}
      * 2. Right to left {dpRL}
@@ -183,7 +183,7 @@ class HouseRobberIIDP {
 }
 
 /**
- * {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+ * {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
  */
 class HouseRobberIILinear {
 
@@ -192,7 +192,7 @@ class HouseRobberIILinear {
     }
 
     /**
-     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
      *
      * @param nums
      * @return
@@ -244,7 +244,7 @@ class HouseRobberIILinear {
 
 
     /**
-     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
      * <p>
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for House Robber II.
      * Memory Usage: 34.3 MB, less than 100.00% of Java online submissions for House Robber II.

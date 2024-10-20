@@ -31,7 +31,7 @@ import java.util.Arrays;
  * Input: arr[] = {1, 2, 3, 4, 5, 6, 7, 8}
  * Output: 27
  * <p>
- * Extension of {@link MaximumSumNoTwoElementsAreAdjacent}
+ * Extension of {@link HouseRobberI}
  */
 public class MaximumSumNoThreeElementsAreAdjacent {
 
