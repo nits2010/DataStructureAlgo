@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-28
- * Description: https://leetcode.com/problems/house-robber-ii/
+ * Description: 213. House Robber II
+ * https://leetcode.com/problems/house-robber-ii/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed.
  * All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
  * <p>
@@ -133,11 +134,11 @@ class HouseRobberIIDP {
      * <p>
      * Then take the maximum of dpLR[n-2] {skipping nums[n-1]} and dpRL[1]{skipping nums[0]}
      * <p>
-     * We can build both array bit differently too.
+     * We can build both array bits differently too.
      * <p>
      * since dpLR discarding n-1 element
      * and
-     * dpRL discarding 0 element.
+     * dpRL discarding element 0.
      * <p>
      * build dpLR [0..n-2]
      * build dpRL [1...n-1]

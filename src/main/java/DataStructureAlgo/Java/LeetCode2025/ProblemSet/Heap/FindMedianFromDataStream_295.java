@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1033.StatisticsFromALargeSample_1033;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -50,7 +52,7 @@ import java.util.PriorityQueue;
  * Then, we can iterate over the array to find the middle value to get our median. Time and space complexity would be O(100) = O(1).
  * REF: Time and space complexity would be O(100) = O(1).
  *  * <a href="https://leetcode.com/problems/statistics-from-a-large-sample/description/">...</a>
- *  {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.StatisticsFromALargeSample_1033}
+ *  {@link StatisticsFromALargeSample_1033}
  *
  * Q-2: If 99% of all integer numbers from the stream are between 0 and 100, how would you optimize it?
  * In this case, we can keep a counter for lessThanHundred and greaterThanHundred.

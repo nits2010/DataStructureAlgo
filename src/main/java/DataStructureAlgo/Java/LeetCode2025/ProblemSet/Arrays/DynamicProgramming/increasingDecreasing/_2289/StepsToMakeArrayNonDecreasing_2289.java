@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.increasingDecreasing._2289;
 
 import java.util.Arrays;
 import java.util.Stack;

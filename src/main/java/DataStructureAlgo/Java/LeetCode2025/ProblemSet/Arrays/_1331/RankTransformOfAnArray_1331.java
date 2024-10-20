@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1331;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 

@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.CartesianGrid;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.CartesianGrid._1779;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
