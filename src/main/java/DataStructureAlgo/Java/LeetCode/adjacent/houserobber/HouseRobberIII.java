@@ -41,6 +41,8 @@ import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 public class HouseRobberIII {
 
     public static void main(String[] args) {
+
+        test(TreeBuilder.arrayToTree(new Integer[]{4,1,null,2,null,3}), 7);
         test(TreeBuilder.arrayToTree(new Integer[]{3, 2, 3, null, 3, null, 1}), 7);
         test(TreeBuilder.arrayToTree(new Integer[]{3, 4, 5, 1, 3, null, 1}), 9);
         test(TreeBuilder.arrayToTree(new Integer[]{3, 2, 3, null, 3, null, 1, 11, 34, 224, null, null, 872}), 1135);
@@ -63,7 +65,7 @@ class HouseRobberIIIPostOrder {
         if (root == null)
             return 0;
 
-        int maxRob[] = maxRob(root);
+        int[] maxRob = maxRob(root);
 
         return Math.max(maxRob[0], maxRob[1]);
     }
@@ -80,7 +82,7 @@ class HouseRobberIIIPostOrder {
         int[] right = maxRob(root.right);
 
         int include = root.val + left[1] + right[1];
-        int exclude = left[0] + right[0];
+        int exclude = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
 
         return new int[]{include, exclude};
     }
