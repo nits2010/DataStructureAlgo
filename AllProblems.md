@@ -1,5 +1,8 @@
 | #  | File Name | GitHub Link | 
 |---|-----------|-------------|
+| 773 | HouseRobberIII_337.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/HouseRobber/_337/HouseRobberIII_337.java) |
+| 772 | SplitAStringIntoTheMaxNumberOfUniqueSubstrings_1593.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Strings/_1593/SplitAStringIntoTheMaxNumberOfUniqueSubstrings_1593.java) |
+| 771 | HouseRobberII_213.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/HouseRobber/_213/HouseRobberII_213.java) |
 | 770 | ParsingABooleanExpression_1106.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Stacks/_1106/ParsingABooleanExpression_1106.java) |
 | 769 | HouseRobberI_198.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/HouseRobber/_198/HouseRobberI_198.java) |
 | 768 | NthTribonacciNumber_1137.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/NumberPattern/_1137/NthTribonacciNumber_1137.java) |
@@ -332,8 +335,8 @@
 | 441 | CombinationSumII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumII.java) |
 | 440 | CombinationSumI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/combination/sum/CombinationSumI.java) |
 | 439 | SingleNumberIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/bitsManipulation/single/number/SingleNumberIII.java) |
-| 438 | MaximumSumNoTwoElementsAreAdjacentInCircularArray.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoTwoElementsAreAdjacentInCircularArray.java) |
-| 437 | MaximumSumNoTwoElementsAreAdjacent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoTwoElementsAreAdjacent.java) |
+| 438 | HouseRobberII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/HouseRobberII.java) |
+| 437 | HouseRobberI.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/HouseRobberI.java) |
 | 436 | MaximumSumNoThreeElementsAreAdjacent.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/MaximumSumNoThreeElementsAreAdjacent.java) |
 | 435 | HouseRobberIII.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/adjacent/houserobber/HouseRobberIII.java) |
 | 434 | VowelSpellchecker.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/VowelSpellchecker.java) |
