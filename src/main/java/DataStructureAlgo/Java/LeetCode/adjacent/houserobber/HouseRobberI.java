@@ -49,6 +49,7 @@ import java.util.Arrays;
 public class HouseRobberI {
 
     public static void main(String[] args) {
+        test(new int[]{10000, 400 , 2 , 200}, 10200);
         test(new int[]{5, 5, 10, 100, 10, 5}, 110);
         test(new int[]{1, 2, 3}, 4);
         test(new int[]{1, 20, 3}, 20);

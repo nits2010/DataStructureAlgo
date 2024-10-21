@@ -74,6 +74,7 @@ public class HouseRobberI_198 {
 
     public static void main(String[] args) {
         boolean test = true;
+        test &= test(new int[]{10000, 400 , 2 , 200}, 10200);
         test &= test(new int[]{5, 5, 10, 100, 10, 5}, 110);
         test &= test(new int[]{1, 2, 3}, 4);
         test &= test(new int[]{1, 20, 3}, 20);
@@ -173,7 +174,7 @@ public class HouseRobberI_198 {
             Arrays.fill(memo, -1);
 
             memo[0] = nums[0];
-            memo[1] = nums[1];
+            memo[1] = Math.max(nums[0], nums[1]);
 
             for (int i = 2; i < n; i++) {
                 memo[i] = Math.max(memo[i - 2] + nums[i], memo[i - 1]);
