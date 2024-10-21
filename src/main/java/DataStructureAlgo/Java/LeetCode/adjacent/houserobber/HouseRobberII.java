@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-28
- * Description: https://leetcode.com/problems/house-robber-ii/
+ * Description: 213. House Robber II
+ * https://leetcode.com/problems/house-robber-ii/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed.
  * All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
  * <p>
@@ -42,11 +43,11 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * input: [3000,6,2, 8,9,3000]
  * output:3014 [6,8,3000]  { 3000+2+9=3011 < 3014}
  * <p>
- * Extension of {@link MaximumSumNoTwoElementsAreAdjacent}
+ * Extension of {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI}
  * <p>
  * [Adobe]
  */
-public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
+public class HouseRobberII {
     public static void main(String[] args) {
         test(new int[]{7, 3, 5, 2, 9}, 14);
         test(new int[]{1000, 3, 200, 2, 400, 10000}, 10200);
@@ -70,7 +71,7 @@ public class MaximumSumNoTwoElementsAreAdjacentInCircularArray {
 }
 
 /**
- * {@link MaximumSumNoTwoElementsAreAdjacent}
+ * {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI}
  */
 class HouseRobberIIDP {
 
@@ -79,7 +80,7 @@ class HouseRobberIIDP {
     }
 
     /**
-     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent} and build two
+     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} and build two
      * array
      * 1. Left to Right {dpLR}
      * 2. Right to left {dpRL}
@@ -103,8 +104,8 @@ class HouseRobberIIDP {
 
 
         int n = nums.length;
-        int dpLR[] = new int[n];
-        int dpRL[] = new int[n];
+        int[] dpLR = new int[n];
+        int[] dpRL = new int[n];
 
         dpLR[0] = nums[0];
         dpLR[1] = Math.max(nums[0], nums[1]);
@@ -126,18 +127,18 @@ class HouseRobberIIDP {
 
 
     /**
-     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent} and build two
+     * Apply the same logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} and build two
      * array
      * 1. Left to Right {dpLR}
      * 2. Right to left {dpRL}
      * <p>
      * Then take the maximum of dpLR[n-2] {skipping nums[n-1]} and dpRL[1]{skipping nums[0]}
      * <p>
-     * We can build both array bit differently too.
+     * We can build both array bits differently too.
      * <p>
      * since dpLR discarding n-1 element
      * and
-     * dpRL discarding 0 element.
+     * dpRL discarding element 0.
      * <p>
      * build dpLR [0..n-2]
      * build dpRL [1...n-1]
@@ -145,7 +146,7 @@ class HouseRobberIIDP {
      * @param nums
      * @return
      */
-    public static int maximumSumNoTwoAdjCircularArrayTwoArrayDpV2(int nums[]) {
+    public static int maximumSumNoTwoAdjCircularArrayTwoArrayDpV2(int[] nums) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -159,8 +160,8 @@ class HouseRobberIIDP {
 
 
         int n = nums.length;
-        int dpLR[] = new int[n]; //build dpLR [0..n-2]
-        int dpRL[] = new int[n]; //build dpRL [1...n-1]
+        int[] dpLR = new int[n]; //build dpLR [0..n-2]
+        int[] dpRL = new int[n]; //build dpRL [1...n-1]
 
         dpLR[0] = nums[0];
         dpLR[1] = Math.max(nums[0], nums[1]);
@@ -182,7 +183,7 @@ class HouseRobberIIDP {
 }
 
 /**
- * {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+ * {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
  */
 class HouseRobberIILinear {
 
@@ -191,7 +192,7 @@ class HouseRobberIILinear {
     }
 
     /**
-     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
      *
      * @param nums
      * @return
@@ -215,7 +216,7 @@ class HouseRobberIILinear {
 
     }
 
-    private static int maximumSumNoTwoAdjCircularArrayTwoArrayLinear(int nums[], int s, int e) {
+    private static int maximumSumNoTwoAdjCircularArrayTwoArrayLinear(int[] nums, int s, int e) {
 
         int including = 0;
         int excluding = 0;
@@ -243,7 +244,7 @@ class HouseRobberIILinear {
 
 
     /**
-     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent} #MaximumSumNoTwoElementsAreAdjacentLinear
+     * We can do in constant time by using logic as {@link MaximumSumNoTwoElementsAreAdjacent_HouseRobberI} #MaximumSumNoTwoElementsAreAdjacentLinear
      * <p>
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for House Robber II.
      * Memory Usage: 34.3 MB, less than 100.00% of Java online submissions for House Robber II.

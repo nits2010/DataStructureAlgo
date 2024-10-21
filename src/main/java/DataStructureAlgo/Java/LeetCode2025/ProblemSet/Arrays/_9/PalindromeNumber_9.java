@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._9;
 
 /**
  * Author: Nitin Gupta
