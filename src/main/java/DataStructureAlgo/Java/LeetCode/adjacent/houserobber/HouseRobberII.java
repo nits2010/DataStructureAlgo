@@ -104,8 +104,8 @@ class HouseRobberIIDP {
 
 
         int n = nums.length;
-        int dpLR[] = new int[n];
-        int dpRL[] = new int[n];
+        int[] dpLR = new int[n];
+        int[] dpRL = new int[n];
 
         dpLR[0] = nums[0];
         dpLR[1] = Math.max(nums[0], nums[1]);
@@ -146,7 +146,7 @@ class HouseRobberIIDP {
      * @param nums
      * @return
      */
-    public static int maximumSumNoTwoAdjCircularArrayTwoArrayDpV2(int nums[]) {
+    public static int maximumSumNoTwoAdjCircularArrayTwoArrayDpV2(int[] nums) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -160,8 +160,8 @@ class HouseRobberIIDP {
 
 
         int n = nums.length;
-        int dpLR[] = new int[n]; //build dpLR [0..n-2]
-        int dpRL[] = new int[n]; //build dpRL [1...n-1]
+        int[] dpLR = new int[n]; //build dpLR [0..n-2]
+        int[] dpRL = new int[n]; //build dpRL [1...n-1]
 
         dpLR[0] = nums[0];
         dpLR[1] = Math.max(nums[0], nums[1]);
@@ -216,7 +216,7 @@ class HouseRobberIILinear {
 
     }
 
-    private static int maximumSumNoTwoAdjCircularArrayTwoArrayLinear(int nums[], int s, int e) {
+    private static int maximumSumNoTwoAdjCircularArrayTwoArrayLinear(int[] nums, int s, int e) {
 
         int including = 0;
         int excluding = 0;
