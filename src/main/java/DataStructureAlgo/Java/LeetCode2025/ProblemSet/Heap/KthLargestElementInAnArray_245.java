@@ -83,11 +83,12 @@ public class KthLargestElementInAnArray_245 {
     public static void main(String[] args) {
         boolean test = true;
 
-
+        test &= test(new int[]{5, 17, 13, 10}, 2, 13);
+        test &= test(new int[]{3, 2, 1, 5, 6, 4}, 2, 5);
         test &= test(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6, 7, 7, 8, 2, 3, 1, 1, 1, 10, 11, 5, 6, 2, 4, 7, 8, 5, 6}, 2, 10);
         test &= test(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -5, -4, -3, -2, -1}, 4, 1);
 
-        test &= test(new int[]{3, 2, 1, 5, 6, 4}, 2, 5);
+
         test &= test(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4, 4);
         System.out.println("===================================");
         System.out.println(test ? "All Passed" : "Something Failed");
@@ -135,6 +136,15 @@ public class KthLargestElementInAnArray_245 {
             pq.offer(val);
             if (pq.size() > k)
                 pq.poll();
+
+//            if (pq.size() < k) {
+//                pq.offer(val);
+//            } else {
+//                if (pq.peek() < val) {
+//                    pq.poll();
+//                    pq.offer(val);
+//                }
+//            }
 
         }
 

@@ -69,7 +69,7 @@ public class CommonMethods {
         StringBuilder result = new StringBuilder("[");
 
         for (T num : nums) {
-            result.append(num.toString());
+            result.append(num == null ? null : num.toString());
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
