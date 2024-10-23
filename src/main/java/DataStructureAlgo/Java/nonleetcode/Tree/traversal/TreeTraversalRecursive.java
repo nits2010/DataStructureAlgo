@@ -236,22 +236,19 @@ public class TreeTraversalRecursive {
 
         while (!queue.isEmpty()) {
             DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
-            levelOrder.add(temp.val);
-
-            if(null!=temp.left || null!=temp.right) {
 
 
-                if (null != temp.left)
+            if (temp != null) {
+                levelOrder.add(temp.val);
+
+                if (temp.left != null || temp.right != null) {
                     queue.add(temp.left);
-                else
-                    levelOrder.add(null);
-
-                if (null != temp.right)
                     queue.add(temp.right);
-                else
-                    levelOrder.add(null);
-            }
+                }
 
+            } else {
+                levelOrder.add(null);
+            }
 
         }
         return levelOrder;
