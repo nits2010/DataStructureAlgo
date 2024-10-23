@@ -131,7 +131,7 @@ public class TreeTraversalIterative {
 
         Stack<TreeNode<Integer>> stack = new Stack<>();
 
-        //to ensure right process first
+        //to ensure the right process first
         TreeNode<Integer> previous = root;
 
 
@@ -144,7 +144,7 @@ public class TreeTraversalIterative {
             }
 
 
-            //Process right first, to process it we need to deep down the right part of it.
+            //Process right first, to process it; we need to deep down the right part of it.
             while (null != root && (root.getRight() == null || root.getRight() == previous)) {
 
                 //Since there is no right node of right node, then this is the rightmost node then process it

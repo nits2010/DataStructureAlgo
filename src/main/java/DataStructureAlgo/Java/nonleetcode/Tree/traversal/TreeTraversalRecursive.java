@@ -307,7 +307,7 @@ public class TreeTraversalRecursive {
 
         while (!queue.isEmpty()) {
             DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
-            levelOrder.add((Integer) temp.val);
+            levelOrder.add(temp.val);
 
             if (null != temp.left)
                 queue.add(temp.left);
