@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date: 10/22/2024
  * Question Category: 337. House Robber III
- * Description:
+ * Description: https://leetcode.com/problems/house-robber-iii/
  * The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.
  * <p>
  * Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that all houses in this place form a binary tree. It will automatically contact the police if two directly-linked houses were broken into on the same night.
@@ -55,7 +55,7 @@ import java.util.Arrays;
  * <p>
  * The number of nodes in the tree is in the range [1, 104].
  * 0 <= Node.val <= 104
- * File reference
+ * File references
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.adjacent.houserobber.HouseRobberIII}
  * Similar {@link}

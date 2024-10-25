@@ -51,7 +51,7 @@ public class PainterPartitionProblem {
 class PainterPartitionProblemDP {
 
     /**
-     * Lets understand the problem first;
+     * Let's understand the problem first;
      * we have n boards  { 10,20,30,40 } with k painters = 2;
      * these painters paint the board in
      * 1. contiguous manner only i.e. if painter x is painting from i ... j then he can paint j+1 but can't paint j+2 without painting j+1
@@ -62,10 +62,10 @@ class PainterPartitionProblemDP {
      * [ This is nothing but having a set of n elements, we need to divide this set into k sub-arrays{because they can paint in order} s.t. maximum sum of these set is overall minimize ]
      * [ solution for sub-set is S(n,k) = k*S(n-1,k) + S(n-1, k-1 ) , But here we need to find sub-arrays not sub-sets ]
      * <p>
-     * now,  if we know what was the cost of painting n boards with k-1 painters then we can calculate the cost of painting n boards with k painters.
-     * To find, this new painter can paint the board(S) from any where in order. Just like putting current element in k-1 sub-set, for that we need to try every sub-set.
+     * now,  if we know what was the cost of painting n boards with k-1 painters, then we can calculate the cost of painting n boards with k painters.
+     * To find, this new painter can paint the board(S) from anywhere in order. Just like putting the current element in k-1 subset, for that we need to try every subset.
      * <p>
-     * Lets examine cost with k=1
+     * Let's examine the cost with k=1
      * {10} k=1 => 10
      * {10, 20} k=1 => 10+20 = 30
      * {10, 20, 30} k=1 => 10+20+30 = 60
@@ -83,18 +83,18 @@ class PainterPartitionProblemDP {
      * * *            => either Max [ {10,20,30} , {} ] = 60
      * *            => either Max [ {10,20} , {30} ] = 30
      * *            => either Max [ {10} , {20,30} ] = 50
-     * Which translate that with k-1 painter; from 1 board  { Max [ {10} , {20,30} ] } to n=3 board { either Max [ {10,20,30} , {} ]}
+     * Which translates that with k-1 painter; from 1 board  { Max [ {10} , {20,30} ] } to n=3 board { either Max [ {10,20,30} , {} ]}
      * *                                                                     ^^^^^Remaining boards                                ^Remaining boards
      * <p>
      * same for
      * {10, 20, 30, 40} => 60 ans
      * <p>
      * <p>
-     * M[i][k] defines the cost of painting i boards with k painters
+     * M[i][k] defines the cost of painting `i`th boards with k painters
      * <p>
      * M[i][k] = Min {
      * *                 Max {
-     * *                    M[j][k-1] where j varies from 1<= j <=i { This is same as painting with k-1 painter, from 1 board to i board. 0=< i < n }
+     * *                    M[j][k-1] where j varies from 1<= j <=i { This is the same as painting with k-1 painter, from one board to i board. 0=< i < n }
      * *                        , Sum [ board[m] ; m from j to n-1 ] { Remaining boards}
      * **                    }
      * * }
@@ -127,17 +127,17 @@ class PainterPartitionProblemDP {
             return sum[n];
 
 
-        //cost[i][k] represent min cost of painting from 0 to i board with k painter
+        //cost[i][k] represent min cost of painting from 0 to `i` board with k painter
         int[][] cost = new int[n + 1][painters + 1];
 
         cost[0][0] = 0; //no board, no painter. no cost
 
-        //cost of painting n boards with 1 painters
+        //cost of painting n boards with 1 painter
         for (int i = 1; i <= n; i++) {
             cost[i][1] = sum[i];
         }
 
-        //cost of painting 1 boards with k painters
+        //cost of painting 1 board with k painters
         for (int i = 1; i <= painters; i++) {
             cost[1][i] = sum[1];
         }
@@ -175,20 +175,20 @@ class PainterPartitionProblemBinarySearch {
      * We know that when we have
      * 1. N painter and n board then cost would Minimum of (boards) -> low
      * 2. 1 Painter and n board then cost would be Sum (boards)  -> High
-     * Which means, our solution lie between [low,high]
-     * we can apply binary search to find what is the value which suffice the condition.
+     * Which means, our solution lies between [low,high]
+     * we can apply binary search to find what is the value that suffices the condition.
      * <p>
      * But How we find?
      * <p>
-     * {10,20,30,40} l
+     * {10,20,30,40}
      * L: 40 , H = 100 => Mid = 70
-     * How do we find that in 70 cost we will paint n boards with k painters.
+     * How do we find that in cost 70 we will paint n boards with k painters.
      * => What we can do is sequentially assigning task of painting board to a painter, as soon as we found this painter can't paint more (which is 70 in this) then we start giving task
-     * to new painter and keep doing same with new painter....
+     *  to a new painter and keep doing the same with a new painter....
      * this way we can find how many painters would require to paint the board assuming they can't paint more than 70.
      * <p>
-     * 1. If number of painters = k for given mid -> then thi is our potential solution. We'll try to reduce the scope s.t. l = old low and h = mid
-     * 2. if number of painters>k for given mid -> we can't paint n boards with mid as solution, we need to increase the mid s.t. l = min, h=h;
+     * 1. If the number of painters = k for given mid -> then thi is our potential solution. We'll try to reduce the scope s.t. l = old low and h = mid
+     * 2. if the number of painters>k for given mid -> we can't paint n boards with mid as solution, we need to increase the mid s.t. l = min, h=h;
      *
      * @param board
      * @param painters

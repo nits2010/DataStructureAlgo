@@ -235,27 +235,39 @@ public class TreeTraversalRecursive {
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
-            levelOrder.add(temp.val);
+            int size = queue.size();
+            while (size > 0) {
 
-            if(null!=temp.left || null!=temp.right) {
+                DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
 
-
-                if (null != temp.left)
+                if (temp != null) {
+                    levelOrder.add(temp.val);
                     queue.add(temp.left);
-                else
-                    levelOrder.add(null);
-
-                if (null != temp.right)
                     queue.add(temp.right);
-                else
-                    levelOrder.add(null);
+
+                } else {
+                    // Check if there are any non-null nodes left in the queue
+                    boolean hasNonNull = false;
+                    for (DataStructureAlgo.Java.helpers.templates.TreeNode node : queue) {
+                        if (node != null) {
+                            hasNonNull = true;
+                            break;
+                        }
+                    }
+                    if (hasNonNull) {
+                        levelOrder.add(null);
+                    }
+                }
+
+                size--;
             }
 
 
         }
         return levelOrder;
     }
+
+
 
     public static List<List<Integer>> levelOrder2(TreeNode<Integer> root) {
 
@@ -310,7 +322,7 @@ public class TreeTraversalRecursive {
 
         while (!queue.isEmpty()) {
             DataStructureAlgo.Java.helpers.templates.TreeNode temp = queue.poll();
-            levelOrder.add((Integer) temp.val);
+            levelOrder.add(temp.val);
 
             if (null != temp.left)
                 queue.add(temp.left);

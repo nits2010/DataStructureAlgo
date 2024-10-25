@@ -14,7 +14,7 @@ import java.util.Arrays;
  * <p>
  * Input: arr[] = {1, 2, 3}
  * Output: 5
- * We can't take three of them, so answer is
+ * We can't take three of them, so the answer is
  * 2 + 3 = 5
  * <p>
  * Input: arr[] = {3000, 2000, 1000, 3, 10}
@@ -73,13 +73,13 @@ public class MaximumSumNoThreeElementsAreAdjacent {
  Lets examine how we approach this problem from base.
 
  As question stated that
- 1. We need to Maximize the sum
- 2. We should not choose no three consecutive elements present
+ 1. We need to Maximize sum
+ 2. We should choose no three consecutive elements present
 
- That leads us that if we choose the 'i'th element then we can't choose 'i-2' and 'i-1' and  or 'i+1', 'i+2,
- element from the array.
- Since we need to maximize the sum then we need to smartly choose 'i'th element.
- Lets take an example
+ That leads us that if we choose the 'ith` element then we can't choose 'i-2' and 'i-1' and  or 'i+1', 'i+2 element from the array.
+ Since we need to maximize the sum, then we need to smartly choose 'ith` element.
+
+ Let's take an example
 
  Input: [2] ; n=1
  Here we can choose only 2; Hence output 2
@@ -89,27 +89,27 @@ public class MaximumSumNoThreeElementsAreAdjacent {
 
  Input: [2,4,3]; n=3 Output is 7 {4,3}
 
- input [2,4,3,9]
+ Input [2,4,3,9]
  case 1: choose 2
- 2[9] => 11
+ 2[9] ⇒ 11
 
-  case 2: choose 4
- 4[] => 4
+  Case 2: choose 4
+ 4[] ⇒ 4
 
- case 3: choose 3
- 3[] => 3
+ Case 3: choose 3
+ 3[] ⇒ 3
 
- case 4: choose 9
- 9[2] => 11
+ Case 4: choose 9
+ 9[2] ⇒ 11
 
 
- Which means, we need to see choosing current element gives us maximum sum or choosing next/previous element gives maximum sum
+ Which means, we need to see choosing the current element gives us a maximum sum or choosing the next /previous element gives a maximum sum
 
  */
 
 
 /**
- * Extending above process, we can solve this recursively by choosing 'i' the element as see does it gives us best solution
+ * Extending the above process, we can solve this recursively by choosing 'i' the element as seeing does it give us the best solution
  * otherwise try i+1
  * <p>
  * we do iteratively, so we don't need to look back
@@ -135,7 +135,7 @@ public class MaximumSumNoThreeElementsAreAdjacent {
  */
 class MaximumSumNoThreeElementsAreAdjacentRecursive {
 
-    public int maximumSumNoThreeElementAreAdj(int nums[]) {
+    public int maximumSumNoThreeElementAreAdj(int[] nums) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -192,7 +192,7 @@ class MaximumSumNoThreeElementsAreAdjacentDPTopDown {
         if (nums == null || nums.length == 0)
             return 0;
 
-        int memo[] = new int[nums.length];
+        int[] memo = new int[nums.length];
         Arrays.fill(memo, -1);
         return maximumSumNoThreeElementAreAdj(nums, 0, memo);
     }
@@ -204,7 +204,7 @@ class MaximumSumNoThreeElementsAreAdjacentDPTopDown {
             return Integer.MIN_VALUE;
 
         /**
-         * If problem already solved, return it
+         * If a problem already solved, return it
          */
         if (memo[i] != -1)
             return memo[i];
@@ -270,8 +270,7 @@ class MaximumSumNoThreeElementsAreAdjacentBottomUp {
 
 
         //Single element
-        if (n >= 1)
-            dp[0] = nums[0];
+        dp[0] = nums[0];
 
         //two element
         if (n >= 2)
@@ -285,7 +284,7 @@ class MaximumSumNoThreeElementsAreAdjacentBottomUp {
         for (int i = 3; i < n; i++) {
 
             dp[i] = Math.max(
-                    dp[i - 1], //don't choose 'i'th element -> rec(nums, i+1)
+                    dp[i - 1], //don't choose 'ith` element -> rec(nums, i+1)
                     Math.max(
                             nums[i] + dp[i - 2],//exclude i+1 then we can choose i+2  ->nums[i] + rec(nums, i+2)
                             nums[i] + nums[i - 1] + dp[i - 3] //exclude i+2 then we choose i+1 and i+3 ->  nums[i] + nums[i+1] + rec(nums, i+3)

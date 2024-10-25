@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._632;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._21.MergeTwoSortedLists_21;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
@@ -65,7 +66,7 @@ import java.util.*;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.List.MergeTwoSortedLists_21}
+ * Similar {@link MergeTwoSortedLists_21}
  * extension {@link }
  * <p><p>
  * Tags

@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.helpers;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.SameTree_100;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._100.SameTree_100;
 import DataStructureAlgo.Java.helpers.templates.DoublyListNode;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -8,6 +8,7 @@ import DataStructureAlgo.Java.LeetCode.flatten.list.Node;
 import DataStructureAlgo.Java.LeetCode.flatten.list.SinglyNode;
 import DataStructureAlgo.Java.helpers.templates.NArrayTreeNode;
 import DataStructureAlgo.Java.Pair;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -69,7 +70,7 @@ public class CommonMethods {
         StringBuilder result = new StringBuilder("[");
 
         for (T num : nums) {
-            result.append(num.toString());
+            result.append(num == null ? null : num.toString());
             result.append(",");
         }
         result.setCharAt(result.length() - 1, ']');
@@ -190,7 +191,6 @@ public class CommonMethods {
     public static String toString2DForm(int[][] nums) {
         return toString(nums);
     }
-
 
 
     public static String toStringFlat(int[][] nums) {
@@ -865,15 +865,15 @@ public class CommonMethods {
     }
 
     public static boolean equals(char[] in1, char[] in2) {
-        if(in1!=null && in2 == null)
+        if (in1 != null && in2 == null)
             return false;
-        if(in1 == null && in2!= null)
+        if (in1 == null && in2 != null)
             return false;
-        if(in1.length != in2.length)
+        if (in1.length != in2.length)
             return false;
 
-        for(int i=0; i<in1.length; i++) {
-            if(in1[i] != in2[i])
+        for (int i = 0; i < in1.length; i++) {
+            if (in1[i] != in2[i])
                 return false;
         }
         return true;
@@ -881,15 +881,15 @@ public class CommonMethods {
     }
 
     public static boolean equals(int[] in1, int[] in2) {
-        if(in1!=null && in2 == null)
+        if (in1 != null && in2 == null)
             return false;
-        if(in1 == null && in2!= null)
+        if (in1 == null && in2 != null)
             return false;
-        if(in1.length != in2.length)
+        if (in1.length != in2.length)
             return false;
 
-        for(int i=0; i<in1.length; i++) {
-            if(in1[i] != in2[i])
+        for (int i = 0; i < in1.length; i++) {
+            if (in1[i] != in2[i])
                 return false;
         }
         return true;
@@ -897,19 +897,19 @@ public class CommonMethods {
     }
 
     public static boolean equals(char[][] in1, char[][] in2) {
-        if(in1!=null && in2 == null)
+        if (in1 != null && in2 == null)
             return false;
-        if(in1 == null && in2!= null)
-            return false;
-
-        if(in1.length != in2.length)
+        if (in1 == null && in2 != null)
             return false;
 
-        if(in1[0].length != in2[0].length)
+        if (in1.length != in2.length)
             return false;
 
-        for(int i=0; i<in1.length; i++) {
-            if(!equals(in1[i], in2[i]))
+        if (in1[0].length != in2[0].length)
+            return false;
+
+        for (int i = 0; i < in1.length; i++) {
+            if (!equals(in1[i], in2[i]))
                 return false;
         }
         return true;
@@ -917,24 +917,25 @@ public class CommonMethods {
     }
 
     public static boolean equals(int[][] in1, int[][] in2) {
-        if(in1!=null && in2 == null)
+        if (in1 != null && in2 == null)
             return false;
-        if(in1 == null && in2!= null)
-            return false;
-
-        if(in1.length != in2.length)
+        if (in1 == null && in2 != null)
             return false;
 
-        if(in1[0].length != in2[0].length)
+        if (in1.length != in2.length)
             return false;
 
-        for(int i=0; i<in1.length; i++) {
-            if(!equals(in1[i], in2[i]))
+        if (in1[0].length != in2[0].length)
+            return false;
+
+        for (int i = 0; i < in1.length; i++) {
+            if (!equals(in1[i], in2[i]))
                 return false;
         }
         return true;
 
     }
+
     public static boolean equals(Integer[][] expected, List<List<Integer>> result) {
         boolean test = true;
 
@@ -1033,9 +1034,44 @@ public class CommonMethods {
         System.out.println(test ? "\nAll passed" : "\n Something Failed");
     }
 
-    public static String getResultStringFinalTest(boolean test) {
-        return "\n" + "====================" + "\n" + (test ? "\nAll passed" : "\n Something Failed");
+    public static <T> void print(String[] prefixConsoles, boolean isInput, T... inputs) {
+        if (isInput)
+            System.out.println("---------------------------------------");
+        StringBuilder console = new StringBuilder();
+
+        if (prefixConsoles.length != inputs.length)
+            return;
+
+        int i = 0;
+        for (T input : inputs) {
+
+            String output = "";
+            if (input instanceof Integer[]) {
+                output = Arrays.toString((Integer[]) input);
+            } else if (input instanceof int[]) {
+                output = Arrays.toString((int[]) input);
+            } else if (input instanceof String[]) {
+                output = Arrays.toString((String[]) input);
+            } else if (input instanceof String) {
+                output = (String) input;
+            } else if (input instanceof List) {
+                output = input.toString();
+            } else if (input instanceof TreeNode) {
+                output = TreeTraversalRecursive.levelOrderWithNull((TreeNode) input).toString();
+            } else {
+                output = input.toString();
+            }
+
+            console.append(prefixConsoles[i].trim()).append(": ").append(output);
+
+            i++;
+            if (i < prefixConsoles.length)
+                console.append(" || ");
+        }
+        System.out.println(console);
+
     }
+
 
     public static String getResultStringSubTest(boolean test, String prefix) {
         return "\n" + " " + prefix + " " + (test ? " Passed" : "Failed");
@@ -1092,16 +1128,16 @@ public class CommonMethods {
     }
 
     public static boolean equals(List<Integer[]> a, List<Integer[]> b) {
-        if(a == null && b == null)
+        if (a == null && b == null)
             return true;
-        if(a == null || b == null)
+        if (a == null || b == null)
             return false;
 
-        if(a.size() != b.size())
+        if (a.size() != b.size())
             return false;
 
-        for(int i = 0; i < a.size(); i++) {
-            if(!Arrays.equals(a.get(i), b.get(i)))
+        for (int i = 0; i < a.size(); i++) {
+            if (!Arrays.equals(a.get(i), b.get(i)))
                 return false;
         }
 
