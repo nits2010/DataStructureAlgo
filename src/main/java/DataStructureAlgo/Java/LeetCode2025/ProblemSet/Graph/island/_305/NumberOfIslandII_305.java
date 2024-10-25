@@ -17,44 +17,44 @@ import java.util.stream.IntStream;
  * Descriptions: https://leetcode.com/problems/number-of-islands-ii/description/ , https://leetcode.ca/all/305.html#google_vignette
  * <p>
  * A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns the water at position (row, col) into a land. Given a list of positions to operate, count the number of islands after each addLand operation. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
- *
+ * <p>
  * Example:
- *
+ * <p>
  * Input: m = 3, n = 3, positions = [[0,0], [0,1], [1,2], [2,1]]
  * Output: [1,1,2,3]
  * Explanation:
- *
+ * <p>
  * Initially, the 2d grid is filled with water. (Assume 0 represents water and 1 represents land).
- *
+ * <p>
  * 0 0 0
  * 0 0 0
  * 0 0 0
  * Operation #1: addLand(0, 0) turns the water at grid[0][0] into a land.
- *
+ * <p>
  * 1 0 0
  * 0 0 0   Number of islands = 1
  * 0 0 0
  * Operation #2: addLand(0, 1) turns the water at grid[0][1] into a land.
- *
+ * <p>
  * 1 1 0
  * 0 0 0   Number of islands = 1
  * 0 0 0
  * Operation #3: addLand(1, 2) turns the water at grid[1][2] into a land.
- *
+ * <p>
  * 1 1 0
  * 0 0 1   Number of islands = 2
  * 0 0 0
  * Operation #4: addLand(2, 1) turns the water at grid[2][1] into a land.
- *
+ * <p>
  * 1 1 0
  * 0 0 1   Number of islands = 3
  * 0 1 0
- *
- *
+ * <p>
+ * <p>
  * Follow up:
- *
+ * <p>
  * Can you do it in time complexity O(k log mn), where k is the length of the positions?
- *
+ * <p>
  * File reference
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.island.NumberIslandsII}
@@ -63,6 +63,7 @@ import java.util.stream.IntStream;
  * <p><p>
  * Tags
  * -----
+ *
  * @hard
  * @Array
  * @Depth-FirstSearch
@@ -71,9 +72,7 @@ import java.util.stream.IntStream;
  * @Matrix
  * @Graph
  * @LeetCodeLockedProblem
- * @PremimumQuestion
- *
- * <p><p>
+ * @PremimumQuestion <p><p>
  * Company Tags
  * -----
  * @Amazon
@@ -81,7 +80,6 @@ import java.util.stream.IntStream;
  * @Google
  * @Snapchat
  * @Uber
- *
  * @Editorial
  */
 public class NumberOfIslandII_305 {
@@ -131,11 +129,10 @@ public class NumberOfIslandII_305 {
                 Arrays.fill(island[i], '0');
             }
             List<Integer> islands = new ArrayList<>();
-            NumberOfIsland_200.SolutionDFS islandFinder = new NumberOfIsland_200.SolutionDFS();
             for (int[] pos : positions) {
                 if (island[pos[0]][pos[1]] == '0') {
                     island[pos[0]][pos[1]] = '1';
-                    islands.add(islandFinder.numIslands(island));
+                    islands.add(numIslands(island));
                 } else {
                     int lastIslands = islands.isEmpty() ? 0 : islands.get(islands.size() - 1);
                     islands.add(lastIslands);
@@ -143,6 +140,58 @@ public class NumberOfIslandII_305 {
 
             }
             return islands;
+        }
+
+        final int[] row = {0, 0, 1, -1};
+        final int[] col = {1, -1, 0, 0};
+
+        public int numIslands(char[][] grid) {
+            if (grid == null || grid.length == 0)
+                return 0;
+
+            int n = grid.length;
+            int m = grid[0].length;
+            //O(n*m)
+            final boolean[][] visited = new boolean[n][m];
+            int islandCount = 0;
+
+            //touch each possible island
+            //O(n)
+            for (int i = 0; i < n; i++) {
+                //O(m)
+                for (int j = 0; j < m; j++) {
+
+                    //O(4) - we are visited each pair of indexes 4 times
+                    //if this island has never been visited,
+                    //then visit it and explore it neighbours
+                    if (!visited[i][j] && grid[i][j] == '1') {
+                        numIslands(grid, i, j, n, m, visited);
+                        islandCount++;
+                    }
+                }
+            }
+            return islandCount;
+        }
+
+        private boolean isSafe(int i, int j, int n, int m) {
+            return i >= 0 && i < n && j >= 0 && j < m;
+        }
+
+        private void numIslands(char[][] grid, int i, int j, int n, int m, boolean[][] visited) {
+            //if it's not safe to visit, means i and j is out of boundary
+            //if this land has already been visited
+            //if this land is not land but water
+            if (!isSafe(i, j, n, m) || visited[i][j] || grid[i][j] == '0')
+                return;
+
+            //visit this land
+            visited[i][j] = true;
+
+            //explore its neighbors
+            for (int k = 0; k < row.length; k++) {
+                numIslands(grid, i + row[k], j + col[k], n, m, visited);
+            }
+
         }
     }
 
@@ -259,7 +308,7 @@ public class NumberOfIslandII_305 {
             return islands;
         }
 
-        private boolean addLand(int []pos, int m, int n, int[][] island, UnionFind unionFind) {
+        private boolean addLand(int[] pos, int m, int n, int[][] island, UnionFind unionFind) {
 
             boolean isNewConnectedIslandFound = true;
 

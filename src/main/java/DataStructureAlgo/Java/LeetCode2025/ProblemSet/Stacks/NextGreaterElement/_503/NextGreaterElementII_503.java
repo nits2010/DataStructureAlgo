@@ -1,6 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement._503;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement.NextGreaterElementI;
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement._496.NextGreaterElementI_496;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
