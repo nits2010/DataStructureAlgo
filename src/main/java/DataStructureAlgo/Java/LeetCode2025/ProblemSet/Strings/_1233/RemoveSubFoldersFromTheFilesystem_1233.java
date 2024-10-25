@@ -67,6 +67,7 @@ import java.util.Set;
  * @Amazon
  * @Google
  * @Editorial
+ * @OptimalSoltuion {@link SolutionUsingList} {@link SolutionUsingTrie2}
  */
 
 public class RemoveSubFoldersFromTheFilesystem_1233 {
