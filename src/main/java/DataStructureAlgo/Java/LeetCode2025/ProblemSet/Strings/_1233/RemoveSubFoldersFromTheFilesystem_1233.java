@@ -57,13 +57,15 @@ import java.util.Set;
  * <p>
  * Tags
  * -----
- *
+ * @medium
  * @Array
  * @String
  * @Depth-FirstSearch
  * @Trie <p>
  * Company Tags
  * -----
+ * @Amazon
+ * @Google
  * @Editorial
  */
 
@@ -72,7 +74,7 @@ public class RemoveSubFoldersFromTheFilesystem_1233 {
 
     public static void main(String[] args) {
         boolean test = true;
-        test &= test(new String[]{"/a","/c/d/e","/a/b","/c/d","/c/f"}, List.of("/a","/c/d","/c/f"));
+        test &= test(new String[]{"/a", "/c/d/e", "/a/b", "/c/d", "/c/f"}, List.of("/a", "/c/d", "/c/f"));
         test &= test(new String[]{"/a", "/a/b", "/c/d", "/c/d/e", "/c/f"}, List.of("/a", "/c/d", "/c/f"));
         test &= test(new String[]{"/a", "/a/b/c", "/a/b/d"}, List.of("/a"));
         test &= test(new String[]{"/a/b/c", "/a/b/ca", "/a/b/d"}, List.of("/a/b/c", "/a/b/ca", "/a/b/d"));
@@ -277,7 +279,7 @@ public class RemoveSubFoldersFromTheFilesystem_1233 {
 
                     if (!s.isEmpty()) {
                         pCrawl = pCrawl.childs.get(s);
-                        if(pCrawl == null)
+                        if (pCrawl == null)
                             return true;
 
                         if (pCrawl.isLeaf)
@@ -313,7 +315,7 @@ public class RemoveSubFoldersFromTheFilesystem_1233 {
 
             // build trie
             for (String folder : folders) {
-                String [] names = folder.split("/");
+                String[] names = folder.split("/");
                 if (root.search(names)) {
                     output.add(folder);
                     root.insert(names);
