@@ -22,6 +22,10 @@ import java.util.List;
  * <p>
  * Tags
  * -----
+ * @Tree
+ * @Backtracking
+ * @Depth-FirstSearch
+ * @BinaryTree
  *
  *
  * <p>
@@ -69,7 +73,7 @@ public class BinaryTreePathToANode {
         if(root == null)
             return false;
 
-        //add all the node to paht, as they could be participant
+        //add all the node to path, as they could be participant
         path.add(root.val);
 
         //if we hit the node, then we need to discontinue from here

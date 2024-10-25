@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.BstToList;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.List.MiddleOfTheLinkedList_876;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._876.MiddleOfTheLinkedList_876;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;

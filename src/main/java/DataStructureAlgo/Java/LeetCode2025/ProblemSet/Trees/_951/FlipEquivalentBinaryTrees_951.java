@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._951;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.MirrorTree._101.SymmetricTree_IsMirrorTree_101;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.MirrorTree._236.InvertTree_MirrorTree_226;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -42,7 +44,7 @@ import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.MirrorTree.SymmetricTree_IsMirrorTree_101} {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.MirrorTree.InvertTree_MirrorTree_226}
+ * extension {@link SymmetricTree_IsMirrorTree_101} {@link InvertTree_MirrorTree_226}
  * <p>
  * Tags
  * -----

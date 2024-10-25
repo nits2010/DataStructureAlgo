@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.VerticalOrderTraversalOfABinaryTree_987;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._987.VerticalOrderTraversalOfABinaryTree_987;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree._199.BinaryTreeRightSideView_199;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;

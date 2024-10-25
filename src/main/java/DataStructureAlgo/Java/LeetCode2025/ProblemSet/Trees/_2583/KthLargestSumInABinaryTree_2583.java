@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._2583;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap._245.KthLargestElementInAnArray_245;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -57,7 +58,7 @@ import java.util.Random;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap.KthLargestElementInAnArray_245}
+ * extension {@link KthLargestElementInAnArray_245}
  * <p>
  * Tags
  * -----
@@ -111,7 +112,7 @@ public class KthLargestSumInABinaryTree_2583 {
 
 
     /**
-     * This problem is extension of {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap.KthLargestElementInAnArray_245}. Post finding level sum of all level, we need to find the kth Largest element.
+     * This problem is extension of {@link KthLargestElementInAnArray_245}. Post finding level sum of all level, we need to find the kth Largest element.
      */
     static class Solution_UsingList {
         public long kthLargestLevelSum(TreeNode root, int k) {
@@ -152,7 +153,7 @@ public class KthLargestSumInABinaryTree_2583 {
 
 
         /**
-         * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap.KthLargestElementInAnArray_245.SolutionUsingQuickSelect}
+         * {@link KthLargestElementInAnArray_245.SolutionUsingQuickSelect}
          */
         Random random = new Random();
 
@@ -225,7 +226,7 @@ public class KthLargestSumInABinaryTree_2583 {
 
 
     /**
-     * Using Priority Queue {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Heap.KthLargestElementInAnArray_245.SolutionUsingPriorityQueue}
+     * Using Priority Queue {@link KthLargestElementInAnArray_245.SolutionUsingPriorityQueue}
      */
     static class Solution_PQ {
         public long kthLargestLevelSum(TreeNode root, int k) {
