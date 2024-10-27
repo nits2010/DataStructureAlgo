@@ -1030,13 +1030,14 @@ public class CommonMethods {
     }
 
     public static void printResult(boolean test) {
-        System.out.println("====================");
+        System.out.println("================================================================================");
         System.out.println(test ? "\nAll passed" : "\n Something Failed");
     }
 
+    @SafeVarargs
     public static <T> void print(String[] prefixConsoles, boolean isInput, T... inputs) {
         if (isInput)
-            System.out.println("---------------------------------------");
+            System.out.println("------------------------------------------------------------------------------");
         StringBuilder console = new StringBuilder();
 
         if (prefixConsoles.length != inputs.length)
@@ -1066,7 +1067,7 @@ public class CommonMethods {
 
             i++;
             if (i < prefixConsoles.length)
-                console.append(" || ");
+                console.append(" | ");
         }
         System.out.println(console);
 
