@@ -75,6 +75,7 @@ import java.util.*;
  * @Editorial <p><p>
  * -----
  * @OptimalSoltuion {@link Solution_TwoLargestCousins_LevelHeight} {@link Solution_TwoTraversal_2}
+ * @EasySolution {@link Solution_TwoTraversal_1}
  */
 public class HeightOfBinaryTreeAfterSubtreeRemovalQueries_2458 {
 
