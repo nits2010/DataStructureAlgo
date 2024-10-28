@@ -50,6 +50,7 @@ import java.util.Set;
  * <p>
  * Tags
  * -----
+ *
  * @medium
  * @Array
  * @HashTable
@@ -92,6 +93,14 @@ public class LongestSquareStreakInAnArray_2501 {
         pass = output == expected;
         finalPass &= pass;
         CommonMethods.print(new String[]{"UsingMapWithoutSortImproved", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+
+        SolutionUsingVisitedArray solutionUsingVisitedArray = new SolutionUsingVisitedArray();
+        output = solutionUsingVisitedArray.longestSquareStreak(nums);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.print(new String[]{"UsingVisitedArray", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
 
         SolutionUsingMapSort solutionUsingMapSort = new SolutionUsingMapSort();
         output = solutionUsingMapSort.longestSquareStreak(nums);
@@ -206,6 +215,52 @@ public class LongestSquareStreakInAnArray_2501 {
 
             return maxStreak == 1 ? -1 : maxStreak;
         }
+    }
+
+    static class SolutionUsingVisitedArray {
+
+        public int longestSquareStreak(int[] nums) {
+            int result = -1;
+            final int max = 100000;
+            boolean[] isExisted = new boolean[max + 1];
+            boolean[] isVisited = new boolean[max + 1];
+
+            //cache all the element in isExisted
+            for (int num : nums) {
+                isExisted[num] = true;
+            }
+
+            //scan all the square elements from 2 to max
+            for (int i = 2; i * i <= max; i++) {
+
+                //if this element is not present in nums or already visited, then skip
+                if (!isExisted[i] || isVisited[i]) {
+                    continue;
+                }
+
+                //visit
+                isVisited[i] = true;
+
+                int currentStreak = 1;
+                int next = i * i;
+
+                //scan all the number which are square of each other in nums
+                while (next >= 0 && next <= max && isExisted[next]) {
+                    isVisited[next] = true;
+                    currentStreak++;
+                    next = next * next;
+                }
+                if (currentStreak > 1) {
+                    result = Math.max(result, currentStreak);
+                }
+
+                //if this is maximum possible streak, then return
+                if(currentStreak == nums.length)
+                    return nums.length;
+            }
+            return result;
+        }
+
     }
 
     /**
