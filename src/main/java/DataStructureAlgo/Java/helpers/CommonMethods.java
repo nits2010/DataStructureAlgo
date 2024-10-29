@@ -1049,8 +1049,12 @@ public class CommonMethods {
             String output = "";
             if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
+            } else if (input instanceof Integer[][]) {
+                output = CommonMethods.toString((Integer[][]) input);
             } else if (input instanceof int[]) {
                 output = Arrays.toString((int[]) input);
+            } else if (input instanceof int[][]) {
+                output = CommonMethods.toString((int[][]) input);
             } else if (input instanceof String[]) {
                 output = Arrays.toString((String[]) input);
             } else if (input instanceof String) {
