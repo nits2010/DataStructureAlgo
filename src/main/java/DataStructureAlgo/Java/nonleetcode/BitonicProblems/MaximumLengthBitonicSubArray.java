@@ -37,12 +37,10 @@ class MaximumLengthBitonicSubArrayHelper {
         CommonMethods.print(input);
     }
 
-    //false if no subarray exist otherwise true
+    //false if no subarray exists otherwise true
     private boolean calculateMaximumLengthBitonicSubarray() {
 
-        boolean found = false; // does any BSA found
-
-        boolean directionChange = false; //does direction numberOfWays increase to decrease
+        boolean directionChange; //does direction numberOfWays increase to decrease
 
         int countOfChange = 0;
 
@@ -77,7 +75,7 @@ class MaximumLengthBitonicSubArrayHelper {
 
         }
 
-        if (directionChange == true) {
+        if (directionChange) {
             if (this.length < (i - 1 - start + 1)) {
                 this.i = start;
                 this.j = i - 1;
@@ -97,11 +95,11 @@ class MaximumLengthBitonicSubArrayHelper {
 class MaximumLengthBitonicSubArray {
     public static void main(String[] args) {
         MaximumLengthBitonicSubArrayHelper item = new MaximumLengthBitonicSubArrayHelper();
-        int input[] = {12, 4, 78, 90, 45, 23, 78, 122, 136, 24, 22, 27, 29, 34, 85, 65, 12, 10, 1};
-        int input2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int input3[] = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1};
-        int input4[] = {1, 1, 1, 1, 1, 1, 1, 1};
-        int input5[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] input = {12, 4, 78, 90, 45, 23, 78, 122, 136, 24, 22, 27, 29, 34, 85, 65, 12, 10, 1};
+        int[] input2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] input3 = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1};
+        int[] input4 = {1, 1, 1, 1, 1, 1, 1, 1};
+        int[] input5 = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         print(item, input);
         item.refersh();
 
