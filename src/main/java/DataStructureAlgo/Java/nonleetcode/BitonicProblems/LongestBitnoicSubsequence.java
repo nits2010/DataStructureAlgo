@@ -1,11 +1,20 @@
 package DataStructureAlgo.Java.nonleetcode.BitonicProblems;
 
-import  DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
+import DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
+
+import java.util.Arrays;
 
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-22
  * Description: https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15/
+ * Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first strictly increasing,
+ * then strictly decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence.
+ *
+ * A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty.
+ * Similarly, decreasing order sequence is considered Bitonic with the increasing part as empty.
+ *
+ * <p>
  * Input arr[] = {1, 11, 2, 10, 4, 5, 2, 1};
  * Output: 6 (A Longest Bitonic Subsequence of length 6 is 1, 2, 10, 4, 2, 1)
  * <p>
@@ -17,23 +26,27 @@ import  DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
  */
 public class LongestBitnoicSubsequence {
 
-    public static void main(String []args) {
-        int arr1[] = {1, 11, 2, 10, 4, 5, 2, 1};
-        int arr2[] = {12, 11, 40, 5, 3, 1};
+    public static void main(String[] args) {
+        int[] arr1 = {1, 11, 2, 10, 4, 5, 2, 1};
+        int[] arr2 = {12, 11, 40, 5, 3, 1};
         int[] arr3 = {80, 60, 30, 40, 20, 10};
+        int[] arr4 = {9, 8, 1, 7, 6, 5, 4, 3, 2, 1};
 
-        int arr[] = arr1;
-        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
-        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
+        System.out.println("arr: " + Arrays.toString(arr1));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(Arrays.copyOf(arr1, arr1.length)));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(Arrays.copyOf(arr1, arr1.length)));
 
-        arr = arr2;
-        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
-        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
+        System.out.println("arr: " + Arrays.toString(arr2));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(Arrays.copyOf(arr2, arr2.length)));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(Arrays.copyOf(arr2, arr2.length)));
 
-        arr = arr3;
-        System.out.println("n^2 -> " + longestBitnoicSubSequence(arr));
-        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(arr));
+        System.out.println("arr: " + Arrays.toString(arr3));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(Arrays.copyOf(arr3, arr3.length)));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(Arrays.copyOf(arr3, arr3.length)));
 
+        System.out.println("arr: " + Arrays.toString(arr4));
+        System.out.println("n^2 -> " + longestBitnoicSubSequence(Arrays.copyOf(arr4, arr4.length)));
+        System.out.println("nLogn-> " + longestBitnoicSubSequenceNlogN(Arrays.copyOf(arr4, arr4.length)));
     }
 
 
@@ -47,8 +60,8 @@ public class LongestBitnoicSubsequence {
 
         int n = arr.length;
 
-        int increasing[] = new int[n];
-        int decreasing[] = new int[n];
+        int[] increasing = new int[n];
+        int[] decreasing = new int[n];
 
         //form increasing
         for (int i = 0; i < n; i++) {
@@ -72,6 +85,8 @@ public class LongestBitnoicSubsequence {
         }
 
         //find max cut point
+        //A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty.
+        //Similarly, a decreasing order sequence is considered Bitonic with the increasing part as empty.
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             max = Math.max(max, increasing[i] + decreasing[i] - 1);
@@ -91,10 +106,10 @@ public class LongestBitnoicSubsequence {
 
         int n = arr.length;
 
-        int increasingTail[] = buildTail(arr, n);//contains length of LBS at i index
+        int[] increasingTail = buildTail(arr, n);//contains length of LBS at i index
         reveresArr(arr);
 
-        int decreasingTail[] = buildTail(arr, n);
+        int[] decreasingTail = buildTail(arr, n);
         reveresArr(arr); //reset the array
 
         //find max cut point
@@ -108,7 +123,7 @@ public class LongestBitnoicSubsequence {
     }
 
     // function to reverse an array
-    public static void reveresArr(int arr[]) {
+    public static void reveresArr(int[] arr) {
         int i = 0;
         int j = arr.length - 1;
         while (i < j) {
@@ -121,24 +136,16 @@ public class LongestBitnoicSubsequence {
 
     /**
      * {@link LongestIncreasingSubSequence}
-     *
-     * @param nums
-     * @param n
-     * @return
      */
     private static int[] buildTail(int[] nums, int n) {
         if (nums == null || nums.length == 0)
             return nums;
 
-        /**
-         * Represent the LIS at index i
-         */
-        int lis[] = new int[nums.length];
+        //Represent the LIS at index i
+        int[] lis = new int[nums.length];
 
-        /**
-         * Represent the length of LIS at index i
-         */
-        int tail[] = new int[nums.length];
+        //Represent the length of LIS at index i
+        int[] tail = new int[nums.length];
 
         int lisLength = 1;
 
@@ -167,7 +174,7 @@ public class LongestBitnoicSubsequence {
     }
 
 
-    public static int ceilIndex(int a[], int l, int r, int item) {
+    public static int ceilIndex(int[] a, int l, int r, int item) {
         while (l < r) {
             int mid = (l + r) >> 1;
 
