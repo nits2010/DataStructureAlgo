@@ -10,7 +10,7 @@ import java.util.Arrays;
  * <p>
  * Video: https://www.youtube.com/watch?v=oDhu5uGq_ic
  */
-public class MaxProfitKTransactions__BestTimeToBuySellStockIV {
+public class MaxProfitKTransactions_BestTimeToBuySellStockIV {
 
     public static void main(String []args) {
         int prices[] = {2, 1, 2, 0, 1};
@@ -34,7 +34,7 @@ public class MaxProfitKTransactions__BestTimeToBuySellStockIV {
         int n = prices.length;
 
         //profit[t][i] represent maximum profit using at most t transactions up to day i (including day i).
-        int profit[][] = new int[t + 1][n + 1];
+        int[][] profit = new int[t + 1][n + 1];
 
         //no stocks available, profit is always 0
         for (int i = 0; i <= t; i++)

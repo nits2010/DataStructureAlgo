@@ -5,7 +5,7 @@ package DataStructureAlgo.Java.LeetCode.stockPrices;
  * Date: 2019-06-23
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
  */
-public class MaxProfitTwoTransaction__BestTimeToBuySellStockIII {
+public class MaxProfitTwoTransaction_BestTimeToBuySellStockIII {
     public static void main(String []args) {
 
         int prices3[] = {2,1,2,0,1};

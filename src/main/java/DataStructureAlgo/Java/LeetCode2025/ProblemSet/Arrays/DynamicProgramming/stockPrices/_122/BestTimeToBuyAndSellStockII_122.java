@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._122;
 
+import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitMultiTransactions_BestTimeToBuySellStockII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
@@ -43,7 +44,7 @@ import java.util.Arrays;
  * 0 <= prices[i] <= 104
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitMultiTransactions__BestTimeToBuySellStockII}
+ * Duplicate {@link MaxProfitMultiTransactions_BestTimeToBuySellStockII}
  * Similar {@link}
  * extension {@link }
  * <p><p>
