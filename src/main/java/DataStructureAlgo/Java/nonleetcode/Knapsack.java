@@ -137,12 +137,12 @@ class Knapsack0Or1 {
      */
     static class DP {
 
-        int maximumValue(int val[], int wt[], int W) {
+        int maximumValue(int[] val, int[] wt, int W) {
             if (val == null || val.length == 0 || wt == null || wt.length == 0)
                 return 0;
 
             int n = val.length;
-            int dp[][] = new int[n + 1][W + 1];
+            int[][] dp = new int[n + 1][W + 1];
 
             for (int w = 0; w <= W; w++) {
 
@@ -183,12 +183,12 @@ class Knapsack0Or1 {
      */
     static class DPSpaceOptimized {
 
-        int maximumValue(int val[], int wt[], int W) {
+        int maximumValue(int[] val, int[] wt, int W) {
             if (val == null || val.length == 0 || wt == null || wt.length == 0)
                 return 0;
 
             int n = val.length;
-            int dp[] = new int[W + 1];
+            int[] dp = new int[W + 1];
 
             for (int v = 0; v < n; v++) {
 
@@ -231,7 +231,7 @@ class KnapsackFractional {
      * v1/w1 > v2/w2 => v1*w2 > v2*w1
      */
     static class Greedy {
-        int maximumValue(int val[], int wt[], int W) {
+        int maximumValue(int[] val, int[] wt, int W) {
             if (val == null || val.length == 0 || wt == null || wt.length == 0)
                 return 0;
 
@@ -275,7 +275,7 @@ class KnapsackFractional {
                 } else {
                     //We can take complete item, take the partial item
                     double partOf = (double) bagSize / vw[i].w;
-                    maxVal += vw[i].v * partOf;
+                    maxVal += (int) (vw[i].v * partOf);
                     break;
 
                 }
