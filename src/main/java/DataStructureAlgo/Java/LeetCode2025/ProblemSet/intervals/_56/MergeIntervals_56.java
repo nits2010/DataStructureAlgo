@@ -100,7 +100,7 @@ public class MergeIntervals_56 {
         test &= test(new int[][]{{1, 4}, {0, 4}}, new int[][]{{0, 4}});
         test &= test(new int[][]{{1, 4}, {0, 1}}, new int[][]{{0, 4}});
         test &= test(new int[][]{{1, 4}, {0, 0}}, new int[][]{{0, 0}, {1, 4}});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
 

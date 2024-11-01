@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.matrix._2684;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -72,19 +70,19 @@ public class MaximumNumberOfMovesInAGrid_2684 {
                 {1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118}}, 49);
         test &= test(new int[][]{{2, 4, 3, 5}, {5, 4, 9, 3}, {3, 4, 2, 11}, {10, 9, 13, 15}}, 3);
         test &= test(new int[][]{{3, 2, 4}, {2, 1, 9}, {1, 1, 7}}, 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 
 
     private static boolean test(int[][] grid, int expected) {
-        CommonMethods.print(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
         int output;
         boolean pass, finalPass = true;
         Solution solution = new Solution();
         output = solution.maxMoves(grid);
         pass = output == expected;
-        CommonMethods.print(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
         return finalPass;
     }

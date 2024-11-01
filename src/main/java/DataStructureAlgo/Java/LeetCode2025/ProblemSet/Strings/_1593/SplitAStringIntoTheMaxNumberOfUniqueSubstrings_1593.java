@@ -97,7 +97,7 @@ public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings_1593 {
         boolean test = true;
         test &= test("ababccc", 5);
         test &= test("ababadbcvxfgetyf", 13);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String str, int expected) {

@@ -100,7 +100,7 @@ public class CourseScheduleII_210 {
         test &=test(3, new int[][]{{1, 0}, {2, 0}, {1, 2}}, new int[]{0, 2, 1});//
         test &= test(3, new int[][]{{1, 0}, {0, 2}, {2, 1}}, new int[0]);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int numCourses, int[][] prerequisites, int[] expected) {

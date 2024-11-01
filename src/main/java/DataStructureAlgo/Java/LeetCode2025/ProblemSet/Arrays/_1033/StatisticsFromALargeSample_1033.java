@@ -3,7 +3,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1033;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
-import java.util.Map;
 
 /**
  * Author: Nitin Gupta
@@ -94,7 +93,7 @@ public class StatisticsFromALargeSample_1033 {
                 , new double[]{0.00000, 255.00000, 128.64187, 131.00000, 175.00000});
 
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] count, double[] expected) {

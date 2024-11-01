@@ -70,7 +70,7 @@ public class HouseRobberII_213 {
         test &= test(new int[]{1000, 3, 200, 2, 400, 1000}, 1600);
         test &= test(new int[]{3000, 6, 2, 8, 9, 3000}, 3014);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

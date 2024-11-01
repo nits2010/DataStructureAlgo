@@ -82,7 +82,7 @@ public class MaximumStarSumOfAGraph_2497 {
         test &= test(new int[]{1, 2, 3, 4, 10, -10, -20}, new int[][]{{0, 1}, {1, 2}, {1, 3}, {3, 4}, {3, 5}, {3, 6}}, 2, 16);
         test &= test(new int[]{-5}, new int[][]{{}}, 0, -5);
         test &= test(new int[]{-1, 0}, new int[][]{{}}, 1, 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] vals, int[][] edges, int k, int expected) {

@@ -70,7 +70,7 @@ public class MaximalScoreAfterApplyingKOperations_2530 {
         boolean test = true;
         test &= test(new int[]{10, 10, 10, 10, 10}, 5, 50);
         test &= test(new int[]{1, 10, 3, 3, 3}, 3, 17);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int k, int expected) {

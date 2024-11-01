@@ -73,7 +73,7 @@ public class CountNumberOfMaximumBitwiseORSubsets_2044 {
         test &= test(new int[]{3, 2, 1, 5}, 6);
         test &= test(new int[]{2, 2, 2}, 7);
         test &= test(new int[]{3, 1}, 2);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int expected) {

@@ -60,7 +60,7 @@ public class MaximumSwap_670 {
         test &= test(54321,54321);
         test &= test(98368,98863);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     protected static boolean test(int num, int expected) {

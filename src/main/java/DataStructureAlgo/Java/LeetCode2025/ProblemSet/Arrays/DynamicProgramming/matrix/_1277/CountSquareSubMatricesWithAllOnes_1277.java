@@ -72,24 +72,24 @@ public class CountSquareSubMatricesWithAllOnes_1277 {
         boolean test = true;
         test &= test(new int[][]{{0, 1, 1, 1}, {1, 1, 1, 1}, {0, 1, 1, 1}}, 15);
         test &= test(new int[][]{{1, 0, 1}, {1, 1, 0}, {1, 1, 0}}, 7);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] matrix, int expected) {
-        CommonMethods.print(new String[]{"Matrix", "Expected"}, true, matrix, expected);
+        CommonMethods.printTestOutcome(new String[]{"Matrix", "Expected"}, true, matrix, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution_WithMemory solutionWithMemory = new Solution_WithMemory();
         output = solutionWithMemory.countSquares(matrix);
         pass = output == expected;
-        CommonMethods.print(new String[]{"WithMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"WithMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         Solution_WithoutMemory solutionWithoutMemory = new Solution_WithoutMemory();
         output = solutionWithoutMemory.countSquares(matrix);
         pass = output == expected;
-        CommonMethods.print(new String[]{"WithoutMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"WithoutMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         return finalPass;

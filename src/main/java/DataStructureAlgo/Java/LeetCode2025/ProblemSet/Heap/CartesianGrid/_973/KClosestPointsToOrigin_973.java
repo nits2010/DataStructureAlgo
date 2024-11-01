@@ -85,7 +85,7 @@ public class KClosestPointsToOrigin_973 {
         test &= test(new int[][]{{3, 3}, {5, -1}, {-2, 4}, {-2, -5}, {-9, 8}, {0, 0}, {6, 6}}, 4, new int[][]{{5, -1}, {-2, 4}, {3, 3}, {0, 0}});
         test &= test(new int[][]{{-2, -6}, {-7, -2}, {-9, 6}, {10, 3}, {-8, 1}, {2, 8}}, 5, new int[][]{{-2, -6}, {-7, -2}, {-8, 1}, {2, 8}, {10, 3}});
         test &= test(new int[][]{{-2, 10}, {-4, -8}, {10, 7}, {-4, -7}}, 3, new int[][]{{-4, -7}, {-4, -8}, {-2, 10}});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] points, int k, int[][] expected) {

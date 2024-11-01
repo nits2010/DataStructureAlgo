@@ -86,7 +86,7 @@ public class SurroundedRegions_130 {
                 new char[][]{{'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'O', 'X', 'X'}});
 
         test &= test(new char[][]{{'X'}}, new char[][]{{'X'}});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(char[][] board, char[][] expected) {

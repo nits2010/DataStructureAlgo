@@ -90,7 +90,7 @@ public class NumberOfIslandII_305 {
         test &= test(3, 3, new int[][]{{0, 1}, {0, 1}, {2, 1}, {2, 2}}, List.of(1, 1, 2, 2)); //Duplicate land entry
         test &= test(4, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}}, List.of(1, 1, 1, 1, 2));
         test &= test(5, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}, {4, 3}}, List.of(1, 1, 1, 1, 2, 2));
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

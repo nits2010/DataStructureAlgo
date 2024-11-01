@@ -72,7 +72,7 @@ public class DividePlayersIntoTeamsOfEqualSkill_2491 {
         test &= test(new int[]{3, 2, 5, 1, 3, 4}, 22);
         test &= test(new int[]{3, 4}, 12);
         test &= test(new int[]{1, 1, 2, 3}, -1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
 

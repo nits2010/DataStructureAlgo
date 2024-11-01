@@ -76,7 +76,7 @@ public class MinimumNumberOfSwapsToMakeTheStringBalanced_1963 {
         test &= test("][][", 1);
         test &= test("]]][[[", 2);
         test &= test("[]", 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
     private static boolean test(String s, int expected) {
         System.out.println("----------------------------------");

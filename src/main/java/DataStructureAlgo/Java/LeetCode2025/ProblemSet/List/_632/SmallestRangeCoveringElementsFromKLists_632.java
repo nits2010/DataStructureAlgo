@@ -91,7 +91,7 @@ public class SmallestRangeCoveringElementsFromKLists_632 {
         test &= test(List.of(List.of(4, 10, 15, 24, 26), List.of(0, 9, 12, 20), List.of(5, 18, 22, 30)), new int[]{20, 24});
         test &= test(List.of(List.of(1, 2, 3), List.of(1, 2, 3), List.of(1, 2, 3)), new int[]{1, 1});
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(List<List<Integer>> nums, int[] expected) {

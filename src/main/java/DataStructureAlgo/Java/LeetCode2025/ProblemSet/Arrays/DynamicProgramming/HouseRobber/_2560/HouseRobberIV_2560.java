@@ -71,7 +71,7 @@ public class HouseRobberIV_2560 {
         test &= test(new int[]{2, 3, 5, 9}, 2, 5);
         test &= test(new int[]{2, 7, 9, 3, 1}, 2, 2);
         test &= test(new int[]{4, 4, 4, 4}, 2, 4);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

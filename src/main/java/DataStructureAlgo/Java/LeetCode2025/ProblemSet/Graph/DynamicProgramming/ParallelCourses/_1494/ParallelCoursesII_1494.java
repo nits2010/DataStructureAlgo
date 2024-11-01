@@ -114,7 +114,7 @@ public class ParallelCoursesII_1494 {
         test &= test(new int[][]{}, 11, 0, -1);
         test &= test(new int[][]{{2, 1}, {3, 1}, {1, 4}}, 4, 2, 3);
         test &= test(new int[][]{{2, 1}, {3, 1}, {4, 1}, {1, 5}}, 5, 2, 4);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] relations, int n, int k, int expected) {

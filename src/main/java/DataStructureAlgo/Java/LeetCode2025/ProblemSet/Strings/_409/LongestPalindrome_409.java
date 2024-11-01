@@ -2,7 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._409;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,7 +64,7 @@ public class LongestPalindrome_409 {
         test &= test("axaza", 3);
         test &= test("bb", 2);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

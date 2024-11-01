@@ -73,7 +73,7 @@ public class MyCalendarI_729 {
         boolean test = true;
         test &= test(new int[][]{{10, 20}, {15, 25}, {20, 30}}, new boolean[]{true, false, true});
         test &= test(new int[][]{{47, 50}, {33, 41}, {39, 45}, {33, 42}, {25, 32}, {26, 35}, {19, 25}, {3, 8}, {8, 13}, {18, 27}}, new boolean[]{true, true, false, false, true, false, true, true, true, false});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] intervals, boolean[] expected) {

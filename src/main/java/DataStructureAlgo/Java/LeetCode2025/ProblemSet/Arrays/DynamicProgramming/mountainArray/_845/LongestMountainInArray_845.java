@@ -1,9 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.mountainArray._845;
 
-import DataStructureAlgo.Java.helpers.*;
-
-import java.util.*;
-
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -80,17 +76,17 @@ public class LongestMountainInArray_845 {
         test &= test(new int[]{0, 2, 2}, 0);
         test &= test(new int[]{0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1}, 3);
         test &= test(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}, 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] arr, int expected) {
-        CommonMethods.print(new String[]{"Input", "Expected"}, true, arr, expected);
+        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, arr, expected);
         int output;
         boolean pass = true;
         Solution solution = new Solution();
         output = solution.longestMountain(arr);
         pass &= output == expected;
-        CommonMethods.print(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return pass;
     }
 

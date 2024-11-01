@@ -60,7 +60,7 @@ public class RemoveAllAdjacentDuplicatesInString_1047 {
         test &= test("azxxzy", "ay");
         test &= test("geeksforgeeg", "gksfor");
         test &= test("caaabbbaacdddd", "cabc");
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s, String expected) {

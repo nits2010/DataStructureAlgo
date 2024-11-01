@@ -79,7 +79,7 @@ public class SentenceSimilarity_734 {
         test &= test(new String[]{"great"}, new String[]{"doubleplus", "good"}, List.of(List.of("great", "doubleplus")), false);
         test &= test(new String[]{"great", "fine"}, new String[]{"great", "fine"}, List.of(List.of()), true);
         test &= test(new String[]{"great", "fine"}, new String[]{"great", "fine"}, List.of(List.of("great", "fine")), true);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String[] sentence1, String[] sentence2, List<List<String>> similarPairs, boolean expected) {

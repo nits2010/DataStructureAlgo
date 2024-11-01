@@ -78,7 +78,7 @@ public class ClimbingStairs_70 {
         test &= testCase(4, 5);
         test &= testCase(5, 8);
         test &= testCase(20, 10946);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean testCase(int n, int expected) {

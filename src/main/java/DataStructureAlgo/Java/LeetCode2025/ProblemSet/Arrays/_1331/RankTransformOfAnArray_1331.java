@@ -65,7 +65,7 @@ public class RankTransformOfAnArray_1331 {
         test &= test(new int[]{40,10,20,30}, new int[]{4,1,2,3});
         test &= test(new int[]{100,100,100}, new int[]{1,1,1});
         test &= test(new int[]{37,12,28,9,100,56,80,5,12}, new int[]{5,3,4,2,8,6,7,1,3});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] input, int[] expectedOutput) {

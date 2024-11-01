@@ -73,7 +73,7 @@ public class MakeSumDivisibleByP_1590 {
         test &= test (new int[]{6,3,5,2}, 9, 2);
         test &= test (new int[]{1,2,3}, 3, 0);
         test &= test (new int[]{1,2,3}, 7, -1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int p, int expected) {

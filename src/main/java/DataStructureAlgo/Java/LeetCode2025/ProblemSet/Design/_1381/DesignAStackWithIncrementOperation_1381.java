@@ -77,7 +77,7 @@ public class DesignAStackWithIncrementOperation_1381 {
         test &= test(new String[]{"CustomStack","push","push","pop","push","push","push","increment","increment","pop","pop","pop","pop"},
                 List.of(List.of(1),List.of(2),List.of(2),List.of(3),List.of(4),List.of(5,100),List.of(2,100)),
                 new Integer[] {null,null,null,2,null,null,null,null,null,103,202,201,-1});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String[] operations, List<List<Integer>> params, Integer[] expected) {

@@ -64,12 +64,12 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
         test &= test(new int[]{2, 1, 1, 5, 6, 2, 3, 1}, 3);
         test &= test(new int[]{2, 1, 1, 5, 6, 8, 2, 1, 1}, 3);
         test &= test(new int[]{9, 8, 1, 7, 6, 5, 4, 3, 2, 1}, 2);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int expected) {
 
-        CommonMethods.print(new String[]{"Input", "Expected"}, true, nums, expected);
+        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, nums, expected);
         int output;
         boolean pass, finalPass = true;
 
@@ -77,19 +77,19 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
         output = solutionReverse.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.print(new String[]{"Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionPoly.SolutionWithoutReverse solutionWithoutReverse = new SolutionPoly.SolutionWithoutReverse();
         output = solutionWithoutReverse.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.print(new String[]{"Without Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Without Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingBinarySearch solutionUsingBinarySearch = new SolutionUsingBinarySearch();
         output = solutionUsingBinarySearch.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.print(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
     }

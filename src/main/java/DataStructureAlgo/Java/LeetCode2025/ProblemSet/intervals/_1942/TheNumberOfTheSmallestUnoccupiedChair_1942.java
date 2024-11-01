@@ -81,7 +81,7 @@ public class TheNumberOfTheSmallestUnoccupiedChair_1942 {
         test &= test(new int[][]{{1, 4}, {2, 3}, {4, 6}}, 1, 1);
         test &= test(new int[][]{{3, 10}, {1, 5}, {2, 6}}, 0, 2);
         test &= test(new int[][]{{3, 10}, {1, 5}, {2, 6}}, 3, -1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] times, int targetFriend, int expected) {

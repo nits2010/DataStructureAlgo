@@ -94,7 +94,7 @@ public class MinimumWindowSubstring_76 {
         test &= test("a", "a", "a");
         test &= test("a", "aa", "");
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s, String t, String expected) {

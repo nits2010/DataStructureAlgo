@@ -110,7 +110,7 @@ public class MaxAreaOfIsland_695 {
         test &= test(new int[][]{{1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {0, 0, 0, 1, 1}, {0, 0, 0, 1, 1}}, 14);
         test &= test(new int[][]{{0, 0, 0, 0, 0, 0, 0, 0}}, 0);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

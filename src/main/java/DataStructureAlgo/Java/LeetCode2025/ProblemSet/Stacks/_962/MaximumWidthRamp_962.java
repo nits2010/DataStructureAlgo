@@ -59,7 +59,7 @@ public class MaximumWidthRamp_962 {
         boolean test = true;
         test &= test(new int[]{6, 0, 8, 2, 1, 5}, 4);
         test &= test(new int[]{9, 8, 1, 0, 1, 9, 4, 0, 4, 1}, 7);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int expected) {

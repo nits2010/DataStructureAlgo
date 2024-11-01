@@ -94,7 +94,7 @@ public class CloneBinaryTreeWithRandomPointer_1485 {
         test &= test(
                 List.of(new Integer[]{1, 2, 3, 1}, new Integer[]{2, 4, 6, 2}, new Integer[]{4, null, null, 4}, new Integer[]{6, null, null, 6}, new Integer[]{3, null, 5, 3}, new Integer[]{5, null, null, 5}));
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(List<Integer[]> inputTree) {

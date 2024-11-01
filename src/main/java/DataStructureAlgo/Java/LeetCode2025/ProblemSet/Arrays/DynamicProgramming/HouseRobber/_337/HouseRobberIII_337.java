@@ -89,7 +89,7 @@ public class HouseRobberIII_337 {
         test &= test(new Integer[]{3, 2, 3, null, 3, null, 1}, 7);
         test &= test(new Integer[]{3, 4, 5, 1, 3, null, 1}, 9);
         test &= test(new Integer[]{3, 2, 3, null, 3, null, 1, 11, 34, 224, null, null, 872}, 1135);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

@@ -106,7 +106,7 @@ public class CloneGraph_133 {
         test &= test(List.of(List.of(2, 4), List.of(1, 3), List.of(2, 4), List.of(1, 3)), List.of(List.of(2, 4), List.of(1, 3), List.of(2, 4), List.of(1, 3)));
         test &= test(List.of(), List.of());
         test &= test(List.of(List.of()), List.of(List.of()));
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
 

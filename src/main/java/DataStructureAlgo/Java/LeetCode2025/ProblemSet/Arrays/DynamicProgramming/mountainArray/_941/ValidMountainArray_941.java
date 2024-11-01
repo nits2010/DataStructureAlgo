@@ -1,9 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.mountainArray._941;
 
-import DataStructureAlgo.Java.helpers.*;
-
-import java.util.*;
-
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -68,17 +64,17 @@ public class ValidMountainArray_941 {
         test &= test(new int[]{0, 1}, false);
         test &= test(new int[]{0, 1, 2, 3, 4, 5}, false);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] arr, boolean expected) {
-        CommonMethods.print(new String[]{"Input", "Expected"}, true, arr, expected);
+        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, arr, expected);
         boolean output;
         boolean pass = true;
         Solution solution = new Solution();
         output = solution.validMountainArray(arr);
         pass &= output == expected;
-        CommonMethods.print(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return pass;
     }
 

@@ -1,10 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.baseProblems.subsequence._300;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._100.SameTree_100;
-import DataStructureAlgo.Java.helpers.*;
-
-import java.util.*;
-
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -73,11 +68,11 @@ public class LongestIncreasingSubsequence_300 {
         test &= test(new int[]{10, 9, 2, 5, 3, 7, 101, 18}, 4);
         test &= test(new int[]{0, 1, 0, 3, 2, 3}, 4);
         test &= test(new int[]{7, 7, 7, 7, 7, 7, 7}, 1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int expected) {
-        CommonMethods.print(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -86,13 +81,13 @@ public class LongestIncreasingSubsequence_300 {
         output = solutionPoly.lengthOfLIS(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.print(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionBinarySearch solutionBinarySearch = new SolutionBinarySearch();
         output = solutionBinarySearch.lengthOfLIS(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.print(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
         return finalPass;
     }
 

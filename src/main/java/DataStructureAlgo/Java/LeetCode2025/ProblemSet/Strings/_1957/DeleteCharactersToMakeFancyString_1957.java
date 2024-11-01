@@ -1,9 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._1957;
 
-import DataStructureAlgo.Java.helpers.*;
-
-import java.util.*;
-
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -72,25 +68,25 @@ public class DeleteCharactersToMakeFancyString_1957 {
         test &= test("aaabaaaa", "aabaa");
         test &= test("aab", "aab");
         test &= test("aaaaaaaaaaaaaaaaaa", "aa");
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s, String expected) {
-        CommonMethods.print(new String[]{"Input", "Expected"}, true, s, expected);
+        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, s, expected);
         String output;
         boolean pass, finalPass = true;
 
         SolutionLastTwoCharMatch solutionLastTwoCharMatch = new SolutionLastTwoCharMatch();
         output = solutionLastTwoCharMatch.makeFancyString(s);
-        pass = output.equals(expected);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.print(new String[]{"TwoCharMatch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"TwoCharMatch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionFrequency solutionFrequency = new SolutionFrequency();
         output = solutionFrequency.makeFancyString(s);
-        pass = output.equals(expected);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.print(new String[]{"Frequency", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Frequency", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
     }
 

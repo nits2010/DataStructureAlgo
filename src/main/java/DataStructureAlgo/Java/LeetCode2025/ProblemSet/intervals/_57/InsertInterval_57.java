@@ -78,7 +78,7 @@ public class InsertInterval_57 {
         test &= test(new int[][]{{1, 3}, {6, 9}}, new int[]{2, 5}, new int[][]{{1, 5}, {6, 9}});
         test &= test(new int[][]{{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}}, new int[]{4, 8}, new int[][]{{1, 2}, {3, 10}, {12, 16}});
         test &= test(new int[][]{{1, 1}, {6, 9}}, new int[]{2,5}, new int[][]{{1, 1}, {2, 5}, {6, 9}});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] intervals, int[] newInterval, int[][] expected) {

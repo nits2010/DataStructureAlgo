@@ -1,6 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._122;
 
-import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitTwoTransaction__BestTimeToBuySellStockIII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
@@ -82,7 +81,7 @@ public class BestTimeToBuyAndSellStockII_122 {
         test &= test(new int[]{7, 6, 4, 3, 1}, 0);
         test &= test(new int[]{   1, 2, 3, 90, 95, 99, 100}, 99);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] prices, int expected) {

@@ -78,7 +78,7 @@ public class FindKthBitInNthBinaryString_1545 {
         test &= testCase(15, 11, "1");
         test &= testCase(16, 11, "1");
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean testCase(int n, int k, String expected) {

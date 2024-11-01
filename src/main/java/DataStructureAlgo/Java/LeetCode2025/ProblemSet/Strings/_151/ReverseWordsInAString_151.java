@@ -88,7 +88,7 @@ public class ReverseWordsInAString_151 {
         test &= test("  hello  ", "hello");
         test &= test("a  ", "a");
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s, String expected) {
