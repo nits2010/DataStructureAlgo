@@ -1031,11 +1031,11 @@ public class CommonMethods {
 
     public static void printAllTestOutCome(boolean test) {
         System.out.println("================================================================================");
-        System.out.println(test ? "\nAll passed" : "\n Something Failed");
+        System.out.println(test ? "All passed" : "Something Failed");
         System.out.println("================================================================================");
     }
 
-    public static void printAllTestOutCome(boolean[] test) {
+    public static void printAllTestOutCome(List<Boolean> test) {
         System.out.println("================================================================================");
         int i = 1, count = 0;
         List<Integer> failedTests = new ArrayList<>();
@@ -1051,7 +1051,7 @@ public class CommonMethods {
         if (failedTests.isEmpty()) {
             System.out.println("\nAll passed : " + count + "/" + count);
         } else {
-            System.out.println("Total test :" + test.length + " Passed : " + count + "\nFailed Tests index : " + failedTests);
+            System.out.println("Total test :" + test.size() + " Passed : " + count + "\nFailed Tests index : " + failedTests);
         }
 
         System.out.println("================================================================================");
