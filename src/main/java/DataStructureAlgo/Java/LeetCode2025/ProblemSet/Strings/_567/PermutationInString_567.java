@@ -68,7 +68,7 @@ public class PermutationInString_567 {
         test &= test("ab", "eidbaooo", true);
         test &= test("ab", "eidboaoo", false);
         test &= test("adc", "dcda", true);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s1, String s2, boolean expected) {

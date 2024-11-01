@@ -79,7 +79,7 @@ public class BestTimeToBuyAndSellStockIII_123 {
         test &= test(new int[]{7, 6, 4, 3, 1}, 0);
         test &= test(new int[]{1, 2, 3, 90, 95, 99, 100}, 99);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] prices, int expected) {

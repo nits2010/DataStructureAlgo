@@ -102,7 +102,7 @@ public class AllOOneDataStructure_432 {
                 new String[]{"hello", "hello", "leet"},
                 new String[]{null, null, null, "hello", "hello", null, "hello", "leet"});
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String[] operations, String[] keys, String[] expected) {

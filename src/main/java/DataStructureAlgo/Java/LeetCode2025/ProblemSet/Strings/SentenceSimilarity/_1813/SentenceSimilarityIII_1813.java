@@ -93,7 +93,7 @@ public class SentenceSimilarityIII_1813 {
         test &= test("I am cool", "cool", true);
         test &= test("cool", "I am cool", true);
         test &= test("", "I am cool", true);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

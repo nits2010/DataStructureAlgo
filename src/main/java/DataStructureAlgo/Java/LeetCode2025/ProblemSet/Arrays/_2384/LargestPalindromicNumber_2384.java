@@ -2,9 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2384;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
@@ -76,7 +73,7 @@ public class LargestPalindromicNumber_2384 {
         test &= test("0000001", "1");
         test &= test("00000012", "2");
         test &= test("000000000000", "0");
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String num, String expected) {

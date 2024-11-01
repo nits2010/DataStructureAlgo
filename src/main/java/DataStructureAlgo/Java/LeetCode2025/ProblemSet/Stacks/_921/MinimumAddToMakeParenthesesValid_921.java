@@ -71,7 +71,7 @@ public class MinimumAddToMakeParenthesesValid_921 {
         test &= test("(", 1);
         test &= test("()))((", 4);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

@@ -67,7 +67,7 @@ public class MinimumStringLengthAfterRemoving_2696 {
         test &= test("ACBBD", 5);
         test &= test("ABABABAB", 0);
         test &= test("CCCCDDDD", 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String s, int expected) {

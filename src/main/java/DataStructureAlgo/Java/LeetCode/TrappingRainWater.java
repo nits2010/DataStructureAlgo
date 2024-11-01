@@ -72,21 +72,21 @@ public class TrappingRainWater {
 
         // left[i] contains height of tallest bar to the
         // left of i'th bar including itself
-        int left[] = new int[n];
+        int[] left = new int[n];
 
         // Right [i] contains height of tallest bar to
         // the right of ith bar including itself
-        int right[] = new int[n];
+        int[] right = new int[n];
 
         // Initialize result
         int water = 0;
 
-        // Fill left array
+        // Fill left-array
         left[0] = height[0];
         for (int i = 1; i < n; i++)
             left[i] = Math.max(left[i - 1], height[i]);
 
-        // Fill right array
+        // Fill right-array
         right[n - 1] = height[n - 1];
         for (int i = n - 2; i >= 0; i--)
             right[i] = Math.max(right[i + 1], height[i]);

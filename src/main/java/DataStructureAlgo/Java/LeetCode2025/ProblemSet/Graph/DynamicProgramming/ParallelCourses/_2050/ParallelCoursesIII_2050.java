@@ -88,7 +88,7 @@ public class ParallelCoursesIII_2050 {
         test &= test(new int[][]{{1, 5}, {2, 5}, {3, 5}, {3, 4}, {4, 5}}, 5, new int[]{1, 2, 3, 4, 5}, 12);
         test &= test(new int[][]{{2, 7}, {2, 6}, {3, 6}, {4, 6}, {7, 6}, {2, 1}, {3, 1}, {4, 1}, {6, 1}, {7, 1}, {3, 8}, {5, 8}, {7, 8}, {1, 9}, {2, 9}, {6, 9}, {7, 9}},
                 9, new int[]{9, 5, 9, 5, 8, 7, 7, 8, 4}, 32);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] relations, int n, int[] time, int expected) {

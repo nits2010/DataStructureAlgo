@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <p>
  * We have discussed Overlapping Subproblems and Optimal Substructure properties.
  * <p>
- * Let us discuss Longest Increasing Subsequence (LIS) problem as an example problem that can be solved using Dynamic Programming.
+ * Let us discuss a Longest Increasing Subsequence (LIS) problem as an example problem that can be solved using Dynamic Programming.
  * The Longest Increasing Subsequence (LIS) problem is to find the length of the longest subsequence of a given sequence such that all elements of the subsequence are sorted in increasing order. For example, the length of LIS for {10, 22, 9, 33, 21, 50, 41, 60, 80} is 6 and LIS is {10, 22, 33, 50, 60, 80}.
  * longest-increasing-subsequence
  * <p>
@@ -30,17 +30,17 @@ import java.util.Arrays;
  * The longest increasing subsequence is {3, 7, 40, 80}
  * <p>
  * https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
- * Longest increasing sub-sequence in O(nlogn) time
+ * Longest increasing subsequence in O(nlogn) time
  */
 public class LongestIncreasingSubSequence {
 
 
     public static void main(String []args) {
-        int items[] = {10, 9, 2, 5, 3, 7, 101, 18};
+        int[] items = {10, 9, 2, 5, 3, 7, 101, 18};
 
-        int items2[] = {2, 5, 3, 7, 11, 8, 10, 13, 6};
+        int[] items2 = {2, 5, 3, 7, 11, 8, 10, 13, 6};
 
-        int items3[] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+        int[] items3 = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
 
 
         lengthOfLIS(items);
@@ -80,14 +80,14 @@ class LongestIncreasingSubSequencePoly implements ILongestIncreasingSubSequence 
             return 1;
 
         int n = nums.length;
-        int lis[] = new int[n];
+        int[] lis = new int[n];
         int i, j, max = 0;
 
         /* Initialize LIS values for all indexes */
 
         Arrays.fill(lis, 1);
 
-        /* Compute optimized LIS values in bottom up manner */
+        /* Compute optimized LIS values in a bottom-up manner */
         for (i = 1; i < n; i++) {
             for (j = 0; j < i; j++)
                 if (nums[i] > nums[j] && lis[i] < lis[j] + 1)
@@ -119,12 +119,12 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
         return lis.length;
     }
 
-    private LIS lengthOfLISHelper(int nums[]) {
+    private LIS lengthOfLISHelper(int[] nums) {
 
         if (nums == null || nums.length == 0)
             return null;
         int n = nums.length;
-        int lis[] = new int[n];
+        int[] lis = new int[n];
         int lisLength = 1;
 
 
@@ -139,13 +139,13 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
                 lis[0] = nums[i];
 
             else if (item > lis[lisLength - 1]) {
-                //if this is largest element in among last element of all lengthOfLIS, then extend this lengthOfLIS with new element
+                //if this is the largest element in the last element of all lengthOfLIS, then extend this lengthOfLIS with a new element
                 lis[lisLength++] = item;
-            } else if (item < lis[lisLength - 1]) {
-                //if this is smaller then among last element of all lengthOfLIS, find the right place, copy that list,
+            } else {
+                //if this is smaller than the last element of all lengthOfLIS, find the right place, copy that list,
                 // replace the last element and discard the same length lengthOfLIS
 
-                int index = ceilIndex(lis, 0, lisLength - 1, item);
+                int index = binarySearchUpperBound(lis, 0, lisLength - 1, item);
                 lis[index] = item;
 
             }
@@ -158,15 +158,21 @@ class LongestIncreasingSubSequenceNLogN implements ILongestIncreasingSubSequence
 
     }
 
-    public int ceilIndex(int[] a, int l, int r, int item) {
-        while (l < r) {
-            int mid = (l + r) >> 1;
+    private int binarySearchUpperBound(int[] nums, int left, int right, int target) {
 
-            if (a[mid] >= item)
-                r = mid;
-            else
-                l = mid + 1;
+        int ceilIndex = -1;
+        while (left <= right) {
+
+            int mid = (left + right) >>> 1;
+
+            if (nums[mid] >= target) {
+                ceilIndex = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+
         }
-        return r;
+        return ceilIndex;
     }
 }

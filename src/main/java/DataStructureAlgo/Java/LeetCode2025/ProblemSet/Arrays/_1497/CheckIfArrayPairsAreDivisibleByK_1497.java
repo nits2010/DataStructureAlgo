@@ -3,7 +3,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1497;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta
@@ -69,7 +68,7 @@ public class CheckIfArrayPairsAreDivisibleByK_1497 {
         test &= test(new int[]{1, 2, 3, 4, 5, 6}, 7, true);
         test &= test(new int[]{1, 2, 3, 4, 5, 6}, 10, false);
         test &= test(new int[]{-1, 1, -2, 2, -3, 3, -4, 4}, 3, true);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] arr, int k, boolean expected) {

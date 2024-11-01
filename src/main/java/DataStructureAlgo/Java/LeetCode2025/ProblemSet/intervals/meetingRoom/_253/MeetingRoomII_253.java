@@ -69,7 +69,7 @@ public class MeetingRoomII_253 {
         boolean test = true;
         test &= test(new int[][]{{0, 30}, {5, 10}, {15, 20}}, 2);
         test &= test(new int[][]{{7, 10}, {2, 4}}, 1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
     private static boolean test(int[][] intervals, int expected) {
 

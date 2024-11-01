@@ -1029,14 +1029,38 @@ public class CommonMethods {
         printBinaryTree(node.left, level + 1);
     }
 
-    public static void printResult(boolean test) {
-        System.out.println("====================");
-        System.out.println(test ? "\nAll passed" : "\n Something Failed");
+    public static void printAllTestOutCome(boolean test) {
+        System.out.println("================================================================================");
+        System.out.println(test ? "All passed" : "Something Failed");
+        System.out.println("================================================================================");
     }
 
-    public static <T> void print(String[] prefixConsoles, boolean isInput, T... inputs) {
+    public static void printAllTestOutCome(List<Boolean> test) {
+        System.out.println("================================================================================");
+        int i = 1, count = 0;
+        List<Integer> failedTests = new ArrayList<>();
+        for (boolean t : test) {
+            if (t) {
+                count++;
+            } else {
+                failedTests.add(i);
+            }
+            i++;
+
+        }
+        if (failedTests.isEmpty()) {
+            System.out.println("\nAll passed : " + count + "/" + count);
+        } else {
+            System.out.println("Total test :" + test.size() + " Passed : " + count + "\nFailed Tests index : " + failedTests);
+        }
+
+        System.out.println("================================================================================");
+    }
+
+    @SafeVarargs
+    public static <T> void printTestOutcome(String[] prefixConsoles, boolean isInput, T... inputs) {
         if (isInput)
-            System.out.println("---------------------------------------");
+            System.out.println("------------------------------------------------------------------------------");
         StringBuilder console = new StringBuilder();
 
         if (prefixConsoles.length != inputs.length)
@@ -1048,8 +1072,12 @@ public class CommonMethods {
             String output = "";
             if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
+            } else if (input instanceof Integer[][]) {
+                output = CommonMethods.toString((Integer[][]) input);
             } else if (input instanceof int[]) {
                 output = Arrays.toString((int[]) input);
+            } else if (input instanceof int[][]) {
+                output = "\n" + CommonMethods.toString((int[][]) input);
             } else if (input instanceof String[]) {
                 output = Arrays.toString((String[]) input);
             } else if (input instanceof String) {
@@ -1066,7 +1094,7 @@ public class CommonMethods {
 
             i++;
             if (i < prefixConsoles.length)
-                console.append(" || ");
+                console.append(" | ");
         }
         System.out.println(console);
 
@@ -1143,6 +1171,51 @@ public class CommonMethods {
 
         return true;
 
+    }
+
+    public static <T> boolean compareResultOutCome(T result, T expected, boolean strictCompare) {
+        // Handle null cases
+        if (result == null || expected == null) {
+            return Objects.equals(result, expected);
+        }
+
+        // Handle array comparisons
+        if (result.getClass().isArray() && expected.getClass().isArray()) {
+            if (strictCompare) {
+                return Arrays.deepEquals(new Object[]{result}, new Object[]{expected});
+            } else {
+                return compareArraysUnordered(result, expected);
+            }
+        }
+
+        // Handle collection comparisons
+        if (result instanceof Collection && expected instanceof Collection) {
+            if (strictCompare) {
+                return Objects.equals(result, expected);
+            } else {
+                return compareCollectionsUnordered((Collection<?>) result, (Collection<?>) expected);
+            }
+        }
+
+        // Use Objects.equals for all other types (including primitive wrappers)
+        return Objects.equals(result, expected);
+    }
+
+    private static boolean compareArraysUnordered(Object arr1, Object arr2) {
+        Object[] array1 = Arrays.stream((Object[]) arr1).sorted().toArray();
+        Object[] array2 = Arrays.stream((Object[]) arr2).sorted().toArray();
+        return Arrays.equals(array1, array2);
+    }
+
+    private static boolean compareCollectionsUnordered(Collection<?> col1, Collection<?> col2) {
+        if (col1.size() != col2.size()) {
+            return false;
+        }
+        List<?> sortedCol1 = new ArrayList<>(col1);
+        List<?> sortedCol2 = new ArrayList<>(col2);
+        Collections.sort((List<Comparable>) sortedCol1);
+        Collections.sort((List<Comparable>) sortedCol2);
+        return sortedCol1.equals(sortedCol2);
     }
 
 }

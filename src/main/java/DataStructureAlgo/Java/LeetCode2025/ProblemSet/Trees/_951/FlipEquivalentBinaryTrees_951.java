@@ -66,11 +66,11 @@ public class FlipEquivalentBinaryTrees_951 {
         test &= test(new Integer[]{1, 2, 3, 4, 5, 6, null, null, null, 7, 8}, new Integer[]{1, 3, 2, null, 6, 4, 5, null, null, null, null, 8, 7}, true);
         test &= test(new Integer[]{}, new Integer[]{}, true);
         test &= test(new Integer[]{}, new Integer[]{1}, false);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(Integer[] tree1, Integer[] tree2, boolean expected) {
-        CommonMethods.print(new String[]{"Tree 1", "Tree 2", "Expected"}, true, tree1, tree2, expected);
+        CommonMethods.printTestOutcome(new String[]{"Tree 1", "Tree 2", "Expected"}, true, tree1, tree2, expected);
 
         TreeNode root1 = TreeBuilder.buildTreeFromLevelOrder(tree1);
         TreeNode root2 = TreeBuilder.buildTreeFromLevelOrder(tree2);
@@ -81,7 +81,7 @@ public class FlipEquivalentBinaryTrees_951 {
         Solution solution = new Solution();
         boolean output = solution.flipEquiv(root1, root2);
         boolean pass = output == expected;
-        CommonMethods.print(new String[]{"Output", "Expected", "Pass"}, false, output, expected, (pass ? "Yes" : "No"));
+        CommonMethods.printTestOutcome(new String[]{"Output", "Expected", "Pass"}, false, output, expected, (pass ? "Yes" : "No"));
         return pass;
 
 

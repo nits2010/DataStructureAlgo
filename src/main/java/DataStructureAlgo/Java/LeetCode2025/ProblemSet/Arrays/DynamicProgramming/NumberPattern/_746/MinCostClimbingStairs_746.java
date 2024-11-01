@@ -69,7 +69,7 @@ public class MinCostClimbingStairs_746 {
         boolean test = true;
         test &= testCase(new int[]{10, 15, 20}, 15);
         test &= testCase(new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}, 6);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean testCase(int[] cost, int expected) {

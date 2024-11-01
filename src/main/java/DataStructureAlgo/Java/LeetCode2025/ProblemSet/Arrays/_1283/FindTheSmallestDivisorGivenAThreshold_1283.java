@@ -58,18 +58,18 @@ public class FindTheSmallestDivisorGivenAThreshold_1283 {
         test &= test(new int[]{21212,10101,12121}, 1000000, 1);
         test &= test(new int[]{12,50,11,75,57,12,73,4,69,78}, 649, 1);
         test &= test(new int[]{12,50,11,75,57,12,73,4,69,78}, 649, 1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int []nums, int threshold, int expected) {
-        CommonMethods.print(new String[]{"Nums", "Threshold", "Expected"}, true, nums, threshold, expected);
+        CommonMethods.printTestOutcome(new String[]{"Nums", "Threshold", "Expected"}, true, nums, threshold, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution sol = new Solution();
         output = sol.smallestDivisor(nums, threshold);
         pass = output == expected;
-        CommonMethods.print(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         return finalPass;

@@ -52,7 +52,7 @@ public class MaxConsecutiveOnes_485 {
         test &= test(new int[]{1, 0, 1, 1, 0, 1}, 2);
         test &= test(new int[]{1, 1, 1, 1, 1}, 5);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

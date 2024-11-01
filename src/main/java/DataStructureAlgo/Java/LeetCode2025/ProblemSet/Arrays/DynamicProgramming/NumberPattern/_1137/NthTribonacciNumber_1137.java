@@ -55,7 +55,7 @@ public class NthTribonacciNumber_1137 {
         boolean test = true;
         test &= test(4, 4);
         test &= test(25, 1389537);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int n, int expected) {

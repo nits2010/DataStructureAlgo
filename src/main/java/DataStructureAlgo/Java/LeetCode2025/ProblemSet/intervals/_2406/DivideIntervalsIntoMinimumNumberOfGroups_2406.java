@@ -71,7 +71,7 @@ public class DivideIntervalsIntoMinimumNumberOfGroups_2406 {
         test &= test(new int[][]{{5, 10}, {6, 8}, {1, 5}, {2, 3}, {1, 10}}, 3);
         test &= test(new int[][]{{1, 3}, {5, 6}, {8, 10}, {11, 13}}, 1);
         test &= test(new int[][]{{1,1}}, 1);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] intervals, int expected) {

@@ -80,7 +80,7 @@ public class HouseRobberI_198 {
         test &= test(new int[]{1, 20, 3}, 20);
         test &= test(new int[]{1, 20}, 20);
         test &= test(new int[]{20}, 20);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] nums, int expected) {

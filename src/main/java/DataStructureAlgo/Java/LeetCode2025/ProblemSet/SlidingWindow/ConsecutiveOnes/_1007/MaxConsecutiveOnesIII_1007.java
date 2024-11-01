@@ -65,7 +65,7 @@ public class MaxConsecutiveOnesIII_1007 {
         test &= flipK0(new int[]{0, 0, 0, 1}, 4, 4);
         test &= flipK0(new int[]{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2, 6);
         test &= flipK0(new int[]{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3, 10);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

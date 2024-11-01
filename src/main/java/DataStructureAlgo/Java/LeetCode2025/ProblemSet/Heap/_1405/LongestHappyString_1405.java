@@ -73,7 +73,7 @@ public class LongestHappyString_1405 {
         test &= test(100, 100, 100, List.of("acbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacbcbabacacb", "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc"));
         test &= test(0, 8, 11, List.of("ccbccbcbcbcbcbcbcbc"));
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

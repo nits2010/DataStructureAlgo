@@ -89,7 +89,7 @@ public class SentenceSimilarityII_737 {
         test &= test(new String[]{"I", "love", "leetcode"}, new String[]{"I", "love", "onepiece"},
                 List.of(List.of("manga", "hunterXhunter"), List.of("platform", "anime"), List.of("leetcode", "platform"), List.of("anime", "manga")), false);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
 

@@ -83,7 +83,7 @@ public class ParallelCoursesI_1136 {
         test &= test(new int[][]{{1,3},{2,3}}, 3, 2);
         test &= test(new int[][]{{1,2},{2,3},{3,1}}, 3, -1);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] relations, int n, int expected) {

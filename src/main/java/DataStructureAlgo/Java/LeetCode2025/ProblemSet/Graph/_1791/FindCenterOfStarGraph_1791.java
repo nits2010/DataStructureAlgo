@@ -48,7 +48,7 @@ public class FindCenterOfStarGraph_1791 {
         test &= test(new int[][]{{1, 2}, {2, 3}, {4, 2}}, 2);
         test &= test(new int[][]{{1, 2}, {5, 1}, {1, 3}, {1, 4}}, 1);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] edges, int expected) {

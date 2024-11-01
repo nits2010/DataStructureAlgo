@@ -31,7 +31,7 @@ public class AllConstantTimeDataStructureInsertDeleteMinMax {
                 new String[]{"a","b" ,"c" ,"d" ,"a" ,"b" ,"c" ,"d" ,"c" ,"d" ,"d" ,"a"},
                 new String[]{null,null,null,null,null,null,null,null,null,null,null,null,null,"b"});
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test1(String[] operations, String[] keys, String[] expected) {

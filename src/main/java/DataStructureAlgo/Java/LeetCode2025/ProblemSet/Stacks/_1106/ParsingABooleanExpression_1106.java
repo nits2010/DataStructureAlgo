@@ -81,7 +81,7 @@ public class ParsingABooleanExpression_1106 {
         test &= test("!(&(f,t))", true);
         test &= test("!(&(&(!(&(t,t,t,t,t,f)),t),f,f,f,f))", true);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(String expression, boolean expected) {

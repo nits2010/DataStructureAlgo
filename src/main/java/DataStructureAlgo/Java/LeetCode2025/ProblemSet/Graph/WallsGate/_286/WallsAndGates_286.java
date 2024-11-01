@@ -89,7 +89,7 @@ public class WallsAndGates_286 {
         test &= test(new int[][]{{-1, 0, INF}}, new int[][]{{-1, 0, 1}});
         test &= test(new int[][]{{0, -1, INF}}, new int[][]{{0, -1, INF}});
         test &= test(new int[][]{{0, -1, INF}, {0, INF, INF}}, new int[][]{{0, -1, 3}, {0, 1, 2}});
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

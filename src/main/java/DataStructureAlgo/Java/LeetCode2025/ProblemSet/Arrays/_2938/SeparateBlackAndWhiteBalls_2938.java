@@ -69,7 +69,7 @@ public class SeparateBlackAndWhiteBalls_2938 {
         test &= test("100", 2);
         test &= test("0111", 0);
         test &= test("011010", 5);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
     }
 

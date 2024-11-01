@@ -76,7 +76,7 @@ public class CourseScheduleIII_630 {
         test &= test(new int[][]{{100, 200}, {50, 200}, {15, 200}, {1000, 2000}}, 4);
         test &= test(new int[][]{{1,2}}, 1);
         test &= test(new int[][]{{3,2}, {4,3}}, 0);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[][] courses, int expected) {

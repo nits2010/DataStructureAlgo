@@ -70,7 +70,7 @@ public class MaxConsecutiveOnesII_487 {
         test &= flipOne0(new int[]{0, 0, 0, 0, 0, 0, 0}, 1);
         test &= flipOne0(new int[]{1, 0, 1, 0}, 3);
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
         //follow-up test
         System.out.println("-----------------Follow-up------------------------------");
@@ -91,7 +91,7 @@ public class MaxConsecutiveOnesII_487 {
         test &= followUpFlipOne0(new int[]{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2, List.of(1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 6));
         test &= followUpFlipOne0(new int[]{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3, List.of(1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 10, 10, 10, 10, 10, 10, 10, 10));
 
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
 
 
     }

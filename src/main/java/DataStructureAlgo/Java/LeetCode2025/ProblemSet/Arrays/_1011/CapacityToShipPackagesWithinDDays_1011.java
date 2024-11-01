@@ -74,24 +74,24 @@ public class CapacityToShipPackagesWithinDDays_1011 {
         test &= test(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5, 15);
         test &= test(new int[]{3, 2, 2, 4, 1, 4}, 3, 6);
         test &= test(new int[]{1, 2, 3, 1, 1}, 4, 3);
-        CommonMethods.printResult(test);
+        CommonMethods.printAllTestOutCome(test);
     }
 
     private static boolean test(int[] weights, int days, int expected) {
-        CommonMethods.print(new String[]{"Weights", "Days", "Expected"}, true, weights, days, expected);
+        CommonMethods.printTestOutcome(new String[]{"Weights", "Days", "Expected"}, true, weights, days, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution sol = new Solution();
         output = sol.shipWithinDays(weights, days);
         pass = output == expected;
-        CommonMethods.print(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         Solution2 sol2 = new Solution2();
         output = sol2.shipWithinDays(weights, days);
         pass = output == expected;
-        CommonMethods.print(new String[]{"Binary Search 2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTestOutcome(new String[]{"Binary Search 2", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
         return finalPass;
 
