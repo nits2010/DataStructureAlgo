@@ -1069,7 +1069,7 @@ public class CommonMethods {
         int i = 0;
         for (T input : inputs) {
 
-            String output = "";
+            String output;
             if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
             } else if (input instanceof Integer[][]) {

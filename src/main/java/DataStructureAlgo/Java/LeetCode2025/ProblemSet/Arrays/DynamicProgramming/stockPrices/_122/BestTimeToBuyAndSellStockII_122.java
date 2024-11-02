@@ -3,7 +3,9 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitMultiTransactions_BestTimeToBuySellStockII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Author: Nitin Gupta
@@ -76,39 +78,161 @@ import java.util.Arrays;
 public class BestTimeToBuyAndSellStockII_122 {
 
     public static void main(String[] args) {
-        boolean test = true;
-        test &= test(new int[]{7, 1, 5, 3, 6, 4}, 7);
-        test &= test(new int[]{1, 2, 3, 4, 5}, 4);
-        test &= test(new int[]{7, 6, 4, 3, 1}, 0);
-        test &= test(new int[]{   1, 2, 3, 90, 95, 99, 100}, 99);
+        List<Boolean> tests = new ArrayList<>();
+        tests.add(test(new int[]{7, 1, 5, 3, 6, 4}, 7));
+        tests.add(test(new int[]{1, 2, 3, 4, 5}, 4));
+        tests.add(test(new int[]{7, 6, 4, 3, 1}, 0));
+        tests.add(test(new int[]{1, 2, 3, 90, 95, 99, 100}, 99));
 
-        CommonMethods.printAllTestOutCome(test);
+        CommonMethods.printAllTestOutCome(tests);
     }
 
     private static boolean test(int[] prices, int expected) {
-        System.out.println("----------------------------------");
-        System.out.println("Prices : " + Arrays.toString(prices) + " Expected : " + expected);
-        int output = new Solution().maxProfit(prices);
-        System.out.println("Output : " + output);
-        return output == expected;
+        CommonMethods.printTestOutcome(new String[]{"Prices", "Expected"}, true, prices, expected);
+
+        int output;
+        boolean pass, finalPass = true;
+
+
+        Recursion.Solution recursion = new Recursion.Solution();
+        output = recursion.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+
+
+        DynamicProgramming.TopDownMemoization topDownMemoization = new DynamicProgramming.TopDownMemoization();
+        output = topDownMemoization.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+        DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
+        output = bottomUp.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+
+        DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
+        output = bottomUpSpaceOptimized.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+        Greedy.Solution solutionGreedy = new Greedy.Solution();
+        output = solutionGreedy.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"Greedy", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+        return finalPass;
     }
 
-    static class Solution {
-        public int maxProfit(int[] prices) {
 
-            //since multiple transactions are allowed with one share a day limitation.
-            //we will always choose to sell the share as soon as we find the profit.
-            //as selling early will open a window to buy more in future and sell.
-            //this leads to a greedy approach.
-            //this algorithm won't fail, consider below case
-            //prices [1,2,3,90,95,99,100] max profit : (2-1) + (3-2) + (90-3) + (95-90) + (99-95)+ (100-99) = 1 + 1 + 87 + 5 + 4 + 4 + 1 = 107
-            // it is no advantage to hold the minimum value share `1` and sell at the end `100` makes profit 99 < 107
-            int profit = 0;
-            for (int i = 1; i < prices.length; i++) {
-                if (prices[i] > prices[i - 1])
-                    profit += prices[i] - prices[i - 1];
+    static class Recursion {
+        static class Solution {
+            public int maxProfit(int[] prices) {
+
+                return maxProfit(prices, 0, 1);
             }
-            return profit;
+
+            private int maxProfit(int[] prices, int i, int buy) {
+                if (i >= prices.length) return 0;
+
+                if (buy == 1) {
+                    return Math.max(maxProfit(prices, i + 1, 0) - prices[i],
+                            maxProfit(prices, i + 1, 1));
+                } else {
+                    return Math.max(maxProfit(prices, i + 1, 1) + prices[i], maxProfit(prices, i + 1, 0));
+                }
+
+            }
         }
     }
+
+    static class DynamicProgramming {
+        static class TopDownMemoization {
+            public int maxProfit(int[] prices) {
+                Integer[][] dp = new Integer[prices.length][2];
+                return maxProfit(prices, 0, 1, dp);
+            }
+
+            private int maxProfit(int[] prices, int i, int buy, Integer[][] dp) {
+                if (i >= prices.length) return 0;
+                if (dp[i][buy] != null) return dp[i][buy];
+
+                if (buy == 1) {
+                    dp[i][buy] = Math.max(maxProfit(prices, i + 1, 0, dp) - prices[i],
+                            maxProfit(prices, i + 1, 1, dp));
+                } else {
+                    dp[i][buy] = Math.max(maxProfit(prices, i + 1, 1, dp) + prices[i], maxProfit(prices, i + 1, 0, dp));
+                }
+
+                return dp[i][buy];
+
+            }
+        }
+
+
+        static class BottomUp {
+            public int maxProfit(int[] prices) {
+                int[][] dp = new int[prices.length + 1][2];
+
+                for (int i = prices.length - 1; i >= 0; i--) {
+
+                    dp[i][1] = Math.max(dp[i + 1][0] - prices[i], dp[i + 1][1]);
+                    dp[i][0] = Math.max(dp[i + 1][1] + prices[i], dp[i + 1][0]);
+                }
+
+                return dp[0][1];
+            }
+
+
+        }
+
+        static class BottomUpSpaceOptimized {
+            public int maxProfit(int[] prices) {
+                int[][] dp = new int[2][2];
+
+                for (int i = prices.length - 1; i >= 0; i--) {
+
+                    dp[0][1] = Math.max(dp[1][0] - prices[i], dp[1][1]);
+                    dp[0][0] = Math.max(dp[1][1] + prices[i], dp[1][0]);
+
+                    //exchange
+                    dp[1][1] = dp[0][1];
+                    dp[1][0] = dp[0][0];
+                }
+
+                return dp[0][1];
+            }
+
+
+        }
+    }
+
+    static class Greedy {
+
+        static class Solution {
+            public int maxProfit(int[] prices) {
+
+                //since multiple transactions are allowed with one share a day limitation.
+                //we will always choose to sell the share as soon as we find the profit.
+                //as selling early will open a window to buy more in future and sell.
+                //this leads to a greedy approach.
+                //this algorithm won't fail, consider below case
+                //prices [1,2,3,90,95,99,100] max profit : (2-1) + (3-2) + (90-3) + (95-90) + (99-95)+ (100-99) = 1 + 1 + 87 + 5 + 4 + 4 + 1 = 107
+                // it is no advantage to hold the minimum value share `1` and sell at the end `100` makes profit 99 < 107
+                int profit = 0;
+                for (int i = 1; i < prices.length; i++) {
+                    if (prices[i] > prices[i - 1])
+                        profit += prices[i] - prices[i - 1];
+                }
+                return profit;
+            }
+        }
+    }
+
 }
