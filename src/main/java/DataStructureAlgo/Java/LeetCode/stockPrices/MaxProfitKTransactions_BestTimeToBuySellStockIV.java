@@ -34,7 +34,7 @@ import java.util.Arrays;
  * 0 <= prices[i] <= 1000
  * Video: https://www.youtube.com/watch?v=oDhu5uGq_ic
  */
-public class MaxProfitKTransactions__BestTimeToBuySellStockIV {
+public class MaxProfitKTransactions_BestTimeToBuySellStockIV {
 
     public static void main(String []args) {
         int prices[] = {2, 1, 2, 0, 1};

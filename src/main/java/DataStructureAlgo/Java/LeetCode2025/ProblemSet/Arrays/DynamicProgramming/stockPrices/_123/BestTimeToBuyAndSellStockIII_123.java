@@ -1,5 +1,8 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._123;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._122.BestTimeToBuyAndSellStockII_122;
+
+import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitTwoTransaction_BestTimeToBuySellStockIII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Arrays;
@@ -43,9 +46,9 @@ import java.util.Arrays;
  * <p><p>
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitTwoTransaction__BestTimeToBuySellStockIII}
+ * Duplicate {@link MaxProfitTwoTransaction_BestTimeToBuySellStockIII}
  * Similar {@link}
- * extension {@link }
+ * extension {@link BestTimeToBuyAndSellStockII_122}
  * <p><p>
  * Tags
  * -----

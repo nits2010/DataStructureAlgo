@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
-import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitTwoTransaction__BestTimeToBuySellStockIII;
+import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitTwoTransaction_BestTimeToBuySellStockIII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -75,7 +75,7 @@ public class MaximumSumTwoNonOverlappingSubarrays {
      * <p>
      * Do it similarly for M come first then L. finally take the maximum of both.
      * <p>
-     * If you look closely, it is similar to Buy-Sell stocks two times {@link MaxProfitTwoTransaction__BestTimeToBuySellStockIII}
+     * If you look closely, it is similar to Buy-Sell stocks two times {@link MaxProfitTwoTransaction_BestTimeToBuySellStockIII}
      * Here we just change how we build the array.
      * <p>
      * Example:  [0,6,5,2,2,5,1,9,4] L=1, M=2
