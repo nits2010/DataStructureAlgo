@@ -57,7 +57,7 @@ import java.util.*;
  * -----
  * @OptimalSoltuion
  */
-public class BestTimeToBuyAndSellStockWithCoolDown_309 {
+public class BestTimeToBuyAndSellStockWithCoolDownV_309 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
