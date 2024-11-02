@@ -65,7 +65,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSoltuion
+ * @OptimalSoltuion {@link DynamicProgramming.BottomUpV2_SpaceOptimized} {@link DynamicProgramming.BottomUpSpaceOptimized}
  */
 public class BestTimeToBuyAndSellStockWithTransactionFee_714 {
 
@@ -85,9 +85,177 @@ public class BestTimeToBuyAndSellStockWithTransactionFee_714 {
         int output;
         boolean pass, finalPass = true;
 
-        //add logic here
+        Recursion.Solution recursion = new Recursion.Solution();
+        output = recursion.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+
+        DynamicProgramming.TopDown topDown = new DynamicProgramming.TopDown();
+        output = topDown.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
+        output = bottomUp.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
+        output = bottomUpSpaceOptimized.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        DynamicProgramming.BottomUpV2 bottomUpV2 = new DynamicProgramming.BottomUpV2();
+        output = bottomUpV2.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUpV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        DynamicProgramming.BottomUpV2_SpaceOptimized bottomUpV2SpaceOptimized = new DynamicProgramming.BottomUpV2_SpaceOptimized();
+        output = bottomUpV2SpaceOptimized.maxProfit(prices, fee);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 
     }
+
+    static class Recursion {
+        static class Solution {
+            public int maxProfit(int[] prices, int fee) {
+                return maxProfit(prices, fee, 0, 1);
+            }
+
+            private int maxProfit(int[] prices, int fee, int i, int buy) {
+
+                if (i >= prices.length)
+                    return 0;
+
+
+                int profit;
+                if (buy == 1) {
+                    int buying = maxProfit(prices, fee, i + 1, 0) - prices[i];
+                    int skipping = maxProfit(prices, fee, i + 1, 1);
+                    profit = Math.max(buying, skipping);
+                } else {
+
+                    int selling = maxProfit(prices, fee, i + 1, 1) + prices[i] - fee;
+                    int skipping = maxProfit(prices, fee, i + 1, 0);
+
+                    profit = Math.max(selling, skipping);
+                }
+
+                return profit;
+
+            }
+        }
+    }
+
+    static class DynamicProgramming {
+        static class TopDown {
+            public int maxProfit(int[] prices, int fee) {
+                int n = prices.length;
+                Integer[][] dp = new Integer[n][2];
+                return maxProfit(prices, fee, 0, 1, dp);
+            }
+
+            private int maxProfit(int[] prices, int fee, int i, int buy, Integer[][] dp) {
+
+                if (i >= prices.length)
+                    return 0;
+
+                if (dp[i][buy] != null)
+                    return dp[i][buy];
+
+                int profit;
+                if (buy == 1) {
+                    int buying = maxProfit(prices, fee, i + 1, 0, dp) - prices[i];
+                    int skipping = maxProfit(prices, fee, i + 1, 1, dp);
+                    profit = Math.max(buying, skipping);
+                } else {
+
+                    int selling = maxProfit(prices, fee, i + 1, 1, dp) + prices[i] - fee;
+                    int skipping = maxProfit(prices, fee, i + 1, 0, dp);
+
+                    profit = Math.max(selling, skipping);
+                }
+
+                return dp[i][buy] = profit;
+
+            }
+        }
+
+
+        static class BottomUp {
+            public int maxProfit(int[] prices, int fee) {
+                int n = prices.length;
+                int[][] dp = new int[n + 1][2];
+
+                for (int i = n - 1; i >= 0; i--) {
+                    dp[i][1] = Math.max(dp[i + 1][0] - prices[i], dp[i + 1][1]);
+                    dp[i][0] = Math.max(dp[i + 1][1] + prices[i] - fee, dp[i + 1][0]);
+                }
+                return dp[0][1];
+            }
+        }
+
+        /**
+         * https://www.youtube.com/watch?v=cUsPoH5DG1Q
+         */
+        static class BottomUpV2 {
+            public int maxProfit(int[] prices, int fee) {
+                int n = prices.length;
+                int[] buy = new int[n]; //buy[i] is the max profit at day i with buy transaction
+                int[] sell = new int[n]; //sell[i] is the max profit at day i with sell transaction
+                buy[0] = -prices[0]; // we start buying at day 0
+
+                for (int i = 1; i < n; i++) {
+                    buy[i] = Math.max(buy[i - 1], sell[i - 1] - prices[i]);
+                    sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i] - fee);
+                }
+                return sell[n - 1];
+            }
+        }
+
+        static class BottomUpV2_SpaceOptimized {
+            public int maxProfit(int[] prices, int fee) {
+                int n = prices.length;
+
+                int buy = -prices[0];
+                int sell = 0;
+
+                for (int i = 1; i < n; i++) {
+                    buy = Math.max(buy, sell - prices[i]);
+                    sell = Math.max(sell, buy + prices[i] - fee);
+                }
+                return sell;
+            }
+        }
+
+        static class BottomUpSpaceOptimized {
+            public int maxProfit(int[] prices, int fee) {
+                int n = prices.length;
+                int[][] dp = new int[2][2];
+
+                for (int i = n - 1; i >= 0; i--) {
+                    dp[0][1] = Math.max(dp[1][0] - prices[i], dp[1][1]);
+                    dp[0][0] = Math.max(dp[1][1] + prices[i] - fee, dp[1][0]);
+
+                    //exchange
+                    dp[1][1] = dp[0][1];
+                    dp[1][0] = dp[0][0];
+
+                }
+                return dp[0][1];
+            }
+        }
+    }
+
+
 }

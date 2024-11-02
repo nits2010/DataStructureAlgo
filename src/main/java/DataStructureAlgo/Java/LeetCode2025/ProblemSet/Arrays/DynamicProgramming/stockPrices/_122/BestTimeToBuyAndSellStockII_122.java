@@ -101,7 +101,6 @@ public class BestTimeToBuyAndSellStockII_122 {
         CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
 
-
         DynamicProgramming.TopDownMemoization topDownMemoization = new DynamicProgramming.TopDownMemoization();
         output = topDownMemoization.maxProfit(prices);
         pass = output == expected;
@@ -120,6 +119,20 @@ public class BestTimeToBuyAndSellStockII_122 {
         pass = output == expected;
         finalPass &= pass;
         CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+        DynamicProgramming.BottomUpV2 bottomUpV2 = new DynamicProgramming.BottomUpV2();
+        output = bottomUpV2.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUpV2", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
+
+        DynamicProgramming.BottomUpV2_SpaceOptimized bottomUpV2SpaceOptimized = new DynamicProgramming.BottomUpV2_SpaceOptimized();
+        output = bottomUpV2SpaceOptimized.maxProfit(prices);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+
 
         Greedy.Solution solutionGreedy = new Greedy.Solution();
         output = solutionGreedy.maxProfit(prices);
@@ -188,8 +201,6 @@ public class BestTimeToBuyAndSellStockII_122 {
 
                 return dp[0][1];
             }
-
-
         }
 
         static class BottomUpSpaceOptimized {
@@ -211,6 +222,38 @@ public class BestTimeToBuyAndSellStockII_122 {
 
 
         }
+
+        static class BottomUpV2 {
+            public int maxProfit(int[] prices) {
+                int n = prices.length;
+                int[] buy = new int[n]; //buy[i] is the max profit at day i with buy transaction
+                int[] sell = new int[n]; //sell[i] is the max profit at day i with sell transaction
+                buy[0] = -prices[0]; // we start buying at day 0
+
+                for (int i = 1; i < n; i++) {
+                    buy[i] = Math.max(buy[i - 1], sell[i - 1] - prices[i]);
+                    sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);
+                }
+                return sell[n - 1];
+            }
+        }
+
+        static class BottomUpV2_SpaceOptimized {
+            public int maxProfit(int[] prices) {
+                int n = prices.length;
+                int buy = -prices[0];
+                int sell = 0;
+
+                for (int i = 1; i < n; i++) {
+                    buy = Math.max(buy, sell - prices[i]);
+                    sell = Math.max(sell, buy + prices[i]);
+                }
+                return sell;
+            }
+        }
+
+
+
     }
 
     static class Greedy {
