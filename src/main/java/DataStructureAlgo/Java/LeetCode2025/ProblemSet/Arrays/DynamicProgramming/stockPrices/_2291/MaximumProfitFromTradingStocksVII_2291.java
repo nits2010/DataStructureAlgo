@@ -69,7 +69,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSoltuion
+ * @OptimalSoltuion {@link DynamicProgramming.BottomUpSpaceOptimizedV2} {@link DynamicProgramming.BottomUpSpaceOptimized} {@link DynamicProgramming.TopDown}
  */
 public class MaximumProfitFromTradingStocksVII_2291 {
 
@@ -124,6 +124,12 @@ public class MaximumProfitFromTradingStocksVII_2291 {
         pass = output == expected;
         finalPass = finalPass && pass;
         CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        DynamicProgramming.BottomUpSpaceOptimizedV2 bottomUpSpaceOptimizedv2 = new DynamicProgramming.BottomUpSpaceOptimizedV2();
+        output = bottomUpSpaceOptimizedv2.maxProfit(present, future, budget);
+        pass = output == expected;
+        finalPass = finalPass && pass;
+        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimizedV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 
@@ -262,6 +268,24 @@ public class MaximumProfitFromTradingStocksVII_2291 {
                 }
 
                 return dp[1][budget];
+            }
+        }
+
+
+        static class BottomUpSpaceOptimizedV2 {
+            public int maxProfit(int[] present, int[] future, int budget) {
+                int[] dp = new int[budget + 1];
+
+                for (int i = 0; i < present.length; i++) {
+                    int presentPrice = present[i];
+                    int futurePrice = future[i];
+
+                    for (int j = budget; j >= presentPrice; j--) {
+                        dp[j] = Math.max(dp[j], dp[j - presentPrice] + futurePrice - presentPrice);
+                    }
+                }
+
+                return dp[budget];
             }
         }
     }
