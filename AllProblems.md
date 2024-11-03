@@ -1,5 +1,8 @@
 | #  | File Name | GitHub Link | 
 |---|-----------|-------------|
+| 797 | CircularSentence_2490.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Strings/_2490/CircularSentence_2490.java) |
+| 796 | RotateString_796.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Strings/_796/RotateString_796.java) |
+| 795 | MaximumProfitFromTradingStocksVII_2291.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/stockPrices/_2291/MaximumProfitFromTradingStocksVII_2291.java) |
 | 794 | FindMedianFromDataStream_295.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Heap/_295/FindMedianFromDataStream_295.java) |
 | 793 | MaxProfitKTransactions_BestTimeToBuySellStockIV.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/stockPrices/MaxProfitKTransactions_BestTimeToBuySellStockIV.java) |
 | 792 | BestTimeToBuyAndSellStockIV_188.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Arrays/DynamicProgramming/stockPrices/_188/BestTimeToBuyAndSellStockIV_188.java) |
