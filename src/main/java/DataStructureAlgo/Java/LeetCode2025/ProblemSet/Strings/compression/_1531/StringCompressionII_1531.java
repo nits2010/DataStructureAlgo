@@ -57,7 +57,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @DynamicProgramming <p><p>
  * Company Tags
  * -----
- * <p>
+ * @Toptal <p>
  * -----
  * @Editorial <p><p>
  * -----
@@ -117,8 +117,8 @@ public class StringCompressionII_1531 {
                 if (index - k == s.length())
                     return 0;
 
-                if(index == s.length())
-                    return  0;
+                if (index == s.length())
+                    return 0;
 
                 int result;
 
@@ -167,23 +167,27 @@ public class StringCompressionII_1531 {
             public int getLengthOfOptimalCompression(String s, int k) {
 
 
-                Map<String, Integer > dp = new HashMap<>();
+                Map<String, Integer> dp = new HashMap<>(); //O(n^2*k)
                 return dfs(s, k, 0, ' ', 0, dp);
 
             }
 
             //there are 4 changing states
             //index, k , prev and prevCount
-            private String getKey( int k, int index, char prev, int prevCount) {
-                return  k + "," + index + "," + prev + "," + prevCount;
+            private String getKey(int k, int index, char prev, int prevCount) {
+                return k + "," + index + "," + prev + "," + prevCount;
             }
 
+            //O(n) -> number of characters
+            // O(k) -> number of deletion state
+            // O(n) -> prevCount states or prev character states
+            //O(n^2*k) -> overall
             private int dfs(String s, int k, int index, char prev, int prevCount, Map<String, Integer> dp) {
                 if (k < 0)
                     return Integer.MAX_VALUE;
 
-                String key = getKey( k, index, prev, prevCount);
-                if(dp.containsKey(key))
+                String key = getKey(k, index, prev, prevCount);
+                if (dp.containsKey(key))
                     return dp.get(key);
 
                 //if the remaining string length is same as k then we can delete all the remaining characters
@@ -224,7 +228,7 @@ public class StringCompressionII_1531 {
                     result = Math.min(delete, dontDelete);
                 }
 
-                dp.put(key,result);
+                dp.put(key, result);
                 return result;
 
             }
