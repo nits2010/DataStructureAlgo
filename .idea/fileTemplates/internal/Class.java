@@ -26,4 +26,30 @@
  */
 
 public class ${NAME} {
+
+ public static void main(String[] args) {
+        List<Boolean> tests = new ArrayList<>();
+        //add tests cases here
+   
+
+        CommonMethods.printAllTestOutCome(tests);
+    }
+
+
+    private static boolean tests(String input, int expected) {
+        //add print here
+        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+
+        int output;
+        boolean pass, finalPass = true;
+
+        Solution solution = new Solution();
+##        output = solution.minChanges(input);
+        pass = output == expected;
+        finalPass &= pass;
+
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        return finalPass; 
+
+    }
 }
