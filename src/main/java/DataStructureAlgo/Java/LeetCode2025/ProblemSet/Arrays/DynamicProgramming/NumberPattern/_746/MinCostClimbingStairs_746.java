@@ -47,6 +47,8 @@ import java.util.Arrays;
  * Duplicate {@link}
  * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._70.ClimbingStairs_70}
  * extension {@link DataStructureAlgo.Java.LeetCode.FibonacciNumber}
+ * DP-BaseProblem {@link DataStructureAlgo.Java.LeetCode.FibonacciNumber}
+ *
  * <p><p>
  * Tags
  * -----

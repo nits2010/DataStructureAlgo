@@ -3,6 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._122.BestTimeToBuyAndSellStockII_122;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.*;
 
@@ -40,6 +41,7 @@ import java.util.*;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link BestTimeToBuyAndSellStockII_122 }
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

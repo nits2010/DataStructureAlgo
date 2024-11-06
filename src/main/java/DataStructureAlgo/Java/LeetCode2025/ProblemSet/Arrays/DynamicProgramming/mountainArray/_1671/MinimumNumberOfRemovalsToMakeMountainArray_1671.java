@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.mountainArray._1671;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.subsequence._300.LongestIncreasingSubsequence_300;
 
 /**
  * Author: Nitin Gupta
@@ -38,7 +39,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----------
  * Duplicate {@link}
  * Similar {@link DataStructureAlgo.Java.nonleetcode.BitonicProblems.LongestBitnoicSubsequence}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.baseProblems.subsequence._300.LongestIncreasingSubsequence_300}
+ * extension {@link LongestIncreasingSubsequence_300}
+ * DP-BaseProblem {@link LongestIncreasingSubsequence_300}
  * <p><p>
  * Tags
  * -----
@@ -223,7 +225,7 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
     }
 
     /**
-     * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.baseProblems.subsequence._300.LongestIncreasingSubsequence_300.SolutionBinarySearch}
+     * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.subsequence._300.LongestIncreasingSubsequence_300.SolutionBinarySearch}
      */
     static class SolutionUsingBinarySearch {
 

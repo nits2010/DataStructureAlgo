@@ -5,6 +5,7 @@ import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 /**
  * Author: Nitin Gupta
@@ -47,6 +48,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link BestTimeToBuyAndSellStockII_122}
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

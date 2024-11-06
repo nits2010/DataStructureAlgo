@@ -2,6 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 
 import DataStructureAlgo.Java.LeetCode.adjacent.houserobber.HouseRobberII;
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.Arrays;
 
@@ -42,6 +43,7 @@ import java.util.Arrays;
  * Duplicate {@link HouseRobberII}
  * Similar {@link}
  * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.HouseRobber._198.HouseRobberI_198}
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

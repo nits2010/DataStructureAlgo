@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._70;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 /**
  * Author: Nitin Gupta
@@ -38,6 +39,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.ClimbingStairs2Step}
  * Similar {@link DataStructureAlgo.Java.LeetCode.FibonacciNumber}
  * extension {@link }
+ * DP-BaseProblem {@link DataStructureAlgo.Java.LeetCode.FibonacciNumber}
  * <p><p>
  * Tags
  * -----
