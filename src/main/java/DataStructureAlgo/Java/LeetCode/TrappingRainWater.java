@@ -16,12 +16,12 @@ package DataStructureAlgo.Java.LeetCode;
  * Output: 6
  * <p>
  * https://www.geeksforgeeks.org/trapping-rain-water/
- *
+ * <p>
  * {@link ContainerWithMostWater}
  */
 public class TrappingRainWater {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
         System.out.println(" Extra space :" + trapWithExtraSpace(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
         System.out.println("Constant space :" + trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
 
@@ -30,6 +30,7 @@ public class TrappingRainWater {
     /**
      * Runtime: 1 ms, faster than 98.39% of Java online submissions for Trapping Rain Water.
      * Memory Usage: 36.2 MB, less than 100.00% of Java online submissions for Trapping Rain Water.
+     *
      * @param height
      * @return
      */
@@ -43,19 +44,16 @@ public class TrappingRainWater {
         while (l < r) {
 
             if (height[l] < height[r]) {
-                if (height[l] > leftMax)
-                    leftMax = height[l];
-                else {
-                    totalWater += leftMax - height[l];
-                    l++;
-                }
-            } else if (height[l] > height[r]) {
-                if (height[r] > rightMax)
-                    rightMax = height[r];
-                else {
-                    totalWater += rightMax - height[r];
-                    r--;
-                }
+                leftMax = Math.max(height[l], leftMax);
+                totalWater += leftMax - height[l];
+                l++;
+
+            } else {
+                rightMax = Math.max(height[r], rightMax);
+
+                totalWater += rightMax - height[r];
+                r--;
+
             }
         }
         return totalWater;
@@ -63,6 +61,7 @@ public class TrappingRainWater {
 
     /**
      * {@link DataStructureAlgo.Java.companyWise.Amazon.MaximumDifferenceInIndex}
+     *
      * @param height
      * @return
      */

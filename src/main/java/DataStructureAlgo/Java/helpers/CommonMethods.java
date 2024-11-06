@@ -1051,7 +1051,7 @@ public class CommonMethods {
         if (failedTests.isEmpty()) {
             System.out.println("\nAll passed : " + count + "/" + count);
         } else {
-            System.out.println("Total test :" + test.size() + " Passed : " + count + "\nFailed Tests index : " + failedTests);
+            System.out.println("Total test : " + test.size() + "\nPassed : " + count + "\nFailed Tests index : " + failedTests);
         }
 
         System.out.println("================================================================================");
