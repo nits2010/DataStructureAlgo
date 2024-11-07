@@ -1,6 +1,10 @@
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
 #parse("File Header.java")
 
+import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.helpers.*;
+import java.util.*;
+
 /**
  * Author: Nitin Gupta
  * Date:${DATE}
