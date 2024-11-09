@@ -59,7 +59,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p><p>
  * Tags
  * -----
- *
+ * @medium
  * @Array
  * @BitManipulation
  * @PrefixSum <p><p>
