@@ -37,9 +37,7 @@ public class LongestSubArraySumK {
             return Collections.EMPTY_LIST;
 
         CommonMethods.print(nums);
-        /**
-         * This will tell at what index(value) we saw a sum(key)
-         */
+        //This will tell at what index(value) we saw a sum(key)
         Map<Integer, Integer> map = new HashMap<>();
 
         int currentSum = 0;

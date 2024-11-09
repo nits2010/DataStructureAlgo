@@ -34,15 +34,15 @@ public class LargestSumSubArraySumAtMostK {
      * @param k
      * @return
      */
-    static int largestSumAtMostK(int nums[], int k) {
+    static int largestSumAtMostK(int[] nums, int k) {
 
         int max = Integer.MIN_VALUE;
         int sumj = 0;
         TreeSet<Integer> ts = new TreeSet<>();
         ts.add(0);
 
-        for (int i = 0; i < nums.length; i++) {
-            sumj += nums[i];
+        for (int num : nums) {
+            sumj += num;
             Integer gap = ts.ceiling(sumj - k);
 
             if (gap != null)

@@ -19,6 +19,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * {1, 2, 1} => sum = 4, length = 3
  * {1, 2, 1, 0}, {2, 1, 0, 1} => sum = 4, length = 4
  * {1, 0, 1, 1, 0} =>5 sum = 3, length = 5
+ *
+ * @Apple
+ * https://leetcode.com/discuss/interview-question/758045/Apple-or-Phone-or-Longest-Subarray-Sum-At-Most-K
  */
 public class LongestSubarraySumAtMostk {
 
@@ -26,7 +29,7 @@ public class LongestSubarraySumAtMostk {
 
         System.out.print(sumAtMostKPositive(new int[]{1, 2, 1, 0, 1, 1, 0}, 4));
         System.out.print(sumAtMostKPositive(new int[]{1, 2, 1, 2, 3, 4, 0}, 4));
-//
+
         System.out.print(sumAtMostKPositive(new int[]{1, -2, -1, 0, 1, -1, 0}, 4));
 
         System.out.print(sumAtMostKPositive(new int[]{2, 2, -1}, 0));
