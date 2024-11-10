@@ -5,12 +5,15 @@ import java.util.TreeSet;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
- * Description:
+ * Description: https://www.geeksforgeeks.org/maximum-sum-subarray-sum-less-equal-given-sum/
+ * https://stackoverflow.com/questions/39084147/largest-sum-of-contiguous-subarray-no-larger-than-k
  * Given an array of integers A and an integer k,
  * find a subarray that contains the largest sum, subject to a constraint that the sum is less than k?
  * {2,2,-1},
  * when k = 0, return -1.
  * when k = 3, return 3.
+ *
+ * Similar problems:
  */
 public class LargestSumSubArraySumAtMostK {
 
@@ -25,7 +28,7 @@ public class LargestSumSubArraySumAtMostK {
 
     /**
      * Explanation:
-     * We need to find a sub-array whose sum is Largest <=K
+     * We need to find a subarray whose sum is Largest <=K
      * <p>
      * <p>
      * https://www.quora.com/Given-an-array-of-integers-A-and-an-integer-k-find-a-subarray-that-contains-the-largest-sum-subject-to-a-constraint-that-the-sum-is-less-than-k

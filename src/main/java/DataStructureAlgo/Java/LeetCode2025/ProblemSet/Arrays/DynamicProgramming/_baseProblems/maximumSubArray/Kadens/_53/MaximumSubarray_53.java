@@ -1,6 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems._53;
-
-import DataStructureAlgo.Java.helpers.*;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.maximumSubArray.Kadens._53;
 
 import java.util.*;
 

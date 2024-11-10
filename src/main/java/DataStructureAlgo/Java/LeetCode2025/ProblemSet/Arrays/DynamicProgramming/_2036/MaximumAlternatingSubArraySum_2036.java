@@ -4,7 +4,7 @@ import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.
 
 import java.util.*;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems._53.MaximumSubarray_53;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.maximumSubArray.Kadens._53.MaximumSubarray_53;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
