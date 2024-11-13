@@ -93,8 +93,13 @@ public class MostBeautifulItemForEachQuery_2070 {
         output = solutionBinarySearch.maximumBeauty(items, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-
         CommonMethods.printTestOutcome(new String[]{"Binary-Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+
+        SolutionSortingQueries solutionSortingQueries = new SolutionSortingQueries();
+        output = solutionSortingQueries.maximumBeauty(items, queries);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"Sorting-Queries", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }
@@ -127,11 +132,11 @@ public class MostBeautifulItemForEachQuery_2070 {
             int r = items.length - 1;
             int maxBeauty = 0;
             while (l <= r) {
-                int mid = (l + r) / 2;
+                int mid = l + (r - l) / 2;
                 if (items[mid][0] > targetPrice) {
                     r = mid - 1;
                 } else {
-                    // Found viable price. Keep moving to right
+                    // Found viable price. Keep moving to right to get max beauty
                     maxBeauty = Math.max(maxBeauty, items[mid][1]);
                     l = mid + 1;
                 }
