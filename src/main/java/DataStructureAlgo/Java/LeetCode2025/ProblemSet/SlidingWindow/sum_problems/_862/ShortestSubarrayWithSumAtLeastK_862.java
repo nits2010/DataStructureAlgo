@@ -65,14 +65,14 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSoltuion
+ * @OptimalSoltuion {@link Solution_UsingDeque}
  */
 public class ShortestSubarrayWithSumAtLeastK_862 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
         //add tests cases here
-//        tests.add(test(new int[]{1}, 1, 1));
+        tests.add(test(new int[]{1}, 1, 1));
         tests.add(test(new int[]{1, 2}, 4, -1));
         tests.add(test(new int[]{2, -1, 2}, 3, 3));
         tests.add(test(new int[]{2, 1, 1, -4, 3, 1, -1, 2}, 5, 4));
@@ -253,19 +253,13 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
             for (int i = 0; i <= n; i++) {
 
                 // Remove candidates from front of deque where subarray sum meets target
-                while (!dq.isEmpty() &&
-                        prefixSums[i] - prefixSums[dq.peekFirst()] >=
-                                targetSum
-                ) {
+                while (!dq.isEmpty() && prefixSums[i] - prefixSums[dq.peekFirst()] >=  targetSum ) {
                     // Update shortest subarray length
                     shortestSubarrayLength = Math.min(shortestSubarrayLength, i - dq.pollFirst());
                 }
 
                 // Maintain monotonicity by removing indices with larger prefix sums
-                while (
-                        !dq.isEmpty() &&
-                                prefixSums[i] <= prefixSums[dq.peekLast()]
-                ) {
+                while (!dq.isEmpty() &&prefixSums[i] <= prefixSums[dq.peekLast()]) {
                     dq.pollLast();
                 }
 
