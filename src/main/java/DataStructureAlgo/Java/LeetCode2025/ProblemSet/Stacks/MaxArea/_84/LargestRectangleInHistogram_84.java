@@ -41,7 +41,7 @@ import java.util.List;
  * -----------
  * Duplicate {@link LargestHistogram}
  * Similar {@link}
- * extension {@link }
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks._739.DailyTemperatures_739}
  * <p>
  * Tags
  * -----
@@ -154,6 +154,9 @@ class LargestRectangleInHistogram {
     }
 
 
+    /**
+     * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks._739.DailyTemperatures.SolutionWithoutUsingStacks}
+     */
     static class SolutionUsingBoundaries_LeftRightSmaller {
         public int largestRectangleArea(int[] heights) {
             if (heights == null || heights.length == 0)
