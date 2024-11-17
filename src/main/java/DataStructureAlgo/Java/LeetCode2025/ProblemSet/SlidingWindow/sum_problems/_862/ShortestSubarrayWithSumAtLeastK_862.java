@@ -58,7 +58,10 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @MonotonicQueue <p><p>
  * Company Tags
  * -----
- * <p>
+ * @Facebook
+ * @Amazon
+ * @GoldmanSachs
+ * @Google <p>
  * -----
  * @Editorial <p><p>
  * -----
