@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.MaxArea._84;
 
+import DataStructureAlgo.Java.LeetCode.LargetstRectangle.LargestHistogram;
+
 import java.util.Arrays;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Arrays;
  * Description: https://leetcode.com/problems/largest-rectangle-in-histogram
  * https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
  * <p>
- * Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+ * Given an array of integer heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
  * <p>
  * <p>
  * <p>
@@ -34,17 +36,33 @@ import java.util.Arrays;
  * <p>
  * File reference
  * -----------
- * Duplicate {@link}
+ * Duplicate {@link LargestHistogram}
  * Similar {@link}
  * extension {@link }
  * <p>
  * Tags
  * -----
+ * @hard
+ * @Array
+ * @Stack
+ * @MonotonicStack
  *
  *
  * <p>
  * Company Tags
  * -----
+ * @Amazon
+ * @Microsoft
+ * @Adobe
+ * @Facebook
+ * @Uber
+ * @Adobe
+ * @Bloomberg
+ * @Flipkart
+ * @Google
+ * @Microsoft
+ * @Twitter
+ * @WalmartLabs
  *
  * @Editorial <a href="https://www.youtube.com/watch?v=zx5Sw9130L0">...</a>
  */
@@ -86,6 +104,7 @@ class LargestRectangleInHistogram {
         public int largestRectangleArea(int[] heights) {
             if (heights == null || heights.length == 0)
                 return 0;
+
             if (heights.length == 1)
                 return heights[0];
 
@@ -94,7 +113,7 @@ class LargestRectangleInHistogram {
             for (int i = 0; i < heights.length; i++) {
 
                 int candidateBarHeight = heights[i];
-                int left = 0, right = 0;
+                int left, right;
 
                 //get left index
                 int j;
@@ -134,26 +153,26 @@ class LargestRectangleInHistogram {
 
             while (i < heights.length) {
 
-                //if current bar is bigger than previous bar, then previous bar
+                //if the current bar is bigger than previous bar, then previous bar
                 //histogram still forming
                 if (top == -1 || heights[stack[top]] <= heights[i])
                     stack[++top] = i++;
                 else {
-                    //if current bar is smaller than previous bar, then previous bar
-                    //histogram has completed. Since post the current bar, the previous bar won't be able to make
+                    //If the current bar is smaller than previous bar, then previous bar
+                    //histogram has completed. Since posting the current bar, the previous bar won't be able to make
                     // any more histogram.
                     int currentHistToEvaluate = stack[top--];
 
                     //if there is no bar before the previous bar, means previous bar is the biggest bar
                     //till previous bar, hence width would be i.
-                    //otherwise, there is a bar before that, that will contribute to the width of the histogram
+                    //otherwise, there is a bar before that; that will contribute to the width of the histogram
                     int width = top == -1 ? i : i - stack[top] - 1;
                     maxArea = Math.max(maxArea, heights[currentHistToEvaluate] * width);
 
                 }
             }
 
-            //calcuate histgram area for remaining bars in stack
+            //calculate histogram area for remaining bars in stack
             while (top >= 0) {
                 int currentHistToEvaluate = stack[top--];
                 int width = top == -1 ? i : i - stack[top] - 1;
