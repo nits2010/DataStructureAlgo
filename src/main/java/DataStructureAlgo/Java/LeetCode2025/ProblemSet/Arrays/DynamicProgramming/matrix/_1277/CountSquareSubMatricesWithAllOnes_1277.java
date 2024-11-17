@@ -7,7 +7,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Date: 10/28/2024
  * Question Category: 1277. Count Square Submatrices with All Ones
  * Description: https://leetcode.com/problems/count-square-submatrices-with-all-ones/description/?envType=daily-question&envId=2024-10-27
- * Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.
+ * Given a, m * n matrix of ones and zeros, return how many square sub-matrices have all ones.
  * <p>
  * <p>
  * <p>

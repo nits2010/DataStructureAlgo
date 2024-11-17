@@ -7,7 +7,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-27
- * Description: https://leetcode.com/problems/maximal-rectangle/
+ * Description: 85. Maximal Rectangle
+ * https://leetcode.com/problems/maximal-rectangle/
  * Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
  * <p>
  * Example:
@@ -21,7 +22,7 @@ import java.util.Stack;
  * ]
  * Output: 6
  */
-public class LargestRectangle {
+public class LargestRectangle_MaximalRectangle {
 
     public static void main(String []args) {
         char[][] input =
@@ -65,8 +66,8 @@ public class LargestRectangle {
 
         buildHistogram(matrix);
 
-        for (int i = 0; i < n; i++) {
-            maxArea = Math.max(maxArea, histogramArea(matrix[i]));
+        for (char[] chars : matrix) {
+            maxArea = Math.max(maxArea, histogramArea(chars));
 
         }
 

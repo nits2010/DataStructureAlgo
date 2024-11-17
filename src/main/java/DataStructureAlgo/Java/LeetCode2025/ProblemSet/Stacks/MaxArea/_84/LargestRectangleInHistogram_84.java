@@ -1,8 +1,11 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.MaxArea._84;
 
 import DataStructureAlgo.Java.LeetCode.LargetstRectangle.LargestHistogram;
+import DataStructureAlgo.Java.helpers.CommonMethods;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Author: Nitin Gupta
@@ -42,13 +45,11 @@ import java.util.Arrays;
  * <p>
  * Tags
  * -----
+ *
  * @hard
  * @Array
  * @Stack
- * @MonotonicStack
- *
- *
- * <p>
+ * @MonotonicStack <p>
  * Company Tags
  * -----
  * @Amazon
@@ -63,32 +64,48 @@ import java.util.Arrays;
  * @Microsoft
  * @Twitter
  * @WalmartLabs
- *
  * @Editorial <a href="https://www.youtube.com/watch?v=zx5Sw9130L0">...</a>
+ * https://www.youtube.com/watch?v=vcv3REtIvEo&t=14s
  */
 
 public class LargestRectangleInHistogram_84 {
 
     public static void main(String[] args) {
-        boolean test = true;
-        test &= test(new int[]{2, 1, 5, 6, 2, 3}, 10);
-        test &= test(new int[]{2, 4}, 4);
-        System.out.println(test ? "All test passed" : "Test failed");
+        List<Boolean> tests = new ArrayList<>();
+        tests.add(test(new int[]{2, 1, 5, 6, 2, 3}, 10));
+        tests.add(test(new int[]{2, 4}, 4));
+        CommonMethods.printAllTestOutCome(tests);
     }
 
     private static boolean test(int[] input, int expected) {
-        System.out.println("\n\nInput : " + Arrays.toString(input) + " expected: " + expected);
+        CommonMethods.printTestOutcome(new String[]{"matrix", "Expected"}, true, input, expected);
+
+        int output;
+        boolean pass, finalPass = true;
+
         LargestRectangleInHistogram.SolutionBruteForce bruteForce = new LargestRectangleInHistogram.SolutionBruteForce();
+        output = bruteForce.largestRectangleArea(input);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+
+        LargestRectangleInHistogram.SolutionUsingBoundaries_LeftRightSmaller solutionUsingBoundariesLeftRightSmaller = new LargestRectangleInHistogram.SolutionUsingBoundaries_LeftRightSmaller();
+        output = solutionUsingBoundariesLeftRightSmaller.largestRectangleArea(input);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"Boundaries-LeftRightSmaller", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+
+
         LargestRectangleInHistogram.SolutionUsingStacks stacks = new LargestRectangleInHistogram.SolutionUsingStacks();
-        int bruteForceOutput = bruteForce.largestRectangleArea(input);
-        int stacksOutput = stacks.largestRectangleArea(input);
-        System.out.println("Brute Force: " + bruteForceOutput + " | " + "Stacks " + stacksOutput);
+        output = stacks.largestRectangleArea(input);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"StackS", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
-        boolean testBF = bruteForceOutput == expected;
-        boolean testStacks = stacksOutput == expected;
 
-        System.out.println("TestBF | stacks | stacks2:  " + testBF + " | " + testStacks);
-        return testBF && testStacks;
+        return finalPass;
 
     }
 }
@@ -135,6 +152,56 @@ class LargestRectangleInHistogram {
             return maxArea;
         }
     }
+
+
+    static class SolutionUsingBoundaries_LeftRightSmaller {
+        public int largestRectangleArea(int[] heights) {
+            if (heights == null || heights.length == 0)
+                return 0;
+            int n = heights.length;
+            if (n == 1)
+                return heights[0];
+
+            int maxArea = Integer.MIN_VALUE;
+
+            //The left boundary is the index of the nearest bar to the left that is shorter.
+            int[] leftBoundaries = new int[n];
+
+            //The right boundary is the index of the nearest bar to the right that is shorter.
+            int[] rightBoundaries = new int[n];
+
+            leftBoundaries[0] = -1; // there is no smaller bar to the left
+            rightBoundaries[n - 1] = n; // there is no smaller bar to the right
+
+            for (int i = 1, j = n - 2; i < n; i++, j--) {
+
+                //calculate left and right boundaries
+
+                int left = i - 1; // the index of the nearest bar to the left that is shorter
+                while (left >= 0 && heights[left] >= heights[i])
+                    left = leftBoundaries[left]; //Jump to the next smaller element on the left
+
+                int right = j + 1;
+                while (right < n && heights[right] >= heights[j])
+                    right = rightBoundaries[right]; //Jump to the next smaller element on the right
+
+                leftBoundaries[i] = left;
+                rightBoundaries[j] = right;
+
+
+            }
+
+            for (int i = 0; i < n; i++) {
+                int width = rightBoundaries[i] - leftBoundaries[i] - 1; // Width of the rectangle
+                int area = heights[i] * width;     // Area of the rectangle
+                maxArea = Math.max(maxArea, area);
+            }
+
+            return maxArea;
+        }
+    }
+
+
 
     static class SolutionUsingStacks {
         public int largestRectangleArea(int[] heights) {
