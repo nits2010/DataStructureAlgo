@@ -5,55 +5,54 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.*;
 import java.util.*;
 
+
 /**
  * Author: Nitin Gupta
- * Date:${DATE}
- * Question Category: 
- * Description: 
- * <p>
+ * Date: ${DATE}
+ * Question Title:
+ * Link: 
+ * Description:
+ * <p><p>
  * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p>
+ * DP-BaseProblem {@link }
+ * <p><p>
  * Tags
  * -----
- * 
- *
- * <p>
+ * @easy
+ * @medium
+ * @hard
+  <p><p>
  * Company Tags
  * -----
-
- *
- * @Editorial
+ *  <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 public class ${NAME} {
 
- public static void main(String[] args) {
+  public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
         //add tests cases here
-   
-
+        
         CommonMethods.printAllTestOutCome(tests);
     }
 
-
-    private static boolean tests(String input, int expected) {
+    private static boolean test(int[] nums, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTestOutcome(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
 
         int output;
         boolean pass, finalPass = true;
 
-        Solution solution = new Solution();
-##        output = solution.minChanges(input);
-        pass = output == expected;
-        finalPass &= pass;
-
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
-        return finalPass; 
+        //add logic here
+        
+        return finalPass;
 
     }
 }
