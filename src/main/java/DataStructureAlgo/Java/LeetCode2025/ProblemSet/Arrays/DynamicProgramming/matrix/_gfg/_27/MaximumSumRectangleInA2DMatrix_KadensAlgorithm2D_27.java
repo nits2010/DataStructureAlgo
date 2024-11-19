@@ -44,7 +44,6 @@ public class MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
-        //add tests cases here
         tests.add(test(new int[][]{{1, 2, -1, -4, -20}, {-8, -3, 4, 2, 1}, {3, 8, 10, 1, 3}, {-4, -1, 1, 7, -6}}, new int[]{29, 1, 3, 1, 3}));
         CommonMethods.printAllTestOutCome(tests);
     }
