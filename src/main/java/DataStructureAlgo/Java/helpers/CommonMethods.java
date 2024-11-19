@@ -1080,7 +1080,9 @@ public class CommonMethods {
                 output = "\n" + CommonMethods.toString((int[][]) input);
             } else if (input instanceof char[]) {
                 output = Arrays.toString((char[]) input);
-            }else if (input instanceof String[]) {
+            } else if (input instanceof char[][]) {
+                output = CommonMethods.toString((char[][]) input);
+            } else if (input instanceof String[]) {
                 output = Arrays.toString((String[]) input);
             } else if (input instanceof String) {
                 output = (String) input;
