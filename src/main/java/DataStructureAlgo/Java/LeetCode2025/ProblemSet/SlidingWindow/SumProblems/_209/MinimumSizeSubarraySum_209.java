@@ -1,6 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.sum_problems._209;
-
-import DataStructureAlgo.Java.helpers.*;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.SumProblems._209;
 
 import java.util.*;
 

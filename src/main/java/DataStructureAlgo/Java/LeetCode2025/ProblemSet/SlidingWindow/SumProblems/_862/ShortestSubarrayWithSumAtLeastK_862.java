@@ -1,7 +1,6 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.sum_problems._862;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.SumProblems._862;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.maximum._239.SlidingWindowMaximum_239;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
