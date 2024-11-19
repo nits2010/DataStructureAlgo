@@ -12,12 +12,12 @@ import java.util.Arrays;
  * the maximum sum subarray is highlighted with blue rectangle and sum of this subarray is 29.
  * <p>
  * <p>
- * This problem is mainly an extension of Largest Sum Contiguous Subarray for 1D array.
+ * This problem is mainly an extension of the Largest Sum Contiguous Subarray for 1D array.
  */
 public class MaximumSumRectangle {
 
     public static void main(String []args) {
-        int matrix[][] = {
+        int[][] matrix = {
                 {1, 2, -1, -4, -20},
                 {-8, -3, 4, 2, 1},
                 {3, 8, 10, 1, 3},
@@ -46,7 +46,7 @@ public class MaximumSumRectangle {
         int rows = matrix.length;
         int cols = matrix[0].length;
 
-        int temp[] = new int[rows];
+        int[] temp = new int[rows];
 
         int left = -1, right = -1, top = -1, bottom = -1;
         int maxSum = Integer.MIN_VALUE;
@@ -59,7 +59,7 @@ public class MaximumSumRectangle {
                 for (int i = 0; i < rows; i++)
                     temp[i] += matrix[i][rightCol];
 
-                int currentRowMax[] = kadens1D(temp);
+                int[] currentRowMax = kadens1D(temp);
 
                 if (maxSum < currentRowMax[0]) {
                     maxSum = currentRowMax[0];
@@ -88,7 +88,7 @@ public class MaximumSumRectangle {
      * @return
      */
     private static int[] kadens1D(int[] temp) {
-        int max[] = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
+        int[] max = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
 
         int currentSum = 0;
         int maxSum = 0;
@@ -120,7 +120,7 @@ public class MaximumSumRectangle {
 
         }
 
-        //Means all the element in the array are neg.
+        //Means all the elements in the array are neg.
         if (max[2] == -1) {
 
             max[0] = maxNeg;
