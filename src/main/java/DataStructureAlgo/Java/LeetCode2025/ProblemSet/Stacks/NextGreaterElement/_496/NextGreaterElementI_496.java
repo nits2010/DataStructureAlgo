@@ -152,17 +152,17 @@ class NextGreaterElementI{
             stack[++top] = nums2[nums2.length-1];
             int i = nums2.length-2;
 
-            //calculate greater element for all the previous index
+            //calculate a greater element for all the previous index
             while (i >=0){
 
-                //pop element from stack, until we have greater element present in it.
+                //pop element from stack, until we have a greater element present in it.
                 while(top>=0 && stack[top] <= nums2[i])
                     top--;
 
                 //if there is no greater element in the stack, then output -1
                 if(top == -1) //stack is empty
                     nextGreaterElement.put(nums2[i], -1);
-                else //if there is then that element is the greater element for current element
+                else //if there is then that element is the greater element for the current element
                     nextGreaterElement.put(nums2[i], stack[top]);
 
                 //push this element as it could be a greater element previous to its index.

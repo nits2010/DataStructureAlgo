@@ -1,11 +1,11 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._714;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._122.BestTimeToBuyAndSellStockII_122;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 /**
  * Author: Nitin Gupta
@@ -48,6 +48,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link BestTimeToBuyAndSellStockII_122}
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----
@@ -67,7 +68,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----
  * @OptimalSoltuion {@link DynamicProgramming.BottomUpV2_SpaceOptimized} {@link DynamicProgramming.BottomUpSpaceOptimized}
  */
-public class BestTimeToBuyAndSellStockWithTransactionFee_714 {
+public class BestTimeToBuyAndSellStockWithTransactionFeeVI_714 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();

@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.baseProblems.subsequence._300;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.subsequence.LIS._300;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 

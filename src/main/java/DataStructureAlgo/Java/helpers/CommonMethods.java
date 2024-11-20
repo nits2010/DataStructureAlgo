@@ -1051,7 +1051,7 @@ public class CommonMethods {
         if (failedTests.isEmpty()) {
             System.out.println("\nAll passed : " + count + "/" + count);
         } else {
-            System.out.println("Total test :" + test.size() + " Passed : " + count + "\nFailed Tests index : " + failedTests);
+            System.out.println("Total test : " + test.size() + "\nPassed : " + count + "\nFailed Tests index : " + failedTests);
         }
 
         System.out.println("================================================================================");
@@ -1078,6 +1078,10 @@ public class CommonMethods {
                 output = Arrays.toString((int[]) input);
             } else if (input instanceof int[][]) {
                 output = "\n" + CommonMethods.toString((int[][]) input);
+            } else if (input instanceof char[]) {
+                output = Arrays.toString((char[]) input);
+            } else if (input instanceof char[][]) {
+                output = CommonMethods.toString((char[][]) input);
             } else if (input instanceof String[]) {
                 output = Arrays.toString((String[]) input);
             } else if (input instanceof String) {

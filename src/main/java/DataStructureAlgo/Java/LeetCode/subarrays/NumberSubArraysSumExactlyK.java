@@ -63,11 +63,11 @@ public class NumberSubArraysSumExactlyK {
         int sol = 0;
         int currSum = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
 
-            currSum += nums[i];
+            currSum += num;
 
-            //if current sum is desired sum
+            //if the current sum is desired sum
             if (currSum == sum)
                 sol++;
 

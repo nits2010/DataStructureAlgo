@@ -3,6 +3,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 import DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 
 import java.util.Arrays;
@@ -60,6 +61,7 @@ import java.util.Arrays;
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.adjacent.houserobber.HouseRobberIII}
  * Similar {@link}
  * extension {@link }
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

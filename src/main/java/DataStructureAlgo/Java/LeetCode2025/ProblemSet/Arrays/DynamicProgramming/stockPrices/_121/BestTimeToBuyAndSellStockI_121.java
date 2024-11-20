@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._121;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.Arrays;
 
@@ -64,6 +65,7 @@ import java.util.Arrays;
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitSingleTransaction_BestTimeToBuySellStockI}
  * Similar {@link}
  * extension {@link }
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

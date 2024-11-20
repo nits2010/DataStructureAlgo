@@ -6,6 +6,7 @@ import DataStructureAlgo.Java.LeetCode.stockPrices.MaxProfitKTransactions_BestTi
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 /**
  * Author: Nitin Gupta
@@ -42,6 +43,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Duplicate {@link MaxProfitKTransactions_BestTimeToBuySellStockIV}
  * Similar {@link}
  * extension {@link BestTimeToBuyAndSellStockIII_123}
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

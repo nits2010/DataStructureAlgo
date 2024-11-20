@@ -42,7 +42,7 @@ public class LargestMaximumSumContiguousSubarrayKadensAlgorithm {
 }
 
 class KadensAlgorithm {
-    public static int maximumSumSubArray(int nums[]) {
+    public static int maximumSumSubArray(int[] nums) {
 
         if (nums == null || nums.length == 0)
             return 0;
@@ -53,9 +53,9 @@ class KadensAlgorithm {
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
 
-            currSum = Math.max(currSum + nums[i], nums[i]);
+            currSum = Math.max(currSum + num, num);
             maxSum = Math.max(maxSum, currSum);
 
         }
@@ -69,7 +69,7 @@ class KadensAlgorithm {
      * @return
      */
     public static int[] kadens1D(int[] temp) {
-        int max[] = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
+        int[] max = {Integer.MIN_VALUE, 0, -1}; // maxSum, left, right
 
         int currentSum = 0;
         int maxSum = 0;
@@ -101,7 +101,7 @@ class KadensAlgorithm {
 
         }
 
-        //Means all the element in the array are neg.
+        //Means all the elements in the array are neg.
         if (max[2] == -1) {
 
             max[0] = maxNeg;

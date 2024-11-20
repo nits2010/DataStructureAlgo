@@ -2,6 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 
 import DataStructureAlgo.Java.LeetCode.adjacent.houserobber.HouseRobberI;
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.Arrays;
 
@@ -39,6 +40,7 @@ import java.util.Arrays;
  * Duplicate {@link HouseRobberI}
  * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.NumberPattern._746.MinCostClimbingStairs_746}
  * extension {@link }
+ * DP-BaseProblem {@link Knapsack}
  * <p><p>
  * Tags
  * -----

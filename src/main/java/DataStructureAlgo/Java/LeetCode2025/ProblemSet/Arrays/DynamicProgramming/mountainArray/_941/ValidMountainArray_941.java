@@ -92,10 +92,7 @@ public class ValidMountainArray_941 {
             while (i < arr.length && arr[i - 1] > arr[i])
                 i++;
 
-            if (i != arr.length)
-                return false;
-
-            return true;
+            return i == arr.length;
         }
     }
 }
