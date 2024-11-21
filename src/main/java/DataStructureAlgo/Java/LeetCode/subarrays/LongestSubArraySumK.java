@@ -9,14 +9,14 @@ import java.util.*;
  * Date: 2019-07-25
  * Description: https://www.geeksforgeeks.org/longest-sub-array-sum-k/
  * <p>
- * Given an array arr[] of size n containing integers. The problem is to find the length of the longest sub-array having sum equal to the given value k.
+ * Given an array arr[] of size n containing integers. The problem is to find the length of the longest subarray having a sum equal to the given value k.
  * <p>
  * Examples:
  * <p>
  * Input : arr[] = { 10, 5, 2, 7, 1, 9 },
  * k = 15
  * Output : 4
- * The sub-array is {5, 2, 7, 1}.
+ * The subarray is {5, 2, 7, 1}.
  * <p>
  * Input : arr[] = {-5, 8, -14, 2, 4, 12},
  * k = -5
@@ -34,9 +34,10 @@ public class LongestSubArraySumK {
     static List<Integer> longestSubArraySumK(int nums[], int k) {
 
         if (nums == null || nums.length == 0)
-            return Collections.EMPTY_LIST;
+            return new ArrayList<>();
 
         CommonMethods.print(nums);
+
         //This will tell at what index(value) we saw a sum(key)
         Map<Integer, Integer> map = new HashMap<>();
 

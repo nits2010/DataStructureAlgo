@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode.LargetstRectangle;
 
-import  DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+import DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumSubarrayKadensAlgorithm;
 
 import java.util.Arrays;
 
@@ -82,7 +82,7 @@ public class MaximumSumRectangle {
     }
 
     /**
-     * {@link LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * {@link LargestMaximumSumSubarrayKadensAlgorithm}
      *
      * @param temp
      * @return

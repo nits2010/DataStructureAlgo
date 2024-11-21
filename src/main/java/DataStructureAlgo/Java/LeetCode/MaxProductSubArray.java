@@ -1,6 +1,6 @@
 package DataStructureAlgo.Java.LeetCode;
 
-import  DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm;
+import DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumSubarrayKadensAlgorithm;
 
 /**
  * Author: Nitin Gupta
@@ -37,7 +37,7 @@ public class MaxProductSubArray {
      * Memory Usage: 37.8 MB, less than 14.64% of Java online submissions for Maximum Product Subarray.
      *
      * @param nums
-     * @return {@link LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * @return {@link LargestMaximumSumSubarrayKadensAlgorithm}
      */
     public static int maxProductEasy(int[] nums) {
 
