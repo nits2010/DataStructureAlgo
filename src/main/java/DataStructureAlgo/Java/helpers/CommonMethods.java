@@ -1077,11 +1077,11 @@ public class CommonMethods {
             } else if (input instanceof int[]) {
                 output = Arrays.toString((int[]) input);
             } else if (input instanceof int[][]) {
-                output = "\n" + CommonMethods.toString((int[][]) input);
+                output =  CommonMethods.toStringInline((int[][]) input);
             } else if (input instanceof char[]) {
                 output = Arrays.toString((char[]) input);
             } else if (input instanceof char[][]) {
-                output = CommonMethods.toString((char[][]) input);
+                output = CommonMethods.toStringInline((char[][]) input);
             } else if (input instanceof String[]) {
                 output = Arrays.toString((String[]) input);
             } else if (input instanceof String) {
