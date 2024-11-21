@@ -69,7 +69,7 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSoltuion
+ * @OptimalSoltuion {@link KadanesAlgorithm}
  */
 public class MaximumAlternatingSubArraySum_2036 {
 
