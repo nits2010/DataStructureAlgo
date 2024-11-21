@@ -79,6 +79,7 @@ public class MaximumAlternatingSubArraySum_2036 {
         tests.add(test(new int[]{3, -1, 1, 2}, 5));
         tests.add(test(new int[]{2, 2, 2, 2, 2}, 2));
         tests.add(test(new int[]{1}, 1));
+        tests.add(test(new int[]{1, 5, -6, 5, -9, -2, 11, -8, 9, 12, -6}, 28));
         CommonMethods.printAllTestOutCome(tests);
     }
 
@@ -95,6 +96,12 @@ public class MaximumAlternatingSubArraySum_2036 {
         finalPass &= pass;
         CommonMethods.printTestOutcome(new String[]{"BruteForce", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
+
+        KadanesAlgorithm kadanesAlgorithm = new KadanesAlgorithm();
+        output = kadanesAlgorithm.maxAlternatingSum(nums);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"KadaneAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 
@@ -131,10 +138,38 @@ public class MaximumAlternatingSubArraySum_2036 {
         }
     }
 
-    static class Recursive {
 
+    /**
+     * instead of copy and change the array, we will change the values on the fly
+     * O(n)
+     */
+    static class KadanesAlgorithm {
 
+        public long maxAlternatingSum(int[] nums) {
 
+            long maxSum = 0;
 
+            long currentEvenSum = 0;
+            long currentOddSum = 0;
+
+            for (int i = 0; i < nums.length; i++) {
+
+                //if this is even index,
+                if (i % 2 == 0) {
+                    currentEvenSum = Math.max(currentEvenSum + nums[i], nums[i]);
+                    currentOddSum -= nums[i];
+
+                } else {
+                    currentEvenSum -= nums[i];
+                    currentOddSum = Math.max(nums[i], currentOddSum + nums[i]);
+                }
+                maxSum = Math.max(maxSum, Math.max(currentEvenSum, currentOddSum));
+
+            }
+            return maxSum;
+
+        }
     }
+
+
 }
