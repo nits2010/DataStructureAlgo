@@ -14,7 +14,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Date: 11/22/2024
  * Question Title: 363. Max Sum of Rectangle No Larger Than K
  * Link: https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/
- * Description:Given an m x n matrix matrix and an integer k, return the max sum of a rectangle in the matrix such that its sum is no larger than k.
+ * Description:Given an m x n matrix and an integer k, return the max sum of a rectangle in the matrix such that its sum is no larger than k.
  * <p>
  * It is guaranteed that there will be a rectangle with a sum no larger than k.
  * <p>
