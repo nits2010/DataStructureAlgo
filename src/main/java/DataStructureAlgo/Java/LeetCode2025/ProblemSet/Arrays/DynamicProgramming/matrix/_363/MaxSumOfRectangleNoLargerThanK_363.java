@@ -1,8 +1,8 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.matrix._363;
 
+import DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays.LongestSubArrayHavingSumK;
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.maximumSubArray.Kadens._53.MaximumSubarray_53;
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.matrix._gfg._27.MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27;
-import DataStructureAlgo.Java.helpers.*;
+import DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.DynamicProgramming.matrix._27.MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27;
 
 import java.util.*;
 
@@ -45,7 +45,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link}
+ * Similar {@link LongestSubArrayHavingSumK}
  * extension {@link MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27} {@link MaximumSubarray_53.Kadens.KadensAlgorithm}
  * DP-BaseProblem {@link MaximumSubarray_53.Kadens.KadensAlgorithm}
  * <p><p>
