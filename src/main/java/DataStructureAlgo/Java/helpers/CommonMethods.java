@@ -465,6 +465,21 @@ public class CommonMethods {
         return nodes;
     }
 
+    public static List<String> toString(ListNode head) {
+
+        List<String> nodes = new ArrayList<>();
+
+        ListNode temp = head;
+
+        while (temp != null) {
+            nodes.add(String.valueOf(temp.val));
+            temp = temp.next;
+        }
+
+        return nodes;
+    }
+
+
     public static <T extends DoublyListNode> List<T> print(T head) {
 
         List<T> nodes = new ArrayList<>();
@@ -724,9 +739,7 @@ public class CommonMethods {
             a = a.next;
             b = b.next;
         }
-        if (a != null || b != null)
-            return false;
-        return true;
+        return a == null && b == null;
 
     }
 
@@ -1077,7 +1090,7 @@ public class CommonMethods {
             } else if (input instanceof int[]) {
                 output = Arrays.toString((int[]) input);
             } else if (input instanceof int[][]) {
-                output =  CommonMethods.toStringInline((int[][]) input);
+                output = CommonMethods.toStringInline((int[][]) input);
             } else if (input instanceof char[]) {
                 output = Arrays.toString((char[]) input);
             } else if (input instanceof char[][]) {
@@ -1090,6 +1103,8 @@ public class CommonMethods {
                 output = input.toString();
             } else if (input instanceof TreeNode) {
                 output = TreeTraversalRecursive.levelOrderWithNull((TreeNode) input).toString();
+            } else if (input instanceof ListNode) {
+                output = CommonMethods.toString((ListNode) input).toString();
             } else {
                 output = input.toString();
             }
