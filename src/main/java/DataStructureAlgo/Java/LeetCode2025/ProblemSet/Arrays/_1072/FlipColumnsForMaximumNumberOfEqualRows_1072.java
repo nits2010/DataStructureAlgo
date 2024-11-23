@@ -90,6 +90,11 @@ public class FlipColumnsForMaximumNumberOfEqualRows_1072 {
         finalPass &= pass;
         CommonMethods.printTestOutcome(new String[]{"Solution", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
+        SolutionV2 sV2 = new SolutionV2();
+        output = sV2.maxEqualRowsAfterFlips(matrix);
+        pass = output == expected;
+        finalPass &= pass;
+        CommonMethods.printTestOutcome(new String[]{"SolutionV2", "Expected"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }
@@ -128,6 +133,30 @@ public class FlipColumnsForMaximumNumberOfEqualRows_1072 {
 
             return maxFreq;
 
+        }
+    }
+
+    static class SolutionV2 {
+        public int maxEqualRowsAfterFlips(int[][] matrix) {
+            Map<String, Integer> count = new HashMap<>();
+
+            for (int[] row : matrix) {
+                StringBuilder key = new StringBuilder();
+
+                if (row[0] == 1) {
+                    for (int n : row) {
+                        key.append(n == 0 ? 1 : 0);
+                    }
+                } else {
+                    for (int n : row) {
+                        key.append(n);
+                    }
+                }
+
+                count.merge(key.toString(), 1, Integer::sum);
+            }
+
+            return Collections.max(count.values());
         }
     }
 
