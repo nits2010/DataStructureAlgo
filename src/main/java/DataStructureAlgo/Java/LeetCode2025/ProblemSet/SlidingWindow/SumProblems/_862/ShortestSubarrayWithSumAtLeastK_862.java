@@ -258,7 +258,7 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
                 }
 
                 // Maintain monotonicity by removing indices with larger prefix sums
-                while (!dq.isEmpty() &&prefixSums[i] <= prefixSums[dq.peekLast()]) {
+                while (!dq.isEmpty() && prefixSums[i] <= prefixSums[dq.peekLast()]) {
                     dq.pollLast();
                 }
 
