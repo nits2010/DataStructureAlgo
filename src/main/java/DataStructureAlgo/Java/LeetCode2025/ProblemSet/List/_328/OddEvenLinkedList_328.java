@@ -1,6 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._328;
 
 
+import DataStructureAlgo.Java.LeetCode2025.Discuss_Section.SegregateOddAndEvenNodesInList.SegregateOddAndEvenNodesInList;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
@@ -40,7 +41,7 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.Discuss_Section.SegregateOddAndEvenNodesInList}
+ * Similar {@link SegregateOddAndEvenNodesInList}
  * extension {@link }
  * <p>
  * Tags

@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays;
+package DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays.LongestSubArraySumK;
 
 import java.util.*;
 

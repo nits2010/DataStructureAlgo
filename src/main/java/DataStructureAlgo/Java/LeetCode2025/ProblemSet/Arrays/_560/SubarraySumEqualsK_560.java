@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._560;
 
-import DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays.LongestSubArrayHavingSumK;
-import DataStructureAlgo.Java.helpers.*;
+import DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays.LongestSubArraySumK.LongestSubArrayHavingSumK;
 
 import java.util.*;
 

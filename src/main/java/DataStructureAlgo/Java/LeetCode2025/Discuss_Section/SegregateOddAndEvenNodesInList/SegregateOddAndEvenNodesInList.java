@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.Discuss_Section;
+package DataStructureAlgo.Java.LeetCode2025.Discuss_Section.SegregateOddAndEvenNodesInList;
 
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
