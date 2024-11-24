@@ -53,7 +53,10 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Tags
  * -----
  *
- * @easy <p><p>
+ * @Array
+ * @Greedy
+ * @Matrix
+ * @medium <p><p>
  * Company Tags
  * -----
  * <p>
