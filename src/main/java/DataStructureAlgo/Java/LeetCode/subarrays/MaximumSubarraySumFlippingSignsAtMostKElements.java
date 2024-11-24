@@ -75,7 +75,7 @@ public class MaximumSubarraySumFlippingSignsAtMostKElements {
 
         int max = 0;
 
-        int dp[][] = new int[nums.length][k + 1];
+        int[][] dp = new int[nums.length][k + 1];
         for (int i = 0; i < nums.length; i++)
             Arrays.fill(dp[i], Integer.MIN_VALUE);
 
@@ -112,7 +112,7 @@ public class MaximumSubarraySumFlippingSignsAtMostKElements {
             return 0;
 
 
-        //If we have solve this already
+        //If we have solved this already
         if (dp[i][flips] != Integer.MIN_VALUE)
             return dp[i][flips];
 
