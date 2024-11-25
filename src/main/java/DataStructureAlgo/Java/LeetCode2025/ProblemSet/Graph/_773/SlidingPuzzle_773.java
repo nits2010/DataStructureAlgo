@@ -61,9 +61,10 @@ import java.util.*;
  * <p><p>
  * Tags
  * -----
- *
- * @easy
- * @medium
+ * @Array
+ * @Breadth-FirstSearch
+ * @Matrix
+ * @Graph
  * @hard <p><p>
  * Company Tags
  * -----
