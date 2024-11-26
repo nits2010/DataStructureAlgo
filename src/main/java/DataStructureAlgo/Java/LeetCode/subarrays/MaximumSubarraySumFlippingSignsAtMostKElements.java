@@ -12,7 +12,7 @@ import java.util.Arrays;
  * <p>
  * Input: arr[] = {-6, 2, -1, -1000, 2}, k = 2
  * Output: 1009
- * We can flip the signs of -6 and -1000, to get maximum subarray sum as 1009
+ * We can flip the signs of -6 and -1000, to get a maximum subarray sum as 1009
  * <p>
  * Input: arr[] = {-1, -2, -100, -10}, k = 1
  * Output: 100
