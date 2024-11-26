@@ -3,7 +3,7 @@
 ## Intuition
 
 The difficulty in this problem is that there are both positive and negative numbers in the array. Let's understand how
-we can use the solution for positive numbers and extend it to handle negative numbers.
+we can use the solutionBFS for positive numbers and extend it to handle negative numbers.
 
 ### For Positive Numbers
 
