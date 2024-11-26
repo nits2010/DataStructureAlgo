@@ -38,31 +38,31 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
 
 
     /**
-     * We need to find all those element which are k distance away and forming a sub-sequence which has maximum sum.
-     * This is closely related to the problem "Longest increasing sub-sequence ". Instead here we have two different thing
-     * 1. Instead longest we need to put constraint as Maximum Sum
-     * 2. instead of choosing element one after other in distance 0 we need to choose which has distance k.
+     * We need to find all those elements which are k distance away and forming a subsequence which has a maximum sum.
+     * This is closely related to the problem "Longest increasing subsequence ". Instead, here we have two different things
+     * 1. Instead, longest we need to put constraint as Maximum Sum
+     * 2. Instead of choosing element one after other in distance 0, we need to choose which has distance k.
      * <p>
-     * Lets revise Longest increasing sub-sequence {@link LongestIncreasingSubSequence}
-     * LIS[i] is length of longest increasing sub-sequence ending at i
+     * Let's revise Longest increasing sub-sequence {@link LongestIncreasingSubSequence}
+     * LIS[i] is length of the longest increasing subsequence ending at i
      * <p>
      * LIS[i] = { 1 + MAX {LIS[j]} 0<=j<i and A[i] > A[j] and 0<=i<N [length of array]
      * <p>
      * *             otherwise 1
      * *        }
      * <p>
-     * Now here, instead of choosing j which is just 1 distance away we need to choose k distance away from i
+     * Now here, instead of choosing j which is just one distance away, we need to choose k distance away from i
      * which is j = i+k+1;
      * <p>
-     * now there is two possibilities of choosing j
-     * 1. if i+k+1 is outside the boundary means i+k+1 >=N ; then we cannot select any other element as part of the subsequence. '
+     * now there are two possibilities of choosing j
+     * 1. If i+k+1 is outside the boundary means i+k+1 >=N ; then we cannot select any other element as part of the subsequence. '
      * Hence we need to decide whether to select this element or one of the elements after it.
-     * 2. if i+k+1 is in the boundary means i+k+1 <N ; Thus we need to decide whether to select these two elements, or move on to the next adjacent element
+     * 2. If i+k+1 is in the boundary means i+k+1 < N ; Thus we need to decide whether to select these two elements or move on to the next adjacent element
      * <p>
      * As well as the condition instead of A[i] > A[j] it should be M[i]  = Max (  M[i+1], A[i] + M[i+k+1]  )
      * <p>
-     * Lets define
-     * M[i] is the maximum sum sub-sequence ending at i
+     * Let's define
+     * M[i] is the maximum sum subsequence ending at i
      * <p>
      * M[i] = { Max (a[i] , M[i+1] if i+k+1 >=N
      * *        Max ( a[i] + M[i+k+1] , M[i+1] if i+k+1<N
@@ -70,17 +70,14 @@ class MaximumSumSubsequenceAtLeastKDistantDP {
      * *            M[N-1] = A[N-1];
      * *        }
      * <p>
-     * Ans: M[0]
+     * And: M[0]
      *
-     * @param nums
-     * @param k
-     * @return
      */
     public static int maximumSumSubsequenceAtLeastKDistantDP(int nums[], int k) {
         if (nums == null || nums.length == 0 || k == 0)
             return 0;
         int n = nums.length;
-        int m[] = new int[n];
+        int[] m = new int[n];
 
         //base
         m[n - 1] = nums[n - 1];
