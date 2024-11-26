@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode.subarrays;
+package DataStructureAlgo.Java.LeetCode.subarrays.nonOverlappingSubArray;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ import java.util.Arrays;
  * <p>
  * Input : arr[] = {-1, 2, -3, 4, 5}, k = 2
  * Output : 11
- * Sub-arrays that maximizes sum will be {{2}, {4, 5}}.
+ * Subarrays that maximizes sum will be {{2}, {4, 5}}.
  * Thus, the answer will be 2+4+5 = 11.
  * <p>
  * Input :arr[] = {1, 1, 1, 1, 1}, k = 1
