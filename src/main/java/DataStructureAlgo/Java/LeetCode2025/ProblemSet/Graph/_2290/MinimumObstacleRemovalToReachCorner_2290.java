@@ -5,6 +5,7 @@ import DataStructureAlgo.Java.helpers.*;
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.nonleetcode.graph.questions.shortest.path.DijkstraShortestPath;
 
 
 /**
@@ -50,7 +51,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link }
+ * extension {@link DijkstraShortestPath}
  * DP-BaseProblem {@link }
  * <p><p>
  * Tags
