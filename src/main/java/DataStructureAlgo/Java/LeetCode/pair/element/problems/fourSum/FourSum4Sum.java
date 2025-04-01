@@ -176,18 +176,18 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
             int a = nums[i];
 
             /*
-             * return immediately if (a * 4 > target)
-             * As we going to include 3 more element with this which are always greater and equal this number.
-             * In the least case, when they are equal then it becomes 4*a. If 4*a > target
-             * then then its not possible as remaining equal/greater number will be more than > target always as data is sorted
+             * Return immediately if (a * 4 > target)
+             * As we're going to include 3 more elements with this which are always greater and equal this number.
+             * In the least case, when they are equal, then it becomes 4*a. If 4*a > target
+             * then it's not possible as remaining equal/greater number will be more than > target always as data is sorted
              */
             if ((a << 2) > target)
                 return solution;
 
             /*
              * Fix last element from array's last;
-             * j>i+2; since in-between we need to find 2 elements which gives us total 4 element.
-             * hence those two element will run in between of i+1 to j-1
+             * j>i+2; since in-between we need to find 2 elements that give us total element 4.
+             * hence those two elements will run in between i+1 to j-1
              */
             for (int j = nums.length - 1; j > i + 2; j--) {
 
@@ -211,7 +211,7 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
                 int rem = target - nums[i] - nums[j];
 
                 /*
-                 * Problem reduce to Two-Sum problem
+                 * Problem reduces to Two-Sum problem
                  */
                 int lo = i + 1, hi = j - 1;
 
