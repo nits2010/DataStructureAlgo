@@ -40,6 +40,9 @@ public class FourSum4Sum {
         test(new int[]{-3, -2, -1, 0, 0, 1, 2, 3}, 0);
 
         test(new int[]{-4, -3, -2, -1, 0, 0, 1, 2, 3, 4}, 0);
+
+        test(new int[]{1,-2,-5,-4,-3,3,3,5}, -11);
+        test(new int[]{0,0,0,1000000000,1000000000,1000000000,1000000000}, 1000000000);
     }
 
     private static void test(int[] nums, int target) {
@@ -110,7 +113,7 @@ class FourSum4SumSortingV1 implements IFourSum4Sum {
                 int r = nums.length - 1;
 
                 /*
-                  3. Find remaining two elements in O(n) time, using the two sum
+                  3. Find the remaining two elements in O(n) time, using the two sum
                  */
 
                 twoSum(nums, l, r, a, b, target, solution);
@@ -197,10 +200,10 @@ class FourSum4SumSortingV2 implements IFourSum4Sum {
                  * break immediately if nums[j]*4 < target
                  *
                  * return immediately if b*4<target
-                 * As we going to include 3 more element with this which are always smaller and equal this number.
+                 * As we're going to include 3 more elements with this which are always smaller and equal this number.
                  * In the least case, when they are equal then it becomes 4*b. If 4*b < target
-                 * then then its not possible as remaining equal/smaller number will be less than < target always as data is sorted and we are moving
-                 * j towards left which makes every element smaller than the current j'th element
+                 *  then it's not possible as remaining equal/smaller number will be less than < target always as data is sorted and we are moving
+                 * j towards the left which makes every element smaller than the current j'th element
                  */
                 if (b << 2 < target)
                     break;
