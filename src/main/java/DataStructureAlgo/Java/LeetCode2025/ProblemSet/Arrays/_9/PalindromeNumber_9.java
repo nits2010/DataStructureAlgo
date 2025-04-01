@@ -54,7 +54,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._9;
  * @Adobe
  *
  * @Editorial
- * : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
  *
  */
 public class PalindromeNumber_9 {
