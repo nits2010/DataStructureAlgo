@@ -121,7 +121,6 @@ class RomanToIntegerSolution {
      * Simple reverse tracking
      * 5 ms
      * Beats 56.83%
-     * https://leetcode.com/problems/roman-to-integer/submissions/1322045587/
      * @param s
      * @return
      */
@@ -148,10 +147,8 @@ class RomanToIntegerSolution {
                     currentRomanValue -= previousRomanValue;
                     i--;
                 }
-                finalValue +=currentRomanValue;
-            }else{
-                finalValue += currentRomanValue;
             }
+            finalValue +=currentRomanValue;
 
         }
         return finalValue;
@@ -181,7 +178,6 @@ class RomanToIntegerSolution {
     }
 
     /**
-     * https://leetcode.com/problems/roman-to-integer/submissions/1322049221/
      * 3  ms
      * Beats 80.90%
      * @param s
@@ -207,10 +203,8 @@ class RomanToIntegerSolution {
                     currentRomanValue -= previousRomanValue;
                     i--;
                 }
-                finalValue +=currentRomanValue;
-            }else{
-                finalValue += currentRomanValue;
             }
+            finalValue +=currentRomanValue;
 
         }
         return finalValue;
@@ -218,7 +212,6 @@ class RomanToIntegerSolution {
 
 
     /**
-     * https://leetcode.com/problems/roman-to-integer/submissions/1322066105/
      * 3
      * ms
      * Beats
@@ -314,7 +307,7 @@ class RomanToIntegerSolution {
                 total += 1000;
             } else if (numerals[pos] == 'D') {
                 total += 500;
-            } else if (numerals[pos] == 'C') { //C can be apply only on D and M
+            } else if (numerals[pos] == 'C') { //C can be applied only on D and M
                 if (pos + 1 < numerals.length && numerals[pos + 1] == 'D') {
                     total += 400;
                     pos++;
@@ -326,7 +319,7 @@ class RomanToIntegerSolution {
                 }
             } else if (numerals[pos] == 'L') {
                 total += 50;
-            } else if (numerals[pos] == 'X') { //X can be apply on C and L
+            } else if (numerals[pos] == 'X') { //X can be applied on C and L
                 if (pos + 1 < numerals.length && numerals[pos + 1] == 'C') {
                     total += 90;
                     pos++;
@@ -338,7 +331,7 @@ class RomanToIntegerSolution {
                 }
             } else if (numerals[pos] == 'V') {
                 total += 5;
-            } else if (numerals[pos] == 'I') { //I Can be apply on X and V
+            } else if (numerals[pos] == 'I') { //I Can be applied on X and V
                 if (pos + 1 < numerals.length && numerals[pos + 1] == 'X') {
                     total += 9;
                     pos++;

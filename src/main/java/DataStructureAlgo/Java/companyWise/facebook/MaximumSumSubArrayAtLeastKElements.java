@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.companyWise.facebook;
 
+import DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumSubarrayKadensAlgorithm;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -32,7 +33,7 @@ public class MaximumSumSubArrayAtLeastKElements {
     }
 
     /**
-     * {@link DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumContiguousSubarrayKadensAlgorithm}
+     * {@link LargestMaximumSumSubarrayKadensAlgorithm}
      * @param num
      * @param k
      * @return

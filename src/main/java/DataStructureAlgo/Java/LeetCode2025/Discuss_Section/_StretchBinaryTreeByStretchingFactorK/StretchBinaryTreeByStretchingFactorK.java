@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.Discuss_Section;
+package DataStructureAlgo.Java.LeetCode2025.Discuss_Section._StretchBinaryTreeByStretchingFactorK;
 
 
 import DataStructureAlgo.Java.helpers.TreeBuilder;
@@ -87,7 +87,7 @@ public class StretchBinaryTreeByStretchingFactorK {
         public TreeNode stretchTree(TreeNode root, int k) {
 
             if (root == null)
-                return root;
+                return null;
 
             return stretchTree(root, k, true);
 

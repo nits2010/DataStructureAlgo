@@ -70,7 +70,7 @@ public class MaximumSubarray_53 {
         static class KadensAlgorithm {
             public int maxSubArray(int[] nums) {
 
-                int maxSum = Integer.MIN_VALUE;
+                int maxSum = 0;
                 int currSum = 0;
 
                 for (int n : nums) {
@@ -88,7 +88,7 @@ public class MaximumSubarray_53 {
 
             public int maxSubArray2(int[] nums) {
 
-                int maxSum = Integer.MIN_VALUE;
+                int maxSum = 0;
                 int currSum = 0;
 
                 for (int n : nums) {

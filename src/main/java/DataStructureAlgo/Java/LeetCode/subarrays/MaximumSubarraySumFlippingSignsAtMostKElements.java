@@ -12,7 +12,7 @@ import java.util.Arrays;
  * <p>
  * Input: arr[] = {-6, 2, -1, -1000, 2}, k = 2
  * Output: 1009
- * We can flip the signs of -6 and -1000, to get maximum subarray sum as 1009
+ * We can flip the signs of -6 and -1000, to get a maximum subarray sum as 1009
  * <p>
  * Input: arr[] = {-1, -2, -100, -10}, k = 1
  * Output: 100
@@ -75,7 +75,7 @@ public class MaximumSubarraySumFlippingSignsAtMostKElements {
 
         int max = 0;
 
-        int dp[][] = new int[nums.length][k + 1];
+        int[][] dp = new int[nums.length][k + 1];
         for (int i = 0; i < nums.length; i++)
             Arrays.fill(dp[i], Integer.MIN_VALUE);
 
@@ -112,7 +112,7 @@ public class MaximumSubarraySumFlippingSignsAtMostKElements {
             return 0;
 
 
-        //If we have solve this already
+        //If we have solved this already
         if (dp[i][flips] != Integer.MIN_VALUE)
             return dp[i][flips];
 

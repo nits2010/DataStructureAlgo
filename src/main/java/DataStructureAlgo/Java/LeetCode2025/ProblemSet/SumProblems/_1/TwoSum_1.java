@@ -59,13 +59,6 @@ import java.util.Map;
  * @Editorial
  */
 
-
-/**
- * Author: Nitin Gupta
- * Date: 7/14/2024
- * Description:
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum}
- */
 public class TwoSum_1 {
 
     public static void main(String[] args) {
@@ -101,7 +94,7 @@ public class TwoSum_1 {
             for (int i=0; i<nums.length; i++){
                 int candidate = target - nums[i];
 
-                if(map.containsKey(candidate)){
+                if(map.containsKey(candidate) && map.get(candidate) != i){
                     return new int[]{i, map.get(candidate)};
                 }
                 map.put(nums[i], i);

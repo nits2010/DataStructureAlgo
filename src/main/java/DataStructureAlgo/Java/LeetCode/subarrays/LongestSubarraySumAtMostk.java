@@ -8,7 +8,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Description: https://www.geeksforgeeks.org/longest-subarray-sum-elements-atmost-k/
  * <p>
  * Given an array of integers, our goal is to find the length of largest subarray having sum of its elements at-most ‘k’
- * where k>0.
+ * where k > 0. Means all elements are positive only.
  * <p>
  * Examples:
  * <p>
@@ -20,6 +20,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * {1, 2, 1, 0}, {2, 1, 0, 1} => sum = 4, length = 4
  * {1, 0, 1, 1, 0} =>5 sum = 3, length = 5
  *
+ * similar to this with K < 0 as well
  * @Apple
  * https://leetcode.com/discuss/interview-question/758045/Apple-or-Phone-or-Longest-Subarray-Sum-At-Most-K
  */
@@ -29,17 +30,10 @@ public class LongestSubarraySumAtMostk {
 
         System.out.print(sumAtMostKPositive(new int[]{1, 2, 1, 0, 1, 1, 0}, 4));
         System.out.print(sumAtMostKPositive(new int[]{1, 2, 1, 2, 3, 4, 0}, 4));
-
-        System.out.print(sumAtMostKPositive(new int[]{1, -2, -1, 0, 1, -1, 0}, 4));
-
-        System.out.print(sumAtMostKPositive(new int[]{2, 2, -1}, 0));
-        System.out.print(sumAtMostKPositive(new int[]{2, 2, -1}, 3));
-
-
     }
 
 
-    static int sumAtMostKPositive(int nums[], int k) {
+    static int sumAtMostKPositive(int[] nums, int k) {
 
         if (nums.length == 0)
             return 0;

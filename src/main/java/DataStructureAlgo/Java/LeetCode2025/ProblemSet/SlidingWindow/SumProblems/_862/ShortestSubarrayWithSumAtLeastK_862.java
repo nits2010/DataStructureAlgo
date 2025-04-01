@@ -71,6 +71,7 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
         //add tests cases here
+        tests.add(test(new int[]{1,3,-1,1,-3,5,3,6,7}, 3, 1));
         tests.add(test(new int[]{1}, 1, 1));
         tests.add(test(new int[]{1, 2}, 4, -1));
         tests.add(test(new int[]{2, -1, 2}, 3, 3));
@@ -241,7 +242,7 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
             long[] prefixSums = new long[n + 1];
 
             // Calculate prefix sums
-            for (int i = 1; i <= n; i++) {
+            for (int i = 1; i < n; i++) {
                 prefixSums[i] = prefixSums[i - 1] + nums[i - 1];
             }
 
@@ -251,14 +252,14 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
 
             for (int i = 0; i <= n; i++) {
 
-                // Remove candidates from front of deque where subarray sum meets target
+                // Remove candidates from front of deque where subarray sum meets target that will make subarray smaller
                 while (!dq.isEmpty() && prefixSums[i] - prefixSums[dq.peekFirst()] >=  targetSum ) {
-                    // Update shortest subarray length
+                    // Update the shortest subarray length
                     shortestSubarrayLength = Math.min(shortestSubarrayLength, i - dq.pollFirst());
                 }
 
                 // Maintain monotonicity by removing indices with larger prefix sums
-                while (!dq.isEmpty() &&prefixSums[i] <= prefixSums[dq.peekLast()]) {
+                while (!dq.isEmpty() && prefixSums[i] <= prefixSums[dq.peekLast()]) {
                     dq.pollLast();
                 }
 

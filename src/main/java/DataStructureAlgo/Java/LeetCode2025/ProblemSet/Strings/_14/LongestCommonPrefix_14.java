@@ -77,14 +77,11 @@ public class LongestCommonPrefix_14 {
 
         /**
          * Brute force
-         * https://leetcode.com/problems/longest-common-prefix/submissions/1329759019/
-         * 1 ms
-         * Beat 74.51%
-         *Time complexity : O (MxN) where M is a length of first string and N is size of input array
+         * Time complexity : O (MxN) where M is a length of first string and N is the size of input array
          *
          * 1. A slight improvement in this solution can be achieved by first finding the smallest string and consider that as candidateString
-         * 2. Another improvement is that, we can pick the smallest length word, then find the next smallest length word and keep matching them.
-         * When we find two word of same length, then if they match as full string, then move to next smallest word and keep matching.
+         * 2. Another improvement is that we can pick the smallest length word, then find the next smallest length word and keep matching them.
+         * When we find two words of the same length, then if they match as full string, then move to the next smallest word and keep matching.
          * @param strs
          * @return string
          */
@@ -101,7 +98,6 @@ public class LongestCommonPrefix_14 {
             String candidate = strs[0];
             int candidateLength = candidate.length();
             int j = 0 ;
-            boolean stop = false;
             while (j<candidateLength){ //O(min(strs[0].length))
                 int i = 1;
                 while (i<strs.length && j < strs[i].length()){  // O(n)
@@ -111,12 +107,9 @@ public class LongestCommonPrefix_14 {
                 }
                 if (i==strs.length){
                     output.append(candidate.charAt(j));
-
                 }else {
-                    stop = true;
-                }
-                if(stop)
                     break;
+                }
                 j++;
 
             }
@@ -124,16 +117,13 @@ public class LongestCommonPrefix_14 {
         }
 
         /**
-         * https://leetcode.com/problems/longest-common-prefix/submissions/1329804581/
-         * 1
-         * ms
-         * Beats
-         * 74.51%
-         * The idea of this solution is inspired by the second improvement on above solution.
-         * We can sort the array based on word length keeping the smallest word at first position.
-         * Post that, keep matching this word to next word until they match at full otherwise pick the match part only.
-         * To further optimize, we can just compare the first and last string of the array. Since, this could possible that, there are duplicate string in the array.
-         * post sorting, they will close to each other. hence the last string could be either same of first string or different. IN case of different finding the common prifix
+         * https://leetcode.com/problems/longest-common-prefix/solutions/3174307/well-explained-code-using-strings-in-java/?envType=problem-list-v2&envId=m4lsap7c
+         *
+         * The idea of this solution is inspired by the second improvement on the above solution.
+         * We can sort the array based on word length, keeping the smallest word at first position.
+         * Post that, keep matching this word to the next word until they match at full otherwise pick the match part only.
+         * To further optimize, we can just compare the first and last string of the array. Since, this could be possible that, there is a duplicate string in the array.
+         * post-sorting, they will close to each other. hence, the last string could be either same of first string or different. IN case of different finding, the common prefix
          * will give the output.
          * Time complexity;
          * O(n*log(n)) + O(minLengthOfString)

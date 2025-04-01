@@ -97,8 +97,6 @@ public class ValidParentheses_20 {
          * * 3. if stack is empty then not valid which means there either open > close or close > open
          * * <p>
          * * O(n)/O(n)
-         * * <p>
-         *https://leetcode.com/problems/valid-parentheses/submissions/1330888386/
          * @param s
          * @return
          */
@@ -129,7 +127,7 @@ public class ValidParentheses_20 {
         }
 
         /**
-         * https://leetcode.com/problems/valid-parentheses/submissions/1330892878/
+
          * @param s
          * @return
          */
