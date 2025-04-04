@@ -1,6 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SumProblems._15;
-
-import DataStructureAlgo.Java.helpers.*;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers._15;
 
 import java.util.*;
 
