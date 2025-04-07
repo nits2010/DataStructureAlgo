@@ -47,7 +47,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.nonleetcode.PermutationsSortedLexicographicOrder}
+ * Similar {@link DataStructureAlgo.Java.nonleetcode.PermutationsSortedLexicographicOrder} {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement._556.NextGreaterElementIII_556}
  * extension {@link }
  * DP-BaseProblem {@link }
  * <p><p>
