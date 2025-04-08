@@ -49,6 +49,20 @@ import java.util.Stack;
  *
  * Company Tags
  * ------------
+ * @Facebook
+ * @Amazon
+ * @Microsoft
+ * @Apple
+ * @Adobe
+ * @Apple
+ * @Bloomberg
+ * @Google
+ * @Grab
+ * @Intel
+ * @IXL
+ * @Snapchat
+ * @Twitter
+ * @VMware
  *
  * @Editorial
  * : <a href="https://leetcode.com/problems/palindrome-linked-list/solutions/5549850/multiple-solution-multiple-ds-with-simple-explanation/">...</a>
@@ -90,9 +104,6 @@ public class PalindromeLinkedList_234 {
         }
 
         /** O(2n) / O(n)
-         * <a href="https://leetcode.com/problems/palindrome-linked-list/submissions/1336235577/">...</a>
-         * 15 ms
-         * Beats 11.09%
          *
          * @param head
          * @return

@@ -48,10 +48,22 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Tags
  * -----
  * @medium
+ * @LinkedList
+ * @TwoPointers
  *
  * Company Tags
  * -----
- *
+ * @Facebook
+ * @Amazon
+ * @Microsoft
+ * @Google
+ * @Adobe
+ * @Apple
+ * @Bloomberg
+ * @Cisco
+ * @GoldmanSachs
+ * @Oracle
+ * @Yandex
  * @Editorial <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/5565232/multiple-solutions-easy-to-understand/">...</a>
  */
 
@@ -152,7 +164,7 @@ class RemoveNthNodeFromEndOfListSimplified {
             if (head == null || k <= 0)
                 return head;
 
-            //if one node in list and k = 1
+            //if one node in a list and k = 1
             if(head.next == null && k == 1)
                 return null;
 
