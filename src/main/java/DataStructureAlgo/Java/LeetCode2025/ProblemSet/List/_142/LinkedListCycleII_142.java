@@ -75,6 +75,7 @@ public class LinkedListCycleII_142 {
 
     public static void main(String[] args) {
         boolean testResult = true;
+        testResult &= test(new Integer[]{0,4,2,3,1}, 0, 0);
         testResult &= test(new Integer[]{1, 2, 3, 4, 5}, 2, 3);
         testResult &= test(new Integer[]{1, 2, 3, 4, 5}, -1, null);
         testResult &= test(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9}, 2, 3);

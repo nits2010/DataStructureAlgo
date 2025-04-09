@@ -37,9 +37,6 @@ public class SubarrayProductLessThanK {
 
     /**
      * Apply same logic as sliding window and count
-     * <p>
-     * Runtime: 9 ms, faster than 59.64% of Java online submissions for Subarray Product Less Than K.
-     * Memory Usage: 51.4 MB, less than 100.00% of Java online submissions for Subarray Product Less Than K.
      *
      * @param nums
      * @param k
@@ -52,7 +49,7 @@ public class SubarrayProductLessThanK {
 
             prod *= nums[right];
 
-            while (left < right && prod >= k) prod /= nums[left++];
+            while (left <= right && prod >= k) prod /= nums[left++];
 
             if (prod < k)
                 ans += right - left + 1;
@@ -78,7 +75,7 @@ public class SubarrayProductLessThanK {
             prod *= nums[right];
 
             /**
-             * If single element it self is greater then k, then product is always greater, skip those
+             * If a single element itself is greater than k, then product is always greater, skip those
              */
             if (nums[right] >= k) {
                 left = right + 1;
