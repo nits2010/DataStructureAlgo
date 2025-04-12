@@ -7061,3 +7061,47 @@ console.log(
 ```
 
 - The <b>time and space complexity</b> of the above algorithm is `O(m*n)`, where `m` and `n` are the lengths of the two interleaving strings.
+
+----------------
+# Dynamic Programming - Top 40 LeetCode Questions
+
+1. [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (Easy)
+2. [198. House Robber](https://leetcode.com/problems/house-robber/) (Medium)
+3. [213. House Robber II](https://leetcode.com/problems/house-robber-ii/) (Medium)
+4. [120. Triangle](https://leetcode.com/problems/triangle/) (Medium)
+5. [62. Unique Paths](https://leetcode.com/problems/unique-paths/) (Medium)
+6. [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) (Medium)
+7. [322. Coin Change](https://leetcode.com/problems/coin-change/) (Medium)
+8. [518. Coin Change II](https://leetcode.com/problems/coin-change-2/) (Medium)
+9. [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) (Medium)
+10. [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) (Medium)
+11. [96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/) (Medium)
+12. [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) (Medium)
+13. [718. Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) (Medium)
+14. [72. Edit Distance](https://leetcode.com/problems/edit-distance/) (Hard)
+15. [97. Interleaving String](https://leetcode.com/problems/interleaving-string/) (Medium)
+16. [139. Word Break](https://leetcode.com/problems/word-break/) (Medium)
+17. [377. Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) (Medium)
+18. [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) (Medium)
+19. [494. Target Sum](https://leetcode.com/problems/target-sum/) (Medium)
+20. [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) (Medium)
+21. [55. Jump Game](https://leetcode.com/problems/jump-game/) (Medium)
+22. [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/) (Medium)
+23. [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) (Hard)
+24. [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) (Hard)
+25. [44. Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) (Hard)
+26. [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) (Medium)
+27. [132. Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/) (Hard)
+28. [337. House Robber III](https://leetcode.com/problems/house-robber-iii/) (Medium)
+29. [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) (Medium)
+30. [714. Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) (Medium)
+31. [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) (Hard)
+32. [188. Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/) (Hard)
+33. [87. Scramble String](https://leetcode.com/problems/scramble-string/) (Hard)
+34. [91. Decode Ways](https://leetcode.com/problems/decode-ways/) (Medium)
+35. [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) (Medium)
+36. [583. Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/) (Medium)
+37. [115. Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) (Hard)
+38. [1027. Longest Arithmetic Subsequence](https://leetcode.com/problems/longest-arithmetic-subsequence/) (Medium)
+39. [1043. Maximum Sum of Non-Adjacent Elements](https://leetcode.com/problems/partition-array-for-maximum-sum/) (Medium) *(Variation of House Robber)*
+40. [1391. Check if There Is a Valid Path in a Grid](https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid/) (Medium) *(Graph + DP hybrid approach)*

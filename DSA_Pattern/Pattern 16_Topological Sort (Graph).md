@@ -772,3 +772,47 @@ console.log(`Roots of MHTs: ${findTrees(4, [[1, 2], [1, 3]])}`)
 ````
 - In step <b>4</b>, each task can become a source only once and each edge (a rule) will be accessed and removed once. Therefore, the time complexity of the above algorithm will be `O(V+E)`, where `V` is the total number of different characters and `E` is the total number of the rules in the alien language. Since, at most, each pair of words can give us one rule, therefore, we can conclude that the upper bound for the rules is `O(N)`where `N` is the number of words in the input. So, we can say that the time complexity of our algorithm is `O(V+N)`.
 - The space complexity will be `O(V+N)`, since we are storing all of the rules for each character in an <i>adjacency list</i>.
+
+-----------------
+# Graph Traversal (BFS & DFS) - Top 40 LeetCode Questions
+
+1. [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) (Medium)
+2. [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) (Medium)
+3. [79. Word Search](https://leetcode.com/problems/word-search/) (Medium)
+4. [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) (Medium) *(BFS)*
+5. [127. Word Ladder](https://leetcode.com/problems/word-ladder/) (Hard) *(BFS)*
+6. [207. Course Schedule](https://leetcode.com/problems/course-schedule/) (Medium) *(Cycle Detection)*
+7. [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) (Medium) *(BFS)*
+8. [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) (Hard) *(BFS + Binary Search)*
+9. [1557. Minimum Number of Vertices to Reach All Nodes](https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/) (Medium)
+10. Prime [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/) (Medium) *(BFS from multiple sources)*
+11. [1765. Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak/) (Medium) *(BFS from water cells)*
+12. [815. Bus Routes](https://leetcode.com/problems/bus-routes/) (Hard) *(BFS on bus stops)*
+13. [1971. Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/) (Easy)
+14. Prime [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) (Medium)
+15. [1615. Maximal Network Rank](https://leetcode.com/problems/maximal-network-rank/) (Medium)
+16. [1791. Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/) (Easy)
+17. [2059. Minimum Operations to Convert Number](https://leetcode.com/problems/minimum-operations-to-convert-number/) (Medium)
+18. [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/) (Medium) *(Graph-like logic)*
+19. [2360. Longest Cycle in a Graph](https://leetcode.com/problems/longest-cycle-in-a-graph/) (Hard) *(DFS)*
+20. [2477. Minimum Fuel Cost to Report to the Capital](https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/) (Medium) *(DFS)*
+21. [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) (Easy) *(DFS)*
+22. [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/) (Medium) *(DFS with path tracking)*
+23. [133. Clone Graph](https://leetcode.com/problems/clone-graph/) (Medium)
+24. [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) (Medium)
+25. [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) (Medium)
+26. [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) (Medium) *(BFS)*
+27. [785. Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) (Medium)
+28. [841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/) (Medium)
+29. [399. Evaluate Division](https://leetcode.com/problems/evaluate-division/) (Medium)
+30. [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) (Medium) *(Topological Sort)*
+31. [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/) (Medium)
+32. [934. Shortest Bridge](https://leetcode.com/problems/shortest-bridge/) (Medium) *(BFS)*
+33. [1192. Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) (Hard) *(Tarjan’s Algorithm - DFS)*
+34. [1466. Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/) (Medium)
+35. [1514. Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/) (Medium) *(Dijkstra-like)*
+36. [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) (Medium) *(Graph traversal on tree)*
+37. [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) (Medium) *(BFS)*
+38. [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) (Medium) *(BFS + Binary Search)*
+39. [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/) (Medium) *(Dijkstra’s Algorithm)*
+40. [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) (Hard) *(Revisited for emphasis)*
