@@ -53,7 +53,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p><p>
  * Tags
  * -----
- * @Medium
+ * @medium
  * @Array
  * @TwoPointers
  * @BinarySearch
