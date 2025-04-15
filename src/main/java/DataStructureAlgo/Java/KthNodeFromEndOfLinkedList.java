@@ -36,7 +36,7 @@ public class KthNodeFromEndOfLinkedList {
             k--;
         }
 
-        if(fast == null && k>0) //k is greater than length of list
+        if(fast == null && k>0) //k is greater than the length of a list
             return null;
 
         while (fast!=null){
@@ -56,7 +56,7 @@ public class KthNodeFromEndOfLinkedList {
             k--;
         }
 
-        if(fast == null && k>0) //k is greater than length of list
+        if(fast == null && k>0) //k is greater than the length of a list
             return null;
 
         while (fast!=null){

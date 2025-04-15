@@ -129,7 +129,7 @@ public class StatisticsFromALargeSample_1033 {
                     min = Math.min(min,i);
                     max = Math.max(max, i);
 
-                    //get sum
+                    //get a sum
                     sum += (long) i * count[i];
 
                     //get count
