@@ -121,7 +121,7 @@ public class ShortestSubarrayToBeRemovedToMakeArraySorted_1574 {
 
             // two cases;
 
-            // case 1: if arr is increasing first and than start decreasing, then all
+            // case 1: if arr is increasing first and then start decreasing, then all
             // element post l needs to remove
             // ex ; [1,2,3,4,5,4,3,2,1] n = 9
             // here l = 4 [index, value = 5]

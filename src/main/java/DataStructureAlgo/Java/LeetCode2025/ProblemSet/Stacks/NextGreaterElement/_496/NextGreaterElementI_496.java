@@ -53,7 +53,7 @@ import java.util.Map;
  * <p>
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementII}
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementI}
  * Similar {@link DailyTemperatures_739}
  * extension {@link }
  * <p>
@@ -111,7 +111,7 @@ class NextGreaterElementI{
    static class SolutionUsingStack {
         public int[] nextGreaterElement(int[] nums1, int[] nums2) {
             if(nums1 == null)
-                return nums1;
+                return null;
 
             if(nums2 == null)
                 return null;
@@ -132,7 +132,7 @@ class NextGreaterElementI{
 
         /**
          * O(n)/O(n)
-         * This track the next greater element for each element in nums2 from backwards.
+         * This tracks the next greater element for each element in nums2 from backwards.
          * @param nums2
          * @return
          *

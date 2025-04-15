@@ -1,14 +1,14 @@
 package DataStructureAlgo.Java.LeetCode.pair.element.problems.threeSum;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import  DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
+import DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
 import java.util.*;
 
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
- * Description: https://leetcode.com/problems/3sum/
+ * Description: 15. 3Sum https://leetcode.com/problems/3sum/
  * Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
  * <p>
  * Note:
@@ -149,11 +149,10 @@ class ThreeSum3SumSortingOptimized implements IThreeSum3Sum {
         for (int i = 0; i < nums.length - 2; i++) {
 
             int a = nums[i];
-            if (a > 0) break; //This improve the performance by 50%
+            if (a > 0) break; //This improves the performance by 50%
 
-            /**
-             * Avoid duplicates
-             */
+
+            // Avoid duplicates
             if (i > 0 && a == nums[i - 1])
                 continue;
 
@@ -171,10 +170,8 @@ class ThreeSum3SumSortingOptimized implements IThreeSum3Sum {
                 if (sum == target) {
                     solution.add(Arrays.asList(nums[i], nums[j], nums[k]));
 
-                    /**
-                     *  As the elements are get sorted, that brings all the duplicate pair together
-                     * skip all duplicates
-                     */
+                    //As the elements are getting sorted, that brings all the duplicate pair together
+                    // skip all duplicates
                     while (j < k && b == nums[++j]) ;
 
                     while (k > j && c == nums[--k]) ;

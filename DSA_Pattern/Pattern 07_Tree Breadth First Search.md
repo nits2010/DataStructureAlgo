@@ -914,3 +914,47 @@ root.right.right = new TreeNode(5);
 root.left.left.left = new TreeNode(3);
 console.log("Tree right view: " + treeRightView(root))
 ````
+--------------
+
+# Tree Traversal (BFS, DFS - Inorder, Preorder, Postorder) - Top 40 LeetCode Questions
+
+1. [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) (Medium) *(BFS)*
+2. [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) (Easy) *(Iterative and Recursive)*
+3. [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) (Easy) *(Iterative and Recursive)*
+4. [145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) (Easy) *(Iterative and Recursive)*
+5. [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) (Easy) *(DFS or BFS)*
+6. [112. Path Sum](https://leetcode.com/problems/path-sum/) (Easy) *(DFS)*
+7. [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) (Easy) *(DFS or BFS)*
+8. [103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) (Medium) *(BFS)*
+9. [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) (Medium) *(BFS or DFS)*
+10. [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) (Easy) *(Recursive or Iterative BFS)*
+11. [100. Same Tree](https://leetcode.com/problems/same-tree/) (Easy) *(Recursive or Iterative)*
+12. [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/) (Medium) *(DFS with backtracking)*
+13. [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) (Easy) *(DFS)*
+14. [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) (Medium) *(DFS)*
+15. [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) (Medium) *(Inorder traversal)*
+16. [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) (Medium) *(Inorder traversal)*
+17. [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) (Medium) *(Recursive DFS)*
+18. [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) (Hard) *(BFS or DFS)*
+19. [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) (Easy) *(BFS)*
+20. [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) (Medium) *(BFS)*
+21. [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) (Easy) *(DFS comparison)*
+22. [662. Maximum Width of Binary Tree](https://leetcode.com/problems/maximum-width-of-binary-tree/) (Medium) *(BFS with indexing)*
+23. [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) (Medium) *(DFS + graph-like logic)*
+24. [95. Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) (Medium) *(Recursive generation)*
+25. [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) (Medium) *(BFS)*
+26. [1022. Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/) (Easy) *(DFS)*
+27. [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) (Medium) *(BFS)*
+28. [1302. Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) (Medium) *(BFS or DFS)*
+29. [1379. Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/) (Easy) *(DFS or BFS)*
+30. Prime [1469. Find All The Lonely Nodes](https://leetcode.com/problems/find-all-the-lonely-nodes/) (Easy) *(DFS or BFS)*
+31. Prime [1602. Find Nearest Right Node in Binary Tree](https://leetcode.com/problems/find-nearest-right-node-in-binary-tree/) (Medium) *(BFS)*
+32. Prime [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) (Medium) *(Traversal with parent pointers)*
+33. [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) (Medium) *(Inorder traversal with stack)*
+34. [1993. Operations on Tree](https://leetcode.com/problems/operations-on-tree/) (Hard) *(Tree structure + traversal)*
+35. [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) (Medium) *(DFS optimized)*
+36. [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) (Easy) *(BST-specific)*
+37. Prime [285. Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii/) (Medium) *(Traversal with parent pointers)*
+38. [99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) (Medium) *(Inorder traversal to find swapped nodes)*
+39. [652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/) (Medium) *(DFS + hashing)*
+40. [814. Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/) (Medium) *(Postorder traversal)*

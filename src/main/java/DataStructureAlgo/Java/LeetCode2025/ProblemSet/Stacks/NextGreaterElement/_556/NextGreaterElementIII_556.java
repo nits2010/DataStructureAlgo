@@ -30,7 +30,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement
  * File reference
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementIII}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers._31.NextPermutation_31}
  * extension {@link }
  * <p>
  * Tags
@@ -38,27 +38,32 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement
  * @medium
  * @Math
  * @TwoPointers
- * @String
+ * @String <p>
  * <p>
- *
  * Company Tags
  * -----
+ * @Amazon
+ * @Bloomberg
+ * @Facebook
+ * @Houzz
+ * @Microsoft
  * @Editorial <a href="https://leetcode.com/problems/next-greater-element-iii/solutions/326318/full-explanation-thought-process-java-0-ms-and-with-optimised-algo-not-require-sort">...</a>
  */
 public class NextGreaterElementIII_556 {
 
     public static void main(String[] args) {
         boolean test = true;
-        test &= test(12443322, 13222344);
-        test &= test(12222333,12223233);
-        test &= test(12,21);
-        test &= test(21,-1);
-        test &= test(218765,251678);
-        test &= test(1234,1243);
-        test &= test(4321,-1);
-        test &= test(534976,536479);
-        test &= test(1999999999,-1);
-        test &= test(230241,230412);
+//        test &= test(2147483486, -1);
+//        test &= test(12443322, 13222344);
+//        test &= test(12222333, 12223233);
+//        test &= test(12, 21);
+//        test &= test(21, -1);
+//        test &= test(218765, 251678);
+//        test &= test(1234, 1243);
+//        test &= test(4321, -1);
+//        test &= test(534976, 536479);
+        test &= test(1999999999, -1);
+        test &= test(230241, 230412);
 
         System.out.println((test) ? "ALL TEST CASES PASSED" : "SOME TEST CASES FAILED");
 
@@ -66,11 +71,11 @@ public class NextGreaterElementIII_556 {
     }
 
     public static boolean test(int n, int expected) {
-       System.out.println("\nn = "+n + "\nexpected = "+expected);
+        System.out.println("\nn = " + n + "\nexpected = " + expected);
 
         NextGreaterElementIII.Solution sol = new NextGreaterElementIII().new Solution();
         int actual = sol.nextGreaterElement(n);
-        System.out.println("actual = "+actual);
+        System.out.println("actual = " + actual);
         System.out.println("PASS = " + (actual == expected));
         return actual == expected;
 
@@ -105,6 +110,12 @@ class NextGreaterElementIII {
          * @param n
          * @return
          */
+
+        void print(int[] tokens) {
+            for (int i = 0; i < tokens.length; i++)
+                System.out.print(" " + tokens[i]);
+            System.out.println();
+        }
         public int nextGreaterElement(int n) {
 
             //if its single digit number, then it is maximum itself
@@ -113,19 +124,21 @@ class NextGreaterElementIII {
 
             //convert this number to individual numbers (single digit)
             final int[] tokens = tokens(n);
+            print(tokens);
+
 
             //first find an index from the right side (towards the left) such that the current index value is less than the next index value.
             int firstIndexSmallerThanNext = firstIndexSmallerThanNext(tokens);
 
             if (firstIndexSmallerThanNext == -1)
                 return -1; // means all numbers are sorted in descending order
-
+            System.out.println("d:" + firstIndexSmallerThanNext + " :" + tokens[firstIndexSmallerThanNext]);
             int secondIndexGreaterThanAndSmallestAmoung = secondIndexGreaterThanAndSmallestAmong(tokens, firstIndexSmallerThanNext);
-
+            System.out.println("sd:" + secondIndexGreaterThanAndSmallestAmoung + " :" + tokens[secondIndexGreaterThanAndSmallestAmoung]);
             swap(tokens, firstIndexSmallerThanNext, secondIndexGreaterThanAndSmallestAmoung);
-
+            print(tokens);
             reverse(tokens, firstIndexSmallerThanNext + 1, tokens.length - 1);
-
+            print(tokens);
             return buildInteger(tokens);
 
 

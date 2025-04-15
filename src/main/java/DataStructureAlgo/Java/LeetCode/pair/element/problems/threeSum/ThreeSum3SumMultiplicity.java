@@ -103,11 +103,6 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
      * here z = 4 [ 4 count of 4 ]
      * At any moment we can select 2 of as j and k hence there will be 4C2 = 12 pairs
      * <p>
-     * https://leetcode.com/articles/3sum-with-multiplicity/
-     * <p>
-     * Runtime: 48 ms, faster than 52.30% of Java online submissions for 3Sum With Multiplicity.
-     * Memory Usage: 37.8 MB, less than 100.00% of Java online submissions for 3Sum With Multiplicity.
-     *
      * @param nums
      * @param target
      * @return
@@ -152,7 +147,7 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
                         while (k > j && c == nums[--k])
                             y++;
 
-                        solution += x * y;
+                        solution += (long) x * y;
 
 
                     } else {
@@ -172,13 +167,13 @@ class ThreeSum3SumMultiplicitySorting implements IThreeSum3SumMultiplicity {
 }
 
 /**
- * In above solution, once we found that sum = target, we need to calculate all the duplicate elements for j and k.
- * That introduce an extra loop [ though that loop minimize the j and k while loop run time. ]
+ * In the above solution, once we found that sum = target, we need to calculate all the duplicate elements for j and k.
+ * That introduces an extra loop [ though that loop minimizes the j and k while loop run time. ]
  * <p>
  * But what if we already know how many of them are there after each i'th element.
  * sum = nums[i] + nums[j] + nums[k]
  * <p>
- * If we know how many nums[j] + nums[k] are present then we can directly add those contribution in our solution.
+ * If we know how many nums[j] + nums[k] are present, then we can directly add those contributions to our solution.
  * <p>
  * This then reduce to {@link TwoSum2Sum} because we need to find all nums[i] + {nums[j] + nums[k]} where {x} denotes the number of times x occurred
  * <p>
