@@ -148,7 +148,7 @@ public class ShortestSubarrayToBeRemovedToMakeArraySorted_1574 {
                                                        6/
                       4 /              5 / --         5/
                    3 /   L  \3         4/      \3_2_ 4/
-                2 /          \ 2 _2__ 3/         R
+                2 /          \ 2 _2__ 3/             R
              1 /
               i                             j
 
