@@ -98,10 +98,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString_28 {
         }
 
         /**
-         * 0
-         * ms
-         * Beats
-         * 100.00%
          * @param haystack
          * @param needle
          * @return

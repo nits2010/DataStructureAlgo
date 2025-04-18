@@ -37,7 +37,7 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers._80.RemoveDuplicatesFromSortedArrayII_80}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._80.RemoveDuplicatesFromSortedArrayII_80}
  * extension {@link RemoveDuplicatesFromSortedList_83}
  * <p>
  * Tags

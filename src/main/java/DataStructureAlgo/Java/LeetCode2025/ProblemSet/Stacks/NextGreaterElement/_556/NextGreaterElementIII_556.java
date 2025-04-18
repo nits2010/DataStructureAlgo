@@ -30,7 +30,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement
  * File reference
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.nextGreaterElement.NextGreaterElementIII}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers._31.NextPermutation_31}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._31.NextPermutation_31}
  * extension {@link }
  * <p>
  * Tags
