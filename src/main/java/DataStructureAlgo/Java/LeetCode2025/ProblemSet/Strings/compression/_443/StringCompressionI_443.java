@@ -48,7 +48,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
  * File reference
  * -----------
- * Duplicate {@link}
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.StringCompressionRunLengthEncoding} {@link DataStructureAlgo.Java.nonleetcode.StringCompression2}
  * Similar {@link}
  * extension {@link }
  * <p><p>
