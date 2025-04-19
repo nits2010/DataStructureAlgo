@@ -1083,7 +1083,10 @@ public class CommonMethods {
         for (T input : inputs) {
 
             String output;
-            if (input instanceof Integer[]) {
+
+            if (input == null) {
+                output = "";
+            } else if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
             } else if (input instanceof Integer[][]) {
                 output = CommonMethods.toString((Integer[][]) input);
@@ -1216,8 +1219,25 @@ public class CommonMethods {
             }
         }
 
+        if(result instanceof ListNode && expected instanceof ListNode){
+            return compare((ListNode) result, (ListNode) expected);
+        }
+
         // Use Objects.equals for all other types (including primitive wrappers)
         return Objects.equals(result, expected);
+    }
+
+    private static boolean compare(ListNode result, ListNode expected) {
+        if(result == null && expected == null){
+            return true;
+        }
+        if(result == null || expected == null){
+            return false;
+        }
+        if(result.val != expected.val){
+            return false;
+        }
+        return compare(result.next, expected.next);
     }
 
     private static boolean compareArraysUnordered(Object arr1, Object arr2) {
