@@ -5,7 +5,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-12
- * Description:https://leetcode.com/problems/valid-triangle-number/submissions/
+ * Description: 611. Valid Triangle Number
+ * https://leetcode.com/problems/valid-triangle-number/submissions/
  *
  * Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
  * Example 1:
@@ -21,7 +22,7 @@ import java.util.Arrays;
  * The integers in the given array are in the range of [0, 1000].
  * https://www.geeksforgeeks.org/find-number-of-triangles-possible/
  */
-public class NumberOfTriangles {
+public class ValidTriangleNumber {
 
     public static void main(String []args) {
         int arr[] = {10, 21, 22, 100, 101, 200, 300};
@@ -39,19 +40,19 @@ class SolutionNumberOfTriangles {
 
         int n = nums.length;
 
-        if (n < 3) //minimum 3 side are required
+        if (n < 3) //minimum 3 sides are required
             return 0;
 
         int count = 0;
         Arrays.sort(nums);
         int l, r;
-        for (int i = n - 1; i >= 1; i--) {
+        for (int i = n - 1; i > 1; i--) {
             l = 0;
             r = i - 1;
             while (l < r) {
 
                 //the sides are at l, r and i
-                //to make triangel, sum of two side should be greater than third
+                //to make triangle, sum of two side should be greater than third
                 if (nums[l] + nums[r] > nums[i]) {
                     //as l and r makes tringle, then all from l to r will make tringle as data is sorted
                     count += r - l;
