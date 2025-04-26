@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._923;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.ThreeSum._923;
 
 import DataStructureAlgo.Java.LeetCode.pair.element.problems.twoSum.TwoSum2Sum;
 
@@ -57,7 +57,6 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p><p>
  * Tags
  * -----
- *
  * @medium
  * @Array
  * @HashTable
@@ -138,6 +137,8 @@ public class Three3SumWithMultiplicity_923 {
                         if (b != c) {
                             int countJ = 1;
                             int countK = 1;
+
+                            //count duplicates
                             while (j < k && b == arr[++j])
                                 countJ++;
                             while (k > j && c == arr[--k])
@@ -150,7 +151,7 @@ public class Three3SumWithMultiplicity_923 {
                             // there are nC2 ways of selecting 2 out of n duplicates..so n(n-1)/2
                             int count = k - j + 1;
                             counts += ((long) count * (count - 1)) / 2;
-                            break;
+                            break; //since all the elements are same
                         }
 
                     }

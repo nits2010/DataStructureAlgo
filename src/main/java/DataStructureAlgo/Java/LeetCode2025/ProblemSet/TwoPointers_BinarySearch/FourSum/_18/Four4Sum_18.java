@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._18;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.FourSum._18;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * File reference
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.pair.element.problems.fourSum.FourSum4Sum}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode.pair.element.problems.fourSum.FourSum4SumII}
  * extension {@link }
  * DP-BaseProblem {@link }
  * <p><p>
@@ -58,7 +58,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @Google
  * @Microsoft
  * @Yahoo
- * @Apple <p>
+ * @Apple
+ *
+ * <p>
  * -----
  * @Editorial <p><p>
  * -----

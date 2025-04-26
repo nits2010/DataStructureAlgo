@@ -1088,6 +1088,8 @@ public class CommonMethods {
                 output = "";
             } else if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
+            } else if (input instanceof Boolean[]) {
+                output = Arrays.toString((Boolean[]) input);
             } else if (input instanceof Integer[][]) {
                 output = CommonMethods.toString((Integer[][]) input);
             } else if (input instanceof int[]) {
@@ -1219,7 +1221,7 @@ public class CommonMethods {
             }
         }
 
-        if(result instanceof ListNode && expected instanceof ListNode){
+        if (result instanceof ListNode && expected instanceof ListNode) {
             return compare((ListNode) result, (ListNode) expected);
         }
 
@@ -1228,13 +1230,13 @@ public class CommonMethods {
     }
 
     private static boolean compare(ListNode result, ListNode expected) {
-        if(result == null && expected == null){
+        if (result == null && expected == null) {
             return true;
         }
-        if(result == null || expected == null){
+        if (result == null || expected == null) {
             return false;
         }
-        if(result.val != expected.val){
+        if (result.val != expected.val) {
             return false;
         }
         return compare(result.next, expected.next);

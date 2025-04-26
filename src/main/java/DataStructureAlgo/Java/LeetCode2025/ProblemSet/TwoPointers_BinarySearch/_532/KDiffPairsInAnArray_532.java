@@ -48,7 +48,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1.TwoSum_1}
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.TwoSum._1.TwoSum_1}
  * DP-BaseProblem {@link }
  * <p><p>
  * Tags

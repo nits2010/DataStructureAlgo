@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.TwoSum._1;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
