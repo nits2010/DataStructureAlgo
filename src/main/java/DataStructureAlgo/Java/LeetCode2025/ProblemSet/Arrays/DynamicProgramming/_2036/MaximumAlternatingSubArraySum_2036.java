@@ -85,7 +85,7 @@ public class MaximumAlternatingSubArraySum_2036 {
 
     private static boolean test(int[] nums, long expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -94,14 +94,14 @@ public class MaximumAlternatingSubArraySum_2036 {
         output = bruteForce.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BruteForce", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BruteForce", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         KadanesAlgorithm kadanesAlgorithm = new KadanesAlgorithm();
         output = kadanesAlgorithm.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"KadaneAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"KadaneAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

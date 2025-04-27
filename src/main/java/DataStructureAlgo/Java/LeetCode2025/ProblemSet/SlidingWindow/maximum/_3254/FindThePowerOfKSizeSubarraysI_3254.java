@@ -95,7 +95,7 @@ public class FindThePowerOfKSizeSubarraysI_3254 {
 
     private static boolean test(int[] nums, int k, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -104,13 +104,13 @@ public class FindThePowerOfKSizeSubarraysI_3254 {
         output = solutionUsingDeque.resultsArray(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingDeque", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingDeque", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution solution = new Solution();
         output = solution.resultsArray(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingArray", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingArray", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

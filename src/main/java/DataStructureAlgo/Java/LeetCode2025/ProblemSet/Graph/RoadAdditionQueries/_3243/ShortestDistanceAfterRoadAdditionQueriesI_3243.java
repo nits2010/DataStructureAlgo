@@ -113,7 +113,7 @@ public class ShortestDistanceAfterRoadAdditionQueriesI_3243 {
 
     private static boolean test(int[][] queries, int n, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Queries", "N", "Expected"}, true, queries, n, expected);
+        CommonMethods.printTest(new String[]{"Queries", "N", "Expected"}, true, queries, n, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -122,20 +122,20 @@ public class ShortestDistanceAfterRoadAdditionQueriesI_3243 {
         output = solutionDijkstra.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Dijkstra", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Dijkstra", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_BellmanFord solutionBellmanFord = new Solution_BellmanFord();
         output = solutionBellmanFord.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BellmanFord", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BellmanFord", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         Solution_BFS solutionBfs = new Solution_BFS();
         output = solutionBfs.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.ThreeSum._259;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -62,7 +60,7 @@ public class Three3SumSmaller_259 {
     }
 
     private static boolean test(int[] grid, int target, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
+        CommonMethods.printTest(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -72,7 +70,7 @@ public class Three3SumSmaller_259 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

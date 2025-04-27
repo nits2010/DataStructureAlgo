@@ -94,7 +94,7 @@ public class FindTheDuplicateNumber_287 {
 
     private static boolean test(int[] grid, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -103,13 +103,13 @@ public class FindTheDuplicateNumber_287 {
         output = solutionUsingExtraSpace.findDuplicate(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingExtraSpace", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"UsingExtraSpace", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionTwoPointer solutionTwoPointer = new SolutionTwoPointer();
         output = solutionTwoPointer.findDuplicate(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingTwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"UsingTwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

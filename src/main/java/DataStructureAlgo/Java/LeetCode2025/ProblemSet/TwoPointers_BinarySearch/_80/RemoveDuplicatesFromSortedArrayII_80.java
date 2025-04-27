@@ -46,7 +46,7 @@ public class RemoveDuplicatesFromSortedArrayII_80 {
     }
 
     private static boolean test(int[] grid, int[] expectedArray, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected", "ExpectedArray"}, true, grid, expected, expectedArray);
+        CommonMethods.printTest(new String[]{"Grid", "Expected", "ExpectedArray"}, true, grid, expected, expectedArray);
 
         int output = 0;
         int[] outputArray;
@@ -63,7 +63,7 @@ public class RemoveDuplicatesFromSortedArrayII_80 {
         }
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "OutputArray", "Pass"}, false, output, Arrays.copyOf(outputArray, output), pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "OutputArray", "Pass"}, false, output, Arrays.copyOf(outputArray, output), pass ? "PASS" : "FAIL");
 
         return finalPass;
 

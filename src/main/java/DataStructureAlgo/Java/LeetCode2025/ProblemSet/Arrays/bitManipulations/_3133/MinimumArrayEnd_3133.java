@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.bitManipulations._3133;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -75,7 +73,7 @@ public class MinimumArrayEnd_3133 {
 
     private static boolean test(int n, int x, long expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"N", "X", "Expected"}, true, n, x, expected);
+        CommonMethods.printTest(new String[]{"N", "X", "Expected"}, true, n, x, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -83,13 +81,13 @@ public class MinimumArrayEnd_3133 {
         output = solution.minEnd(n, x);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionBitManipulation solutionBitManipulation = new SolutionBitManipulation();
         output = solutionBitManipulation.minEnd(n, x);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BitManipulation", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BitManipulation", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

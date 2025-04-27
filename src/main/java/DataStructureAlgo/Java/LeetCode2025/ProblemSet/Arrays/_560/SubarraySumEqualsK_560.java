@@ -103,7 +103,7 @@ public class SubarraySumEqualsK_560 {
 
     private static boolean test(int[] nums, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -112,7 +112,7 @@ public class SubarraySumEqualsK_560 {
         output = solution.subarraySum(nums, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

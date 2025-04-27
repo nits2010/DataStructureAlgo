@@ -2,7 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.subsequence.LIS._300.LongestIncreasingSubsequence_300;
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -85,7 +84,7 @@ public class SpecialArrayII_3152 {
 
     private static boolean test(int[] nums, int [][]queries, boolean [] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "queries", "Expected"}, true, nums, queries, expected);
+        CommonMethods.printTest(new String[]{"Nums", "queries", "Expected"}, true, nums, queries, expected);
 
         boolean [] output;
         boolean pass, finalPass = true;
@@ -94,7 +93,7 @@ public class SpecialArrayII_3152 {
         output = solutionDp.isArraySpecial(nums, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"DP", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"DP", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

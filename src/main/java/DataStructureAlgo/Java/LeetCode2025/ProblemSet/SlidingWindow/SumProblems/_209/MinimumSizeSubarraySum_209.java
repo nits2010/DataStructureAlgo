@@ -85,7 +85,7 @@ public class MinimumSizeSubarraySum_209 {
 
     private static boolean test(int target, int[] nums, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "target", "Expected"}, true, nums, target, expected);
+        CommonMethods.printTest(new String[]{"Nums", "target", "Expected"}, true, nums, target, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -93,7 +93,7 @@ public class MinimumSizeSubarraySum_209 {
         output = solutionSlidingWindow.minSubArrayLen(target, nums);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingSlidingWindow", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingSlidingWindow", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         //add logic here

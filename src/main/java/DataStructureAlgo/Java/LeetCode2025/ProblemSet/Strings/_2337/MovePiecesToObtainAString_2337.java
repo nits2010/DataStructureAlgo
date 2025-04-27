@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._2337;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -83,7 +81,7 @@ public class MovePiecesToObtainAString_2337 {
 
     private static boolean test(String start, String target, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"start", "target", "Expected"}, true, start, target, expected);
+        CommonMethods.printTest(new String[]{"start", "target", "Expected"}, true, start, target, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -92,7 +90,7 @@ public class MovePiecesToObtainAString_2337 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph._2290;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -85,7 +83,7 @@ public class MinimumObstacleRemovalToReachCorner_2290 {
 
     private static boolean test(int[][] grid, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -94,19 +92,19 @@ public class MinimumObstacleRemovalToReachCorner_2290 {
         output = solutionVisited.minimumObstacles(grid);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Visited", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Visited", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_Dijkstra solutionDijkstra = new Solution_Dijkstra();
         output = solutionDijkstra.minimumObstacles(grid);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Dijkstra", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Dijkstra", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_0_1_BFS solution01Bfs = new Solution_0_1_BFS();
         output = solution01Bfs.minimumObstacles(grid);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"0-1-BFS", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"0-1-BFS", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

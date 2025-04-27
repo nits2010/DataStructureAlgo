@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.bitManipulations._2275;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -74,7 +73,7 @@ public class LargestCombinationWithBitwiseANDGreaterThanZero_2275 {
 
     private static boolean tests(int[] input, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -83,13 +82,13 @@ public class LargestCombinationWithBitwiseANDGreaterThanZero_2275 {
         output = solutionCountAll.largestCombination(input);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"CountAll", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"CountAll", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionCountIndividually solutionCountIndividually = new SolutionCountIndividually();
         output = solutionCountIndividually.largestCombination(input);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"CountIndividually", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"CountIndividually", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

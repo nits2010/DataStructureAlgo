@@ -73,7 +73,7 @@ public class ValidTriangleNumber_611 {
 
     private static boolean test(int[] nums, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"nums", "Expected"}, true, nums, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -83,7 +83,7 @@ public class ValidTriangleNumber_611 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

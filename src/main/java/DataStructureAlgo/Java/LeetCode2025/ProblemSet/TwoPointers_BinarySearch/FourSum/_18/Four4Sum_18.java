@@ -83,7 +83,7 @@ public class Four4Sum_18 {
 
     private static boolean test(int[] grid, int target, List<List<Integer>> expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
+        CommonMethods.printTest(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
 
         List<List<Integer>> output;
         boolean pass, finalPass = true;
@@ -93,7 +93,7 @@ public class Four4Sum_18 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

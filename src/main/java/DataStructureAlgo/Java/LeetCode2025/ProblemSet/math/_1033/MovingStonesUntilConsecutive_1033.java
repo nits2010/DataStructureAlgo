@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.math._1033;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -79,7 +77,7 @@ public class MovingStonesUntilConsecutive_1033 {
 
     private static boolean test(int a, int b, int c, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"a", "b", "c", "Expected"}, true, a, b, c, expected);
+        CommonMethods.printTest(new String[]{"a", "b", "c", "Expected"}, true, a, b, c, expected);
 
 
         int[] output;
@@ -90,7 +88,7 @@ public class MovingStonesUntilConsecutive_1033 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

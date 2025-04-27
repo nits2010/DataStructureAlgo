@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._2490;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -89,7 +87,7 @@ public class CircularSentence_2490 {
 
     private static boolean test(String input, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, input, expected);
 
         boolean output;
         boolean pass, finalPass = true;
@@ -99,7 +97,7 @@ public class CircularSentence_2490 {
         output = solution.isCircularSentence(input);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

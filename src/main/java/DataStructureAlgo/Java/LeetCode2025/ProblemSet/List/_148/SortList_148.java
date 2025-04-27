@@ -75,7 +75,7 @@ public class SortList_148 {
 
     private static boolean test(Integer[] nodes, Integer[] expected) {
 
-        CommonMethods.printTestOutcome(new String[]{"nodes", "Expected"}, true, nodes, expected);
+        CommonMethods.printTest(new String[]{"nodes", "Expected"}, true, nodes, expected);
         ListNode head = ListBuilder.arrayToSinglyList(nodes);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
 
@@ -87,7 +87,7 @@ public class SortList_148 {
         pass = CommonMethods.compareResultOutCome(output, expectedList, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

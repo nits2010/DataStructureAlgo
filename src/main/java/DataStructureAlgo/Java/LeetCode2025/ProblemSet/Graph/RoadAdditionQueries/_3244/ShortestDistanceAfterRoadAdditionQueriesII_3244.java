@@ -1,8 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.RoadAdditionQueries._3244;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.RoadAdditionQueries._3243.ShortestDistanceAfterRoadAdditionQueriesI_3243;
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._100.SameTree_100;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -108,7 +106,7 @@ public class ShortestDistanceAfterRoadAdditionQueriesII_3244 {
 
     private static boolean test(int[][] queries, int n, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Queries", "N", "Expected"}, true, queries, n, expected);
+        CommonMethods.printTest(new String[]{"Queries", "N", "Expected"}, true, queries, n, expected);
 
 
         int[] output;
@@ -118,13 +116,13 @@ public class ShortestDistanceAfterRoadAdditionQueriesII_3244 {
         output = solutionHashMap.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HashMap", "Pass"}, false, output, pass?"PASS":"FAIL");
+        CommonMethods.printTest(new String[]{"HashMap", "Pass"}, false, output, pass?"PASS":"FAIL");
 
         Solution_HashMapOptimized solutionHashMapOptimized = new Solution_HashMapOptimized();
         output = solutionHashMapOptimized.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HashMapOptimized", "Pass"}, false, output, pass?"PASS":"FAIL");
+        CommonMethods.printTest(new String[]{"HashMapOptimized", "Pass"}, false, output, pass?"PASS":"FAIL");
 
 
 
@@ -132,7 +130,7 @@ public class ShortestDistanceAfterRoadAdditionQueriesII_3244 {
         output = solutionDistance.shortestDistanceAfterQueries(n, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Distance", "Pass"}, false, output, pass?"PASS":"FAIL");
+        CommonMethods.printTest(new String[]{"Distance", "Pass"}, false, output, pass?"PASS":"FAIL");
         return finalPass;
 
     }

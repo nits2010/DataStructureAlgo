@@ -95,7 +95,7 @@ public class RotateArray_189 {
     }
 
     private static boolean test(int[] numbers, int k, int[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"Numbers", "k", "Expected"}, true, numbers, k,  expected);
+        CommonMethods.printTest(new String[]{"Numbers", "k", "Expected"}, true, numbers, k,  expected);
 
 
         boolean pass, finalPass = true;
@@ -109,19 +109,19 @@ public class RotateArray_189 {
         solutionExtraArray.rotate(output, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionExtraArray", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionExtraArray", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = Arrays.copyOf(numbers, numbers.length);
         solutionLastHalfReverse.rotate(output, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionLastHalfReverse", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionLastHalfReverse", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = Arrays.copyOf(numbers, numbers.length);
         solution.rotate(output, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"FirstHalfReverse", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"FirstHalfReverse", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

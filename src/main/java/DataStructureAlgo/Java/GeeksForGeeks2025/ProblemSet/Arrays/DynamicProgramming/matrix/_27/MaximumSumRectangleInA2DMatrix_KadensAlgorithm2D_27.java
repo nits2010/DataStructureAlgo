@@ -50,7 +50,7 @@ public class MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27 {
 
     private static boolean test(int[][] mat, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"mat", "Expected"}, true, mat, expected);
+        CommonMethods.printTest(new String[]{"mat", "Expected"}, true, mat, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -59,13 +59,13 @@ public class MaximumSumRectangleInA2DMatrix_KadensAlgorithm2D_27 {
         output = kadensAlgorithm2D.maximumSumRectangle(mat);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         KadensAlgorithm2D_Optimized_PrefixSum_WithSubarray kadensAlgorithm2DOptimizedWithSubarray = new KadensAlgorithm2D_Optimized_PrefixSum_WithSubarray();
         output = kadensAlgorithm2DOptimizedWithSubarray.maximumSumRectangle(mat);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output-Optimized-Prefix sum", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output-Optimized-Prefix sum", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.bitManipulations._1829;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -85,7 +83,7 @@ public class MaximumXORForEachQuery_1829 {
 
     private static boolean test(int[] input, int maximumBit, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Input", "MaximumBit", "Expected"}, true, input, maximumBit, expected);
+        CommonMethods.printTest(new String[]{"Input", "MaximumBit", "Expected"}, true, input, maximumBit, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -94,7 +92,7 @@ public class MaximumXORForEachQuery_1829 {
         output = solution.getMaximumXor(input, maximumBit);
         pass = CommonMethods.compareResultOutCome(expected, output, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

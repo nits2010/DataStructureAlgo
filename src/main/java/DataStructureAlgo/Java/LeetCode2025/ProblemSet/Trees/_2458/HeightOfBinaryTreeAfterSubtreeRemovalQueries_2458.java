@@ -89,7 +89,7 @@ public class HeightOfBinaryTreeAfterSubtreeRemovalQueries_2458 {
     }
 
     private static boolean test(Integer[] root, int[] queries, int[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"Tree", "Queries", "Expected"}, true, root, queries, expected);
+        CommonMethods.printTest(new String[]{"Tree", "Queries", "Expected"}, true, root, queries, expected);
         final TreeNode tree = TreeBuilder.buildTreeFromLevelOrder(root);
 
         int[] output;
@@ -98,27 +98,27 @@ public class HeightOfBinaryTreeAfterSubtreeRemovalQueries_2458 {
         SolutionTLE solutionTLE = new SolutionTLE();
         output = solutionTLE.treeQueries(tree, queries);
         pass = Arrays.equals(expected, output);
-        CommonMethods.printTestOutcome(new String[]{"TLE", "Result"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"TLE", "Result"}, false, output, pass ? "Passed" : "Failed");
         finalPass &= pass;
 
         Solution_TwoTraversal_1 solution_TwoTraversal_1 = new Solution_TwoTraversal_1();
         output = solution_TwoTraversal_1.treeQueries(tree, queries);
         pass = Arrays.equals(expected, output);
-        CommonMethods.printTestOutcome(new String[]{"Solution_TwoTraversal_1", "Result"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"Solution_TwoTraversal_1", "Result"}, false, output, pass ? "Passed" : "Failed");
 
         finalPass &= pass;
 
         Solution_TwoTraversal_2 solution_TwoTraversal_2 = new Solution_TwoTraversal_2();
         output = solution_TwoTraversal_2.treeQueries(tree, queries);
         pass = Arrays.equals(expected, output);
-        CommonMethods.printTestOutcome(new String[]{"Solution_TwoTraversal_2", "Result"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"Solution_TwoTraversal_2", "Result"}, false, output, pass ? "Passed" : "Failed");
         finalPass &= pass;
 
 
         Solution_TwoLargestCousins_LevelHeight solutionTwoLargestCousinsLevelHeight = new Solution_TwoLargestCousins_LevelHeight();
         output = solutionTwoLargestCousinsLevelHeight.treeQueries(tree, queries);
         pass = Arrays.equals(expected, output);
-        CommonMethods.printTestOutcome(new String[]{"TwoLargestCousins", "Result"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"TwoLargestCousins", "Result"}, false, output, pass ? "Passed" : "Failed");
         finalPass &= pass;
 
         return finalPass;

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1482;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -89,7 +87,7 @@ public class MinimumNumberOfDaysToMakeMBouquets_1482 {
 
     private static boolean test(int[] bloomDay, int m, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"bloomDay", "m", "k", "Expected"}, true, bloomDay, m, k, expected);
+        CommonMethods.printTest(new String[]{"bloomDay", "m", "k", "Expected"}, true, bloomDay, m, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -101,7 +99,7 @@ public class MinimumNumberOfDaysToMakeMBouquets_1482 {
         pass = output == expected;
 
         finalPass = pass && finalPass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "true" : "false");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "true" : "false");
 
         return finalPass;
 

@@ -84,7 +84,7 @@ public class ShortestSubarrayToBeRemovedToMakeArraySorted_1574 {
 
     private static boolean test(int[] nums, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -94,7 +94,7 @@ public class ShortestSubarrayToBeRemovedToMakeArraySorted_1574 {
         pass = output == expected;
         System.out.println("Pass: " + pass);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

@@ -77,7 +77,7 @@ public class TwoSumIVInputIsABST_653 {
 
     private static boolean test(Integer[] nodes, int target, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nodes", "target", "Expected"}, true, nodes, target, expected);
+        CommonMethods.printTest(new String[]{"Nodes", "target", "Expected"}, true, nodes, target, expected);
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(nodes);
         System.out.println("Level order traversal : " + TreeTraversalRecursive.levelOrderWithNull(root));
 
@@ -91,22 +91,22 @@ public class TwoSumIVInputIsABST_653 {
         output = solutionToArray.findTarget(root, target);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using Array", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Using Array", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
         output = solutionUsingHashSet.findTarget(root, target);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using HashSet", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Using HashSet", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
         output = solutionUsingSearch.findTarget(root, target);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using Search", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Using Search", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

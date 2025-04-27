@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._334;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -69,10 +67,10 @@ public class IncreasingTripletSubsequence_334 {
     }
 
     private static boolean test(int[] nums, boolean expected) {
-        CommonMethods.printTestOutcome(new String[]{"nums", "expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"nums", "expected"}, true, nums, expected);
         Solution solution = new Solution();
         boolean output = solution.increasingTriplet(nums);
-        CommonMethods.printTestOutcome(new String[]{"output", "expected"}, false, output, expected);
+        CommonMethods.printTest(new String[]{"output", "expected"}, false, output, expected);
         return output == expected;
     }
 

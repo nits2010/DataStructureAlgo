@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1861;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -99,7 +97,7 @@ public class RotatingTheBox_1861 {
 
     private static boolean test(char[][] box, char[][] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Box", "Expected"}, true, box, expected);
+        CommonMethods.printTest(new String[]{"Box", "Expected"}, true, box, expected);
 
         char[][] output;
         boolean pass, finalPass = true;
@@ -110,7 +108,7 @@ public class RotatingTheBox_1861 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
 
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

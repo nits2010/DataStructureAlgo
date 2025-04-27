@@ -82,7 +82,7 @@ public class TwoSumIIInputArrayIsSorted_167 {
 
     private static boolean test(int[] numbers, int target, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Numbers", "target", "Expected"}, true, numbers, target, expected);
+        CommonMethods.printTest(new String[]{"Numbers", "target", "Expected"}, true, numbers, target, expected);
 
         int [] output ;
         boolean pass, finalPass = true;
@@ -92,7 +92,7 @@ public class TwoSumIIInputArrayIsSorted_167 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

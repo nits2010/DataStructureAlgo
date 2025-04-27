@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2064;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -84,7 +83,7 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
 
     private static boolean tests(int n, int[] quantities, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"n", "quantities", "Expected"}, true, n, quantities, expected);
+        CommonMethods.printTest(new String[]{"n", "quantities", "Expected"}, true, n, quantities, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -93,19 +92,19 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
         output = solutionBinarySearchUsingStores.minimizedMaximum(n, quantities);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BinarySearch-UsingStores", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BinarySearch-UsingStores", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionBinarySearch_UsingQuantities solutionBinarySearchUsingQuantities = new SolutionBinarySearch_UsingQuantities();
         output = solutionBinarySearchUsingQuantities.minimizedMaximum(n, quantities);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BinarySearch-UsingQuantities", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BinarySearch-UsingQuantities", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionPQ solutionPQ = new SolutionPQ();
         output = solutionPQ.minimizedMaximum(n, quantities);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"PQ", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"PQ", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

@@ -62,14 +62,14 @@ public class FindTheSmallestDivisorGivenAThreshold_1283 {
     }
 
     private static boolean test(int []nums, int threshold, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Threshold", "Expected"}, true, nums, threshold, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Threshold", "Expected"}, true, nums, threshold, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution sol = new Solution();
         output = sol.smallestDivisor(nums, threshold);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         return finalPass;

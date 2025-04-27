@@ -83,7 +83,7 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
 
     private static boolean test(int[] nums, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -93,20 +93,20 @@ public class ShortestSubarrayWithSumAtLeastK_862 {
         output = solutionUsingPQ.shortestSubarray(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingPQ", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingPQ", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_UsingBinarySearch solutionUsingBinarySearch = new Solution_UsingBinarySearch();
         output = solutionUsingBinarySearch.shortestSubarray(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingBinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingBinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         Solution_UsingDeque solutionUsingDeque = new Solution_UsingDeque();
         output = solutionUsingDeque.shortestSubarray(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingDeque", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingDeque", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

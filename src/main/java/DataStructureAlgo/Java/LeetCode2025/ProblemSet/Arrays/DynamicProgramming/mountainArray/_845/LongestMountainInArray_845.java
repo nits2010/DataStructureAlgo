@@ -80,13 +80,13 @@ public class LongestMountainInArray_845 {
     }
 
     private static boolean test(int[] arr, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, arr, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, arr, expected);
         int output;
         boolean pass = true;
         Solution solution = new Solution();
         output = solution.longestMountain(arr);
         pass &= output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return pass;
     }
 

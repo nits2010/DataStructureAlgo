@@ -89,7 +89,7 @@ public class MinimumAdjacentSwapsToReachTheKthSmallestNumber_1850 {
 
     private static boolean test(String num, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Num", "k", "Expected"}, true, num, k, expected);
+        CommonMethods.printTest(new String[]{"Num", "k", "Expected"}, true, num, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -99,7 +99,7 @@ public class MinimumAdjacentSwapsToReachTheKthSmallestNumber_1850 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

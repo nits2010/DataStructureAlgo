@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1072;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -78,7 +76,7 @@ public class FlipColumnsForMaximumNumberOfEqualRows_1072 {
 
     private static boolean test(int[][] matrix, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Matrix", "Expected"}, true, matrix, expected);
+        CommonMethods.printTest(new String[]{"Matrix", "Expected"}, true, matrix, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -88,13 +86,13 @@ public class FlipColumnsForMaximumNumberOfEqualRows_1072 {
         output = s.maxEqualRowsAfterFlips(matrix);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Solution", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Solution", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionV2 sV2 = new SolutionV2();
         output = sV2.maxEqualRowsAfterFlips(matrix);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"SolutionV2", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"SolutionV2", "Expected"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

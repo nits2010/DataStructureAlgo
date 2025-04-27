@@ -78,20 +78,20 @@ public class CapacityToShipPackagesWithinDDays_1011 {
     }
 
     private static boolean test(int[] weights, int days, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Weights", "Days", "Expected"}, true, weights, days, expected);
+        CommonMethods.printTest(new String[]{"Weights", "Days", "Expected"}, true, weights, days, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution sol = new Solution();
         output = sol.shipWithinDays(weights, days);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Binary Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         Solution2 sol2 = new Solution2();
         output = sol2.shipWithinDays(weights, days);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Binary Search 2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Binary Search 2", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
         return finalPass;
 

@@ -77,7 +77,7 @@ public class LongestSquareStreakInAnArray_2501 {
     }
 
     private static boolean test(int[] nums, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -86,33 +86,33 @@ public class LongestSquareStreakInAnArray_2501 {
         output = solutionUsingMapWithoutSort.longestSquareStreak(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingMapWithoutSort", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingMapWithoutSort", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingMapWithoutSortImproved solutionUsingMapWithoutSortImproved = new SolutionUsingMapWithoutSortImproved();
         output = solutionUsingMapWithoutSortImproved.longestSquareStreak(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingMapWithoutSortImproved", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingMapWithoutSortImproved", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         SolutionUsingVisitedArray solutionUsingVisitedArray = new SolutionUsingVisitedArray();
         output = solutionUsingVisitedArray.longestSquareStreak(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingVisitedArray", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingVisitedArray", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         SolutionUsingMapSort solutionUsingMapSort = new SolutionUsingMapSort();
         output = solutionUsingMapSort.longestSquareStreak(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingMapSort", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingMapSort", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingMapSortBinarySearch solutionUsingMapSortBinarySearch = new SolutionUsingMapSortBinarySearch();
         output = solutionUsingMapSortBinarySearch.longestSquareStreak(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingMapSortBinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingMapSortBinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
     }

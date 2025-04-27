@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._2516;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -74,7 +73,7 @@ public class TakeKOfEachCharacterFromLeftAndRight_2516 {
 
     private static boolean test(String s, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"String", "K", "Expected"}, true, s, k, expected);
+        CommonMethods.printTest(new String[]{"String", "K", "Expected"}, true, s, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -83,13 +82,13 @@ public class TakeKOfEachCharacterFromLeftAndRight_2516 {
         output = solutionV1.takeCharacters(s, k);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"V1", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"V1", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionV2 solutionV2 = new SolutionV2();
         output = solutionV2.takeCharacters(s, k);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"V2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"V2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         //add logic here

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._524;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -70,7 +68,7 @@ public class LongestWordInDictionaryThroughDeleting_524 {
 
     private static boolean test(String s, List<String> dictionary, String expected) {
 
-        CommonMethods.printTestOutcome(new String[]{"S", "dictionary", "Expected"}, true, s, dictionary, expected);
+        CommonMethods.printTest(new String[]{"S", "dictionary", "Expected"}, true, s, dictionary, expected);
 
         String output;
         boolean pass, finalPass = true;
@@ -79,13 +77,13 @@ public class LongestWordInDictionaryThroughDeleting_524 {
         output = solutionSort.findLongestWord(s, dictionary);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Sorting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Sorting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_BruteForce solutionBruteForce = new Solution_BruteForce();
         output = solutionBruteForce.findLongestWord(s, dictionary);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

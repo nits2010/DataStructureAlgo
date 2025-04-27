@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2513;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -79,7 +78,7 @@ public class MinimizeTheMaximumOfTwoArrays_2513 {
 
     private static boolean tests(int divisor1, int divisor2, int uniqueCnt1, int uniqueCnt2, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"divisor1", "divisor2", "uniqueCnt1", "uniqueCnt2", "Expected"}, true, divisor1, divisor2, uniqueCnt1, uniqueCnt2, expected);
+        CommonMethods.printTest(new String[]{"divisor1", "divisor2", "uniqueCnt1", "uniqueCnt2", "Expected"}, true, divisor1, divisor2, uniqueCnt1, uniqueCnt2, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -89,7 +88,7 @@ public class MinimizeTheMaximumOfTwoArrays_2513 {
         pass = output == expected;
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

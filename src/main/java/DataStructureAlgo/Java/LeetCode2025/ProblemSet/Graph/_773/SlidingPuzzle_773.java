@@ -87,7 +87,7 @@ public class SlidingPuzzle_773 {
 
     private static boolean test(int[][] nums, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -96,14 +96,14 @@ public class SlidingPuzzle_773 {
         output = solutionDfs.slidingPuzzle(nums);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"DFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"DFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         Solution_BFS solutionBFS = new Solution_BFS();
         output = solutionBFS.slidingPuzzle(nums);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"BFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BFS", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

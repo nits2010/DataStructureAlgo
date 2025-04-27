@@ -74,14 +74,14 @@ public class BestTimeToBuyAndSellStockIV_188 {
     }
 
     private static boolean test(int[] prices, int k, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Prices", "K", "Expected"}, true, prices, k, expected);
+        CommonMethods.printTest(new String[]{"Prices", "K", "Expected"}, true, prices, k, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution solution = new Solution();
         output = solution.maxProfit(k, prices);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
         return finalPass;
     }

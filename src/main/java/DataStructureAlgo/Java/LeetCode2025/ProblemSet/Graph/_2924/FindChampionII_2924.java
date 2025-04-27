@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph._2924;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -88,7 +86,7 @@ public class FindChampionII_2924 {
 
     private static boolean test(int [][]edges, int n, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Edges", "N",  "Expected"}, true, edges, n, expected);
+        CommonMethods.printTest(new String[]{"Edges", "N",  "Expected"}, true, edges, n, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -96,7 +94,7 @@ public class FindChampionII_2924 {
         Solution solution = new Solution();
         output = solution.findChampion(n, edges);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Expected"}, pass, output, expected);
+        CommonMethods.printTest(new String[]{"Output", "Expected"}, pass, output, expected);
         finalPass = finalPass && pass;
 
         return finalPass;

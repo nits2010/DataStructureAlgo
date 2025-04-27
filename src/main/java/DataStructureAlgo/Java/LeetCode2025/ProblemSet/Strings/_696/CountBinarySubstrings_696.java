@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._696;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -71,7 +69,7 @@ public class CountBinarySubstrings_696 {
 
     private static boolean test(String string, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"string", "Expected"}, true, string, expected);
+        CommonMethods.printTest(new String[]{"string", "Expected"}, true, string, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -81,7 +79,7 @@ public class CountBinarySubstrings_696 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Groups", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Groups", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         Solution_Optimized_TwoPointer solutionOptimizedTwoPointer = new Solution_Optimized_TwoPointer();
@@ -89,7 +87,7 @@ public class CountBinarySubstrings_696 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"TwoPointerGroups", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"TwoPointerGroups", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

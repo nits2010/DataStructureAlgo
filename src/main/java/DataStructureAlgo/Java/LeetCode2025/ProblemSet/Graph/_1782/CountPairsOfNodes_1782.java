@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph._1782;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -81,7 +79,7 @@ public class CountPairsOfNodes_1782 {
 
     private static boolean test(int[][] edges, int n, int[] queries, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"edges", "n", "queries", "Expected"}, true, edges, n, queries, expected);
+        CommonMethods.printTest(new String[]{"edges", "n", "queries", "Expected"}, true, edges, n, queries, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -90,13 +88,13 @@ public class CountPairsOfNodes_1782 {
         output = solutionString.countPairs(n, edges, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"EncodedString", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"EncodedString", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_EncodedOptimized solutionEncodedOptimized = new Solution_EncodedOptimized();
         output = solutionEncodedOptimized.countPairs(n, edges, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"EncodedOptimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"EncodedOptimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

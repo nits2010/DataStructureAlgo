@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.matrix._221;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -101,7 +99,7 @@ public class MaximalSquare_221 {
 
     private static boolean test(char[][] matrix, int expected) {
 
-        CommonMethods.printTestOutcome(new String[]{"Matrix", "Expected"}, true, matrix, expected);
+        CommonMethods.printTest(new String[]{"Matrix", "Expected"}, true, matrix, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -110,7 +108,7 @@ public class MaximalSquare_221 {
         output = solution.maximalSquare(matrix);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Solution", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Solution", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

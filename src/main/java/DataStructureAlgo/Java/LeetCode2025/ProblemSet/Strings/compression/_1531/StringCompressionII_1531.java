@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings.compression._1531;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -76,7 +74,7 @@ public class StringCompressionII_1531 {
 
     private static boolean test(String s, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "k", "Expected"}, true, s, k, expected);
+        CommonMethods.printTest(new String[]{"input", "k", "Expected"}, true, s, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -85,13 +83,13 @@ public class StringCompressionII_1531 {
         output = solution.getLengthOfOptimalCompression(s, k);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.TopDown topDown = new DynamicProgramming.TopDown();
         output = topDown.getLengthOfOptimalCompression(s, k);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

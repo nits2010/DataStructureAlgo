@@ -81,7 +81,7 @@ public class BestTimeToBuyAndSellStockWithTransactionFeeVI_714 {
 
     private static boolean test(int[] prices, int fee, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Prices", "Fee", "Expected"}, true, prices, fee, expected);
+        CommonMethods.printTest(new String[]{"Prices", "Fee", "Expected"}, true, prices, fee, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -90,38 +90,38 @@ public class BestTimeToBuyAndSellStockWithTransactionFeeVI_714 {
         output = recursion.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Recursion", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.TopDown topDown = new DynamicProgramming.TopDown();
         output = topDown.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
         output = bottomUp.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
         output = bottomUpSpaceOptimized.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUpV2 bottomUpV2 = new DynamicProgramming.BottomUpV2();
         output = bottomUpV2.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUpV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUpV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUpV2_SpaceOptimized bottomUpV2SpaceOptimized = new DynamicProgramming.BottomUpV2_SpaceOptimized();
         output = bottomUpV2SpaceOptimized.maxProfit(prices, fee);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

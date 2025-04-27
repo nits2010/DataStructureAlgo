@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._796;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -64,7 +62,7 @@ public class RotateString_796 {
 
     private static boolean test(String input, String rotated, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, input, expected);
 
         boolean output;
         boolean pass, finalPass = true;
@@ -73,7 +71,7 @@ public class RotateString_796 {
         output = solution.rotateString(input, rotated);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

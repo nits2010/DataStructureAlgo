@@ -68,7 +68,7 @@ public class CountTheNumberOfFairPairs_2563 {
 
     private static boolean tests(int[] input, int lower, int upper, long expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -78,7 +78,7 @@ public class CountTheNumberOfFairPairs_2563 {
         pass = output == expected;
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

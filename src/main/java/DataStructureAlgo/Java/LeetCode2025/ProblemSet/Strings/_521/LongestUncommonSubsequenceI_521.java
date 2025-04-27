@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._521;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -78,7 +76,7 @@ public class LongestUncommonSubsequenceI_521 {
 
     private static boolean test(String s1, String s2, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"s1", "s2", "Expected"}, true, s1, s2, expected);
+        CommonMethods.printTest(new String[]{"s1", "s2", "Expected"}, true, s1, s2, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -88,7 +86,7 @@ public class LongestUncommonSubsequenceI_521 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

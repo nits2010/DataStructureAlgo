@@ -4,7 +4,6 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * Author: Nitin Gupta
@@ -81,7 +80,7 @@ public class MinimumNumberOfChangesToMakeBinaryStringBeautiful_2914 {
 
     private static boolean tests(String input, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -91,7 +90,7 @@ public class MinimumNumberOfChangesToMakeBinaryStringBeautiful_2914 {
         pass = output == expected;
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass; 
 
     }

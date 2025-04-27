@@ -71,7 +71,7 @@ public class CheckIfNAndItsDoubleExist_1346 {
 
     private static boolean test(int[] arr, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"arr", "Expected"}, true, arr, expected);
+        CommonMethods.printTest(new String[]{"arr", "Expected"}, true, arr, expected);
 
         boolean output = false;
         boolean pass, finalPass = true;
@@ -80,20 +80,20 @@ public class CheckIfNAndItsDoubleExist_1346 {
         output = solutionFrequency.checkIfExist(arr);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Frequency", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Frequency", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_SetDoubleCheck solutionSetDobuleCheck = new Solution_SetDoubleCheck();
         output = solutionSetDobuleCheck.checkIfExist(arr);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"DoubleCheck-Set", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"DoubleCheck-Set", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         Solution_SetHalfCheck solutionSetHalfCheck = new Solution_SetHalfCheck();
         output = solutionSetHalfCheck.checkIfExist(arr);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HalfCheck-Set", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"HalfCheck-Set", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

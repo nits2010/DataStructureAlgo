@@ -71,7 +71,7 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
 
     private static boolean test(int[] nums, int expected) {
 
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, nums, expected);
         int output;
         boolean pass, finalPass = true;
 
@@ -79,19 +79,19 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
         output = solutionReverse.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionPoly.SolutionWithoutReverse solutionWithoutReverse = new SolutionPoly.SolutionWithoutReverse();
         output = solutionWithoutReverse.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Without Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Without Reverse", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingBinarySearch solutionUsingBinarySearch = new SolutionUsingBinarySearch();
         output = solutionUsingBinarySearch.minimumMountainRemovals(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
     }

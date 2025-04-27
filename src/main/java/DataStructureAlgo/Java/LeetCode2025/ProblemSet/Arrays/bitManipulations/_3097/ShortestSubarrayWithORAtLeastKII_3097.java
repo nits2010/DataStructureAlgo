@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.bitManipulations._3097;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -94,7 +92,7 @@ public class ShortestSubarrayWithORAtLeastKII_3097 {
 
     private static boolean test(int[] nums, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -103,7 +101,7 @@ public class ShortestSubarrayWithORAtLeastKII_3097 {
         output = solution.minimumSubarrayLength(nums, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

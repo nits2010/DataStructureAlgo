@@ -98,7 +98,7 @@ public class CircularArrayLoop_457 {
 
     private static boolean test(int[] nums, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         boolean output ;
         boolean pass, finalPass = true;
@@ -112,22 +112,22 @@ public class CircularArrayLoop_457 {
         output = solutionPolynomial.circularArrayLoop(nums);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Polynomial", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Polynomial", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionUsingVisited.circularArrayLoop(nums);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingVisited", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"UsingVisited", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionUsingArray.circularArrayLoop(nums);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingArray", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"UsingArray", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionUsingArrayFollowUp.circularArrayLoop(nums);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Followup", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Followup", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

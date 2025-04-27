@@ -88,7 +88,7 @@ public class ContainerWithMostWater_11 {
 
     private static boolean test(int[] height, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Height", "Expected"}, true, height, expected);
+        CommonMethods.printTest(new String[]{"Height", "Expected"}, true, height, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -98,12 +98,12 @@ public class ContainerWithMostWater_11 {
         output = solutionTwoPointer.maxArea(height);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionTwoPointerOptimized.maxArea(height);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pointer Optimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Two Pointer Optimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

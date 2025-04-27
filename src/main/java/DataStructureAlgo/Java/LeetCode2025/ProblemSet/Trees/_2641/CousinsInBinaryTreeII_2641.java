@@ -82,7 +82,7 @@ public class CousinsInBinaryTreeII_2641 {
     }
 
     private static boolean test(Integer[] input, Integer[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected" }, true, input, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected" }, true, input, expected);
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
         System.out.println("Level Order Traversal : " + TreeTraversalRecursive.levelOrderWithNull(root));
@@ -96,28 +96,28 @@ public class CousinsInBinaryTreeII_2641 {
         outputLevelOrder = TreeTraversalRecursive.levelOrderWithNull(output);
         pass = Arrays.deepEquals(expected, outputLevelOrder.toArray());
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pass BFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Two Pass BFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
 
         DFS.Solution_TwoPassDFS solutionTwoPassDFS = new DFS.Solution_TwoPassDFS();
         output = solutionTwoPassDFS.replaceValueInTree(TreeBuilder.buildTreeFromLevelOrder(input));
         outputLevelOrder = TreeTraversalRecursive.levelOrderWithNull(output);
         pass = Arrays.deepEquals(expected, outputLevelOrder.toArray());
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pass DFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Two Pass DFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
 
         BFS.Solution_OnePassBFS solutionOnePassBFS = new BFS.Solution_OnePassBFS();
         output = solutionOnePassBFS.replaceValueInTree(TreeBuilder.buildTreeFromLevelOrder(input));
         outputLevelOrder = TreeTraversalRecursive.levelOrderWithNull(output);
         pass = Arrays.deepEquals(expected, outputLevelOrder.toArray());
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"One Pass BFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"One Pass BFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
 
         DFS.Solution_OnePassDFS solutionOnePassDFS = new DFS.Solution_OnePassDFS();
         output = solutionOnePassDFS.replaceValueInTree(TreeBuilder.buildTreeFromLevelOrder(input));
         outputLevelOrder = TreeTraversalRecursive.levelOrderWithNull(output);
         pass = Arrays.deepEquals(expected, outputLevelOrder.toArray());
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"One Pass DFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"One Pass DFS",  "Pass"}, false, outputLevelOrder, (pass ? "Yes" : "No"));
 
         return finalPass;
 

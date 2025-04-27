@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.stockPrices._2291;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -93,7 +91,7 @@ public class MaximumProfitFromTradingStocksVII_2291 {
 
     private static boolean test(int[] present, int[] future, int budget, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Present", "Future", "Budget", "Expected"}, true, present, future, budget, expected);
+        CommonMethods.printTest(new String[]{"Present", "Future", "Budget", "Expected"}, true, present, future, budget, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -102,36 +100,36 @@ public class MaximumProfitFromTradingStocksVII_2291 {
         output = recursion.maxProfit(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Recursion", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.TopDown topDown = new DynamicProgramming.TopDown();
         output = topDown.maxProfit(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TopDown", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
         output = bottomUp.maxProfit(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         output = bottomUp.maxProfit2(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
         output = bottomUpSpaceOptimized.maxProfit(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         DynamicProgramming.BottomUpSpaceOptimizedV2 bottomUpSpaceOptimizedv2 = new DynamicProgramming.BottomUpSpaceOptimizedV2();
         output = bottomUpSpaceOptimizedv2.maxProfit(present, future, budget);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimizedV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp-SpaceOptimizedV2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

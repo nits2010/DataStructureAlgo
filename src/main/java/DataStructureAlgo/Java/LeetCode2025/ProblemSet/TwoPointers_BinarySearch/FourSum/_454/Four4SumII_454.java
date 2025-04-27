@@ -78,7 +78,7 @@ public class Four4SumII_454 {
 
     private static boolean test(int[] nums1, int[] nums2, int[] nums3, int[] nums4, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"nums1", "nums2", "nums3", "nums4", "Expected"}, true, nums1, nums2, nums3, nums4, expected);
+        CommonMethods.printTest(new String[]{"nums1", "nums2", "nums3", "nums4", "Expected"}, true, nums1, nums2, nums3, nums4, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -87,19 +87,19 @@ public class Four4SumII_454 {
         output = hashMapSolutionWithoutSort.fourSumCount(nums1, nums2, nums3, nums4);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HashMap - without Sort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"HashMap - without Sort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         HashMapSolution.Solution_WithSort hashMapSolutionWithSort = new HashMapSolution.Solution_WithSort();
         output = hashMapSolutionWithSort.fourSumCount(nums1, nums2, nums3, nums4);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HashMap - with Sort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"HashMap - with Sort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_BinarySearch solutionBinarySearch = new Solution_BinarySearch();
         output = solutionBinarySearch.fourSumCount(nums1, nums2, nums3, nums4);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         return finalPass;

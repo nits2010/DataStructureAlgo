@@ -78,7 +78,7 @@ public class BoatsToSavePeople_881 {
 
     private static boolean test(int[] people, int limit, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"People", "limit", "Expected"}, true, people, limit, expected);
+        CommonMethods.printTest(new String[]{"People", "limit", "Expected"}, true, people, limit, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -88,7 +88,7 @@ public class BoatsToSavePeople_881 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

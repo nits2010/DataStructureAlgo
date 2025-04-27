@@ -118,7 +118,7 @@ public class Three3Sum_15 {
 
     private static boolean test(int[] grid, List<List<Integer>> expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         List<List<Integer>> output;
         boolean pass, finalPass = true;
@@ -134,7 +134,7 @@ public class Three3Sum_15 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

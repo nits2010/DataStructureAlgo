@@ -5,7 +5,6 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.nonleetcode.Knapsack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -90,7 +89,7 @@ public class BestTimeToBuyAndSellStockII_122 {
     }
 
     private static boolean test(int[] prices, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Prices", "Expected"}, true, prices, expected);
+        CommonMethods.printTest(new String[]{"Prices", "Expected"}, true, prices, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -100,47 +99,47 @@ public class BestTimeToBuyAndSellStockII_122 {
         output = recursion.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Recursion", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
 
         DynamicProgramming.TopDownMemoization topDownMemoization = new DynamicProgramming.TopDownMemoization();
         output = topDownMemoization.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"TopDown", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"TopDown", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
         DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
         output = bottomUp.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BottomUp", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
 
         DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
         output = bottomUpSpaceOptimized.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BottomUp-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
         DynamicProgramming.BottomUpV2 bottomUpV2 = new DynamicProgramming.BottomUpV2();
         output = bottomUpV2.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUpV2", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BottomUpV2", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
 
         DynamicProgramming.BottomUpV2_SpaceOptimized bottomUpV2SpaceOptimized = new DynamicProgramming.BottomUpV2_SpaceOptimized();
         output = bottomUpV2SpaceOptimized.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BottomUpV2-SpaceOptimized", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
 
         Greedy.Solution solutionGreedy = new Greedy.Solution();
         output = solutionGreedy.maxProfit(prices);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Greedy", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Greedy", "Pass"}, false, prices, pass ? "PASS" : "FAIL");
 
         return finalPass;
     }

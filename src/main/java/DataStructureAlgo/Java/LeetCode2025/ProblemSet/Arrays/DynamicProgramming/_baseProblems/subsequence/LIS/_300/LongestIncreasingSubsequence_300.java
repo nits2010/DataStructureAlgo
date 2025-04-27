@@ -72,7 +72,7 @@ public class LongestIncreasingSubsequence_300 {
     }
 
     private static boolean test(int[] nums, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -81,13 +81,13 @@ public class LongestIncreasingSubsequence_300 {
         output = solutionPoly.lengthOfLIS(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionBinarySearch solutionBinarySearch = new SolutionBinarySearch();
         output = solutionBinarySearch.lengthOfLIS(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
         return finalPass;
     }
 

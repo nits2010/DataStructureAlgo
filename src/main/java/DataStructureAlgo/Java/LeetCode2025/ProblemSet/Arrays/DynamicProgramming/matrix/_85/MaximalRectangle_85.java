@@ -97,13 +97,13 @@ public class MaximalRectangle_85 {
         output = solutionUsingHistogram1.maximalRectangle(matrix);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingHistogram", "expected"}, pass, matrix, expected);
+        CommonMethods.printTest(new String[]{"UsingHistogram", "expected"}, pass, matrix, expected);
 
         Solution_UsingHistogram_OnFlyCalculate solutionUsingHistogramOnFlyCalculate = new Solution_UsingHistogram_OnFlyCalculate();
         output = solutionUsingHistogramOnFlyCalculate.maximalRectangle(matrix);
         pass = output == expected;
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingHistogram-OnFly", "expected"}, pass, matrix, expected);
+        CommonMethods.printTest(new String[]{"UsingHistogram-OnFly", "expected"}, pass, matrix, expected);
 
 
 

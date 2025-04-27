@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._713;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -81,7 +79,7 @@ public class SubarrayProductLessThanK_713 {
 
     private static boolean test(int[] grid, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
+        CommonMethods.printTest(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -91,7 +89,7 @@ public class SubarrayProductLessThanK_713 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

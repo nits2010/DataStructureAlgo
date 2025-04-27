@@ -2,7 +2,6 @@ package DataStructureAlgo.Java.LeetCode2025.Discuss_Section._SubArraySumAtMostK;
 
 import DataStructureAlgo.Java.LeetCode.subarrays.LongestSubarraySumAtMostk;
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.SumProblems._862.ShortestSubarrayWithSumAtLeastK_862;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -68,7 +67,7 @@ public class LongestSubArraySumAtMostK {
 
     private static boolean test(int[] nums, int k, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"nums", "k", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"nums", "k", "Expected"}, true, nums, k, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -78,7 +77,7 @@ public class LongestSubArraySumAtMostK {
         output = solutionSlidingWindow.largestSubArraySumAtMostK(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

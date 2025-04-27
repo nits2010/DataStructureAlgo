@@ -76,7 +76,7 @@ public class MaxSumOfRectangleNoLargerThanK_363 {
 
     private static boolean test(int[][] matrix, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Matrix", "K", "Expected"}, true, matrix, k, expected);
+        CommonMethods.printTest(new String[]{"Matrix", "K", "Expected"}, true, matrix, k, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -85,13 +85,13 @@ public class MaxSumOfRectangleNoLargerThanK_363 {
         output = kadens.maxSumSubmatrix(matrix, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_Kadens_PrefixSum kadensPrefixSum = new Solution_Kadens_PrefixSum();
         output = kadensPrefixSum.maxSumSubmatrix(matrix, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output-Optimized-Prefix sum", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output-Optimized-Prefix sum", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

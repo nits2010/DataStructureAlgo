@@ -1071,7 +1071,7 @@ public class CommonMethods {
     }
 
     @SafeVarargs
-    public static <T> void printTestOutcome(String[] prefixConsoles, boolean isInput, T... inputs) {
+    public static <T> void printTest(String[] prefixConsoles, boolean isInput, T... inputs) {
         if (isInput)
             System.out.println("------------------------------------------------------------------------------");
         StringBuilder console = new StringBuilder();

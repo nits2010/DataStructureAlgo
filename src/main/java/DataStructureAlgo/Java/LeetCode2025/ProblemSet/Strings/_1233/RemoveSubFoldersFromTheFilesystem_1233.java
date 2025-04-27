@@ -85,7 +85,7 @@ public class RemoveSubFoldersFromTheFilesystem_1233 {
     }
 
     private static boolean test(String[] folders, List<String> expected) {
-        CommonMethods.printTestOutcome(new String[]{"Folders", "Expected"}, true, folders, expected);
+        CommonMethods.printTest(new String[]{"Folders", "Expected"}, true, folders, expected);
 
         List<String> output;
         boolean pass, finalPass = true;
@@ -95,26 +95,26 @@ public class RemoveSubFoldersFromTheFilesystem_1233 {
         Collections.sort(output);
         pass = output.equals(expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingSet", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingSet", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingList solutionUsingList = new SolutionUsingList();
         output = solutionUsingList.removeSubfolders(Arrays.copyOf(folders, folders.length));
         pass = output.equals(expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingList", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingList", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingTrie solutionUsingTrie = new SolutionUsingTrie();
         output = solutionUsingTrie.removeSubfolders(Arrays.copyOf(folders, folders.length));
         pass = output.equals(expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingTrie", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingTrie", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionUsingTrie2 solutionUsingTrie2 = new SolutionUsingTrie2();
         output = solutionUsingTrie2.removeSubfolders(Arrays.copyOf(folders, folders.length));
         Collections.sort(output);
         pass = output.equals(expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"UsingTrie2", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"UsingTrie2", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

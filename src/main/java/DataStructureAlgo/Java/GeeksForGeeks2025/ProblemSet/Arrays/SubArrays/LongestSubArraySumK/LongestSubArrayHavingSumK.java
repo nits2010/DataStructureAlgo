@@ -2,7 +2,6 @@ package DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.SubArrays.Lon
 
 import java.util.*;
 
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._100.SameTree_100;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 
@@ -53,7 +52,7 @@ public class LongestSubArrayHavingSumK {
     }
 
     private static boolean test(int[] nums, int k, int[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -62,7 +61,7 @@ public class LongestSubArrayHavingSumK {
         output = solution.lenOfLongSubArr(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

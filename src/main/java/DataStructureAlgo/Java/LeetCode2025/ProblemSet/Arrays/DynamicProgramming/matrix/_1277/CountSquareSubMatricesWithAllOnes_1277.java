@@ -76,20 +76,20 @@ public class CountSquareSubMatricesWithAllOnes_1277 {
     }
 
     private static boolean test(int[][] matrix, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Matrix", "Expected"}, true, matrix, expected);
+        CommonMethods.printTest(new String[]{"Matrix", "Expected"}, true, matrix, expected);
         int output;
         boolean pass, finalPass = true;
 
         Solution_WithMemory solutionWithMemory = new Solution_WithMemory();
         output = solutionWithMemory.countSquares(matrix);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"WithMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"WithMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         Solution_WithoutMemory solutionWithoutMemory = new Solution_WithoutMemory();
         output = solutionWithoutMemory.countSquares(matrix);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"WithoutMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"WithoutMemory", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
 
         return finalPass;

@@ -84,7 +84,7 @@ public class Three3SumWithMultiplicity_923 {
 
     private static boolean test(int[] grid, int target, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, target, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, target, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -93,14 +93,14 @@ public class Three3SumWithMultiplicity_923 {
         output = solutionSorting.threeSumMulti(grid, target);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Sorting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Sorting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionCounting solutionCounting = new SolutionCounting();
         output = solutionCounting.threeSumMulti(grid, target);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Counting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Counting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

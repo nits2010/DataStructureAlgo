@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._719;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -86,7 +84,7 @@ public class FindKthSmallestPairDistance_719 {
 
     private static boolean test(int[] grid, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
+        CommonMethods.printTest(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -98,17 +96,17 @@ public class FindKthSmallestPairDistance_719 {
         output = solutionPriorityQueue.smallestDistancePair(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"PriorityQueue", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"PriorityQueue", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionBucketSort.smallestDistancePair(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BucketSort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BucketSort", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionSlidingWindow.smallestDistancePair(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"SlidingWindow_BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"SlidingWindow_BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

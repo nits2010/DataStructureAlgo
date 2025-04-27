@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._2463;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -95,7 +93,7 @@ public class MinimumTotalDistanceTraveled_2463 {
     }
 
     private static boolean test(List<Integer> robot, int[][] factory, long expected) {
-        CommonMethods.printTestOutcome(new String[]{"robot", "factory", "expected"}, true, robot, factory, expected);
+        CommonMethods.printTest(new String[]{"robot", "factory", "expected"}, true, robot, factory, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -104,38 +102,38 @@ public class MinimumTotalDistanceTraveled_2463 {
         output = solutionRecursion1.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion-1", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Recursion-1", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
         Recursion.SolutionRecursion2 solutionRecursion2 = new Recursion.SolutionRecursion2();
         output = solutionRecursion2.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Recursion-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
         DynamicProgramming.TopDown_Memoization topDownMemoization = new DynamicProgramming.TopDown_Memoization();
         output = topDownMemoization.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"topDownMemoization", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"topDownMemoization", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
         DynamicProgramming.TopDown_Memoization2 topDownMemoization2 = new DynamicProgramming.TopDown_Memoization2();
         output = topDownMemoization2.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"topDownMemoization-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"topDownMemoization-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
         DynamicProgramming.BottomUp_Tabulations bottomUpTabulations = new DynamicProgramming.BottomUp_Tabulations();
         output = bottomUpTabulations.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"bottomUpTabulations", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"bottomUpTabulations", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
         DynamicProgramming.BottomUp_Tabulations2 bottomUpTabulations2 = new DynamicProgramming.BottomUp_Tabulations2();
         output = bottomUpTabulations2.minimumTotalDistance(robot, factory);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"bottomUpTabulations-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"bottomUpTabulations-2", "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
         return finalPass;

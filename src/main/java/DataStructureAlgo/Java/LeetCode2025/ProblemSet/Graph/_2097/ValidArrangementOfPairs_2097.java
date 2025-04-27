@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph._2097;
 
 import DataStructureAlgo.Java.LeetCode.graph.ReconstructItinerary;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -93,7 +92,7 @@ public class ValidArrangementOfPairs_2097 {
 
     private static boolean test(int[][] grid, int[][] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         int[][] output = null;
         boolean pass, finalPass = true;
@@ -102,27 +101,27 @@ public class ValidArrangementOfPairs_2097 {
         output = solutionEulerianCircuit.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"EulerianCircuit", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"EulerianCircuit", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         Solution_Hierholzer solutionHierholzer = new Solution_Hierholzer();
         output = solutionHierholzer.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Hierholzer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Hierholzer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         Solution_HierholzerIterative solutionHierholzerIterative = new Solution_HierholzerIterative();
         output = solutionHierholzerIterative.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"HierholzerIterative", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"HierholzerIterative", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_Hierholzer_ComputeOnTheFly solutionHierholzerComputeOnTheFly = new Solution_Hierholzer_ComputeOnTheFly();
         output = solutionHierholzerComputeOnTheFly.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Hierholzer_ComputeOnTheFly", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Hierholzer_ComputeOnTheFly", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

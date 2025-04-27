@@ -97,7 +97,7 @@ public class BagOfTokens_948 {
 
     private static boolean test(int[] tokens, int power, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Tokens", "Power", "Expected"}, true, tokens, power, expected);
+        CommonMethods.printTest(new String[]{"Tokens", "Power", "Expected"}, true, tokens, power, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -107,7 +107,7 @@ public class BagOfTokens_948 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

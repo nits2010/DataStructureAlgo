@@ -68,13 +68,13 @@ public class ValidMountainArray_941 {
     }
 
     private static boolean test(int[] arr, boolean expected) {
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, arr, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, arr, expected);
         boolean output;
         boolean pass = true;
         Solution solution = new Solution();
         output = solution.validMountainArray(arr);
         pass &= output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return pass;
     }
 

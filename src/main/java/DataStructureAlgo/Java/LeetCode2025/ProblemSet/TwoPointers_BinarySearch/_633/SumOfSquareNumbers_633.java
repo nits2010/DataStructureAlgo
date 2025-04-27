@@ -66,7 +66,7 @@ public class SumOfSquareNumbers_633 {
     }
 
     private static boolean test(int c, boolean expected) {
-        CommonMethods.printTestOutcome(new String[]{"c", "Expected"}, true, c, expected);
+        CommonMethods.printTest(new String[]{"c", "Expected"}, true, c, expected);
 
         boolean output;
         boolean pass, finalPass = true;
@@ -75,15 +75,15 @@ public class SumOfSquareNumbers_633 {
         output = solution.judgeSquareSum(c);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionPerfectSquare solutionPerfectSquare = new SolutionPerfectSquare();
         output = solutionPerfectSquare.judgeSquareSum(c);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Perfect Square", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Perfect Square", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

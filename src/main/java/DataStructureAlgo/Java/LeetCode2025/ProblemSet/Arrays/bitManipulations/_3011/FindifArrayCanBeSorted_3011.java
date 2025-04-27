@@ -80,7 +80,7 @@ public class FindifArrayCanBeSorted_3011 {
 
     private static boolean tests(int[] input, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
 
         boolean output;
         boolean pass, finalPass = true;
@@ -90,7 +90,7 @@ public class FindifArrayCanBeSorted_3011 {
         pass = output == expected;
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

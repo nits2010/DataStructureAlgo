@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2257;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -81,7 +79,7 @@ public class CountUnguardedCellsInTheGrid_2257 {
 
     private static boolean test(int m, int n, int[][] guards, int[][] walls, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"m", "n", "Guards", "Walls", "Expected"}, true, m, n, guards, walls, expected);
+        CommonMethods.printTest(new String[]{"m", "n", "Guards", "Walls", "Expected"}, true, m, n, guards, walls, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -90,13 +88,13 @@ public class CountUnguardedCellsInTheGrid_2257 {
         output = solutionCountUnguardedCells.countUnguarded(m, n, guards, walls);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"CountUnguardedCells", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"CountUnguardedCells", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_CountGuardedCells solutionCountGuardedCells = new Solution_CountGuardedCells();
         output = solutionCountGuardedCells.countUnguarded(m, n, guards, walls);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"CountGuardedCells", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"CountGuardedCells", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

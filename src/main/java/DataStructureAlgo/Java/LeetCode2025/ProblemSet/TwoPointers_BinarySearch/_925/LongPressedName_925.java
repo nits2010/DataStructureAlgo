@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._925;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -67,7 +65,7 @@ public class LongPressedName_925 {
 
     private static boolean test(String name, String typed, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Name", "typed", "Expected"}, true, name, typed, expected);
+        CommonMethods.printTest(new String[]{"Name", "typed", "Expected"}, true, name, typed, expected);
 
         Boolean output ;
         boolean pass, finalPass = true;
@@ -77,7 +75,7 @@ public class LongPressedName_925 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -87,7 +87,7 @@ public class PrimeSubtractionOperation_2601 {
 
     private static boolean test(int[] nums, boolean expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Num", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Num", "Expected"}, true, nums, expected);
 
         boolean output;
         boolean pass, finalPass = true;
@@ -95,7 +95,7 @@ public class PrimeSubtractionOperation_2601 {
         output = solution.primeSubOperation(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2070;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -84,7 +83,7 @@ public class MostBeautifulItemForEachQuery_2070 {
 
 
     private static boolean tests(int[][] items, int[] queries, int[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"Items", "Queries", "Expected"}, true, items, queries, expected);
+        CommonMethods.printTest(new String[]{"Items", "Queries", "Expected"}, true, items, queries, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -93,13 +92,13 @@ public class MostBeautifulItemForEachQuery_2070 {
         output = solutionBinarySearch.maximumBeauty(items, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Binary-Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Binary-Search", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionSortingQueries solutionSortingQueries = new SolutionSortingQueries();
         output = solutionSortingQueries.maximumBeauty(items, queries);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Sorting-Queries", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Sorting-Queries", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
 
     }

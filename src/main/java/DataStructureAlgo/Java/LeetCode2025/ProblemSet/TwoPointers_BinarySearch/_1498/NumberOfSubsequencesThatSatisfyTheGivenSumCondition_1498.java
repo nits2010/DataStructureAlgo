@@ -80,7 +80,7 @@ public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition_1498 {
 
     private static boolean test(int[] grid, int target, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
+        CommonMethods.printTest(new String[]{"Grid", "target", "Expected"}, true, grid, target, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -90,7 +90,7 @@ public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition_1498 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

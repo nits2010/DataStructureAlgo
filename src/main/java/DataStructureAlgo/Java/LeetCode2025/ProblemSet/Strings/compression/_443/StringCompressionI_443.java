@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings.compression._443;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -90,7 +88,7 @@ public class StringCompressionI_443 {
 
     private static boolean tests(char[] input, int expected, char[] expectedArray) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected", "ExpectedArray"}, true, input, expected, expectedArray);
+        CommonMethods.printTest(new String[]{"input", "Expected", "ExpectedArray"}, true, input, expected, expectedArray);
 
         int output;
         boolean pass, finalPass = true;
@@ -109,7 +107,7 @@ public class StringCompressionI_443 {
             }
         }
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

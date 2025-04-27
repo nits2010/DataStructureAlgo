@@ -1,11 +1,8 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._42;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.templates.MaxHeap;
 
 /**
  * Author: Nitin Gupta
@@ -104,7 +101,7 @@ public class TrappingRainWater_42 {
 
     private static boolean test(int[] heights, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Heights", "Expected"}, true, heights, expected);
+        CommonMethods.printTest(new String[]{"Heights", "Expected"}, true, heights, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -113,19 +110,19 @@ public class TrappingRainWater_42 {
         output = usingMonotonicStack.trap(heights);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using Monotonic Stack", "Pass"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"Using Monotonic Stack", "Pass"}, false, output, pass ? "Passed" : "Failed");
 
         UsingPrefixArray usingPrefixArray = new UsingPrefixArray();
         output = usingPrefixArray.trap(heights);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using Prefix Array", "Pass"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"Using Prefix Array", "Pass"}, false, output, pass ? "Passed" : "Failed");
 
         UsingPrefixArrayConstantSpace usingPrefixArrayConstantSpace = new UsingPrefixArrayConstantSpace();
         output = usingPrefixArrayConstantSpace.trap(heights);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using Prefix Array Constant Space", "Pass"}, false, output, pass ? "Passed" : "Failed");
+        CommonMethods.printTest(new String[]{"Using Prefix Array Constant Space", "Pass"}, false, output, pass ? "Passed" : "Failed");
 
         return finalPass;
 

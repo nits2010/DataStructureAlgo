@@ -4,7 +4,6 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks._739;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -72,7 +71,7 @@ public class DailyTemperatures_739 {
     }
 
     private static boolean test(int[] tem, int[] expected) {
-        CommonMethods.printTestOutcome(new String[]{"temperature", "Expected"}, true, tem, expected);
+        CommonMethods.printTest(new String[]{"temperature", "Expected"}, true, tem, expected);
 
         boolean pass = true, finalPass = true;
         int[] output;
@@ -81,19 +80,19 @@ public class DailyTemperatures_739 {
         output = tempStack.dailyTemperatures(tem);
         pass = CommonMethods.equalsValues(output, expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Stacks", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Stacks", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         output = tempStack.dailyTemperaturesForward(tem);
         pass = CommonMethods.equalsValues(output, expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Stacks-2", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Stacks-2", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         DailyTemperatures.SolutionWithoutUsingStacks withoutUsingStacks = new DailyTemperatures.SolutionWithoutUsingStacks();
         output = withoutUsingStacks.dailyTemperatures(tem);
         pass = CommonMethods.equalsValues(output, expected);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Without Stacks", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Without Stacks", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         return finalPass;

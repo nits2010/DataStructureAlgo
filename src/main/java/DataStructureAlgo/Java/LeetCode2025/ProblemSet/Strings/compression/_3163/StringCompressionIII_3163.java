@@ -83,7 +83,7 @@ public class StringCompressionIII_3163 {
 
     private static boolean test(String word, String expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Word", "Expected"}, true, word, expected);
+        CommonMethods.printTest(new String[]{"Word", "Expected"}, true, word, expected);
 
         String output;
         boolean pass, finalPass = true;
@@ -93,7 +93,7 @@ public class StringCompressionIII_3163 {
         output = solution.compressedString(word);
         pass = output.equals(expected);
         finalPass = finalPass && pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 

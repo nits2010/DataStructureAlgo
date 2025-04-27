@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._2109;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -84,7 +82,7 @@ public class AddingSpacesToAString_2109 {
 
     private static boolean test(int[] spaces, String input, String expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Spaces", "Input", "Expected"}, true, spaces, input, expected);
+        CommonMethods.printTest(new String[]{"Spaces", "Input", "Expected"}, true, spaces, input, expected);
 
         String output;
         boolean pass, finalPass = true;
@@ -93,13 +91,13 @@ public class AddingSpacesToAString_2109 {
         output = solutionStringBuilder.addSpaces(input, spaces);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"StringBuilder", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"StringBuilder", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_Array solutionArray = new Solution_Array();
         output = solutionArray.addSpaces(input, spaces);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Array", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Array", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

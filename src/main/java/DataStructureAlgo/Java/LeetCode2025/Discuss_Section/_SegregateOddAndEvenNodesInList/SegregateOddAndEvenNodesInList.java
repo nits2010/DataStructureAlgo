@@ -51,7 +51,7 @@ public class SegregateOddAndEvenNodesInList {
 
     private static boolean test(Integer[] input, Integer[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"input", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
 
         ListNode head = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
@@ -63,13 +63,13 @@ public class SegregateOddAndEvenNodesInList {
         output = solution1.segregateOddAndEvenNodesInList(ListBuilder.arrayToSinglyList(input));
         pass = CommonMethods.equalsValues(expectedList, output);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"InList", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"InList", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution2 solution2 = new Solution2();
         output = solution2.segregateOddAndEvenNodesInListSepList(ListBuilder.arrayToSinglyList(input));
         pass = CommonMethods.equalsValues(expectedList, output);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Sep-List", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Sep-List", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
     }

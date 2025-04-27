@@ -4,7 +4,6 @@ import DataStructureAlgo.Java.LeetCode.LargetstRectangle.LargestHistogram;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -78,7 +77,7 @@ public class LargestRectangleInHistogram_84 {
     }
 
     private static boolean test(int[] input, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"matrix", "Expected"}, true, input, expected);
+        CommonMethods.printTest(new String[]{"matrix", "Expected"}, true, input, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -87,14 +86,14 @@ public class LargestRectangleInHistogram_84 {
         output = bruteForce.largestRectangleArea(input);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         LargestRectangleInHistogram.SolutionUsingBoundaries_LeftRightSmaller solutionUsingBoundariesLeftRightSmaller = new LargestRectangleInHistogram.SolutionUsingBoundaries_LeftRightSmaller();
         output = solutionUsingBoundariesLeftRightSmaller.largestRectangleArea(input);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Boundaries-LeftRightSmaller", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Boundaries-LeftRightSmaller", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
 
@@ -102,7 +101,7 @@ public class LargestRectangleInHistogram_84 {
         output = stacks.largestRectangleArea(input);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"StackS", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"StackS", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         return finalPass;

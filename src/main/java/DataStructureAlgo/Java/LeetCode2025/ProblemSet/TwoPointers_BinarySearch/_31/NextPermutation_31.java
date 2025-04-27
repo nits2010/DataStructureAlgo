@@ -91,7 +91,7 @@ public class NextPermutation_31 {
 
     private static boolean test(int[] nums, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -101,7 +101,7 @@ public class NextPermutation_31 {
         pass = CommonMethods.compareResultOutCome(nums, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, nums, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, nums, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

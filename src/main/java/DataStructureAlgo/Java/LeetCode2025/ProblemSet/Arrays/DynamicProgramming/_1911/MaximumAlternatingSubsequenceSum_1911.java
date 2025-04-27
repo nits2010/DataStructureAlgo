@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._1911;
 
 import DataStructureAlgo.Java.nonleetcode.Knapsack;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -76,7 +75,7 @@ public class MaximumAlternatingSubsequenceSum_1911 {
 
     private static boolean test(int[] nums, long expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -85,42 +84,42 @@ public class MaximumAlternatingSubsequenceSum_1911 {
         output = recursion.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Recursion", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Recursion", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.TopDown topDown = new DynamicProgramming.TopDown();
         output = topDown.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"TopDown", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TopDown", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.BottomUp bottomUp = new DynamicProgramming.BottomUp();
         output = bottomUp.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.BottomUp2 bottomUp2 = new DynamicProgramming.BottomUp2();
         output = bottomUp2.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BottomUp2", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BottomUp2", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.BottomUpSpaceOptimized bottomUpSpaceOptimized = new DynamicProgramming.BottomUpSpaceOptimized();
         output = bottomUpSpaceOptimized.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"bottomUpSpaceOptimized", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"bottomUpSpaceOptimized", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         DynamicProgramming.BottomUpSpaceOptimized2 bottomUpSpaceOptimized2 = new DynamicProgramming.BottomUpSpaceOptimized2();
         output = bottomUpSpaceOptimized2.maxAlternatingSum(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"bottomUpSpaceOptimized2", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"bottomUpSpaceOptimized2", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

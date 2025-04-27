@@ -1,7 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow.sum_problems._1652;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import DataStructureAlgo.Java.helpers.*;
 
 import java.util.*;
 
@@ -83,7 +82,7 @@ public class DefuseTheBomb_1652 {
 
     private static boolean test(int[] code, int k, int[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Code", "k", "Expected"}, true, code, k, expected);
+        CommonMethods.printTest(new String[]{"Code", "k", "Expected"}, true, code, k, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -92,19 +91,19 @@ public class DefuseTheBomb_1652 {
         output = solutionBruteForce.decrypt(code, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"BruteForce", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"BruteForce", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_ForwardBackward_SlidingWindow solutionForwardBackwardSlidingWindow = new Solution_ForwardBackward_SlidingWindow();
         output = solutionForwardBackwardSlidingWindow.decrypt(code, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"ForwardBackward", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"ForwardBackward", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         Solution_SlidingWindow solutionSlidingWindow = new Solution_SlidingWindow();
         output = solutionSlidingWindow.decrypt(code, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"SlidingWindow", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"SlidingWindow", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

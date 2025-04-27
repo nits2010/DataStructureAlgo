@@ -68,7 +68,7 @@ public class NumberOfSubarraysWithBoundedMaximum_795 {
 
     private static boolean test(int[] nums, int left, int right, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "left", "right", "Expected"}, true, nums, left, right, expected);
+        CommonMethods.printTest(new String[]{"Nums", "left", "right", "Expected"}, true, nums, left, right, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -78,7 +78,7 @@ public class NumberOfSubarraysWithBoundedMaximum_795 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

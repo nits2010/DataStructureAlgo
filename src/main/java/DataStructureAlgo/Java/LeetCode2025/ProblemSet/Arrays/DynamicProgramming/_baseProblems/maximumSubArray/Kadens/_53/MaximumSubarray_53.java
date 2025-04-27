@@ -50,7 +50,7 @@ public class MaximumSubarray_53 {
 
     private static boolean test(int[] nums, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -59,7 +59,7 @@ public class MaximumSubarray_53 {
         output = kadensAlgorithm.maxSubArray(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"kadensAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"kadensAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
 
 
         return finalPass;

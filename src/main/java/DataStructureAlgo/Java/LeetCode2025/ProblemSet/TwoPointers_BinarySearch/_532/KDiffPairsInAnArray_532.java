@@ -87,7 +87,7 @@ public class KDiffPairsInAnArray_532 {
 
     private static boolean test(int[] grid, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
+        CommonMethods.printTest(new String[]{"Grid", "k", "Expected"}, true, grid, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -100,22 +100,22 @@ public class KDiffPairsInAnArray_532 {
         output = solutionMapSet.findPairs(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionMapSet", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionMapSet", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionFreqMap.findPairs(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionFreqMap", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionFreqMap", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionBinarySearchSet.findPairs(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionBinarySearchSet", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionBinarySearchSet", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         output = solutionTwoPointer.findPairs(grid, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"solutionTwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionTwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

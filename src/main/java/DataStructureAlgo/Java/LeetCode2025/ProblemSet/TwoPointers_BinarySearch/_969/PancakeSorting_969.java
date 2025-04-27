@@ -88,7 +88,7 @@ public class PancakeSorting_969 {
 
     private static boolean test(int[] nums, int k, List<Integer> expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "K", "Expected"}, true, nums, k, expected);
 
         List<Integer> output;
         boolean pass, finalPass = true;
@@ -98,7 +98,7 @@ public class PancakeSorting_969 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

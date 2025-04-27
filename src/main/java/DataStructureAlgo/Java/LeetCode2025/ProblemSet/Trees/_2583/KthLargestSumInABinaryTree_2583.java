@@ -83,7 +83,7 @@ public class KthLargestSumInABinaryTree_2583 {
     }
 
     private static boolean test(Integer[] nums, int k, long expected) {
-        CommonMethods.printTestOutcome(new String[]{"Input", "K", "Expected" }, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Input", "K", "Expected" }, true, nums, k, expected);
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(nums);
         System.out.println("Level order traversal : " + TreeTraversalRecursive.levelOrderWithNull(root));
@@ -97,13 +97,13 @@ public class KthLargestSumInABinaryTree_2583 {
         output = solutionPQ.kthLargestLevelSum(root, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using PQ",  "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Using PQ",  "Pass"}, false, output, (pass ? "Yes" : "No"));
 
 
         output = solutionUsingList.kthLargestLevelSum(root, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Using List Quick Select",  "Pass"}, false, output, (pass ? "Yes" : "No"));
+        CommonMethods.printTest(new String[]{"Using List Quick Select",  "Pass"}, false, output, (pass ? "Yes" : "No"));
 
         return finalPass;
 

@@ -80,7 +80,7 @@ public class MaximumSumOfDistinctSubArraysWithLengthK_2461 {
 
     private static boolean test(int[] nums, int k, long expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
+        CommonMethods.printTest(new String[]{"Nums", "k", "Expected"}, true, nums, k, expected);
 
         long output;
         boolean pass, finalPass = true;
@@ -89,13 +89,13 @@ public class MaximumSumOfDistinctSubArraysWithLengthK_2461 {
         output = solutionMap.maximumSubarraySum(nums, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Map", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Map", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution solution = new Solution();
         output = solution.maximumSubarraySum(nums, k);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Array", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Array", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         return finalPass;

@@ -76,13 +76,13 @@ public class MaximumNumberOfMovesInAGrid_2684 {
 
 
     private static boolean test(int[][] grid, int expected) {
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
         int output;
         boolean pass, finalPass = true;
         Solution solution = new Solution();
         output = solution.maxMoves(grid);
         pass = output == expected;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "Pass" : "Fail");
         finalPass &= pass;
         return finalPass;
     }

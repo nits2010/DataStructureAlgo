@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2517;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -84,7 +82,7 @@ public class MaximumTastinessOfCandyBasket_2517 {
 
     private static boolean test(int[] price, int k, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Prices", "K", "Expected"}, true, price, k, expected);
+        CommonMethods.printTest(new String[]{"Prices", "K", "Expected"}, true, price, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -93,7 +91,7 @@ public class MaximumTastinessOfCandyBasket_2517 {
         output = solutionBinarySearch.maximumTastiness(price, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

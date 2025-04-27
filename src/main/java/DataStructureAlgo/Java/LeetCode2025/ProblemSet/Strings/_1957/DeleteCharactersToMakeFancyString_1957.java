@@ -72,7 +72,7 @@ public class DeleteCharactersToMakeFancyString_1957 {
     }
 
     private static boolean test(String s, String expected) {
-        CommonMethods.printTestOutcome(new String[]{"Input", "Expected"}, true, s, expected);
+        CommonMethods.printTest(new String[]{"Input", "Expected"}, true, s, expected);
         String output;
         boolean pass, finalPass = true;
 
@@ -80,13 +80,13 @@ public class DeleteCharactersToMakeFancyString_1957 {
         output = solutionLastTwoCharMatch.makeFancyString(s);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"TwoCharMatch", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"TwoCharMatch", "Pass"}, false, output, pass ? "Pass" : "Fail");
 
         SolutionFrequency solutionFrequency = new SolutionFrequency();
         output = solutionFrequency.makeFancyString(s);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Frequency", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[]{"Frequency", "Pass"}, false, output, pass ? "Pass" : "Fail");
         return finalPass;
     }
 
