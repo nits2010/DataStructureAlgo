@@ -192,7 +192,7 @@ class MedianFinderUsingPQSimplified {
                 minHeap.offer(num);
 
             //balance heaps; make either equal or maxHeap has 1 more element
-            if (maxHeap.size() > minHeap.size() + 1) { //if max heap has 2 more element then minHeap; make maxHeap can have atmost 1 more element
+            if (maxHeap.size() > minHeap.size() + 1) { //if max heap has 2 more elements than minHeap; make maxHeap can have almost 1 more element
                 minHeap.offer(maxHeap.poll());
             } else if (maxHeap.size() < minHeap.size()) {
                 maxHeap.offer(minHeap.poll());

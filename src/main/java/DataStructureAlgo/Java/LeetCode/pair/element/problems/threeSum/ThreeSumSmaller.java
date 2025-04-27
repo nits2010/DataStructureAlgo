@@ -11,7 +11,8 @@ import java.util.Arrays;
  * http://leetcode.liangjiateng.cn/leetcode/3sum-smaller/description
  * https://www.geeksforgeeks.org/count-triplets-with-sum-smaller-that-a-given-value/
  * <p>
- * Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
+ * Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy
+ * the condition nums[i] + nums[j] + nums[k] < target.
  * <p>
  * Example:
  * <p>
@@ -110,12 +111,12 @@ class ThreeSumSmallerSorting {
 
                     solution += k - j; //All the elements between k and j would satisfy this condition when k moving towards j
 
-                    //Sum is smaller, make it bigger by moving j to more big number
+                    //The Sum is smaller, make it bigger by moving j to bigger number
                     j++;
 
 
                 } else
-                    k--; //Sum is bigger, then reduce the bigger number to smaller number; hence k
+                    k--; //The Sum is bigger, then reduce the bigger number to smaller number; hence k
             }
 
         }

@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
- * Description: https://leetcode.com/problems/4sum-ii/
+ * Description: 4Sum II
+ * https://leetcode.com/problems/4sum-ii/
  * Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are
  * such that A[i] + B[j] + C[k] + D[l] is zero.
  * To make problem a bit easier, all A, B, C, D have same length of N where 0 ≤ N ≤ 500.
@@ -53,15 +54,15 @@ interface IFourSum4SumII {
 
 
 /**
- * Reduce the problem to two sum problem
+ * Reduce the problem to two sum problems
  * Algo:
  * Compute Sum List-> A+B for all
- * Compute diff List-> -(C+D) for all [ note here  -(c+d) not (c+d) . a+b+c+d => a+b = -(c+d) ]
+ * Compute diff List-> -(C+D) for all [ note here  -(c+d) not (c+d) . A+b+c+d => a+b = -(c+d) ]
  * For each element in sum list -> element
- * Find how many times it occurred in Diff list and add that count
+ * Find how many times it occurred in a Diff list and add that count
  * To Find occurrence, we can use binary search
  * <p>
- * Find the index of first occurrence of element
+ * Find the index of first occurrence of an element
  * find the index of last occurrence of element
  * count = last-fist+1
  * <p>
@@ -88,7 +89,7 @@ class FourSum4SumIISorting implements IFourSum4SumII {
             for (int j = 0; j < n; j++) {
 
                 /*
-                 * Convert those array in elements such a way that for elemnets sum become zero.
+                 * Convert those arrays in elements such a way that for an element sum become zero.
                  * a + b + c + d = target
                  * a + b = target - (c+d)
                  */
@@ -183,8 +184,8 @@ class FourSum4SumIISorting implements IFourSum4SumII {
 
 
 /**
- * Count frequency of A+B.
- * Then For every -(C+D) see how many times it occurred in frequency map
+ * Count the frequency of A+B.
+ * Then For every -(C+D) see how many times it occurred in a frequency map
  * <p>
  * Runtime: 73 ms, faster than 79.17% of Java online submissions for 4Sum II.
  * Memory Usage: 59.2 MB, less than 44.00% of Java online submissions for 4Sum II.

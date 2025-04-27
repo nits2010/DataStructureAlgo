@@ -12,24 +12,24 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Description:https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
  *
  * <p>
- *Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
- *
- *
- *
+ * Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
- *
+ * <p>
+ * <p>
  * Input: head = [1,2,3,3,4,4,5]
  * Output: [1,2,5]
  * Example 2:
- *
- *
+ * <p>
+ * <p>
  * Input: head = [1,1,1,2,3]
  * Output: [2,3]
- *
- *
+ * <p>
+ * <p>
  * Constraints:
- *
+ * <p>
  * The number of nodes in the list is in the range [0, 300].
  * -100 <= Node.val <= 100
  * The list is guaranteed to be sorted in ascending order.
@@ -37,17 +37,15 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._80.RemoveDuplicatesFromSortedArrayII_80}
  * extension {@link RemoveDuplicatesFromSortedList_83}
  * <p>
  * Tags
  * -----
+ *
  * @medium
  * @LinkedList
- * @TwoPointers
- *
- *
- * <p>
+ * @TwoPointers <p>
  * Company Tags
  * -----
  * @Amazon
@@ -57,14 +55,14 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 public class RemoveDuplicatesFromSortedListII_82 {
     public static void main(String[] args) {
         boolean testResult = true;
-        testResult &= test(new Integer[]{1,2,3,3,4,5,8}, new Integer[]{1,2,4,5,8});
-        testResult &= test(new Integer[]{1,1,1,2,3}, new Integer[]{2,3});
-        testResult &= test(new Integer[]{1,2,3,4,5,6}, new Integer[]{1,2,3,4,5,6});
-        testResult &= test(new Integer[]{1,1,1}, null);
+        testResult &= test(new Integer[]{1, 2, 3, 3, 4, 5, 8}, new Integer[]{1, 2, 4, 5, 8});
+        testResult &= test(new Integer[]{1, 1, 1, 2, 3}, new Integer[]{2, 3});
+        testResult &= test(new Integer[]{1, 2, 3, 4, 5, 6}, new Integer[]{1, 2, 3, 4, 5, 6});
+        testResult &= test(new Integer[]{1, 1, 1}, null);
         System.out.println("\nTest result = " + (testResult ? "Pass" : "Fail"));
     }
 
-    private static boolean test(Integer[] input , Integer[] expected) {
+    private static boolean test(Integer[] input, Integer[] expected) {
         ListNode inputList = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
         System.out.println("\n Input :" + CommonMethods.print(inputList) + "\nexpected :" + CommonMethods.print(expectedList));
@@ -98,7 +96,7 @@ class RemoveDuplicatesFromSortedListII {
 
                 //means multiple occurrence of current exit, we have to remove all values like current
                 if (current.next != next) {
-                    //if head is repeated, the head needs to change
+                    //if the head is repeated, the head needs to change
                     if (prev == null) {
                         newHead = next;
                     } else {
@@ -109,7 +107,7 @@ class RemoveDuplicatesFromSortedListII {
                 } else {
                     prev = current; // since no duplicate, update prev to current
                 }
-                current = next; //move to next group
+                current = next; //move to the next group
 
             }
             return newHead;

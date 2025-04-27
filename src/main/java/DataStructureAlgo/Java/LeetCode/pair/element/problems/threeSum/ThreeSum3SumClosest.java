@@ -48,7 +48,7 @@ class IThreeSum3SumClosestSorting implements IThreeSum3SumClosest {
      * Algo: Similar to {@link ThreeSum3Sum}
      * The only change we need to make here is to find the closest diff.
      * <p>
-     * So just check the closestDiff with current diff and update value accordingly
+     * So check the closestDiff with current diff and update value accordingly
      * <p>
      * <p>
      * Runtime: 4 ms, faster than 95.79% of Java online submissions for 3Sum Closest.
@@ -92,11 +92,11 @@ class IThreeSum3SumClosestSorting implements IThreeSum3SumClosest {
                     return sum;
 
                 /**
-                 * If sum is smaller then target, then we need increase the sum hence j++
+                 * If a sum is smaller than the target, then we need to increase the sum hence j++
                  */
                 if (sum < target)
                     j++;
-                else if (sum > target) //If sum is smaller then bigger, then we need decrease the sum hence k--
+                else if (sum > target) //If a sum is smaller than bigger, then we need decrease the sum hence k--
                     k--;
 
                 int currentDiff = Math.abs(sum - target);
