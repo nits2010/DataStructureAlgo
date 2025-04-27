@@ -2,6 +2,7 @@
 In many problems dealing with an array (or a <b>LinkedList</b>), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at this problem:
 
 - [Sliding Window Technique: A Comprehensive Guide](https://leetcode.com/discuss/post/3722472/sliding-window-technique-a-comprehensive-ix2k/)
+- [Sliding Window Technique and Question Bank](https://leetcode.com/discuss/post/1773891/sliding-window-technique-and-question-ba-9tt4/)
 ### Find Averages of Sub Arrays
 https://leetcode.com/problems/maximum-average-subarray-i/
 
