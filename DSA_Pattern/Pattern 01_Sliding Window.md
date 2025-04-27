@@ -886,6 +886,7 @@ findWordConcatenation("catcatfoxfox", ["cat", "fox"])//[3], The only substring c
 40. [LeetCode 2106 - Maximum Fruits Harvested After at Most K Steps (Medium)](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps)
 
 Some more premium questions in a Sliding window
+------------------------------------------------------------------
 41. [find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/)
 42. [minimum-swaps-to-group-all-1s-together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/)
 43. [max-consecutive-ones-ii](https://leetcode.com/problems/max-consecutive-ones-ii/solutions/1774172/Java-or-Sliding-Window-or-Explained/)
