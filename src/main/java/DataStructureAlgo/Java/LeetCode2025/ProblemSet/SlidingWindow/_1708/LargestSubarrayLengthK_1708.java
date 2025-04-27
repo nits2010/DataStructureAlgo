@@ -55,10 +55,8 @@ import java.util.*;
  * <p><p>
  * Tags
  * -----
- *
  * @easy
  * @Array
- * @SlidingWindow
  * @PremimumQuestion
  * @LockedProblem <p><p>
  * Company Tags
