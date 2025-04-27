@@ -1,7 +1,6 @@
-#if(${PACKAGE_NAME}&&${PACKAGE_NAME}!="")package ${PACKAGE_NAME};#end
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
         #parse("File Header.java")
 import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 
@@ -23,20 +22,17 @@ import java.util.*;
  * Tags
  * -----
  *
- * <p><p>
+ <p><p>
  * Company Tags
  * -----
  * <p>
  * -----
- *
  * @Editorial <p><p>
  * -----
  * @OptimalSolution {@link }
  */
 
-public class $ {
-    NAME
-} {
+public class ${NAME} {
 
 public static void main(String[] args) {
     List<Boolean> tests = new ArrayList<>();
@@ -44,18 +40,18 @@ public static void main(String[] args) {
     CommonMethods.printAllTestOutCome(tests);
 }
 
-private static boolean test(int[] nums, int expected) {
+private static boolean test(int []nums, int expected) {
     //add print here
-    CommonMethods.printTestOutcome(new String[]{"nums", "Expected"}, true, nums, expected);
+    CommonMethods.printTest(new String[]{"nums", "Expected"}, true, nums, expected);
 
     int output = 0;
     boolean pass, finalPass = true;
 
     //add logic here
-    pass = CommonMethods.compareResultOutCome(output, expected, true);
+    pass = CommonMethods.compareResultOutCome(output, expected,true);
     finalPass &= pass;
 
-    CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+    CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass?"PASS":"FAIL");
 
     return finalPass;
 

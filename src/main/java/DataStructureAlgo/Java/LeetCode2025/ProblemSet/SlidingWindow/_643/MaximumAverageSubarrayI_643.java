@@ -66,7 +66,6 @@ public class MaximumAverageSubarrayI_643 {
     }
 
     private static boolean test(int[] nums, int k, double expected) {
-        //add print here
         CommonMethods.printTest(new String[]{"nums", "k", "Expected"}, true, nums, k, expected);
 
         double output = 0;

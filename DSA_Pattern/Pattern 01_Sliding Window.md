@@ -78,7 +78,7 @@ function findAveragesOfSubarrays(arr, k) {
 findAveragesOfSubarrays([1, 3, 2, 6, -1, 4, 1, 8, 2], 5)//[2.2, 2.8, 2.4, 3.6, 2.8]
 ````
 ## Maximum Sum Subarray of Size K (easy)
-https://leetcode.com/problems/largest-subarray-length-k/
+https://www.geeksforgeeks.org/find-maximum-minimum-sum-subarray-size-k/
 > Given an array of positive numbers and a positive number `K`, find the maximum sum of any contiguous subarray of size `K`.
 ### Brute Force
 
@@ -888,6 +888,7 @@ findWordConcatenation("catcatfoxfox", ["cat", "fox"])//[3], The only substring c
 
 Some more premium questions in a Sliding window
 ------------------------------------------------------------------
-41. [find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/)
-42. [minimum-swaps-to-group-all-1s-together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/)
-43. [max-consecutive-ones-ii](https://leetcode.com/problems/max-consecutive-ones-ii/solutions/1774172/Java-or-Sliding-Window-or-Explained/)
+41. Premium [find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/)
+42. Premium [minimum-swaps-to-group-all-1s-together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/)
+43. Premium [max-consecutive-ones-ii](https://leetcode.com/problems/max-consecutive-ones-ii/solutions/1774172/Java-or-Sliding-Window-or-Explained/)
+44. Premium [largest-subarray-length-k](https://leetcode.com/problems/largest-subarray-length-k/description/)
