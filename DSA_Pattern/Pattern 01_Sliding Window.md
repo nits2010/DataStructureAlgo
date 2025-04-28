@@ -210,6 +210,7 @@ smallestSubarrayWithGivenSum([3, 4, 1, 1, 6], 8)//3
 
 ## Longest Substring with K Distinct Characters (medium)
 https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
 
 >Given a string, find the length of the <b>longest substring</b> in it with <b>no more than `K` distinct characters</b>.
 >
@@ -888,7 +889,9 @@ findWordConcatenation("catcatfoxfox", ["cat", "fox"])//[3], The only substring c
 
 Some more premium questions in a Sliding window
 ------------------------------------------------------------------
-41. Premium [find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/)
-42. Premium [minimum-swaps-to-group-all-1s-together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/)
-43. Premium [max-consecutive-ones-ii](https://leetcode.com/problems/max-consecutive-ones-ii/solutions/1774172/Java-or-Sliding-Window-or-Explained/)
-44. Premium [largest-subarray-length-k](https://leetcode.com/problems/largest-subarray-length-k/description/)
+41.  [find-k-length-substrings-with-no-repeated-characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/)
+42.  [minimum-swaps-to-group-all-1s-together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/)
+43.  [max-consecutive-ones-ii](https://leetcode.com/problems/max-consecutive-ones-ii/solutions/1774172/Java-or-Sliding-Window-or-Explained/)
+44.  [largest-subarray-length-k](https://leetcode.com/problems/largest-subarray-length-k/description/)
+45.  [159 Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/)
+45.  [Longest Substring with K Distinct Characters-medium](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
