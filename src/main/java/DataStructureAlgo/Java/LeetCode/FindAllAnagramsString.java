@@ -8,10 +8,11 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
- * Description: https://leetcode.com/problems/find-all-anagrams-in-a-string/
+ * Description: 438. Find All Anagrams in a String
+ * https://leetcode.com/problems/find-all-anagrams-in-a-string/
  * Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
  * <p>
- * Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+ * Strings consists of lowercase English letters only, and the length of both strings s and p will not be larger than 20,100.
  * <p>
  * The order of output does not matter.
  * <p>
@@ -45,21 +46,19 @@ public class FindAllAnagramsString {
 
 
     public static void main(String []args) {
-        System.out.println(anagramSubstringSearch("zzzzzzzz", "zzzz"));
-        System.out.println(anagramSubstringSearch("aaaaa", "aaaaaaa"));
-        System.out.println(anagramSubstringSearch("cbaebabacd", "abc"));
-        System.out.println(anagramSubstringSearch("abab", "ab"));
+        System.out.println(anagramSubstringSearch_findAnagrams("zzzzzzzz", "zzzz"));
+        System.out.println(anagramSubstringSearch_findAnagrams("aaaaa", "aaaaaaa"));
+        System.out.println(anagramSubstringSearch_findAnagrams("cbaebabacd", "abc"));
+        System.out.println(anagramSubstringSearch_findAnagrams("abab", "ab"));
     }
 
     /**
-     * Runtime: 10 ms, faster than 61.88% of Java online submissions for Find All Anagrams in a String.
-     * Memory Usage: 38.2 MB, less than 100.00% of Java online submissions for Find All Anagrams in a String.
      *
      * @param string
      * @param pattern
      * @return
      */
-    public static List<Integer> anagramSubstringSearch(String string, String pattern) {
+    public static List<Integer> anagramSubstringSearch_findAnagrams(String string, String pattern) {
         if (string == null || pattern == null || string.isEmpty() || pattern.isEmpty() || pattern.length() > string.length())
             return Collections.EMPTY_LIST;
 
@@ -72,8 +71,8 @@ public class FindAllAnagramsString {
         int p = pattern.length();
 
 
-        if (n == p)
-            return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
+//        if (n == p)
+//            return string.equals(pattern) ? Arrays.asList(0) : Collections.EMPTY_LIST;
 
         for (int i = 0; i < p; i++) {
             str[string.charAt(i) - 'a']++;

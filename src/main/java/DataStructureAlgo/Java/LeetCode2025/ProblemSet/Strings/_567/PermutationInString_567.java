@@ -102,7 +102,10 @@ public class PermutationInString_567 {
 
      Keep adding a new character to the sliding window on the right and removing the leftmost character.
 
-     Time/Space Complexity: O(n + m) / O(1).
+     Time/Space Complexity: O(m + 26*(n-m)) = O(m + n - m) = O(n) / O(1).
+     n - length of text
+     m - length of a pattern
+
 
      *
      *
@@ -152,7 +155,7 @@ public class PermutationInString_567 {
                    return true;
                }
 
-               //remove the character from the left of the window, as it goes out and add new character to the window, as it comes in
+               //remove the character from the left of the window, as it goes out and add new character to the window, as it comes in to maintain the sliding window -windowLength
                int leftIndex = i - windowLength;
                slidingFreq[text.charAt(leftIndex) - 'a']--;
 

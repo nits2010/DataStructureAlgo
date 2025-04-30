@@ -3,7 +3,7 @@ In many problems dealing with an array (or a <b>LinkedList</b>), we are asked to
 
 - [Sliding Window Technique: A Comprehensive Guide](https://leetcode.com/discuss/post/3722472/sliding-window-technique-a-comprehensive-ix2k/)
 - [Sliding Window Technique and Question Bank](https://leetcode.com/discuss/post/1773891/sliding-window-technique-and-question-ba-9tt4/)
-### Find Averages of Sub Arrays
+### 1. Find Averages of Sub Arrays
 https://leetcode.com/problems/maximum-average-subarray-i/
 
 > Given an array, find the average of all contiguous subarrays of size `K` in it.
@@ -77,7 +77,7 @@ function findAveragesOfSubarrays(arr, k) {
 
 findAveragesOfSubarrays([1, 3, 2, 6, -1, 4, 1, 8, 2], 5)//[2.2, 2.8, 2.4, 3.6, 2.8]
 ````
-## Maximum Sum Subarray of Size K (easy)
+## 2. Maximum Sum Subarray of Size K (easy)
 https://www.geeksforgeeks.org/find-maximum-minimum-sum-subarray-size-k/
 > Given an array of positive numbers and a positive number `K`, find the maximum sum of any contiguous subarray of size `K`.
 ### Brute Force
@@ -150,7 +150,7 @@ maxSubarrayOfSizeK([2, 3, 4, 1, 5], 2)//7
 - The time complexity of the above algorithm will be `O(N)`
 - The space complexity of the above algorithm will be `O(1)`
 
-## Smallest Subarray with a given sum (easy)
+## 3. Smallest Subarray with a given sum (easy)
 https://leetcode.com/problems/minimum-size-subarray-sum/
 > Given an array of positive numbers and a positive number `S`, find the length of the <b>smallest contiguous subarray whose sum is greater than or equal to `S`</b>. 
 > 
@@ -208,7 +208,7 @@ smallestSubarrayWithGivenSum([3, 4, 1, 1, 6], 8)//3
 - The time complexity of the above algorithm will be `O(N)`. The outer for loop runs for all elements, and the inner while loop processes each element only once; therefore, the time complexity of the algorithm will be `O(N+N)`), which is asymptotically equivalent to `O(N)`.
 - The algorithm runs in constant space `O(1)`.
 
-## Longest Substring with K Distinct Characters (medium)
+## 4. Longest Substring with K Distinct Characters (medium)
 https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
 https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
 
@@ -268,7 +268,7 @@ longestSubstringWithKdistinct("cbbebi", 3)//5, The longest substrings with no mo
 - The above algorithms time complexity will be `O(N)`, where `N` is the number of characters in the input string. The outer for loop runs for all characters, and the inner while loop processes each character only once; therefore, the time complexity of the algorithm will be `O(N+N)`, which is asymptotically equivalent to `O(N)`
 - The algorithms space complexity is `O(K)`, as we will be storing a maximum of `K+1` characters in the <b>HashMap</b>.
 
-## 🔎 Fruits into Baskets (medium)
+## 5. Fruits into Baskets (medium)
 https://leetcode.com/problems/fruit-into-baskets/
 
 > Given an array of characters where each character represents a fruit tree, you are given <b>two baskets</b>, and your goal is to put the <b>maximum number of fruits in each basket</b>. The only restriction is that <b>each basket can have only one type of fruit</b>.
@@ -362,7 +362,7 @@ fruitsInBaskets(['A', 'B', 'C', 'B', 'B', 'C'])//5 , We can put 3 'B' in one bas
 ````
 - The above algorithms time complexity will be `O(N)`, where `N` is the number of characters in the input array. The outer `for` loop runs for all characters, and the inner `while` loop processes each character only once; therefore, the time complexity of the algorithm will be `O(N+N)`, which is asymptotically equivalent to `O(N)`.
 - The algorithm runs in constant space `O(1)` as there can be a maximum of three types of fruits stored in the frequency map.
-### Longest Substring with at most 2 distinct characters
+## 6. Longest Substring with at most 2 distinct characters
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 > Given a string, find the length of the longest substring in it with at most two distinct characters.
 
@@ -405,7 +405,7 @@ lengthOfLongestSubstringTwoDistinct('ccaabbb')//5
 
 
 
-## No-repeat Substring (hard)
+## 7. No-repeat Substring (hard)
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 > Given a string, find the <b>length of the longest substring</b>, which has <b>no repeating characters</b>.
@@ -453,7 +453,7 @@ nonRepeatSubstring("abccde")//3
 - The above algorithms time complexity will be `O(N)`, where `N` is the number of characters in the input string.
 - The algorithms space complexity will be `O(K)`, where `K` is the number of distinct characters in the input string. This also means `K<=N`, because in the worst case, the whole string might not have any repeating character, so the entire string will be added to the <b>HashMap</b>. Having said that, since we can expect a fixed set of characters in the input string (e.g., 26 for English letters), we can say that the algorithm runs in fixed space `O(1)`; in this case, we can use a fixed-size array instead of the <b>HashMap</b>.
 
-## Longest Substring with Same Letters after Replacement (hard)
+## 8. Longest Substring with Same Letters after Replacement (hard)
 https://leetcode.com/problems/longest-repeating-character-replacement/
 
 > Given a string with lowercase letters only, if you are allowed to <b>replace no more than `K` letters</b> with any letter, find the <b>length of the longest substring having the same letters</b> after replacement.
@@ -507,7 +507,7 @@ lengthOfLongestSubstring("abccde", 1)//3, Replace the 'b' or 'd' with 'c' to hav
 - The above algorithms time complexity will be `O(N)`, where `N` is the number of letters in the input string.
 - As we expect only the lower case letters in the input string, we can conclude that the space complexity will be `O(26)` to store each letters frequency in the <b>HashMap</b>, which is asymptotically equal to `O(1)`.
 
-## Longest Subarray with Ones after Replacement (hard)
+## 9. Longest Subarray with Ones after Replacement (hard)
 https://leetcode.com/problems/max-consecutive-ones-iii/
 
 > Given an array containing `0`'s and `1`'s, if you are allowed to <b>replace no more than `K` `0`'s with `1`'s</b>, 
@@ -553,7 +553,7 @@ lengthOfLongestSubstring ([0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], 3)//9, Replac
 - The above algorithms time complexity will be `O(N)`, where `N` is the count of numbers in the input array.
 - The algorithm runs in constant space `O(1)`.
 
-## 🌟 Permutation in a String (hard)
+## 10. 🌟 Permutation in a String (hard)
 https://leetcode.com/problems/permutation-in-string/
 
 > Given a string and a pattern, find out if the <b>string contains any permutation of the pattern</b>.
@@ -629,7 +629,7 @@ findPermutation("aaacb", "abc")//true, The string contains "acb" which is a perm
 - The above algorithms time complexity will be `O(N + M)`, where `N` and `M` are the number of characters in the input string and the pattern, respectively.
 - The algorithms space complexity is `O(M)` since, in the worst case, the whole pattern can have distinct characters that will go into the <b>HashMap</b>.
 
-## 🌟 String Anagrams (hard)
+## 11. 🌟 String Anagrams (hard)
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
 > Given a string and a pattern, <b>find all anagrams of the pattern in the given string</b>.
@@ -704,7 +704,7 @@ findStringAnagrams('abbcabc', 'abc')//[2,3,4], The three anagrams of the pattern
 - The time complexity of the above algorithm will be `O(N + M)` where `N` and `M` are the number of characters in the input string and the pattern respectively.
 - The space complexity of the algorithm is `O(M)` since in the worst case, the whole pattern can have distinct characters which will go into the <b>HashMap</b>. In the worst case, we also need `O(N)` space for the result list, this will happen when the pattern has only one character and the string contains only that character.
 
-## 🌟 Smallest Window containing Substring (hard)
+## 12. 🌟 Smallest Window containing Substring (hard)
 https://leetcode.com/problems/minimum-window-substring/
 
 > Given a string and a pattern, find the <b>smallest substring</b> in the given string which has <b>all the characters of the given pattern</b>.
@@ -773,7 +773,7 @@ findSubstring("adcad", "abc")//"", No substring in the given string has all char
 
 - The time complexity of the above algorithm will be `O(N + M)` where `N` and `M` are the number of characters in the input string and the pattern respectively.
 - The space complexity of the algorithm is `O(M)` since in the worst case, the whole pattern can have distinct characters which will go into the <b>HashMap</b>. In the worst case, we also need `O(N)` space for the resulting substring, which will happen when the input string is a permutation of the pattern.
-## 🌟 Words Concatenation (hard)
+## 13. 🌟 Words Concatenation (hard)
 https://leetcode.com/problems/substring-with-concatenation-of-all-words/
 
 Given a string and a list of `words`, find all the starting indices of substrings in the given string that are a <b>concatenation of all the given `words`</b> exactly once without any <b>overlapping of `words`</b>. It is given that all `words` are of the same length.
