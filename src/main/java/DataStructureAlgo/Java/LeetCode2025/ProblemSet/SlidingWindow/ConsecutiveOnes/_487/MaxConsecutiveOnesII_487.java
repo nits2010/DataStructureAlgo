@@ -43,7 +43,6 @@ import java.util.*;
  * <p>
  * Tags
  * ----
- *
  * @medium
  * @Array
  * @SlidingWindow
@@ -169,7 +168,7 @@ public class MaxConsecutiveOnesII_487 {
                         max = Math.max(max, (current - 1) - left + 1);
 
 
-                        //squeeze the window, till zero = k {means squeezing 1 zero from left }
+                        //squeeze the window, till zero = k {means squeezing 1 zero from a left }
                         int i = left;
                         //we need to find the next 1 post our first zero, which will be the starting point of our new window
                         while (i < current) {

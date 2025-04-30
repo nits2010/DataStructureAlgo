@@ -67,22 +67,44 @@ public class LongestSubstringWithAtLeastKRepeatingCharacters_395 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
-        //add tests cases here
+        tests.add(test("aaabb", 3, 3));
+        tests.add(test("ababbc", 2, 5));
+
         CommonMethods.printAllTestOutCome(tests);
     }
 
-    private static boolean test(int[] nums, int expected) {
+    private static boolean test(String s, int k, int expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"s", "k", "Expected"}, true, s, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
 
-        //add logic here
+        Solution_BruteForce solutionBruteForce = new Solution_BruteForce();
+        output = solutionBruteForce.longestSubstring(s, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
+        CommonMethods.printTest(new String[]{"BruteForce", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
-        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+        SolutionDivideAndConquer.Solution_DivideAndConquer solutionDivideAndConquer = new SolutionDivideAndConquer().new Solution_DivideAndConquer();
+        output = solutionDivideAndConquer.longestSubstring(s, k);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"DivideAndConquer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+        SolutionDivideAndConquer.Solution_DivideAndConquerOptimized solutionDivideAndConquerOptimized = new SolutionDivideAndConquer().new Solution_DivideAndConquerOptimized();
+        output = solutionDivideAndConquerOptimized.longestSubstring(s, k);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"DivideAndConquer-Optimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+
+        Solution_SlidingWindow solutionSlidingWindow = new Solution_SlidingWindow();
+        output = solutionSlidingWindow.longestSubstring(s, k);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"Sliding-Window", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 
@@ -130,38 +152,175 @@ public class LongestSubstringWithAtLeastKRepeatingCharacters_395 {
      * Now considering any substring [start,end] if any of the characters in this substring has less than k frequency, then it can not be part of the resultant string,
      * however, it will divide the string in two parts, on the left side (excluding this invalid character) and right side (excluding the invalid character).
      * Eventually, we will find a substring [start,end] whose every character frequency is greater than or equal to k, and the length would be end-start+1.
-     *
-     * O(n) / O(n) - see .md file to know this
+     * <p>
+     * O(n) / O(n) - see .md a file to know this
      */
-    static class Solution_DivideAndConquer {
-        public int longestSubstring(String s, int k) {
-            return longestSubstring(s, 0, s.length()-1, k);
+    static class SolutionDivideAndConquer {
 
+
+        class Solution_DivideAndConquer {
+            public int longestSubstring(String s, int k) {
+                return longestSubstring(s, 0, s.length() - 1, k);
+
+            }
+
+            private int longestSubstring(String s, int start, int end, int k) {
+                if (end - start + 1 < k)
+                    return 0;
+
+                int[] count = new int[26];
+                char[] chars = s.toCharArray();
+
+                //count the frequency
+                for (int i = start; i <= end; i++) {
+                    count[chars[i] - 'a']++;
+                }
+
+                //find the first non-repeating character < k and divide the string in two parts, excluding this non-repeating character
+                for (int i = start; i <= end; i++) {
+                    if (count[chars[i] - 'a'] < k) {
+                        int leftMax = longestSubstring(s, start, i - 1, k); //exclude the invalid char and consider start, i-1
+                        int rightMax = longestSubstring(s, i + 1, end, k); //exclude the invalid char and consider i+1, end
+                        return Math.max(leftMax, rightMax);
+                    }
+                }
+
+                return end - start + 1; //all are valid character, this entire string is valid
+
+            }
         }
 
-        private int longestSubstring(String s, int start, int end, int k) {
-            //if this substring don't have enough characters, return 0
-            if (end - start + 1 < k)
-                return 0;
+        //once we find the < k character, we can start scanning the string and skip all such characters at once
+        class Solution_DivideAndConquerOptimized {
+            public int longestSubstring(String s, int k) {
+                return longestSubstring(s, 0, s.length() - 1, k);
 
-            int []count = new int[26];
-            char []chars = s.toCharArray();
-
-            //count the frequency
-            for(int i = start; i<=end; i++){
-                count[chars[i] - 'a']++;
             }
 
-            //find the first non-repeating character < k and divide the string in two parts, excluding this non-repeating character
-            for(int i = start; i<=end; i++){
-                if(count[chars[i] - 'a'] < k){
-                    int leftMax = longestSubstring(s, start, i-1, k); //exclude the invalid char and consider start, i-1
-                    int rightMax = longestSubstring(s, i+1, end, k);  //exclude the invalid char and consider i+1, end
-                    return Math.max(leftMax, rightMax);
+            private int longestSubstring(String s, int start, int end, int k) {
+                //if this substring don't have enough characters, return 0
+                if (end - start + 1 < k)
+                    return 0;
+
+                int[] count = new int[26];
+                char[] chars = s.toCharArray();
+
+                //count the frequency
+                for (int i = start; i <= end; i++) {
+                    count[chars[i] - 'a']++;
                 }
+
+                //find the first non-repeating character < k and divide the string in two parts, excluding this non-repeating character
+                for (int i = start; i <= end; i++) {
+                    if (count[chars[i] - 'a'] < k) {
+                        int next = i + 1;
+                        while (next <= end && count[chars[next] - 'a'] < k) {
+                            next++;
+                        }
+
+                        int leftMax = longestSubstring(s, start, i - 1, k); //exclude the invalid char and consider start, i-1
+                        int rightMax = longestSubstring(s, next, end, k); //exclude the invalid char and consider i+1, end
+                        return Math.max(leftMax, rightMax);
+                    }
+                }
+
+                return end - start + 1; //all are valid character, this entire string is valid
+
+            }
+        }
+    }
+
+
+    /**
+     * One thing we noticed in a brute force solution that, we have to check for isValid every time we move the end.
+     * This is because, we are not sure that every character in this window (start,end) is valid or not.
+     * <p>
+     * To apply the sliding window logic here, we need to find the way how we expand the window and how we shrink the window.
+     * Expand the window is intuitive where we keep adding character, however, when to stop ?
+     * <p>
+     * Assume the case, we have <h> unique character to process, and while expanding the window, we include all the incoming characters.
+     * This expansion would last either last character of the window or till the point, where we exceed the unique character count h in the current window.
+     * <p>
+     * Hence, expand the window to keep the unique character count to h and shrink it to keep its unique character count to h only.
+     * <p>
+     * However, the main problem is still, how we count that each character in the window has >=k frequency, for this we can keep track of it within the window,
+     * and as soon as we hit both the condition h=unique character and >=k frequency, we can return the length of the window.
+     * <p>
+     * Since there could be only 26 unique characters, we can traverse them all, or we can find the count of unique char and use them
+     * <p>
+     * O(n) time and O(1) space
+     */
+    static class Solution_SlidingWindow {
+        public int longestSubstring(String s, int k) {
+
+            int n = s.length();
+            int[] count = new int[26];
+
+            int uniqueChar = 0;
+            for (int i = 0; i < n; i++) {
+                char c = s.charAt(i);
+                count[c - 'a']++;
+                if (count[c - 'a'] == 1) {
+                    uniqueChar++;
+                }
+
             }
 
-            return end-start; //all are valid character, this entire string is valid
+            int maxLen = 0;
+            //traverse all unique characters
+            for (int unique = 1; unique <= uniqueChar; unique++) {
+
+                Arrays.fill(count, 0); // reset the frequency map
+                int windowStart = 0, windowEnd = 0;
+                int uniqueCount = 0;
+                int kUnique = 0;
+
+                while (windowEnd < n) {
+
+                    if (uniqueCount <= unique) {
+                        //expand the window
+                        char c = s.charAt(windowEnd);
+                        count[c - 'a']++;
+
+                        if (count[c - 'a'] == 1) {
+                            uniqueCount++;
+                        }
+
+                        if (count[c - 'a'] == k) {
+                            kUnique++;
+                        }
+                        windowEnd++;
+                    } else {
+                        //shrink the window
+                        char c = s.charAt(windowStart);
+
+                        //if this character reached k unique only, reducing further will violate the condition
+                        if (count[c - 'a'] == k) {
+                            kUnique--;
+                        }
+
+                        count[c - 'a']--;
+
+                        //if this character leaves the substring
+                        if (count[c - 'a'] == 0) {
+                            uniqueCount--;
+                        }
+
+                        windowStart++;
+
+                    }
+
+                    //now if the uniqueCount = unique and kUnique = uniqueCount then this window is valid;
+                    // this is because, we count the kUnique only when a character reaches the k frequency, that makes total count = unique
+                    if (uniqueCount == unique && kUnique == uniqueCount) {
+
+                        maxLen = Math.max(maxLen, windowEnd - windowStart);
+                    }
+                }
+
+
+            }
+            return maxLen;
 
         }
     }

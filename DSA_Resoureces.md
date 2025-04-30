@@ -1,5 +1,5 @@
 # DS & Algo Resources
-- [Leetcode all solutions](https://github.com/doocs/leetcode/tree/main/solution)
+- [Leetcode all solutions](https://github.com/doocs/leetcode/tree/main/solutionSlidingWindow)
 ## DSA Pattern
 
 --------------------------------------------------------------------------

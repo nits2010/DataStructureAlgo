@@ -37,7 +37,7 @@ import java.util.Arrays;
  * File reference
  * --------------
  * Duplicate {@link}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._424.LongestRepeatingCharacterReplacement_424}
  * Extension {@link MaxConsecutiveOnesII_487 }
  * <p>
  * Tags
@@ -74,15 +74,15 @@ public class MaxConsecutiveOnesIII_1007 {
         System.out.println("-----------------------------------");
         System.out.println("Input : " + Arrays.toString(nums) + " k : " + k + " Expected : " + expected);
 
-        Solution solution = new Solution();
-        SolutionSimplified solutionSimplified = new SolutionSimplified();
+        SolutionSlidingWindow solutionSlidingWindow = new SolutionSlidingWindow();
+        SolutionSlidingWindowSimplified solutionSlidingWindowSimplified = new SolutionSlidingWindowSimplified();
         SolutionBinarySearch solutionBS = new SolutionBinarySearch();
 
-        int output = solution.longestOnes(nums, k);
+        int output = solutionSlidingWindow.longestOnes(nums, k);
         boolean result = output == expected;
         System.out.println("Output : " + output + " result : " + (result ? "Pass" : "Failed"));
 
-        output = solutionSimplified.longestOnes(nums, k);
+        output = solutionSlidingWindowSimplified.longestOnes(nums, k);
         boolean resultSimplified = output == expected;
         System.out.println("Output Simplified : " + output + " result : " + (resultSimplified ? "Pass" : "Failed"));
 
@@ -93,7 +93,7 @@ public class MaxConsecutiveOnesIII_1007 {
         return result && resultSimplified && resultBS;
     }
 
-    static class Solution {
+    static class SolutionSlidingWindow {
 
         /**
          * This is a sliding window problem. We need to find a window starting from a left and ending at a right (current-1) such that the number of zero between [left, current-1] should be only k.
@@ -156,7 +156,47 @@ public class MaxConsecutiveOnesIII_1007 {
 
     }
 
-    static class SolutionSimplified {
+    /**
+     * This is inspired from {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._424.LongestRepeatingCharacterReplacement_424}
+     */
+    static class SolutionSlidingWindowV2 {
+
+        /**
+         * This is a sliding window problem. We need to find a window starting from a left and ending at a right (current-1) such that the number of zero between [left, current-1] should be only k.
+         * Whenever we find such a window, we count max and then start a sequencing window starting from the left such that our zero count becomes k again
+         * <p>
+         * T/S : O(n)/O(1)
+         *
+         * @param nums
+         * @param k
+         * @return maxConsecutiveOnes
+         */
+        public int longestOnes(int[] nums, int k) {
+            int maxLen = 0, max1Count = 0;
+            int windowStart = 0, windowEnd = 0;
+
+            while (windowEnd < nums.length) {
+
+                if (nums[windowEnd] == 1)
+                    max1Count++;
+
+                int windowLength = windowEnd - windowStart + 1;
+
+                while (windowLength - max1Count > k) {
+                    if (nums[windowStart] == 1)
+                        max1Count--;
+                    windowStart++;
+                    windowLength = windowEnd - windowStart + 1;
+                }
+                maxLen = Math.max(maxLen, windowLength);
+                windowEnd++;
+            }
+            return maxLen ;
+        }
+
+    }
+
+    static class SolutionSlidingWindowSimplified {
 
         /**
          * This is a sliding window problem. We need to find a window starting from a left and ending at a right (current-1) such that the number of zero between [left, current-1] should be only k.
@@ -204,7 +244,7 @@ public class MaxConsecutiveOnesIII_1007 {
         /**
          * We can solve this problem by applying binary search on the result space.
          * Intuition: Assume you have a sliding window which starts from left and end at right, [left, right], between this window, there could be X number of zero.
-         * here would be 0<=X<=n; where n is the size of the array. In order to make X = k, we have to sequeeze the window either starting from left or by right.
+         * here would be 0<=X<=n; where n is the size of the array. To make X = k, we have to squeeze the window either starting from left or to right.
          * means, removing the zero from the window till it hit X=k.
          * <p>
          * Algorithm:
@@ -213,7 +253,7 @@ public class MaxConsecutiveOnesIII_1007 {
          * 3. check does the current window size {0,mid} has less than equal to k zero,
          * 3.1 if so, then we could flip either less than or equal to k zero to get the total 1's in [0,mid]
          * 3.2 if not so, then we need to count how many zero on the first half of the window {0,mid} and then find the remaining half in right side window {mid,n-1}
-         * 4. keep squeezing / expand a window either from left or right.
+         * 4. Keep squeezing / expand a window either from left or right.
          * <p>
          * T/S : O(n)/O(1)
          *
@@ -266,7 +306,7 @@ public class MaxConsecutiveOnesIII_1007 {
             int left = 1;
             while (right < nums.length) {
 
-                //if current element is zero, then its adds up zero count
+                //if the current element is zero, then its adds up zero count
                 if (nums[right] == 0)
                     zero++;
 
