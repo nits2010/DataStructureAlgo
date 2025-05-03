@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._76;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._76;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
@@ -172,7 +172,86 @@ public class MinimumWindowSubstring_76 {
             if (minLength > m)
                 return "";
 
-            return s.substring(start, end+1);
+            return s.substring(start, end + 1);
+
+        }
+    }
+
+
+    class SolutionSlidingWindowV2 {
+        public String minWindow(String text, String pattern) {
+
+            int[] shouldFind = new int[128];
+            int[] hasFind = new int[128];
+            int pLen = pattern.length();
+
+            int windowStart = 0, windowEnd = 0, minLen = Integer.MAX_VALUE;
+            int start = -1, end = -1;
+            int foundCharCount = 0;
+
+            //cache the pattern, frequency of chars
+            for (int i = 0; i < pLen; i++) {
+                shouldFind[pattern.charAt(i)]++;
+            }
+
+            while (windowEnd < text.length()) {
+
+                char c = text.charAt(windowEnd);
+
+                //expand the window
+                hasFind[c]++;
+
+
+                //here we keep <= instead =, consider a case, when both t and p are same "aa" , "aa" so now at first char, a's freq will be 1 only
+                // however, ""="" will not increase the foundCharCount since 1!=2
+
+                //or text = bbaa, pattern = aba; in such case, foundCharCount will be 2 only as we found 2 character matching only
+                // however, it needs to be 3
+
+
+                if (hasFind[c] <= shouldFind[c]) {
+
+                    foundCharCount++;
+
+                }
+
+                //if we have found all the required characters in patter, which is = pLen
+                if (foundCharCount == pLen) {
+
+                    //since we need to know the minimum window, we need to first try to squeeze it
+                    //we can squeeze the window only when we have more occurrence of char then required ; hasFind[x] > shouldFind[x]
+                    // additionally we can drop all those char which is not required ; shouldFind[x] == 0
+                    char x = text.charAt(windowStart);
+                    while (shouldFind[x] == 0 || hasFind[x] > shouldFind[x]) {
+
+                        if (hasFind[x] > 0)
+                            hasFind[x]--; // remove this from the window
+                        windowStart++;
+                        x = text.charAt(windowStart);
+                    }
+
+                    //this will be the window, where a minimum can occurred
+                    int length = windowEnd - windowStart + 1;
+                    if (minLen > length) {
+                        minLen = length;
+                        start = windowStart;
+                        end = windowEnd;
+                    }
+
+                    //we can not go smaller beyond pLen
+                    if (minLen == pLen) {
+                        break;
+                    }
+
+                }
+
+                windowEnd++;
+            }
+
+            if (start == -1)
+                return "";
+
+            return text.substring(start, end + 1);
 
         }
     }

@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-08
- * Description: https://leetcode.com/problems/sliding-window-median/
+ * Description: 480. Sliding Window Median https://leetcode.com/problems/sliding-window-median/
  * Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
  * <p>
  * Examples:
@@ -84,7 +84,7 @@ public class SlidingWindowMedian {
 }
 
 /**
- *   //TODO: Use Tree map instead to achieve O(n.Logk)
+ *   This solution does not work when input has duplicate elements, check {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._480.SlidingWindowMedian_480}
  */
 
 class SolutionSlidingWindowMedian {
@@ -151,7 +151,7 @@ class SolutionSlidingWindowMedian {
         private void balance() {
 
             /**
-             * if max heap has more than 1 element as unbalanced
+             * if max heap has more than one element as unbalanced
              */
             while (maxHeap.size() - minHeap.size() > 1)
                 minHeap.offer(maxHeap.poll());
@@ -187,7 +187,7 @@ class SolutionSlidingWindowMedian {
      * 1. either who sits in between of all numbers in sorted array, if total is odd
      * 2. or average of middle two element in sorted array. if total is even
      * <p>
-     * This implies that left side of median is all smaller than median and right side of median is all greater then median.
+     * This implies that the left side of median is all smaller than median and right side of median is all greater than median.
      * To calculate, we only need to know how many are on left side and right side
      * <p>
      * 1. If they are equal (total=odd) then median will lie on high side (due to 0 indexing)
@@ -196,7 +196,7 @@ class SolutionSlidingWindowMedian {
      * Hence we need to know at any moment what is max at left side and what is min or right side.
      * <p>
      * Data structure:
-     * The best data structure which provide this is Heaps. Heap can give max and min in O(1) time at any moment.
+     * The best data structure which provides this is Heaps. Heap can give max and min in O(1) time at any moment.
      * <p>
      * Lets make
      * maxHeap on left side of Median

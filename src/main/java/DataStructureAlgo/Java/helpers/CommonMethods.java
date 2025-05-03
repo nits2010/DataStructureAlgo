@@ -1088,6 +1088,10 @@ public class CommonMethods {
                 output = "";
             } else if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
+            } else if (input instanceof Double[]) {
+                output = Arrays.toString((Double[]) input);
+            } else if (input instanceof double[]) {
+                output = Arrays.toString((double[]) input);
             } else if (input instanceof Boolean[]) {
                 output = Arrays.toString((Boolean[]) input);
             } else if (input instanceof Integer[][]) {

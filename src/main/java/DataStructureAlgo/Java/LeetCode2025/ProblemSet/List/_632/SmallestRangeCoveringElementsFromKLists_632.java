@@ -201,7 +201,7 @@ public class SmallestRangeCoveringElementsFromKLists_632 {
 
 
     /**
-     * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Strings._76.MinimumWindowSubstring_76.SolutionSlidingWindow}
+     * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._76.MinimumWindowSubstring_76.SolutionSlidingWindow}
      */
     static class SolutionTwoPointer {
 
