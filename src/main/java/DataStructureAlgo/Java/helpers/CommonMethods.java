@@ -188,8 +188,21 @@ public class CommonMethods {
 
     }
 
-    public static String toString2DForm(int[][] nums) {
-        return toString(nums);
+    public static String toString2DForm(Integer[][] nums) {
+        if (nums == null || nums.length == 0)
+            return null;
+
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+        for (int i = 0; i < nums.length; i++) {
+            result.append(toString(nums[i]));
+            if (i < nums.length - 1) {
+                result.append(',');
+            }
+        }
+        result.append("]");
+
+        return result.toString();
     }
 
 
@@ -1088,6 +1101,8 @@ public class CommonMethods {
                 output = "";
             } else if (input instanceof Integer[]) {
                 output = Arrays.toString((Integer[]) input);
+            }else if (input instanceof Integer[][]) {
+                output = toString2DForm((Integer[][]) input);
             } else if (input instanceof Double[]) {
                 output = Arrays.toString((Double[]) input);
             } else if (input instanceof double[]) {
