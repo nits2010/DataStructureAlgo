@@ -1,0 +1,113 @@
+# Monotonic Stacks Explained
+
+A monotonic stack is a special type of stack where the elements are always in either non-decreasing order (monotonic increasing) or non-increasing order (monotonic decreasing) from the "bottom to the top".
+
+## Monotonic Increasing Stack
+
+**Definition:** In a monotonic increasing stack, as you move from the bottom to the top, each element is greater than or equal to the element below it.
+
+**How to Build:**
+
+1.  Initialize an empty stack.
+2.  Iterate through the input data element by element (`current_element`).
+3.  While the stack is not empty AND the top element of the stack is greater than `current_element`:
+    * Pop the top element from the stack.
+4.  Push `current_element` onto the stack.
+
+**Example:**
+
+Input array: `[3, 1, 4, 1, 5, 9, 2, 6]`
+
+| Step | Current Element | Stack (bottom to top) | Explanation                                                                 |
+| :--- | :-------------- | :-------------------- | :-------------------------------------------------------------------------- |
+| 1    | 3               | `[3]`               | Push 3.                                                                     |
+| 2    | 1               | `[1]`               | `3 > 1`, pop 3, then push 1.                                                |
+| 3    | 4               | `[1, 4]`            | `1 < 4`, push 4.                                                            |
+| 4    | 1               | `[1, 1]`            | `4 > 1`, pop 4, `1 >= 1`, push 1.                                          |
+| 5    | 5               | `[1, 1, 5]`         | `1 < 5`, push 5.                                                            |
+| 6    | 9               | `[1, 1, 5, 9]`      | `5 < 9`, push 9.                                                            |
+| 7    | 2               | `[1, 1, 2]`         | `9 > 2`, pop 9, `5 > 2`, pop 5, `1 < 2`, push 2.                            |
+| 8    | 6               | `[1, 1, 2, 6]`      | `2 < 6`, push 6.                                                            |
+
+Final Monotonic Increasing Stack: `[1, 1, 2, 6]`
+
+## Monotonic Decreasing Stack
+
+**Definition:** In a monotonic decreasing stack, as you move from the bottom to the top, each element is less than or equal to the element below it.
+
+**How to Build:**
+
+1.  Initialize an empty stack.
+2.  Iterate through the input data element by element (`current_element`).
+3.  While the stack is not empty AND the top element of the stack is less than `current_element`:
+    * Pop the top element from the stack.
+4.  Push `current_element` onto the stack.
+
+**Example:**
+
+Input array: `[3, 1, 4, 1, 5, 9, 2, 6]`
+
+| Step | Current Element | Stack (bottom to top) | Explanation                                                                 |
+| :--- | :-------------- | :-------------------- | :-------------------------------------------------------------------------- |
+| 1    | 3               | `[3]`               | Push 3.                                                                     |
+| 2    | 1               | `[3, 1]`            | `3 > 1`, push 1.                                                            |
+| 3    | 4               | `[4]`               | `1 < 4`, pop 1, `3 < 4`, pop 3, push 4.                                     |
+| 4    | 1               | `[4, 1]`            | `4 > 1`, push 1.                                                            |
+| 5    | 5               | `[5]`               | `1 < 5`, pop 1, `4 < 5`, pop 4, push 5.                                     |
+| 6    | 9               | `[9]`               | `5 < 9`, pop 5, push 9.                                                     |
+| 7    | 2               | `[9, 2]`            | `9 > 2`, push 2.                                                            |
+| 8    | 6               | `[9, 6]`            | `2 < 6`, pop 2, `9 > 6`, push 6.                                             |
+
+Final Monotonic Decreasing Stack: `[9, 6]`
+
+## When and How to Use
+
+Monotonic stacks are useful for problems involving:
+
+* Finding the next smaller/greater element.
+* Largest rectangle in a histogram.
+* Maximum/minimum element in a sliding window (often using a monotonic deque).
+* Subarrays with specific monotonic properties.
+
+The key is to maintain the monotonic property while iterating through the input, which often allows for efficient processing of each element.
+
+## Java Template
+
+```java
+import java.util.Stack;
+import java.util.Arrays;
+
+public class MonotonicStack {
+
+    public static Stack<Integer> buildIncreasingStack(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
+        for (int num : arr) {
+            while (!stack.isEmpty() && stack.peek() > num) {
+                stack.pop();
+            }
+            stack.push(num);
+        }
+        return stack;
+    }
+
+    public static Stack<Integer> buildDecreasingStack(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
+        for (int num : arr) {
+            while (!stack.isEmpty() && stack.peek() < num) {
+                stack.pop();
+            }
+            stack.push(num);
+        }
+        return stack;
+    }
+
+    public static void main(String[] args) {
+        int[] input = {3, 1, 4, 1, 5, 9, 2, 6};
+
+        Stack<Integer> increasingStack = buildIncreasingStack(input);
+        System.out.println("Monotonic Increasing Stack: " + Arrays.toString(increasingStack.toArray())); // Output will be in reverse order of stack (top to bottom)
+
+        Stack<Integer> decreasingStack = buildDecreasingStack(input);
+        System.out.println("Monotonic Decreasing Stack: " + Arrays.toString(decreasingStack.toArray())); // Output will be in reverse order of stack (top to bottom)
+    }
+}
