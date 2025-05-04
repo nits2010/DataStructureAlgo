@@ -9,7 +9,8 @@ import java.util.*;
  * Date: 9/1/2024
  * Question Category: 239. Sliding Window Maximum
  * Description:
- * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+ * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window.
+ * Each time the sliding window moves right by one position.
  * <p>
  * Return the max sliding window.
  * <p>
@@ -149,7 +150,6 @@ public class SlidingWindowMaximum_239 {
             int i = 0;
             while (i < k) {
 
-
                 //remove all elements from the queue which are smaller than the new element
                 while (!dq.isEmpty() && nums[dq.peekLast()] < nums[i])
                     dq.pollLast();
@@ -199,7 +199,7 @@ public class SlidingWindowMaximum_239 {
             final int[] result = new int[n - k + 1];
             int r = 0;
 
-            //Partition the array in blocks of size w=4. The last block may have less then w.
+            //Partition the array in blocks of size w=4. The last block may have less than w.
             //2, 1, 3, 4 | 6, 3, 8, 9 | 10, 12, 56|
 
 
@@ -219,19 +219,19 @@ public class SlidingWindowMaximum_239 {
             for (int i = 1, j = n - 2; i < n; i++, j--) {
 
                 //Traverse the list from start to end and calculate max_so_far. Reset max after each block boundary (of w elements).
-                //left_max[] = 2, 2, 3, 4 | 6, 6, 8, 9 | 10, 12, 56
+                //Left_max[] = 2, 2, 3, 4 | 6, 6, 8, 9 | 10, 12, 56
                 leftMax[i] = (i % k == 0) //reset the window
                         ? nums[i]
                         : Math.max(nums[i], leftMax[i - 1]);
 
                 //Similarly calculate max in future by traversing from end to start.
-                //right_max[] = 4, 4, 4, 4 | 9, 9, 9, 9 | 56, 56, 56
+                //Right_max[] = 4, 4, 4, 4 | 9, 9, 9, 9 | 56, 56, 56
                 rightMax[j] = (j % k == 0) //reset the window
                         ? nums[j]
                         : Math.max(nums[j], rightMax[j + 1]);
             }
 
-            //now, sliding max at each position i in current window, sliding-max(i) = max{right_max(i), left_max(i+w-1)}
+            //now, sliding max at each position i in the current window, sliding-max(i) = max{right_max(i), left_max(i+w-1)}
             //sliding_max = 4, 6, 6, 8, 9, 10, 12, 56
             for (int i = 0; i + k <= nums.length; i++) {
                 result[r++] = Math.max(rightMax[i], leftMax[i + k - 1]);
