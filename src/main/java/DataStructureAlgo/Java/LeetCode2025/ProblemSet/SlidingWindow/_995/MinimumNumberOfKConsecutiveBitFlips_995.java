@@ -116,7 +116,7 @@ public class MinimumNumberOfKConsecutiveBitFlips_995 {
                 //flip required at index i ? if its 0
                 if ((nums[i] ^ flip) == 0) {
 
-                    //if there is a group of k = 3 not left, then entire array can't be 1
+                    //if there is a group of k = 3 not left, then an entire array can't be 1
                     if (i + k - 1 >= n)
                         return -1;
 
