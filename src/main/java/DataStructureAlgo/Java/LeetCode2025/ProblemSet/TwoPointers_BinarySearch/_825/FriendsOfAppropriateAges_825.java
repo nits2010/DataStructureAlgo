@@ -86,7 +86,7 @@ public class FriendsOfAppropriateAges_825 {
 
     private static boolean test(int[]ages, int expected) {
 
-        CommonMethods.printTest(new String[]{"ages", "Expected"}, true, ages, expected);
+        CommonMethods.printTestOutcome(new String[]{"ages", "Expected"}, true, ages, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -96,7 +96,7 @@ public class FriendsOfAppropriateAges_825 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

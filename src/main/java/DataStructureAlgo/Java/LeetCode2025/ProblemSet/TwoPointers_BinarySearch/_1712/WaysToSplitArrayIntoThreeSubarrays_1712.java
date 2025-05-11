@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1712;
 
+import DataStructureAlgo.Java.helpers.*;
+
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -78,7 +80,7 @@ public class WaysToSplitArrayIntoThreeSubarrays_1712 {
 
     private static boolean test(int[] grid, int expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -88,14 +90,14 @@ public class WaysToSplitArrayIntoThreeSubarrays_1712 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"TwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_BinarySearch solutionBinarySearch = new Solution_BinarySearch();
         output = solutionBinarySearch.waysToSplit(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

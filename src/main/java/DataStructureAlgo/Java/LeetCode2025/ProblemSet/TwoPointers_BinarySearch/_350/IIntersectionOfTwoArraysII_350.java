@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._350;
 
+import DataStructureAlgo.Java.helpers.*;
+
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -86,7 +88,7 @@ public class IIntersectionOfTwoArraysII_350 {
 
     private static boolean test(int[] nums1, int[] nums2, int[] expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"nums1", "nums2", "Expected"}, true, nums1, nums2, expected);
+        CommonMethods.printTestOutcome(new String[]{"nums1", "nums2", "Expected"}, true, nums1, nums2, expected);
 
         int[] output;
         boolean pass, finalPass = true;
@@ -96,7 +98,7 @@ public class IIntersectionOfTwoArraysII_350 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

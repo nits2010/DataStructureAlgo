@@ -80,7 +80,7 @@ public class MostProfitAssigningWork_826 {
 
     private static boolean test(int[] difficulty, int[] profit, int[] workers, int expected) {
 
-        CommonMethods.printTest(new String[]{"difficulty", "profit", "workers", "Expected"}, true, difficulty, profit, workers, expected);
+        CommonMethods.printTestOutcome(new String[]{"difficulty", "profit", "workers", "Expected"}, true, difficulty, profit, workers, expected);
 
         int output ;
         boolean pass, finalPass = true;
@@ -89,13 +89,13 @@ public class MostProfitAssigningWork_826 {
         output = solutionBinarySearch.maxProfitAssignment(difficulty, profit, workers);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         SolutionUsingCache solutionUsingCache = new SolutionUsingCache();
         output = solutionUsingCache.maxProfitAssignment(difficulty, profit, workers);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"solutionUsingCache", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"solutionUsingCache", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -69,7 +69,7 @@ public class LastSubstringInLexicographicalOrder_1163 {
 
     private static boolean test(String grid, String expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         String output;
         boolean pass, finalPass = true;
@@ -78,13 +78,13 @@ public class LastSubstringInLexicographicalOrder_1163 {
         output = solutionReverseInterationTwoPointer.lastSubstring(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"Solution_ReverseInteration_TwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"Solution_ReverseInteration_TwoPointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_TwoPointers_WithDiff solutionTwoPointersWithDiff = new Solution_TwoPointers_WithDiff();
         output = solutionTwoPointersWithDiff.lastSubstring(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"solutionTwoPointersWithDiff", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"solutionTwoPointersWithDiff", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -1,5 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1385;
 
+import DataStructureAlgo.Java.helpers.*;
+
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -88,7 +90,7 @@ public class FindTheDistanceValueBetweenTwoArrays_1385 {
 
     private static boolean test(int[] arr1, int[] arr2, int d, int expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"arr1", "arr2", "d", "Expected"}, true, arr1, arr2, d, expected);
+        CommonMethods.printTestOutcome(new String[]{"arr1", "arr2", "d", "Expected"}, true, arr1, arr2, d, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -98,7 +100,7 @@ public class FindTheDistanceValueBetweenTwoArrays_1385 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 
