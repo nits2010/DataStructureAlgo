@@ -74,7 +74,7 @@ public class PartitionLabels_763 {
 
     private static boolean test(String grid, List<Integer> expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Grid", "Expected"}, true, grid, expected);
+        CommonMethods.printTest(new String[]{"Grid", "Expected"}, true, grid, expected);
 
         List<Integer> output ;
         boolean pass, finalPass = true;
@@ -83,13 +83,13 @@ public class PartitionLabels_763 {
         output = solutionTwoPointer.partitionLabels(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Two Pointer", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_MergeIntervals solutionMergeIntervals = new Solution_MergeIntervals();
         output = solutionMergeIntervals.partitionLabels(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        CommonMethods.printTestOutcome(new String[]{"Merge Interval", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Merge Interval", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -73,7 +73,7 @@ public class PartitionList_86 {
 
     private static boolean test(Integer[] nodes, int x, Integer[] expected) {
 
-        CommonMethods.printTestOutcome(new String[]{"nodes", "x", "Expected"}, true, nodes, x, expected);
+        CommonMethods.printTest(new String[]{"nodes", "x", "Expected"}, true, nodes, x, expected);
         ListNode head = ListBuilder.arrayToSinglyList(nodes);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
 
@@ -85,7 +85,7 @@ public class PartitionList_86 {
         pass = CommonMethods.compareResultOutCome(output, expectedList, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Solution_FlyList", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Solution_FlyList", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         SolutionMultiList solutionMultiList = new SolutionMultiList();
@@ -93,7 +93,7 @@ public class PartitionList_86 {
         pass = CommonMethods.compareResultOutCome(output, expectedList, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"solutionMultiList", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"solutionMultiList", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
 
         return finalPass;

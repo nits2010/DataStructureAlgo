@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._165;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -102,7 +100,7 @@ public class CompareVersionNumbers_165 {
 
     private static boolean test(String version1, String version2, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"version1", "version2", "Expected"}, true, version1, version2, expected);
+        CommonMethods.printTest(new String[]{"version1", "version2", "Expected"}, true, version1, version2, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -112,7 +110,7 @@ public class CompareVersionNumbers_165 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

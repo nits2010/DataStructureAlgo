@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._475;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -87,7 +85,7 @@ public class Heaters_475 {
 
     private static boolean test(int[] houses, int[] heaters, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"Houses", "Heaters", "Expected"}, true, houses, heaters, expected);
+        CommonMethods.printTest(new String[]{"Houses", "Heaters", "Expected"}, true, houses, heaters, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -97,7 +95,7 @@ public class Heaters_475 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -70,7 +70,7 @@ public class MagicalString_481 {
 
     private static boolean test(int num, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"num", "Expected"}, true, num, expected);
+        CommonMethods.printTest(new String[]{"num", "Expected"}, true, num, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -80,7 +80,7 @@ public class MagicalString_481 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch.TwoSum._170;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -76,7 +74,7 @@ public class TwoSumIIIDataStructureDesign_170 {
 
     private static boolean test(String[] operation, Integer[] input, Boolean[] expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"operation", "Input", "Expected"}, true, operation, input, expected);
+        CommonMethods.printTest(new String[]{"operation", "Input", "Expected"}, true, operation, input, expected);
 
         Boolean[] output;
         boolean pass, finalPass = true;
@@ -86,7 +84,7 @@ public class TwoSumIIIDataStructureDesign_170 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 

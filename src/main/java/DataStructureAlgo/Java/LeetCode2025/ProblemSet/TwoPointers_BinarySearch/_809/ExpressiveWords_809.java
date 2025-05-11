@@ -1,7 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._809;
 
-import DataStructureAlgo.Java.helpers.*;
-
 import java.util.*;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -84,7 +82,7 @@ public class ExpressiveWords_809 {
 
     private static boolean test(String s, String[] words, int expected) {
         //add print here
-        CommonMethods.printTestOutcome(new String[]{"s", "words", "Expected"}, true, s, words, expected);
+        CommonMethods.printTest(new String[]{"s", "words", "Expected"}, true, s, words, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
@@ -94,14 +92,14 @@ public class ExpressiveWords_809 {
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"OnTheFly", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"OnTheFly", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         Solution_RLE solutionRle = new Solution_RLE();
         output = solutionRle.expressiveWords(s, words);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTestOutcome(new String[]{"RLE", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"RLE", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 
