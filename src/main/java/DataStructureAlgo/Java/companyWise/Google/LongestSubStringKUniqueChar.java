@@ -74,7 +74,7 @@ public class LongestSubStringKUniqueChar {
         for (int i = 0; i < str.length; i++) {
 
 
-            //this is unique char
+            //this is a unique char
             if (!map.containsKey(str[i])) {
 
                 countOfUnique++;

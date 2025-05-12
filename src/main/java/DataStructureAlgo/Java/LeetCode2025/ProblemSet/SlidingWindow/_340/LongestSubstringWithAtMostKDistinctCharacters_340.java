@@ -30,7 +30,8 @@ import java.util.*;
  * 0 <= k <= 50
  * File reference
  * -----------
- * Duplicate {@link}
+ * Duplicate {@link DataStructureAlgo.Java.LeetCode.longestShortestCommon.LongestSubstringAtMostKDistinctCharacters}
+ *           {@link DataStructureAlgo.Java.companyWise.Google.LongestSubStringKUniqueChar}
  * Similar {@link}
  * extension {@link }
  * DP-BaseProblem {@link }
@@ -110,15 +111,15 @@ public class LongestSubstringWithAtMostKDistinctCharacters_340 {
                 //expand the window
                 mapOfFreq.merge(chars[windowEnd], 1, Integer::sum);
 
+                // we need to count for "at most K distinct characters"
                 if (mapOfFreq.size() <= k) {
                     maxLen = Math.max(maxLen, windowEnd - windowStart + 1);
                 }
 
-                //shrink the window till window size is 0 or k distinct character left
+                //shrink the window till window size > k distinct character left
                 while (mapOfFreq.size() > k && windowStart <= windowEnd) {
                     char previous = chars[windowStart];
-                    mapOfFreq.merge(previous, -1, Integer::sum);
-                    if (mapOfFreq.get(previous) == 0) {
+                    if (mapOfFreq.merge(previous, -1, Integer::sum) == 0) {
                         mapOfFreq.remove(previous);
                     }
                     windowStart++;
