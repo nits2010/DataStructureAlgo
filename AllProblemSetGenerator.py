@@ -22,7 +22,7 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 # base_path = r"E:\Study\DataStructureAlgo"
 base_url = "https://github.com/nits2010/DataStructureAlgo/blob/" + branch
 
-# Path for the markdown file
+# Path for the Markdown file
 md_file_path = 'AllProblems.md'
 
 # Step 1: Collect file details along with their creation time
