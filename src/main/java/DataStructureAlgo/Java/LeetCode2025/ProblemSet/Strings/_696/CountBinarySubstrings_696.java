@@ -93,6 +93,23 @@ public class CountBinarySubstrings_696 {
 
     }
 
+    /**
+     00110011
+     in order to have a substring which has the same 0 and 1, we need to count how many contiguous 0 and 1 present in the string
+     This is because, the number of contiguous 0 or 1 will form a group of either 0 or 1
+     00110011 -> 2(0)2(1)2(0)2(1)
+     10101 -> 1(1)1(0)1(1)1(0)1(1)
+
+     Since string can have either 0 or 1,
+     it means that either 0 or 1 form an individual group or start a new group with 0 or 1.
+     That forms this kind of string
+     K(0),M(1) = 00000..K times, 111111..M times
+     M(1),K(0) = 111111..M times , 00000..K times
+
+     Now, to make the group,
+     we have to choose min(M,K) this is because only that number of either K or M form an equal amount of 0/1 group.
+
+     */
     static class Solution_Groups {
         public int countBinarySubstrings(String s) {
             int[] groups = new int[s.length()];

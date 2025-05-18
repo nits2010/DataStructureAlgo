@@ -233,7 +233,7 @@ public class LongestSubstringWithAtLeastKRepeatingCharacters_395 {
 
     /**
      * One thing we noticed in a brute force solution that, we have to check for isValid every time we move the end.
-     * This is because, we are not sure that every character in this window (start,end) is valid or not.
+     * This is because we are not sure that every character in this window (start,end) is valid or not.
      * <p>
      * To apply the sliding window logic here, we need to find the way how we expand the window and how we shrink the window.
      * Expand the window is intuitive where we keep adding character, however, when to stop ?

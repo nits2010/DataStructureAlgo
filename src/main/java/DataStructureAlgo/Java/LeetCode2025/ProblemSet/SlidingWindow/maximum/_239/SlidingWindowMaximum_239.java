@@ -143,7 +143,7 @@ public class SlidingWindowMaximum_239 {
             final int[] result = new int[nums.length - k + 1];
             int index = 0;
 
-            final Deque<Integer> dq = new ArrayDeque<>(k);
+            final Deque<Integer> dq = new ArrayDeque<>(k); // monotonic decreasing queue
 
             //enqueue current window; keep a front element as maximum and all the element post that would be less than front
             //keep them in decreasing order
@@ -159,7 +159,7 @@ public class SlidingWindowMaximum_239 {
 
                 i++;
             }
-            result[index++] = dq.isEmpty() ? Integer.MIN_VALUE : nums[dq.peekFirst()];
+            result[index++] = nums[dq.peekFirst()];
 
             //apply same logic to rest of the element
             while (i < nums.length) {
@@ -176,7 +176,7 @@ public class SlidingWindowMaximum_239 {
                 //add the new element index at last, which could be smaller than the front element or maximum so far, if the queue is empty
                 dq.offerLast(i);
 
-                result[index++] = dq.isEmpty() ? Integer.MIN_VALUE : nums[dq.peekFirst()];
+                result[index++] = nums[dq.peekFirst()];
 
                 i++;
             }
@@ -208,10 +208,10 @@ public class SlidingWindowMaximum_239 {
 
 
             //Traverse the list from start to end and calculate max_so_far. Reset max after each block boundary (of w elements).
-            //left_max[] = 2, 2, 3, 4 | 6, 6, 8, 9 | 10, 12, 56
+            //Left_max[] = 2, 2, 3, 4 | 6, 6, 8, 9 | 10, 12, 56
             //
             //Similarly calculate max in future by traversing from end to start.
-            //right_max[] = 4, 4, 4, 4 | 9, 9, 9, 9 | 56, 56, 56
+            //Right_max[] = 4, 4, 4, 4 | 9, 9, 9, 9 | 56, 56, 56
 
             leftMax[0] = nums[0];
             rightMax[n - 1] = nums[n - 1];

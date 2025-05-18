@@ -110,7 +110,7 @@ public class NextPermutation_31 {
     static class Solution {
         public void nextPermutation(int[] nums) {
             int n = nums.length;
-            //first find the number which is smaller in adj cell on left side
+            //first find the number which is smaller in adj cell on the left side
             int i = n - 2;
             while (i >= 0 && nums[i + 1] <= nums[i]) i--;
 

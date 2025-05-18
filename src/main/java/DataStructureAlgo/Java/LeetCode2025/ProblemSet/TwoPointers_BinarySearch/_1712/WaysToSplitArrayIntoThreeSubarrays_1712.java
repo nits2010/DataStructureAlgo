@@ -233,7 +233,8 @@ public class WaysToSplitArrayIntoThreeSubarrays_1712 {
 
             int n = sum.length;
 
-            int low = idx, high = n - 2; // keeping n-1 element as one of the element on right side to satisfy condition
+            int low = idx, high = n - 2; // keeping n-1 element as one of the elements on the right side
+            // to satisfy condition
 
             int index = -1; // to find the index
 
@@ -251,19 +252,19 @@ public class WaysToSplitArrayIntoThreeSubarrays_1712 {
                     //we need to extend this index based on isLeftSearch either left or right side
 
                     if (isLeftSearch) {
-                        //we are searching for point b on left side
+                        //we are searching for point b on the left side
                         high = mid - 1;
                     } else {
                         low = mid + 1;
                     }
 
                 } else if (leftSum > midSum) {
-                    //increase leftBoundary to increas midSum
+                    //increase leftBoundary to increase midSum
                     low = mid + 1;
 
                 } else  // if (midSum > rightSum)
                 {
-                    //increase rightBoundary to increase rigthSUm
+                    //increase rightBoundary to increase rightSUm
                     high = mid - 1;
                 }
 

@@ -14,13 +14,15 @@ Track your progress by filling in the values for each pattern.
 ## 🧠 Patterns Checklist
 
 ### 1. Two Pointers
-- Questions Solved: ___
-- Confidence Level: ___
+- List: [AI Two pointer](https://leetcode.com/problem-list/2kjh1mej/) & [Two pointers](https://leetcode.com/problem-list/26ksgcmh/)
+- Questions Solved: [63](https://leetcode.com/problem-list/2khuzio2/)
+- Confidence Level: 50%
 - Revisions: ___
 
 ### 2. Sliding Window
-- Questions Solved: ___
-- Confidence Level: ___
+- List: [AI Sliding Window](https://leetcode.com/problem-list/2kb1b49r/)
+- Questions Solved: [30](https://leetcode.com/problem-list/24asd74t/)
+- Confidence Level: 50%
 - Revisions: ___
 
 ### 3. Binary Search & Sorting

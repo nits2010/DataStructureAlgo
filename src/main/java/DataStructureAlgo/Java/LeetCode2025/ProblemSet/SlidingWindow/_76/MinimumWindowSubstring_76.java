@@ -114,65 +114,74 @@ public class MinimumWindowSubstring_76 {
     }
 
     static class SolutionSlidingWindow {
-        public String minWindow(String s, String t) {
-            if (s.isEmpty() || t.isEmpty()) return "";
+        public String minWindow(String text, String pattern) {
+            if (text.isEmpty() || pattern.isEmpty()) return "";
 
-            char[] sChars = s.toCharArray();
-            char[] tChars = t.toCharArray();
-            int m = s.length();
-            int n = t.length();
+            int textLength = text.length();
+            int windowLength = pattern.length();
 
-            final int[] shouldFind = new int[256];
-            final int[] hasFind = new int[256];
+            if (windowLength > textLength)
+                return "";
 
-            //store the frequency of characters in t
-            for (char c : tChars) {
+            char[] texts = text.toCharArray();
+            char[] patterns = pattern.toCharArray();
+
+            int[] shouldFind = new int[128]; //represent which characters+frequency to find, only upper and lower case letters
+            int[] hasFind = new int[128]; //represent which characters+frequency have found, only upper and lower case letters
+
+            int foundCount = 0; //characters found count
+
+            //cache the pattern to get shouldFind
+            for (char c : patterns) {
                 shouldFind[c]++;
             }
 
-            int left = 0, right = 0; //two pointers denote the sliding window start and end
-            int counts = 0;
-            int minLength = m + 1; // max length of substring
-            int start = -1, end = -1;
+            //now start a window of windowLength and count/cache each of the character from text
+            int start = 0, end = 0;
+            int rStart = -1, rEnd = -1;
+            int resultLength = textLength + 1;
+            while (end < textLength) {
 
-            while (right < m) {
+                char c = texts[end];
 
-                char ch = sChars[right];
+                //expand the window
+                if (shouldFind[c] != -1) {
+                    hasFind[c]++;
 
-                //if that char is needs to be included in the substring
-                if (shouldFind[ch] > 0) {
-
-                    hasFind[ch]++;
-
-                    if (hasFind[ch] <= shouldFind[ch]) {
-                        counts++;
+                    //count how many character been found
+                    // text = "aa" , pattern="aa"
+                    if (hasFind[c] <= shouldFind[c]) {
+                        foundCount++;
                     }
 
-                    //found a valid substring contains t characters
-                    if (counts == n) {
+                    //if all required character found, then evaluate the window
+                    if (foundCount == windowLength) {
 
-                        //squeeze the window
-                        while (shouldFind[sChars[left]] == 0 || hasFind[sChars[left]] > shouldFind[sChars[left]]) {
-                            hasFind[sChars[left]]--;
-                            left++;
+                        //We need to find the minimum window substring, hence try to shrink window
+                        // 1. Remove all character that has more frequency than required
+                        while (hasFind[texts[start]] > shouldFind[texts[start]]) {
+                            hasFind[texts[start]]--;
+                            start++;
                         }
 
-                        int len = right - left + 1;
-                        if (len < minLength) {
-                            minLength = len;
-                            start = left;
-                            end = right;
+                        //this is the window that has the same count of character as a pattern and same letters
+                        if (resultLength > (end - start + 1)) {
+                            resultLength = end - start + 1;
+                            rStart = start;
+                            rEnd = end;
                         }
+
+                        //if we found a string same length as a pattern, then this would be best
+                        if (resultLength == windowLength)
+                            break;
 
                     }
-
                 }
-                right++;
-            }
-            if (minLength > m)
-                return "";
 
-            return s.substring(start, end + 1);
+                end++;
+            }
+
+            return resultLength == textLength + 1 ? "" : text.substring(rStart, rEnd + 1);
 
         }
     }

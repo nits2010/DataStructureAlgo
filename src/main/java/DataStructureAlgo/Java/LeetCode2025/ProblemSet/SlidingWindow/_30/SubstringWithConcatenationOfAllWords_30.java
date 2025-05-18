@@ -75,6 +75,8 @@ public class SubstringWithConcatenationOfAllWords_30 {
 
         CommonMethods.printTest(new String[]{"SlidingWindow-Optimized", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
+
+
         return finalPass;
 
     }
@@ -162,73 +164,84 @@ public class SubstringWithConcatenationOfAllWords_30 {
      * n - string length
      * <p>
      * O(w) + O(wL) * O(n) = O(n*wL + w)
+     * Ref  {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.SlidingWindow._76.MinimumWindowSubstring_76}
+     * instead of character, we scan for word
      */
     static class SolutionSlidingWindowOptimized {
-        public List<Integer> findSubstring(String s, String[] words) {
-            int sLen = s.length();
-            int wordsLen = words.length;
-            int wordLen = words[0].length();
-            int windowLength = wordsLen * wordLen;
+        public List<Integer> findSubstring(String text, String[] words) {
+            List<Integer> result = new ArrayList<>();
+            int textLength = text.length();
+            int wordsLength = words.length;
+            int wordLength = words[0].length();
+            int windowLength = wordLength * wordsLength;
 
-            final List<Integer> result = new ArrayList<>();
+            if (wordLength > textLength)
+                return result;
 
-            //this is similar to 76. Minimum Window Substring,
-            // in that question, we need to find wrt to each character in pattern, however,
-            //here instead of character, it becomes a word it self.
+            char[] texts = text.toCharArray();
 
-            //cache the patterns, frequencey of each word, just like frequency of each letter
-            //O(w)
-            Map<String, Integer> wordsMap = new HashMap<>();
+            Map<String, Integer> shouldFind = new HashMap<>();
+
+
+            //cache + count frequency of word in words
             for (String word : words) {
-                wordsMap.merge(word, 1, Integer::sum);
+                shouldFind.merge(word, 1, Integer::sum);
             }
 
-            //now search in text, such that instead of letter, we search for word
-            //O(wL)
-            for (int i = 0; i < wordLen; i++) {
-                //slide the window of windowLength
-                slidingWindow(i, s, wordsMap, wordLen, result, windowLength);
+            //scan through a text and see if we can find a substring of size = wordLength * wordsLength
+            for (int start = 0; start < wordLength; start++) {
+                slidingWindow(text, start, wordLength, windowLength, shouldFind, result);
             }
-
             return result;
 
         }
 
-        // O(n)
-        private void slidingWindow(int windowStart, String text, Map<String, Integer> shouldFind, int wordLen,
-                                   List<Integer> result, int windowLength) {
+        void slidingWindow(String text, int i, int wordLength, int windowLength, Map<String, Integer> shouldFind,
+                           List<Integer> result) {
 
-            int windowEnd = windowStart;
+            int start = i, end = i;
+            int foundCount = 0;
             Map<String, Integer> hasFind = new HashMap<>();
 
-            //O(n/wordLen) = O(n)
-            while (windowEnd + wordLen <= text.length()) {
-                //O(wL)
-                String sub = text.substring(windowEnd, windowEnd + wordLen);
-                windowEnd += wordLen;
+            while (end + wordLength <= text.length()) {
+
+                //extract a substring from texts
+                String sub = text.substring(end, end + wordLength);
+                end += wordLength;
 
                 if (shouldFind.containsKey(sub)) {
+
                     hasFind.merge(sub, 1, Integer::sum);
 
-                    // Shrink the window if frequency exceeds
-                    while (hasFind.get(sub) > shouldFind.get(sub)) {
-                        String leftWord = text.substring(windowStart, windowStart + wordLen);
-                        hasFind.merge(leftWord, -1, Integer::sum);
-                        if (hasFind.get(leftWord) == 0) {
-                            hasFind.remove(leftWord);
-                        }
-                        windowStart += wordLen;
-                    }
+                    if (hasFind.get(sub) <= shouldFind.get(sub))
+                        foundCount += wordLength;
 
-                    if (windowEnd - windowStart == windowLength) {
-                        result.add(windowStart);
+                    if (foundCount == windowLength) {
+
+                        //shrink the window
+                        String left = text.substring(start, start + wordLength);
+                        while (hasFind.get(left) > shouldFind.get(left)) {
+
+                            if (hasFind.merge(left, -1, Integer::sum) == 0)
+                                hasFind.remove(left);
+
+                            start += wordLength;
+                            left = text.substring(start, start + wordLength);
+                        }
+
+                        if (end - start == windowLength) {
+                            result.add(start);
+                        }
+
                     }
 
                 } else {
-                    // Reset if an invalid word is found
+                    //invalid substring found, clear the context
                     hasFind.clear();
-                    windowStart = windowEnd;
+                    start = end;
+                    foundCount = 0;
                 }
+
             }
         }
 
