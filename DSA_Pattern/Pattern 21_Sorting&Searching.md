@@ -67,7 +67,7 @@ A compilation of the top 40 LeetCode questions that focus on sorting, ranging fr
 🧩 *This list includes a range of sorting techniques from custom sorting algorithms to optimization challenges, useful for mastering sorting-related problem-solving.*
 
 
-# 📚 Searching (Binary Search and its Variations) - Top 40 LeetCode Questions
+# 📚 Searching (Binary Search and its Variations)—Top 40 LeetCode Questions
 
 A list of 40 LeetCode problems focusing on binary search, one of the most fundamental searching techniques, as well as variations like binary search on answers, divisors, speed, etc.
 

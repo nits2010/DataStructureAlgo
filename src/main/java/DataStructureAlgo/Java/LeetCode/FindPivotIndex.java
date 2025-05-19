@@ -5,7 +5,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 13/10/19
- * Description: https://leetcode.com/problems/find-pivot-index/
+ * Description: 724. Find Pivot Index https://leetcode.com/problems/find-pivot-index/
  * 724. Find Pivot Index
  * Given an array of integers nums, write a method that returns the "pivot" index of this array.
  * <p>
@@ -63,11 +63,11 @@ public class FindPivotIndex {
 
 /**
  * Algorithm:
- * 1. Scan the array and build the prefix and suffix sum such that
+ * 1. Scan the array and build the prefix and suffix sum such as
  * prefixSum[i] = prefixSum[i-1] + nums[i-1]
  * suffixSum[i] = suffixSum[i+1] + nums[i+1]
  * <p>
- * 2. After check where both are equal from left side
+ * 2. After check where both are equal from the left side
  * <p>
  * O(n)/O(n)
  * <p>
@@ -101,14 +101,14 @@ class FindPivotIndexLinear {
 
 
 /**
- * In above algorithm, we scan and build the array. Essentially the suffix array we don't need as we need
- * leftmost index. Which means, we can compute the sum of all the element on left side of current index
- * and reduce it from total sum to get sum of all the element on right side including this element.
- * Reduce the element to get right side sum only.
+ * In the above algorithm, we scan and build the array. Essentially the suffix array we don't need as we need
+ * leftmost index. Which means, we can compute the sum of all the elements on the left side of the current index
+ * and reduce it from a total sum to get a sum of all the elements on the right side, including this element.
+ * Reduce the element to get a right side sum only.
  * <p>
  * Algorithm:
  * 1. Compute the overall sum
- * 2. keep computing the sum of element on left side excluding current element
+ * 2. keep computing the sum of elements on the left side excluding current element
  * 3. compute the right side sum and check
  * <p>
  * O(n)/ O(1)
@@ -130,8 +130,8 @@ class FindPivotIndexLinearConstantMemory {
             if (i != 0)
                 left += nums[i - 1];
 
-            //(sum - left) gives the sum of element on right side including this element
-            // reduce nums[i] to get sum of right side element excluding this element
+            //(sum - left) gives the sum of element on the right side including this element
+            // reduce nums[i] to get a sum of a right side element excluding this element
             if (sum - left - nums[i] == left)
                 return i;
 

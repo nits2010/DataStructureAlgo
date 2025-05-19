@@ -3,7 +3,8 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
- * Description:https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+ * Description:153. Find Minimum in Rotated Sorted Array
+ * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
  * <p>
  * (i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
@@ -36,13 +37,7 @@ public class MinimumRotatedSortedArrayFindPivot {
 
 
 class FindPivot {
-    /**
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Find Minimum in Rotated Sorted Array.
-     * Memory Usage: 37.7 MB, less than 100.00% of Java online submissions for Find Minimum in Rotated Sorted Array.
-     *
-     * @param nums
-     * @return
-     */
+
     public int search(int[] nums) {
 
         if (nums.length == 0)
@@ -55,7 +50,7 @@ class FindPivot {
         /**
          * If the array is already sorted;
          * [1,2,3,4,5,6]
-         * then low is it self is minimum
+         * then low is itself is minimum
          */
         if (nums[low] < nums[high])
             return nums[low];
@@ -97,7 +92,7 @@ class FindPivot {
         }
 
         /**
-         * when low and high are same; only 1 element in array
+         * when low and high are same; only 1 element in an array
          */
         return nums[low];
 

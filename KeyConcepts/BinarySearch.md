@@ -34,12 +34,10 @@ class Solution {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[mid] == target) {
+            if (nums[mid] <= target) {
                 leftmost = mid;
                 high = mid - 1; // Continue searching in the left half
-            } else if (target < nums[mid]) {
-                high = mid - 1;
-            } else {
+            }  else {
                 low = mid + 1;
             }
         }
@@ -58,13 +56,11 @@ class Solution {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[mid] == target) {
+            if (nums[mid] <= target) {
                 rightmost = mid;
                 low = mid + 1; // Continue searching in the right half
-            } else if (target < nums[mid]) {
+            }  else {
                 high = mid - 1;
-            } else {
-                low = mid + 1;
             }
         }
         return rightmost;
@@ -121,22 +117,60 @@ class Solution {
 }
 ```
 
+#### Binary search to find the pivot index in a rotated array
+
+```java
+//[3,4,5,1,2] here pivot is 1 at index 3
+class Solution {
+    private int pivotIndex(int[] nums) {
+        int low = 0, high = nums.length - 1;
+
+        while (low < high) {
+            int mid = (low + high) >>> 1;
+
+            if (nums[mid] > nums[high]) //[3,4,5,1,2] mid = 5 then 5 > 2, pivot lies in right side
+                low = mid + 1;
+            else
+                high = mid; //mid could be pivoted itself
+        }
+        return low;
+    }
+}
+```
+
+#### Binary search for insert position 
+
+```java
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+
+        while (low <= high) {
+            int mid = (low + high) >>> 1;
+
+            if (nums[mid] == target)
+                return mid;
+
+            if (nums[mid] > target)
+                high = mid - 1;
+            else
+                low = mid + 1;
+        }
+        return low;
+    }
+}
+```
 
 
 Here's a list of the LeetCode problem titles and their corresponding problem numbers for the binary search problems previously discussed:
 
-1.  **Binary Search** (#704)
-2.  **First Bad Version** (#278)
-3.  **Search in Rotated Sorted Array** (#33)
-4.  **Find First and Last Position of Element in Sorted Array** (#34)
-5.  **Search Insert Position** (#35)
-6.  **Find Peak Element** (#162)
-7.  **Search a 2D Matrix** (#74)
-8.  **Find Minimum in Rotated Sorted Array** (#153)
-9.  **Koko Eating Bananas** (#875)
-10. **Capacity To Ship Packages Within D Days** (#1011)
-11. **Find K Closest Elements** (#658) 
-12. **Search in a Sorted Array of Unknown Size** (#702) 
-13. **Find the Duplicate Number** (#287) 
-14. **Split Array Largest Sum** (#410) 
-15. **Single Element in a Sorted Array** (#540) 
+1. [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/) (Easy)
+2. [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/) (Easy)
+3. [LeetCode 34 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) (Medium)
+4. [LeetCode 852 - Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) (Easy)
+5. [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/) (Medium)
+6. [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium)
+7. [LeetCode 154 - Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) (Hard)
+8. [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (Medium)
+9. [LeetCode 240 - Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) (Medium)
+10. [LeetCode 410 - Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) (Hard)

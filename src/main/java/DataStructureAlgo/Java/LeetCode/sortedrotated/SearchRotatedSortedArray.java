@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
- * Description:https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * Description:33. Search in Rotated Sorted Array https://leetcode.com/problems/search-in-rotated-sorted-array/
  * <p>
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
  * <p>
@@ -68,11 +68,11 @@ class RotatedSortedArraySearch {
             } else {
                 //that means nums[low..mid] is not sorted and it makes nums[mid..high] sorted
 
-                //see does it exist in other half
+                //see does it exist in another half
                 if (target >= nums[mid] && target <= nums[high])
-                    low = mid + 1; //it would lie in right side; since target is after mid; [mid+1,high]
+                    low = mid + 1; //it would lie in right side; since the target is after mid; [mid+1,high]
                 else
-                    high = mid - 1; //it would lie in left side since target is before mid; [low,mid-1]
+                    high = mid - 1; //it would lie in left side since the target is before mid; [low,mid-1]
             }
 
         }
