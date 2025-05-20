@@ -161,6 +161,20 @@ class Solution {
 }
 ```
 
+### Important tip
+1. When you use 
+```
+low = 0, high = n-1
+while(low <= high)
+```
+then make sure that you never set **neither low or high to mid**, as this will end up in infinite loop until you have an extra condition to break before. 
+
+2. When you use 
+```
+low = 0, high = n-1
+while(low < high)
+```
+Then you can set **either low or high to mid-** considering that mid could be your optimal solution. And at end, return low or high.
 
 Here's a list of the LeetCode problem titles and their corresponding problem numbers for the binary search problems previously discussed:
 
