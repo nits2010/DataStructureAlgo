@@ -81,7 +81,14 @@ public class MinimizeMaxDistanceToGasStation_774 {
 
     }
 
-
+    /**
+     * "Since the minimum possible distance between gas stations is 0 and the maximum is the distance between the first and last station (assuming sorted positions), the search space is [0,last−first]. This allows us to apply binary search.
+     * As we need to return a floating-point result, we use a precision margin ε = 1e-6.
+     * For each mid, check if we can place at most k gas stations such that the maximum distance between any two stations is ≤ mid.
+     * For a gap between two stations, the number of stations needed is ceil(gap / mid) - 1 Or  (int) ((station[i] - station[i-1] ) / mid )  Summing over all gaps gives the total stations required. If this total ≤ k, the mid is valid and we try to minimize further.
+     * SInce we want to split the gap = s[i] - s[i-1] such that each gap <= mid. Lets say we put x stations then there will be x+1 segments.
+     * (gap / (x+1) ) <= mid => x ≥ (gap / mid) - 1. Hence we need to find the ceil( (gap / mid) ) - 1 or with bit less precise int ((station[i] - station[i-1] ) / mid ) "
+     */
     static class Solution {
         public double findSmallestMaxDist(int stations[], int k) {
             int n = stations.length;
