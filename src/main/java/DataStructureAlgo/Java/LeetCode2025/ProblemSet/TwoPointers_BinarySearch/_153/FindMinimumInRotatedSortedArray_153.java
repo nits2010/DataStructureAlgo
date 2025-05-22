@@ -134,5 +134,19 @@ public class FindMinimumInRotatedSortedArray_153 {
             }
             return low;
         }
+
+        private int pivotIndexV2(int []nums){
+            int low = 0, high = nums.length -1;
+
+            while(low <= high){
+                int mid = (low + high) >>> 1;
+
+                if(nums[mid] > nums[nums.length -1]) //[3,4,5,1,2] mid = 5 then 5 > 2, pivot lies in right side
+                    low = mid + 1;
+                else
+                    high = mid - 1; //mid could be pivoted itself
+            }
+            return low;
+        }
     }
 }

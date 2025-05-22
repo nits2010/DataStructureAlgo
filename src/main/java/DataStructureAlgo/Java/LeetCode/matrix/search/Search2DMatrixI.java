@@ -6,7 +6,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
- * Description: https://leetcode.com/problems/search-a-2d-matrix/
+ * Description: 74. Search a 2D Matrix https://leetcode.com/problems/search-a-2d-matrix/description/
  * <p>
  * 74. Search a 2D Matrix
  * <p>
@@ -66,20 +66,16 @@ public class Search2DMatrixI {
      * * Integers in each row are sorted from left to right.
      * * The first integer of each row is greater than the last integer of the previous row.
      * <p>
-     * i.e. all elements are sorted in increasing order.
+     * i.e., all elements are sorted in increasing order.
      * <p>
      * Algo:
-     * Find the candidate row, if found then do binary search.
-     * Candidate row: matrix[i][0] <= target <=matrix[i][n-1]; then i is candidate row
+     * Find the candidate row, if found, then do binary search.
+     * Candidate row: matrix[i][0] <= target <=matrix[i][n-1]; then 'i' is candidate row
      * <p>
      *
-     * <p>
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Search a 2D Matrix.
-     * Memory Usage: 43.2 MB, less than 6.06% of Java online submissions for Search a 2D Matrix.
-     * <p>
      * Complexity: matrix (m*n) size
      * 1. Finding the candidate O(m)
-     * 2. Finding element in candidate array is O(log(n))
+     * 2. Finding an element in a candidate array is O(log(n))
      * O(m + log(n)) / O(1)
      *
      * @param matrix

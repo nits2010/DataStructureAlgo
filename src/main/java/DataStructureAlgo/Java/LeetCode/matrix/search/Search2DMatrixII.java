@@ -57,9 +57,9 @@ public class Search2DMatrixII {
      * <p>
      * Alog:
      * 1. Start with first row and last column. Move towards left side
-     * 2. if element is smaller then current element, move left; previous column
-     * 3. if element is greater then current element, move down : next row
-     * 4. if element is not in range, return false
+     * 2. if an element is smaller than the current element, move left; previous column
+     * 3. if an element is greater than the current element, move down : next row
+     * 4. if an element is not in range, return false
      * <p>
      * Complexity : O(m + n ) / O(1)
      * <p>

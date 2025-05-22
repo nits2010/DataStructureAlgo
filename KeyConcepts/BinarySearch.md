@@ -117,7 +117,7 @@ class Solution {
 }
 ```
 
-#### Binary search to find the pivot index in a rotated array
+#### Binary search to find the pivot index in a rotated array [non-duplicate elements]
 
 ```java
 //[3,4,5,1,2] here pivot is 1 at index 3
@@ -132,6 +132,42 @@ class Solution {
                 low = mid + 1;
             else
                 high = mid; //mid could be pivoted itself
+        }
+        return low;
+    }
+}
+```
+
+
+#### Binary search to find the pivot index in a rotated array [duplicate elements]
+only one extra condition to be added as 
+```java
+// this is because it could possible that all elements [mid, high] are same or there are elements in b/w [mid,high] which is not same, so we have to find the first index of nums[high] b/w [mid,high] 
+// Example : [3,3,1,3] l = 0, h = 3 m = 1 which is nums[mid] = 3 and nums[high] = 3 which is equal however if you see the elements b/w [mid,high] are not same [3,1,3] so we have to reduce search space b/w 
+// [low, high-1]
+// Example : [10,1,10,10,10] l = 0, h = 4, m = 2 nums[mid] = 10, nums[high] = 10 whcih is same and also [mid,high] elements are [10,10,10] which means the search space b/w [mid,high]
+// isn't valid, reducing it to [low,high-1] makes low = 0, high = 3 m = 1 and nums[mid] = 1, nums[high] = 10 and 1 != 10 lands you to original problem. 
+
+if(nums[mid] == nums[high])
+    high = high - 1;
+```
+
+```java
+//[3,4,5,1,2] here pivot is 1 at index 3
+class Solution {
+    private int pivotIndex(int []nums){
+        int low = 0, high = nums.length - 1;
+
+        while (low < high){
+            int mid = (low + high) >>> 1;
+            
+            if(nums[mid] == nums[high])
+                high = high - 1;
+            else if(nums[mid] > nums[high]){
+                low = mid + 1;
+            }else {
+                high = mid;
+            }
         }
         return low;
     }
@@ -157,6 +193,40 @@ class Solution {
                 low = mid + 1;
         }
         return low;
+    }
+}
+```
+
+
+#### Binary search for 2D array, row sorted, column sorted. Column's first element > last row's last element
+
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+
+        int m = matrix.length;
+        int n = matrix[0].length;
+
+        //instead of treating it as 2d array, treat it as 1d array, then apply binary search
+        int low = 0, high = m * n - 1;
+
+        while (low <= high) {
+
+            int mid = (low + high) >>> 1;
+
+            int row = mid / n; // Since each row has 'n' elements, this gives the row index of the mid element
+            int col = mid % n; // The remainder gives the column index within that row
+
+            if (matrix[row][col] == target)
+                return true;
+
+            if (matrix[row][col] > target)
+                high = mid - 1;
+            else
+                low = mid + 1;
+
+        }
+        return false;
     }
 }
 ```
