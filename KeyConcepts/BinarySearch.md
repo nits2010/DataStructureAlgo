@@ -248,13 +248,4 @@ Then you can set **either low or high to mid-** considering that mid could be yo
 
 Here's a list of the LeetCode problem titles and their corresponding problem numbers for the binary search problems previously discussed:
 
-1. [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/) (Easy)
-2. [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/) (Easy)
-3. [LeetCode 34 - Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) (Medium)
-4. [LeetCode 852 - Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) (Easy)
-5. [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/) (Medium)
-6. [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium)
-7. [LeetCode 154 - Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) (Hard)
-8. [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (Medium)
-9. [LeetCode 240 - Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) (Medium)
-10. [LeetCode 410 - Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) (Hard)
+[Pattern 21_Sorting&Searching.md](../DSA_Pattern/Pattern%2021_Sorting%26Searching.md)

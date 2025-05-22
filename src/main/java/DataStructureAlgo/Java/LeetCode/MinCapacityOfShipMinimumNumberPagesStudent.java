@@ -128,7 +128,7 @@ class SolutionMinCapacityOfShipMinimumNumberPagesStudent {
 
         for (int i = 0; i < weights.length; i++) {
 
-            //if this weight it self bigger then my capacity, then i can't take it with me ..sorry :(
+            //if this weights itself bigger than my capacity, then i can't take it with me ..sorry :(
             if (weights[i] > capacity)
                 return false;
 

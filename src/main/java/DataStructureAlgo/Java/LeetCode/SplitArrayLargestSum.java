@@ -48,7 +48,7 @@ public class SplitArrayLargestSum {
 class SplitArrayLargestSumSolution {
     /**
      * splitArray(): The answer must lie somewhere in between {maximum item, sum of all items}.
-     * We can use bracketing techniques to keep guessing and checking until we found the
+     * We can use bracketing techniques to keep guessing and checking until we find the
      * final answer.
      */
     public int splitArray(int a[], int m) {
