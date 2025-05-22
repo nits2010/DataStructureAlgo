@@ -6,7 +6,7 @@ import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
 /**
  * Author: Nitin Gupta
  * Date: 16/09/19
- * Description: https://leetcode.com/problems/minimize-max-distance-to-gas-station/
+ * Description: https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/
  * http://leetcode.liangjiateng.cn/leetcode/minimize-max-distance-to-gas-station/description
  * https://www.lintcode.com/problem/minimize-max-distance-to-gas-station/note
  * 774.Minimize Max Distance to Gas Station [hard]
