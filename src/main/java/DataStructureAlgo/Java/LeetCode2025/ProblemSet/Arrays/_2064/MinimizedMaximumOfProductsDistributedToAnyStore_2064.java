@@ -58,7 +58,6 @@ import java.util.*;
  * <p>
  * Tags
  * -----
- *
  * @medium
  * @Array
  * @BinarySearch
@@ -110,72 +109,6 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
 
     }
 
-    static class SolutionBinarySearch_UsingStores {
-        private int max(int[] quantities) {
-            int max = 0;
-            for (int i : quantities)
-                max = Math.max(max, i);
-
-            return max;
-        }
-
-        public int minimizedMaximum(int n, int[] quantities) {
-            int high = max(quantities); //maximum number of product can be placed in any store
-            int low = 0; //minimum number of product can be placed in any store
-            int output = high;
-
-            while (low <= high) {
-
-                //Try mid number of product to be placed in n stores
-                int mid = low + (high - low) / 2;
-
-                //if we can place, then mid is potential output
-                if (isPossibleToDistribute(mid, quantities, n)) {
-                    output = mid;
-
-                    //minimize further
-                    high = mid - 1;
-                } else {
-
-                    //we can not put mid-product in n stores, there are products left out, increase the product
-                    low = mid + 1;
-                }
-            }
-
-            return output;
-        }
-
-
-        //based on top-down remaining
-        private boolean isPossibleToDistribute(int x, int[] quantities, int stores) {
-
-            int quentity = quantities[0];
-            int q = 0;
-
-            for (int i = 0; i < stores; i++) {
-
-                //can we place x product in this store
-                if (quentity > x) {
-                    //get remaining stores
-                    quentity -= x;
-                } else {
-
-                    //product of q type finished, take next type
-                    q++;
-
-                    //no more left, hence placed all
-                    if (q == quantities.length)
-                        return true;
-
-                    quentity = quantities[q];
-                }
-
-            }
-
-            return false;
-        }
-    }
-
 
     static class SolutionBinarySearch_UsingQuantities {
         private int max(int[] quantities) {
@@ -196,7 +129,7 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
                 //Try mid-number of product to be placed in n stores
                 int mid = low + (high - low) / 2;
 
-                //if we can place, then mid is potential output
+                //if we can place, then mid is potentially output
                 if (isPossibleToDistribute(mid, quantities, n)) {
                     output = mid;
 
@@ -204,7 +137,7 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
                     high = mid - 1;
                 } else {
 
-                    //we can not put mid-product in n stores, there are products left out, increase the product
+                    //we cannot put mid-product in n stores, there are products left out, increase the product
                     low = mid + 1;
                 }
             }
@@ -217,22 +150,92 @@ public class MinimizedMaximumOfProductsDistributedToAnyStore_2064 {
         private boolean isPossibleToDistribute(int x, int[] quantities, int stores) {
 
             int store = 0;
-            for (int quentity : quantities) {
+            for (int quantity : quantities) {
 
-                //we need quentity/x store to fill all the product of current type
-                store += quentity / x;
+                //we need quantity/x store to fill all the product of current type
+                store += quantity / x;
 
-                //if we need more store, then we can not place all the product of current type in x stores
-                if (quentity % x != 0)
+                //if we need more store, then we cannot place all the product of current type in x stores
+                if (quantity % x != 0)
                     store++;
+
+                // stores += (quantity + x - 1) / x; // ceil division
 
                 if (store > stores)
                     return false;
 
             }
 
-            return store <= stores;
+            return store <= stores; // ✅ allow fewer than n stores too, as a store can have quantity = 0 as well.
 
+        }
+    }
+
+
+
+    static class SolutionBinarySearch_UsingStores {
+        private int max(int[] quantities) {
+            int max = 0;
+            for (int i : quantities)
+                max = Math.max(max, i);
+
+            return max;
+        }
+
+        public int minimizedMaximum(int n, int[] quantities) {
+            int high = max(quantities); //maximum number of product can be placed in any store
+            int low = 0; //minimum number of product can be placed in any store
+            int output = high;
+
+            while (low <= high) {
+
+                //Try mid-number of product to be placed in n stores
+                int mid = low + (high - low) / 2;
+
+                //if we can place, then mid is potentially output
+                if (isPossibleToDistribute(mid, quantities, n)) {
+                    output = mid;
+
+                    //minimize further
+                    high = mid - 1;
+                } else {
+
+                    //we cannot put mid-product in n stores, there are products left out, increase the product
+                    low = mid + 1;
+                }
+            }
+
+            return output;
+        }
+
+
+        //based on top-down remaining
+        private boolean isPossibleToDistribute(int x, int[] quantities, int stores) {
+
+            int quantity = quantities[0];
+            int q = 0;
+
+            for (int i = 0; i < stores; i++) {
+
+                //can we place x product in this store?
+                if (quantity > x) {
+                    //get remaining stores
+                    quantity -= x;
+                } else {
+
+                    //product of a q type finished, take next type
+                    q++;
+
+                    //no more left, hence placed all
+                    if (q == quantities.length)
+                        return true;
+
+                    quantity = quantities[q];
+                }
+
+            }
+
+            return false;
         }
     }
 

@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._2513;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._2513;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
@@ -93,6 +93,24 @@ public class MinimizeTheMaximumOfTwoArrays_2513 {
 
     }
 
+    /**
+     * We need to find the smallest number `x` such that we can pick:
+     * - `uniqueCnt1` numbers not divisible by `divisor1` for A1
+     * - `uniqueCnt2` numbers not divisible by `divisor2` for A2
+     * - All numbers must be distinct
+     *
+     * Total required numbers = uniqueCnt1 + uniqueCnt2
+     * The constraint says this total ≤ 10^9, so we binary search in [1, 10^10]
+     *
+     * For a candidate `mid`, we check if:
+     * - We have enough numbers not divisible by divisor1 to fill A1
+     * - Enough not divisible by divisor2 to fill A2
+     * - And any shortfall can be covered using the remaining numbers
+     *
+     * To avoid double-counting, we exclude numbers divisible by both divisors using LCM
+     * LCM = (divisor1 * divisor2) / GCD(divisor1 , divisor2)
+     * gcd(a,b) = ( a == 0 ? b : gcd(b%a, a) )  where b > a
+     */
     static class Solution {
         public int minimizeSet(int divisor1, int divisor2, int uniqueCnt1, int uniqueCnt2) {
             //[1, 10^10]
@@ -103,7 +121,7 @@ public class MinimizeTheMaximumOfTwoArrays_2513 {
 
             while (low <= high) {
 
-                //get the mid, a possible range to fill both array
+                //get the mid, a possible range to fill both arrays
                 long mid = low + (high - low) / 2;
 
 
@@ -127,20 +145,20 @@ public class MinimizeTheMaximumOfTwoArrays_2513 {
 
         private boolean isPossible(long divisor1, long divisor2, long uniqueCnt1, int uniqueCnt2, long range) {
 
-            //count numbers that can be divided by both the divisiors
+            //count numbers that can be divided by both the divisions
             long lcm = lcm(divisor1, divisor2);
             long common = range / lcm;
 
-            //count numbers that can be filled in A1 - common, since they can not be filled in A1
+            //count numbers that can be filled in A1 - common, since they cannot be filled in A1
             long cArr1 = range / divisor2 - common;
 
-            //count numbers that can be filled in A2 - common, since they can not be filled in A2
+            //count numbers that can be filled in A2 - common, since they cannot be filled in A2
             long cArr2 = range / divisor1 - common;
 
             //total remaining numbers
             long rem = range - (cArr1 + cArr2 + common);
 
-            //the filled numbers are either sufficient not not suffiicent, then find the required numbers
+            //the filled numbers are either enough not sufficient, then find the required numbers
             if (uniqueCnt1 >= cArr1) {
                 rem -= (uniqueCnt1 - cArr1);
             }
