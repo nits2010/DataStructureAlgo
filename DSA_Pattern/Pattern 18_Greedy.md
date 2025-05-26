@@ -1,4 +1,5 @@
 # Greedy Approach - Top 40 LeetCode Questions
+- [Leetcode list](https://leetcode.com/problem-list/2kjasit5/)
 
 1. [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) (Medium)
 2. [455. Assign Cookies](https://leetcode.com/problems/assign-cookies/) (Easy)

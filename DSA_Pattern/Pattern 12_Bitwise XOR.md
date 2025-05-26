@@ -309,3 +309,5 @@ flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]])//First reverse eac
 
 - The time complexity of this solutionMimicPQ is `O(n)` as we iterate through all elements of the input.
 - The space complexity of this solutionMimicPQ is `O(1)`.
+
+- [leetcode list](https://leetcode.com/problem-list/2kjuia4i/)
