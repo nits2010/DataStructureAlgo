@@ -102,62 +102,89 @@ public class Heaters_475 {
     }
 
     /**
+     * /**
+     * <p>
+     * ### Binary Search to Find Minimum Heater Radius
+     * <p>
+     * We have `n` houses and `m` heaters placed on a line. We need the **minimum radius** such that **every house is within the radius of at least one heater**.
+     * <p>
+     * Since positions are fixed, we can:
+     * <p>
+     * 1. **Sort houses and heaters** to simplify distance checks.
+     * 2. For a given radius `r`, check if **all houses are within `r` units of any heater**.
+     * <p>
+     * If only one heater exists, the required radius is the **max distance from that heater to the farthest house**.
+     * So, the search space is limited to [0, max_distance].
+     * <p>
+     * We apply **binary search** over this range:
+     * <p>
+     * * For each radius guess, check if all houses are covered.
+     * * Use two pointers or binary search to find the closest heater for each house.
+     * <p>
      * O(nlogn) + O(mlogm) + O(log(max) * (n+m)) => O(nlogn+mlogm+(n+m)⋅log(maxDistance))
      * O(nlogn+mlogm+(n+m)⋅log(maxDistance)) / O (1)
      */
+
+
     static class Solution_TwoPointerBinarySearch {
 
         public int findRadius(int[] houses, int[] heaters) {
             int nHouses = houses.length;
             int nHeaters = heaters.length;
 
-            Arrays.sort(houses); //sort houses, so that we can effectively place heaters at neighbors of each
-            Arrays.sort(heaters); // sort heaters, so that we can place heaters at each house efficiently
-            int minRadius = 0;
-            int maxRadius = Math.max(houses[nHouses - 1], heaters[nHeaters - 1]); // since house and heaters can be far away, assume a case where house is at 1 while heaters is at 100, then we need at 99 radius to reach.
+            Arrays.sort(houses);
+            Arrays.sort(heaters);
 
-            int requiredRadius = 1;
+            int minRadius = 0; // since at best case, we have put heaters to all houses
+            int maxRadius = Math.max(houses[nHouses - 1], heaters[nHeaters - 1]); // That possible that either the last house or heater placed very far away. like [1,99]
 
-            //binary search the required radius
             while (minRadius < maxRadius) {
+
                 int mid = minRadius + (maxRadius - minRadius) / 2;
 
-                if (isPossible(mid, houses, heaters)) {
-                    maxRadius = mid;
-                    requiredRadius = mid;
-                } else
+                if (isPossible(houses, heaters, mid)) {
+
+                    maxRadius = mid; // current mid is standard radius
+
+                } else {
                     minRadius = mid + 1;
+                }
             }
 
-            return requiredRadius;
+            return minRadius;
         }
 
-        //O(n+m)
-        private boolean isPossible(int radius, int[] houses, int[] heaters) {
+        private boolean isPossible(int[] houses, int[] heaters, int radius) {
 
-            int count = 0;
-            int h = 0;
-            int min = heaters[h] - radius;
-            int max = heaters[h] + radius;
+            int housesCovered = 0;
 
-            for (int i = 0; i < houses.length; ) {
-                int house = houses[i];
-                if (min <= house && max >= house) {
-                    count++;
-                    i++;
+            int h = 0; // heater index
+
+            //calculate the coverage of 'h' th heater with this radius
+            int minRadius = heaters[h] - radius;
+            int maxRadius = heaters[h] + radius;
+            int i = 0;
+            while (i < houses.length) {
+
+                //is this house covered ?
+                if (minRadius <= houses[i] && houses[i] <= maxRadius) {
+                    //yes, count it
+                    housesCovered++;
+                    i++; // next house
                 } else {
-                    h++;
-                    if (h < heaters.length) {
-                        min = heaters[h] - radius;
-                        max = heaters[h] + radius;
+                    //no, check with next heater
+                    if (h + 1 < heaters.length) {
+                        h++;
+                        minRadius = heaters[h] - radius;
+                        maxRadius = heaters[h] + radius;
                     } else {
+                        //all heaters are used
                         break;
                     }
                 }
             }
-            if (count == houses.length)
-                return true;
-            return false;
+
+            return housesCovered == houses.length;
 
         }
     }
