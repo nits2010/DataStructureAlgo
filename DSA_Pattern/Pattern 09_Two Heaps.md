@@ -658,3 +658,7 @@ console.log(`Next interval indices are: ${result}`);
 ````
 - The time complexity of our algorithm will be `O(NlogN)`, where `N` is the total number of intervals.
 - The space complexity will be `O(N)` because we will be storing all the intervals in the heaps.
+
+
+------
+- [leetcode list](https://leetcode.com/problem-list/2kjdqdrs/)

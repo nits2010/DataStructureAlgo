@@ -1,7 +1,7 @@
 # 📚 Bit Manipulation - Top 40 LeetCode Questions (Continued)
 
 A continuation of the previous set, this list covers more advanced problems using bit manipulation techniques to solve challenges related to bit operations, XOR, bitmasks, and more.
-
+- [Leetcode list](https://leetcode.com/problem-list/2kjuia4i/)
 ---
 
 ### ✅ Fundamental Bit Manipulation

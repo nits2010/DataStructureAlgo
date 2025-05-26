@@ -74,6 +74,7 @@ public class SplitArrayLargestSum_410 {
         tests.add(test(new int[]{7, 2, 5, 10, 8}, 2, 18));
         tests.add(test(new int[]{1, 2, 3, 4, 5}, 2, 9));
         tests.add(test(new int[]{1, 4, 4}, 3, 4));
+        tests.add(test(new int[]{2,3,1,2,4,3}, 5, 4)); // if you do buckets == k this test will fail, hence its requirement buckets <= k
 
         CommonMethods.printAllTestOutCome(tests);
     }

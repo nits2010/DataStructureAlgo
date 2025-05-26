@@ -66,7 +66,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @Editorial 1. https://leetcode.com/problems/find-k-th-smallest-pair-distance/editorial
  * 2. https://leetcode.com/problems/find-k-th-smallest-pair-distance/solutions/5632765/o-n-log-n-n-log-w-binary-search-sliding-window-java-c-python-go-rust-javascript<p><p>
  * -----
- * @OptimalSolution {@link }
+ * @OptimalSolution {@link Solution_SlidingWindow}
  */
 
 public class FindKthSmallestPairDistance_719 {

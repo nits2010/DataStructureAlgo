@@ -2,6 +2,7 @@
 
 A compilation of the top 40 LeetCode questions that focus on sorting, ranging from basic sorting tasks to custom sorting and sorting-related problem-solving.
 
+- [Leetcode-List](https://leetcode.com/problem-list/2kjlt6z5/)
 ---
 
 ### ✅ Basic Sorting and Array Operations

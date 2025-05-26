@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._1283;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1283;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
@@ -46,6 +46,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @medium <p>
  * Company Tags
  * -----
+ * @Salesforce
+ * @Airbnb
  * @Editorial
  */
 

@@ -2,6 +2,7 @@
 
 A collection of top 40 LeetCode questions focused on the Trie (Prefix Tree) data structure, combining classic implementations and advanced use-cases.
 
+- [Leetcode list](https://leetcode.com/problem-list/2kj756xh/)
 ---
 
 ### ✅ Core Trie Implementations & Use Cases
