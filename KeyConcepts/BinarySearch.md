@@ -29,21 +29,43 @@ class Solution {
     public int findLeftmost(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
-        int leftmost = -1;
+        int leftmost = -1; // Stores the leftmost index found so far
 
         while (low <= high) {
-            int mid = low + (high - low) / 2;
+            int mid = (low + high) >>> 1;
 
-            if (nums[mid] <= target) {
-                leftmost = mid;
-                high = mid - 1; // Continue searching in the left half
-            }  else {
-                low = mid + 1;
+            if (nums[mid] == target) {
+                leftmost = mid; // Found a potential leftmost index
+                high = mid - 1; // Try to find an even earlier one in the left half
+            } else if (nums[mid] < target) {
+                low = mid + 1; // The Target is in the right half
+            } else { // nums[mid] > target
+                high = mid - 1; // The Target is in the left half
             }
         }
         return leftmost;
     }
 }
+
+//second variation
+class Solution {
+    public int findLeftmost(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+
+        while (low < high) {
+            int mid = (low + high) >>> 1;
+
+            if (nums[mid] < target) { // if array is decreasing then reverse this condition to nums[mid] > target
+                low = mid + 1;   // The Target is in the right half
+            } else { // nums[mid] >= target
+                high = mid;  // The Target is in the left half or mid itself
+            }
+        }
+        return (target != nums[low]) ? -1 : low;
+    }
+}
+
 ```
 #### Binary Search for the Rightmost (Last) Occurrence
 ```java
@@ -51,21 +73,43 @@ class Solution {
     public int findRightmost(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
-        int rightmost = -1;
+        int rightmost = -1; // Stores the rightmost index found so far
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[mid] <= target) {
-                rightmost = mid;
-                low = mid + 1; // Continue searching in the right half
-            }  else {
-                high = mid - 1;
+            if (nums[mid] == target) {
+                rightmost = mid; // Found a potential rightmost index
+                low = mid + 1;   // Try to find an even later one in the right half
+            } else if (nums[mid] < target) {
+                low = mid + 1;   // The Target is in the right half
+            } else { // nums[mid] > target
+                high = mid - 1;  // The Target is in the left half
             }
         }
         return rightmost;
     }
 }
+
+//second variation
+class Solution {
+    public int findRightmost(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+
+        while (low < high) {
+            int mid = (low + high) >>> 1;
+            
+            if(nums[mid] > target){
+                high = mid - 1;  // The Target is in the left half
+            }else { // nums[mid] <= target
+                low = mid; // The Target is in the right half or mid itself
+            }
+        }
+        return (target != nums[low]) ? -1 : low;
+    }
+}
+
 ```
 #### Binary Search for the Floor of a Number
 ```java
