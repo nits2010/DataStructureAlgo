@@ -1,5 +1,6 @@
 | #  | File Name | GitHub Link | 
 |---|-----------|-------------|
+
 | 942 | KthSmallestNumberInMultiplicationTable_668.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_668/KthSmallestNumberInMultiplicationTable_668.java) |
 | 941 | KthSmallestPrimeFraction_786.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_786/KthSmallestPrimeFraction_786.java) |
 | 940 | SumOfMutatedArrayClosestToTarget_1300.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_1300/SumOfMutatedArrayClosestToTarget_1300.java) |
