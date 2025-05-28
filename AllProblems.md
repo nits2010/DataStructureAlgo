@@ -1,6 +1,7 @@
 | #  | File Name | GitHub Link | 
 |---|-----------|-------------|
-
+| 944 | FindInMountainArray_1095.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_1095/FindInMountainArray_1095.java) |
+| 943 | MedianOfTwoSortedArrays_4.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_4/MedianOfTwoSortedArrays_4.java) |
 | 942 | KthSmallestNumberInMultiplicationTable_668.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_668/KthSmallestNumberInMultiplicationTable_668.java) |
 | 941 | KthSmallestPrimeFraction_786.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_786/KthSmallestPrimeFraction_786.java) |
 | 940 | SumOfMutatedArrayClosestToTarget_1300.java | [link](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/_1300/SumOfMutatedArrayClosestToTarget_1300.java) |
