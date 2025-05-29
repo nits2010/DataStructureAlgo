@@ -351,7 +351,7 @@ findFirstSmallestMissingPositive([3, 2, 5, 1]); //4
 
 ## 🌟 Find the First K Missing Positive Numbers (hard)
 
-https://leetcode.com/problems/kth-missing-positive-number/
+https://www.geeksforgeeks.org/find-first-k-natural-numbers-missing-given-array/
 
 > Given an unsorted array containing numbers and a number `K`, find the first `K` missing positive numbers in the array.
 
