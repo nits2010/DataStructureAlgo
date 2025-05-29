@@ -15,6 +15,10 @@ We are given an array containing `n` objects. Each object, when created, was ass
 
 > Write a function to sort the objects <i>in-place</i> on their creation sequence number in `O(n)` and without any extra space.
 
+```
+Most complicated(and smart) part for cycle sort is nums[i] != nums[correctIdx]
+It handles two possible cases: 1) when value not in correct position, 2) when duplicate is encountered;
+```
 For simplicity, let’s assume we are passed an integer array containing only the sequence numbers, though each number is actually an object.
 As we know, the input array contains numbers in the range of `1` to `n`. We can use this fact to devise an efficient way to sort the numbers. Since all numbers are unique, we can try placing each number at its correct place, i.e., placing `1` at index `0`, placing `2` at index `1`, and so on.
 
