@@ -34,8 +34,8 @@ Track your progress by filling in the values for each pattern.
 ### 3.5. Sort [29th May 2025]
 - List: [Ai Sort](https://leetcode.com/problem-list/2kjlt6z5/)
 - Questions Solved: []()
-- Confidence Level: 
-- Revisions: ___
+- Confidence Level:
+- Revisions: 1 time
 
 ### 4. Merge Intervals
 - Questions Solved: ___
