@@ -105,6 +105,12 @@ public class FindTheDuplicateNumber_287 {
         finalPass &= pass;
         CommonMethods.printTest(new String[]{"UsingExtraSpace", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
+        SolutionModifyArray solutionModifyArray = new SolutionModifyArray();
+        output = solutionModifyArray.findDuplicate(grid);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"Modified Array", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
         SolutionTwoPointer solutionTwoPointer = new SolutionTwoPointer();
         output = solutionTwoPointer.findDuplicate(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
@@ -126,6 +132,32 @@ public class FindTheDuplicateNumber_287 {
             return -1;
         }
     }
+
+    static class SolutionModifyArray {
+        public int findDuplicate(int[] nums) {
+
+            int n = nums.length;
+            int i = 0;
+            while (i < n) {
+                //since an array has n+1 elements in the range of [1,n], hence each can be placed to its own index except duplicate
+                int index = nums[i] - 1; //-1 because of range [1,n]
+                if (nums[i] != i + 1) { // NUMS[I] is not its correct place
+                    if (nums[i] != nums[index]) {
+                        int temp = nums[i];
+                        nums[i] = nums[index];
+                        nums[index] = temp;
+                    } else {
+                        return nums[i]; //this is a duplicate number
+                    }
+                } else {
+                    i++;
+                }
+            }
+            return -1;
+
+        }
+    }
+
 
     /**
      * Follow up
