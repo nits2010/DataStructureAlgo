@@ -36,47 +36,47 @@ public class MedianOfTwoSortedArray {
     O(log(min(m,n)))
      */
 
-    public static double findMedianSortedArrays(final int[] X, final int[] Y) {
+    public static double findMedianSortedArrays(final int[] nums1, final int[] nums2) {
 
-        if (X.length > Y.length) {
-            return findMedianSortedArrays(Y, X);
+        if (nums1.length > nums2.length) {
+            return findMedianSortedArrays(nums2, nums1);
         }
 
-        int x = X.length;
-        int y = Y.length;
-        int n = x + y;
+        int n1 = nums1.length;
+        int n2 = nums2.length;
+        int n = n1 + n2;
 
         final int NEG_INF = Integer.MIN_VALUE;
         final int POS_INF = Integer.MAX_VALUE;
 
 
         /**
-         * Do binary search on smaller array
+         * Do binary search on a smaller array
          */
-        int start = 0, end = x;
-        while (start <= end) {
+        int low = 0, high = n1;
+        while (low <= high) {
 
-            //Find where we should partition array X
-            int partitionX = start + (end - start) >> 1; //median of smaller array
+            //Find where we should partition array nums1
+            int partitionX = low + (high - low) >> 1; //median of a smaller array
 
-            //Find where we should partition array Y such that both partition elements (partition of X + partition of Y) are equal or 1 more on left side
-            // (x + y + 1) / 2 gives you the middle point when we combine both the array and since we already have 0 to partitionX element, then remove those to make them equal
-            int partitionY = (x + y + 1) / 2 - partitionX;
+            //Find where we should partition array nums2 such that both partition elements (partition of nums1 + partition of nums2) are equal or 1 more on the left side
+            // (x + n2 + 1) / 2 gives you the middle point when we combine both the array and since we already have [0 , partitionX] element, then remove those to make them equal
+            int partitionY = (n1 + n2 + 1) / 2 - partitionX;
 
 
-            //If no element left on array X on left partition
-            int maxLeftX = (partitionX == 0) ? NEG_INF : X[partitionX - 1];
+            //If no element left on array nums1 on left partition
+            int maxLeftX = (partitionX == 0) ? NEG_INF : nums1[partitionX - 1];
 
-            //If no element left on array Y on left partition
-            int maxLeftY = (partitionY == 0) ? NEG_INF : Y[partitionY - 1];
+            //If no element left on array nums2 on left partition
+            int maxLeftY = (partitionY == 0) ? NEG_INF : nums2[partitionY - 1];
 
-            //If no element Right on array X on right partition
-            int minRightX = (partitionX == x) ? POS_INF : X[partitionX];
+            //If no element Right on array nums1 on right partition
+            int minRightX = (partitionX == n1) ? POS_INF : nums1[partitionX];
 
-            //If no element Right on array Y on right partition
-            int minRightY = (partitionY == y) ? POS_INF : Y[partitionY];
+            //If no element Right on array nums2 on right partition
+            int minRightY = (partitionY == n2) ? POS_INF : nums2[partitionY];
 
-            //If all the element on Left side of X and Y are smaller then element on right side of Y and X
+            //If all the element on Left side of nums1 and nums2 are smaller than an element on the right side of nums2 and nums1
             if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
 
                 if (n % 2 == 0) {
@@ -84,52 +84,40 @@ public class MedianOfTwoSortedArray {
                 } else {
                     return Math.max(maxLeftX, maxLeftY);
                 }
-            } else if (maxLeftX > minRightY) { //If we to far on left side, reduce the left space (number of element on lef side)
-                end = partitionX - 1;
+            } else if (maxLeftX > minRightY) { //If we to far on the left side, reduce the left space (number of elements on lef side)
+                high = partitionX - 1;
             } else
-                start = partitionX + 1;//otherwise increase the space
+                low = partitionX + 1;//otherwise increase the space
         }
-        return (double) NEG_INF;
+        return NEG_INF;
 
     }
 
 
     //O(m+n))
-    public static double findMedianSortedArraysUsingMergeProcedure(int[] A, int[] B) {
+    public static double findMedianSortedArraysUsingMergeProcedure(int[] nums1, int[] nums2) {
 
-        if ((null == A || A.length == 0) && (null == B || B.length == 0))
+        if ((null == nums1 || nums1.length == 0) && (null == nums2 || nums2.length == 0))
             return -(double) Integer.MAX_VALUE;
 
 
-        int x = A.length;
-        int y = B.length;
+        int x = nums1.length;
+        int y = nums2.length;
 
         int temp[] = new int[x + y];
         int t = 0;
         int i = 0, j = 0;
 
         while (i < x && j < y) {
-
-            int e1 = A[i];
-            int e2 = B[j];
-
-            if (e1 <= e2) {
-
-                temp[t++] = e1;
-                i++;
-            } else {
-                temp[t++] = e2;
-                j++;
-            }
-
+            temp[t++] = nums1[i] < nums2[j] ? nums1[i++] : nums2[j++];
         }
 
         while (i < x) {
-            temp[t++] = A[i++];
+            temp[t++] = nums1[i++];
         }
 
         while (j < y) {
-            temp[t++] = B[j++];
+            temp[t++] = nums2[j++];
         }
 
         if ((x + y) % 2 == 0) {

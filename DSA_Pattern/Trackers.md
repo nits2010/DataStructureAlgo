@@ -17,17 +17,18 @@ Track your progress by filling in the values for each pattern.
 - List: [AI Two pointer](https://leetcode.com/problem-list/2kjh1mej/) & [Two pointers](https://leetcode.com/problem-list/26ksgcmh/)
 - Questions Solved: [63](https://leetcode.com/problem-list/2khuzio2/)
 - Confidence Level: 50%
-- Revisions: ___
+- Revisions: 1 time
 
 ### 2. Sliding Window
 - List: [AI Sliding Window](https://leetcode.com/problem-list/2kb1b49r/)
 - Questions Solved: [30](https://leetcode.com/problem-list/24asd74t/)
 - Confidence Level: 50%
-- Revisions: ___
+- Revisions: 1 time
 
 ### 3. Binary Search & Sorting
-- Questions Solved: ___
-- Confidence Level: ___
+- List: [Ai Binary Search](https://leetcode.com/problem-list/2kjlt6z5/)
+- Questions Solved: [30](https://leetcode.com/problem-list/2jarkv5m/)
+- Confidence Level: 70%
 - Revisions: ___
 
 ### 4. Merge Intervals
