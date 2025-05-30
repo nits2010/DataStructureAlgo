@@ -69,22 +69,29 @@ public class KthMissingPositiveNumber_1539 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
-        //add tests cases here
+        tests.add(test(new int[]{2, 3, 4, 7, 11}, 5, 9));
+        tests.add(test(new int[]{1, 2, 3, 4}, 2, 6));
+
         CommonMethods.printAllTestOutCome(tests);
     }
 
-    private static boolean test(int[] nums, int expected) {
+    private static boolean test(int[] nums, int k, int expected) {
         //add print here
-        CommonMethods.printTest(new String[]{"nums", "Expected"}, true, nums, expected);
+        CommonMethods.printTest(new String[]{"nums", "k", "Expected"}, true, nums, k, expected);
 
         int output = 0;
         boolean pass, finalPass = true;
 
-        //add logic here
+        output = new Solution_Counting().findKthPositive(nums, k);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
 
-        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+        CommonMethods.printTest(new String[]{"Counting", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+        output = new Solution_BinarySearch().findKthPositive(nums, k);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"BinarySearch", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
         return finalPass;
 
@@ -97,7 +104,7 @@ public class KthMissingPositiveNumber_1539 {
      * All number from [1,+inf] are considered as missing elements if not present in the array. We can count them and get the kth one
      * T/s : O(n) / O(1)
      */
-    class Solution_Counting {
+    static class Solution_Counting {
         public int findKthPositive(int[] arr, int k) {
             int count = 0;
             int num = 1;
@@ -125,7 +132,7 @@ public class KthMissingPositiveNumber_1539 {
     }
 
     //binary search
-    class Solution_BinarySearch {
+    static class Solution_BinarySearch {
         public int findKthPositive(int[] arr, int k) {
             int n = arr.length;
 
