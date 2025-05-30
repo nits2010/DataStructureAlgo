@@ -12,7 +12,7 @@ Given two intervals (`a` and `b`), there will be six different ways the two inte
 Understanding the above six cases will help us in solving all intervals related problems.
 ![](./images/mergeintervals.png)
 
-## Merge Intervals (medium)
+## 1. Merge Intervals (medium)
 https://leetcode.com/problems/merge-intervals/
 
 > Given a list of intervals, <b>merge all the overlapping intervals</b> to produce a list that has only mutually exclusive intervals.
@@ -159,7 +159,7 @@ anyOverlap([[1,2], [3,4], [5,6]])
 anyOverlap([[1,2]])
  ````
  
- ## Insert Interval (medium)
+ ## 2. Insert Interval (medium)
  https://leetcode.com/problems/insert-interval/
  
  > Given a list of non-overlapping intervals sorted by their `startTime`, <b>insert a given interval at the correct position</b> and merge all necessary intervals to produce a list that has only mutually exclusive intervals.
@@ -308,7 +308,7 @@ insert([[2,3],[5,7]], [1,4])//[[1,4], [5,7]], After insertion, since [1,4] overl
 - As we are iterating through all the intervals only once, the time complexity of the above algorithm is `O(N)`, where `N` is the total number of intervals.
 - The space complexity of the above algorithm will be `O(N)` as we need to return a list containing all the merged intervals.
 
-## Intervals Intersection (medium)
+## 3. Intervals Intersection (medium)
 https://leetcode.com/problems/interval-list-intersections/
 
 > Given two lists of intervals, find the <b>intersection of these two lists</b>. Each list consists of <b>disjoint intervals sorted on their `startTime`</b>.
@@ -364,7 +364,8 @@ findIntersection([[1, 3], [5, 7], [9, 12]], [[5, 10]])// [5, 7], [9, 10], The ou
 ````
 - As we are iterating through both the lists once, the time complexity of the above algorithm is `O(N + M)`, where `N` and `M` are the total number of intervals in the input arrays respectively.
 - Ignoring the space needed for the result list, the algorithm runs in constant space `O(1)`.
-## Conflicting Appointments (medium)
+
+## 4. Conflicting Appointments (medium)
 https://leetcode.com/problems/meeting-rooms/
 
 > Given an array of intervals representing`N` appointments, find out if a person can <b>attend all the appointments</b>.
@@ -428,7 +429,7 @@ function whatAreTheConflicts(appointmentTimes)  {
 //[3,6] and [5,7] conflict.
 ````
 
-## 🌟 Minimum Meeting Rooms (hard) 
+## 🌟 5. Minimum Meeting Rooms (hard) 
 https://leetcode.com/problems/meeting-rooms-ii/
 
 > Given a list of intervals representing the start and `endTime` of`N` meetings, find the <b>minimum number of rooms</b> required to <b>hold all the meetings</b>.
@@ -522,7 +523,7 @@ minMeetingRooms([[4,5], [2,3], [2,4], [3,5]])//2, We will need one room for [2,3
 Both of these problems can be solved using the `approach` discussed above.
 
 
-## 🌟 Maximum CPU Load (hard)
+## 🌟 6. Maximum CPU Load (hard)
 https://leetcode.com/problems/car-pooling/
 
 We are given a list of `jobs`. Each job has a `startTime`, an `endTime`, and a `CPU load` when it is running. Our goal is to find the  <b>Maximum CPU Load</b> at any time if all the `jobs` are <b>running on the same machine</b>.
@@ -583,7 +584,8 @@ function findMaxCPULoad(jobs) {
  
 - The time complexity of the above algorithm is `O(N*logN)`, where `N` is the total number of `jobs`. This is due to the sorting that we did in the beginning. Also, while iterating the `jobs`, we might need to poll/offer `jobs` to the priority queue. Each of these operations can take `O(logN)`. Overall our algorithm will take `O(NlogN)`.
 - The space complexity of the above algorithm will be `O(N)`, which is required for sorting. Also, in the worst case, we have to insert all the `jobs` into the priority queue (when all `jobs` overlap) which will also take `O(N)` space. The overall space complexity of our algorithm is `O(N)`.
-## 🌟 Employee Free Time (hard)
+
+## 🌟 7. Employee Free Time (hard)
 https://leetcode.com/problems/employee-free-time/ 
 > For `K` employees, we are given a list of intervals representing the working hours of each employee. Our goal is to find out if there is a <b>free interval that is common to all employees</b>. You can assume that each list of employee working hours is sorted on the `startTime`.
 
