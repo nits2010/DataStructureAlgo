@@ -43,7 +43,7 @@ import java.util.*;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link }
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._41.FirstMissingPositive_41}
  * DP-BaseProblem {@link }
  * <p><p>
  * Tags
@@ -51,7 +51,8 @@ import java.util.*;
  *
  * @Array
  * @Binary Search
- * @easy <p><p>
+ * @easy
+ * @CycleSort <p><p>
  * Company Tags
  * -----
  * @Amazon
