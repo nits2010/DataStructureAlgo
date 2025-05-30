@@ -102,6 +102,7 @@ Tailored for professionals with 12+ years of experience, specializing in microse
 - [ ] CloudWatch, X-Ray, CloudTrail
 - [ ] Terraform, CDK, or Pulumi for IaC
 - [ ] Kubernetes (K8s) – deployment, autoscaling, Helm
+  - [Resources1](https://www.youtube.com/watch?v=a-nWPre5QYI&ab_channel=PiyushGarg)
 - [ ] Secrets management – AWS Secrets Manager, Vault
 ---
 
@@ -117,6 +118,7 @@ Tailored for professionals with 12+ years of experience, specializing in microse
 
 - [ ] GitHub Actions, GitLab CI, Jenkins
 - [ ] Docker best practices
+- [ ] Podman best practices
 - [ ] Canary, blue-green deployments
 - [ ] Feature flags (e.g., LaunchDarkly)
 - [ ] GitOps workflows
