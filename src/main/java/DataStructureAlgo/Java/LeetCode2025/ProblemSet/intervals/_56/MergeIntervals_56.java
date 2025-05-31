@@ -165,6 +165,7 @@ public class MergeIntervals_56 {
         private int[] mergeIntervals(int[] previous, int[] current) {
             int[] mergedInterval = previous;
             mergedInterval[1] = Math.max(current[1], previous[1]); // get the farthest end time
+            mergedInterval[0] = Math.min(current[0], previous[0]); // get the farthest end time
             return mergedInterval;
 
         }
