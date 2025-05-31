@@ -648,3 +648,21 @@ Whenever we take an interval out of the <i>Min-Heap</i>, we can insert the same 
 - The above algorithm’s time complexity is `O(N*logK)`, where `N` is the total number of intervals, and `K` is the total number of employees. This is because we are iterating through the intervals only once (which will take `O(N)`), and every time we process an interval, we remove (and can insert) one interval in the <i>Min-Heap</i>, (which will take `O(logK)`. At any time, the heap will not have more than `K` elements.
 - The space complexity of the above algorithm will be `O(K)` as at any time, the heap will not have more than `K` elements.
 
+# List of questions
+- [Leetcode list](https://leetcode.com/problem-list/nxh8dk06/)
+- [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/description)
+- [57. Insert Interval](https://leetcode.com/problems/insert-interval/description)
+- [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description)
+- [1094. Car Pooling](https://leetcode.com/problems/car-pooling/description/)
+- [1942. The Number of the Smallest Unoccupied Chair](https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/description/)
+- [2406. Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/description/)
+- [729. My Calendar I](https://leetcode.com/problems/my-calendar-i/description/)
+- [731. My Calendar II](https://leetcode.com/problems/my-calendar-ii/description/)
+- [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/description/)
+- Prime [meeting-rooms1](https://leetcode.com/problems/meeting-rooms/description/)
+- Prime [Meeting-Rooms2](https://leetcode.com/problems/meeting-rooms-ii/description/)
+- [Meeting-Rooms3](https://leetcode.com/problems/meeting-rooms-iii/description/)
+- Prime [employee-free-time](https://leetcode.com/problems/employee-free-time/description/)
+- [1834. Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/description)
+- [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description)
+- [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/description)
