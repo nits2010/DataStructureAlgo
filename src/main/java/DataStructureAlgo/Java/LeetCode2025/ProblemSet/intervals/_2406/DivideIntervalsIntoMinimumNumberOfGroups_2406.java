@@ -244,9 +244,9 @@ public class DivideIntervalsIntoMinimumNumberOfGroups_2406 {
             //second element represents the tag for it, 1 for start, -1 for end
             List<int[]> events = new ArrayList<>();
 
-            for(int intval[] : intervals){
-                events.add(new int[]{intval[0], 1});
-                events.add(new int[]{intval[1] + 1, -1}); //since in this question, this is a valid interval [1,1], if we do not add + 1 in end, then they will overlap
+            for(int interval[] : intervals){
+                events.add(new int[]{interval[0], 1});
+                events.add(new int[]{interval[1] + 1, -1}); //since in this question, this has been a valid interval [1,1], if we do not add + 1 in end, then they will overlap
             }
 
             //sort the list by time
@@ -286,7 +286,7 @@ public class DivideIntervalsIntoMinimumNumberOfGroups_2406 {
             //insert all the intervals in this bucket
             for(int[] interval : intervals){
                 buckets[interval[0]]++; //increase the count of start time bucket
-                buckets[interval[1] + 1]--; //decrease the count of end time bucket, just like prefix sum solution
+                buckets[interval[1] + 1]--; //decrease the count of end time bucket, just like a prefix sum solution
             }
 
             int groups = 0;
