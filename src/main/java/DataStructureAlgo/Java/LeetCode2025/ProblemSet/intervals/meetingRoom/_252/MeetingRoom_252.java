@@ -33,6 +33,7 @@ import java.util.Comparator;
  *
  * @easy
  * @Array
+ * @Sorting
  * @LeetCodeLockedProblem
  * @PremimumQuestion <p><p>
  * Company Tags
