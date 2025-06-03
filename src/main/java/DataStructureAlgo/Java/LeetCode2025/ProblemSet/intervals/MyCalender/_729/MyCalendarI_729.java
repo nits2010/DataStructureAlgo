@@ -64,7 +64,6 @@ import java.util.*;
  * @Intuit
  * @Microsoft
  * @Uber
- *
  * @Editorial https://leetcode.com/problems/my-calendar-i/solutions/5841322/multiple-solution-best-sol-simple-scan-binary-search-binary-search-tree-red-black-tree
  */
 public class MyCalendarI_729 {
@@ -138,6 +137,17 @@ public class MyCalendarI_729 {
         System.out.println(" TreeSet : " + Arrays.toString(result) + " pass : " + (pass ? "Pass" : "Fail"));
         FinalPass &= pass;
 
+
+        MyCalendarLineSweep.MyCalendar myCalendarLineSweep = new MyCalendarLineSweep.MyCalendar();
+        result = new boolean[intervals.length];
+        i = 0;
+        for (int[] interval : intervals) {
+            result[i++] = myCalendarLineSweep.book(interval[0], interval[1]);
+        }
+        pass = Arrays.equals(result, expected);
+        System.out.println(" LineSweep : " + Arrays.toString(result) + " pass : " + (pass ? "Pass" : "Fail"));
+        FinalPass &= pass;
+
         return FinalPass;
 
     }
@@ -163,8 +173,13 @@ class MyCalendarScan {
                 return true;
             }
             /**
+             * Add at end
              * Existing:    [10 ----------- 20)
              * New:                 [15 ----------- 25)
+             * Add at start
+             * Existing:                        [10 ----------- 20)
+             * New:                 [5 ----------------15)
+             *
              *
              * Math.max(existingStart, start) = 15
              * Math.min(existingEnd, end) = 20
@@ -174,6 +189,7 @@ class MyCalendarScan {
                 int existingStart = existing[0];
                 int existingEnd = existing[1];
 
+                // if (start < existingEnd && existingStart < end ) return false;
                 if (Math.max(existingStart, start) < Math.min(existingEnd, end)) return false;
 
             }
@@ -181,6 +197,9 @@ class MyCalendarScan {
             /**
              * Existing:    [10 ----------- 20)
              * New:                            [20 ----------- 30)
+             *
+             * Existing:                [30 ----------- 40)
+             * New:      [20 ----------- 30)
              *
              * Math.max(existingStart, start) = 20
              * Math.min(existingEnd, end) = 20
@@ -200,19 +219,25 @@ class MyCalendarScan {
 class MyCalendarBinarySearch {
     static class MyCalendar {
 
-        List<int[]> list;
+        List<int[]> sortedList;
 
         public MyCalendar() {
-            list = new ArrayList<>();
+            sortedList = new ArrayList<>();
         }
 
         public boolean book(int start, int end) {
-            if (list.isEmpty()) {
-                list.add(new int[]{start, end});
+            if (sortedList.isEmpty()) {
+                sortedList.add(new int[]{start, end});
                 return true;
             }
 
             int insertPos = binarySearch(start);
+
+            //three cases
+            //add at start; insertPos = 0; Then we need to make sure that they are not overlapping; means existingStart > end
+            //add at end; insertPos = n-1; Then we need to make sure that they are not overlapping; means start > existingEnd
+            //add in between: 0<insertPos<n-1 ; its combination of the above two
+
 
             /**
              *                      0
@@ -222,7 +247,7 @@ class MyCalendarBinarySearch {
              * => 15 < 20 (overlap exists)
              */
             //Prev event overlapping with new event
-            if (insertPos > 0 && list.get(insertPos - 1)[1] > start)
+            if (insertPos > 0 && start < sortedList.get(insertPos - 1)[1])
                 return false;
 
             /**
@@ -233,31 +258,31 @@ class MyCalendarBinarySearch {
              * => 25 < 26 (overlap exists)
              */
             //Next event overlapping with new event
-            if (insertPos < list.size() && list.get(insertPos)[0] < end)
+            if (insertPos < sortedList.size() && sortedList.get(insertPos)[0] < end)
                 return false;
 
             //O(n)
-            list.add(insertPos, new int[]{start, end});
+            sortedList.add(insertPos, new int[]{start, end});
             return true;
         }
 
         /**
          * Binary search on list, this list is sorted based on start time.
          *
-         * @param start
+         * @param targetStart
          * @param end
          * @return the position at which this start should be inserted.
-         *
+         * <p>
          * T: O(log(n))
          */
-        private int binarySearch(int start) {
+        private int binarySearch(int targetStart) {
             int low = 0;
-            int high = list.size() - 1;
+            int high = sortedList.size() - 1;
             while (low <= high) {
                 int mid = low + (high - low) / 2;
-                int existingStart = list.get(mid)[0];
+                int midStart = sortedList.get(mid)[0];
 
-                if (existingStart < start) low = mid + 1;
+                if (midStart < targetStart) low = mid + 1;
                 else high = mid - 1;
             }
             return low;
@@ -385,7 +410,7 @@ class MyCalendarTreeMap {
 
             // Check if there is an overlap with the previous event
             // The previous event must end before the current event starts, if not its overlapped
-            if (prevEventStart != null && startVsEndMap.get(prevEventStart) > start) return false;
+            if (prevEventStart != null && start < startVsEndMap.get(prevEventStart)) return false;
 
 
             // Add the new event
@@ -415,11 +440,9 @@ class MyCalendarTreeSet {
         }
 
         /**
-         * We'll store the events in a TreeMap where:
-         * The key is the start time of the event.
-         * The value is the end time of the event.
-         * <p>
-         * This map keeps the start time in a sorted manner
+         * We'll store the events in a TreeSet where:
+         * An object interval with start time and end time of the event.
+         * sorted by start time.
          */
         TreeSet<Interval> sortedTreeSet;
 
@@ -451,6 +474,46 @@ class MyCalendarTreeSet {
             // Add the new event
             // O(log(n)); TreeSet is implemented as a red-black tree.
             sortedTreeSet.add(newEvent);
+            return true;
+        }
+    }
+
+
+}
+
+
+/**
+ * https://chatgpt.com/share/66f7004e-2e80-8011-9f3c-11ca7947fe4a
+ * T/S: O(log(n)), O(n)
+ */
+class MyCalendarLineSweep {
+
+    static class MyCalendar {
+
+        TreeMap<Integer, Integer> treeMap;
+
+        public MyCalendar() {
+            treeMap = new TreeMap<>();
+        }
+
+        //  O(log(n)); TreeMap is implemented as a red-black tree.
+        public boolean book(int start, int end) {
+            treeMap.merge(start, 1, Integer::sum);
+            if (treeMap.merge(end, -1, Integer::sum) == 0)
+                treeMap.remove(end);
+
+            //check how many active booking at any point of time
+            int activeBookings = 0;
+            for (Integer value : treeMap.values()) {
+                activeBookings += value;
+                if (activeBookings > 1) {
+                    //undo the changes, so that it does not affect for upcoming bookings
+                    if (treeMap.merge(start, -1, Integer::sum) == 0)
+                        treeMap.remove(start);
+                    treeMap.merge(end, 1, Integer::sum);
+                    return false;
+                }
+            }
             return true;
         }
     }
