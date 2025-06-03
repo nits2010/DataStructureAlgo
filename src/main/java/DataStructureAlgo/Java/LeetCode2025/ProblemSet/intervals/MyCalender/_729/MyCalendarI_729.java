@@ -65,6 +65,7 @@ import java.util.*;
  * @Microsoft
  * @Uber
  * @Editorial https://leetcode.com/problems/my-calendar-i/solutions/5841322/multiple-solution-best-sol-simple-scan-binary-search-binary-search-tree-red-black-tree
+ * Interview friendly solution {@link MyCalendarLineSweep}
  */
 public class MyCalendarI_729 {
 
