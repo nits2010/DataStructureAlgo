@@ -47,7 +47,7 @@ import java.util.*;
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link }
+ * extension {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals.MyCalender._729.MyCalendarI_729}{@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals.MyCalender._731.MyCalendarII_731}
  * DP-BaseProblem {@link }
  * <p><p>
  * Tags
@@ -99,6 +99,12 @@ public class MyCalendarIII_732 {
 
     }
 
+    /**
+     * If every booking uses a unique startTime and endTime, the TreeMap will contain 2M keys (for M bookings).
+     * <p>
+     * So, worst case complexity per book() call = O(M).
+     * Space complexity = O(M).
+     */
     static class MyCalendarThree {
 
         TreeMap<Integer, Integer> bookings;
