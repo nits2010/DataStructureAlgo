@@ -68,7 +68,7 @@ import java.util.*;
  * -----
  * @Editorial <p><p>
  * -----
- * @OptimalSolution {@link }
+ * @OptimalSolution Interview friendly solution {@link MyCalendarTwo_LineSweep}
  */
 
 public class MyCalendarII_731 {
