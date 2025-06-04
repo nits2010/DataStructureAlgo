@@ -666,3 +666,4 @@ Whenever we take an interval out of the <i>Min-Heap</i>, we can insert the same 
 - [1834. Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu/description)
 - [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description)
 - [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/description)
+- Prime [meeting-scheduler](https://leetcode.com/problems/meeting-scheduler/description/)
