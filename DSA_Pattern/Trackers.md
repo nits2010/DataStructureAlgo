@@ -38,61 +38,52 @@ Track your progress by filling in the values for each pattern.
 - Revisions: ___
 
 ### 4. Merge Intervals
+- List: [Ai Merge Intervals](https://leetcode.com/problem-list/nxh8dk06/)
+- Questions Solved: [13](https://leetcode.com/problem-list/nxpa28u6/)
+- Confidence Level: 75%
+- Revisions: ___
+
+### 5. Divide and Conquer
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 5. Heaps
+### 6. Strings
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 6. Divide and Conquer
+### 7. Trie
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 7. Strings
+### 8. Tree
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 8. Trie
+### 9. Greedy
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 9. Tree
+### 10. Recursion & Backtracking
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 10. Greedy
+### 11. Graph
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 11. Recursion
+### 12. Dynamic Programming (DP)
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 12. Backtracking
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 13. Graph
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 14. Dynamic Programming (DP)
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 15. Bit Manipulation
+### 13. Bit Manipulation
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___  
