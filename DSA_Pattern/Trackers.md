@@ -39,7 +39,7 @@ Track your progress by filling in the values for each pattern.
 
 ### 4. Merge Intervals 5 days [31st May 2025 – 4th June 2025]
 - List: [Ai Merge Intervals](https://leetcode.com/problem-list/nxh8dk06/)
-- Questions Solved: [13](https://leetcode.com/problem-list/nxpa28u6/)
+- Questions Solved: [16](https://leetcode.com/problem-list/nxpa28u6/)
 - Confidence Level: 75%
 - Revisions: ___
 
