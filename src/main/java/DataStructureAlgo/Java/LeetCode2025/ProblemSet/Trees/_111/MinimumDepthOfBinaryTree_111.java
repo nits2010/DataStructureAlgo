@@ -164,7 +164,7 @@ public class MinimumDepthOfBinaryTree_111 {
 
     /**
      * The idea is similar of above, one optimization that can be done.
-     * We don't need to run fully level by level and then return the minDepth. rather, we can assume that
+     * We don't need to run fully level by level and then return the minDepth. Rather, we can assume that
      * at the given level only, we will have leaf node.
      * <p>
      * This is another way of calculating the height of the tree

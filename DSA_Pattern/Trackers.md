@@ -44,7 +44,8 @@ Track your progress by filling in the values for each pattern.
 - Revisions: ___
 
 ### 5. Divide and Conquer
-- Questions Solved: ___
+- [List](https://leetcode.com/problem-list/2kjm05q5/)
+- Questions Solved: [](https://leetcode.com/problem-list/n509pbjm/)
 - Confidence Level: ___
 - Revisions: ___
 
