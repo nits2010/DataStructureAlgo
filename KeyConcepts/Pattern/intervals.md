@@ -97,5 +97,5 @@ for (int[] event : events) {
 
 ## 📚 Practice Problems
 
-- [Pattern 04_Merge Intervals.md](../DSA_Pattern/Pattern%2004_Merge%20Intervals.md)
+- [Pattern 04_Merge Intervals.md](../../DSA_Pattern/Pattern%2004_Merge%20Intervals.md)
 ---
