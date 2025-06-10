@@ -35,8 +35,8 @@ import java.util.Random;
  * -104 <= nums[i] <= 104
  * File reference
  * -----------
- * Duplicate {@link KthLargestElementUsingMedianOfMedian}
- * Similar {@link}
+ * Duplicate {@link }
+ * Similar {@link KthLargestElementUsingMedianOfMedian}
  * extension {@link }
  * <p>
  * Tags
@@ -68,8 +68,7 @@ import java.util.Random;
  * @LinkedIn
  * @Microsoft
  * @Oracle
- * @Pocket
- * @Gems
+ * @Pocketems
  * @Salesforce
  * @Snapchat
  * @Uber
@@ -136,16 +135,6 @@ public class KthLargestElementInAnArray_245 {
             pq.offer(val);
             if (pq.size() > k)
                 pq.poll();
-
-//            if (pq.size() < k) {
-//                pq.offer(val);
-//            } else {
-//                if (pq.peek() < val) {
-//                    pq.poll();
-//                    pq.offer(val);
-//                }
-//            }
-
         }
 
     }
@@ -195,7 +184,7 @@ public class KthLargestElementInAnArray_245 {
          * <p>
          * Run flow;
          * nums  = { 4,2,3,8,2,6,9} low = 0, high = 6
-         * l = 1, r = 6, pivot = 0; l < r
+         * l = 1, r = 6, pivot = nums[0]=4; l < r
          * //skip all elements that are less than pivot
          * nums[l] <= nums[pivot] => nums[1] <= nums[0] => 2 < 4 => l++
          * l will eventually reach at l=3
