@@ -43,10 +43,10 @@ Track your progress by filling in the values for each pattern.
 - Confidence Level: 75%
 - Revisions: ___
 
-### 5. Divide and Conquer
+### 5. Divide and Conquer 9 days [6th Jun 2025 – 14th June 2025]
 - [List](https://leetcode.com/problem-list/2kjm05q5/)
-- Questions Solved: [](https://leetcode.com/problem-list/n509pbjm/)
-- Confidence Level: ___
+- Questions Solved: [17](https://leetcode.com/problem-list/n509pbjm/)
+- Confidence Level: 60%
 - Revisions: ___
 
 ### 6. Strings
