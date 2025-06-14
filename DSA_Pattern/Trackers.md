@@ -25,74 +25,66 @@ Track your progress by filling in the values for each pattern.
 - Confidence Level: 50%
 - Revisions: one time
 
-### 3. Binary Search [19th May 2025 - 29th May 2025]
+### 3. Binary Search 11 days [19th May 2025 - 29th May 2025]
 - List: [Ai Binary Search](https://leetcode.com/problem-list/2kjlt6z5/)
 - Questions Solved: [30](https://leetcode.com/problem-list/2jarkv5m/)
 - Confidence Level: 70%
 - Revisions: ___
 
-### 3.5. Sort [29th May 2025]
+### 3.5. Sort 2 days [29th May 2025 – 30th May 2025]
 - List: [Ai Sort](https://leetcode.com/problem-list/2kjlt6z5/)
-- Questions Solved: []()
-- Confidence Level:
-- Revisions: 1 time
+- Questions Solved: [6](https://leetcode.com/problem-list/2jarkv5m/)
+- Confidence Level: 80%
+- Revisions: ___
 
-### 4. Merge Intervals
+### 4. Merge Intervals 5 days [31st May 2025 – 4th June 2025]
+- List: [Ai Merge Intervals](https://leetcode.com/problem-list/nxh8dk06/)
+- Questions Solved: [16](https://leetcode.com/problem-list/nxpa28u6/)
+- Confidence Level: 75%
+- Revisions: ___
+
+### 5. Divide and Conquer 9 days [6th Jun 2025 – 14th June 2025]
+- [List](https://leetcode.com/problem-list/2kjm05q5/)
+- Questions Solved: [17](https://leetcode.com/problem-list/n509pbjm/)
+- Confidence Level: 60%
+- Revisions: ___
+
+### 6. Strings
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 5. Heaps
+### 7. Trie
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 6. Divide and Conquer
+### 8. Tree
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 7. Strings
+### 9. Greedy
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 8. Trie
+### 10. Recursion & Backtracking
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 9. Tree
+### 11. Graph
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 10. Greedy
+### 12. Dynamic Programming (DP)
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 11. Recursion
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 12. Backtracking
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 13. Graph
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 14. Dynamic Programming (DP)
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 15. Bit Manipulation
+### 13. Bit Manipulation
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___  

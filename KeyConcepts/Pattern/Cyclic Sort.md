@@ -26,4 +26,4 @@ To place a number (or an object in general) at its correct index, we first need 
 
 Instead, what if we iterate the array one number at a time, and if the current number we are iterating is not at the correct index, we swap it with the number at its correct index. This way we will go through all numbers and place them in their correct indices, hence, sorting the whole array.
 
-For questions ref [Pattern 05_Cyclic Sort.md](../DSA_Pattern/Pattern%2005_Cyclic%20Sort.md)
+For questions ref [Pattern 05_Cyclic Sort.md](../../DSA_Pattern/Pattern%2005_Cyclic%20Sort.md)

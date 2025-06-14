@@ -10,7 +10,7 @@ import java.util.Comparator;
  * Date: 10/13/2024
  * Question Category: 252. Meeting Rooms
  * Description: https://leetcode.com/problems/meeting-rooms
- * https://leetcode.ca/all/252.html
+ * https://neetcode.io/problems/meeting-schedule [try out]
  * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
  * <p>
  * Example 1:
@@ -33,6 +33,7 @@ import java.util.Comparator;
  *
  * @easy
  * @Array
+ * @Sorting
  * @LeetCodeLockedProblem
  * @PremimumQuestion <p><p>
  * Company Tags
@@ -76,6 +77,8 @@ public class MeetingRoom_252 {
      * Overlapping intervals: [s1, e1] & [s2, e2]
      * <p>
      * if e1 > s2 then overlapping
+     * we omit >= as soon the earlier meeting end at endTime,
+     * that person can immediately join another meeting starting at endTime.
      *
      *
      *  O(nlogn)

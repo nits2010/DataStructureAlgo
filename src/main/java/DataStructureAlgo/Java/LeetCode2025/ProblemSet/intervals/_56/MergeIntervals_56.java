@@ -1,18 +1,16 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals._56;
 
-import DataStructureAlgo.Java.helpers.CommonMethods;
+import DataStructureAlgo.Java.helpers.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+
 
 /**
  * Author: Nitin Gupta
- * Date: 10/13/2024
- * Question Category: 56. Merge Intervals
- * Description: https://leetcode.com/problems/merge-intervals/description/
- * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+ * Date: 5/31/2025
+ * Question Title: 56. Merge Intervals
+ * Link: https://leetcode.com/problems/merge-intervals/description/
+ * Description: Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
  * <p>
  * <p>
  * <p>
@@ -38,6 +36,7 @@ import java.util.List;
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.intervalRelatedProblems.MergeIntervals} {@link DataStructureAlgo.Java.LeetCode.intervalRelatedProblems.MergeIntervalsUnionIntersection}
  * Similar {@link}
  * extension {@link }
+ * DP-BaseProblem {@link }
  * <p><p>
  * Tags
  * -----
@@ -86,97 +85,96 @@ import java.util.List;
  * @Yelp
  * @Zenefits
  * @Zulily <p><p>
- *
- * @Editorial
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MergeIntervals_56 {
 
     public static void main(String[] args) {
-        boolean test = true;
+        List<Boolean> tests = new ArrayList<>();
 
-        test &= test(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}}, new int[][]{{1, 6}, {8, 10}, {15, 18}});
-        test &= test(new int[][]{{1, 4}, {4, 5}}, new int[][]{{1, 5}});
-        test &= test(new int[][]{{1, 4}, {2, 3}}, new int[][]{{1, 4}});
-        test &= test(new int[][]{{1, 4}, {0, 4}}, new int[][]{{0, 4}});
-        test &= test(new int[][]{{1, 4}, {0, 1}}, new int[][]{{0, 4}});
-        test &= test(new int[][]{{1, 4}, {0, 0}}, new int[][]{{0, 0}, {1, 4}});
-        CommonMethods.printAllTestOutCome(test);
+        tests.add(test(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}}, new int[][]{{1, 6}, {8, 10}, {15, 18}}));
+        tests.add(test(new int[][]{{2, 3}, {2, 2}, {3, 3}, {1, 3}, {5, 7}, {2, 2}, {4, 6}}, new int[][]{{1, 3}, {4, 7}}));
+        tests.add(test(new int[][]{{1, 4}, {4, 5}}, new int[][]{{1, 5}}));
+        tests.add(test(new int[][]{{1, 4}, {2, 3}}, new int[][]{{1, 4}}));
+        tests.add(test(new int[][]{{1, 4}, {0, 4}}, new int[][]{{0, 4}}));
+        tests.add(test(new int[][]{{1, 4}, {0, 1}}, new int[][]{{0, 4}}));
+        tests.add(test(new int[][]{{1, 4}, {0, 0}}, new int[][]{{0, 0}, {1, 4}}));
+        CommonMethods.printAllTestOutCome(tests);
     }
 
-
     private static boolean test(int[][] intervals, int[][] expected) {
-        System.out.println("----------------------------------");
-        System.out.println("Input: intervals = " + Arrays.deepToString(intervals) + ", expected = " + Arrays.deepToString(expected));
+        //add print here
+        CommonMethods.printTest(new String[]{"intervals", "Expected"}, true, intervals, expected);
+
         int[][] output;
         boolean pass, finalPass = true;
 
-        Solution solution = new Solution();
-        output = solution.merge(intervals);
-        pass = Arrays.deepEquals(output, expected);
+        output = new Solution().merge(intervals);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
-        System.out.println("Output1: " + Arrays.deepToString(output) + "Pass : " + (pass ? "Pass" : "Fail"));
 
-        Solution2 solution2 = new Solution2();
-        output = solution2.merge(intervals);
-        pass = Arrays.deepEquals(output, expected);
-        finalPass &= pass;
-        System.out.println("Output2: " + Arrays.deepToString(output) + "Pass : " + (pass ? "Pass" : "Fail"));
+        CommonMethods.printTest(new String[]{"Output", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
         return finalPass;
+
     }
 
     static class Solution {
+
         public int[][] merge(int[][] intervals) {
 
-            //sort by start time
+            final int length = intervals.length;
+
+            //not sufficient intervals to merge
+            if (length <= 1)
+                return intervals;
+
+            final List<int[]> mergedIntervals = new ArrayList<>();
+
+            //sort the intervals by start time, to bring all intervals together that start around.
             Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
-            List<int[]> outputList = new ArrayList<>();
-            outputList.add(intervals[0]);
 
-            for (int i = 1; i < intervals.length; i++) {
-                int[] curr = intervals[i];
-                int[] lastInterval = outputList.get(outputList.size() - 1);
-
-                //overlaps
-                if (lastInterval[1] >= curr[0]) {
-                    lastInterval[1] = Math.max(curr[1], lastInterval[1]);
-                } else {
-                    outputList.add(curr);
-                }
-            }
-            // System.out.println(outputList);
-
-            return outputList.toArray(new int[outputList.size()][]);
-
-
-        }
-    }
-
-    static class Solution2 {
-        public int[][] merge(int[][] intervals) {
-
-            //sort by start time
-            Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
-            List<int[]> outputList = new ArrayList<>();
-            outputList.add(intervals[0]);
+            mergedIntervals.add(intervals[0]);
             int[] lastInterval = intervals[0];
 
-            for (int i = 1; i < intervals.length; i++) {
-                int[] curr = intervals[i];
+            //pull intervals and merge them as needed.
+            for (int i = 1; i < length; i++) {
 
-                //overlaps
-                if (lastInterval[1] >= curr[0]) {
-                    lastInterval[1] = Math.max(curr[1], lastInterval[1]);
+                int[] currentInterval = intervals[i];
+
+                //does overlaps ?
+                if (isIntervalOverlaps(lastInterval, currentInterval)) {
+                    lastInterval = mergeIntervals(lastInterval, currentInterval);
                 } else {
-                    outputList.add(curr);
-                    lastInterval = curr;
+                    mergedIntervals.add(currentInterval);
+                    lastInterval = currentInterval;
                 }
+
             }
-            // System.out.println(outputList);
+            return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
 
-//            return outputList.toArray(new int[outputList.size()][]);
-            return outputList.toArray(int[][]::new);
+        }
 
+        /**
+         * Return either mergedInterval
+         */
+        private int[] mergeIntervals(int[] previous, int[] current) {
+            int[] mergedInterval = previous;
+            mergedInterval[1] = Math.max(current[1], previous[1]); // get the farthest end time
+            mergedInterval[0] = Math.min(current[0], previous[0]); // get the farthest end time
+            return mergedInterval;
 
+        }
+
+        private boolean isIntervalOverlaps(int[] previous, int[] current) {
+            int start2 = current[0];
+            int end1 = previous[1];
+
+            return start2 <= end1;
         }
     }
 }

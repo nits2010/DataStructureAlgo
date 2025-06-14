@@ -1,6 +1,7 @@
 
 ## System Design Resources
 
+- [Concept doc](https://docs.google.com/document/d/1N9_lfgaOh_LXhcCBUH8LEHVzivEDgC9zOUIYTXxfR2U/edit?tab=t.0)
 --------------------------------------------------------------------------
 ## Paid resources
 - [ByteByteGo](https://www.bytebytego.com/)

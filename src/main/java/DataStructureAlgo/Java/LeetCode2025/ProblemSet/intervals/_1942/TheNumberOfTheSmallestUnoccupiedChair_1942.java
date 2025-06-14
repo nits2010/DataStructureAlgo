@@ -16,7 +16,7 @@ import java.util.PriorityQueue;
  * For example, if chairs 0, 1, and 5 are occupied when a friend comes, they will sit on chair number 2.
  * When a friend leaves the party, their chair becomes unoccupied at the moment they leave. If another friend arrives at that same moment, they can sit in that chair.
  * <p>
- * You are given a 0-indexed 2D integer array times where times[i] = [arrivali, leavingi], indicating the arrival and leaving times of the ith friend respectively, and an integer targetFriend. All arrival times are distinct.
+ * You are given a 0-indexed 2D integer array times when times[i] = [arrivali, leavingi], indicating the arrival and leaving times of the ith friend respectively, and an integer targetFriend. All arrival times are distinct.
  * <p>
  * Return the chair number that the friend numbered targetFriend will sit on.
  * <p>
@@ -58,7 +58,9 @@ import java.util.PriorityQueue;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals._2406.DivideIntervalsIntoMinimumNumberOfGroups_2406}
+ * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals.meetingRoom._253.MeetingRoomII_253}
+ * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.intervals.meetingRoom._2402.MeetingRoomIII_2402}
  * extension {@link }
  * <p><p>
  * Tags
@@ -72,7 +74,7 @@ import java.util.PriorityQueue;
  * -----
  * <p><p>
  * @Editorial https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/editorial/
- * @OptimalSoltuion {@link SolutionPQ2}
+ * @OptimalSoltuion {@link Solution_PQ_Optimized_V2} {@link SolutionPQ_Optimized}
  */
 public class TheNumberOfTheSmallestUnoccupiedChair_1942 {
 
@@ -90,23 +92,29 @@ public class TheNumberOfTheSmallestUnoccupiedChair_1942 {
         int output;
         boolean pass, finalPass = true;
 
-        SolutionBruteForce SolutionBruteForce = new SolutionBruteForce();
-        output = SolutionBruteForce.smallestChair(CommonMethods.copyOf(times), targetFriend);
+        SolutionBruteForce solutionBruteForce = new SolutionBruteForce();
+        output = solutionBruteForce.smallestChair(CommonMethods.copyOf(times), targetFriend);
         pass = output == expected;
         finalPass &= pass;
         System.out.println("Output BruteForce: " + output + " Pass : " + (pass ? "Pass" : "Fail"));
 
-        SolutionPQ SolutionPQ = new SolutionPQ();
-        output = SolutionPQ.smallestChair(CommonMethods.copyOf(times), targetFriend);
+        SolutionPQ solutionPQ = new SolutionPQ();
+        output = solutionPQ.smallestChair(CommonMethods.copyOf(times), targetFriend);
         pass = output == expected;
         finalPass &= pass;
         System.out.println("Output PQ: " + output + " Pass : " + (pass ? "Pass" : "Fail"));
 
-        SolutionPQ2 SolutionPQ2 = new SolutionPQ2();
-        output = SolutionPQ2.smallestChair(CommonMethods.copyOf(times), targetFriend);
+        SolutionPQ_Optimized solutionPQOptimized = new SolutionPQ_Optimized();
+        output = solutionPQOptimized.smallestChair(CommonMethods.copyOf(times), targetFriend);
         pass = output == expected;
         finalPass &= pass;
-        System.out.println("Output PQ2: " + output + " Pass : " + (pass ? "Pass" : "Fail"));
+        System.out.println("Optimized PQ: " + output + " Pass : " + (pass ? "Pass" : "Fail"));
+
+        Solution_PQ_Optimized_V2 solution_pq_optimized_v2 = new Solution_PQ_Optimized_V2();
+        output = solution_pq_optimized_v2.smallestChair(CommonMethods.copyOf(times), targetFriend);
+        pass = output == expected;
+        finalPass &= pass;
+        System.out.println("Optimized PQV2: " + output + " Pass : " + (pass ? "Pass" : "Fail"));
 
         return finalPass;
     }
@@ -209,52 +217,134 @@ public class TheNumberOfTheSmallestUnoccupiedChair_1942 {
     }
 
     /**
-     * we can optimize above solution a bit by dynamically managing available chairs using a chair counter.
+     * We can optimize above a solution a bit by dynamically managing available chairs using a chair counter.
      * 1. When there is no chair available, then we increase the counter and give that chair to the frnd
-     * 2. if there is a chair available, then take that chair to assign this frnd
+     * 2. If there is a chair available, then take that chair to assign this frnd
      * 2. When a friend leaves the chair, then we add it to an available chair.
      */
-    static class SolutionPQ2 {
+    static class SolutionPQ_Optimized {
         public int smallestChair(int[][] times, int targetFriend) {
-            if (targetFriend >= times.length)
+            int friendsCount = times.length;
+
+            if (targetFriend > friendsCount-1) // its 0-based index
                 return -1;
+            //if there is only one friend, and he is the target, then 0 is the chair number
+            if (targetFriend == 0 && friendsCount == 1)
+                return 0;
 
-            int[] targetFrnd = times[targetFriend];
+            int[] target = times[targetFriend];
 
-            //The First element represents the time at frnd leaves and second which chair is being occupied
-            PriorityQueue<int[]> occupiedChairs = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
-
-            //available chairs
-            PriorityQueue<Integer> availableChairs = new PriorityQueue<>();
-
-            int chair = 0;
-            //sort times by earliest arrival time
+            //Sort the friends array based on their arriaval.
             Arrays.sort(times, Comparator.comparingInt(a -> a[0]));
 
-            for (int[] time : times) {
+            //minHeap [chairNumber,leaving] ordered by leaving time
+            PriorityQueue<int[]> occupiedChairs = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+            PriorityQueue<Integer> unOccupiedChairs = new PriorityQueue<>();
 
-                //is any frnd leaving the chairs ?
-                while (!occupiedChairs.isEmpty() && occupiedChairs.peek()[0] <= time[0]) {
-                    int[] c = occupiedChairs.poll(); //this find can leave the chair
-                    //add this chair to available chairs set
-                    availableChairs.offer(c[1]);
+            //fill up the chairs available at start
+            int chairNumber = 0; // current available Chair number, we did not fill pq as n ranges till 10^4 or infinite
+
+            int i = 0;
+            while (i < friendsCount) {
+                int[] friend = times[i];
+                int friendArrivalTime = friend[0];
+                int friendLeavingTime = friend[1];
+
+                //vacate all the chairs for those frinds who are leaving
+                while (!occupiedChairs.isEmpty() && occupiedChairs.peek()[1] <= friendArrivalTime) {
+                    unOccupiedChairs.offer(occupiedChairs.poll()[0]);
                 }
 
-                int availableChair = chair;
+                //get an unOccupiedChair
+                int availableChair = chairNumber; // at least 'chairNumber' is available to be occupied
 
-                if (!availableChairs.isEmpty())
-                    availableChair = availableChairs.poll();
-                else
-                    chair++;
+                //check if any of the unOccupiedChairs chair available ? this is to make sure we assign smallest number chair first
+                if (!unOccupiedChairs.isEmpty()) {
+                    availableChair = unOccupiedChairs.poll();
+                } else {
+                    // we need more chair, increase a chair for next friend
+                    chairNumber++;
+                }
 
-                occupiedChairs.add(new int[]{time[1], availableChair});
-
-                if (Arrays.equals(time, targetFrnd))
+                // Is this the target friend ?
+                // Since All arrival times are distinct. If arrival time is not distinct but the pair is distinct then we can do Arrays.equals(target, friend)
+                if (target[0] == friendArrivalTime) {
                     return availableChair;
+                }
 
+                //occupy this chair
+                occupiedChairs.offer(new int[]{availableChair, friendLeavingTime});
 
+                i++; //next friend
             }
-            return -1;
+            return chairNumber;
+        }
+    }
+
+
+    static class Solution_PQ_Optimized_V2 {
+        public int smallestChair(int[][] times, int targetFriend) {
+            int friendsCount = times.length;
+
+            if (targetFriend > friendsCount-1)
+                return -1;
+            //if there is only one friend and he is the target, then 0 is the chair number
+            if (targetFriend == 0 && friendsCount == 1)
+                return 0;
+
+            // contains [friendNumber, arrival, leaving] time
+            int[][] friends = new int[friendsCount][3];
+
+            for (int i = 0; i < times.length; i++) {
+                friends[i][0] = i;
+                friends[i][1] = times[i][0];
+                friends[i][2] = times[i][1];
+            }
+
+            //Sort the friends array based on their arriaval.
+            Arrays.sort(friends, Comparator.comparingInt(a -> a[1]));
+
+            //minHeap [chairNumber,leaving] ordered by leaving time
+            PriorityQueue<int[]> occupiedChairs = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+            PriorityQueue<Integer> unOccupiedChairs = new PriorityQueue<>();
+
+            //fill up the chairs available at start
+            int chairNumber = 0; // current available Chair number, we did not fill pq as n ranges till 10^4 or infinite
+
+            int i = 0;
+            while (i < friendsCount) {
+                int[] friend = friends[i];
+                int friendId = friend[0];
+                int friendArrivalTime = friend[1];
+                int friendLeavingTime = friend[2];
+
+                //vacate all the chairs for those frinds who are leaving
+                while (!occupiedChairs.isEmpty() && occupiedChairs.peek()[1] <= friendArrivalTime) {
+                    unOccupiedChairs.offer(occupiedChairs.poll()[0]);
+                }
+
+                //get an unOccupiedChair
+                int availableChair = chairNumber; // at least 'chairNumber' is available to be occupied
+
+                //check if any of the unOccupiedChairs chair available ? this is to make sure we assign smallest number chair first
+                if (!unOccupiedChairs.isEmpty()) {
+                    availableChair = unOccupiedChairs.poll();
+                } else {
+                    // we don't have enough chair, increase a chair for next friend
+                    chairNumber++;
+                }
+
+                //is this the target friend ?
+                if (friendId == targetFriend) {
+                    return availableChair;
+                }
+
+                //occupy this chair
+                occupiedChairs.offer(new int[]{availableChair, friendLeavingTime});
+
+                i++; //next friend
+            }
+            return chairNumber;
         }
     }
 }

@@ -292,4 +292,4 @@ Then you can set **either low or high to mid-** considering that mid could be yo
 
 Here's a list of the LeetCode problem titles and their corresponding problem numbers for the binary search problems previously discussed:
 
-[Pattern 21_Sorting&Searching.md](../DSA_Pattern/Pattern%2021_Sorting%26Searching.md)
+[Pattern 21_Sorting&Searching.md](../../DSA_Pattern/Pattern%2021_Sorting&Searching.md)
