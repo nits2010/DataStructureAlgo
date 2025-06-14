@@ -36,7 +36,7 @@ import java.util.*;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._315.CountOfSmallerNumbersAfterSelf_315}
  * extension {@link }
  * DP-BaseProblem {@link }
  * <p><p>
@@ -53,6 +53,13 @@ import java.util.*;
  * @OrderedSet <p><p>
  * Company Tags
  * -----
+ * @Amazon
+ * @Apple
+ * @Facebook
+ * @Google
+ * @Microsoft
+ * @Oracle
+ * @Uber
  * <p>
  * -----
  * @Editorial <p><p>
