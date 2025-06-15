@@ -5,7 +5,7 @@ This pattern is based on the <b>Breadth First Search (BFS)</b> technique to trav
 Any problem involving the traversal of a tree in a level-by-level order can be efficiently solved using this approach. We will use a <b>Queue</b> to keep track of all the nodes of a level before we jump onto the next level. This also means that the space complexity of the algorithm will be `O(W)`, where `W` is the maximum number of nodes on any level.
 
 
-## Binary Tree Level Order Traversal (easy)
+## 1. Binary Tree Level Order Traversal (easy)
 https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 > Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all <b>nodes of each level from left to right</b> in separate sub-arrays.
@@ -178,7 +178,7 @@ levelOrder(root);
 //[]
 ````
 
-## Reverse Level Order Traversal (easy)
+## 2. Reverse Level Order Traversal (easy)
 https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
 > Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., <b>the lowest level comes first</b>. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
@@ -336,7 +336,7 @@ zigzagLevelOrder(root);
 - The time complexity of the above algorithm is `O(N)`, where `N` is the total number of nodes in the tree. This is due to the fact that we traverse each node once.
 - The space complexity of the above algorithm will be `O(N)` as we need to return a list containing the level order traversal. We will also need `O(N)` space for the queue. Since we can have a maximum of `N/2` nodes at any level (this could happen only at the lowest level), therefore we will need `O(N)` space to store them in the queue.
 
-## Level Averages in a Binary Tree (easy)
+## 3. Level Averages in a Binary Tree (easy)
 https://leetcode.com/problems/average-of-levels-in-binary-tree/
 
 > Given a binary tree, populate an array to represent the <b>averages of all of its levels</b>
@@ -464,7 +464,7 @@ console.log(`Max value's for each level are: ${largestValue(root)}`);
 // [[12], [7], [10]];
 ````
 
-## Minimum Depth of a Binary Tree (easy)
+## 4. Minimum Depth of a Binary Tree (easy)
 https://leetcode.com/problems/minimum-depth-of-binary-tree/
 
 > Find the minimum depth of a binary tree. The minimum depth is the number of nodes along the <b>shortest path from the root node to the nearest leaf node</b>.
@@ -579,7 +579,7 @@ root.left.left = new TreeNode(9);
 root.right.left.left = new TreeNode(11);
 console.log(`Tree Maximum Depth: ${findMaximumDepth(root)}`);
 ````
-## Level Order Successor (easy) 
+## 5. Level Order Successor (easy) 
 > Given a binary tree and a node, find the level order successor of the given node in the tree. The level order successor is the node that appears right after the given node in the level order traversal.
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be that we will not keep track of all the levels. Instead we will keep inserting child nodes to the queue. As soon as we find the given node, we will return the next node from the <b>queue</b> as the level order successor.
