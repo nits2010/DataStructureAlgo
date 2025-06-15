@@ -20,7 +20,7 @@ We can use a <b>Queue</b> to efficiently traverse in <b>BFS</b> fashion. Here ar
 5. After removing each node from the queue, insert both of its children into the queue.
 6. If the <b>queue</b> is not empty, repeat from <i>step 3</i> for the next level.
 
-````java
+````js
 class Deque {
     constructor() {
         this.front = this.back = undefined;
@@ -114,7 +114,7 @@ console.log(`Level order traversal: ${traverse(root)}`);
 - The space complexity of the above algorithm will be `O(N)` as we need to return a list containing the level order traversal. We will also need `O(N)` space for the queue. Since we can have a maximum of `N/2` nodes at any level (this could happen only at the lowest level), therefore we will need `O(N)` space to store them in the queue.
 
 ### Easier to understand solutionMimicPQ w/o `Deque()`
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -183,7 +183,7 @@ https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
 > Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., <b>the lowest level comes first</b>. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be that instead of appending the current level at the end, we will append the current level at the beginning of the result list.
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -250,7 +250,7 @@ https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only additional step we have to keep in mind is to alternate the level order traversal, which means that for every other level, we will traverse similar to <b>[Reverse Level Order Traversal](#reverse-level-order-traversal-easy)</b>.
 
 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -343,7 +343,7 @@ https://leetcode.com/problems/average-of-levels-in-binary-tree/
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be that instead of keeping track of all nodes of a level, we will only track the running sum of the values of all nodes in each level. In the end, we will append the average of the current level to the result array.
 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -408,7 +408,7 @@ We will follow a similar approach, but instead of having a running sum we will t
 
 `maxValue = Math.max(maxValue, currentNode.val)`
 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -471,7 +471,7 @@ https://leetcode.com/problems/minimum-depth-of-binary-tree/
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be, instead of keeping track of all the nodes in a level, we will only track the depth of the tree. As soon as we find our first leaf node, that level will represent the minimum depth of the tree.
 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -530,7 +530,7 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/
 > Given a binary tree, find its maximum depth (or height).
 
 We will follow a similar approach. Instead of returning as soon as we find a leaf node, we will keep traversing for all the levels, incrementing `maximumDepth` each time we complete a level. 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -584,7 +584,7 @@ console.log(`Tree Maximum Depth: ${findMaximumDepth(root)}`);
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be that we will not keep track of all the levels. Instead we will keep inserting child nodes to the queue. As soon as we find the given node, we will return the next node from the <b>queue</b> as the level order successor.
 
-````java
+````js
 class TreeNode {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -641,7 +641,7 @@ https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 > Given a binary tree, connect each node with its level order successor. The last node of each level should point to a `null` node.
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference is that while traversing a level we will remember the previous node to connect it with the current node.
-````java
+````js
 class TreeNode {
   constructor(val) {
     this.val = val
@@ -738,7 +738,7 @@ printLevelOrder(root)
 
 This problem follows the <b>Binary Tree Level Order Traversal</b> pattern. We can follow the same <b>BFS</b> approach. The only difference will be that while traversing we will remember (irrespective of the level) the previous node to connect it with the current node.
 
-````java
+````js
 class TreeNode {
   constructor(value) {
     this.value = value;
@@ -804,7 +804,7 @@ https://leetcode.com/problems/binary-tree-right-side-view/
 
 > Given a binary tree, return an array containing nodes in its right view. The right view of a binary tree is the set of <b>nodes visible when the tree is seen from the right side</b>.
 
-````java
+````js
 class TreeNode {
   constructor(value) {
     this.value = value
@@ -863,7 +863,7 @@ console.log("Tree right view: " + treeRightView(root))
 
 We will be following a similar approach, but instead of appending the last element of each level, we will be appending the first element of each level to the output array.
 
-````java
+````js
 class TreeNode {
   constructor(value) {
     this.value = value
