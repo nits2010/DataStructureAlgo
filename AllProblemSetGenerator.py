@@ -36,7 +36,7 @@ for root, dirs, files in os.walk(base_path):
         dirs.remove("helpers")
 
     for file in files:
-        if file.endswith(".java"):  # Filter for Java files
+        if file.endswith(".java") or file.endswith(".py"):  # Filter for Java files
             local_path = os.path.join(root, file)
             relative_path = os.path.relpath(local_path, base_path).replace("\\", "/")
             github_link = f"{base_url}/{relative_path}"
