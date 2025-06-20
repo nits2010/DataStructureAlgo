@@ -138,7 +138,7 @@ public class BinaryTreeRightSideView_199 {
     /**
      * We can alternatively solve this using pre-order traversal.
      * For each level, the first node visited (root, right, left) would participate in right side view.
-     * similarly for the level, the first node visited (root, left, right) would participate in left side view
+     * Similarly for the level, the first node visited (root, left, right) would participate in left side view
      */
     static class SolutionUsingPreOrderTraversal {
         public List<Integer> rightSideView(TreeNode root) {

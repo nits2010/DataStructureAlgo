@@ -185,7 +185,7 @@ public class BoundaryOfBinaryTree_545 {
             if (root == null)
                 return;
 
-            //If a node is in the left boundary, has no left child, but has a right child; then the right child is in the left boundary.
+            //If a node is in the right boundary, has no left child, but has a right child; then the right child is in the left boundary.
             if (root.right != null) { //
                 rightBoundary(root.right, rightBoundary);
                 rightBoundary.add(root); // we need nodes in reverse order from bottom to top

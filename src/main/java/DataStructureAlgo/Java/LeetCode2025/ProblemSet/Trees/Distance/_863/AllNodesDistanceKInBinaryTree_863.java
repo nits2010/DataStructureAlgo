@@ -52,9 +52,7 @@ import java.util.List;
  * @Tree
  * @Depth-FirstSearch
  * @Breadth-FirstSearch
- * @BinaryTree
- *
- * Company Tags
+ * @BinaryTree Company Tags
  * -----
  * @Editorial <a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/solutions/318883/solution-in-java-easy-to-understand-logic-building">...</a>
  */
@@ -81,29 +79,35 @@ public class AllNodesDistanceKInBinaryTree_863 {
 
         boolean testResult1 = CommonMethods.equalsValues(output, List.of(expected));
         System.out.println("Output: " + output + "\nExpected: " + Arrays.toString(expected) + " Test Pass " + (testResult1 ? "All passed" : "Failed"));
-        return testResult1;
+
+        Solution2 solution2 = new Solution2();
+        output = solution2.distanceK(root, targetNode, k);
+
+        boolean testResult2 = CommonMethods.equalsValues(output, List.of(expected));
+        System.out.println("Output2: " + output + "\nExpected: " + Arrays.toString(expected) + " Test Pass " + (testResult1 ? "All passed" : "Failed"));
+        return testResult1 && testResult2;
 
     }
 
 
     static class Solution1 {
         /**
-         # Approach
-         To find all nodes at a distance ( k ) from a given node, we need to consider nodes in both the left and right subtrees rooted at the target node. Additionally, nodes can also be in the parent’s left or right subtree, depending on which side the target node is located.
-
-         ## Identify the Target Node:
-         First, locate the target node. The distance from the target node to itself is always 0, so we can explore its subtree for nodes at distance ( k ).
-
-         ## Determine Distance from Parent:
-         To find nodes at distance ( $$k$$ ) with respect to the parent (which is now $$( k - 1 )$$), we need to know the distance from the parent to the target node. This information can be obtained during any traversal, such as in-order traversal.
-
-         # Algorithm:
-         1. Find the Target Node: Locate the target node and then search for all nodes at distance ( $$k$$ ) within its subtree.
-         2. Return Distance to Parent: Return 0 as the distance from the target node to its parent.
-         3. Explore Parent’s Subtree: The first parent of the target node will always be $$( k - 1 )$$ distance away.
-         If the target node is in the left subtree, explore the right subtree with $$( k - 2 )$$ distance on either side (i.e., $$( k - 1 )$$
-         for target to root and 1 for root to its left/right child).
-
+         * # Approach
+         * To find all nodes at a distance ( k ) from a given node, we need to consider nodes in both the left and right subtrees rooted at the target node. Additionally, nodes can also be in the parent’s left or right subtree, depending on which side the target node is located.
+         * <p>
+         * ## Identify the Target Node:
+         * First, locate the target node. The distance from the target node to itself is always 0, so we can explore its subtree for nodes at distance ( k ).
+         * <p>
+         * ## Determine Distance from Parent:
+         * To find nodes at distance ( $$k$$ ) with respect to the parent (which is now $$( k - 1 )$$), we need to know the distance from the parent to the target node. This information can be obtained during any traversal, such as in-order traversal.
+         * <p>
+         * # Algorithm:
+         * 1. Find the Target Node: Locate the target node and then search for all nodes at distance ( $$k$$ ) within its subtree.
+         * 2. Return Distance to Parent: Return 0 as the distance from the target node to its parent.
+         * 3. Explore Parent’s Subtree: The first parent of the target node will always be $$( k - 1 )$$ distance away.
+         * If the target node is in the left subtree, explore the right subtree with $$( k - 2 )$$ distance on either side (i.e., $$( k - 1 )$$
+         * for target to root and 1 for root to its left/right child).
+         *
          * @param root
          * @param target
          * @param k
@@ -176,9 +180,100 @@ public class AllNodesDistanceKInBinaryTree_863 {
                 return;
             }
 
-            distanceKInSubtree(root.left, target, k-1, output);
-            distanceKInSubtree(root.right, target, k-1, output);
+            distanceKInSubtree(root.left, target, k - 1, output);
+            distanceKInSubtree(root.right, target, k - 1, output);
         }
 
+    }
+
+
+    /**
+     * Definition for a binary tree node.
+     * public class TreeNode {
+     * int val;
+     * TreeNode left;
+     * TreeNode right;
+     * TreeNode(int x) { val = x; }
+     * }
+     */
+    static class Solution2 {
+
+        class Pair<K, V> {
+            private K key;
+
+            public K getKey() {
+                return key;
+            }
+
+            private V value;
+
+            public V getValue() {
+                return value;
+            }
+
+            public Pair(K key, V value) {
+                this.key = key;
+                this.value = value;
+            }
+        }
+
+        public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
+            List<Integer> output = new ArrayList<>();
+            distanceK(root, target, K, output);
+            return output;
+
+        }
+
+        private void distanceKInSubTrees(TreeNode root, int k, List<Integer> output) {
+
+            if (root == null || k < 0)
+                return;
+
+            if (k == 0) {
+                output.add(root.val);
+                return;
+            } else {
+                distanceKInSubTrees(root.left, k - 1, output);
+                distanceKInSubTrees(root.right, k - 1, output);
+
+            }
+
+
+        }
+
+        private Pair<Integer, TreeNode> distanceK(TreeNode root, TreeNode target, int k, List<Integer> output) {
+            if (null == root)
+                return null;
+
+            //Print the subtree of target node
+            if (root == target) {
+                distanceKInSubTrees(target, k, output);
+                return new Pair<>(0, root);// as this node is 0 distance away from target node
+            }
+
+            Pair<Integer, TreeNode> distance;
+
+            if (((distance = distanceK(root.left, target, k, output)) != null
+                    || ((distance = distanceK(root.right, target, k, output)) != null))) {
+
+
+                if (distance.getKey() == k - 1) {
+                    output.add(root.val);
+                    return null;
+                }
+
+                if (root.left == distance.getValue()) {
+                    distanceKInSubTrees(root.right, k - distance.getKey() - 2, output);
+                } else {
+                    distanceKInSubTrees(root.left, k - distance.getKey() - 2, output);
+                }
+
+                return new Pair<>(distance.getKey() + 1, root);
+            }
+
+
+            return null;
+
+        }
     }
 }

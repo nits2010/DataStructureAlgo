@@ -9,7 +9,7 @@ import java.util.Objects;
  * Author: Nitin Gupta
  * Date: 8/24/2024
  * Question Category: 666 - Path Sum IV
- * Description: https://leetcode.com/problems/path-sum-iv/ $ https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
+ * Description: https://leetcode.com/problems/path-sum-iv/ && https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
  * <p>
  * If the depth of a tree is smaller than 5, then this tree can be represented by an array of three-digit integers. For each integer in this array:
  * <p>
@@ -58,7 +58,10 @@ import java.util.Objects;
  *
  * @medium
  * @BinaryTree
- * @Tree <p>
+ * @Tree
+ * @DepthFirstSearch
+ * @LeetCodeLockedProblem
+ * @PremimumQuestion <p>
  * <p>
  * Company Tags
  * -----

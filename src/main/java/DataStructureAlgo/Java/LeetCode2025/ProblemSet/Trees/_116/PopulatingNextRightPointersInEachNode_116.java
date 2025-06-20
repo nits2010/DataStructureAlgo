@@ -48,7 +48,7 @@ import java.util.Queue;
  * File reference
  * -----------
  * Duplicate {@link DataStructureAlgo.Java.LeetCode.tree.connectNodesTree.ConnectNodesNext}
- * Similar {@link}
+ * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._117.PopulatingNextRightPointersInEachNodeII_117}
  * extension {@link }
  * <p>
  * Tags

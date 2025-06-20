@@ -1,11 +1,10 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.pathSum._437;
 
+import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Author: Nitin Gupta
@@ -56,8 +55,6 @@ import java.util.Map;
  * @tiktok
  * @Google
  * @DoorDash
- *
- *
  * @Editorial <a href="https://leetcode.com/problems/path-sum-iii/solutions/5683406/most-elaborated-solution-build-logic-2-solution-with-optimization">...</a>
  * <a href="https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/">...</a>
  */
@@ -65,34 +62,37 @@ public class PathSumIII_437 {
 
     public static void main(String[] args) {
         boolean test = true;
+        List<Boolean> tests = new ArrayList<>();
 
-        test &= test(new Integer[]{10, 5, -3, 3, 2, null, 11, 3, -2, null, 1}, 8, 3);
-        test &= test(new Integer[]{5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1}, 22, 3);
-        test &= test(new Integer[]{1000000000, 1000000000, null, 294967296, null, 1000000000, null, 1000000000, null, 1000000000}, 0, 0);
+        tests.add(test(new Integer[]{10, 5, -3, 3, 2, null, 11, 3, -2, null, 1}, 8, 3));
+        tests.add(test(new Integer[]{5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1}, 22, 3));
+        tests.add(test(new Integer[]{1000000000, 1000000000, null, 294967296, null, 1000000000, null, 1000000000, null, 1000000000}, 0, 0));
 
-        System.out.println(test ? "\nAll Passed" : "\nSomething Failed");
+        CommonMethods.printAllTestOutCome(tests);
     }
 
     private static boolean test(Integer[] input, int targetSum, int expected) {
-        System.out.println("-----------------------");
-        System.out.println("Input :" + Arrays.toString(input) + " targetSum : " + targetSum);
-        System.out.println("expected :" + expected);
 
+        CommonMethods.printTest(new String[]{"Input", "targetSum", "Expected"}, true, input, targetSum, expected);
+
+        int output = 0;
+        boolean pass, finalPass = true;
 
         TreeNode root = TreeBuilder.buildTreeFromLevelOrder(input);
 
         SolutionThreeFold solutionThreeFold = new SolutionThreeFold();
+        output = solutionThreeFold.pathSum(root, targetSum);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"ThreeFold", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
         SolutionOneFold solutionOneFold = new SolutionOneFold();
+        output = solutionOneFold.pathSum(root, targetSum);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"OneFold", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
-        int outputThreeFold = solutionThreeFold.pathSum(root, targetSum);
-        boolean resultThreeFold = expected == outputThreeFold;
-        System.out.println("\nOutputThreeFold : " + outputThreeFold + " resultThreeFold : " + resultThreeFold);
-
-        int outputOneFold = solutionOneFold.pathSum(root, targetSum);
-        boolean resultOneFold = expected == outputOneFold;
-        System.out.println("\n OutputOneFold : " + outputOneFold + " resultOneFold : " + resultOneFold);
-        return resultThreeFold && resultOneFold;
-
+        return finalPass;
     }
 
 
@@ -104,7 +104,7 @@ public class PathSumIII_437 {
             if (root == null)
                 return 0;
 
-            //dfs including current root.
+            //dfs, including current root.
             dfsCurrent(root, targetSum, 0);
 
             //dfs excluding current root on the left side
@@ -138,7 +138,7 @@ public class PathSumIII_437 {
                 return 0;
 
             final Map<Long, Integer> sumVsCountMap = new HashMap<>();
-            sumVsCountMap.put(0L, 1); // 0 is the sum of considering nothing, and we can always 0 sum 1 time.
+            sumVsCountMap.put(0L, 1); // 0 is the sum of considering nothing, and we can always get 0 sum 1 time.
 
             return dfs(root, targetSum, 0, sumVsCountMap);
         }
@@ -149,7 +149,7 @@ public class PathSumIII_437 {
 
             //add current node in sum
             currentSum = currentSum + root.val;
-            int count = 0 ;
+            int count = 0;
 
             //check if the current sum - targetSum is present in the map, 0 means nothing found so far
             int countAgainstTargetSum = sumVsCountMap.getOrDefault(currentSum - targetSum, 0);
@@ -158,7 +158,7 @@ public class PathSumIII_437 {
             count += countAgainstTargetSum;
 
             //update the map against the current sum, maybe we have seen it more than one time
-            sumVsCountMap.put(currentSum, sumVsCountMap.getOrDefault(currentSum, 0) + 1);
+            sumVsCountMap.merge(currentSum, 1, Integer::sum);
 
             //apply the same in left side and ride side
             int leftSidePaths = dfs(root.left, targetSum, currentSum, sumVsCountMap);
@@ -168,7 +168,7 @@ public class PathSumIII_437 {
             count += leftSidePaths + rightSidePaths;
 
             //remove the current sum from our map
-            sumVsCountMap.put(currentSum, sumVsCountMap.get(currentSum) - 1);
+            sumVsCountMap.merge(currentSum, -1, Integer::sum);
 
             return count;
 
