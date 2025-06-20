@@ -1,9 +1,9 @@
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict
 from collections import deque
 
-from DataStructureAlgo.Java.helpers.templates.NArrayTreeNode import NArrayTreeNode
-from DataStructureAlgo.Java.helpers.templates.TreeNode import TreeNode
-from DataStructureAlgo.Java.helpers.templates.TreeNodeWithRandom import TreeNodeWithRandom
+from DataStructureAlgo.python.helpers.templates.NArrayTreeNode import NArrayTreeNode
+from DataStructureAlgo.python.helpers.templates.TreeNode import TreeNode
+from DataStructureAlgo.python.helpers.templates.TreeNodeWithRandom import TreeNodeWithRandom
 
 
 class TreeBuilder:
