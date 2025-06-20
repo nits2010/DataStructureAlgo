@@ -25,9 +25,9 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-from typing import List, Optional, Dict, Any
+from typing import List
 
-from DataStructureAlgo.python.helpers.common_methods import CommonMethods
+from src.main.python.helpers.common_methods import CommonMethods
 
 
 def test(input_data, expected):

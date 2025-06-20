@@ -211,7 +211,7 @@ public class TreeBuilder {
         return buildTreePrPostOrder(preorder, 0, preLength - 1, postorder, 0, postIndex);
     }
 
-    private static TreeNode buildTreePrPostOrder(Integer[] preorder, int preStart, int preEnd, int[] postorder, int postStart,
+    private static TreeNode buildTreePrPostOrder(Integer[] preorder, int preStart, int preEnd, Integer[] postorder, int postStart,
                                                  Map<Integer, Integer> map) {
         //if no elements left
         if (preStart > preEnd)

@@ -1,9 +1,9 @@
 from collections import defaultdict
 from typing import List, Optional
 
-from DataStructureAlgo.python.helpers.TreeBuilder import TreeBuilder
-from DataStructureAlgo.python.helpers.templates.TreeNode import TreeNode
-from DataStructureAlgo.python.helpers.common_methods import CommonMethods
+from src.main.python.helpers.TreeBuilder import TreeBuilder
+from src.main.python.helpers.templates.TreeNode import TreeNode
+from src.main.python.helpers.common_methods import CommonMethods
 
 
 # O(n)

@@ -1,9 +1,9 @@
 from typing import List, Optional, Dict
 from collections import deque
 
-from DataStructureAlgo.python.helpers.templates.NArrayTreeNode import NArrayTreeNode
-from DataStructureAlgo.python.helpers.templates.TreeNode import TreeNode
-from DataStructureAlgo.python.helpers.templates.TreeNodeWithRandom import TreeNodeWithRandom
+from src.main.python.helpers.templates.NArrayTreeNode import NArrayTreeNode
+from src.main.python.helpers.templates.TreeNode import TreeNode
+from src.main.python.helpers.templates.TreeNodeWithRandom import TreeNodeWithRandom
 
 
 class TreeBuilder:

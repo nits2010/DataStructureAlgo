@@ -25,10 +25,9 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-from turtle import pos
-from typing import List, Optional, Dict, Any, Tuple
+from typing import List, Dict, Tuple
 
-from DataStructureAlgo.python.helpers.common_methods import CommonMethods
+from src.main.python.helpers.common_methods import CommonMethods
 
 
 class Solution:
