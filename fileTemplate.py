@@ -25,9 +25,7 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-from typing import List
 
-from src.main.python.helpers.common_methods import CommonMethods
 
 
 def test(input_data, expected):

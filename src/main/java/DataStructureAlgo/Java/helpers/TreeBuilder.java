@@ -145,7 +145,7 @@ public class TreeBuilder {
         for (int i = 0; i < inorder.length; i++) {
             inorderMap.put(inorder[i], i);
         }
-        preIndex=0;
+
         return buildTreeInPreOrder(preorder, inorderMap, 0, inorder.length - 1);
     }
 
@@ -198,57 +198,29 @@ public class TreeBuilder {
         if (preorder == null || postorder == null || preorder.length != postorder.length)
             return null;
 
-        int preLength = preorder.length;
-        int postLength = postorder.length;
-
-        //cache the index for postOrder
-        Map<Integer, Integer> postIndex = new HashMap<>();
-        for (int i = 0; i < postLength; i++) {
-            postIndex.put(postorder[i], i);
+        postIndex = postorder.length - 1;
+        Map<Integer, Integer> preorderMap = new HashMap<>();
+        for (int i = 0; i < preorder.length; i++) {
+            preorderMap.put(preorder[i], i);
         }
 
-
-        return buildTreePrPostOrder(preorder, 0, preLength - 1, postorder, 0, postIndex);
+        return buildTreePrPostOrder(preorder, postorder, preorderMap, 0, preorder.length - 1);
     }
 
-    private static TreeNode buildTreePrPostOrder(Integer[] preorder, int preStart, int preEnd, Integer[] postorder, int postStart,
-                                                 Map<Integer, Integer> map) {
-        //if no elements left
+    private static TreeNode buildTreePrPostOrder(Integer[] preorder, Integer[] postorder, Map<Integer, Integer> preorderMap, int preStart, int preEnd) {
         if (preStart > preEnd)
             return null;
 
-        int currentValue = preorder[preStart];
-        TreeNode root = new TreeNode(currentValue);
+        int rootVal = postorder[postIndex--];
+        TreeNode root = new TreeNode(rootVal);
 
-        //if there is only one element
         if (preStart == preEnd)
             return root;
 
-        //there are multiple elements > 1
-        // Find the root of the left child in the preorder array.
-        // It's the element immediately after the current root.
-        int leftRoot = preorder[preStart + 1];
+        int preIndex = preorderMap.get(rootVal);
 
-        //get the nextElement position in postorder
-        int postIndex = map.get(leftRoot);
-
-        //all elements from postStart to postIndex are in the left subtree
-        int leftSubTreeSize = postIndex - postStart + 1;
-
-        root.left = buildTreePrPostOrder(
-                preorder,
-                preStart + 1, // move a pointer in pre-order to the next element
-                preStart + leftSubTreeSize, // all elements post this root will end when the entire left subtree is traversed, hence its end there
-                postorder,
-                postStart, // for the postOrder, it starts from postStart
-                map);
-        root.right = buildTreePrPostOrder(
-                preorder,
-                preStart + leftSubTreeSize + 1, // Start of right subtree in preorder
-                preEnd, // End of right subtree in preorder
-                postorder,
-                postStart + leftSubTreeSize, // Start of right subtree in postorder
-                map);
+        root.right = buildTreePrPostOrder(preorder, postorder, preorderMap, preIndex + 1, preEnd);
+        root.left = buildTreePrPostOrder(preorder, postorder, preorderMap, preStart, preIndex - 1);
 
         return root;
     }

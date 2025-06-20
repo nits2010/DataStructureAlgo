@@ -25,9 +25,7 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-from typing import List, Dict, Tuple
 
-from src.main.python.helpers.common_methods import CommonMethods
 
 
 class Solution:
