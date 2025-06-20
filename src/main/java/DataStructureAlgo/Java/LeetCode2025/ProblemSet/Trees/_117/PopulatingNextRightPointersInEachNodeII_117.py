@@ -20,7 +20,7 @@ class Solution:
 
     def connect(self, root: Optional[Node]) -> Optional[Node]:
         original_root = root
-        dummy: Node = Node()  # fake work like an iterator for next
+        dummy: Node = Node()  # dummy work like a iterator for next
         last_next = dummy
 
         while root:
@@ -46,7 +46,7 @@ class Solution:
 
 
 class SolutionUsingNextTLE:
-    def connect(self, root: "Node") -> "Node":
+    def connect(self, root: Optional[Node]) -> Optional[Node]:
 
         if not root:
             return root
@@ -99,7 +99,7 @@ class SolutionUsingNextTLE:
 
 
 class SolutionBFS:
-    def connect(self, root: Node) -> Node:
+    def connect(self, root: Optional[Node]) -> Optional[Node]:
         if not root:
             return root
 
