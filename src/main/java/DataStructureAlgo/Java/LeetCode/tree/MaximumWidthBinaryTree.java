@@ -1,7 +1,8 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
+import DataStructureAlgo.Java.Pair;
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import  DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.*;
 
@@ -129,9 +130,11 @@ public class MaximumWidthBinaryTree {
         final MaximumWidthBinaryTreeUsingMap usingMap = new MaximumWidthBinaryTreeUsingMap();
         final MaximumWidthBinaryTreeUsingList usingList = new MaximumWidthBinaryTreeUsingList();
         final MaximumWidthBinaryTreeBFS bfs = new MaximumWidthBinaryTreeBFS();
+        final MaximumWidthBinaryTreeBFSSimplified bfsSimplified = new MaximumWidthBinaryTreeBFSSimplified();
         System.out.println("usingMap :" + usingMap.widthOfBinaryTree(root));
         System.out.println("usingList :" + usingList.widthOfBinaryTree(root));
         System.out.println("bfs :" + bfs.widthOfBinaryTree(root));
+        System.out.println("bfs Simplified :" + bfsSimplified.widthOfBinaryTree(root));
     }
 }
 
@@ -309,6 +312,45 @@ class MaximumWidthBinaryTreeBFS {
 
             int size = deque.size();
             maxWidth = Math.max(maxWidth, size);
+        }
+
+        return maxWidth;
+
+
+    }
+}
+
+class MaximumWidthBinaryTreeBFSSimplified {
+    public int widthOfBinaryTree(TreeNode root) {
+
+        if (null == root)
+            return 0;
+
+        int maxWidth = 1;
+
+
+        final Deque<Pair<TreeNode, Integer>> deque = new LinkedList<>();
+        deque.offerLast(new Pair<>(root, 1)); // root, position
+
+        while (!deque.isEmpty()) {
+
+            int count = deque.size();
+            maxWidth = Math.max(maxWidth, deque.peekLast().getValue() - deque.peekFirst().getValue() + 1);
+            //evaluate current level, build next level
+            while (count-- > 0) {
+                Pair<TreeNode, Integer> currentPair = deque.pollFirst();
+                TreeNode current = currentPair.getKey();
+                int position = currentPair.getValue();
+
+                if (current.left != null) {
+                    deque.offerLast(new Pair<>(current.left, position * 2));
+                }
+                if (current.right != null) {
+                    deque.offerLast(new Pair<>(current.right, position * 2 + 1));
+                }
+
+
+            }
         }
 
         return maxWidth;
