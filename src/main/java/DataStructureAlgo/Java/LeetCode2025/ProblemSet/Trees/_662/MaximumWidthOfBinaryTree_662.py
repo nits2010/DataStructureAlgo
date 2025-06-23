@@ -9,7 +9,7 @@ The maximum width of a tree is the maximum width among all levels.
 
 The width of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes), where the null nodes between the end-nodes that would be present in a complete binary tree extending down to that level are also counted into the length calculation.
 
-It is guaranteed that the answer will in the range of a 32-bit signed integer.
+It is guaranteed that the answer will be in the range of a 32-bit signed integer.
 
 
 
@@ -40,7 +40,7 @@ The number of nodes in the tree is in the range [1, 3000].
 File reference
 -----------
 Duplicate {@link MaximumWidthBinaryTree.java}
-Similar {@link}
+Similar {@link DiameterOfBinaryTree_543.py}
 extension {@link }
 DP-BaseProblem {@link }
 <p><p>
@@ -78,6 +78,7 @@ from helpers.templates.TreeNode import TreeNode
 
 
 # recursive solution, depth_map as cache of finding the leftmost and rightmost node position
+# width = index of rightmost node - index of leftmost node + 1
 class Solution_DFS:
     def __init__(self):
         self.width = None
@@ -105,7 +106,7 @@ class Solution_DFS:
         _widthOfBinaryTree(root, 0, 1, depth_map)
         return self.width
 
-
+#width = index of rightmost node - index of leftmost node + 1
 class Solution_BFS:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         if not root:
