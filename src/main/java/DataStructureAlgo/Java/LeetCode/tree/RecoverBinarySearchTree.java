@@ -10,7 +10,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-29
- * Description: https://leetcode.com/problems/recover-binary-search-tree/
+ * Description: 99. Recover Binary Search Tree
+ * https://leetcode.com/problems/recover-binary-search-tree/
  * <p>
  * Two elements of a binary search tree (BST) are swapped by mistake.
  * <p>
