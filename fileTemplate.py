@@ -26,6 +26,7 @@ Company Tags
 """
 
 
+from collections import deque
 from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
