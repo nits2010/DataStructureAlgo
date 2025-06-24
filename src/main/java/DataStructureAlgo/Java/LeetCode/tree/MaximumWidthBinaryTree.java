@@ -1,7 +1,8 @@
 package DataStructureAlgo.Java.LeetCode.tree;
 
+import DataStructureAlgo.Java.Pair;
 import DataStructureAlgo.Java.helpers.CommonMethods;
-import  DataStructureAlgo.Java.helpers.templates.TreeNode;
+import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 import java.util.*;
 
@@ -129,9 +130,11 @@ public class MaximumWidthBinaryTree {
         final MaximumWidthBinaryTreeUsingMap usingMap = new MaximumWidthBinaryTreeUsingMap();
         final MaximumWidthBinaryTreeUsingList usingList = new MaximumWidthBinaryTreeUsingList();
         final MaximumWidthBinaryTreeBFS bfs = new MaximumWidthBinaryTreeBFS();
+        final MaximumWidthBinaryTreeBFSSimplified bfsSimplified = new MaximumWidthBinaryTreeBFSSimplified();
         System.out.println("usingMap :" + usingMap.widthOfBinaryTree(root));
         System.out.println("usingList :" + usingList.widthOfBinaryTree(root));
         System.out.println("bfs :" + bfs.widthOfBinaryTree(root));
+        System.out.println("bfs Simplified :" + bfsSimplified.widthOfBinaryTree(root));
     }
 }
 
@@ -143,14 +146,14 @@ public class MaximumWidthBinaryTree {
  * case 2: When tree has either left or right child : width = 1
  * case 3: when tree has both child then width  = 2
  * <p>
- * Now in order to find the width of tree roted at node 'root' we need to know the left most node and right most node of this root.
+ * Now to find the width of tree roted at node 'root' we need to know the left most node and right most node of this root.
  * We know that in binary tree (like in heap), if root is at 'i'th then left is on 2*i and right is on 2*i+1
  * We'll use both as index.
  * <p>
  * So for a tree has left and right node (assuming i=1) would be at left =2 and right =3 hence width = right - left + 1 = 2.
  * <p>
  * <p>
- * In order to find the max width, we need to keep track both left most node and right most node.
+ * To find the max width, we need to keep track both left most node and right most node.
  * Or we can track only one and use current 'i' to compute overall width.
  * <p>
  * One more important aspect that the width of tree rooted at i having only a left and a right should be 1.
@@ -184,7 +187,7 @@ class MaximumWidthBinaryTreeUsingMap {
         if (!map.containsKey(depth))
             map.put(depth, index);
 
-        width[0] = Math.max(width[0], index - map.get(depth) + 1); //index will be like right, and at this depth what is the leftmost will be get from map
+        width[0] = Math.max(width[0], index - map.get(depth) + 1); //the index will be like right, and at this depth what is the leftmost will be get from map
 
         widthOfBinaryTree(root.left, width, depth + 1, 2 * index, map);
         widthOfBinaryTree(root.right, width, depth + 1, 2 * index + 1, map);
@@ -223,7 +226,7 @@ class MaximumWidthBinaryTreeUsingList {
         if (depth >= map.size())
             map.add(index);
 
-        width[0] = Math.max(width[0], index - map.get(depth) + 1); //index will be like right, and at this depth what is the leftmost will be get from map
+        width[0] = Math.max(width[0], index - map.get(depth) + 1); //the index will be like right, and at this depth what is the leftmost will be get from map
 
         widthOfBinaryTree(root.left, width, depth + 1, 2 * index, map);
         widthOfBinaryTree(root.right, width, depth + 1, 2 * index + 1, map);
@@ -233,7 +236,7 @@ class MaximumWidthBinaryTreeUsingList {
 }
 
 /**
- * The obvious things comes in mind on seeing above question is Level order traversal.
+ * The obvious things comes in mind on seeing the above question is Level order traversal.
  * <p>
  * We can achieve above using modified level order traversal. In modification, we'll push null nodes also in our queue.
  * Note that whenever you hit null node (the node don't exist) as you poped node, you need to push two null node in queue to cover distance between leftmost and right most node
@@ -258,13 +261,13 @@ class MaximumWidthBinaryTreeUsingList {
  * * *        6       7
  * <p>
  * then at last level the queue would look like [null, 6, null, null, null, null, null, 7 ], since the first null node can't be use to compute width, we need to remove it.
- * The same could happen on other side too.
- * Hence use deque.
+ * The same could happen on another side too.
+ * Hence, use deque.
  * <p>
  * Algorithm:
  * 1. Push the first node in queue
- * 2. continue till its empty;
- * 2.1 Pop from front and see what is the length of queue, this will denote the current width of tree.
+ * 2. continue till it's empty;
+ * 2.1 Pop from the front and see what is the length of the queue, this will denote the current width of tree.
  * 2.2 build next level and get rid of null nodes
  * <p>
  * Runtime: 36 ms, faster than 9.61% of Java online submissions for Maximum Width of Binary Tree.
@@ -309,6 +312,45 @@ class MaximumWidthBinaryTreeBFS {
 
             int size = deque.size();
             maxWidth = Math.max(maxWidth, size);
+        }
+
+        return maxWidth;
+
+
+    }
+}
+
+class MaximumWidthBinaryTreeBFSSimplified {
+    public int widthOfBinaryTree(TreeNode root) {
+
+        if (null == root)
+            return 0;
+
+        int maxWidth = 1;
+
+
+        final Deque<Pair<TreeNode, Integer>> deque = new LinkedList<>();
+        deque.offerLast(new Pair<>(root, 1)); // root, position
+
+        while (!deque.isEmpty()) {
+
+            int count = deque.size();
+            maxWidth = Math.max(maxWidth, deque.peekLast().getValue() - deque.peekFirst().getValue() + 1);
+            //evaluate current level, build next level
+            while (count-- > 0) {
+                Pair<TreeNode, Integer> currentPair = deque.pollFirst();
+                TreeNode current = currentPair.getKey();
+                int position = currentPair.getValue();
+
+                if (current.left != null) {
+                    deque.offerLast(new Pair<>(current.left, position * 2));
+                }
+                if (current.right != null) {
+                    deque.offerLast(new Pair<>(current.right, position * 2 + 1));
+                }
+
+
+            }
         }
 
         return maxWidth;

@@ -366,7 +366,7 @@ class BSTIteratorPreOrder {
         }
 
         /**
-         * @return whether we have a next smallest number
+         * @return whether we have the next smallest number
          */
         public boolean hasNext() {
 
@@ -468,7 +468,7 @@ class BSTIteratorPostOrder {
 
             if (!stack.isEmpty()) {
                 if (node == stack.peek().left) {
-                    init(stack.peek().right);  // find next leaf in right sub-tree
+                    init(stack.peek().right);  // find the next leaf in right subtree
                 }
 
 
