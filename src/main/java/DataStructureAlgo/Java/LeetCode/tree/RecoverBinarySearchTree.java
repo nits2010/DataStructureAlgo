@@ -279,10 +279,8 @@ class RecoverBinarySearchTreeConstantMories {
                     if (prev.val > current.val) {
                         if (first == null) {
                             first = prev;
-                            last = current;
-                        } else {
-                            last = current;
                         }
+                        last = current;
                     }
 
                 prev = current;
@@ -305,10 +303,8 @@ class RecoverBinarySearchTreeConstantMories {
                         if (prev.val > current.val) {
                             if (first == null) {
                                 first = prev;
-                                last = current;
-                            } else {
-                                last = current;
                             }
+                            last = current;
                         }
 
                     prev = current;
