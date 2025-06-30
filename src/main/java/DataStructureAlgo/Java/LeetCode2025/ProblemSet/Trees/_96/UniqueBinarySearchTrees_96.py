@@ -39,6 +39,7 @@ Tags
 <p><p>
 Company Tags
 -----
+@Microsoft
 <p>
 -----
 
@@ -63,7 +64,7 @@ from helpers.common_methods import CommonMethods
 # F(i,n) = G(i-1) * G(n-i)
 # G(n) = F(1,n) + F(2,n).....+F(n,n)
 # G(n) = G(0)*G(n-1) + G(1)*G(n-2)....
-# G(n) = sum ( G(i-1) * G(n-1)) 1<=i<=n
+# G(n) = sum ( G(i-1) * G(n-i)) 1<=i<=n
 
 
 class Solution:
