@@ -84,10 +84,9 @@ public class BinaryTree implements IBinaryTree {
         //Case 1: if right child is not empty
         if (null != node.getRight()) {
             return (Integer) leftMostNode(node.getRight()).getData();
-
         } else {
-            TreeNode<Integer> successor = new BinaryTreeNode<>(null);
             //Case 2: when there is no right child, then search and backtrack
+            TreeNode<Integer> successor = new BinaryTreeNode<>(null);
             inOrderSuccessor(root, node, successor);
             return successor.getData();
 
