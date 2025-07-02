@@ -59,9 +59,9 @@ Track your progress by filling in the values for each pattern.
 - Confidence Level: ___
 - Revisions: ___
 
-### 8. Tree
-- Questions Solved: ___
-- Confidence Level: ___
+### 8. Tree 32 days [15th Jun 2025 – 2nd July 2025]
+- Questions Solved: 44 [Tree](https://leetcode.com/problem-list/2kjvtnv6/)
+- Confidence Level: 70%
 - Revisions: ___
 
 ### 9. Greedy
