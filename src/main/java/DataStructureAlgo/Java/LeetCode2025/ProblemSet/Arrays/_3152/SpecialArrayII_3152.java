@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._3152;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._3152;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._baseProblems.subsequence.LIS._300.LongestIncreasingSubsequence_300;
 import DataStructureAlgo.Java.helpers.CommonMethods;
@@ -79,6 +79,8 @@ public class SpecialArrayII_3152 {
         List<Boolean> tests = new ArrayList<>();
         tests.add(test(new int[]{3, 4, 1, 2, 6}, new int[][]{{0, 4}}, new boolean[]{false}));
         tests.add(test(new int[]{4, 3, 1, 6}, new int[][]{{0, 2}, {2, 3}}, new boolean[]{false, true}));
+        tests.add(test(new int[]{2,7,2}, new int[][]{{0, 0}, {1, 2}}, new boolean[]{true, true}));
+        tests.add(test(new int[]{1,8}, new int[][]{{1, 1}}, new boolean[]{true}));
         CommonMethods.printAllTestOutCome(tests);
     }
 
