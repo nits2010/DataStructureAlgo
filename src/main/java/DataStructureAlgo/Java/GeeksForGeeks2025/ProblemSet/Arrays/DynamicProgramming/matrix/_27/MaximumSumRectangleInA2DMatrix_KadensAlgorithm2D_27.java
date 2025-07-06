@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.GeeksForGeeks2025.ProblemSet.Arrays.DynamicProgramming.matrix._27;
 
 import DataStructureAlgo.Java.LeetCode.LargetstRectangle.MaximumSumRectangle;
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming._baseProblems.maximumSubArray.Kadens._53.MaximumSubarray_53;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._baseProblems.maximumSubArray.Kadens._53.MaximumSubarray_53;
 
 import java.util.*;
 

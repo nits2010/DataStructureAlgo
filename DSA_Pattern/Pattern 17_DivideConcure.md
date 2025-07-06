@@ -1,6 +1,6 @@
 # Divide and Conquer - Top 40 LeetCode Questions
 - [Leetcode list](https://leetcode.com/problem-list/2kjm05q5/)
-- 
+
 1. [169. Majority Element](https://leetcode.com/problems/majority-element/) (Easy) - Divide and Conquer / Moore's Voting Algorithm
 2. [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (Medium) - Quickselect
 3. [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) (Hard) - Merge using Divide and Conquer

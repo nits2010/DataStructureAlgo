@@ -1,7 +1,7 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1011;
 
 import DataStructureAlgo.Java.LeetCode.MinCapacityOfShipMinimumNumberPagesStudent;
-import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.HouseRobber._2560.HouseRobberIV_2560;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming.HouseRobber._2560.HouseRobberIV_2560;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**

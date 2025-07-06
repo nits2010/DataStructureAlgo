@@ -1,10 +1,10 @@
 package DataStructureAlgo.Java.nonleetcode.Tree;
 
-import  DataStructureAlgo.Java.LeetCode.tree.MaximumPathSum;
-import  DataStructureAlgo.Java.nonleetcode.Tree.traversal.EulerTour;
-import  DataStructureAlgo.Java.nonleetcode.Tree.traversal.MoriesTreeTraversal;
-import  DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalIterative;
-import  DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
+import DataStructureAlgo.Java.LeetCode.tree.MaximumPathSum;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.EulerTour;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.MoriesTreeTraversal;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalIterative;
+import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -281,19 +281,188 @@ public interface IBinaryTree {
 
 
     /****************** Successors and predecessors *******************/
-    Integer inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+    /**
+     * 285. Inorder Successor in BST
+     * https://leetcode.com/problems/inorder-successor-in-bst/description/
+     * @param root
+     * @param node
+     * @return
+     */
+    default Integer inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node) {
+        if (null == root || null == node)
+            return null;
+        boolean[] found = new boolean[1];
+        TreeNode<Integer>[] successor = new TreeNode[1];
+        inOrderSuccessor(root, node, successor, found);
+        return successor[0] == null ? null : successor[0].getData();
 
-    Integer inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
+    }
 
-    Integer preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+    private void inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer>[] successor, boolean[] found) {
+        if (null == root) {
+            return;
+        }
 
-    Integer preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
+        inOrderSuccessor(root.getLeft(), node, successor, found);
 
-    Integer postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node);
+        if (found[0] && successor[0] == null) {
+            successor[0] = root;
+            return;
+        }
+
+        if (root.getData().compareTo(node.getData()) == 0) {
+            found[0] = true;
+        }
+
+        inOrderSuccessor(root.getRight(), node, successor, found);
+
+    }
 
 
-    //TODO: need to implement
-    Integer postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node);
+    default Integer inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node){
+        if (null == root || null == node)
+            return null;
+        TreeNode<Integer>[] predecessor = new TreeNode[1];
+        TreeNode<Integer>[] prev = new TreeNode[1];
+        inOrderPredecessor(root, node, predecessor, prev);
+        return predecessor[0] == null ? null : predecessor[0].getData();
+
+    }
+
+    private void inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer>[] predecessor, TreeNode<Integer>[] prev) {
+        if (null == root)
+            return;
+
+        inOrderPredecessor(root.getLeft(), node, predecessor, prev);
+        if (root.getData().compareTo(node.getData()) == 0) {
+            predecessor[0] = prev[0];
+        }
+        prev[0] = root;
+        inOrderPredecessor(root.getRight(), node, predecessor, prev);
+    }
+
+    default Integer preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node){
+        //Case 1: if this node is root itself then there is no predecessor of root
+        if (null == root || null == node || root.getData() == node.getData())
+            return null;
+
+
+        Integer[] successor = new Integer[1];
+        preOrderSuccessor(root, node, successor, new boolean[1]);
+        return successor[0];
+
+    }
+
+
+    private boolean preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, Integer[] successor, boolean[] found) {
+
+        if (null == root || successor[0] != null)
+            return true;
+
+        if (found[0] && successor[0] == null) {
+            //then this root is the successor
+            successor[0] = root.getData();
+            return true;
+        }
+
+        //node found, store the traversal path
+        if (root.getData().compareTo(node.getData()) == 0){
+            found[0] = true;
+            return true;
+        }
+
+        return preOrderSuccessor(root.getLeft(), node, successor, found) || preOrderSuccessor(root.getRight(), node, successor, found);
+
+
+    }
+
+    default Integer preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node){
+        if (null == root || null == node)
+            return null;
+
+        Integer[] predecessor = new Integer[1];
+        ;
+        preOrderPredecessor(root, node, predecessor);
+        return predecessor[0];
+
+    }
+
+    private boolean preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, Integer[] predecessor) {
+        if (null == root) {
+            return false;
+        }
+
+        if (root.getData().compareTo(node.getData()) == 0) {
+            // node found, store the traversal path
+            return true;
+        }
+
+        predecessor[0] = root.getData();
+        return preOrderPredecessor(root.getLeft(), node, predecessor) || preOrderPredecessor(root.getRight(), node, predecessor);
+
+    }
+
+    default Integer postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node){
+        if (null == root || null == node)
+            return null;
+
+        TreeNode<Integer>[] successor = new TreeNode[1];
+        postOrderSuccessor(root, node, successor, new boolean[1]);
+        return successor[0] == null ? null : successor[0].getData();
+
+    }
+
+    private void postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer>[] successor, boolean []found) {
+        if (null == root || successor[0]!= null)
+            return ;
+
+        postOrderSuccessor(root.getLeft(), node, successor, found);
+        postOrderSuccessor(root.getRight(), node, successor, found);
+
+        if (found[0] && successor[0] == null) {
+            //then this root is the successor
+            successor[0] = root;
+            return ;
+        }
+
+        //node found, store the traversal path
+        if (root.getData().compareTo(node.getData()) == 0) {
+            found[0] = true;
+        }
+    }
+
+
+
+    default Integer postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node){
+        if (null == root || null == node)
+            return null;
+
+        TreeNode<Integer>[] predecessor = new TreeNode[1];
+        //previous node in postorder
+        TreeNode<Integer>[] prev = new TreeNode[1];
+
+        postOrderPredecessor(root, node, predecessor, prev);
+        return predecessor[0] == null ? null : predecessor[0].getData();
+    }
+
+
+    private void postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer>[] predecessor, TreeNode<Integer>[] prev) {
+        if (null == root)
+            return;
+
+        postOrderPredecessor(root.getLeft(), node, predecessor, prev);
+        postOrderPredecessor(root.getRight(), node, predecessor, prev);
+
+        //node found, store the traversal path
+        if (root.getData().compareTo(node.getData()) == 0){
+            if (prev[0] != null) {
+                predecessor[0] = prev[0];
+            }
+        }
+
+        //store the previous node
+        prev[0] = root;
+    }
 
     /****************** Default implementation of level order Successors and predecessors *******************/
 

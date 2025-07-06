@@ -123,325 +123,43 @@ public class BinarySearchTree implements IBinarySearchTree {
 
     }
 
-    @Override
-    public Integer inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node) {
+    public Integer inOrderSuccessorIterative(TreeNode<Integer> root, TreeNode<Integer> node) {
 
         if (null == root || null == node)
             return null;
+        Integer successor = null;
 
-        //Case 1: if right child is not empty
-        if (null != node.getRight()) {
-            return (Integer) leftMostNode(node.getRight()).getData();
-        } else {
-            //Case 2: when there is no right child, then search and backtrack
-            TreeNode<Integer> successor = new BinaryTreeNode<>(null);
-            inOrderSuccessor(root, node, successor);
-            return successor.getData();
-        }
-
-    }
-
-    private TreeNode inOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> successor) {
-        if (null == root)
-            return null;
-
-
-        if (root.getData() == node.getData())
-            return root;
-
-        TreeNode temp;
-        if (((node.getData().compareTo(root.getData()) < 0) && ((temp = inOrderSuccessor(root.getLeft(), node, successor)) != null)
-                || ((node.getData().compareTo(root.getData()) > 0) && ((temp = inOrderSuccessor(root.getRight(), node, successor)) != null))
-        ) && (successor.getData() == null)) {
-
-            if (successor.getData() == null) {
-
-                //If temp is left child then this is successor
-                if (root.getLeft() == temp) {
-                    ((BinaryTreeNode) successor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                    return null;
-                }
-
+        while (root != null) {
+            if (root.getData().compareTo(node.getData()) > 0) {
+                successor = root.getData();
+                root = root.getLeft();
+            } else {
+                root = root.getRight();
             }
-
-            return root;
         }
-
-
-        return null;
-    }
-
-    @Override
-    public Integer inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node) {
-
-
-        if (null == root)
-            return null;
-
-        if (null == node)
-            return null;
-
-
-        //Case 1: if left is not null, then right most node is predecessor of node in left subtree of node
-        if (null != node.getLeft()) {
-            return (Integer) rightMostNode(node.getLeft()).getData();
-        } else {
-            TreeNode<Integer> predecessor = new BinaryTreeNode<>(null);
-            //Case 2: when there is no left child, then search and backtrack
-            inOrderPredecessor(root, node, predecessor);
-            return predecessor.getData();
-        }
+        return successor;
 
     }
 
-    private TreeNode inOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> predecessor) {
-        if (null == root)
-            return null;
+    public Integer inOrderPredecessorIterative(TreeNode<Integer> root, TreeNode<Integer> node) {
 
-        if (root.getData() == node.getData())
-            return root;
-
-
-        TreeNode temp;
-        if (((node.getData().compareTo(root.getData()) < 0) && ((temp = inOrderPredecessor(root.getLeft(), node, predecessor)) != null)
-                || ((node.getData().compareTo(root.getData()) > 0) && ((temp = inOrderPredecessor(root.getRight(), node, predecessor)) != null))
-        ) && (predecessor.getData() == null)) {
-
-            if (predecessor.getData() == null) {
-
-                //If temp is left child then this is successor
-                if (root.getRight() == temp) {
-                    ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                    return null;
-                }
-
-            }
-
-            return root;
-        }
-
-        return null;
-    }
-
-
-    @Override
-    public Integer preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node) {
 
         if (null == root || null == node)
             return null;
+        Integer predecessor = null;
 
-        //Case1: if left node is not null, then this is a successor
-        if (null != node.getLeft()) {
-            return (Integer) node.getLeft().getData();
-        } else {
-            //Case2: if left is null but right node is not null, then this is a successor
-            if (null != node.getRight()) {
-                return (Integer) node.getRight().getData();
+        while (root != null) {
+            if (root.getData().compareTo(node.getData()) < 0) {
+                predecessor = root.getData();
+                root = root.getRight();
+            } else {
+                root = root.getLeft();
             }
         }
-
-        //Case3: if left and right both are null then, successor is sibling of parent of this node; if sibling null, then move up parent of parent and so on
-        TreeNode<Integer> successor = new BinaryTreeNode<>(null);
-        preOrderSuccessor(root, node, successor);
-        return successor.getData();
-    }
-
-    private TreeNode preOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> successor) {
-        if (null == root)
-            return null;
-
-        if (root.getData() == node.getData())
-            return root;
-
-        TreeNode temp;
-        if (((node.getData().compareTo(root.getData()) < 0) && ((temp = preOrderSuccessor(root.getLeft(), node, successor)) != null)
-                || ((node.getData().compareTo(root.getData()) > 0) && ((temp = preOrderSuccessor(root.getRight(), node, successor)) != null))
-        ) && (successor.getData() == null)) {
-
-            if (successor.getData() == null) {
-
-                if (root.getLeft() == temp) {
-
-                    //If temp is left child then this is successor
-                    if (null != root.getRight()) {
-                        ((BinaryTreeNode) successor).buildNode(root.getRight().getData(), root.getRight().getLeft(), root.getRight().getRight());
-                        return null;
-                    }
-
-                }
-            }
-
-            return root;
-        }
-
-        return null;
-    }
-
-    @Override
-    public Integer preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node) {
-
-        //Case 1: if this node is root itself then there is no predecessor of root
-        if (null == root || null == node || root.getData() == node.getData())
-            return null;
-
-
-        TreeNode<Integer> predecessor = new BinaryTreeNode<>(null);
-        preOrderPredecessor(root, node, predecessor);
-        return predecessor.getData();
+        return predecessor;
 
     }
 
-
-    private TreeNode<Integer> preOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> predecessor) {
-
-        if (null == root)
-            return null;
-
-
-        if (root.getData() == node.getData())
-            return root;
-
-        TreeNode temp;
-        if (((node.getData().compareTo(root.getData()) < 0) && ((temp = preOrderPredecessor(root.getLeft(), node, predecessor)) != null)
-                || ((node.getData().compareTo(root.getData()) > 0) && ((temp = preOrderPredecessor(root.getRight(), node, predecessor)) != null))
-        ) && (predecessor.getData() == null)) {
-
-            //Case 2: if this node is left node of root then root is predecessor
-            if (temp == root.getLeft()) {
-
-                ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                return null;
-            }
-
-
-            //Case 3: if this node is MAY be right node of root or any subtree of root, then search recursively
-            else //if this node is right child of root node then predecessor must be in left subtree of root, the right aligned node; Check with example what right aligned node mean
-                if (root.getRight() == temp) {
-
-                    //If there is no left subtree of root, then root is predecessor
-                    if (root.getLeft() == null) {
-
-                        ((BinaryTreeNode) predecessor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                        return null;
-
-
-                    } else {
-                        // must be in left subtree of root, the right aligned node; Check with example what right aligned node mean
-                        TreeNode rightAlignedNode = rightAlignedNode(root.getLeft());
-
-                        ((BinaryTreeNode) predecessor).buildNode(rightAlignedNode.getData(), rightAlignedNode.getLeft(), rightAlignedNode.getRight());
-                        return null;
-
-                    }
-                }
-
-            return root;
-
-
-        }
-
-
-        return null;
-    }
-
-
-    @Override
-    public Integer postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node) {
-        if (null == root || null == node)
-            return null;
-
-        /**
-         * There are two cases;
-         *
-         * if node is parent left
-         *  => successor is left aligned node in parent right; try some example to understand left aligned node
-         *
-         * if node is parent right
-         *  => then parent is successor
-         */
-        TreeNode<Integer> successor = new BinaryTreeNode<>(null);
-        postOrderSuccessor(root, node, successor);
-        return successor.getData();
-    }
-
-
-    private TreeNode<Integer> postOrderSuccessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> successor) {
-
-        if (null == root)
-            return null;
-
-        if (root.getData() == node.getData())
-            return root;
-
-        TreeNode temp;
-        if (((node.getData().compareTo(root.getData()) < 0) && ((temp = postOrderSuccessor(root.getLeft(), node, successor)) != null)
-                || ((node.getData().compareTo(root.getData()) > 0) && ((temp = postOrderSuccessor(root.getRight(), node, successor)) != null))
-        ) && (successor.getData() == null)) {
-
-
-            if (successor.getData() == null) {
-
-                //if node is parent right; then parent is successor
-                if (root.getRight() == temp) {
-                    ((BinaryTreeNode) successor).buildNode(root.getData(), root.getLeft(), root.getRight());
-
-
-                } else if (root.getLeft() == temp) {
-                    //if node is parent left
-                    // 1. if right node does not exist of root , then root is successor
-                    // 2. otherwise successor is left aligned node in parent right; try some example to understand left aligned node
-
-
-                    if (null == root.getRight()) {
-                        ((BinaryTreeNode) successor).buildNode(root.getData(), root.getLeft(), root.getRight());
-                    } else {
-
-                        TreeNode leftAlignedNode = leftAlignedNode(root.getRight());
-                        ((BinaryTreeNode) successor).buildNode(leftAlignedNode.getData(), leftAlignedNode.getLeft(), leftAlignedNode.getRight());
-
-                    }
-
-                }
-                return null;
-            }
-            return root;
-        }
-
-        return null;
-
-    }
-
-    @Override
-    public Integer postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node) {
-        if (null == root || null == node)
-            return null;
-
-        /**
-         * There are two cases;
-         *
-         * 1. if right node of node is not null, then right node is predecessor
-         * 2. if right node of node is null, then left node is predecessor
-         * 3. if right node of node is null and left node is also null
-         * *    3.1 if its left node of its parent
-         * *        go up till it become right node of its parent , then parent left node is predecessor
-         * *    3.2 if its right node of its parent ???
-         * Don't know
-         * *
-         * if node is parent left
-         *  => successor is left aligned node in parent right; try some example to understand left aligned node
-         *
-         * if node is parent right
-         *  => then parent is successor
-         */
-        TreeNode<Integer> predecessor = new BinaryTreeNode<>(null);
-        postOrderPredecessor(root, node, predecessor);
-        return predecessor.getData();
-
-    }
-
-    private TreeNode<Integer> postOrderPredecessor(TreeNode<Integer> root, TreeNode<Integer> node, TreeNode<Integer> predecessor) {
-        return null;
-    }
 
 
     @Override
