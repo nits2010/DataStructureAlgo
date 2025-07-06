@@ -130,7 +130,7 @@ public class FindThePowerOfKSizeSubarraysI_3254 {
                 //manage max elements
 
                 //evict, that goes out of window
-                while (!max.isEmpty() && max.peekFirst() < i - k + 1)
+                if (!max.isEmpty() && max.peekFirst() < i - k + 1)
                     max.pollFirst();
 
                 //check consecutive order
