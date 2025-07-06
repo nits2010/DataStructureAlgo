@@ -1,5 +1,6 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1283;
 
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming.HouseRobber._2560.HouseRobberIV_2560;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
@@ -35,7 +36,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * File reference
  * -----------
  * Duplicate {@link}
- * Similar {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays.DynamicProgramming.HouseRobber._2560.HouseRobberIV_2560} {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1011.CapacityToShipPackagesWithinDDays_1011}
+ * Similar {@link HouseRobberIV_2560} {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.TwoPointers_BinarySearch._1011.CapacityToShipPackagesWithinDDays_1011}
  * extension {@link }
  * <p>
  * Tags
