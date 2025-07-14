@@ -96,30 +96,32 @@ class Solution_Simplified:
 class Solution_:
     def getPermutation(self, n: int, k: int) -> str:
         """
-        We have 'n' different values to be picked and placed in 'n' different slots of permutations. Generating all permutations of 'n' length string would be very slow.
-        Rather, we can try to find, which integer from 1..n would be placed in each slot. We have total 'n' slots only starting from 0..n-1 positions in the resultant string.
+        ⚙️ Problem Setup
+            - We have n unique integers from 1 to n.
+            - Our goal is to construct the k-th permutation (1-based index) of these numbers.
+            - Instead of generating all permutations, we compute each value at position 0 to n-1 using factorial logic.
 
-        We can try placing one number from [1..n] and see how many more permutations can be built upone if we choose one of them as current slot candidate.
+        💡 Strategy
+            - For each slot from position 0 to n-1:
+            - Determine how many permutations are possible if a specific integer is placed in that slot.
+            - If factorial(n - current_position - 1) is less than k, subtract that count from k and try the next integer.
+            - The first integer for which the remaining permutations are greater than or equal to k is the correct choice.
 
-        For example: n= 4, k = 9
-        we have [1,2,3,4] total items to be placed in [0,1,2,3] slots.
-
-        Choose 1 for 0th pos slot
-        [1, (2,3,4)] keeping 1 at first slot, left us (2,3,4) which can be permutate 3!=6 ways which is < k. Update k = k - 6 = 3
-        Since k > 0 hence 1 cannot be placed in the first slot.
-
-        Choose 2 for 0th pos slot
-        [2, (1,3,4)] keeping 2 at first slot, left us (1,3,4) which can be permutate 3!=6 which is > k, Hence, 2 will be at first slot for sure.
-
-        fixing 2 now, we need to now find the candidate with second slot with k = 3
-        [ 2, 1, (3,4)] makes 2!=2 < k, update k = k - 2 = 1, 1 can not be at second slot
-        [2, 3, (1,4)] makes 2!=2 > k, hence 3 will be at second slot
-
-        fixing 2 and 3,
-        [2,3,1,(4)] OR [2,3,4,(1)] with k = 1 hence third would be 1
-
-        output [2,3,1,4]
-
+        📌 Example
+            Given: n = 4, k = 9
+            Available numbers: [1, 2, 3, 4]
+            Slots: [0, 1, 2, 3]
+            Step-by-step breakdown:
+            - Position 0:
+            - Try placing 1: remaining [2,3,4] → 3! = 6 permutations → k = 9 - 6 = 3 → skip 1
+            - Try placing 2: remaining [1,3,4] → 3! = 6 ≥ k → select 2
+            - Position 1 (fixed prefix: [2])
+            - Try placing 1: remaining [3,4] → 2! = 2 → k = 3 - 2 = 1 → skip 1
+            - Try placing 3: remaining [1,4] → 2! = 2 ≥ k → select 3
+            - Position 2 (fixed prefix: [2,3])
+            - Try placing 1: remaining [4] → 1! = 1 → k = 1 → select 1
+            - Position 3: Remaining number → 4
+            ✅ Final Output: [2, 3, 1, 4]
 
         """
 
