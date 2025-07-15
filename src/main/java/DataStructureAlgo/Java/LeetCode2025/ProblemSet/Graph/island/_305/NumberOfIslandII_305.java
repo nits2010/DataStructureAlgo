@@ -5,9 +5,7 @@ import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.island._200.NumberOf
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.nonleetcode.UnionFindDisjointSets;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 /**
@@ -84,31 +82,38 @@ import java.util.stream.IntStream;
  */
 public class NumberOfIslandII_305 {
     public static void main(String[] args) {
-        boolean test = true;
-        test &= test(3, 3, new int[][]{{0, 0}, {0, 1}, {1, 2}, {2, 1}}, List.of(1, 1, 2, 3));
-        test &= test(3, 3, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}}, List.of(1, 1, 1, 1));
-        test &= test(3, 3, new int[][]{{0, 1}, {0, 1}, {2, 1}, {2, 2}}, List.of(1, 1, 2, 2)); //Duplicate land entry
-        test &= test(4, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}}, List.of(1, 1, 1, 1, 2));
-        test &= test(5, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}, {4, 3}}, List.of(1, 1, 1, 1, 2, 2));
-        CommonMethods.printAllTestOutCome(test);
+        List<Boolean> tests = new ArrayList<>();
+        tests.add(test(3, 3, new int[][]{{0, 0}, {0, 1}, {1, 2}, {2, 1}}, List.of(1, 1, 2, 3)));
+        tests.add(test(3, 3, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}}, List.of(1, 1, 1, 1)));
+        tests.add(test(3, 3, new int[][]{{0, 1}, {0, 1}, {2, 1}, {2, 2}}, List.of(1, 1, 2, 2))); //Duplicate land entry
+        tests.add(test(4, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}}, List.of(1, 1, 1, 1, 2)));
+        tests.add(test(5, 4, new int[][]{{0, 1}, {1, 1}, {2, 1}, {2, 2}, {3, 3}, {4, 3}}, List.of(1, 1, 1, 1, 2, 2)));
+        CommonMethods.printAllTestOutCome(tests);
 
     }
 
     private static boolean test(int m, int n, int[][] positions, List<Integer> expected) {
-        System.out.println("---------------------------------------------");
-        System.out.println("\nm : " + m + " n: " + n + " position :" + CommonMethods.toStringFlat(positions) + " expected: " + expected);
 
+        CommonMethods.printTest(new String[]{"M", "N", "Positions", "Expected"}, true, m, n, positions, expected);
 
-        SolutionUsingIslandFinder buildAndCount = new SolutionUsingIslandFinder();
-        List<Integer> output = buildAndCount.numIslands2(m, n, positions);
-        boolean buildAndCountTest = expected.equals(output);
-        System.out.println("Build and count: " + output + " Result : " + (buildAndCountTest ? "PASS" : "FAIL"));
+        List<Integer> output = null;
+        boolean pass, finalPass = true;
+        output = new SolutionUsingIslandFinder().numIslands2(m, n, positions);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"SolutionUsingIslandFinder", "Pass"}, false, output, pass ? "PASS" : "FAIL");
 
-        SolutionUsingUnionFind unionFind = new SolutionUsingUnionFind();
-        List<Integer> outputUnionFind = unionFind.numIslands2(m, n, positions);
-        boolean unionFindTest = expected.equals(outputUnionFind);
-        System.out.println("Union Find : " + outputUnionFind + " Result : " + (unionFindTest ? "PASS" : "FAIL"));
-        return buildAndCountTest && unionFindTest;
+        output = new SolutionUsingUnionFind().numIslands2(m, n, positions);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"SolutionUsingUnionFind", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+        output = new SolutionUsingCachingMap().numIslands2(m, n, positions);
+        pass = CommonMethods.compareResultOutCome(output, expected, true);
+        finalPass &= pass;
+        CommonMethods.printTest(new String[]{"SolutionUsingCachingMap", "Pass"}, false, output, pass ? "PASS" : "FAIL");
+
+        return finalPass;
 
     }
 
@@ -146,8 +151,7 @@ public class NumberOfIslandII_305 {
         final int[] col = {1, -1, 0, 0};
 
         public int numIslands(char[][] grid) {
-            if (grid == null || grid.length == 0)
-                return 0;
+            if (grid == null || grid.length == 0) return 0;
 
             int n = grid.length;
             int m = grid[0].length;
@@ -181,8 +185,7 @@ public class NumberOfIslandII_305 {
             //if it's not safe to visit, means i and j is out of boundary
             //if this land has already been visited
             //if this land is not land but water
-            if (!isSafe(i, j, n, m) || visited[i][j] || grid[i][j] == '0')
-                return;
+            if (!isSafe(i, j, n, m) || visited[i][j] || grid[i][j] == '0') return;
 
             //visit this land
             visited[i][j] = true;
@@ -247,8 +250,7 @@ public class NumberOfIslandII_305 {
             }
 
             public int find(int i) {
-                if (parents[i].id == i)
-                    return i;
+                if (parents[i].id == i) return i;
                 return parents[i].id = find(parents[i].id); //path compression
             }
 
@@ -257,8 +259,7 @@ public class NumberOfIslandII_305 {
                 int jp = find(j);
 
                 //both are already in the same set
-                if (ip == jp)
-                    return false;
+                if (ip == jp) return false;
 
                 unionByRank(i, j, ip, jp);
                 return true; //union was possible
@@ -351,4 +352,68 @@ public class NumberOfIslandII_305 {
         }
 
     }
+
+
+    static class SolutionUsingCachingMap {
+        //all 4 directions of given position
+        int[] dirRow = {0, 0, 1, -1};
+        int[] dirCol = {-1, 1, 0, 0};
+
+        public List<Integer> numIslands2(int m, int n, int[][] positions) {
+            if (positions == null || positions.length == 0 || positions[0].length == 0) {
+                return new ArrayList<>();
+            }
+
+
+            List<Integer> counts = new ArrayList<>();
+
+            Map<Integer, Set<Integer>> positionToLandMap = new HashMap<>();
+
+
+            // loop through all the positions
+            for (int[] pos : positions) {
+                int row = pos[0];
+                int col = pos[1];
+                boolean isConnected = false;
+
+                // check if the land is already visited
+                if (!(positionToLandMap.containsKey(row) && positionToLandMap.get(row).contains(col))) {
+
+                    //add land
+                    positionToLandMap.computeIfAbsent(row, k -> new HashSet<>()).add(col);
+
+
+                    if (counts.isEmpty()) {
+                        counts.add(1); // first island
+                        continue;
+                    }
+
+                    // check does this land connected to any other lands
+                    for (int i = 0; i < dirRow.length; i++) {
+                        int r = row + dirRow[i];
+                        int c = col + dirCol[i];
+
+                        if (!positionToLandMap.containsKey(r) || !positionToLandMap.get(r).contains(c)) {
+                            continue;
+                        }
+
+                        isConnected = true;
+                        break;
+                    }
+                } else {
+                    // since this is already visited land, hence already connected
+                    isConnected = true;
+                }
+                if (isConnected) {
+                    counts.add(counts.get(counts.size() - 1));
+                } else {
+                    counts.add(counts.get(counts.size() - 1) + 1);
+                }
+
+
+            }
+            return counts;
+        }
+    }
 }
+
