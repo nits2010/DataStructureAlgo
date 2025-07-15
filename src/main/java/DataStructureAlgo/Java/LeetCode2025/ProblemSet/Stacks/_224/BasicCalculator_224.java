@@ -88,155 +88,156 @@ public class BasicCalculator_224 {
         System.out.println("Iterative : " + outIterative + " result : " + outIterativeResult);
         return outRecursiveResult && outIterativeResult;
     }
-}
-
-class BasicCalculator {
 
 
-    static class SolutionIterative {
-        public int calculate(String s) {
-            if (s == null || s.isEmpty())
-                return 0;
-            if (s.length() == 1 && Character.isDigit(s.charAt(0)))
-                return Integer.parseInt(s);
-            return calculate(s.toCharArray());
-        }
-
-        private int calculate(char[] s) {
-            int currentSum = 0;
-            int operationSign = 1;  //+(1) or -(-1)
-            int digit = 0; //Represent the integer number aka last previous/current operand
-            int index = 0;
-            Stack<Integer> stack = new Stack<>();
-
-            while (index < s.length) {
+    static class BasicCalculator {
 
 
-                if (Character.isDigit(s[index])) {
-
-                    //form the number
-                    StringBuilder digits = new StringBuilder();
-                    while (index < s.length && Character.isDigit(s[index])) {
-                        digits.append(s[index++]);
-                    }
-                    //since the loop is broken, which could be because of isDigitFail on index, hence we need to go back;
-                    --index;
-                    digit = Integer.parseInt(digits.toString());
-
-                } else {
-
-                    //operator appear, lets calculate currentSum with respect to this number
-                    switch (s[index]) {
-
-                        case '+':
-                            //let's calculate currentSum with respect to this number.
-                            //Notice, we dont know the next operand yet, which could be a operator or a operand.
-                            //hence we need to cache the solution till this character.
-                            //digit is the last operand, which is not yet added to currentSum
-                            currentSum += operationSign * digit;
-
-                            //set operator
-                            operationSign = 1; // make a positive operator
-
-                            //since the current number which was previously formed is over now {added in current sum}
-                            // as operator appear
-                            digit = 0;
-                            break;
-                        case '-':
-                            //operator appear, lets calculate currentSum with respect to this number
-                            currentSum += operationSign * digit;
-
-                            operationSign = -1; // make a positive operator
-                            digit = 0; //since the current number which was previously formed is over now as operator appear
-                            break;
-                        case '(':
-                            //a new problem start, hence cache the current result
-                            stack.push(currentSum);
-                            stack.push(operationSign);
-
-                            //since we have cached the sum, reset the currentSum and operationSign
-                            currentSum = 0;
-                            operationSign = 1;
-                            break;
-                        case ')':
-                            //current problem is over, lets calculate
-                            currentSum += operationSign * digit;
-                            //since we have cached the sum, reset the currentSum and operationSign
-                            currentSum = currentSum * stack.pop();
-                            currentSum = currentSum + stack.pop();
-                            digit = 0;
-                            break;
-                    }
-                }
-
-                ++index;
-
+        static class SolutionIterative {
+            public int calculate(String s) {
+                if (s == null || s.isEmpty())
+                    return 0;
+                if (s.length() == 1 && Character.isDigit(s.charAt(0)))
+                    return Integer.parseInt(s);
+                return calculate(s.toCharArray());
             }
-            if(digit !=0)
-                currentSum += operationSign*digit;
 
-            return currentSum;
-        }
-    }
+            private int calculate(char[] s) {
+                int currentSum = 0;
+                int operationSign = 1;  //+(1) or -(-1)
+                int digit = 0; //Represent the integer number aka last previous/current operand
+                int index = 0;
+                Stack<Integer> stack = new Stack<>();
 
-    /**
-     * Explanation: See editorial
-     */
-    static class SolutionRecursive {
+                while (index < s.length) {
 
-        int index = 0;
 
-        public int calculate(String s) {
-            if (s == null || s.isEmpty())
-                return 0;
-            if (s.length() == 1 && Character.isDigit(s.charAt(0)))
-                return Integer.parseInt(s);
+                    if (Character.isDigit(s[index])) {
 
-            return dfs(s.toCharArray());
+                        //form the number
+                        StringBuilder digits = new StringBuilder();
+                        while (index < s.length && Character.isDigit(s[index])) {
+                            digits.append(s[index++]);
+                        }
+                        //since the loop is broken, which could be because of isDigitFail on index, hence we need to go back;
+                        --index;
+                        digit = Integer.parseInt(digits.toString());
 
-        }
+                    } else {
 
-        private int dfs(char[] s) {
+                        //operator appear, lets calculate currentSum with respect to this number
+                        switch (s[index]) {
 
-            int currentSum = 0;
-            int operationSign = 1; //+(1) or -(-1)
+                            case '+':
+                                //let's calculate currentSum with respect to this number.
+                                //Notice, we dont know the next operand yet, which could be a operator or a operand.
+                                //hence we need to cache the solution till this character.
+                                //digit is the last operand, which is not yet added to currentSum
+                                currentSum += operationSign * digit;
 
-            while (index < s.length) {
+                                //set operator
+                                operationSign = 1; // make a positive operator
 
-                char c = s[index];
+                                //since the current number which was previously formed is over now {added in current sum}
+                                // as operator appear
+                                digit = 0;
+                                break;
+                            case '-':
+                                //operator appear, lets calculate currentSum with respect to this number
+                                currentSum += operationSign * digit;
 
-                if (c == ')')
-                    break; // this problem is over.
-                if (c == '+')
-                    operationSign = 1; // make a positive operator
-                else if (c == '-')
-                    operationSign = -1; // make a -ve operator
-                else if (c == '(') {
+                                operationSign = -1; // make a positive operator
+                                digit = 0; //since the current number which was previously formed is over now as operator appear
+                                break;
+                            case '(':
+                                //a new problem start, hence cache the current result
+                                stack.push(currentSum);
+                                stack.push(operationSign);
+
+                                //since we have cached the sum, reset the currentSum and operationSign
+                                currentSum = 0;
+                                operationSign = 1;
+                                break;
+                            case ')':
+                                //current problem is over, lets calculate
+                                currentSum += operationSign * digit;
+                                //since we have cached the sum, reset the currentSum and operationSign
+                                currentSum = currentSum * stack.pop();
+                                currentSum = currentSum + stack.pop();
+                                digit = 0;
+                                break;
+                        }
+                    }
+
                     ++index;
-                    //so that, next character get scanned in dfs.
-                    // dfs will give the solution of the sub-problem
-                    //that needs to be appended to current problem.
-                    currentSum += operationSign * dfs(s);
-                } else if (Character.isDigit(c)) {
-                    //since current is a digit, we have to make a full digit.
-                    //current digit can be of single (0-9) or greater than that.
-                    StringBuilder digits = new StringBuilder();
-                    while (index < s.length && Character.isDigit(s[index])) {
-                        digits.append(s[index]);
-                        index++;
 
-                    }
-
-                    //since the loop is broken, which could be because of isDigitFail on index, hence we need to go back;
-                    --index;
-                    int d = Integer.parseInt(digits.toString());
-                    currentSum += operationSign * d;
                 }
-                ++index;
+                if(digit !=0)
+                    currentSum += operationSign*digit;
+
+                return currentSum;
+            }
+        }
+
+        /**
+         * Explanation: See editorial
+         */
+        static class SolutionRecursive {
+
+            int index = 0;
+
+            public int calculate(String s) {
+                if (s == null || s.isEmpty())
+                    return 0;
+                if (s.length() == 1 && Character.isDigit(s.charAt(0)))
+                    return Integer.parseInt(s);
+
+                return dfs(s.toCharArray());
 
             }
-            return currentSum;
 
+            private int dfs(char[] s) {
+
+                int currentSum = 0;
+                int operationSign = 1; //+(1) or -(-1)
+
+                while (index < s.length) {
+
+                    char c = s[index];
+
+                    if (c == ')')
+                        break; // this problem is over.
+                    if (c == '+')
+                        operationSign = 1; // make a positive operator
+                    else if (c == '-')
+                        operationSign = -1; // make a -ve operator
+                    else if (c == '(') {
+                        ++index;
+                        //so that, next character get scanned in dfs.
+                        // dfs will give the solution of the sub-problem
+                        //that needs to be appended to current problem.
+                        currentSum += operationSign * dfs(s);
+                    } else if (Character.isDigit(c)) {
+                        //since current is a digit, we have to make a full digit.
+                        //current digit can be of single (0-9) or greater than that.
+                        StringBuilder digits = new StringBuilder();
+                        while (index < s.length && Character.isDigit(s[index])) {
+                            digits.append(s[index]);
+                            index++;
+
+                        }
+
+                        //since the loop is broken, which could be because of isDigitFail on index, hence we need to go back;
+                        --index;
+                        int d = Integer.parseInt(digits.toString());
+                        currentSum += operationSign * d;
+                    }
+                    ++index;
+
+                }
+                return currentSum;
+
+            }
         }
     }
 }
