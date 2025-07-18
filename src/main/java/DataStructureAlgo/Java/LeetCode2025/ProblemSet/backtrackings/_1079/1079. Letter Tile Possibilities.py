@@ -56,10 +56,34 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-from collections import deque
+from collections import deque, Counter
 from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
+
+
+class Solution_:
+    def numTilePossibilities(self, tiles: str) -> int:
+
+        freq = Counter(tiles)
+
+        def dfs():
+            result = 0
+
+            for i, item in freq.items():
+                if item != 0:
+                    # Track
+                    freq[i] -= 1
+
+                    result += 1  # count current char
+                    result += dfs()
+
+                    # backtrack
+                    freq[i] += 1
+
+            return result
+
+        return dfs()
 
 
 class Solution:
@@ -99,6 +123,12 @@ def test(input_data, expected):
     pass_test = CommonMethods.compare_result(output, expected, True)
     CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
+
+    output = Solution_().numTilePossibilities(input_data)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Outputv2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+
 
     return final_pass
 
