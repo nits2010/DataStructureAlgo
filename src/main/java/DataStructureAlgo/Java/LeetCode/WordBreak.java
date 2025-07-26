@@ -6,9 +6,9 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-07-25
  * Description:
- * https://leetcode.com/problems/word-break/
+ * 139. Word Break https://leetcode.com/problems/word-break/
  * &
- * https://leetcode.com/problems/word-break-ii/
+ * 140. Word Break II https://leetcode.com/problems/word-break-ii/
  */
 public class WordBreak {
 
@@ -41,7 +41,7 @@ public class WordBreak {
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
- * Description:https://leetcode.com/problems/word-break/
+ * Description: 139. Word Break https://leetcode.com/problems/word-break/
  * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
  * <p>
  * Note:
@@ -71,7 +71,7 @@ class WordBreakI {
 
 
 /**
- * https://leetcode.com/problems/word-break-ii/
+ * 140. Word Break II https://leetcode.com/problems/word-break-ii/
  * <p>
  * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word.
  * Return all such possible sentences.
