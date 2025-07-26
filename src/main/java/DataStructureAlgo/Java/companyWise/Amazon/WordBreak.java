@@ -5,7 +5,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
- * Description: https://www.geeksforgeeks.org/minimum-word-break/
+ * Description: 139. Word Break
+ * https://www.geeksforgeeks.org/minimum-word-break/
  * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
  * <p>
  * Note:
