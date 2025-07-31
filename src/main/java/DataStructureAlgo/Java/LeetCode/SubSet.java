@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-19
- * Description: https://leetcode.com/problems/subsets/
+ * Description: 78. Subsets https://leetcode.com/problems/subsets/
  * Power set
  */
 public class SubSet {

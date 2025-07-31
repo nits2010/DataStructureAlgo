@@ -44,37 +44,37 @@ Track your progress by filling in the values for each pattern.
 - Revisions: ___
 
 ### 5. Divide and Conquer 9 days [6th Jun 2025 – 14th June 2025]
-- [List](https://leetcode.com/problem-list/2kjm05q5/)
+- List: [D&C](https://leetcode.com/problem-list/2kjm05q5/)
 - Questions Solved: [17](https://leetcode.com/problem-list/n509pbjm/)
 - Confidence Level: 60%
 - Revisions: ___
 
-### 6. Strings
-- Questions Solved: ___
-- Confidence Level: ___
+### 6. Recursion & Backtracking
+- Questions Solved: 24 [Baclktracking](https://leetcode.com/problem-list/2kjwtb4e/)
+- Confidence Level: 70%
 - Revisions: ___
 
-### 7. Trie
-- Questions Solved: ___
-- Confidence Level: ___
-- Revisions: ___
-
-### 8. Tree 32 days [15th Jun 2025 – 2nd July 2025]
+### 7. Tree 32 days [15th Jun 2025 – 2nd July 2025]
 - Questions Solved: 44 [Tree](https://leetcode.com/problem-list/2kjvtnv6/)
 - Confidence Level: 70%
 - Revisions: ___
 
-### 9. Greedy
+### 8. Strings
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 10. Recursion & Backtracking
+### 9. Trie
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
 
-### 11. Graph
+### 10. Graph
+- Questions Solved: ___
+- Confidence Level: ___
+- Revisions: ___
+- 
+### 11. Greedy
 - Questions Solved: ___
 - Confidence Level: ___
 - Revisions: ___
