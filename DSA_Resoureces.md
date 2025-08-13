@@ -72,7 +72,7 @@
 
 ## Lintcode Solutions
 
-- [Awangdev - LintCode Solutions](https://github.com/awangdev/LintCode
+- [Awangdev - LintCode Solutions](https://github.com/awangdev/LintCode)
 - [LeetCode The Hard Way](https://leetcodethehardway.com/solutions/category/0000---0099)
 
 ## Algorithm Problem & Solution Gitbook
