@@ -58,7 +58,7 @@
 - [Tony Cao's Gitbook](https://tonycao.gitbooks.io/leetcode-locked)
 - [Lightwindy Solutions](https://www.cnblogs.com/lightwindy/p/8476874.html)
 - [Kenny Zhuang's Gitbook](https://kennyzhuang.gitbooks.io/leetcode-lock/content/index.html)
-
+- 
 - [Walkccc - LeetCode Problems](https://walkccc.me/LeetCode/problems/3/)
 - [LeetCode The Hard Way - Heap Tutorial](https://leetcodethehardway.com/tutorials/basic-topics/heap)
 
@@ -72,7 +72,8 @@
 
 ## Lintcode Solutions
 
-- [Awangdev - LintCode Solutions](https://github.com/awangdev/LintCode)
+- [Awangdev - LintCode Solutions](https://github.com/awangdev/LintCode
+- [LeetCode The Hard Way(https://leetcodethehardway.com/solutions/0000-0099/add-two-numbers-medium)
 
 ## Algorithm Problem & Solution Gitbook
 
