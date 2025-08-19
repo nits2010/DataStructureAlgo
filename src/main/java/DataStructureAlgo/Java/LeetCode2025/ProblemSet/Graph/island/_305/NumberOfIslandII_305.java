@@ -69,8 +69,7 @@ import java.util.stream.IntStream;
  * @UnionFind
  * @Matrix
  * @Graph
- * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * @Amazon

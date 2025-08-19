@@ -56,7 +56,7 @@ import java.util.*;
  * @BinarySearch
  * @Sorting
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * <p>

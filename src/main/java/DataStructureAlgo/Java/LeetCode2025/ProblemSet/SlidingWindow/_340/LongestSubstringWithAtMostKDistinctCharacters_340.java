@@ -39,7 +39,7 @@ import java.util.*;
  * Tags
  * -----
  * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  * @hard
  * @String
  * @SlidingWindow

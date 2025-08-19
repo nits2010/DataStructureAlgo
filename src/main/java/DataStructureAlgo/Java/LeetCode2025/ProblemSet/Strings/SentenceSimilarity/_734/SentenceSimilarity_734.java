@@ -63,7 +63,7 @@ import java.util.*;
  * @String
  * @HashTable
  * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  * <p><p>
  * Company Tags
  * -----

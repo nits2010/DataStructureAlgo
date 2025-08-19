@@ -35,7 +35,7 @@ import java.util.Comparator;
  * @Array
  * @Sorting
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * @Amazon

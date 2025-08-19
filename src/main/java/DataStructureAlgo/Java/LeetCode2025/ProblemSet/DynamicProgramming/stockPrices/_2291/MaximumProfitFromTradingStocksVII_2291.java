@@ -61,8 +61,7 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
  * @medium
  * @Array
  * @DynamicProgramming
- * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * <p>

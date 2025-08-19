@@ -40,7 +40,7 @@ import java.util.*;
  * @Heap(PriorityQueue)
  * @OrderedSet
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * @Facebook

@@ -57,7 +57,7 @@ import java.util.*;
  * -----
  * @easy
  * @Array
- * @PremimumQuestion
+ * @PremiumQuestion
  * @LockedProblem <p><p>
  * Company Tags
  * -----

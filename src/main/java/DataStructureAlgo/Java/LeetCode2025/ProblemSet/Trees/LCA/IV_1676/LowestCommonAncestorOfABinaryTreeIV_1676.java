@@ -74,7 +74,7 @@ import java.util.stream.Collectors;
  * @Tree
  * @Depth-FirstSearch
  * @BinaryTree
- * @PremimumQuestion
+ * @PremiumQuestion
  * @LeetCodeLockedProblem <p>
  * <p>
  * Company Tags

@@ -59,8 +59,7 @@ import java.util.stream.IntStream;
  * Tags
  * -----
  * @Hard
- * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  * @DynamicProgramming
  * @BitManipulation
  * @Graph

@@ -61,7 +61,7 @@ import java.util.List;
  * @BinarySearchTree
  * @BinaryTree
  * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  *
  * <p>
  * <p>

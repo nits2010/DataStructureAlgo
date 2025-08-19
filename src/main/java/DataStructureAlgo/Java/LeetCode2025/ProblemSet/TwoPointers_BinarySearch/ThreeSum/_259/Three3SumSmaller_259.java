@@ -36,9 +36,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @TwoPointers
  * @Sorting
  * @Counting
- * @PremimumQuestion
- * @LockedProblem
- * <p><p>
+ * @PremiumQuestion
+ * 
  * Company Tags
  * -----
  * @Google
