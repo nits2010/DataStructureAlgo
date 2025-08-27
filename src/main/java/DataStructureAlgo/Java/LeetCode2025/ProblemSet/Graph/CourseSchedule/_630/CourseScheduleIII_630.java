@@ -182,7 +182,7 @@ public class CourseScheduleIII_630 {
      * The basic greedy solution touches o(n^2) time and o(n) space. The reason for that is to find the course by which we can replace it.
      * If we can improve on this replacement better, then complexity can be reduced further.
      * It is noted that, in this loop, we always find a course that has 'highest course length'.
-     * if we can pick such a course less than O(n) time, then we can improve the complexity.
+     * If we can pick such a course less than O(n) time, then we can improve the complexity.
      *
      * Option 1: Keep the scheduled in sorted manner. This will make sure that the highest course length will always be at last.
      * But keep it in sorted order can go up to O(n) time (best algo is insertion sort for this case ).

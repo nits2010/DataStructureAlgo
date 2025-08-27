@@ -15,7 +15,7 @@
 # DS Resources 
 
 ## GitHub Repositories
-
+- [Leetcode all solution](https://github.com/nits2010/leetcode-all-problem)
 - [Kdn251 - Interviews](https://github.com/kdn251/interviews)
 - [Sarvex - Interview Preparation](https://github.com/sarvex/interview-1)
 - [RodneyShag - HackerRank Solutions](https://github.com/RodneyShag/HackerRank_solutions)

@@ -15,7 +15,7 @@ import java.util.stream.IntStream;
  * https://leetcode.com/problems/parallel-courses/description/
  * https://leetcode.ca/all/1136.html
  *
- * There are N courses, labelled from 1 to N.
+ * There are N courses, labeled from 1 to N.
  *
  * We are given relations[i] = [X, Y], representing a prerequisite relationship between course X and course Y: course X has to be studied before course Y.
  *
@@ -122,7 +122,7 @@ public class ParallelCoursesI_1136 {
             final int []inDegree = new int[n];
             List<List<Integer>> adjList = buildGraph(n, relations, inDegree);
 
-           //enque all the indegree=0 node
+           //enqueue all the indegree=0 node
             Queue<Integer> queue = Arrays.stream(inDegree)
                     .filter(i -> inDegree[i] == 0)
                     .boxed()
@@ -224,7 +224,7 @@ public class ParallelCoursesI_1136 {
                 if(detectCycle(adjList, depth, nextCourse, visited))
                     return true;
 
-                //calculate the depth of the course in DAG, it's either the current depth or depth based on next course
+                //calculate the depth of the course in DAG, it's either the current depth or depth based on the next course
                 depth[course] = Math.max(depth[course], depth[nextCourse] + 1);
             }
 
