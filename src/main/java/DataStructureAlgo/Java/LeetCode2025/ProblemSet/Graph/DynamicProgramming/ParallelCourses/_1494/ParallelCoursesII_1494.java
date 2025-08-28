@@ -71,35 +71,32 @@ import java.util.*;
  * Company Tags
  * -----
  * @Google
- * @Pinterest
- * <p><p>
- *
- *
+ * @Pinterest <p><p>
  * @Editorial chatgpt: https://chatgpt.com/share/66f1c46c-942c-8011-913d-800b75925028
  * https://leetcode.com/problems/parallel-courses-ii/solutions/1373540/detailed-explanations-diagrams-annotated-code
- *
+ * <p>
  * ---------
  * chatgpt
  * -----
  * Approach to Solve the Problem
  * This is a variant of a topological sorting problem combined with bitmask dynamic programming (DP). The key challenge is determining the optimal sequence of taking courses while respecting
  * the prerequisite constraints and the limit k on how many courses can be taken in each semester.
- *
+ * <p>
  * Steps:
  * Graph Representation:
- *
+ * <p>
  * You can represent the courses and their prerequisites as a directed graph. A course points to its dependent courses.
  * A node will represent a course, and an edge from node u to node v will mean that course u is a prerequisite for course v.
  * Bitmasking:
- *
+ * <p>
  * Use a bitmask to represent which courses have been completed. For n courses, a bitmask of size n is sufficient. Each bit in the bitmask represents whether a course is completed (1) or not (0).
  * Topological Sort with Bitmask DP:
- *
+ * <p>
  * Use a dynamic programming approach where the state is the bitmask of completed courses.
  * In each DP state, you consider which subset of available courses you can take in the current semester (limited by k courses per semester).
  * Transition from one state to another is done by completing courses whose prerequisites have already been satisfied.
  * Base Case and State Transition:
- *
+ * <p>
  * The base case is when no course is taken (mask = 0), and the final state is when all courses are taken (mask = (1 << n) - 1).
  * From each state, check which courses can be taken (those whose prerequisites are already satisfied in the current bitmask). Try all subsets of those courses of size <= k and update the DP accordingly.
  */
@@ -107,8 +104,8 @@ public class ParallelCoursesII_1494 {
 
     public static void main(String[] args) {
         boolean test = true;
-        test &= test(new int[][]{{12,8},{2,4},{3,7},{6,8},{11,8},{9,4},{9,7},{12,4},{11,4},{6,4},{1,4},{10,7},{10,4},{1,7},{1,8},{2,7},{8,4},{10,8},{12,7},{5,4},
-                        {3,4},{11,7},{7,4},{13,4},{9,8},{13,8}},
+        test &= test(new int[][]{{12, 8}, {2, 4}, {3, 7}, {6, 8}, {11, 8}, {9, 4}, {9, 7}, {12, 4}, {11, 4}, {6, 4}, {1, 4}, {10, 7}, {10, 4}, {1, 7}, {1, 8}, {2, 7}, {8, 4}, {10, 8}, {12, 7}, {5, 4},
+                        {3, 4}, {11, 7}, {7, 4}, {13, 4}, {9, 8}, {13, 8}},
                 13, 9, 3);
         test &= test(new int[][]{}, 11, 2, 6);
         test &= test(new int[][]{}, 11, 0, -1);
@@ -166,6 +163,7 @@ public class ParallelCoursesII_1494 {
         static class Backtracking {
 
             private int minSemesters = Integer.MAX_VALUE;
+
             public int minNumberOfSemesters(int n, int[][] relations, int k) {
                 if (n == 0 || k == 0)
                     return -1;
@@ -175,26 +173,26 @@ public class ParallelCoursesII_1494 {
 
                 List<List<Integer>> adjList = graph(n, relations);
 
-                dfs_backtracking(n, k , adjList, new HashSet<>(), 0);
+                dfs_backtracking(n, k, adjList, new HashSet<>(), 0);
 
                 return minSemesters;
             }
 
-            private void dfs_backtracking(int n, int k, List<List<Integer>> adjList, Set<Integer> coursesTaken, int semester){
-                if(coursesTaken.size() == n){
+            private void dfs_backtracking(int n, int k, List<List<Integer>> adjList, Set<Integer> coursesTaken, int semester) {
+                if (coursesTaken.size() == n) {
                     minSemesters = Math.min(minSemesters, semester);
                     return;
                 }
 
                 //semester + estimated number of semesters left exceeds minSemesters
-                if (semester + (int)Math.ceil((n - coursesTaken.size()) / (double)k) >= minSemesters) {
+                if (semester + (int) Math.ceil((n - coursesTaken.size()) / (double) k) >= minSemesters) {
                     return;
                 }
 
                 List<Integer> available = availableCourses(adjList, coursesTaken);
 
                 //if we have only <= k courses available, then take them all
-                if(available.size() <= k){
+                if (available.size() <= k) {
 
                     coursesTaken.addAll(available);
 
@@ -203,12 +201,12 @@ public class ParallelCoursesII_1494 {
                     //backtrack
                     coursesTaken.removeAll(available);
 
-                }else{
+                } else {
 
                     //if there are more than k courses available, then we need to choose all of the combinations
                     List<List<Integer>> combinations = combinations(available, k);
 
-                    for(List<Integer> combination : combinations){
+                    for (List<Integer> combination : combinations) {
                         coursesTaken.addAll(combination);
 
                         dfs_backtracking(n, k, adjList, coursesTaken, semester + 1);
@@ -220,13 +218,13 @@ public class ParallelCoursesII_1494 {
 
             }
 
-            private  List<Integer> availableCourses(List<List<Integer>> adjList, Set<Integer> coursesTaken) {
+            private List<Integer> availableCourses(List<List<Integer>> adjList, Set<Integer> coursesTaken) {
                 List<Integer> available = new ArrayList<>();
-                for (int i = 0; i< adjList.size(); i++){
+                for (int i = 0; i < adjList.size(); i++) {
                     boolean isAvailable = !coursesTaken.contains(i); // if this is not taken earlier
                     isAvailable = isAvailable && coursesTaken.containsAll(adjList.get(i)); // if all the prerequisites are taken
 
-                    if(isAvailable)
+                    if (isAvailable)
                         available.add(i);
                 }
                 return available;
@@ -234,40 +232,41 @@ public class ParallelCoursesII_1494 {
 
             /**
              * {@link DataStructureAlgo.Java.nonleetcode.Combinations}
+             *
              * @param available
              * @param k
              * @return
              */
-            private  List<List<Integer>> combinations(List<Integer> available, int k) {
+            private List<List<Integer>> combinations(List<Integer> available, int k) {
                 List<List<Integer>> allCombinations = new ArrayList<>();
                 combinations(available, k, new ArrayList<>(), allCombinations, 0);
                 return allCombinations;
             }
 
 
-            private  void combinations(List<Integer> available, int k, List<Integer> currentCombination, List<List<Integer>> allCombinations, int pickFrom) {
-                if ( k == currentCombination.size()) {
+            private void combinations(List<Integer> available, int k, List<Integer> currentCombination, List<List<Integer>> allCombinations, int pickFrom) {
+                if (k == currentCombination.size()) {
                     allCombinations.add(new ArrayList<>(currentCombination));
                     return;
                 }
 
-                for (int i = pickFrom; i<available.size(); i++){
+                for (int i = pickFrom; i < available.size(); i++) {
                     currentCombination.add(available.get(i));
-                    combinations(available, k, currentCombination, allCombinations, i+1);
-                    currentCombination.remove(currentCombination.size()-1);
+                    combinations(available, k, currentCombination, allCombinations, i + 1);
+                    currentCombination.remove(currentCombination.size() - 1);
                 }
             }
 
-            private List<List<Integer>> graph(int n, int [][]relations){
-                List<List<Integer>> adjList = new ArrayList<>(n+1);
+            private List<List<Integer>> graph(int n, int[][] relations) {
+                List<List<Integer>> adjList = new ArrayList<>(n + 1);
 
                 for (int i = 0; i < n; i++) {
                     adjList.add(new ArrayList<>());
                 }
 
-                for(int []relation : relations) {
+                for (int[] relation : relations) {
                     int prevCourse = relation[0] - 1; //courses labeled from 1 to n
-                    int nextCourse = relation[1] - 1 ; //courses labeled from 1 to n
+                    int nextCourse = relation[1] - 1; //courses labeled from 1 to n
                     adjList.get(nextCourse).add(prevCourse); // nextCourse can only be taken when prevCourse is completed
                 }
                 return adjList;
@@ -315,7 +314,7 @@ public class ParallelCoursesII_1494 {
                 if (mask == (1 << n) - 1)
                     return 0;
 
-                //get all the available courses as of now.
+                // get all the available courses as of now.
                 int available = 0;
 
                 for (int i = 0; i < n; i++) {
