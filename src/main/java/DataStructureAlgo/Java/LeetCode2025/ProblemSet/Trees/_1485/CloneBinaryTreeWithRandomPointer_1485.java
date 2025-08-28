@@ -75,7 +75,7 @@ import java.util.Map;
  *
  * @medium
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * @Amazon

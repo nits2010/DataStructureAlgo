@@ -62,7 +62,7 @@ import java.util.*;
  *
  * @medium
  * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  * @SlidingWindow
  * @Array
  * @HashTable <p><p>

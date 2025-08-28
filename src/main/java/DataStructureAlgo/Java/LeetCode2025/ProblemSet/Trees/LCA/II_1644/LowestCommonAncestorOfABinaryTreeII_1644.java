@@ -69,7 +69,7 @@ import java.util.Arrays;
  * @Tree
  * @Depth-FirstSearch
  * @BinaryTree
- * @PremimumQuestion
+ * @PremiumQuestion
  * @LeetCodeLockedProblem
  *
  * Company Tags

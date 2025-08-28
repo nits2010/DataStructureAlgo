@@ -85,6 +85,7 @@ public class NextPermutation_31 {
         tests.add(test(new int[]{1, 2, 3}, new int[]{1, 3, 2}));
         tests.add(test(new int[]{3, 2, 1}, new int[]{1, 2, 3}));
         tests.add(test(new int[]{1, 1, 5}, new int[]{1, 5, 1}));
+        tests.add(test(new int[]{4, 3, 2, 5, 3, 1}, new int[]{4, 3, 3, 1, 2, 5}));
         tests.add(test(new int[]{1, 5, 8, 4, 7, 6, 5, 3, 1}, new int[]{1, 5, 8, 5, 1, 3, 4, 6, 7}));
         CommonMethods.printAllTestOutCome(tests);
     }

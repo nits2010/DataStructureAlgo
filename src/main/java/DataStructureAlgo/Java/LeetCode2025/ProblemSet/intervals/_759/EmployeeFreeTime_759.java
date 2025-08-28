@@ -56,7 +56,7 @@ import java.util.stream.Collectors;
  * @LineSweep
  * @Heap(PriorityQueue)
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p><p>
+ * @PremiumQuestion <p><p>
  * Company Tags
  * -----
  * @Airbnb

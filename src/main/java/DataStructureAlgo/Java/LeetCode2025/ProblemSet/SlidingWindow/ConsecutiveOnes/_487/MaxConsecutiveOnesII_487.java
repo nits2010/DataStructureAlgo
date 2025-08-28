@@ -47,7 +47,7 @@ import java.util.*;
  * @Array
  * @SlidingWindow
  * @medium
- * @PremimumQuestion
+ * @PremiumQuestion
  * @LeetCodeLockedProblem <p>
  * ------------
  * <p><p>

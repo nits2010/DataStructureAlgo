@@ -3,8 +3,10 @@
 
 - [Concept doc](https://docs.google.com/document/d/1N9_lfgaOh_LXhcCBUH8LEHVzivEDgC9zOUIYTXxfR2U/edit?tab=t.0)
 --------------------------------------------------------------------------
-## Paid resources
+## Paid+Free resources
 - [ByteByteGo](https://www.bytebytego.com/)
+- [HelloInterview](https://www.hellointerview.com/)
+- [Systemdesignschool](https://systemdesignschool.io/primer)
 
 ## System Design Practice
 - {IMP}[System Design Case Study](https://github.com/Sam-Si/system-design?tab=readme-ov-file#a-companies)

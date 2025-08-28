@@ -72,7 +72,7 @@ import java.util.List;
  * @Tree
  * @BinaryTree
  * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  *
  * <p>
  * <p>

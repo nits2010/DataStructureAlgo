@@ -9,10 +9,10 @@ import java.util.*;
  * Date: 2019-07-31
  * Description: https://www.geeksforgeeks.org/bipartite-graph/
  * <p>
- * Given a random graph (undirected/directed /tree anything). You need to find that can we divide this graph in two different sets of
- * vertices such that there is no edge exists which connects two nodes within a set, but a edge can be there which connects two nodes in different sets.
+ * Given a random graph (undirected/directed /tree anything). You need to find that we can divide this graph in two different sets of
+ * vertices such that there is no edge exists which connects two nodes within a set, but an edge can be there that connects two nodes in different sets.
  * <p>
- * See different approaches and solution below;
+ * See the different approaches and solution below;
  * 1. Backtracking
  * 2. DFS
  * 3. BFS
@@ -103,13 +103,13 @@ public class GraphDivideTwoSetsOrBipartiteGraph {
 }
 
 /**
- * We can simply DFS the given graph and see can we divide the graph in two sets such that it follow the given constraints
+ * We can simply DFS the given graph and see can we divide the graph in two sets such that it follows the given constraints
  * <p>
- * Our choices: A vertices can be part of group 'A' if and only if, there is no edge between this vertices and the vertices in the given set otherwise it goes in different set
- * Our Constraints: There should not be edge exists which connects two nodes within a set, but a edge can be there which connects two nodes in different sets.
- * Our Goal: We need two different sets which contains all the vertices of given graph
+ * Our choices: A vertices can be part of group 'A' if and only if, there is no edge between these vertices and the vertices in the given set otherwise it goes in different set
+ * Our Constraints: There should not be edge exists which connects two nodes within a set, but an edge can be there which connects two nodes in different sets.
+ * Our Goal: We need two different sets which contain all the vertices of the given graph
  * Our Boundary:
- * 1. Either we left with no vertices and both are divided in two sets (set1.size() + set2.size() = V ) - Success
+ * 1. Either we left with no vertices, and both are divided in two sets (set1.size() + set2.size() = V ) - Success
  * 2. Otherwise backtrack
  * <p>
  * <p>
@@ -142,14 +142,14 @@ class BipartiteGraphDFSBackTracking {
 
     private static boolean isBipartiteGraph(int[][] graph, Set<Integer> set1, Set<Integer> set2, int v) {
         /**
-         *  Either we left with no vertices and both are divided in two sets (set1.size() + set2.size() = V ) - Success
+         *  Either we left with no vertices, and both are divided in two sets (set1.size() + set2.size() = V ) - Success
          */
         if (v == graph.length)
             return true;
 
 
         /**
-         * Self loop?
+         * Self-loop?
          * Not possible then
          */
         if (graph[v][v] == 1) {
@@ -160,7 +160,7 @@ class BipartiteGraphDFSBackTracking {
 
         /**
          * Our choices:
-         *  A vertices can be part of group 'A' if and only if, there is no edge between this vertices and the vertices in the given set otherwise it goes in different set
+         *  A vertices can be part of group 'A' if and only if, there is no edge between this vertex and the vertices in the given set otherwise it goes in a different set
          *
          *  Consider this vertex and put into a set 1 and check
          */
@@ -274,7 +274,7 @@ class GraphColoringProblem {
         for (int c = 0; c < m; c++) {
 
             /**
-             * Our Constrains: We can not assign a color to this vertex which already been assigned to its neighbour
+             * Our Constraints: We cannot assign a color to this vertex which already been assigned to its neighbor
              */
 
             if (isSafe(graph, u, c, colors)) {
@@ -285,7 +285,7 @@ class GraphColoringProblem {
                 colors[u] = c;
 
                 /**
-                 * Try its neighbour
+                 * Try its neighbor
                  */
                 if (isColor(graph, m, u + 1, colors))
                     return true;
@@ -307,7 +307,7 @@ class GraphColoringProblem {
         for (int v = 0; v < graph.length; v++) {
 
             /**
-             * if there is edge between these two vertex and then the color of this vertex can't be same as neighbour
+             * if there is edge between these two vertexes and then the color of this vertex can't be the same as neighbor
              */
             if (graph[u][v] == 1 && colors[v] == color)
                 return false;
@@ -322,7 +322,7 @@ class GraphColoringProblem {
 /**
  * https://www.geeksforgeeks.org/bipartite-graph/
  * <p>
- * This problem can be solve using graph coloring problem.
+ * This problem can be solved using a graph coloring problem.
  * In Graph coloring problem, we need to find that how many different color we require to provide a color to each vertex such that no two neighbour has same color.
  * <p>
  * <p>
@@ -364,7 +364,7 @@ class BipartiteGraphUsingGraphColoringApproach {
         }
 
         /**
-         * Since each vertex can be have color 1 or 0. Check does this possible.
+         * Since each vertex can be having color 1 or 0. Check does this possible.
          *
          * @param graph
          * @param start
@@ -403,16 +403,16 @@ class BipartiteGraphUsingGraphColoringApproach {
                     if (graph[source][dest] == 1) {
 
                         /**
-                         * does this vertex hasn't been chosen earlier?
+                         * does this vertex haven't been chosen earlier?
                          */
                         if (color[dest] == -1) {
 
-                            //Since the current vertex (source) is already been colored, then its neighbour should be colored different color
+                            //Since the current vertex (source) is already colored, then its neighbor should be colored different color
                             color[dest] = 1 - color[source];
 
                             queue.offer(dest);
 
-                        } else if (color[dest] == color[source]) //if source and des are both part of same color, not possible then
+                        } else if (color[dest] == color[source]) //if a source and des are both part of same color, not possible then
                             return false;
 
                     }
@@ -479,7 +479,7 @@ class BipartiteGraphUsingGraphColoringApproach {
                     if (color[v] == -1) //process it with different color from source(assigned)
                         isBipartiteGraph &= isBipartiteGraph(graph, v, 1 - assigned, color);
 
-                    //all its neighbour should be on different sets then
+                    //all its neighbor should be on different sets then
                     if (color[v] != -1 && color[v] != 1 - assigned)
                         return false;
 

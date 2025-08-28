@@ -52,8 +52,7 @@ import java.util.Queue;
  * Tags
  * -----
  * @medium
- * @LeetCodeLockedProblem
- * @PremimumQuestion
+ * @PremiumQuestion
  * @Array
  * @Depth-FirstSearch
  * @Breadth-FirstSearch

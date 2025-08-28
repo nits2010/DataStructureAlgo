@@ -61,7 +61,7 @@ import java.util.Objects;
  * @Tree
  * @DepthFirstSearch
  * @LeetCodeLockedProblem
- * @PremimumQuestion <p>
+ * @PremiumQuestion <p>
  * <p>
  * Company Tags
  * -----

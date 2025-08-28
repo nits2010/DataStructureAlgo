@@ -50,8 +50,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @Design
  * @HashTable
  * @TwoPointers
- * @PremimumQuestion
- * @LockedProblem <p><p>
+ * @PremiumQuestion
+ * 
  * Company Tags
  * -----
  * @Facebook

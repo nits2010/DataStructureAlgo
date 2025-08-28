@@ -42,8 +42,8 @@ import java.util.*;
  * @BinarySearch
  * @DynamicProgramming
  * @Heap(PriorityQueue)
- * @PremimumQuestion
- * @LeetCodeLockedProblem <p><p>
+ * @PremiumQuestion
+ * 
  * Company Tags
  * -----
  * @Google <p>

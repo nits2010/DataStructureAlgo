@@ -72,7 +72,7 @@ import java.util.Set;
  * @Tree
  * @Depth-FirstSearch
  * @BinaryTree
- * @PremimumQuestion
+ * @PremiumQuestion
  * @LeetCodeLockedProblem
  *
  *
