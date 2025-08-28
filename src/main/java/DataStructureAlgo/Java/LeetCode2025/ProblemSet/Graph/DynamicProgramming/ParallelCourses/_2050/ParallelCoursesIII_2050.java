@@ -76,8 +76,7 @@ import java.util.*;
  * Company Tags
  * -----
  * @Pinterest
- * @Uber
- * <p><p>
+ * @Uber <p><p>
  * @Editorial https://leetcode.com/problems/parallel-courses-iii/solutions/5836655/in-depth-intuition-derivation-recursive-top-down-bottom-up-bfs-logical-explanation
  */
 public class ParallelCoursesIII_2050 {
@@ -103,20 +102,28 @@ public class ParallelCoursesIII_2050 {
         SolutionRecursive solutionRecursive = new SolutionRecursive();
         output = solutionRecursive.minimumTime(n, relations, time);
         pass = output == expected;
-        System.out.println(" Recursive : "+output + " Result : " + (pass ? "PASS" : "Failed"));
+        System.out.println(" Recursive : " + output + " Result : " + (pass ? "PASS" : "Failed"));
         finalPass &= pass;
 
         SolutionRecursiveTopDownMemoization solutionRecursiveTopDownMemoization = new SolutionRecursiveTopDownMemoization();
         output = solutionRecursiveTopDownMemoization.minimumTime(n, relations, time);
         pass = output == expected;
-        System.out.println(" Recursive Top Down : "+output + " Result : " + (pass ? "PASS" : "Failed"));
+        System.out.println(" Recursive Top Down : " + output + " Result : " + (pass ? "PASS" : "Failed"));
         finalPass &= pass;
 
-        SolutionRecursiveBottomUpKhans  solutionRecursiveBottomUpKhans = new SolutionRecursiveBottomUpKhans();
+        SolutionRecursiveBottomUpKhans solutionRecursiveBottomUpKhans = new SolutionRecursiveBottomUpKhans();
         output = solutionRecursiveBottomUpKhans.minimumTime(n, relations, time);
         pass = output == expected;
-        System.out.println(" Khans : "+output + " Result : " + (pass ? "PASS" : "Failed"));
+        System.out.println(" Khans : " + output + " Result : " + (pass ? "PASS" : "Failed"));
         finalPass &= pass;
+
+        SolutionKhansAlgo solutionKhansAlgo = new SolutionKhansAlgo();
+        output = solutionKhansAlgo.minimumTime(n, relations, time);
+        pass = output == expected;
+        System.out.println(" Khans : " + output + " Result : " + (pass ? "PASS" : "Failed"));
+        finalPass &= pass;
+
+
 
         return finalPass;
     }
@@ -126,9 +133,9 @@ public class ParallelCoursesIII_2050 {
      * This problem is similar to {@link ParallelCoursesI_1136} The only difference is that, in this problem, we need to find
      * 1. minimum time, as time duration of each course is given
      * 2. and we are not worry about the semester it would take to complete.
-     *
+     * <p>
      * Now, because we need to care about the time, we need to consider this as a base parameter while choosing an available course and the duration it will take to complete, which is nothing but the maximum one.
-     *
+     * <p>
      * The most intuitive way would be greedy only,
      * TLE
      */
@@ -137,20 +144,20 @@ public class ParallelCoursesIII_2050 {
 
         public int minimumTime(int n, int[][] relations, int[] time) {
 
-            if(n == 0)
+            if (n == 0)
                 return 0;
 
             //if there is no relation, then we can take all course at once and the max time would be our minimum time required
-            if(relations == null || relations.length == 0)
+            if (relations == null || relations.length == 0)
                 return Arrays.stream(time).max().getAsInt();
 
             //build the 0 based graph
             final List<List<Integer>> adjList = graph(n, relations);
-            int minTime = 0 ;
+            int minTime = 0;
 
             //visit all courses,
-            for (int i=0; i<n; i++)
-               minTime = Math.max(minTime, dfs(n, adjList, time, i));
+            for (int i = 0; i < n; i++)
+                minTime = Math.max(minTime, dfs(n, adjList, time, i));
 
 
             return minTime;
@@ -163,24 +170,24 @@ public class ParallelCoursesIII_2050 {
             int maxCourseTime = time[course];
 
             //all the child course
-            for(int nextCourse : adjList.get(course)) {
+            for (int nextCourse : adjList.get(course)) {
                 //if there is a child course, then compute the time of it and then compute the time for current
                 maxCourseTime = Math.max(maxCourseTime,
-                       time[course] +  dfs(n, adjList, time, nextCourse)  );
+                        time[course] + dfs(n, adjList, time, nextCourse));
             }
 
             return maxCourseTime;
 
         }
 
-        private List<List<Integer>> graph(int n, int[][]relations) {
+        private List<List<Integer>> graph(int n, int[][] relations) {
             List<List<Integer>> adjList = new ArrayList<>();
-            for (int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
                 adjList.add(new ArrayList<>());
 
             for (int[] relation : relations) {
-                int prevCourse = relation[0] - 1 ;
-                int nextCourse = relation[1] - 1 ;
+                int prevCourse = relation[0] - 1;
+                int nextCourse = relation[1] - 1;
                 adjList.get(prevCourse).add(nextCourse);
             }
             return adjList;
@@ -192,21 +199,21 @@ public class ParallelCoursesIII_2050 {
 
         public int minimumTime(int n, int[][] relations, int[] time) {
 
-            if(n == 0)
+            if (n == 0)
                 return 0;
 
             //if there is no relation, then we can take all course at once and the max time would be our minimum time required
-            if(relations == null || relations.length == 0)
+            if (relations == null || relations.length == 0)
                 return Arrays.stream(time).max().getAsInt();
 
             final List<List<Integer>> adjList = graph(n, relations);
             //cache
-            int []wtTime = new int[n];
+            int[] wtTime = new int[n];
 
-            int minTime = 0 ;
+            int minTime = 0;
 
             //visit all courses,
-            for (int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
                 //if there is a child course, then compute the time of it and then compute the time for current
                 minTime = Math.max(minTime, dfs(n, adjList, time, i, wtTime));
 
@@ -214,32 +221,32 @@ public class ParallelCoursesIII_2050 {
             return minTime;
         }
 
-        private int dfs(int n, List<List<Integer>> adjList, int[] time, int course, int []wtTime) {
+        private int dfs(int n, List<List<Integer>> adjList, int[] time, int course, int[] wtTime) {
             //if already computed, then return
-            if(wtTime[course]!=0)
+            if (wtTime[course] != 0)
                 return wtTime[course];
 
             //the current course time
             int maxCourseTime = time[course];
 
             //all the child course
-            for(int nextCourse : adjList.get(course)) {
+            for (int nextCourse : adjList.get(course)) {
                 maxCourseTime = Math.max(maxCourseTime,
-                        time[course] +  dfs(n, adjList, time, nextCourse, wtTime)  );
+                        time[course] + dfs(n, adjList, time, nextCourse, wtTime));
             }
 
             return wtTime[course] = maxCourseTime;
 
         }
 
-        private List<List<Integer>> graph(int n, int[][]relations) {
+        private List<List<Integer>> graph(int n, int[][] relations) {
             List<List<Integer>> adjList = new ArrayList<>();
-            for (int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
                 adjList.add(new ArrayList<>());
 
             for (int[] relation : relations) {
-                int prevCourse = relation[0] - 1 ;
-                int nextCourse = relation[1] - 1 ;
+                int prevCourse = relation[0] - 1;
+                int nextCourse = relation[1] - 1;
                 adjList.get(prevCourse).add(nextCourse);
             }
             return adjList;
@@ -252,24 +259,24 @@ public class ParallelCoursesIII_2050 {
 
         public int minimumTime(int n, int[][] relations, int[] time) {
 
-            if(n == 0)
+            if (n == 0)
                 return 0;
 
             //if there is no relation, then we can take all course at once and the max time would be our minimum time required
-            if(relations == null || relations.length == 0)
+            if (relations == null || relations.length == 0)
                 return Arrays.stream(time).max().getAsInt();
 
             //hold inDegree of nodes
-            int []inDegree = new int[n];
+            int[] inDegree = new int[n];
             final List<List<Integer>> adjList = graph(n, relations, inDegree);
 
             //cache
-            int []wtTime =  Arrays.copyOf(time, n);
+            int[] wtTime = Arrays.copyOf(time, n);
 
             //take all the available courses
             Queue<Integer> queue = new LinkedList<>();
-            for (int i=0; i<n; i++){
-                if(inDegree[i] == 0)
+            for (int i = 0; i < n; i++) {
+                if (inDegree[i] == 0)
                     queue.offer(i);
             }
 
@@ -277,11 +284,11 @@ public class ParallelCoursesIII_2050 {
             while (!queue.isEmpty()) {
 
                 //visit all courses, which has 0 indegree
-                for (int availableCourse=0; availableCourse<queue.size(); availableCourse++) {
+                for (int availableCourse = 0; availableCourse < queue.size(); availableCourse++) {
                     int currentCourse = queue.poll();
 
                     //visit all the next course which is dependent on the current course
-                    for(int nextCourse : adjList.get(currentCourse)) {
+                    for (int nextCourse : adjList.get(currentCourse)) {
 
                         //just like dfs,
                         // the total time for the next course is nothing but the maximum time of its own so far,
@@ -289,7 +296,7 @@ public class ParallelCoursesIII_2050 {
                         wtTime[nextCourse] = Math.max(wtTime[nextCourse], wtTime[currentCourse] + time[nextCourse]);
 
                         //reduce in-degree and enqueue if needed.
-                        if(--inDegree[nextCourse] == 0)
+                        if (--inDegree[nextCourse] == 0)
                             queue.offer(nextCourse);
 
                     }
@@ -301,15 +308,14 @@ public class ParallelCoursesIII_2050 {
         }
 
 
-
-        private List<List<Integer>> graph(int n, int[][]relations,  int []inDegree) {
+        private List<List<Integer>> graph(int n, int[][] relations, int[] inDegree) {
             List<List<Integer>> adjList = new ArrayList<>();
-            for (int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
                 adjList.add(new ArrayList<>());
 
             for (int[] relation : relations) {
-                int prevCourse = relation[0] - 1 ;
-                int nextCourse = relation[1] - 1 ;
+                int prevCourse = relation[0] - 1;
+                int nextCourse = relation[1] - 1;
                 adjList.get(prevCourse).add(nextCourse);
                 inDegree[nextCourse]++;
             }
@@ -317,4 +323,49 @@ public class ParallelCoursesIII_2050 {
         }
     }
 
+    static class SolutionKhansAlgo {
+        public int minimumTime(int n, int[][] relations, int[] time) {
+            if (n == 0)
+                return 0;
+
+            List<List<Integer>> adjList = new ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                adjList.add(new ArrayList<>());
+            }
+
+            int[] inDegree = new int[n];
+
+            for (int[] rel : relations) {
+                int u = rel[0] - 1;
+                int v = rel[1] - 1;
+
+                adjList.get(u).add(v);
+                inDegree[v]++;
+            }
+
+            int[] finishTIme = new int[n];
+            Queue<Integer> queue = new LinkedList<>();
+
+            for (int i = 0; i < n; i++) {
+                if (inDegree[i] == 0) {
+                    finishTIme[i] = time[i];
+                    queue.offer(i);
+                }
+            }
+
+            while (!queue.isEmpty()) {
+                int course = queue.poll();
+
+                for (int next : adjList.get(course)) {
+                    finishTIme[next] = Math.max(finishTIme[next], finishTIme[course] + time[next]);
+                    if (--inDegree[next] == 0)
+                        queue.offer(next);
+                }
+            }
+
+            return Arrays.stream(finishTIme).max().getAsInt();
+
+
+        }
+    }
 }
