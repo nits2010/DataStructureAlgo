@@ -1,81 +1,74 @@
-# DS & Algo Resources
-- [Leetcode all solutions](https://github.com/doocs/leetcode/tree/main/solutionSlidingWindow)
-## DSA Pattern
+# Data Structures & Algorithms Resources
 
---------------------------------------------------------------------------
-[DSA_Pattern](https://github.com/nits2010/DataStructureAlgo/tree/master/DSA_Pattern)
+## 📚 Core Resources
+- [DSA Patterns](https://github.com/nits2010/DataStructureAlgo/tree/master/DSA_Pattern) - Common problem-solving patterns
+- [Problem List](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md) - Curated list of practice problems
 
-## Problem list
-[Problems.md](https://github.com/nits2010/DataStructureAlgo/blob/master/Problems.md)
+## 🎯 Must-Solve Problem Lists
+### Popular Curated Lists
+- **Blind 75**
+  - [LeetCode List](https://leetcode.com/list/oizxjoit)
+  - [Discussion](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
+  - [Video Solutions](https://takeuforward.org/interviews/blind-75-leetcode-problems-detailed-video-solutions)
+- [NeetCode 150](https://leetcode.com/list/rr2ss0g5) - Top interview questions
+- [Grind 75](https://leetcode.com/list/rab78cw1) - 6-week study plan
+- [Grind 169](https://leetcode.com/list/rabvlt31) - Extended problems
+- [SQL 45](https://leetcode.com/list/o2qifkts) - SQL interview questions
+- [75HARD Challenge](https://github.com/strawhatYashdeepRathi/75HARD) - Coding challenge
 
-
-
---------------------------------------------------------------------------
-
-# DS Resources 
-
-## GitHub Repositories
-- [Leetcode all solution](https://github.com/nits2010/leetcode-all-problem)
-- [Kdn251 - Interviews](https://github.com/kdn251/interviews)
-- [Sarvex - Interview Preparation](https://github.com/sarvex/interview-1)
-- [RodneyShag - HackerRank Solutions](https://github.com/RodneyShag/HackerRank_solutions)
-- [RodneyShag - LeetCode Solutions](https://github.com/RodneyShag/LeetCode_solutions)
-- [RodneyShag - Interview Solutions](https://github.com/RodneyShag/Interview_solutions)
-- [Rutujar - HackerRank Solutions](https://github.com/rutujar/HackerRank-solutions)
-- [Nanofaroque - LeetCode Solutions](https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode)
-
-## Company-Specific Questions (Important)
-
-- [LeetCode Questions by Company](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
-- [LeetCode Company-Wise Problems 2022](https://github.com/hxu296/leetcode-company-wise-problems-2022)
+### Company-Specific Questions
+- [LeetCode Company-Wise](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
+- [LeetCode Company Problems 2022](https://github.com/hxu296/leetcode-company-wise-problems-2022)
 - [LeetTracer Screener](https://leetracer.com/screener)
+- [Meta Question Bank](https://docs.google.com/spreadsheets/d/1jpve7A2R6pjoyZd5povPdZ7lATCPnoSgtNgFZ-zmtLo/edit)
 
-## Top Question Lists (Important)
-
-- [Meta Question](https://docs.google.com/spreadsheets/d/1jpve7A2R6pjoyZd5povPdZ7lATCPnoSgtNgFZ-zmtLo/edit?gid=2103329868#gid=2103329868)
-- [450 Top Quality Questions (Google Drive)](https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view)
-- [Top 100 Questions](https://topswe.com/)
-- [Top 174 Company-Wise Patterns](https://seanprashad.com/leetcode-patterns/)
-- [TakeYouForward's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
-- [Naukri.com Code360 Problems](https://www.naukri.com/code360/problems)
-
-## Here are the leetcode lists 
-
-- [Blind 75](https://leetcode.com/list/oizxjoit)
-  - [list](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
-  - [Blind 75 Solutions](https://takeuforward.org/interviews/blind-75-leetcode-problems-detailed-video-solutions)
-- [Leetcode 75 hard](https://leetcode.com/studyplan/leetcode-75/)
-- [Grind 169](https://leetcode.com/list/rabvlt31)
-- [Grind 75](https://leetcode.com/list/rab78cw1)
-- [Neetcode 150](https://leetcode.com/list/rr2ss0g5)
-- [SQL 45](https://leetcode.com/list/o2qifkts)
-- [75HARD](https://github.com/strawhatYashdeepRathi/75HARD)
-
-## LeetCode Premium Questions Solutions
-- [LeetCode Solutions](https://github.com/doocs/leetcode/tree/main/solutionBottomUp)
-- [List of questions](https://github.com/doocs/leetcode?tab=readme-ov-file)
-- [LeetCode.ca - All Problems](https://leetcode.ca/all/problems.html)
-- [Tony Cao's Gitbook](https://tonycao.gitbooks.io/leetcode-locked)
-- [Lightwindy Solutions](https://www.cnblogs.com/lightwindy/p/8476874.html)
-- [Kenny Zhuang's Gitbook](https://kennyzhuang.gitbooks.io/leetcode-lock/content/index.html)
-- 
-- [Walkccc - LeetCode Problems](https://walkccc.me/LeetCode/problems/3/)
-- [LeetCode The Hard Way - Heap Tutorial](https://leetcodethehardway.com/tutorials/basic-topics/heap)
-
-## LeetCode Topic wise questions and solutions
-- [Wento-shap gitbook](https://wento-shap.gitbook.io/leetcode)
-
-## LeetCode Courses
-
+## 📖 Learning Resources
+### Comprehensive Courses
+- [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/)
 - [Dynamic Programming Grandmaster](https://docs.google.com/document/d/1eMs82R_mXtX5QPEWOMwR_KJRPfEfQzjPQTnKxMQXqGc/edit)
-- [LeetCode4FLAG](https://github.com/Charmve/LeetCode4FLAG)
+- [LeetCode4FLAG](https://github.com/Charmve/LeetCode4FLAG) - For FAANG prep
 
-## Lintcode Solutions
+### Topic-wise Learning
+- [LeetCode The Hard Way](https://leetcodethehardway.com/)
+  - [Heap Tutorial](https://leetcodethehardway.com/tutorials/basic-topics/heap)
+  - [Solutions](https://leetcodethehardway.com/solutions/category/0000---0099)
+- [Wento-shap GitBook](https://wento-shap.gitbook.io/leetcode) - Topic-wise questions
 
-- [Awangdev - LintCode Solutions](https://github.com/awangdev/LintCode)
-- [LeetCode The Hard Way](https://leetcodethehardway.com/solutions/category/0000---0099)
+## 💻 Code Repositories
+### LeetCode Solutions
+- [Doocs LeetCode](https://github.com/doocs/leetcode)
+  - [All Solutions](https://github.com/doocs/leetcode/tree/main/solutionSlidingWindow)
+  - [Question List](https://github.com/doocs/leetcode?tab=readme-ov-file)
+- [RodneyShag's Solutions](https://github.com/RodneyShag/LeetCode_solutions)
+- [NanoFaroque's Solutions](https://github.com/nanofaroque/Life-coding/tree/master/src/leetcode)
 
-## Algorithm Problem & Solution Gitbook
+### Interview Prep Repos
+- [kdn251/interviews](https://github.com/kdn251/interviews)
+- [sarvex/interview-1](https://github.com/sarvex/interview-1)
+- [RodneyShag/Interview_solutions](https://github.com/RodneyShag/Interview_solutions)
 
-- [Ondrej Kvasnovsky's Gitbook](https://ondrej-kvasnovsky.gitbooks.io/algorithms/)
+## 🛠 Practice Platforms
+- [LeetCode](https://leetcode.com/)
+  - [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/)
+  - [All Problems](https://leetcode.ca/all/problems.html)
+- [Naukri Code360](https://www.naukri.com/code360/problems)
+- [LintCode Solutions](https://github.com/awangdev/LintCode)
+
+## 📚 Additional Resources
+- [Tony Cao's GitBook](https://tonycao.gitbooks.io/leetcode-locked)
+- [Kenny Zhuang's GitBook](https://kennyzhuang.gitbooks.io/leetcode-lock/content/index.html)
+- [Ondrej Kvasnovsky's Algorithms](https://ondrej-kvasnovsky.gitbooks.io/algorithms/)
+- [Walkccc's Solutions](https://walkccc.me/LeetCode/problems/3/)
+
+## 🔍 Search Tips
+- Use `Ctrl+F` to quickly find specific topics
+- Check the [DSA Patterns](https://github.com/nits2010/DataStructureAlgo/tree/master/DSA_Pattern) section for categorized problems
+- For company-specific prep, use the Company-Specific Questions section
+- The Core Resources section contains essential starting points
+
+## 🔄 Keep Updated
+- Star the repository to get updates
+- Check back regularly for new resources and updates
+
+*Last Updated: August 2025*
 
