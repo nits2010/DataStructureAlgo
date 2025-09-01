@@ -84,7 +84,8 @@ public class SurroundedRegions_130 {
 
         test &= test(new char[][]{{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}},
                 new char[][]{{'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'O', 'X', 'X'}});
-
+        test &= test(new char[][]{{'X', 'O', 'O', 'X', 'O'}, {'O', 'X', 'O', 'O', 'X'}, {'X', 'O', 'X', 'O', 'X'}, {'X', 'X', 'X', 'X', 'X'}},
+                new char[][]{{'X', 'O', 'O', 'X', 'O'}, {'O', 'X', 'O', 'O', 'X'}, {'X', 'X', 'X', 'O', 'X'}, {'X', 'X', 'X', 'X', 'X'}});
         test &= test(new char[][]{{'X'}}, new char[][]{{'X'}});
         CommonMethods.printAllTestOutCome(test);
     }
@@ -115,7 +116,7 @@ public class SurroundedRegions_130 {
      * However, all the rest 'O' would be surrounded with X if they form a connected region.
      * <p>
      * Approach: DFS
-     * 1. Save all the boundary cells and its connected cells, which can't be surrounded, replace those 'O' with some randome value.
+     * 1. Save all the boundary cells and its connected cells, which can't be surrounded, replace those 'O' with some random value.
      * 2. Post that, all the 'O' cells in the matrix can be surrounded and can be replaced with 'X'
      * 3. Recover the boundary cells.
      * <p>
@@ -211,7 +212,7 @@ public class SurroundedRegions_130 {
      * However, all the rest 'O' would be surrounded with X if they form a connected region.
      * <p>
      * Approach: DFS
-     * 1. Save all the boundary cells and its connected cells, which can't be surrounded, replace those 'O' with some randome value.
+     * 1. Save all the boundary cells and its connected cells, which can't be surrounded, replace those 'O' with some random value.
      * 2. Post that, all the 'O' cells in the matrix can be surrounded and can be replaced with 'X'
      * 3. Recover the boundary cells.
      * <p>
