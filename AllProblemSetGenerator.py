@@ -36,6 +36,14 @@ for root, dirs, files in os.walk(base_path):
         dirs.remove("helpers")
     if "venv" in dirs:
         dirs.remove("venv")
+    if "target" in dirs:
+        dirs.remove("target")
+    if "build" in dirs:
+        dirs.remove("build")
+    if "out" in dirs:
+        dirs.remove("out")
+    if "node_modules" in dirs:
+        dirs.remove("node_modules")
 
     for file in files:
         if file.endswith(".java") or file.endswith(".py"):  # Filter for Java files
