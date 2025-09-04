@@ -176,19 +176,6 @@ public class ValidArrangementOfPairs_2097 {
 
         }
 
-        private int[][] getPairs(List<Integer> eulerTour) {
-            //reverse the tour
-            Collections.reverse(eulerTour);
-
-            int[][] ans = new int[eulerTour.size() - 1][2];
-            for (int i = 0; i < eulerTour.size() - 1; i++) {
-                ans[i][0] = eulerTour.get(i);
-                ans[i][1] = eulerTour.get(i + 1);
-            }
-
-            return ans;
-        }
-
         private int[][] getPairs2(List<Integer> eulerTour) {
             //reverse the tour
             int[][] ans = new int[eulerTour.size() - 1][2];
