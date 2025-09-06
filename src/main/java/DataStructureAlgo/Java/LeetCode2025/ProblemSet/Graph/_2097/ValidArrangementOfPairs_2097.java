@@ -97,7 +97,7 @@ public class ValidArrangementOfPairs_2097 {
         int[][] output = null;
         boolean pass, finalPass = true;
 
-        Solution_EulerianCircuit solutionEulerianCircuit = new Solution_EulerianCircuit();
+            Solution_EulerianCircuit solutionEulerianCircuit = new Solution_EulerianCircuit();
         output = solutionEulerianCircuit.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
