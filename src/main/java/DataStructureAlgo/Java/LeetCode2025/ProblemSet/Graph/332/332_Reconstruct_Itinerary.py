@@ -88,7 +88,7 @@ class Solution:
 
         # dfs the graph
         def dfs(current):
-            # Visit all the connecting flights, assume [jsk, kul] [ jsk bur], if we go bur we can go anywhere else but jsk->kul is left
+            # Visit all the connecting flights, assume [jsk, kul] [ jsk bur], if we go but we can go anywhere else but jsk->kul is left
             while graph[current]:
                 dfs(heapq.heappop(graph[current]))
 
