@@ -1,4 +1,8 @@
 """
+
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
+https://neetcode.io/problems/longest-substring-with-at-most-two-distinct-characters?list=allNC
+
 You are given a string s, return the length of the longest substring that contains at most two distinct characters.
 
 Note: A substring is a contiguous non-empty sequence of characters within a string.
