@@ -95,11 +95,7 @@ class FreqStack_Dict:
 
     def push(self, val: int) -> None:
         self.freq[val] +=1 # increase the frequency of the element
-        
-        # get most frequent element, initialize as needed
-        if self.max_freq < self.freq[val] : 
-            self.max_freq = self.freq[val]
-
+        self.max_freq = max(self.max_freq, self.freq[val])  # get most frequent element, initialize as needed
         self.stack[self.freq[val]].append(val)
 
 
