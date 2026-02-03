@@ -97,7 +97,7 @@ public class ValidArrangementOfPairs_2097 {
         int[][] output = null;
         boolean pass, finalPass = true;
 
-        Solution_EulerianCircuit solutionEulerianCircuit = new Solution_EulerianCircuit();
+            Solution_EulerianCircuit solutionEulerianCircuit = new Solution_EulerianCircuit();
         output = solutionEulerianCircuit.validArrangement(grid);
         pass = CommonMethods.compareResultOutCome(output, expected, true);
         finalPass &= pass;
@@ -174,19 +174,6 @@ public class ValidArrangementOfPairs_2097 {
 
             return getPairs2(eulerTour);
 
-        }
-
-        private int[][] getPairs(List<Integer> eulerTour) {
-            //reverse the tour
-            Collections.reverse(eulerTour);
-
-            int[][] ans = new int[eulerTour.size() - 1][2];
-            for (int i = 0; i < eulerTour.size() - 1; i++) {
-                ans[i][0] = eulerTour.get(i);
-                ans[i][1] = eulerTour.get(i + 1);
-            }
-
-            return ans;
         }
 
         private int[][] getPairs2(List<Integer> eulerTour) {

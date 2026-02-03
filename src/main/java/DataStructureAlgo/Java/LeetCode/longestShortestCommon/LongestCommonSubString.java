@@ -38,7 +38,7 @@ public class LongestCommonSubString {
      * <p>
      * *     lcs[i][j] = 0 if i=0 or j=0 since if either of one string is empty then lcs is not possible
      * <p>
-     * Since we can observe that any any moment we are only bother about above row only;
+     * Since we can observe that any moment we are only bother about above row only;
      * we can translate it to below optimized solution
      *
      * @param word1

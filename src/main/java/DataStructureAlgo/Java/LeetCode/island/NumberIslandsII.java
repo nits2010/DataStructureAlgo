@@ -21,7 +21,7 @@ import java.util.*;
  * Output: [1,1,2,3]
  * Explanation:
  * <p>
- * Initially, the 2d grid grid is filled with water. (Assume 0 represents water and 1 represents land).
+ * Initially, the 2d grid is filled with water. (Assume 0 represents water and 1 represents land).
  * <p>
  * 0 0 0
  * 0 0 0
@@ -74,11 +74,11 @@ public class NumberIslandsII {
 }
 
 /**
- * this is Simple, it utilize the Island counter {@link NumberIslands} as sub-routine
+ * this is Simple, it utilizes the Island counter {@link NumberIslands} as sub-routine
  * Algo:
- * 1. Create a empty grid
+ * 1. Create an empty grid
  * 2. Iterate over all position of land
- * 3. For each position, create a land and count how many island are there because of this land {either this land create a new island or it is connected to old island} [use island counter]
+ * 3. For each position, create a land and count how many islands are there because of this land {either this land creates a new island or it is connected to old island} [use island counter]
  * <p>
  * Complexity:
  * k-> size of position

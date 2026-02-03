@@ -1,3 +1,9 @@
+
+from collections import deque
+from typing import List, Optional, Dict, Any
+
+from helpers.common_methods import CommonMethods
+
 class Solution_BFS:
     def is_bipartite(self, graph: List[List[int]], node: int, color: int, colors: list, queue) -> bool:
         colors[node] = 1
@@ -12,18 +18,18 @@ class Solution_BFS:
                     colors[v] = 1 - colors[u]
                     queue.append(v)
                 elif colors[v] == colors[u]:
-                    return False  # if neightbours has same color as 'u'
+                    return False  # if neighbours has same color as 'u'
         return True
 
     def isBipartite(self, graph: List[List[int]]) -> bool:
         """
         A graph is called bipartite graph, if we can divide the vertices of the graph
-        in two different sets/color such that no neighbour share the same color.
+        in two different sets/color such that no neighbor share the same color.
 
-        To find so, we can start doing dfs from a vertex and assign a number, and then visits its
-        neighbhour, since neighbhour should go in different set, we will assign a different color to it.
+        To find so, we can start doing dfs from a vertex and assign a number, and then visit its
+        neighbor, since neighbor should go in a different set, we will assign a different color to it.
 
-        At any moment, a vertex has a color found and has a same color, then its not bipartite graph
+        At any moment, a vertex has a color found and has a same color, then is not a bipartite graph
 
         """
         vertex = len(graph)
@@ -58,12 +64,12 @@ class Solution_DFS:
     def isBipartite(self, graph: List[List[int]]) -> bool:
         """
         A graph is called bipartite graph, if we can divide the vertices of the graph
-        in two different sets/color such that no neighbour share the same color.
+        in two different sets/color such that no neighbor share the same color.
 
-        To find so, we can start doing dfs from a vertex and assign a number, and then visits its
-        neighbhour, since neighbhour should go in different set, we will assign a different color to it.
+        To find so, we can start doing dfs from a vertex and assign a number, and then visit its
+        neighbor, since neighbor should go in a different set, we will assign a different color to it.
 
-        At any moment, a vertex has a color found and has a same color, then its not bipartite graph
+        At any moment, a vertex has a color found and has a same color, then is not a bipartite graph
 
         """
         vertex = len(graph)
