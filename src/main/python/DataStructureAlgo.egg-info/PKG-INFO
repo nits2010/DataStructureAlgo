@@ -1,6 +1,9 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: DataStructureAlgo
 Version: 0.1.0
 Summary: Data Structures and Algorithms implementations
 Author: Nitin Gupta
 Requires-Python: >=3.6
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary

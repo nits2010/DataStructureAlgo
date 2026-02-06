@@ -4,7 +4,3 @@ src/main/python/DataStructureAlgo.egg-info/PKG-INFO
 src/main/python/DataStructureAlgo.egg-info/SOURCES.txt
 src/main/python/DataStructureAlgo.egg-info/dependency_links.txt
 src/main/python/DataStructureAlgo.egg-info/top_level.txt
-src/main/python/DataStructureAlgo.egg-info/PKG-INFO
-src/main/python/DataStructureAlgo.egg-info/SOURCES.txt
-src/main/python/DataStructureAlgo.egg-info/dependency_links.txt
-src/main/python/DataStructureAlgo.egg-info/top_level.txt
