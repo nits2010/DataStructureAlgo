@@ -24,7 +24,7 @@ class Solution:
         return max_area*max_area
 
 
-class Solution_1:
+class Solution_InputAsInt:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         row, col = len(matrix), len(matrix[0])
         max_area = 0
