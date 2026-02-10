@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.StockSpan._901;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks._901;
 
 import java.util.Arrays;
 import java.util.Stack;
