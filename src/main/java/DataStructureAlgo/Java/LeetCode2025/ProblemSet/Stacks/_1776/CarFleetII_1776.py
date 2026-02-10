@@ -91,6 +91,7 @@ class Solution:
                         result[i] = time
                         break
                     else:
+                        # Remove cars it would collide with after they’ve already merged
                         stack.pop()
 
             stack.append(i)
