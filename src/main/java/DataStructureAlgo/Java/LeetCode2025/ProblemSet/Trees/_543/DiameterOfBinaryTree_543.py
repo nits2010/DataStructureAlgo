@@ -69,6 +69,11 @@ class Solution:
         self.width = None
 
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        """
+        Diameter of binary tree is total width of the binary tree. 
+        The width is define by the left tree height + right tree height (height == depth)
+        Height / Depth of tree is defiend by max of left,right height + 1 
+        """
         if not root:
             return 0
 
