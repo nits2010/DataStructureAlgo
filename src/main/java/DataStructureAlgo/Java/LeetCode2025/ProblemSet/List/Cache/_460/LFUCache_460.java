@@ -257,8 +257,8 @@ class LFUCacheUsingHeap {
             //item present, we need to return its value but as well update it frequency
 
             //remove them from queue first. we can't simply update its frequency as doing that won't update heap
-            lfuQueue.remove(node);
-            cache.remove(node.key);
+            lfuQueue.remove(node); // O(n) operation 
+            cache.remove(node.key); // O(1) operation 
 
             //add back to cache
             CacheNode newNode = new CacheNode(node.key, node.value, node.frequency + 1, currentTimeStamp++);
@@ -282,28 +282,28 @@ class LFUCacheUsingHeap {
                 if (cache.size() == capacity) {
 
                     //remove one element and insert new element based on frequency
-                    CacheNode item = lfuQueue.poll();
+                    CacheNode item = lfuQueue.poll(); // O(logn) operation 
                     if (item != null) {
-                        cache.remove(item.key);
+                        cache.remove(item.key); // O(1) operation 
                     }
 
                 }
 
                 //add new node
                 CacheNode item = new CacheNode(key, value, 1, currentTimeStamp++);
-                lfuQueue.offer(item);
-                cache.put(key, item);
+                lfuQueue.offer(item);  // O(logn) operation 
+                cache.put(key, item); // O(1) operation 
 
             } else {
 
                 //we need to update its frequency
                 //remove them from queue first. we can't simply update its frequency as doing that won't update heap
-                lfuQueue.remove(node);
+                lfuQueue.remove(node); // O(n) operation 
                 cache.remove(node.key);
 
                 //add back to cache
                 CacheNode newNode = new CacheNode(key, value, node.frequency + 1, currentTimeStamp++);
-                lfuQueue.add(newNode);
+                lfuQueue.add(newNode); // O(logn) operation 
                 cache.put(newNode.key, newNode);
             }
 
@@ -313,6 +313,11 @@ class LFUCacheUsingHeap {
 }
 
 
+/**
+ * T/S :
+ * get -> O(log(n))
+ * put -> O(log(n))
+ */
 class LFUCacheUsingTreeMap {
     static class LFUCache {
 

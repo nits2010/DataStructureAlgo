@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.__654;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._654;
 
 import DataStructureAlgo.Java.helpers.*;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
