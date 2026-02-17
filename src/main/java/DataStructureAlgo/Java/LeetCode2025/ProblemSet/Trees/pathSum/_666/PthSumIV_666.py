@@ -28,8 +28,55 @@ from typing import Dict, List, Tuple
 
 from helpers.common_methods import CommonMethods
 
+class Solution_V2: # simple clean
+    def pathSum(self, nums: List[int]) -> int:
+        if not nums :
+            return 0
+    
+        if len(nums) == 1:
+            return nums[0] % 10
+    
+        # create a tree type cache structure
+        tree = {} # { (depth, pos) : value}
 
-class Solution:
+        for num in nums:
+            depth = num // 100 
+            pos = (num // 10 ) % 10
+            value = num % 10
+
+            tree[(depth-1, pos-1)] = value # depth-1, pos-1 to mimic index being start 0 otherwise with 1 index, left would be at 2*i - 1 ( 0 index 2*i ) and right at 2*i ( 0 index; 2*i + 1)
+        
+        total_sum = 0
+    
+        def dfs(depth, position, curr_sum):
+            nonlocal total_sum
+
+            # not root
+            if (depth, position) not in tree:
+                return 
+            
+            root = tree[(depth, position)]
+            curr_sum += root
+
+            left = (depth +1 , 2*position)
+            right = (depth +1 , 2*position + 1)
+
+            # leaf node
+            if left not in tree and right not in tree:
+                total_sum += curr_sum
+                return 
+
+
+            # left and right
+            if left in tree:
+                dfs(depth +1 , 2*position, curr_sum)
+            if right in tree:
+                dfs(depth +1 , 2*position + 1, curr_sum)
+    
+        dfs(0,0,0)
+        return total_sum
+
+class Solution_V1:
     def __init__(self):
         self.all_path_sum = 0
         self.cache : Dict[Tuple[int,int], int] = {}
@@ -51,7 +98,7 @@ class Solution:
             #extract the depth of the node, the depth is the first digit of the number
             depth = num // 100
             
-            #extract the position of the node, the position is the second and third digits of the number
+            #extract the position of the node, the position is the second digit of the number
             position = (num - depth * 100) // 10
             
             #extrac the value of the node, the value is the last digit of the number
@@ -96,10 +143,14 @@ def test(input_data, expected):
     CommonMethods.print_test(["Input", "Expected"], True, input_data, expected)
     pass_test, final_pass = True, True
 
-    output = Solution().pathSum(input_data)
-
+    output = Solution_V1().pathSum(input_data)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["Output-V1", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_V2().pathSum(input_data)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Output-V2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass
