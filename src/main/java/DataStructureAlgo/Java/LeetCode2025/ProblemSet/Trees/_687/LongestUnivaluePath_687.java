@@ -83,12 +83,23 @@ public class LongestUnivaluePath_687 {
     }
 
     /**
-     * We need to count the edges between the univalue path. THere is no edge to self-node, hence the unique path of each self-node would be 0;
-     * We can start doing a post-order traversal,
-     * 1. and if this is a leaf node, then its unique path length would be 0
-     * 2. if this is not a leaf node, then we can compare its value to either left child or right child or both; for each equal value, it gains 1 length path.
-     * 3. return maximum of either left or right to parent, as this will be a maximum edge we can add.
-     * 4. Keep track of the maximum
+     # COAST FRAMEWORK
+        #
+        # 1. CLARIFY:
+        #    - We need longest path of SAME values.
+        #    - Path length = number of EDGES.
+        #    - Path can turn (inverted V shape) through a node.
+        #
+        # 2. OUTLINE:
+        #    - Post-order DFS (bottom-up).
+        #    - At each node, ask children: "What's the longest univalue path ending at you?"
+        #    - If child.val == node.val, extend that path by 1 (the edge to child).
+        #    - If not, the path stops (length 0).
+        #    - Update global max with (left_path + right_path) -> The "Bridge".
+        #    - Return max(left_path, right_path) -> The "Arrow" to parent.
+        #
+        # 3. APPROACH (Edge-Based DFS):
+        #    - Direct edge counting avoids 'ans - 1' hacks.
      */
     static class Solution {
         public int longestUnivaluePath(TreeNode root) {
