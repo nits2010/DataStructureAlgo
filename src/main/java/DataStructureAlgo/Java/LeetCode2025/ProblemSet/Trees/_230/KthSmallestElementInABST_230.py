@@ -70,29 +70,30 @@ from helpers.templates.TreeNode import TreeNode
 
 
 class Solution:
-    def __init__(self):
-        self.result = None
-        self.counter = None
-
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        self.counter = 0
-        self.result = None
+        counter = 0
+        result = None
 
         def kthSmallestNode(root):
+            nonlocal counter, result
             if not root:
                 return
 
             kthSmallestNode(root.left)
-            self.counter += 1
+            counter += 1
 
-            if self.counter == k:
-                self.result = root.val
+            if counter == k:
+                result = root.val
                 return
 
             kthSmallestNode(root.right)
 
         kthSmallestNode(root)
-        return self.result
+        
+        if counter < k: # not sufficient nodes 
+            return None
+        
+        return result
 
 
 def test(input_data, k, expected):

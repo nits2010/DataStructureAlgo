@@ -101,16 +101,15 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal_105 {
     static
     class Solution {
         public TreeNode buildTree(int[] preorder, int[] inorder) {
-            int pLength = preorder.length;
-            int inLength = inorder.length;
+            int n = inorder.length;
 
             //cache the inorder index of each element, to avoid scanning for an element later
             Map<Integer, Integer> map = new HashMap<>();
-            for (int i = 0; i < inLength; i++) {
+            for (int i = 0; i < n; i++) {
                 map.put(inorder[i], i);
             }
 
-            return buildTree(preorder, new int[]{0}, 0, inLength - 1, map);
+            return buildTree(preorder, new int[]{0}, 0, n - 1, map);
         }
 
         /**
