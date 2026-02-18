@@ -1,6 +1,8 @@
 from typing import List
 
-
+#Complexity 
+# Time : O(n) * O(1000)
+# Space : O(1)
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         """Bucket algo"""
