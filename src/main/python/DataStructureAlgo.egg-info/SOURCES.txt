@@ -4,3 +4,15 @@ src/main/python/DataStructureAlgo.egg-info/PKG-INFO
 src/main/python/DataStructureAlgo.egg-info/SOURCES.txt
 src/main/python/DataStructureAlgo.egg-info/dependency_links.txt
 src/main/python/DataStructureAlgo.egg-info/top_level.txt
+src/main/python/DataStructureAlgo.egg-info/PKG-INFO
+src/main/python/DataStructureAlgo.egg-info/SOURCES.txt
+src/main/python/DataStructureAlgo.egg-info/dependency_links.txt
+src/main/python/DataStructureAlgo.egg-info/top_level.txt
+src/main/python/helpers/TreeBuilder.py
+src/main/python/helpers/TreeTraversals.py
+src/main/python/helpers/__init__.py
+src/main/python/helpers/common_methods.py
+src/main/python/helpers/templates/NArrayTreeNode.py
+src/main/python/helpers/templates/TreeNode.py
+src/main/python/helpers/templates/TreeNodeWithRandom.py
+src/main/python/helpers/templates/__init__.py
