@@ -71,31 +71,29 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         result = []
         candidates = [i for i in range(1, 10)]
+        path: List[int] = []
 
-        def backtrack(start: int, remaining: int, path: List[int], k: int):
+        def dfs(start: int, remaining: int, k: int):
             if len(path) == k:
                 if remaining == 0:
                     result.append(path[:])
                 return
 
             for i in range(start, len(candidates)):
-                if i > start and candidates[i] == candidates[i - 1]:
-                    continue  # Skip duplicates
-
                 if candidates[i] > remaining:
                     break  # Prune the branch
 
                 path.append(candidates[i])
-                backtrack(i + 1, remaining - candidates[i], path, k)
+                dfs(i + 1, remaining - candidates[i], k)
                 path.pop()
 
-        backtrack(0, n, [], k)
+        dfs(0, n, k)
         return result
+
 
 
 def test(k, n, expected):
