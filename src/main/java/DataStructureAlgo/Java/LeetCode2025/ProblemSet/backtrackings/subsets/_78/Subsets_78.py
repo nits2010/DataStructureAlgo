@@ -61,11 +61,10 @@ from typing import List, Optional, Dict, Any
 from helpers.common_methods import CommonMethods
 
 
-class Solution_Iterative:
+class Solution_Bit:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 
         result = []
-        temp_set = set()
 
         total_subsets = 2 ** len(nums)
 
@@ -84,22 +83,30 @@ class Solution_Iterative:
 
         return result
 
+class Solution_Iterative:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        result = [[]]
+
+        for num in nums:
+            result += [subset+[num] for subset in result]
+        
+        return result
 
 class Solution_Recursive:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result = []
-
-        def dfs(start, subset):
+        subset = []
+        def dfs(start ):
             result.append(subset[::])
 
             for idx in range(start, len(nums)):
                 subset.append(nums[idx])
 
-                dfs(idx + 1, subset)
+                dfs(idx + 1)
 
                 subset.pop()
 
-        dfs(0, [])
+        dfs(0)
         return result
 
 
@@ -120,11 +127,16 @@ def test(input_data, expected):
     CommonMethods.print_test(["Solution_Iterative", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
+    output = Solution_Bit().subsets(input_data)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Solution_Bit", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+
     return final_pass
 
 
 if __name__ == "__main__":
     tests: List = [test([1, 2, 3], [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]),
-                   test([0], [[], [0]])]
+                   test([0], [[], [0]]), test([], [[]])]
 
     CommonMethods.print_all_test_results(tests)
