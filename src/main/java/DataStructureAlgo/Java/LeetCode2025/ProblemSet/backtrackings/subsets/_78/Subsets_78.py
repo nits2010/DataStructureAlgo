@@ -96,7 +96,7 @@ class Solution_Recursive:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result = []
         subset = []
-        def dfs(start ):
+        def dfs(start):
             result.append(subset[::])
 
             for idx in range(start, len(nums)):
