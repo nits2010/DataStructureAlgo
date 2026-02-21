@@ -170,18 +170,18 @@ class Solution:
         # Now, we will start the slots = 0..n-1 (to follow 0th index)
         for slot_pos in range(n):
 
-            # now at this slow, how many permutations are possible.
+            # now at this slot, how many permutations are possible.
             even_count = (n - slot_pos) // 2
             odd_count = (n - slot_pos - 1) // 2
 
-            # at slow_pos we have 'ways' way to fill it.
+            # at slot_pos we have 'ways' way to fill it.
             ways = factorial(odd_count) * factorial(even_count)
 
             # iterate over remaining values that can be placed
             for i, vals in enumerate(values):
 
                 # check can we place vals at this slot, its only when parity needed matches,
-                # however, if N is even and this is first slow, then we can place any number here.
+                # however, if N is even and this is first slot, then we can place any number here.
                 if vals % 2 != parity_needed and (slot_pos != 0 or n % 2 != 0):
                     continue
 

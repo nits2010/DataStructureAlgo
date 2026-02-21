@@ -87,7 +87,7 @@ public class GenerateValidParenthesis {
             parenthesis[pos] = '('; //put open and try
             generateParenthesis(parenthesis, pos + 1, result, n);
 
-            parenthesis[pos] = ')'; //put open and try
+            parenthesis[pos] = ')'; //put close and try
             generateParenthesis(parenthesis, pos + 1, result, n);
 
 
@@ -118,7 +118,7 @@ public class GenerateValidParenthesis {
 
         /**
          * Our choices:
-         * Put either a ( or )
+         * Put either a '(' or ')'
          * <p>
          * Our Constraints:
          * a. We can't put more open brackets then n
@@ -126,7 +126,7 @@ public class GenerateValidParenthesis {
          * c. We can't put more close brackets then open at any moment
          * <p>
          * Our Goal
-         * 1. WE need to use n open and n close brackets and make string balanced
+         * 1. We need to use 'n' open and 'n' close brackets and make string balanced
          *
          * Our complexity analysis rests on understanding how many elements there are in generateParenthesis(n).
          * This analysis is outside the scope of this article, but it turns out this is the n-th Catalan number
