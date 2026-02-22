@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.backtrackings._131;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._131;
 import java.util.*;
 
 public class PalindromePartitioning_131 {
