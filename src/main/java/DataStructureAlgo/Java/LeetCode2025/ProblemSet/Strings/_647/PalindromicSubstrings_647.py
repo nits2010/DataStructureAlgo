@@ -47,6 +47,20 @@ Company Tags
 @Facebook
 @Twitter
 @Expedia
+@Adobe 
+@Amazon 
+@Apple 
+@Atlassian 
+@Citadel 
+@Coursera 
+@Google 
+@LinkedIn 
+@Mathworks 
+@Microsoft 
+@PureStorage 
+@SAP 
+@Uber 
+@VMware
 <p>
 -----
 
