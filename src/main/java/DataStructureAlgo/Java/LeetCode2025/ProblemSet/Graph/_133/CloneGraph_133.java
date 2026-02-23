@@ -89,8 +89,7 @@ import java.util.*;
  * @Apple
  * @LinkedIn
  * @Mathworks
- * @Pocket
- * @Gems
+ * @PocketGems
  * @Splunk
  * @Twitter
  * @Uber
