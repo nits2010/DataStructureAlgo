@@ -211,8 +211,6 @@ public class MaxAreaOfIsland_695 {
 
             //this will minimize the slots
             public UnionFind(int [][]grid) {
-                int size = 0;
-
                 //find slots that are required for only those, where is land
                 IdToIndex = new HashMap<>();
                 int m = grid.length;
@@ -295,21 +293,10 @@ public class MaxAreaOfIsland_695 {
                         for(int k=0; k<4; k++) {
                             int r = i + row[k];
                             int c = j + col[k];
+                            int landIndex = _2DPos1DPost(i, j, m, n);
                             if(isSafe(r, c, m, n) && grid[r][c] == 1) {
-                                int landIndex = _2DPos1DPost(i, j, m, n);
                                 int neighbourIndex = _2DPos1DPost(r, c, m, n);
                                 unionFind.union(landIndex, neighbourIndex);
-
-                                /*
-                                    int landIndex = _2DPos1DPost(i, j, m, n);
-                                    int neighbourIndex = _2DPos1DPost(r, c, m, n);
-
-                                    int landSlotIndex = unionFind.IdToIndex.get(landIndex);
-
-                                    int neighbourSlotIndex = unionFind.IdToIndex.get(neighbourIndex);
-
-                                    unionFind.union(landSlotIndex, neighbourSlotIndex);
-                                 */
                             }
                         }
                     }

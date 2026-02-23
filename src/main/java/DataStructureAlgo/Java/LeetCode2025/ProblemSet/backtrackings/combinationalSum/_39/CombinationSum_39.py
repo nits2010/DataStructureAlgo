@@ -82,40 +82,37 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         """
-            We can use backtracking solution to build up the solution. As the question stated to have n number of possibilties to choose a number
+            We can use backtracking solution to build up the solution. 
         """
         result = []
+        items = []
 
-        def combinationSum(index:int, remaining_sum: int, items:List[int]) :
-            if index >= len(candidates):
-                return
-
-            if remaining_sum > target:
-                return
-
+        def combinationSum(index:int, remaining_sum: int) : 
+            if index >= len(candidates) or remaining_sum > target:
+                return 
+     
             if remaining_sum == 0:
                 result.append(items[::])
                 return
 
             for i in range(index, len(candidates)):
-
+                
                 if remaining_sum >= candidates[i]:
                     # track
                     items.append(candidates[i])
 
                     #recurse
-                    combinationSum(i, remaining_sum-candidates[i], items)
+                    combinationSum(i, remaining_sum-candidates[i]) # As the question stated to have 'n' number of possibilties to choose a number
 
                     # Backtrack
                     items.pop()
+            
+            return 
 
-            return
-
-        combinationSum(0, target, [])
+        combinationSum(0, target)
         return result
 
 

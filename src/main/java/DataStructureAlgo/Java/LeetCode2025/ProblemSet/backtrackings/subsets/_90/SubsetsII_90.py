@@ -59,7 +59,33 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-class Solution:
+# Time: O(2^n)
+# Space : O(2^n) 
+class Solution_V2:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        result = []
+        subset = []
+        nums.sort() # so that all duplicates come together
+
+        def dfs(start):
+            result.append(subset[::])
+
+            i = start
+            for i in range(start, len(nums)):
+                if i > start and nums[i] == nums[i - 1]:
+                    continue
+
+                subset.append(nums[i])
+                dfs(i + 1)
+                subset.pop()
+                i += 1
+
+        dfs(0)
+        return result
+
+# Time: O(2^n)
+# Space : O(2^n) + O(2^n)
+class Solution_V1:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         result = []
 
@@ -93,9 +119,14 @@ def test(input_data, expected):
     """
     CommonMethods.print_test(["Input", "Expected"], True, input_data, expected)
     pass_test, final_pass = True, True
-    output = Solution().subsetsWithDup(input_data)
+    output = Solution_V1().subsetsWithDup(input_data)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["V1", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_V2().subsetsWithDup(input_data)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["V2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass

@@ -244,11 +244,9 @@ public class SlidingWindowMedian_480 {
 
             if (maxHeap.size() == minHeap.size()) {
                 return (((double) max.value + min.value) / 2.0);
-            } else if (maxHeap.size() > minHeap.size()) {
-                return (double) max.value;
             } else {
-                return (double) min.value;
-            }
+                return (double) max.value;
+            } 
 
         }
 

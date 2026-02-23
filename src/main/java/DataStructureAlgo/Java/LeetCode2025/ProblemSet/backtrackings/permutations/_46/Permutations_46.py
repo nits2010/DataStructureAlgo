@@ -64,30 +64,6 @@ from helpers.common_methods import CommonMethods
 ## Time Complexity: O(n*n!)
 ## Space Complexity: O(n*n!)
 
-class Solution_Recursive:
-    def permute(self, nums: List[int]) -> List[List[int]]:
-        all_permutations = []
-
-        def permutations(nums: List[int], start, end):
-            nonlocal all_permutations
-            if start == end:
-                all_permutations.append(nums[:])  # nums[:] makes a copy of nums
-                return
-
-            for i in range(start, end + 1):  # try all numbers in b/w [start,end]
-
-                # swap i and start
-                nums[i], nums[start] = nums[start], nums[i]
-
-                permutations(nums, start + 1, end)
-
-                # backtrack swap i and start
-                nums[start], nums[i] = nums[i], nums[start],
-
-        permutations(nums, 0, len(nums) - 1)
-        return all_permutations
-
-
 class Solution_RecursiveV2:
     def permute(self, nums: List[int]) -> List[List[int]]:
         all_permutations = []
@@ -138,11 +114,6 @@ def test(input_data, expected):
     """
     CommonMethods.print_test(["Input", "Expected"], True, input_data, expected)
     pass_test, final_pass = True, True
-
-    output = Solution_Recursive().permute(input_data)
-    pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
-    final_pass &= pass_test
 
     output = Solution_RecursiveV2().permute(input_data)
     pass_test = CommonMethods.compare_result(output, expected, True)

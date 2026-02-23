@@ -63,7 +63,6 @@ Company Tags
 @Houzz
 @Oracle
 @Snapchat
-@Uber
 @Yahoo
 <p>
 -----
@@ -78,6 +77,91 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
+
+class Solution_Trie_Prune_V2:
+
+    class TrieNode:
+        def __init__(self):
+            self.children = {} # {char : TrieNode}
+            self.end_of_word = False # does the word end at this node or not
+            self.word = None
+    
+    class Trie:
+
+        def __init__(self, words: list[str]):
+            self.root = Solution_Trie_Prune_V2.TrieNode()
+            self.words = words
+
+            for word in words:
+                self.insert(word)
+        
+        def insert(self, word):
+            if not word:
+                return 
+            
+            pCrawl = self.root
+
+            for char in word:
+
+                if char not in pCrawl.children:
+                    pCrawl.children[char] = Solution_Trie_Prune_V2.TrieNode()
+                pCrawl = pCrawl.children[char]
+            
+            pCrawl.end_of_word = True
+            pCrawl.word = word
+        
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+
+        m , n = len(board), len(board[0])
+
+        trie: self.Trie = self.Trie(words)
+
+        result = []
+        _dir = [[0,1],[1,0],[0,-1],[-1,0]]
+
+        def is_safe(i,j):
+            return 0 <= i < m and 0 <= j < n
+
+        def dfs(i , j , root):
+
+            if not is_safe(i,j):
+                return 
+            
+            tmp = board[i][j]
+            curr_node = root.children[tmp]
+            
+            if curr_node.end_of_word:
+                result.append(curr_node.word)
+                curr_node.end_of_word = False # to avoid duplicate word
+                 
+            
+            board[i][j] = "*"
+            
+
+            for dr, dc in _dir :
+                r, c = i + dr, j + dc
+
+                if is_safe(r,c) and board[r][c] in curr_node.children:
+                    dfs(r, c, curr_node)
+
+            board[i][j] = tmp
+
+
+            # prune the trie for unused node
+            if not curr_node.children: 
+                root.children.pop(tmp)
+
+
+        for i, row in enumerate(board):
+            for j, char in enumerate(row):
+                if board[i][j] in trie.root.children:
+                    dfs(i,j,trie.root)
+                
+        return result
+
+
+
+        
 
 class Solution_Trie_Prune:
     class TrieNode:
@@ -288,6 +372,11 @@ def test(board, words, expected):
     output = Solution_Trie_Prune().findWords(board, words)
     pass_test = CommonMethods.compare_result(output, expected, True)
     CommonMethods.print_test(["Solution_Trie_Prune Pruning", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_Trie_Prune_V2().findWords(board, words)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Solution_Trie_Prune Pruning V2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass

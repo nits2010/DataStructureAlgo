@@ -2,6 +2,7 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._987.VerticalOrderTraversalOfABinaryTree_987;
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree._199.BinaryTreeRightSideView_199;
+import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree.left_view.BinaryTreeLeftSideView;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.TreeBuilder;
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
@@ -14,7 +15,8 @@ import java.util.*;
  * Question Category: Top view of a Binary Tree
  * Description: https://takeuforward.org/data-structure/top-view-of-a-binary-tree/
  * <p>
- * Given a Binary Tree, return its Bottom View. The Bottom View of a Binary Tree is the set of nodes visible when we see the tree from the bottom * File reference
+ * Given a Binary Tree, return its Bottom View. The Bottom View of a Binary Tree is the set of nodes visible when we see the tree from the bottom 
+ * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link BinaryTreeRightSideView_199} {@link BinaryTreeLeftSideView} {@link BinaryTreeTopView}
@@ -48,6 +50,7 @@ public class BinaryTreeBottomView {
         test &= test(new Integer[]{1, null, 3}, List.of(1, 3));
         test &= test(new Integer[]{1, 2, 3, 4, 10, 9, 11, null, 5, null, null, null, null, null, null, null, 6}, List.of(4, 5, 6, 3, 11));
         test &= test(new Integer[]{2, 7, 5, 2, 6, null, 9, null, null, 5, 11, 4, null}, List.of(2, 5, 6, 4, 9));
+        test &= test(new Integer[]{1, 2, 3, 4, 10, 9, 11, -1, 5, null, null, null, null, null, null, null}, List.of(4, 5, 6, 3, 11)); 
         System.out.println("============================");
         System.out.println(test ? " All Passed " : " Something Failed ");
     }

@@ -72,7 +72,38 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-class Solution_Simplified:
+
+class Solution_V3:
+    def getPermutation(self, n: int, k: int) -> str:
+        """ """
+
+        result = ""
+        items = [i for i in range(1,n+1)]
+
+        permutations = 0
+        
+        # do until we hit the pemutation range or we have more than 1 element to try
+        while permutations < k and len(items) > 1:
+            
+            # if we take a element from our list, then we will left with n - 1 items in the list, hence we can arrange them fact(n-1) ways
+            fact = factorial(len(items) - 1)
+            
+            #try each item which can be placed
+            for item in items:
+                if permutations + fact >= k:
+                    result += str(item)
+                    items.remove(item)  # item has been taken, remove it
+                    break
+
+                else:
+                    permutations += fact
+
+        for item in items:
+            result += str(item)
+
+        return result
+
+class Solution_V2:
     def getPermutation(self, n: int, k: int) -> str:
 
         values = list(range(1, n + 1))  # list of values to be picked [1..n]
@@ -93,7 +124,7 @@ class Solution_Simplified:
         return result
 
 
-class Solution_:
+class Solution_V1:
     def getPermutation(self, n: int, k: int) -> str:
         """
         ⚙️ Problem Setup
@@ -153,15 +184,20 @@ def test(n, k, expected):
     CommonMethods.print_test(["N", "K", "Expected"], True, n, k, expected)
     pass_test, final_pass = True, True
 
-    output = Solution_().getPermutation(n, k)
+    output = Solution_V1().getPermutation(n, k)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["V1", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
 
-    output = Solution_Simplified().getPermutation(n, k)
+    output = Solution_V2().getPermutation(n, k)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Simplified", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["V2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_V3().getPermutation(n, k)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["V3", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass

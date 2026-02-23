@@ -231,11 +231,11 @@ public class NumberOfIslandII_305 {
 
         static class UnionFind {
             static class Set {
-                int rank; //size
+                int size; //size
                 int id;
 
-                public Set(int id, int rank) {
-                    this.rank = rank;
+                public Set(int id, int size) {
+                    this.size = size;
                     this.id = id;
                 }
 
@@ -260,23 +260,23 @@ public class NumberOfIslandII_305 {
                 //both are already in the same set
                 if (ip == jp) return false;
 
-                unionByRank(i, j, ip, jp);
+                unionBySize(i, j, ip, jp);
                 return true; //union was possible
             }
 
-            private void unionByRank(int i, int j, int ip, int jp) {
-                int ipRank = parents[ip].rank;
-                int jpRank = parents[jp].rank;
+            private void unionBySize(int i, int j, int ip, int jp) {
+                int ipSize = parents[ip].size;
+                int jpSize = parents[jp].size;
 
                 //graph of i as root is bigger as compare to j graph.
-                if (ipRank > jpRank) {
+                if (ipSize > jpSize) {
                     parents[jp].id = ip; //attach i as parent of j, this makes size no difference in i's graph
-                } else if (jpRank > ipRank) {
+                } else if (jpSize > ipSize) {
                     parents[ip].id = jp; //attach j as parent of i, this makes size no difference in j's graph
                 } else {
                     //both graph sizes are equal attached to i and j.
                     parents[ip].id = jp; // make jp as parent of i, this makes j size graph increase by 1
-                    parents[jp].rank++; //increase j's graph size
+                    parents[jp].size++; //increase j's graph size
                 }
             }
 

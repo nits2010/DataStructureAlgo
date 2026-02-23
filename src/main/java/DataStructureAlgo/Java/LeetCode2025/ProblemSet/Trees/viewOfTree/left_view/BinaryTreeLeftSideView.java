@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree.left_view;
 
 import DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees.viewOfTree._199.BinaryTreeRightSideView_199;
 import DataStructureAlgo.Java.helpers.CommonMethods;
