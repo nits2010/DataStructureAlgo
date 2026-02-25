@@ -63,6 +63,7 @@ import java.util.*;
  * Company Tags
  * -----
  * @Google
+ * @Bloomberg
  * @WorksApplications
  * <p><p>
  *
@@ -221,9 +222,7 @@ public class CourseScheduleIII_630 {
                     // adding current makes the overall schedule less as compared to previously.
 
                     // peek the heap and see if we need a replacement or not.
-                    int courseToReplace = pq.peek();
-
-                    if(courseToReplace > course[0]){
+                    if(pq.peek() > course[0]){
 
                         //if we can replace, then we need to update the scheduleTIme
                         scheduledTime -= pq.poll();
