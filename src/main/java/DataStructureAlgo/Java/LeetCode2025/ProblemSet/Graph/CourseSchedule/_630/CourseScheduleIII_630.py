@@ -102,7 +102,7 @@ class Solution:
          Hence, removing longest time make sure we can accomdate the new course always 
          
          
-         
+         https://leetcode.com/problems/course-schedule-iii/solutions/363735/detailed-explanation-with-logic-building-79al/
         
          :param courses:
          :return:

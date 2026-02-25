@@ -67,7 +67,7 @@ import java.util.*;
  * @WorksApplications
  * <p><p>
  *
- * @Editorial
+ * @Editorial https://leetcode.com/problems/course-schedule-iii/solutions/363735/detailed-explanation-with-logic-building-79al/
  */
 public class CourseScheduleIII_630 {
     public static void main(String[] args) {
