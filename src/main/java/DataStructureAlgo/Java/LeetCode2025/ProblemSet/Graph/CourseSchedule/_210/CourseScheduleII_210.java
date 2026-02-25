@@ -148,11 +148,9 @@ public class CourseScheduleII_210 {
                 }
             }
             int []courses = new int[numCourses];
-//            List<Integer> list = new ArrayList<>();
             while (!queue.isEmpty()){
                 int u = queue.poll();
                 courses[--numCourses] = u;
-//                list.add(u);
                 for (int v : adjList.get(u)) {
                     inDegree[v]--;
                     if (inDegree[v] == 0) {
@@ -163,7 +161,6 @@ public class CourseScheduleII_210 {
 
             if(numCourses!=0) return new int[0];
 
-//            System.out.println("list : "+list);
             return courses;
         }
 
