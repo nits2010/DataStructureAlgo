@@ -1,4 +1,4 @@
-package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph.WallsGate._286;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Graph._286;
 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
