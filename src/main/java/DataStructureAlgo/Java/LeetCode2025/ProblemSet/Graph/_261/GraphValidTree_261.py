@@ -47,6 +47,8 @@ Tags
 @Breadth-FirstSearch
 @UnionFind
 @Graph
+@LeetCodeLockedProblem
+@PremiumQuestion 
 
 <p><p>
 Company Tags
@@ -73,7 +75,36 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-class Solution:
+# Time/ Space : O(|V| + |E|.X) / O(|V|)
+# Where X is time taken in find/union operation ; is the Inverse Ackermann function (nearly constant).
+class Solution_UnionFind:
+    def validTree(self, n: int, edges: List[List[int]]) -> bool:
+        """ union find, if 2 node are in same set before adding the edge, then it has cycle """
+        if len(edges) != n-1:
+            return False
+
+        parent = list(range(n))
+
+        def find(i):
+            if parent[i] != i:
+                parent[i] = find(parent[i]) # path compression
+            return parent[i]
+        
+        for u,v in edges: 
+            parent_u = find(u)
+            parent_v = find(v)
+
+            #if they are alredy in same set
+            if parent_u == parent_v:
+                return False # has cycle
+            
+            parent[parent_u] = parent_v # union, put in same set 
+        
+        return True
+
+
+# Time/ Space : O(|V| + |E|) / O(|V| + |E|)
+class Solution_dfs:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
         """ A graph has |V| nodes and |E| edges, the relation is
              |E| >= |V| -> Means Graph has at least 1 cycle 
@@ -96,6 +127,7 @@ class Solution:
         
         visited = set()
         
+        # topological sort
         def dfs(i):
             if i in visited:
                 return 
@@ -118,7 +150,7 @@ def test(n, edges, expected):
     """
     CommonMethods.print_test(["Nodes", "Edges", "Expected"], True, n, edges, expected)
     pass_test, final_pass = True, True
-    output = Solution().validTree(n=n, edges=edges)
+    output = Solution_dfs().validTree(n=n, edges=edges)
     pass_test = CommonMethods.compare_result(output, expected, True)
     CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
