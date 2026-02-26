@@ -1,29 +1,3 @@
-"""
-Author: Nitin Gupta
-Date: 8/19/2025
-Question Title:
-Link:
-Description:
-File reference
------------
-Duplicate {@link}
-Similar {@link}
-extension {@link }
-DP-BaseProblem {@link }
-<p><p>
-Tags
------
-
-<p><p>
-Company Tags
------
-<p>
------
-
-@Editorial <p><p>
------
-@OptimalSolution {@link }
-"""
 
 from collections import deque
 from typing import List, Optional, Dict, Any

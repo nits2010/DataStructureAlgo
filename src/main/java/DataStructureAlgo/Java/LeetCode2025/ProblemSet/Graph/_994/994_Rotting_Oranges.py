@@ -55,6 +55,11 @@ Tags
 <p><p>
 Company Tags
 -----
+@Amazon 
+@Flipkart
+@Microsoft
+@VMware
+@LinkedIn
 <p>
 -----
 
