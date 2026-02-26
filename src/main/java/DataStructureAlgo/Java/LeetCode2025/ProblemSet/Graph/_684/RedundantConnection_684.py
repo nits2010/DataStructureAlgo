@@ -120,7 +120,7 @@ class Solution_UnionFind:
         def __init__(self, n):
             # n + 1 because numebering is 1 to n
             self.parent = list(range(n + 1))
-            self.rank = [1] * (n + 1)
+            self.size = [1] * (n + 1)
 
         def find(self, i):
             if self.parent[i] != i:
@@ -135,13 +135,13 @@ class Solution_UnionFind:
             if root_i == root_j:
                 return False
 
-            rank_i, rank_j = self.rank[root_i], self.rank[root_j]
+            size_i, size_j = self.size[root_i], self.size[root_j]
 
-            if root_i > root_j:
+            if size_i > size_j:
                 root_i, root_j = root_j, root_i
 
             self.parent[root_i] = root_j
-            self.rank[root_j] += 1
+            self.size[root_j] += self.size[root_i]
 
             return True
 
@@ -151,8 +151,6 @@ class Solution_UnionFind:
 
         n = len(edges)
         union_find = Solution_UnionFind.UnionFind(n)
-
-        result = None
 
         for u, v in edges:
             if not union_find.union(u, v):

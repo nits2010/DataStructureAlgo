@@ -45,8 +45,7 @@ class Solution_DFSV2 : # directed DFS ; Cycle detection logic
             recu_stack[node] = True # currently visiting, hence in stack
            
             for neigh in adj_list[node]:
-                if not visited[neigh]:
-                   if dfs(neigh):
+                if not visited[neigh] and dfs(neigh):
                        return True
                 elif recu_stack[neigh]: # neigh can not be in rec stack, since rec_stack holds only currently visited node which should be parent
                     return True
