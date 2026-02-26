@@ -68,7 +68,7 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
-
+# Time/Space: O(|V| + |E|) / O(|V| + |E|))
 class Solution_BFS:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         """ To be have a cycle in a graph, there will be at least one node which has indegree 2. 
@@ -83,7 +83,7 @@ class Solution_BFS:
 
             The "peeling" process will get stuck. The nodes remaining in the graph are the ones forming the cycle.
             
-            
+            https://www.youtube.com/watch?v=1lNK80tOTfc&t=2s
             
         """
         n = len(edges)
@@ -113,6 +113,7 @@ class Solution_BFS:
                 return [u, v]
         return []
 
+# Time/Space: O(|V| + |E|.X) / O(|V|)
 class Solution_UnionFind:
 
     class UnionFind:

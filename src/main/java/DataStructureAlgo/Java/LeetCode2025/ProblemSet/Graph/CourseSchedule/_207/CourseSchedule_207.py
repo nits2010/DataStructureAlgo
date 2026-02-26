@@ -4,6 +4,117 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
+#   Cycle detection logic 
+#   DFS + BFS 
+class Solution_DFSV2 : # directed DFS ; Cycle detection logic 
+    """
+    The reason we use state 1 is to identify the Back Edge. In a directed graph, a cycle only exists if you point back to an ancestor in the current DFS path. 
+    Pointing to a node with state 2 is just a Cross Edge, which is perfectly fine and does not indicate a cycle.
+    
+    Visualizing the Three States
+    To ensure the logic is clear, here is how those three numbers represent the "color" of the nodes during the search:
+
+    0 (White): Unvisited.
+
+    1 (Gray): Visiting (currently in the recursion stack). If we hit a node in this state, we've found a Back Edge.
+
+    2 (Black): Fully processed (no cycles found in this sub-tree).
+    """
+    def build_graph(self, numCourses: int, prerequisites: List[List[int]]) -> (List[List[int]], list):
+        adj_list = [[] for _ in range(numCourses)]
+    
+
+        for ai, bi in prerequisites:
+            adj_list[ai].append(bi)
+
+        return adj_list
+    
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        adj_list = self.build_graph(numCourses, prerequisites)
+        
+        # False -> (White): Unvisited.
+        # True -> Visited
+        visited = [False] * numCourses
+        
+        # False -> (White): Not in stack ( not visiting right now).
+        # True -> In stack, we are visiting right now
+        recu_stack = [False] * numCourses
+
+        def dfs(node):
+            visited[node] = True # visited this node
+            recu_stack[node] = True # currently visiting, hence in stack
+           
+            for neigh in adj_list[node]:
+                if not visited[neigh]:
+                   if dfs(neigh):
+                       return True
+                elif recu_stack[neigh]: # neigh can not be in rec stack, since rec_stack holds only currently visited node which should be parent
+                    return True
+            
+            recu_stack[node] = False # not in stack anymore
+            return False
+        
+        for course in range(numCourses):
+            if not visited[course] and dfs(course):
+                return False
+        
+        return True
+class Solution_DFS : # directed DFS 
+    """
+    The reason we use state 1 is to identify the Back Edge. In a directed graph, a cycle only exists if you point back to an ancestor in the current DFS path. 
+    Pointing to a node with state 2 is just a Cross Edge, which is perfectly fine and does not indicate a cycle.
+    
+    Visualizing the Three States
+    To ensure the logic is clear, here is how those three numbers represent the "color" of the nodes during the search:
+
+    0 (White): Unvisited.
+
+    1 (Gray): Visiting (currently in the recursion stack). If we hit a node in this state, we've found a Back Edge.
+
+    2 (Black): Fully processed (no cycles found in this sub-tree).
+    """
+    def build_graph(self, numCourses: int, prerequisites: List[List[int]]) -> (List[List[int]], list):
+        adj_list = [[] for _ in range(numCourses)]
+    
+
+        for ai, bi in prerequisites:
+            adj_list[ai].append(bi)
+
+        return adj_list
+    
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        adj_list = self.build_graph(numCourses, prerequisites)
+        
+        # 0 -> (White): Unvisited.
+        # 1 -> (Gray): Visiting (currently in the recursion stack). If we hit a node in this state, we've found a Back Edge.
+        # 2 -> (Black): Fully processed (no cycles found in this sub-tree).
+        visited = [0] * numCourses
+
+        def dfs(node):
+            if visited[node] == 1:
+                # we had already visited this node and it appears again, hence cycle
+                return True
+
+            if visited[node] == 2:
+                # course already completed
+                return False
+
+            visited[node] = 1 # visited the non-visited node
+            
+            for neigh in adj_list[node]:
+                if dfs(neigh):
+                    return True
+            
+            visited[node] = 2 # completed
+            return False
+
+        for course in range(numCourses):
+            if visited[course] != 2 and dfs(course):
+                return False
+        
+        return True
+
+
 class Solution_KhanTopo:
     def build_graph(self, numCourses: int, prerequisites: List[List[int]]) -> (List[List[int]], list):
         adj_list = [[] for _ in range(numCourses)]
@@ -56,6 +167,17 @@ def test(num_courses:int, prerequisites, expected):
     pass_test = CommonMethods.compare_result(output, expected, True)
     CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
+    
+    output = Solution_DFS().canFinish(num_courses, prerequisites)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["DFS", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_DFS().canFinish(num_courses, prerequisites)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["DFSV2", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+
 
     return final_pass
 
