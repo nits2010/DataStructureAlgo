@@ -6,7 +6,12 @@ from typing import List
 
 class UnDirectedGraphCycleDetection:
 
-   class DFS:
+    """ Cycle can be detect by two ways 
+        1. DFS
+        2. BFS 
+        3. Union Find
+    """
+    class DFS:
         def build_graph(self, v: int, edges: List[List[int]]) -> (List[List[int]], list):
             adj_list = [[] for _ in range(v)]
         
@@ -46,7 +51,7 @@ class UnDirectedGraphCycleDetection:
             
             return False
    
-   class BFS:
+    class BFS:
         def build_graph(self, v: int, edges: List[List[int]]) -> (List[List[int]], list):
             adj_list = [[] for _ in range(v)]
         
@@ -92,77 +97,77 @@ class UnDirectedGraphCycleDetection:
             
             return False
             
-   class Solution_UnionFind:
+    class Solution_UnionFind:
 
-    class UnionFindByRank:
-        def __init__(self, n):
-            # n + 1 because numebering is 1 to n
-            self.parent = list(range(n + 1))
-            self.rank = [1] * (n + 1)
+        class UnionFindByRank:
+            def __init__(self, n):
+                # n + 1 because numebering is 1 to n
+                self.parent = list(range(n + 1))
+                self.rank = [1] * (n + 1)
 
-        def find(self, i):
-            if self.parent[i] != i:
-                self.parent[i] = self.find(self.parent[i])
+            def find(self, i):
+                if self.parent[i] != i:
+                    self.parent[i] = self.find(self.parent[i])
 
-            return self.parent[i]
+                return self.parent[i]
 
-        def union(self, i, j):
-            root_i = self.find(i)
-            root_j = self.find(j)
+            def union(self, i, j):
+                root_i = self.find(i)
+                root_j = self.find(j)
 
-            if root_i == root_j:
-                return False
+                if root_i == root_j:
+                    return False
 
-            rank_i, rank_j = self.rank[root_i], self.rank[root_j]
+                rank_i, rank_j = self.rank[root_i], self.rank[root_j]
 
-            if rank_i > rank_j: 
-                self.parent[root_j] = root_i
-            elif rank_j > rank_i:
+                if rank_i > rank_j: 
+                    self.parent[root_j] = root_i
+                elif rank_j > rank_i:
+                    self.parent[root_i] = root_j
+                else:
+                    self.parent[root_j] = root_i
+                    self.rank[root_i] +=1 
+
+                return True
+            
+        class UnionFindBySize:
+            def __init__(self, n):
+                # n + 1 because numebering is 1 to n
+                self.parent = list(range(n + 1))
+                self.size = [1] * (n + 1)
+
+            def find(self, i):
+                if self.parent[i] != i:
+                    self.parent[i] = self.find(self.parent[i])
+
+                return self.parent[i]
+
+            def union(self, i, j):
+                root_i = self.find(i)
+                root_j = self.find(j)
+
+                if root_i == root_j:
+                    return False
+
+                size_i, size_j = self.size[root_i], self.size[root_j]
+
+                if size_i > size_j:
+                    root_i, root_j = root_j, root_i
+
                 self.parent[root_i] = root_j
-            else:
-                self.parent[root_j] = root_i
-                self.rank[root_i] +=1 
+                self.size[root_j] += self.size[root_i]
 
-            return True
-        
-    class UnionFindBySize:
-        def __init__(self, n):
-            # n + 1 because numebering is 1 to n
-            self.parent = list(range(n + 1))
-            self.size = [1] * (n + 1)
+                return True
 
-        def find(self, i):
-            if self.parent[i] != i:
-                self.parent[i] = self.find(self.parent[i])
+        def cycle_detect(self, n:int, edges: List[List[int]]) -> List[int]:
+            if not edges:
+                return []
 
-            return self.parent[i]
+            union_find = UnDirectedGraphCycleDetection.Solution_UnionFind.UnionFindBySize(n)
 
-        def union(self, i, j):
-            root_i = self.find(i)
-            root_j = self.find(j)
-
-            if root_i == root_j:
-                return False
-
-            size_i, size_j = self.size[root_i], self.size[root_j]
-
-            if size_i > size_j:
-                root_i, root_j = root_j, root_i
-
-            self.parent[root_i] = root_j
-            self.size[root_j] += self.size[root_i]
-
-            return True
-
-    def cycle_detect(self, n:int, edges: List[List[int]]) -> List[int]:
-        if not edges:
-            return []
-
-        union_find = UnDirectedGraphCycleDetection.Solution_UnionFind.UnionFindBySize(n)
-
-        for u, v in edges:
-            if not union_find.union(u, v):
-                return [u, v]
+            for u, v in edges:
+                if not union_find.union(u, v):
+                    return [u, v]
    
    
    

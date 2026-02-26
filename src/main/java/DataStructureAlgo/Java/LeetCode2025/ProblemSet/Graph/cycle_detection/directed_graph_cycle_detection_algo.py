@@ -5,6 +5,11 @@ from collections import deque
 from typing import List
 
 class DirectedGraphCycleDetection:
+    
+    """ Cycle can be detect by two ways 
+        1. DFS
+        2. BFS ( topological sort - Khan algo)
+    """
 
     class Solution_DFSV2 : # directed DFS ; Cycle detection logic 
         """
@@ -113,7 +118,6 @@ class DirectedGraphCycleDetection:
                     return False
             
             return True
-
 
     class Solution_BFS: # Khan Algo for cycle detection
         def build_graph(self, n: int, edges: List[List[int]]) -> (List[List[int]], list):
