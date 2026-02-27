@@ -30,12 +30,11 @@ import java.util.*;
  * ….c) Update cost value of all adjacent vertices of u. To update the key values,
  * iterate through all adjacent vertices. For every adjacent vertex v, if the weight of edge u-v is less than the previous key value of v,
  * update the key value as weight of u-v
- * <p>
- * <p>
- * <p>
- * <p>
- * <p>
- * Something is wrong with code
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 public class PrimMinimumSpanningTree implements IMinimumSpanningTree {
 
@@ -90,8 +89,7 @@ public class PrimMinimumSpanningTree implements IMinimumSpanningTree {
             return new LinkedList<>();
 
 
-        final int INFINITE = Integer.MAX_VALUE;
-
+        final double INFINITE = Double.POSITIVE_INFINITY;
 
         //Vertex set, sorted based on cost. This contains all vertex
         //1) Create a set mstSet that keeps track of vertices already included in MST.
