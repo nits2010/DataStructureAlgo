@@ -162,6 +162,37 @@ class Solution_BidirectionalBFS:
     """
         Just like wordLader I
     """
+    def findLadders(
+        self, beginWord: str, endWord: str, wordList: List[str]
+    ) -> List[List[str]]:
+        
+        if not wordList:
+            return []
+
+        word_set = set(wordList)
+
+        if endWord not in word_set:
+            return []
+        
+        adj_list = self.bfs(beginWord, endWord, word_set)
+        sequences = []
+        current_sequence = [endWord]
+        
+        def dfs(word):
+            if word == beginWord:
+                sequence = current_sequence[:]
+                sequences.append(sequence[::-1]) 
+                return 
+            
+            for neigh in adj_list[word]:
+                current_sequence.append(neigh)
+                dfs(neigh)
+                current_sequence.pop()
+            return
+    
+
+        dfs(endWord)
+        return sequences
 
     def add_edge(self, adj_list, child, parent, direction):
         """ Ensures the graph always points Child -> Parent """ 
@@ -222,10 +253,52 @@ class Solution_BidirectionalBFS:
         return adj_list
 
     
+    
+# Time: 
+#   1. build patterns : O(V * len(word) * reconstruct(word)) : O(V * L^2) ; Pattern Building:  You visit each word (V), and for each character (L), you create a pattern string (L).
+#   2. bfs : O((V + (cost of exploring all neigh))) : O(V + V*L^2) : O(V*L^2) ; For each word, you generate (L) patterns (each O(L)) and look them up.
+#   3. dfs : O(path explored) = O(path_length * no.of paths) = O(V * K) where K is no. of paths
+#   Total : O(V*L^2) + O(V * K) => O(V*(L^2+K))
+
+# Space:
+# 1. patterns : O(V*L^2) : a word could have at most V neigh and have L^2 patterns
+# 2. bfs: 
+#   2.1. Queue: O(queue size*L) : O(V*L) : Queue can have at most V nodes at a time each of which of L length
+#   2.2  Distance Map : O(V*L)
+# 3. dfs : Implicit stack O(V*K*L) where K is no. of paths each of L size
+# 4. adj_list : O(total nodes + total edges ) = 
+        # Keys: We have V words and each length L : Keys = V*L
+        # Values: We have E edges total and each Edge stores L length string -> E*L
+            # Total edges E in graph = V*L
+            # Hence Values = V*L*L = O(VL^2)
+        
+        # Hence  O(VL + VL^2) = O(VL^2)
+        
+# Total : O(V*L^2) +  O(V*L) + O(V*L) + O(V*K*L) +  O(VL^2) = O(V*L^2+V*K*L))
+
+# Time:  O(V*L^2+V*K)) ; V*L^2 to discover all edges + V*K to backtrack $K$ paths of length $V$.
+# Space: O(V*L^2+V*K*L)) ; V*L^2  for the Adjacency List + V*K*L  to store the final list of paths.
+class Solution_BFS_Pattern:
+    f""" In previous version; 
+            To find out the neighbours of a word we try to replace every character of the word with a different character from [a,z] and if exists in word_set we add it in neighbours. 
+            This require doing this processign for every single word we pop from queue. Which has O(26 * L^2 ) complexity. 
+            If the word size (L) is big than this will increase the complexity drastically. 
+        
+        In this version, we prepopulate the neighbours. 
+            To do that, we build a pattern map just like we did using character. Now instead of character from [a,z] we directly put "*". This eliminate iterating over [a,z] L times. 
+            We cache this pattern and the word against it in map patterns[pattern].add(word)
+            
+            Now this patterns map become our neighbours list. 
+            Now, when we are exploring word poped from queue, we create pattern again from that word O(L) times and then simply search it in patterns map. All the nodes that match is our neighbours now for this word. 
+            
+            This reduce the time complexity from O(V*26 * L^2 ) -> O(V*L*L) (build the pattern) + O(V*L) (while in queue) -> O(VL^2)
+                O(V*26 * L^2 ) ->  O(VL^2)
+    """
+    
     def findLadders(
         self, beginWord: str, endWord: str, wordList: List[str]
     ) -> List[List[str]]:
-        
+
         if not wordList:
             return []
 
@@ -233,28 +306,80 @@ class Solution_BidirectionalBFS:
 
         if endWord not in word_set:
             return []
-        
-        adj_list = self.bfs(beginWord, endWord, word_set)
+
+        # 1. Pre-process patterns: "hot" -> {"h*t": ["hot"], "ho*": ["hot"], "*ot": ["hot"]}
+        patterns = defaultdict(list)
+
+        # O(V*L*L)
+        for word in wordList:
+            for i in range(len(word)):
+                patterns[word[:i] + "*" + word[i + 1 :]].append(word)
+
+        # add begin word in pattern too ; endWord is already exisits
+        # O(L)
+        for i in range(len(beginWord)):
+            patterns[beginWord[:i] + "*" + beginWord[i + 1 :]].append(beginWord)
+
+        adj_list = self.bfs(word_set, beginWord, endWord, patterns)
+
+        if not adj_list:
+            return []
+
+        # now we have all nodes:[parents] map with minimum distance
         sequences = []
         current_sequence = [endWord]
-        
+
         def dfs(word):
-            if word == beginWord:
+            """Reconstructs paths from endWord back to beginWord."""
+            if word == beginWord:  # reached the
                 sequence = current_sequence[:]
-                sequences.append(sequence[::-1]) 
-                return 
-            
-            for neigh in adj_list[word]:
-                current_sequence.append(neigh)
-                dfs(neigh)
-                current_sequence.pop()
-            return
-    
+                sequences.append(sequence[::-1])
+                return
+
+            for parent in adj_list[word]:
+                current_sequence.append(parent)
+                dfs(parent)
+                current_sequence.pop()  # backtrack
 
         dfs(endWord)
         return sequences
-        
-       
+
+
+    def bfs(self, word_set, beginWord, endWord, patterns):
+        # Stores the "reverse" edges of the shortest path DAG.
+        adj_list = defaultdict(list)
+
+        # Prevents cycles and ensures we only move "forward".
+        distance_map = {beginWord: 0}
+        queue = deque([beginWord])
+        found = False  # Use a flag instead of early return
+
+        while queue and not found:
+            # Process level by level to ensure all shortest paths are captured
+            for _ in range(len(queue)):
+                word = queue.popleft()
+                distance = distance_map[word]
+
+                if word == endWord:
+                    found = True
+                    # We don't return yet, we finish this level's neighbors
+
+                for i in range(len(word)):
+                    pattern = word[:i] + "*" + word[i+1:]
+                    for neigh in patterns[pattern]:
+                        if neigh == word:
+                            continue
+                        
+                        if neigh not in distance_map:
+                            distance_map[neigh] = distance + 1
+                            adj_list[neigh].append(word)
+                            queue.append(neigh)
+
+                        # we have visited neigh before, see if distance b/w [neigh, word] is same as old + 1
+                        elif distance_map[neigh] == distance + 1:
+                            adj_list[neigh].append(word)
+
+        return adj_list if found else {}
 # ================================
 
 # Time: 
@@ -264,17 +389,22 @@ class Solution_BidirectionalBFS:
 #   Total : O(V*L^2) + O(V * K) => O(V*(L^2+K))
 
 # Space:
-# 1. get_neighbours : O(V) : a word could have at most V neigh
+# 1. get_neighbours : O(V*L) : a word could have at most V neigh of L length
 # 2. bfs: 
-#   2.1. Queue: O(queue size) : O(V) : Queue can have at most V nodes at a time
-#   2.2  Distance Map : O(V)
-# 3. dfs : Implicit stack O(V*K) where K is no. of paths
-# 4. adj_list : O(total nodes + total edges ) = O(V+E) however E = V*L*26 as one word (like "CARES") could technically transform into dozens of others ("BARES", "DARES", "CORES", "CARDS", etc.).  
-#           => O(V + V*L*26) = O(V*L)
-# Total : O(V) + O(V) + O(V) + O(V*K) + O(V * L) = O(V*(L+K))
+#   2.1. Queue: O(queue size*L) : O(V*L) : Queue can have at most V nodes at a time each of which of L length
+#   2.2  Distance Map : O(V*L)
+# 3. dfs : Implicit stack O(V*K*L) where K is no. of paths each of L size
+# 4. adj_list : O(total nodes + total edges ) = 
+        # Keys: We have V words and each length L : Keys = V*L
+        # Values: We have E edges total and each Edge stores L length string -> E*L
+            # Total edges E in graph = V*L
+            # Hence Values = V*L*L = O(VL^2)
+        
+        # Hence  O(VL + VL^2) = O(VL^2)
+# Total : O(V*L) + O(V*L) + O(V*L) + O(V*K*L) +  O(VL^2) = O(V*L^2+V*K*L))
 
-# Time:  O(V*(L^2+K))
-# Space: O(V*(L+K))
+# Time:  O(V*L^2+V*K)) ; V*L^2 to discover all edges + V*K to backtrack $K$ paths of length $V$.
+# Space: O(V*L^2+V*K*L)) ; V*L^2  for the Adjacency List + V*K*L  to store the final list of paths.
 
 class Solution_BFS:
     """The sequence will be made by only those nodes which has `minimum distance` to endWord from beginWord
