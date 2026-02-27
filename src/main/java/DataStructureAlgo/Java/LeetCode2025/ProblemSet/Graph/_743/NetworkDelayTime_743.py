@@ -66,7 +66,8 @@ import heapq
 from helpers.common_methods import CommonMethods
 
 
-
+# Time: O(E) + O(V*log(v)) ; V=n, E=len(times) 
+# Space : O(V)[cost] + O(V) [heap]  = O(V)
 class Solution_WithoutSettled:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         """
@@ -127,6 +128,8 @@ class Solution_WithoutSettled:
 
 
 
+# Time: O(E) + O(V*log(v)) + O(V)[max-cost find] ; V=n, E=len(times) 
+# Space : O(V)[cost] + O(V) [heap] + O(V)[settled] = O(V)
 # using settled
 class Solution_WithSettled:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
