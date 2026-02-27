@@ -66,7 +66,8 @@ import heapq
 from helpers.common_methods import CommonMethods
 
 
-class Solution:
+
+class Solution_WithoutSettled:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         """
         We need to determine the minimum time required for a signal to travel from node k to every other node.
@@ -79,35 +80,51 @@ class Solution:
         If any node is unreachable, we return -1.
         """
 
-        # build graph
+        if not times or n == 1 or k <= 0:
+            return 0
+
+        # holds cost to reach target from source. target:cost
+        cost = [float("inf")] * (n + 1)
+
+        # signal reached to how many nodes in network
+        signal_reach = 0
+        max_cost = -1
+
+        # min heap for dijkstra (weight, node)
+        heap = []
+
+        # directed graph u-> [(v,w)]
         graph = defaultdict(list)
         for u, v, w in times:
             graph[u].append((v, w))
 
-        costs = [float("inf")] * (n + 1)
-        costs[k] = 0  # reaching a single from source cost is 0
-        settled = set()
+        source = k
+        heapq.heappush(heap, (0, source))
+        cost[source] = 0 
 
-        # min priority queue
-        min_heap = [(0, k)]
-        max_cost = -1
-        while min_heap and len(settled) != n:
-
-            cost, u = heapq.heappop(min_heap)
-            max_cost = max(max_cost, cost)
-            if u in settled:
+        while heap:
+            curr_cost, curr_node = heapq.heappop(heap)
+        
+            # if reaching this node cost is higher then preivously, skip it
+            if curr_cost > cost[curr_node]:
                 continue
 
-            settled.add(u)
+            max_cost = max(max_cost, curr_cost)
 
-            # traverse its neighbours node
-            for v, w in graph[u]:
-                if v not in settled and costs[v] > cost + w:
-                    costs[v] = cost + w
-                    heapq.heappush(min_heap, (costs[v], v))
+            # signal has been reached to this node
+            signal_reach += 1
 
-        # max_cost = max(costs[1::])
-        return max_cost if len(settled) == n else -1
+            # explore all neigh of curr_node
+            for neigh_node, neigh_weight in graph[curr_node]:
+
+                # coming from 'curr_node' with cost 'cur_cost' turns out to be cheaper to reach this node (curr_cost + neigh_weight) then preivously, then update
+                if cost[neigh_node] > neigh_weight + curr_cost:
+                    cost[neigh_node] = neigh_weight + curr_cost
+                    heapq.heappush(heap, (cost[neigh_node], neigh_node))
+
+        # now we have cost of reaching signal to every node
+        return max_cost if signal_reach == n else -1
+
 
 
 # using settled
@@ -155,48 +172,6 @@ class Solution_WithSettled:
         return max_cost if max_cost != float("inf") else -1
 
 
-class Solution_WithoutSettled:
-    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-        """
-        We need to determine the minimum time required for a signal to travel from node k to every other node.
-        This is essentially the shortest path problem, where the time to reach a node is the sum of the edge weights along the path from k to that node.
-
-        Since all edge weights are positive, Dijkstra’s algorithm is a natural fit.
-
-        By applying Dijkstra’s algorithm, we compute the shortest distance from k to each node.
-        The final answer is the maximum value among these shortest distances (since the signal must reach all nodes).
-        If any node is unreachable, we return -1.
-        """
-
-        # build graph
-        graph = defaultdict(list)
-        for u, v, w in times:
-            graph[u].append((v, w))
-
-        costs = [float("inf")] * (n + 1)
-        costs[k] = 0  # reaching a single from source cost is 0
-
-        # min priority queue
-        min_heap = [(0, k)]
-
-        while min_heap:
-
-            cost, u = heapq.heappop(min_heap)
-
-            if cost > costs[u]:
-                continue
-
-            # traverse its neighbours node
-            for v, w in graph[u]:
-                if costs[v] > costs[u] + w:
-                    costs[v] = costs[u] + w
-                    heapq.heappush(min_heap, (costs[v], v))
-
-        max_cost = max(costs[1::])
-        return max_cost if max_cost != float("inf") else -1
-
-
-
 def test(input_data, n, k, expected):
     """
     Test function to verify the solution
@@ -214,10 +189,6 @@ def test(input_data, n, k, expected):
     CommonMethods.print_test(["Solution_WithSettled", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
-    output = Solution().networkDelayTime(input_data,n,k)
-    pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
-    final_pass &= pass_test
 
     return final_pass
 
