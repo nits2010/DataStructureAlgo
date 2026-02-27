@@ -90,6 +90,7 @@ from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
+
 # Time : O(V * L * 26 * L) = O(V.L^2)
 # Space: O(V*L)
 class Solution_BidBFS_OnTheFlyNeigh:
@@ -267,23 +268,32 @@ class Solution_BFS_ADJ:
         return 0
 
 
-def test(input_data, expected):
+def test(beginWord, endWord, wordList, expected):
     """
     Test function to verify the solution
     """
-    CommonMethods.print_test(["Input", "Expected"], True, input_data, expected)
+    CommonMethods.print_test(["beginWord", "endWord", "wordList", "Expected"], True, beginWord, endWord, wordList, expected)
     pass_test, final_pass = True, True
-    output = None
-
+    output = Solution_BFS_ADJ().ladderLength(beginWord=beginWord, endWord=endWord, wordList=wordList)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["BFS_ADJ", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_BFS_OnTheFlyNeigh().ladderLength(beginWord=beginWord, endWord=endWord, wordList=wordList)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["BFS_OnTheFlyNeigh", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Solution_BidBFS_OnTheFlyNeigh().ladderLength(beginWord=beginWord, endWord=endWord, wordList=wordList)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["BidBFS_OnTheFlyNeigh", "Pass"], False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass
 
 
 if __name__ == "__main__":
-    tests: List = [test([], None),
-                   test([], None)]
+    tests: List = [test(beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"], expected=5),
+                   test(beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"], expected=0)]
 
     CommonMethods.print_all_test_results(tests)
