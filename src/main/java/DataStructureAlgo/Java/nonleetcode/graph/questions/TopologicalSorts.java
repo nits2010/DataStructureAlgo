@@ -13,10 +13,6 @@ public class TopologicalSorts {
     /**
      * DFS: This works for both, Directed Graph and Un-Directed Graph
      *
-     *
-     * Tarjan’s Algorithms：
-     * https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm DFS based，
-     *
      * Loop through each node of the graph in an arbitrary order，
      * initiating a depth-first search that terminates when it hits any node that has already been visited
      * since the beginning of the topological sort or the node has no outgoing edges (i.e. a leaf node).
