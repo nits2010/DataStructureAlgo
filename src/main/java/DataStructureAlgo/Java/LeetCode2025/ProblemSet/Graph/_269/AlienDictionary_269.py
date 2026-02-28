@@ -84,6 +84,12 @@ from collections import deque
 from typing import List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
+
+# Time/Space: O(V+E) + O(N*L)/ O(V+E); => O(N*L) / O(1)
+# here V is number of chars in dict, E <= V^2 at max each char has edge to other
+# V = number of unique characters (≤ 26 in typical constraints) -> E=O(1), O(V)=1
+# N = number of words
+# L = average word length
 class Solution:
     def foreignDictionary(self, words: List[str]) -> str:
         """ 
@@ -97,22 +103,25 @@ class Solution:
             return ""
 
         graph, in_degree = self.build_graph(words)
+        if not graph:
+            return ""
 
         # run topological sort
         order: list = self.topological_khan(graph, in_degree)
         return "".join(order) 
     
+    # O(V+E) + O(N*L) / O (V+E) : here V is number of chars in dict, E<= V^2 at max each char has edge to other
     def build_graph(self, words):
         adj_list = {c: set() for word in words for c in word}
         in_degree = {c: 0 for word in words for c in word} # char -> indegree
 
        
-        for word1, word2 in zip(words, words[1::]):
+        for word1, word2 in zip(words, words[1:]):
             length = min(len(word1), len(word2))
 
             # Check for invalid prefix case: ["abcd", "abc"]
             if len(word1) > len(word2) and word1[:length] == word2[:length]:
-                return {},{}
+                return None,None
 
             for k in range(length):
                 if word1[k] != word2[k] :
@@ -123,12 +132,12 @@ class Solution:
         
         return adj_list, in_degree
 
+    # O(V+E)/ O(V); here V is number of chars in dict, E = V at max each char has edge to other
     def topological_khan(self, graph, in_degree) -> list:
+        if not graph:
+            return []
         n = len(in_degree)
-        queue = deque()
-        for key, value in in_degree.items():
-            if not value:
-                queue.append(key)
+        queue = deque([c for c in in_degree if in_degree[c] == 0])
         
         topological_sort = []
 
