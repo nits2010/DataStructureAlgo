@@ -54,6 +54,16 @@ Company Tags
 @Google
 @Amazon
 @Twitter
+@Apple 
+@Bloomberg 
+@Citadel 
+@GoldmanSachs 
+@Microsoft 
+@Qualtrics 
+@Snapchat 
+@Twilio 
+@Yandex 
+@Yelp
 <p>
 -----
 
@@ -72,7 +82,7 @@ class Solution:
 
     def build_graph(self, tickets) -> Dict[str, List[str]]:
         n = len(tickets)
-        graph = defaultdict(list)
+        graph = defaultdict(list) # Source -> min_heap[destinations]
 
         for source, dest in tickets:
             heapq.heappush(graph[source], dest)

@@ -2,7 +2,6 @@ package DataStructureAlgo.Java.nonleetcode.graph.questions.minimum.spanning.tree
 
 import  DataStructureAlgo.Java.nonleetcode.graph.graph.IWeightedGraph;
 import DataStructureAlgo.Java.nonleetcode.graph.graph.types.Edges;
-import  DataStructureAlgo.Java.nonleetcode.graph.graph.types.WeightedDirectedGraph;
 import DataStructureAlgo.Java.nonleetcode.graph.graph.types.WeightedUnDirectedGraph;
 
 import java.util.List;
