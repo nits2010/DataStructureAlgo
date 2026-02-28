@@ -72,6 +72,10 @@ public class DijkstraShortestPath implements IShortestPath {
             final CostNode node = pq.poll();
             int u = node.vertex;
 
+            if (node.cost > cost[u]){
+                continue; 
+            }
+            
             settled.add(node.vertex);
 
             //…..b) For every adjacent vertex v of u, distance value is more
