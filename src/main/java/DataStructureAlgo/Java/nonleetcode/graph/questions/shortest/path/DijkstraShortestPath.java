@@ -26,6 +26,59 @@ import java.util.*;
  * Space Complexity: O(V)
  * <p>
  * 
+ * 
+ * Excellent question. This is senior-level nuance.
+
+---
+
+## 1️⃣ When to Use `visited`
+
+Use `visited` when:
+
+* You only care about the **first time a node is finalized**
+* After popping from heap, cost is guaranteed minimal
+* You don’t need to relax nodes multiple times
+
+Typical:
+
+* Classic Dijkstra with no need to update better paths later
+
+`visited` = finalization marker
+
+---
+
+## 2️⃣ When to Use `dist` (Distance Map)
+
+Use `dist` when:
+
+* A node might be reached multiple times with **better cost later**
+* You must compare `newCost < dist[node]`
+* You want standard Dijkstra relaxation
+
+Typical:
+
+* Sum-based shortest path
+* Graphs with many alternative paths
+
+`dist` = best-known cost tracker
+
+---
+
+### Key Distinction
+
+If correctness depends on comparing old vs new costs → use `dist`.
+
+If first pop guarantees optimal → `visited` alone is enough.
+
+---
+
+Now sharp test:
+
+In THIS problem, could a cell ever be reached later with a strictly smaller cost than the first time it is popped?
+
+Yes or no?
+
+ * 
  */
 public class DijkstraShortestPath implements IShortestPath {
 

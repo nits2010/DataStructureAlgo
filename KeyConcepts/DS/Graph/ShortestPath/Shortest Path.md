@@ -84,6 +84,48 @@ def dijkstra(graph, start, goal):
 
 ---
 
+## 1️⃣ When to Use `visited`
+
+Use `visited` when:
+
+* You only care about the **first time a node is finalized**
+* After popping from heap, cost is guaranteed minimal
+* You don’t need to relax nodes multiple times
+
+Typical:
+* Classic Dijkstra with no need to update better paths later
+
+`visited` = finalization marker
+
+---
+
+## 2️⃣ When to Use `dist` (Distance Map)
+
+Use `dist` when:
+
+* A node might be reached multiple times with **better cost later**
+* You must compare `newCost < dist[node]`
+* You want standard Dijkstra relaxation
+
+Typical:
+
+* Sum-based shortest path
+* Graphs with many alternative paths
+
+`dist` = best-known cost tracker
+
+---
+
+### Key Distinction
+
+If correctness depends on comparing old vs new costs → use `dist`.
+
+If first pop guarantees optimal → `visited` alone is enough.
+
+---
+
+---
+
 ## 4. Weighted (Targeted): A* Search
 
 **Mental Model:** Dijkstra with a "Compass." It calculates $f(n) = g(n) + h(n)$.
