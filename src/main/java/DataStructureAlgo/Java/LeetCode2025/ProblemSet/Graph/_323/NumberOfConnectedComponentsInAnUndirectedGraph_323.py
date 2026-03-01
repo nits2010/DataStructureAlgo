@@ -80,7 +80,8 @@ from helpers.common_methods import CommonMethods
 #  Where X is time taken in find/union operation ; is the Inverse Ackermann function (nearly constant).
 class Solution_UnionFind:
     """
-        The Island AnalogyStart: You have $n$ separate islands. 
+        The Island Analogy
+        Start: You have n separate islands. 
         At the beginning, the number of "connected groups" is exactly n.
         Action: Every time you build a bridge between two islands that were not already connected, you have successfully merged two separate groups into one.
         Result: Because two groups became one, your total count of separate groups decreases by 1.
