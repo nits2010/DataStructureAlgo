@@ -22,6 +22,7 @@ For Java implementations; check here
 ## 2. Unweighted: Breadth-First Search (BFS)
 
 **Mental Model:** A ripple in a pond. It moves one unit in all directions simultaneously. The first time you "touch" the target, you are guaranteed to have used the fewest edges.
+**Time complexity:** ```O(V + E)```
 
 ```python
 from collections import deque
@@ -50,7 +51,7 @@ def bfs_shortest_path(graph, start, goal):
 ## 3. Weighted (Positive): Dijkstra's Algorithm
 
 **Mental Model:** A "Greedy" explorer. Instead of moving one *hop* at a time, it always explores the node that is *currently* the cheapest to reach from the start.
-
+**Time complexity:** ```O(E.log V)```
 ```python
 import heapq
 
@@ -129,6 +130,7 @@ If first pop guarantees optimal → `visited` alone is enough.
 ## 4. Weighted (Targeted): A* Search
 
 **Mental Model:** Dijkstra with a "Compass." It calculates $f(n) = g(n) + h(n)$.
+**Time complexity:** ```O(E.log V)```
 
 * $g(n)$: Distance from start.
 * $h(n)$: Estimated distance to goal (Heuristic).
@@ -165,6 +167,7 @@ def a_star(grid, start, goal):
 ## 5. Negative Weights: Bellman-Ford
 
 **Mental Model:** The "Pessimist." It assumes any edge could be improved, so it relaxes every single edge in the graph $V-1$ times. If it can still relax an edge on the $V^{th}$ try, you have a **Negative Cycle** (infinite money loop).
+**Time complexity:** ```O(V \times E)```
 
 ```python
 def bellman_ford(vertices, edges, start):

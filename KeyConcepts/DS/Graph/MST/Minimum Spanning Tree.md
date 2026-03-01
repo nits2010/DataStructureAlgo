@@ -37,6 +37,7 @@ Kruskal’s is an **edge-centric** approach. You sort *all* edges in the entire 
 * **Best for:** **Sparse Graphs** (where the number of edges $E$ is relatively small, closer to $V$).
 * **Key Tool:** **Disjoint Set Union (DSU)** / Union-Find (to detect cycles quickly).
 * **Behavior:** It grows a "forest." You might have several disconnected mini-trees all over the graph that eventually merge into one giant MST at the very end.
+* **Time Complexity:** ```O(E \log E)```
 
 ### Implementations: 
 - KruskalMinimumSpanningTree.java
@@ -95,6 +96,7 @@ Prim’s is like a **localized search**. You start at one vertex (the seed) and 
 * **Best for:** **Dense Graphs** (where the number of edges $E$ is close to the number of vertices squared, $V^2$).
 * **Key Tool:** A **Priority Queue** (to find the next cheapest vertex).
 * **Behavior:** It always maintains a single, connected component. At every step, you have a valid (but incomplete) tree.
+* **Time Complexity:** ```O(E.log V)```
 
 ### Implementation
 - PrimMinimumSpanningTree.java
@@ -105,7 +107,7 @@ Prim’s is very similar to Dijkstra’s. Instead of updating distances from a *
 **The Logic:**
 
 1. Start with an arbitrary node.
-2. Use a Priority Queue to track the cheapest edge that connects a node *inside* the MST to a node *outside* the MST.
+2. Use a Priority Queue to track the cheapest edge that connects current node (neighbours) [ as *inside* the MST to a node *outside* the MST ].
 3. Add that edge and repeat.
 
 ```python
