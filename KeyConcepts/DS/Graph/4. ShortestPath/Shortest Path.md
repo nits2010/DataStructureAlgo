@@ -98,6 +98,7 @@ Use `visited` when:
 
 * You only care about the **first time a node is finalized**
 * After popping from heap, cost is guaranteed minimal
+* When its not about the sum of cost of path, its about other function like max(cost) of path. 
 * You don’t need to relax nodes multiple times
 
 Typical:
