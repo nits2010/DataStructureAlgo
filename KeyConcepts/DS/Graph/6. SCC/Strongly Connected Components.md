@@ -1,6 +1,7 @@
 # Strongly Connected Components (SCC): Finding the Loops
 
 In a directed graph, a **Strongly Connected Component (SCC)** is a portion of the graph where every node is reachable from every other node in that same portion. Think of it as a "mutual friendship" circle: if you're in the circle, you can reach anyone else, and they can reach you.
+- Finding Strongly Connected Components (SCCs) is like identifying "friend groups" in a social network where everyone can eventually reach everyone else through a chain of follows. In technical terms, an SCC is a maximal subgraph where every vertex is reachable from every other vertex.
 
 This is a high-level interview topic, often used for problems involving **social networks** (finding tight-knit communities) or **web crawlers** (finding sets of pages that link back and forth).
 
@@ -86,6 +87,115 @@ Imagine two SCCs, **A** and **B**, with an edge pointing from **A $\to$ B**.
 | **Space** | $O(V + E)$ | Storing the reversed graph and the recursion stack. |
 
 ---
+### 5. How Tarjan’s Algorithm Works
+
+Tarjan’s relies on the concept of **DFS Trees**. As we traverse the graph, we keep track of when we first visit a node and the "highest" node (closest to the root) it can reach.
+
+### Key Variables
+
+* **Discovery Time:** The order in which a node was first visited.
+* **Low Link Value:** The smallest discovery time reachable from that node (including itself) in the DFS tree, using back-edges to nodes still in the current exploration stack.
+* **Stack:** A list of nodes currently being explored that could potentially form an SCC.
+
+### The Logic
+
+1. Start a DFS for every unvisited node.
+2. Upon visiting a node, set its discovery time and low-link value to the current timer. Add it to the stack.
+3. For every neighbor:
+* If it hasn't been visited, recurse. After returning, update the current node's low-link value: `low[u] = min(low[u], low[v])`.
+* If it's already on the stack, it's a back-edge! Update: `low[u] = min(low[u], disc[v])`.
+
+
+4. If a node’s **low-link value equals its discovery time**, it is the "root" of an SCC. Pop everything off the stack until you reach that node—those popped nodes form one complete SCC.
+
+---
+
+## Python Implementation
+
+Here is a clean, modular implementation of Tarjan's.
+
+```python
+from collections import defaultdict
+
+class TarjanSCC:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = defaultdict(list)
+        self.time = 0
+        self.sccs = []
+
+    def add_edge(self, u, v):
+        self.graph[u].append(v)
+
+    def find_sccs(self):
+        # Discovery time and Low-link values initialized to -1
+        disc = [-1] * self.V
+        low = [-1] * self.V
+        stack_member = [False] * self.V
+        st = []
+
+        for i in range(self.V):
+            if disc[i] == -1:
+                self._scc_util(i, low, disc, stack_member, st)
+        
+        return self.sccs
+
+    def _scc_util(self, u, low, disc, stack_member, st):
+        disc[u] = self.time
+        low[u] = self.time
+        self.time += 1
+        st.append(u)
+        stack_member[u] = True
+
+        for v in self.graph[u]:
+            # If v is not visited, recurse
+            if disc[v] == -1:
+                self._scc_util(v, low, disc, stack_member, st)
+                low[u] = min(low[u], low[v])
+            
+            # If v is in the stack, it's a back-edge
+            elif stack_member[v]:
+                low[u] = min(low[u], disc[v])
+
+        # If u is a root node, pop the stack and generate an SCC
+        if low[u] == disc[u]:
+            current_scc = []
+            while True:
+                w = st.pop()
+                stack_member[w] = False
+                current_scc.append(w)
+                if u == w:
+                    break
+            self.sccs.append(current_scc)
+
+# Example Usage:
+g = TarjanSCC(5)
+g.add_edge(1, 0)
+g.add_edge(0, 2)
+g.add_edge(2, 1)
+g.add_edge(0, 3)
+g.add_edge(3, 4)
+
+print("Strongly Connected Components:")
+print(g.find_sccs())
+
+```
+
+---
+
+## Complexity Analysis
+
+| Metric | Complexity | Reason |
+| --- | --- | --- |
+| **Time** | $O(V + E)$ | Each node and edge is visited exactly once during the DFS. |
+| **Space** | $O(V)$ | Required for the recursion stack, the SCC stack, and the tracking arrays. |
+
+### Why use Tarjan's over Kosaraju's?
+
+While both have the same asymptotic complexity, Kosaraju’s requires **two** DFS passes (one on the original graph and one on the transposed graph). Tarjan’s does it in **one**, making it slightly faster in practice and easier to implement if you want to avoid "reversing" the entire graph.
+
+---
+
 
 ## 5. Summary: SCC Interview Cheat Sheet
 
