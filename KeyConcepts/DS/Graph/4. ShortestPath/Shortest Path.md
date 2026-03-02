@@ -151,8 +151,9 @@ def heuristic(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 def a_star(grid, start, goal):
-    pq = [(0 + heuristic(start, goal), 0, start)] # (f_score, g_score, node)
-    g_scores = {start: 0}
+    g_scores = {start: 0} # Just like the distance[start]=0
+    f_score = g_scores[start] + heuristic(start, goal)
+    pq = [(f_score, g_scores[start], start)] # (f_score, g_score, node)
     
     while pq:
         f, g, curr = heapq.heappop(pq)
@@ -160,8 +161,8 @@ def a_star(grid, start, goal):
         if curr == goal:
             return g
             
-        for neighbor in get_neighbors(curr, grid):
-            new_g = g + 1 # Assuming cost 1 per move
+        for neighbor, cost in get_neighbors(curr, grid):
+            new_g = g + cost 
             if new_g < g_scores.get(neighbor, float('inf')):
                 g_scores[neighbor] = new_g
                 f_score = new_g + heuristic(neighbor, goal)
