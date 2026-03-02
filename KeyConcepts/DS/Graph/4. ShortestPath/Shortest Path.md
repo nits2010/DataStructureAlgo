@@ -171,6 +171,42 @@ def a_star(grid, start, goal):
 
 ```
 
+### Why the Heuristic is tied to Coordinates
+
+A heuristic is simply a "best guess" of the cost to get to the goal. For that guess to be accurate, the algorithm needs to know the **geometry** of your graph.
+
+* **On a Grid:** Your graph is geometric by nature. Each node has a position in space, so we can use mathematical distance formulas like:
+* **Manhattan Distance:** ```$h(n) = |x_{curr} - x_{goal}| + |y_{curr} - y_{goal}|``` (Used for 4-directional movement).
+* **Euclidean Distance:** ```h(n) = sqrt{(x_{curr} - x_{goal})^2 + (y_{curr} - y_{goal})^2}``` (Used for 8-directional or "as the crow flies" movement).
+
+
+* **In an Abstract Graph:** If your nodes are just IDs (like `'A'`, `'B'`, `'NYC'`, `'London'`), they have no inherent geometric distance to a goal. **You cannot use Manhattan or Euclidean distance because the nodes don't exist in a 2D plane.**
+
+---
+
+### What do you do if you don't have coordinates?
+
+If you are working with an abstract graph (a network of connected nodes with no $(x, y)$ positions), you have two choices for your heuristic:
+
+#### 1. Use a "Zero Heuristic" ($h = 0$)
+
+If you define `heuristic(a, b) = 0`, then the A* algorithm **mathematically becomes Dijkstra’s Algorithm.** A* is essentially a generalized version of Dijkstra that uses the heuristic to "pull" the search toward the goal. If the heuristic is 0, it doesn't pull in any direction, so it searches equally in all directions, just like Dijkstra.
+
+#### 2. Use a "Domain-Specific" Heuristic
+
+If you are building a mapping app, your nodes are cities. You don't have a grid, but you **do** have the GPS coordinates (Latitude/Longitude) of those cities.
+In this case, you would create a `heuristic` function that calculates the **Great-Circle Distance** (Haversine formula) between two sets of lat/long coordinates.
+
+---
+
+### Comparison: When to use what?
+
+| Graph Type | Heuristic Strategy | Algorithm Behavior |
+| --- | --- | --- |
+| **Grid / Maze** | Manhattan/Euclidean distance | Efficient A* (Directed search) |
+| **Abstract Network** | $h(n) = 0$ | Dijkstra (Unbiased search) |
+| **Maps (GPS)** | Haversine distance | Efficient A* (Directed search) |
+
 ---
 
 ## 5. Negative Weights: Bellman-Ford
