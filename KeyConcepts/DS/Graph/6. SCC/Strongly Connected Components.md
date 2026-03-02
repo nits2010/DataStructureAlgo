@@ -5,12 +5,15 @@ In a directed graph, a **Strongly Connected Component (SCC)** is a portion of th
 
 This is a high-level interview topic, often used for problems involving **social networks** (finding tight-knit communities) or **web crawlers** (finding sets of pages that link back and forth).
 
+Two algorithms
+- Kosaraju’s Algorithm
+- Tarjan’s Algorithm
 ---
 
 ## 1. The Strategy: Kosaraju’s Algorithm
 
 While Tarjan’s algorithm exists, **Kosaraju’s** is the preferred interview choice because it uses two standard DFS passes, making it easier to explain and debug.
-
+- [Video](https://www.youtube.com/watch?v=QlGuaHT1lzA)
 **The "Magic" Logic:**
 If you reverse all the edges in a graph, the SCCs remain exactly the same. However, the connections *between* different SCCs are reversed. We use this to "trap" our DFS within one SCC at a time.
 
@@ -87,10 +90,10 @@ Imagine two SCCs, **A** and **B**, with an edge pointing from **A $\to$ B**.
 | **Space** | $O(V + E)$ | Storing the reversed graph and the recursion stack. |
 
 ---
-### 5. How Tarjan’s Algorithm Works
+### 5.  The Strategy: Tarjan’s Algorithm 
 
 Tarjan’s relies on the concept of **DFS Trees**. As we traverse the graph, we keep track of when we first visit a node and the "highest" node (closest to the root) it can reach.
-
+- [Video](https://www.youtube.com/watch?v=_1TDxihjtoE)
 ### Key Variables
 
 * **Discovery Time:** The order in which a node was first visited.
