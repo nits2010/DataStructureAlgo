@@ -171,7 +171,7 @@ def a_star(grid, start, goal):
 
 ```
 
-### Why the Heuristic is tied to Coordinates
+### Heuristic
 
 A heuristic is simply a "best guess" of the cost to get to the goal. For that guess to be accurate, the algorithm needs to know the **geometry** of your graph.
 
