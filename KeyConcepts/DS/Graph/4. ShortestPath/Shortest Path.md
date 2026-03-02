@@ -61,25 +61,32 @@ def dijkstra(graph, start, goal):
     distances = {node: float('inf') for node in graph}
     distances[start] = 0
     
+    # Track the path: {child_node: parent_node}
+    predecessors = {node: None for node in graph}
+    
     while pq:
         curr_dist, curr_node = heapq.heappop(pq)
         
         if curr_node == goal:
-            return curr_dist
+            # Reconstruct the path by backtracking
+            path = []
+            while curr_node is not None:
+                path.append(curr_node)
+                curr_node = predecessors[curr_node]
+            return path[::-1], curr_dist # Return reversed path and total cost
             
-        # If we found a shorter path already, skip
         if curr_dist > distances[curr_node]:
             continue
             
         for neighbor, weight in graph[curr_node].items():
             distance = curr_dist + weight
             
-            # If this new path is shorter, update and push to PQ
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
+                predecessors[neighbor] = curr_node  # Record the parent
                 heapq.heappush(pq, (distance, neighbor))
                 
-    return -1
+    return None, float('inf')
 
 ```
 
