@@ -212,7 +212,7 @@ In this case, you would create a `heuristic` function that calculates the **Grea
 ## 5. Negative Weights: Bellman-Ford
 
 **Mental Model:** The "Pessimist." It assumes any edge could be improved, so it relaxes every single edge in the graph $V-1$ times. If it can still relax an edge on the $V^{th}$ try, you have a **Negative Cycle** (infinite money loop).
-**Time complexity:** ```O(V \times E)```
+**Time complexity:** ```O(V.E)```
 
 ```python
 def bellman_ford(vertices, edges, start):
