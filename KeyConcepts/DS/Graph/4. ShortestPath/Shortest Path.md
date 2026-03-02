@@ -67,7 +67,7 @@ def dijkstra(graph, start, goal):
         if curr_node == goal:
             return curr_dist
             
-        # If we found a longer path already, skip
+        # If we found a shorter path already, skip
         if curr_dist > distances[curr_node]:
             continue
             
