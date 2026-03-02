@@ -3,7 +3,7 @@
 
 ## Eulerian Path
 
-An **Eulerian Path** is a path that uses every edge of a graph **exactly once** (vertices may be revisited)[1][2][3].
+An **Eulerian Path** is a path that uses every edge of a graph **exactly once** (vertices may be revisited).
 
 ### Undirected Graphs
 
@@ -11,7 +11,7 @@ An **Eulerian Path** is a path that uses every edge of a graph **exactly once** 
    - The graph is connected (ignoring vertices of degree 0)
    - **Exactly zero or two vertices** have an odd degree
    - If zero, a **tour (cycle)** also exists
-   - If two, only a path (not a cycle) exists[1][2]
+   - If two, only a path (not a cycle) exists
 
 ### Directed Graphs
 
@@ -19,11 +19,11 @@ An **Eulerian Path** is a path that uses every edge of a graph **exactly once** 
    - The graph is strongly connected
    - **At most one vertex** has out-degree 1 greater than in-degree (start)
    - **At most one vertex** has in-degree 1 greater than out-degree (end)
-   - All other vertices have equal in-degree and out-degree[3]
+   - All other vertices have equal in-degree and out-degree
 
 ## Eulerian Tour (Cycle)
 
-An **Eulerian Tour** (or Circuit) is an Eulerian path that starts and ends at the same vertex[1][2][3].
+An **Eulerian Tour** (or Circuit) is an Eulerian path that starts and ends at the same vertex.
 
 ### Undirected Graphs
 
@@ -48,9 +48,3 @@ An **Eulerian Tour** (or Circuit) is an Eulerian path that starts and ends at th
 
 ---
 
-**References:**  
-[1] GeeksforGeeks  
-[2] Wikipedia  
-[3] GTOI Book
-
-![img_1.png](img_1.png)

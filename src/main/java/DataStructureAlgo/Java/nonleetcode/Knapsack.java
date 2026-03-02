@@ -273,7 +273,7 @@ class KnapsackFractional {
                     bagSize -= vw[i].w;
                     maxVal += vw[i].v;
                 } else {
-                    //We can take complete item, take the partial item
+                    //We can't take complete item, take the partial item
                     double partOf = (double) bagSize / vw[i].w;
                     maxVal += (int) (vw[i].v * partOf);
                     break;
