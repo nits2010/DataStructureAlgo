@@ -51,7 +51,6 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
  * -----
  * @Amazon
  * @Expedia
- * @Microsoft
  * @Uber
  * @Google
  * @Adobe
