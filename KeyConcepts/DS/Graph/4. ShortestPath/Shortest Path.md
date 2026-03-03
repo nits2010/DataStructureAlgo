@@ -61,25 +61,32 @@ def dijkstra(graph, start, goal):
     distances = {node: float('inf') for node in graph}
     distances[start] = 0
     
+    # Track the path: {child_node: parent_node}
+    predecessors = {node: None for node in graph}
+    
     while pq:
         curr_dist, curr_node = heapq.heappop(pq)
         
         if curr_node == goal:
-            return curr_dist
+            # Reconstruct the path by backtracking
+            path = []
+            while curr_node is not None:
+                path.append(curr_node)
+                curr_node = predecessors[curr_node]
+            return path[::-1], curr_dist # Return reversed path and total cost
             
-        # If we found a longer path already, skip
         if curr_dist > distances[curr_node]:
             continue
             
         for neighbor, weight in graph[curr_node].items():
             distance = curr_dist + weight
             
-            # If this new path is shorter, update and push to PQ
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
+                predecessors[neighbor] = curr_node  # Record the parent
                 heapq.heappush(pq, (distance, neighbor))
                 
-    return -1
+    return None, float('inf')
 
 ```
 
@@ -91,6 +98,7 @@ Use `visited` when:
 
 * You only care about the **first time a node is finalized**
 * After popping from heap, cost is guaranteed minimal
+* When its not about the sum of cost of path, its about other function like max(cost) of path. 
 * You don’t need to relax nodes multiple times
 
 Typical:
@@ -143,8 +151,9 @@ def heuristic(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 def a_star(grid, start, goal):
-    pq = [(0 + heuristic(start, goal), 0, start)] # (f_score, g_score, node)
-    g_scores = {start: 0}
+    g_scores = {start: 0} # Just like the distance[start]=0
+    f_score = g_scores[start] + heuristic(start, goal)
+    pq = [(f_score, g_scores[start], start)] # (f_score, g_score, node)
     
     while pq:
         f, g, curr = heapq.heappop(pq)
@@ -152,8 +161,8 @@ def a_star(grid, start, goal):
         if curr == goal:
             return g
             
-        for neighbor in get_neighbors(curr, grid):
-            new_g = g + 1 # Assuming cost 1 per move
+        for neighbor, cost in get_neighbors(curr, grid):
+            new_g = g + cost 
             if new_g < g_scores.get(neighbor, float('inf')):
                 g_scores[neighbor] = new_g
                 f_score = new_g + heuristic(neighbor, goal)
@@ -162,12 +171,48 @@ def a_star(grid, start, goal):
 
 ```
 
+### Heuristic
+
+A heuristic is simply a "best guess" of the cost to get to the goal. For that guess to be accurate, the algorithm needs to know the **geometry** of your graph.
+
+* **On a Grid:** Your graph is geometric by nature. Each node has a position in space, so we can use mathematical distance formulas like:
+* **Manhattan Distance:** ```$h(n) = |x_{curr} - x_{goal}| + |y_{curr} - y_{goal}|``` (Used for 4-directional movement).
+* **Euclidean Distance:** ```h(n) = sqrt{(x_{curr} - x_{goal})^2 + (y_{curr} - y_{goal})^2}``` (Used for 8-directional or "as the crow flies" movement).
+
+
+* **In an Abstract Graph:** If your nodes are just IDs (like `'A'`, `'B'`, `'NYC'`, `'London'`), they have no inherent geometric distance to a goal. **You cannot use Manhattan or Euclidean distance because the nodes don't exist in a 2D plane.**
+
+---
+
+### What do you do if you don't have coordinates?
+
+If you are working with an abstract graph (a network of connected nodes with no $(x, y)$ positions), you have two choices for your heuristic:
+
+#### 1. Use a "Zero Heuristic" ($h = 0$)
+
+If you define `heuristic(a, b) = 0`, then the A* algorithm **mathematically becomes Dijkstra’s Algorithm.** A* is essentially a generalized version of Dijkstra that uses the heuristic to "pull" the search toward the goal. If the heuristic is 0, it doesn't pull in any direction, so it searches equally in all directions, just like Dijkstra.
+
+#### 2. Use a "Domain-Specific" Heuristic
+
+If you are building a mapping app, your nodes are cities. You don't have a grid, but you **do** have the GPS coordinates (Latitude/Longitude) of those cities.
+In this case, you would create a `heuristic` function that calculates the **Great-Circle Distance** (Haversine formula) between two sets of lat/long coordinates.
+
+---
+
+### Comparison: When to use what?
+
+| Graph Type | Heuristic Strategy | Algorithm Behavior |
+| --- | --- | --- |
+| **Grid / Maze** | Manhattan/Euclidean distance | Efficient A* (Directed search) |
+| **Abstract Network** | $h(n) = 0$ | Dijkstra (Unbiased search) |
+| **Maps (GPS)** | Haversine distance | Efficient A* (Directed search) |
+
 ---
 
 ## 5. Negative Weights: Bellman-Ford
 
 **Mental Model:** The "Pessimist." It assumes any edge could be improved, so it relaxes every single edge in the graph $V-1$ times. If it can still relax an edge on the $V^{th}$ try, you have a **Negative Cycle** (infinite money loop).
-**Time complexity:** ```O(V \times E)```
+**Time complexity:** ```O(V.E)```
 
 ```python
 def bellman_ford(vertices, edges, start):
