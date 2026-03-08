@@ -98,7 +98,7 @@ class Solution_ExpandCenter:
 
         n = len(s)
 
-        def is_palindrome(left, right):
+        def update_max_pailndrome_length(left, right):
             nonlocal start, max_length
             while left >= 0 and right < n and s[left] == s[right]:
                 if max_length < right - left + 1:
@@ -114,12 +114,12 @@ class Solution_ExpandCenter:
             left = center - 1
             right = center + 1
 
-            is_palindrome(left, right)
+            update_max_pailndrome_length(left, right)
 
             # even length
             left = center - 1
             right = center
-            is_palindrome(left, right)
+            update_max_pailndrome_length(left, right)
 
         return s[start : start + max_length]
 
