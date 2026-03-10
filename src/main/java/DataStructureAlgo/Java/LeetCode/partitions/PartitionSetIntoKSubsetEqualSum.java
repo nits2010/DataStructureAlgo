@@ -132,7 +132,9 @@ public class PartitionSetIntoKSubsetEqualSum {
     /**
     *     Intuition
 
-As even when k = 2, the problem is a "Subset Sum" problem which is known to be NP-hard, (and because the given input limits are low,) our solution will focus on exhaustive search. A natural approach is to simulate the k groups (disjoint subsets of nums). For each number in nums, we’ll check whether putting it in the i-th group solves the problem. We can check those possibilities by recursively searching.
+As even when k = 2, the problem is a "Subset Sum" problem which is known to be NP-hard, (and because the given input limits are low,) our solution will focus on exhaustive search. 
+A natural approach is to simulate the k groups (disjoint subsets of nums). For each number in nums, we’ll check whether putting it in the i-th group solves the problem. 
+We can check those possibilities by recursively searching.
 
 Algorithm
 
