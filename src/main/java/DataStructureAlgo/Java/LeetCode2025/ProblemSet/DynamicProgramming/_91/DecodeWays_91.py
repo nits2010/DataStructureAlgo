@@ -104,6 +104,53 @@ from typing import List, Optional, Dict, Any
 from helpers.common_methods import CommonMethods
 
 
+class Solution_BottomUp_Optimized:
+    def numDecodings(self, s: str) -> int:
+        """
+            Given constraint of the problem where A->1 and Z->26 we can only map either single digit(1-9) or two digit(10-26) to alphabet. 
+        Means, we only try either of the case. 
+
+        Now, we can divide the given string keeping above constraint in mind,
+        1. Count decoding with single digit ( avoding "0" ) 
+        2. Count decoding with two digit    
+            only two possiblities
+                10-19 -> first digit is 1 and second is from [1,9]
+                20-26 -> first digit is 2 and second is [1,6] only. 
+
+        Since many overlapping combination, memo it. Top Down
+
+        memo[i] = denotes the decoding ways till ith index s[:i]
+                = 1 ; i == 0 ; empty string
+                = 1 ; i == 1 ; only 1 length string, only 1 way to decode
+                = memo[i] + memo[i-1] + memo[i-2] if (i-1,i-2) form a valid letter 
+
+        Time: O(n) we touch each part only 2 time max (either single digit or 2 digit combination)
+        Space: O(1)
+
+        """
+        n = len(s)
+        dp0, dp1 = 1, 0
+
+        if s[0] != "0":
+            dp1 = 1
+
+        for i in range(1, n):
+            curr = 0
+            a, b = s[i - 1], s[i]
+
+            # single digit
+            if b != "0":
+                curr += dp1
+
+            # double digit
+            if 10 <= int(a + b) <= 26:
+                curr += dp0
+
+            dp0, dp1 = dp1, curr
+
+        return dp1
+
+
 class Solution_BottomUp:
     def numDecodings(self, s: str) -> int:
         """
