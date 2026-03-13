@@ -1,5 +1,5 @@
 # Pattern 15: 0-1 Knapsack (Dynamic Programming)
-
+Different dynamic progrming pattern https://leetcode.com/discuss/post/458695/dynamic-.programming-patterns-by-aatalyk-pmgr/
 from this [course](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews)
 | |
 | --------------------------------------------------------------------------------- |
