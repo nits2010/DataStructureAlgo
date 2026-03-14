@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-24
+ * Question Title: Minimum Possible Size Array Given Rules Removing Elements
+ * Link: https://www.geeksforgeeks.org/find-minimum-possible-size-of-array-with-given-rules-for-removal/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-minimum-possible-size-of-array-with-given-rules-for-removal/
  * <p>
  * Given an array of numbers and a constant k, minimize size of array with following rules for removing elements.
@@ -24,7 +27,26 @@ import java.util.Arrays;
  * Input:  arr[] = {2, 3, 4, 7, 6, 4}, k = 1
  * Output: 3
  * We can only remove 2 3 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumPossibleSizeArrayGivenRulesRemovingElements {
 
     public static void main(String []args) {

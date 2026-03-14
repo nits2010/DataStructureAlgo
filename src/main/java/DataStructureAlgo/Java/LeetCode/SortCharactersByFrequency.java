@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-23
+ * Question Title: Sort Characters By Frequency
+ * Link: https://leetcode.com/problems/sort-characters-by-frequency/
+ * Description:
  * Description: https://leetcode.com/problems/sort-characters-by-frequency/
  * Given a string, sort it in decreasing order based on the frequency of characters.
  * <p>
@@ -45,7 +48,26 @@ import java.util.*;
  * https://leetcode.com/problems/sort-characters-by-frequency/discuss/365179/Blueprint-to-100-or-Optimisation-or-38-ms-to-2ms-or-5-Solution-or-optimisation-step-by-step
  * <p>
  * {@link DataStructureAlgo.Java.companyWise.intuit.SortStringBasedOnFrequencyAndLexical}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortCharactersByFrequency {
 
     public static void main(String[] args) {

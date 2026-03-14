@@ -8,6 +8,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Walls Gates
+ * Link: https://leetcode.ca/all/286.html
+ * Description:
  * Description: https://leetcode.ca/all/286.html
  * 286.Walls and Gates
  * <p>
@@ -29,8 +32,25 @@ import java.util.Queue;
  * 0  -1   3   4
  * <p>
  * http://buttercola.blogspot.com/2015/09/leetcode-walls-and-gates.html
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class WallsGates {
 

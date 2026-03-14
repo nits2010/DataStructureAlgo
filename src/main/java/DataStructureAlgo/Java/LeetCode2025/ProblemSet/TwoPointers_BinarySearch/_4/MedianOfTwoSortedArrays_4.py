@@ -1,3 +1,30 @@
+"""
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Median Of Two Sorted Arrays
+Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         """

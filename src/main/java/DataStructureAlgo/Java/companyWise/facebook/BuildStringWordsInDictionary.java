@@ -8,6 +8,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Build String Words In Dictionary
+ * Link: https://aonecode.com/facebook-phone-interview-questions-2019
+ * Description:
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Question: Can you break the given string into words, provided by a given hashmap of frequency of word as <word: n>
  * <p>
@@ -30,7 +33,26 @@ import java.util.Queue;
  * <p>
  * https://www.careercup.com/question?id=5158730799251456
  * https://leetcode.com/discuss/interview-question/338192/Any-one-can-help-me
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BuildStringWordsInDictionary {
 
     public static void main(String []args) {

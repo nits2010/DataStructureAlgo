@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 26/09/19
+ * Question Title: Word Ladder I
+ * Link: https://leetcode.com/problems/word-ladder/
+ * Description:
  * Description: https://leetcode.com/problems/word-ladder/
  * 127. Word Ladder [Medium]
  * Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
@@ -48,7 +51,26 @@ import java.util.*;
  * {@link WordLadderIBFSV2}
  * {@link WordLadderIBiDirectionBFSUsingRecursion}
  * {@link WordLadderIBiDirectionalBFS}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WordLadderI {
 
     public static void main(String[] args) {

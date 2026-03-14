@@ -3,12 +3,34 @@ package DataStructureAlgo.Java.companyWise.Amazon.PointLattice;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-07
+ * Question Title: Point Lattice Point After90Degree Right Turn
+ * Link: https://stackoverflow.com/questions/55482917/points-on-a-lattice
+ * Description:
  * Description: https://stackoverflow.com/questions/55482917/points-on-a-lattice
  * <p>
  * Hanna moves in a lattice where every point can be represented by a pair of integers.
  * She moves from point A to point B and then takes a turn 90 degrees right and starts moving till she reaches
  * the first point on the lattice. Find what's the point she would reach?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PointLatticePointAfter90DegreeRightTurn {
 
     public static void main(String []args) {

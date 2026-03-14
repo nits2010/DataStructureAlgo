@@ -3,9 +3,31 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 20/01/19
+ * Question Title: Minimum Possible Size Array
+ * Link: https://www.geeksforgeeks.org/find-minimum-possible-size-of-array-with-given-rules-for-removal/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/find-minimum-possible-size-of-array-with-given-rules-for-removal/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumPossibleSizeArray {
 
 

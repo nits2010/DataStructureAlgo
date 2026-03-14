@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: Shortest Palindrome_Minimum Number Character Appends Make String Palindrome
+ * Link: https://www.geeksforgeeks.org/minimum-number-appends-needed-make-string-palindrome/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-number-appends-needed-make-string-palindrome/
  * Minimum number of Appends needed to make a string palindrome
  * <p>
@@ -24,7 +27,26 @@ import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
  * by adding aa at the end of the string.
  * <p>
  * {@link ShortestPalindrome_MinimumNumberCharacterAddToFrontMakeStringPalindrome}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestPalindrome_MinimumNumberCharacterAppendsMakeStringPalindrome {
 
     public static void main(String[] args) {

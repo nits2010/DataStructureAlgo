@@ -3,10 +3,13 @@ package DataStructureAlgo.Java.LeetCode.graph;
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 /**
- * TODO : copy pasted
- * <p>
  * Author: Nitin Gupta
  * Date: 2019-09-06
+ * Question Title: Cherry Pickup
+ * Link: https://leetcode.com/problems/cherry-pickup/
+ * Description:
+ * TODO : copy pasted
+ * <p>
  * Description: https://leetcode.com/problems/cherry-pickup/
  * 741. Cherry Pickup [Hard]
  * <p>
@@ -39,7 +42,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Combination of {@link MinimumPathSum} & {@link DataStructureAlgo.Java.LeetCode.graph.unique.paths.UniquePathsII}
  * <p>
  * [UBER]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 class CherryPickup {
 
     public static void main(String[] args) {

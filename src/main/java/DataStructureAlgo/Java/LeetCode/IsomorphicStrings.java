@@ -7,6 +7,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: Isomorphic Strings
+ * Link: https://leetcode.com/problems/isomorphic-strings/
+ * Description:
  * Description:https://leetcode.com/problems/isomorphic-strings/
  * Given two strings s and t, determine if they are isomorphic.
  * <p>
@@ -29,7 +32,26 @@ import java.util.Map;
  * Output: true
  * Note:
  * You may assume both s and t have the same length.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IsomorphicStrings {
 
     public static void main(String[] args) {

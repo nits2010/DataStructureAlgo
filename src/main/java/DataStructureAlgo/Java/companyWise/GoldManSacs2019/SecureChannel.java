@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.GoldManSacs2019;
 /**
  * Author: Nitin Gupta
  * Date: 18/04/19
+ * Question Title: Secure Channel
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Carer cup Persons A and B uses an encryption based system for their conversation.
  * Each conversation message is encoded from the source and decode in
@@ -31,7 +34,26 @@ package DataStructureAlgo.Java.companyWise.GoldManSacs2019;
  * Output:
  * Open
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SecureChannel {
 
     static final String negResponse = "-1";

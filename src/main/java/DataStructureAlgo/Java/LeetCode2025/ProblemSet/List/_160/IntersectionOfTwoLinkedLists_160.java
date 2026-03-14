@@ -9,6 +9,7 @@ import java.util.Stack;
  * Date: 2024-07-26
  * Question Title: 160. Intersection of Two Linked Lists
  * Link: https://leetcode.com/problems/intersection-of-two-linked-lists/
+ * Description:
  * Description: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
  * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
  * <p>
@@ -70,7 +71,6 @@ import java.util.Stack;
  * <p>
  * Follow up: Could you write a solution that runs in O(m + n) time and use only O(1) memory?
  * <p>
- *
  * <p>
  * File reference
  * -----------
@@ -80,7 +80,6 @@ import java.util.Stack;
  * <p>
  * Tags
  * -----
- *
  * @easy
  * @HashTable
  * @LinkedList
@@ -106,6 +105,24 @@ import java.util.Stack;
  * @Tencent
  * @Uber
  * @Yahoo
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class IntersectionOfTwoLinkedLists_160 {

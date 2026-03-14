@@ -3,10 +3,32 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 26/04/19
+ * Question Title: Equal Xand Y
+ * Link: https://www.careercup.com/question?id=6194336212451328
+ * Description:
  * Description:
  * https://www.careercup.com/question?id=6194336212451328
- Given two numbers X and Y and a integer array. find the longest sub-array that contains equal number of X and Y.
+ * Given two numbers X and Y and a integer array. find the longest sub-array that contains equal number of X and Y.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class EqualXandY {
 
     public static void main(String[] args) {

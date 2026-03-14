@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Combination Sum I
+ * Link: https://leetcode.com/problems/combination-sum/
+ * Description:
  * Description: 39. Combination Sum
  * https://leetcode.com/problems/combination-sum/
  * Given a set of candidate numbers (candidates) (without duplicates) and a target number (target),
@@ -38,7 +41,26 @@ import java.util.List;
  * [2,3,3],
  * [3,5]
  * ]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CombinationSumI {
 
     public static void main(String[] args) {

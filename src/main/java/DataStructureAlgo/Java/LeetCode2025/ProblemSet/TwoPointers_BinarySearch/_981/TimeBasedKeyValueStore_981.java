@@ -5,8 +5,32 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Time Based Key Value Store
+ * Link: https://leetcode.com/problems/time-based-key-value-store/
+ * Description:
  * {@link TimeBasedKeyValueStore.java}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TimeBasedKeyValueStore_981 {
     
     class TimeMap {

@@ -6,6 +6,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-30
+ * Question Title: Longest Sub String K Unique Char
+ * Link: https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
+ * Description:
  * Description:https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
  * <p>
  * Given a string you need to print longest possible substring that has exactly M unique characters.
@@ -26,7 +29,26 @@ import java.util.Map;
  * "aaabbb", k = 3
  * There are only two unique characters, thus show error message.
  * [Google] [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestSubStringKUniqueChar {
 
     public static void main(String []args) {

@@ -9,87 +9,30 @@ import java.util.PriorityQueue;
 
 /**
  * Author: Nitin Gupta
- * Date: 8/31/2024
- * Question Title: 703. Kth Largest Element in a Stream
- * Link: https://leetcode.com/problems/kth-largest-element-in-a-stream/
- * Description: https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
- * You are part of a university admissions office and need to keep track of the kth highest test score from applicants in real-time. This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
- * <p>
- * You are tasked to implement a class which, for a given integer k, maintains a stream of test scores and continuously returns the kth highest test score after a new score has been submitted. More specifically, we are looking for the kth highest score in the sorted list of all scores.
- * <p>
- * Implement the KthLargest class:
- * <p>
- * KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of test scores nums.
- * int add(int val) Adds a new test score val to the stream and returns the element representing the kth largest element in the pool of test scores so far.
- * <p>
- * <p>
- * Example 1:
- * <p>
- * Input:
- * ["KthLargest", "add", "add", "add", "add", "add"]
- * [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
- * <p>
- * Output: [null, 4, 5, 5, 8, 8]
- * <p>
- * Explanation:
- * <p>
- * KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
- * kthLargest.add(3); // return 4
- * kthLargest.add(5); // return 5
- * kthLargest.add(10); // return 5
- * kthLargest.add(9); // return 8
- * kthLargest.add(4); // return 8
- * <p>
- * Example 2:
- * <p>
- * Input:
- * ["KthLargest", "add", "add", "add", "add"]
- * [[4, [7, 7, 7, 7, 8, 3]], [2], [10], [9], [9]]
- * <p>
- * Output: [null, 7, 7, 7, 8]
- * <p>
- * Explanation:
- * <p>
- * KthLargest kthLargest = new KthLargest(4, [7, 7, 7, 7, 8, 3]);
- * kthLargest.add(2); // return 7
- * kthLargest.add(10); // return 7
- * kthLargest.add(9); // return 7
- * kthLargest.add(9); // return 8
- * <p>
- * <p>
- * Constraints:
- * <p>
- * 0 <= nums.length <= 104
- * 1 <= k <= nums.length + 1
- * -104 <= nums[i] <= 104
- * -104 <= val <= 104
- * At most 104 calls will be made to add.
+ * Date: 2026-03-14
+ * Question Title: Kth Largest Element In A Stream
+ * Link: https://leetcode.com/problems/kth-largest-element-in-astream/
+ * Description:
  * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p>
+ * DP-BaseProblem {@link }
+ * <p><p>
  * Tags
  * -----
  *
- * @easy
- * @Tree
- * @Design
- * @BinarySearchTree
- * @Heap(PriorityQueue)
- * @BinaryTree
- * @DataStream <p>
- * <p>
+ <p><p>
  * Company Tags
  * -----
- * @Amazon
- * @Google
- * @Adobe
- * @Facebook
- * @LinkedIn
- * @Editorial
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KthLargestElementInAStream_703 {
 
     public static void main(String[] args) {

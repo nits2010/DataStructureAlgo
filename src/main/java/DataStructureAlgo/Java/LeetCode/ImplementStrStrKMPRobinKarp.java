@@ -7,6 +7,9 @@ import java.util.Objects;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: Implement Str Str KMP Robin Karp
+ * Link: https://leetcode.com/problems/implement-strstr/
+ * Description:
  * Description: https://leetcode.com/problems/implement-strstr/
  * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
  * <p>
@@ -29,7 +32,26 @@ import java.util.Objects;
  * For the purpose of this problem, we will return 0 when the needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
  * <p>
  * {@link KMP_KnuthMorrisPratt}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ImplementStrStrKMPRobinKarp {
 
     public static void main(String[] args) {

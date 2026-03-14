@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 04/04/19
+ * Question Title: String Odd Even Transformation In Place Order Keep
+ * Link: https://www.geeksforgeeks.org/an-in-place-algorithm-for-string-transformation/
+ * Description:
  * Description: https://www.geeksforgeeks.org/an-in-place-algorithm-for-string-transformation/
  * Given a string, move all even positioned elements to end of string. While moving elements, keep the relative order of all even positioned
  * and odd positioned elements same. For example, if the given string is “a1b2c3d4e5f6g7h8i9j1k2l3m4”,
@@ -34,7 +37,26 @@ import java.util.Arrays;
  * <p>
  * 5. Repeat step#4 until all sub-strings are joined. It is similar to k-way merging where first sub-string is joined with second. The resultant
  * is merged with third and so on.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringOddEvenTransformationInPlaceOrderKeep {
 
 

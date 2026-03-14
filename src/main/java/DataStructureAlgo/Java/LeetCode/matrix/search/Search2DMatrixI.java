@@ -6,6 +6,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Search2D Matrix I
+ * Link: https://leetcode.com/problems/search-a-2d-matrix/description/
+ * Description:
  * Description: 74. Search a 2D Matrix https://leetcode.com/problems/search-a-2d-matrix/description/
  * <p>
  * 74. Search a 2D Matrix
@@ -34,7 +37,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * ]
  * target = 13
  * Output: false
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Search2DMatrixI {
 
     public static void main(String[] args) {

@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Three Sum3Sum Closest
+ * Link: https://leetcode.com/problems/3sum-closest/
+ * Description:
  * Description: https://leetcode.com/problems/3sum-closest/
  * <p>
  * Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target.
@@ -19,7 +22,26 @@ import java.util.Arrays;
  * The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
  * <p>
  * Similar to {@link ThreeSum3Sum}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ThreeSum3SumClosest {
 
     public static void main(String[] args) {

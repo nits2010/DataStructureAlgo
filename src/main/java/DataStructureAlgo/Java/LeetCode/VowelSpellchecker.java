@@ -11,6 +11,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 15/09/19
+ * Question Title: Vowel Spellchecker
+ * Link: https://leetcode.com/problems/vowel-spellchecker/
+ * Description:
  * Description: https://leetcode.com/problems/vowel-spellchecker/
  * 966. Vowel Spellchecker [Medium]
  * Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.
@@ -48,9 +51,27 @@ import java.util.Map;
  * 1 <= wordlist[i].length <= 7
  * 1 <= queries[i].length <= 7
  * All strings in wordlist and queries consist only of english letters.
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class VowelSpellchecker {
     public static void main(String[] args) {
         test(new String[]{"KiTe", "kite", "hare", "Hare"}, new String[]{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"}, new String[]{"kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe"});

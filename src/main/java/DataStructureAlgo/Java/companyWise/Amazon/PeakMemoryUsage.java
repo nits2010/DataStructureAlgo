@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 03/10/19
+ * Question Title: Peak Memory Usage
+ * Link: https://www.careercup.com/question?id=5093738684612608
+ * Description:
  * Description:
  * <p>
  * Given memory usage of process with start, end and memory usage of this process. Find the interval where the memory usage is maximum.
@@ -33,7 +36,26 @@ import java.util.List;
  * Answer: 100207
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PeakMemoryUsage {
 
     public static void main(String[] args) {

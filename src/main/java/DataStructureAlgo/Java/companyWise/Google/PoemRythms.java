@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 11/05/19
+ * Question Title: Poem Rythms
+ * Link: TODO: Add Link
+ * Description:
  * Description: Given n number of lines in a poem, return all possible rhythm in a poem.
  * <p>
  * Twinkle, twinkle, little star, [A]
@@ -40,7 +43,26 @@ import java.util.Arrays;
  * <p>
  * Input: n = 4 (possible chars are A, B, C, D)
  * Output: 15 (we need to output all of them too)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PoemRythms {
 
     static int count = 0;

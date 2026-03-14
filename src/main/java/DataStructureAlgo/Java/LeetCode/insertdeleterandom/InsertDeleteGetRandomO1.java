@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 19/09/19
+ * Question Title: Insert Delete Get Random O1
+ * Link: https://leetcode.com/problems/insert-delete-getrandom-o1/
+ * Description:
  * Description: https://leetcode.com/problems/insert-delete-getrandom-o1/
  * 380. Insert Delete GetRandom O(1)
  * Medium
@@ -38,7 +41,26 @@ import java.util.*;
  * <p>
  * // Since 2 is the only number in the set, getRandom always return 2.
  * randomSet.getRandom();
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class InsertDeleteGetRandomO1 {
     public static void main(String[] args) {
         test1();

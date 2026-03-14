@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 15/12/18
+ * Question Title: Find Maximum Number With K Swaps
+ * Link: https://www.geeksforgeeks.org/find-maximum-number-possible-by-doing-at-most-k-swaps/
+ * Description:
  * Description:
  * Question: https://www.geeksforgeeks.org/find-maximum-number-possible-by-doing-at-most-k-swaps/
  * Example:
@@ -11,7 +14,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * <p>
  * Input: M = 254, K = 2
  * Output: 542
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FindMaximumNumberWithKSwaps {
 
     public static String nextMaxNumber(String givenNumber, int kSwaps) {

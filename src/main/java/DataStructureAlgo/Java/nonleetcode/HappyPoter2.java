@@ -3,6 +3,32 @@ package DataStructureAlgo.Java.nonleetcode;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Happy Poter2
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class HappyPoter2 {
 
 	public static String maximumDamage(int n, int spells[], int attacks[]) {

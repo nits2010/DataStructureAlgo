@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Chocolate Distribution Problem
+ * Link: https://www.geeksforgeeks.org/chocolate-distribution-problem/
+ * Description:
  * Description: https://www.geeksforgeeks.org/chocolate-distribution-problem/
  * <p>
  * Given an array of n integers where each value represents number of chocolates in a packet. Each packet can have variable number of chocolates. There are m students, the task is to distribute chocolate packets such that:
@@ -41,7 +44,26 @@ import java.util.Arrays;
  * between maximum and minimum.
  * <p>
  * [Flipkart]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ChocolateDistributionProblem {
     public static void main(String[] args) {
         test(new int[]{7, 3, 2, 4, 9, 12, 56}, 3, 2);

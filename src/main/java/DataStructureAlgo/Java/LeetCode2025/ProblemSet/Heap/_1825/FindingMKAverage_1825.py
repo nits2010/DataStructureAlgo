@@ -1,3 +1,30 @@
+"""
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Finding MK Average
+Link: https://leetcode.com/problems/finding-mkaverage/
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
 from collections import deque
 from sortedcontainers import SortedList
 

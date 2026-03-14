@@ -8,9 +8,31 @@ import java.util.stream.IntStream;
 /**
  * Author: Nitin Gupta
  * Date: 03/04/19
+ * Question Title: Word Ordering
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * similar to this {@link SortStringsBasedCustomAlphabetOrder}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WordOrdering {
 
     public static void main(String []args) {

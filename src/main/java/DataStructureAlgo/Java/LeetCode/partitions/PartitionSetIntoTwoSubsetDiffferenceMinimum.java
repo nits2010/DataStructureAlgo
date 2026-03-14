@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-25
+ * Question Title: Partition Set Into Two Subset Diffference Minimum
+ * Link: https://www.geeksforgeeks.org/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum/
  * Given a set of integers, the task is to divide it into two sets S1 and S2 such that the absolute difference between their sums is minimum.
@@ -18,7 +21,26 @@ import java.util.Arrays;
  * Explanation:
  * Subset1 = {1, 5, 6}, sum of Subset1 = 12
  * Subset2 = {11}, sum of Subset2 = 11
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PartitionSetIntoTwoSubsetDiffferenceMinimum {
 
     public static void main(String []args) {

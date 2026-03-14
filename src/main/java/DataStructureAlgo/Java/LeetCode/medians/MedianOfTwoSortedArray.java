@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.medians;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-19
+ * Question Title: Median Of Two Sorted Array
+ * Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
+ * Description:
  * Description: https://leetcode.com/problems/median-of-two-sorted-arrays/
  * 4. Median of Two Sorted Arrays
  * here are two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -23,7 +26,26 @@ package DataStructureAlgo.Java.LeetCode.medians;
  * nums2 = [3, 4]
  * <p>
  * The median is (2 + 3)/2 = 2.5
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MedianOfTwoSortedArray {
 
     public static void main(String[] args) {

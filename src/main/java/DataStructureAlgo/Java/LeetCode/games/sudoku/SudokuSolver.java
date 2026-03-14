@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-17
+ * Question Title: Sudoku Solver
+ * Link: https://leetcode.com/problems/sudoku-solver/
+ * Description:
  * Description: https://leetcode.com/problems/sudoku-solver/
  * Write a program to solve a Sudoku puzzle by filling the empty cells.
  * <p>
@@ -26,7 +29,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * The given board contain only digits 1-9 and the character '.'.
  * You may assume that the given Sudoku puzzle will have a single unique solution.
  * The given board size is always 9x9.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SudokuSolver {
 
     static char[][] board() {

@@ -5,6 +5,9 @@ import java.util.HashMap;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-23
+ * Question Title: Longest Arithmetic Sequence
+ * Link: https://leetcode.com/problems/longest-arithmetic-sequence/
+ * Description:
  * Description:
  * https://leetcode.com/problems/longest-arithmetic-sequence/
  * Given an array A of integers, return the length of the longest arithmetic sub sequence in A.
@@ -31,7 +34,26 @@ import java.util.HashMap;
  * Output: 4
  * Explanation:
  * The longest arithmetic subsequence is [20,15,10,5].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestArithmeticSequence {
 
     public static void main(String []args) {

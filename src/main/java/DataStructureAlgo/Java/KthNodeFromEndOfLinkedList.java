@@ -8,9 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Question Title: Kth from End of Linked List
  * Link: https://www.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1
  * Description:
- *
+ * Description:
  * <p>
- *
  * <p>
  * File reference
  * -----------
@@ -20,12 +19,30 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * <p>
  * Tags
  * -----
- *
  * @easy @medium @hard
- *       <p>
- *       Company Tags
- *       -----
+ * <p>
+ * Company Tags
+ * -----
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KthNodeFromEndOfLinkedList {
 
     public ListNode kthNodeFromEndFromLinkedList(ListNode head, int k) {

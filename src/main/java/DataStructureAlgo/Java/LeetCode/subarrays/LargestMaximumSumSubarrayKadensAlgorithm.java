@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.subarrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-14
+ * Question Title: Largest Maximum Sum Subarray Kadens Algorithm
+ * Link: https://leetcode.com/problems/maximum-subarray/
+ * Description:
  * Description: https://leetcode.com/problems/maximum-subarray/
  * Given an integer array nums, find the contiguous subarray (containing at least one number)
  * which has the largest sum and return its sum.
@@ -16,7 +19,26 @@ package DataStructureAlgo.Java.LeetCode.subarrays;
  * <p>
  * If you have figured out the O(n) solution, try coding another solution using the divide and
  * conquer approach, which is more subtle.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LargestMaximumSumSubarrayKadensAlgorithm {
 
     public static void main(String[] args) {

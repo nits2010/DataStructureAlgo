@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: X Power Y Greater Than Y Power X
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Find number of pairs (x, y) in an array such that x^y > y^x
  * Given two arrays X[] and Y[] of positive integers, find number of pairs such that x^y > y^x where x is an element from X[] and y is an element from Y[].
@@ -19,7 +22,26 @@ import java.util.Arrays;
  * Output: 2
  * Explanation: There are total 2 pairs where pow(x, y) is greater
  * than pow(y, x) Pairs are (10, 11) and (10, 15)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class XPowerYGreaterThanYPowerX {
 
     public static void main(String[] args) {

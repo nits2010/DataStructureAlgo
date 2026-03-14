@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: Group Isomorphic Strings
+ * Link: https://leetcode.com/discuss/interview-question/368038/amazon-onsite-group-isomorphic-strings
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/368038/amazon-onsite-group-isomorphic-strings
  * <p>
  * Given an array of strings, you need to group isomorphic strings {@link DataStructureAlgo.Java.LeetCode.IsomorphicStrings} together.
@@ -13,6 +16,24 @@ import java.util.*;
  * <p>
  * Input: ["apple", "apply", "dog", "cog", "romi"]
  * Output: [["dog", "cog"], ["romi"], ["apple", "apply"]]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class GroupIsomorphicStrings {

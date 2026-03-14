@@ -13,9 +13,31 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: K Sum
+ * Link: https://leetcode.com/problems/4sum/description/
+ * Description:
  * Description: https://leetcode.com/problems/4sum/description/
  * This is generalization of {@link TwoSum2Sum}, {@link ThreeSum3Sum}, {@link FourSum4Sum} to K-sum
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KSum {
     public static void main(String[] args) {
         test(new int[]{1, 0, -1, 0, -2}, 4, 0);

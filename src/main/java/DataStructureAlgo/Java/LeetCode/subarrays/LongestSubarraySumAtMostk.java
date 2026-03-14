@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Longest Subarray Sum At Mostk
+ * Link: https://www.geeksforgeeks.org/longest-subarray-sum-elements-atmost-k/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-subarray-sum-elements-atmost-k/
  * <p>
  * Given an array of integers, our goal is to find the length of largest subarray having sum of its elements at-most ‘k’
@@ -19,11 +22,29 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * {1, 2, 1} => sum = 4, length = 3
  * {1, 2, 1, 0}, {2, 1, 0, 1} => sum = 4, length = 4
  * {1, 0, 1, 1, 0} =>5 sum = 3, length = 5
- *
  * similar to this with K < 0 as well
  * @Apple
  * https://leetcode.com/discuss/interview-question/758045/Apple-or-Phone-or-Longest-Subarray-Sum-At-Most-K
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestSubarraySumAtMostk {
 
     public static void main(String[] args) {

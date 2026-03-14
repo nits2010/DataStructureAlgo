@@ -5,9 +5,31 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 12/04/19
+ * Question Title: Dice Word Problem
+ * Link: https://www.careercup.com/question?id=5690892925534208
+ * Description:
  * Description: https://www.careercup.com/question?id=5690892925534208
- Given a word lenth n , a dice array. find out that this word possible to make usin
+ * Given a word lenth n , a dice array. find out that this word possible to make usin
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiceWordProblem {
 
     public static void main(String []args) {

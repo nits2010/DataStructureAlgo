@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 15/12/18
+ * Question Title: Longest Possible Route Matrix With Hurdles
+ * Link: https://www.geeksforgeeks.org/longest-possible-route-in-a-matrix-with-hurdles/
+ * Description:
  * Description:
  * Question:  https://www.geeksforgeeks.org/longest-possible-route-in-a-matrix-with-hurdles/
  * <p>
@@ -13,7 +16,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
  * };
  * output: 24
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestPossibleRouteMatrixWithHurdles {
 
 

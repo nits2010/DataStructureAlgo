@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-31
+ * Question Title: Flatten Multilevel Singly Linked List
+ * Link: https://www.geeksforgeeks.org/flatten-a-linked-list-with-next-and-child-pointers/
+ * Description:
  * Description: https://www.geeksforgeeks.org/flatten-a-linked-list-with-next-and-child-pointers/
  * <p>
  * Given a linked list where in addition to the next pointer, each node has a child pointer,
@@ -21,7 +24,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * struct List *child;
  * };
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FlattenMultilevelSinglyLinkedList {
 
     public static void main(String[] args) {

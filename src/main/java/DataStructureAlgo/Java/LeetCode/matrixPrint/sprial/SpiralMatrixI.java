@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 22/09/19
+ * Question Title: Spiral Matrix I
+ * Link: https://leetcode.com/problems/spiral-matrix/
+ * Description:
  * Description: https://leetcode.com/problems/spiral-matrix/
  * 54. Spiral Matrix [Medium]
  * Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
@@ -32,7 +35,26 @@ import java.util.List;
  * ]
  * Output: [1,2,3,4,8,12,11,10,9,5,6,7]
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SpiralMatrixI {
 
     public static void main(String[] args) {

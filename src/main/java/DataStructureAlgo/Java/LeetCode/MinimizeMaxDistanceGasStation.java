@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
 /**
  * Author: Nitin Gupta
  * Date: 16/09/19
+ * Question Title: Minimize Max Distance Gas Station
+ * Link: https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/
+ * Description:
  * Description: https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/
  * http://leetcode.liangjiateng.cn/leetcode/minimize-max-distance-to-gas-station/description
  * https://www.lintcode.com/problem/minimize-max-distance-to-gas-station/note
@@ -28,7 +31,26 @@ import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
  * Answers within 10^-6 of the true value will be accepted as correct.
  * <p>
  * Similar to {@link PainterPartitionProblem}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimizeMaxDistanceGasStation {
 
     public static void main(String[] args) {

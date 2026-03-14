@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: A Mod K Pairs
+ * Link: https://www.geeksforgeeks.org/find-pairs-b-array-b-k/
+ * Description:
  * Description:https://www.geeksforgeeks.org/find-pairs-b-array-b-k/
  * Find all pairs (a, b) in an array such that a % b = k
  * Given an array with distinct elements, the task is to find the pairs in the array such that a % b = k, where k is a given integer.
@@ -21,7 +24,26 @@ import java.util.stream.Collectors;
  * 3 % 4 = 3
  * 3 % 5 = 3
  * 3 % 7 = 3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AModKPairs {
 
     public static void main(String[] args) {

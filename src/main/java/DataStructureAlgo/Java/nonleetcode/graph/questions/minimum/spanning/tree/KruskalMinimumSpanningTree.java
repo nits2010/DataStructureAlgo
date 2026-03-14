@@ -9,6 +9,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-08
+ * Question Title: Kruskal Minimum Spanning Tree
+ * Link: https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/
+ * Description:
  * Description: https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/
  * Refer theory for understanding purpose
  * <p>
@@ -25,7 +28,26 @@ import java.util.*;
  * So the overall complexity is O(ELogE + ELogV) time. The value of E can be at most O(V^2), so O(LogV) are O(LogE) same.
  * Therefore, overall time complexity is O(E*logE) or O(E*logV)
  * O(E*LogE + E*LogV) time.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KruskalMinimumSpanningTree implements IMinimumSpanningTree {
 
 

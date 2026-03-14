@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.BinarySearch;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: First Bad Version
+ * Link: TODO: Add Link
+ * Description:
  * Description: 278. First Bad Version
  * <p>
  * You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
@@ -22,7 +25,26 @@ import  DataStructureAlgo.Java.nonleetcode.BinarySearch;
  * call isBadVersion(4) -> true
  * <p>
  * Then 4 is the first bad version.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FirstBadVersion {
 
     public static void main(String[] args) {

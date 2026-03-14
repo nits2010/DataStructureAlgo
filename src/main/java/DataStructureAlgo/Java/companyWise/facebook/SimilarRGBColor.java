@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Similar RGB Color
+ * Link: https://leetcode.com/problems/similar-rgb-color/
+ * Description:
  * Description: https://leetcode.com/problems/similar-rgb-color/
  * <p>
  * In the following, every capital letter represents some hexadecimal digit from 0 to f.
@@ -22,9 +25,27 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * All inputs and outputs should use lowercase letters, and the output is 7 characters.
  * <p>
  * LeetCode 800. Similar RGB Color
- *
  * [GOOGLE] [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SimilarRGBColor {
 
     public static void main(String []args) {

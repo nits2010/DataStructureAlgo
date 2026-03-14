@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 03/04/19
+ * Question Title: List Combination
+ * Link: https://www.careercup.com/question?id=5634222671790080">...</a>
+ * Description:
  * Description: <a href="https://www.careercup.com/question?id=5634222671790080">...</a>
  * <p>
  * <p>
@@ -20,7 +23,26 @@ import java.util.stream.Collectors;
  * '3' : ['P', 'Q']
  * Example if input is '123', then output should be
  * [ADP, ADQ, AEP, AEQ, BDP, BDQ, BEP, BEQ, CDP, CDQ, CEP, CEQ, XP, XQ]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ListCombination {
 
     public static void main(String []args) {

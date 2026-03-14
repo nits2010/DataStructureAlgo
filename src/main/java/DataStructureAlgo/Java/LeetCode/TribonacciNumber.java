@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-30
+ * Question Title: Tribonacci Number
+ * Link: https://leetcode.com/problems/n-th-tribonacci-number/
+ * Description:
  * Description: https://leetcode.com/problems/n-th-tribonacci-number/
  * The Tribonacci sequence Tn is defined as follows:
  * <p>
@@ -29,7 +32,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * 0 <= n <= 37
  * The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TribonacciNumber {
     public static void main(String[] args) {
         System.out.println(tribonacci(5) + " expected :" + 7);

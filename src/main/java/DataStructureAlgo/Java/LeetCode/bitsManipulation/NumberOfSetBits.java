@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Number Of Set Bits
+ * Link: https://leetcode.com/problems/number-of-1-bits/
+ * Description:
  * Description: https://leetcode.com/problems/number-of-1-bits/
  * Write a function that takes an unsigned integer and return the number of '1' bits it has (also known as the Hamming weight).
  * <p>
@@ -32,7 +35,26 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
  * Follow up:
  * <p>
  * If this function is called many times, how would you optimize it?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberOfSetBits {
 
     public int hammingWeight(int n) {

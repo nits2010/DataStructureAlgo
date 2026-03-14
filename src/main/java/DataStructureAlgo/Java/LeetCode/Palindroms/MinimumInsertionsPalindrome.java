@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: Minimum Insertions Palindrome
+ * Link: https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
  * Minimum insertions to form a palindrome | DP-28
  * <p>
@@ -17,7 +20,26 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
  * abcd: Number of insertions required is 3 i.e. dcbabcd
  * abcda: Number of insertions required is 2 i.e. adcbcda which is same as number of insertions in the substring bcd(Why?).
  * abcde: Number of insertions required is 4 i.e. edcbabcde
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumInsertionsPalindrome {
 
     public static void main(String[] args) {

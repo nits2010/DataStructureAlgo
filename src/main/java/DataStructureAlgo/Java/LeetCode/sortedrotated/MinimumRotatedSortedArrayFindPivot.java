@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: Minimum Rotated Sorted Array Find Pivot
+ * Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+ * Description:
  * Description:153. Find Minimum in Rotated Sorted Array
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -21,7 +24,26 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
  * <p>
  * Input: [4,5,6,7,0,1,2]
  * Output: 0
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumRotatedSortedArrayFindPivot {
 
     public static void main(String []args) {

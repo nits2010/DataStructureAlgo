@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-18
+ * Question Title: Traverse Tree With K Jump
+ * Link: https://www.geeksforgeeks.org/traversal-tree-ability-jump-nodes-height/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/traversal-tree-ability-jump-nodes-height/
  * There is a tree with N nodes and node 1 is the root node. Each node of the tree can contain fruit or not.
@@ -32,7 +35,26 @@ import java.util.*;
  * no of node having fruit(nf) : 8
  * Nodes Containing Fruits(lvn) : 2 4 5 7 8 9 11 12
  * Output: 7
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TraverseTreeWithKJump {
 
 

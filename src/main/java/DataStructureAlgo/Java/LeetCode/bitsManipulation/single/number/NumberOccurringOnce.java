@@ -3,7 +3,9 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation.single.number;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-18
- *
+ * Question Title: Number Occurring Once
+ * Link: https://www.geeksforgeeks.org/find-the-element-that-appears-once/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-the-element-that-appears-once/
  * <p>
  * Given an array where every element occurs three times, except one element which occurs only once.
@@ -17,9 +19,27 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation.single.number;
  * Input: arr[] = {10, 20, 10, 30, 10, 30, 30}
  * Output: 20
  * In the given array all element appear three times except 20 which appears once.
- *
  * [Adobe]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberOccurringOnce {
 
     public static void main(String []args) {

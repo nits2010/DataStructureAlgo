@@ -6,6 +6,9 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-08
+ * Question Title: Median Of Stream
+ * Link: https://leetcode.com/problems/find-median-from-data-stream/
+ * Description:
  * Description: https://leetcode.com/problems/find-median-from-data-stream/
  * Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
  * <p>
@@ -30,18 +33,32 @@ import java.util.PriorityQueue;
  * <p>
  * Follow up:
  * <p>
- *
  * 1. If all integer numbers from the stream are between 0 and 100, how would you optimize it?
- *
  * We can maintain an integer array of length 100 to store the count of each number along with a total count. Then, we can iterate over the array to find the middle value to get our median.
- *
  * Time and space complexity would be O(100) = O(1).
  * https://leetcode.com/problems/statistics-from-a-large-sample/description/
- *
  * 2. If 99% of all integer numbers from the stream are between 0 and 100, how would you optimize it?
- *
  * In this case, we need an integer array of length 100 and a hashmap for these numbers that are not in [0,100].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MedianOfStream {
 
     public static void main(String []args) {

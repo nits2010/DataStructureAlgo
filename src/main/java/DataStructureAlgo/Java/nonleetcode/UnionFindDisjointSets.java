@@ -3,9 +3,31 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Union Find Disjoint Sets
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Union Find algorithm with path compression and ranking
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class UnionFindDisjointSets {
 
     static class Set {

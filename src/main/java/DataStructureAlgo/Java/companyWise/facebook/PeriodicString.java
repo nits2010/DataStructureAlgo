@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.Pair;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Periodic String
+ * Link: https://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/
  * <p>
  * Find if a given string can be represented from a substring by iterating the substring “n” times
@@ -39,7 +42,26 @@ import DataStructureAlgo.Java.Pair;
  * Given string S, find out the P (repetitive pattern) of S.
  * <p>
  * [FACEBOOK] [GOOGLE]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PeriodicString {
 
     public static void main(String []args) {

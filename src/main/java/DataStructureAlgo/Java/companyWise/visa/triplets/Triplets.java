@@ -9,8 +9,30 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 10/11/19
+ * Question Title: Triplets
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Triplets {
 
     // Complete the triplets function below.

@@ -6,6 +6,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-26
+ * Question Title: My LRU Cache
+ * Link: https://leetcode.com/problems/lru-cache/
+ * Description:
  * Description: https://leetcode.com/problems/lru-cache/
  * <p>
  * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
@@ -32,10 +35,26 @@ import java.util.Map;
  * cache.get(1);       // returns -1 (not found)
  * cache.get(3);       // returns 3
  * cache.get(4);       // returns 4
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class MyLRUCache {
 

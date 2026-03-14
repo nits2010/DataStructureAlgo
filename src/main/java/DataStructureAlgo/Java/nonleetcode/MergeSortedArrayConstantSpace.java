@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-21
+ * Question Title: Merge Sorted Array Constant Space
+ * Link: https://www.geeksforgeeks.org/efficiently-merging-two-sorted-arrays-with-o1-extra-space/
+ * Description:
  * Description: https://www.geeksforgeeks.org/efficiently-merging-two-sorted-arrays-with-o1-extra-space/
  * Efficiently merging two sorted arrays with O(1) extra space
  * Given two sorted arrays, we need to merge them in O((n+m)*log(n+m)) time with O(1) extra space into a sorted array, when n is the size of the first array, and m is the size of the second array.
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * ar2[] = {2, 3, 8, 13};
  * Output: ar1[] = {1, 2, 3, 5, 8, 9}
  * ar2[] = {10, 13, 15, 20}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MergeSortedArrayConstantSpace {
 
     public static void main(String[] args) {

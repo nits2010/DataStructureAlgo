@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Three Sum3Sum
+ * Link: https://leetcode.com/problems/3sum/
+ * Description:
  * Description: 15. 3Sum https://leetcode.com/problems/3sum/
  * Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
  * <p>
@@ -26,7 +29,26 @@ import java.util.*;
  * ]
  * <p>
  * Extension of {@link TwoSum2Sum}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ThreeSum3Sum {
 
     public static void main(String[] args) {

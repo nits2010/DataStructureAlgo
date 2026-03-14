@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-11
+ * Question Title: Binary Tree Two Halves Same Size
+ * Link: https://www.geeksforgeeks.org/check-if-removing-an-edge-can-divide-a-binary-tree-in-two-halves/
+ * Description:
  * Description: https://www.geeksforgeeks.org/check-if-removing-an-edge-can-divide-a-binary-tree-in-two-halves/
  * Check if removing an edge can divide a Binary Tree in two halves
  * <p>
@@ -36,7 +39,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * of equal size.
  * <p>
  * {@link BinaryTreeEqualPartition}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeTwoHalvesSameSize {
 
     public static void main(String[] args) {

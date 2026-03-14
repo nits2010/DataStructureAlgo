@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-16
+ * Question Title: Minimum Flips1On Left0On Right
+ * Link: https://www.geeksforgeeks.org/minimum-flips-make-1s-left-0s-right-set-2/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-flips-make-1s-left-0s-right-set-2/
  * Given a binary array, we can flip all the 1 are in the left part and all the 0 to the right part.
  * Calculate the minimum flips required to make all 1s in left and all 0s in right.
@@ -16,7 +19,26 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * Input : 00001
  * Output : 2
  * 2 flips required to make it 10000.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumFlips1OnLeft0OnRight {
 
     public static void main(String[] args) {

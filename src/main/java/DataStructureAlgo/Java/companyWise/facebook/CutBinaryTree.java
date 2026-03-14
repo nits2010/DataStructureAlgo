@@ -7,11 +7,33 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Cut Binary Tree
+ * Link: https://aonecode.com/aplusplus/interviewctrl/getInterview/4630517297687979583
+ * Description:
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/4630517297687979583
  * Give a binary tree, find if it's possible to cut the tree into two halves of equal sum. You can only cut one edge.
  * <p>
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CutBinaryTree {
 
 

@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-26
+ * Question Title: Element That Has Sum Of Left Array Equal Sum Of Right
+ * Link: https://www.geeksforgeeks.org/find-element-array-sum-left-array-equal-sum-right-array/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-element-array-sum-left-array-equal-sum-right-array/
  * Find an element in array such that sum of left array is equal to sum of right array
  * Given, an array of size n. Find an element which divides the array in two sub-arrays with equal sum.
@@ -22,11 +25,28 @@ import java.util.Arrays;
  * Output : 1
  * Explanation : If 1 is the partition,
  * Subarrays are : {2, 3, 4} and {4, 5}
- *
- *
  * <p>
  * [Adobe] [Amazon][Accolite][Zoho]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ElementThatHasSumOfLeftArrayEqualSumOfRight {
 
     public static void main(String[] args) {

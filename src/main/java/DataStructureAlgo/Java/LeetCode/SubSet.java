@@ -5,9 +5,31 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-19
+ * Question Title: Sub Set
+ * Link: https://leetcode.com/problems/subsets/
+ * Description:
  * Description: 78. Subsets https://leetcode.com/problems/subsets/
  * Power set
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubSet {
 
     public static List<List<Integer>> subsets(int[] nums){

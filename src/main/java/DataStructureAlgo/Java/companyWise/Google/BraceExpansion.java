@@ -11,6 +11,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-13
+ * Question Title: Brace Expansion
+ * Link: https://leetcode.com/discuss/interview-question/354944/google-phone-screen-brace-expansion
+ * Description:
  * Description:https://leetcode.com/discuss/interview-question/354944/google-phone-screen-brace-expansion
  * <p>
  * You are given a string a_{cat,dog}_is_with_{sarah,mike}
@@ -22,7 +25,26 @@ import java.util.List;
  * <p>
  * {@link BraceExpansionI}
  * {@link BraceExpansionII}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BraceExpansion {
     public static void main(String[] args) {
         System.out.println(braceExpansion("a_{cat,dog}_is_with_{sarah,mike}"));

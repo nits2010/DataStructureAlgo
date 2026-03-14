@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 15/09/19
+ * Question Title: Consecutive Sum
+ * Link: https://leetcode.com/problems/consecutive-numbers-sum/
+ * Description:
  * Description: https://leetcode.com/problems/consecutive-numbers-sum/
  * 829. Consecutive Numbers Sum
  * Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
@@ -26,7 +29,26 @@ import java.util.List;
  * Best solution is {@link ConsecutiveSumMath3}
  * One more good solution
  * https://leetcode.com/problems/consecutive-numbers-sum/discuss/272888/100-Simple-C%2B%2B-without-SQRT-and-Multiplication
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ConsecutiveSum {
 
     public static void main(String[] args) {

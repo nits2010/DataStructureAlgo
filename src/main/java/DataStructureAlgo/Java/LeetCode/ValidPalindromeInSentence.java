@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-17
+ * Question Title: Valid Palindrome In Sentence
+ * Link: https://leetcode.com/problems/valid-palindrome/
+ * Description:
  * Description: https://leetcode.com/problems/valid-palindrome/ [Asked in Facebook]
  * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
  * <p>
@@ -17,7 +20,26 @@ package DataStructureAlgo.Java.LeetCode;
  * Input: "race a car"
  * Output: false
  * [Facebook]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidPalindromeInSentence {
 
     public static void main(String arts[]) {

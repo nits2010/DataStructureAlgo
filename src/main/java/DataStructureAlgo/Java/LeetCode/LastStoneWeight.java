@@ -8,6 +8,9 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Last Stone Weight
+ * Link: https://leetcode.com/problems/last-stone-weight/
+ * Description:
  * Description: https://leetcode.com/problems/last-stone-weight/
  * <p>
  * We have a collection of rocks, each rock has a positive integer weight.
@@ -37,7 +40,26 @@ import java.util.PriorityQueue;
  * 1 <= stones[i] <= 1000
  * <p>
  * [AMAZON]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LastStoneWeight {
 
 

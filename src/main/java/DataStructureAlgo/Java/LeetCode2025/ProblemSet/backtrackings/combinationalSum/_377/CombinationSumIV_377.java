@@ -2,6 +2,32 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.backtrackings.combination
 
 import java.util.*;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Combination Sum IV
+ * Link: https://leetcode.com/problems/combination-sum-iv/
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class CombinationSumIV_377 {
     public int combinationSum4(int[] nums, int target) {
            if (nums == null || nums.length == 0)

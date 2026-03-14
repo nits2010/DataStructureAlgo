@@ -5,6 +5,32 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Maximum Distance
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class MaximumDistance {
 	public static double maximumDistance(int N, int speeds[], int consumption[], double availableFuel) {
 		if (availableFuel == 0)

@@ -1,3 +1,30 @@
+"""
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Populating Next Right Pointers In Each Node II
+Link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
 # Definition for a Node.
 
 

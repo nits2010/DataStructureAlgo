@@ -5,13 +5,37 @@ import java.lang.*;
 
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Permutations Sorted Lexicographic Order
+ * Link: https://www.geeksforgeeks.org/lexicographic-permutations-of-string/
+ * Description:
  * https://www.geeksforgeeks.org/lexicographic-permutations-of-string/
  * Given a string, print all permutations of it in sorted order. For example, if the input string is “ABC”,
  * then output should be “ABC, ACB, BAC, BCA, CAB, CBA”.
  * <p>
  * We have discussed a program to print all permutations in this post, but here we must print the permutations in increasing order.
  * {@link Permutation}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 class PermutationsSortedLexicographicOrder {
 
     public static void main(String[] args) {

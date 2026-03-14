@@ -8,6 +8,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-24
+ * Question Title: Letter Combinations Phone Number
+ * Link: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ * Description:
  * Description:
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  * <p>
@@ -25,6 +28,24 @@ import java.util.Queue;
  * <p>
  * Although the above answer is in lexicographical order, your answer could be in any order you want.
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class LetterCombinationsPhoneNumber {

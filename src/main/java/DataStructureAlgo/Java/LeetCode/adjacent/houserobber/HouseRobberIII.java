@@ -7,6 +7,9 @@ import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-30
+ * Question Title: House Robber III
+ * Link: https://leetcode.com/problems/house-robber-iii/
+ * Description:
  * Description: https://leetcode.com/problems/house-robber-iii/
  * <p>
  * The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the "root." Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that "all houses in this place forms a binary tree". It will automatically contact the police if two directly-linked houses were broken into on the same night.
@@ -37,7 +40,26 @@ import  DataStructureAlgo.Java.LeetCode.tree.TreeBuilder;
  * <p>
  * Output: 9
  * Explanation: Maximum amount of money the thief can rob = 4 + 5 = 9.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class HouseRobberIII {
 
     public static void main(String[] args) {

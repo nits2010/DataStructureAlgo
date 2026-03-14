@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: Clone Graph
+ * Link: https://leetcode.com/problems/clone-graph/
+ * Description:
  * Description: https://leetcode.com/problems/clone-graph/
  * Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.
  * Example:
@@ -23,7 +26,26 @@ import java.util.*;
  * Since the graph is undirected, if node p has node q as neighbor, then node q must have node p as neighbor too.
  * You must return the copy of the given node as a reference to the cloned graph.
  * {@link GraphClone}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CloneGraph {
 
     // Definition for a Node.

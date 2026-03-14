@@ -9,40 +9,30 @@ import java.util.stream.Collectors;
 
 /**
  * Author: Nitin Gupta
- * Date: 2019-08-12
- * Description: https://leetcode.com/discuss/interview-question/345744
- * Given a list of k sorted iterators. Implement MergingIterator to merge them.
+ * Date: 2026-03-14
+ * Question Title: Merge K Sorted Iterators
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
+ <p><p>
+ * Company Tags
+ * -----
  * <p>
- * class MergingIterator implements Iterator<Integer> {
- * public MergingIterator(List<Iterator<Integer>> iterators) {
- * }
- * <p>
- * public boolean hasNext() {
- * }
- * <p>
- * public Integer next() {
- * }
- * }
- * Example:
- * <p>
- * MergingIterator itr = new MergingIterator([[2, 5, 9], [], [4, 10]]);
- * itr.hasNext(); // true
- * itr.next(); // 2
- * itr.next(); // 4
- * itr.next(); // 5
- * itr.next(); // 9
- * itr.next(); // 10
- * itr.hasNext(); // false
- * itr.next(); // error
- * <p>
- * similar to
- * {@link PeekingIterators}
- * {@link DataStructureAlgo.Java.LeetCode.iterators.ZigZagOrCycleIterators}
- * <p>
- * <p>
- * [GOOGLE] [AMAZON]
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MergeKSortedIterators {
 
     public static void main(String[] args) {

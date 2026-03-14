@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: Sort String Based On Frequency And Lexical
+ * Link: https://leetcode.com/problems/sort-characters-by-frequency/discuss/365179/Blueprint-to-100-or-Optimisation-or-38-ms-to-2ms-or-5-Solution-or-optimisation-step-by-step
+ * Description:
  * Description: Given a string,
  * 1. Sort this string based on frequency of each character (increasing order)
  * 2. if frequency are same, then sort based on lexical order.
@@ -22,7 +25,26 @@ import java.util.*;
  * <p>
  * extension of {@link DataStructureAlgo.Java.LeetCode.SortCharactersByFrequency}
  * https://leetcode.com/problems/sort-characters-by-frequency/discuss/365179/Blueprint-to-100-or-Optimisation-or-38-ms-to-2ms-or-5-Solution-or-optimisation-step-by-step
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortStringBasedOnFrequencyAndLexical {
 
     public static void main(String[] args) {

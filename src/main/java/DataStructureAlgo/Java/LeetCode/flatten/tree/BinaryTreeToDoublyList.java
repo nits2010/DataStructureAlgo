@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Binary Tree To Doubly List
+ * Link: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
+ * Description:
  * Description: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
  * <p>
  * http://leetcode.liangjiateng.cn/leetcode/convert-binary-search-tree-to-sorted-doubly-linked-list/description
@@ -23,7 +26,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * <p>
  * The figure below shows the transformed BST. The solid line indicates the successor relationship, while the dashed line means the predecessor relationship.
  * Driver {@link DataStructureAlgo.Java.LeetCode.flatten.tree.BinaryTreeToList}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeToDoublyList {
 
 

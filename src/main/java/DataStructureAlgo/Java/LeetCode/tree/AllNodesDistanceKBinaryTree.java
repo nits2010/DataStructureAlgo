@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-24
+ * Question Title: All Nodes Distance K Binary Tree
+ * Link: https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/#_=_
+ * Description:
  * Description: https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/#_=_
  * https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
  * We are given a binary tree (with root node root), a target node, and an integer value K.
@@ -42,8 +45,25 @@ import java.util.List;
  * 0 <= K <= 1000.
  * <p>
  * [Adobe]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class AllNodesDistanceKBinaryTree {
 

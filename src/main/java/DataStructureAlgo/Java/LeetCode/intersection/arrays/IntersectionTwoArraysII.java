@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Intersection Two Arrays II
+ * Link: https://leetcode.com/problems/intersection-of-two-arrays-ii/
+ * Description:
  * Description: https://leetcode.com/problems/intersection-of-two-arrays-ii/
  * 350. Intersection of Two Arrays II
  * Given two arrays, write a function to compute their intersection.
@@ -37,7 +40,26 @@ import java.util.*;
  * <p>
  * <p>
  * https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/373046/Multiple-solution-100-beat-or-Java-or-Follow-ups
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IntersectionTwoArraysII {
     public static void main(String[] args) {
         test(new int[]{1, 2, 2, 1}, new int[]{2, 2}, new int[]{2, 2});

@@ -1,3 +1,30 @@
+"""
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Koko Eating Bananas
+Link: https://leetcode.com/problems/koko-eating-bananas/
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
 from typing import List
 import math
 

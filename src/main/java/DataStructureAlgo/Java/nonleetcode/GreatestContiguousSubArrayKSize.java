@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Greatest Contiguous Sub Array K Size
+ * Link: https://www.geeksforgeeks.org/greatest-contiguous-sub-array-of-size-k/
+ * Description:
  * Description:https://www.geeksforgeeks.org/greatest-contiguous-sub-array-of-size-k/
  * Given an array arr[] of integers and an integer K, the task is to find the greatest contiguous sub-array of size K. Sub-array X is said to be greater than sub-array Y if the first non-matching element in both the sub-arrays has a greater value in X than in Y.
  * <p>
@@ -19,7 +22,26 @@ import java.util.List;
  * <p>
  * Input: arr[] = {1, 9, 2, 7, 9, 3}, K = 3
  * Output: 9 2 7
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GreatestContiguousSubArrayKSize {
 
     public static void main(String []args) {

@@ -5,6 +5,32 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 
 import java.util.Random;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Sorts
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 public class Sorts {
 
     class MergeSort {

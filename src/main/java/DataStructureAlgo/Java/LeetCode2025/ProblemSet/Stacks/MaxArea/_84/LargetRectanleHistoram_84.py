@@ -1,3 +1,30 @@
+"""
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Larget Rectanle Historam
+Link: https://leetcode.com/problems/larget-rectanle-historam/
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
 from collections import deque, defaultdict
 from typing import List, Optional, Dict, Any
 import heapq

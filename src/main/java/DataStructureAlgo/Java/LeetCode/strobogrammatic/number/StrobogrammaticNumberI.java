@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.strobogrammatic.number;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Strobogrammatic Number I
+ * Link: https://leetcode.com/problems/strobogrammatic-number
+ * Description:
  * Description: https://leetcode.com/problems/strobogrammatic-number
  * <p>
  * 246.Strobogrammatic Number Or Fancy Number
@@ -26,7 +29,26 @@ package DataStructureAlgo.Java.LeetCode.strobogrammatic.number;
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.5.html
  * https://www.geeksforgeeks.org/check-if-a-given-number-is-fancy/
  * 180 degree rotations of 6, 9, 1, 0 and 8 are 9, 6, 1, 0 and 8 respectively
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StrobogrammaticNumberI {
 
     public static void main(String[] args) {

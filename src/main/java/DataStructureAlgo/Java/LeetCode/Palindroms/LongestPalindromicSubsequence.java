@@ -3,24 +3,43 @@ package DataStructureAlgo.Java.LeetCode.Palindroms;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-22
+ * Question Title: Longest Palindromic Subsequence
+ * Link: https://leetcode.com/problems/longest-palindromic-subsequence
+ * Description:
  * Description: https://leetcode.com/problems/longest-palindromic-subsequence
  * Given a string s, find the longest palindromic subsequence's length in s. You may assume that the maximum length of s is 1000.
- *
  * Example 1:
  * Input:
- *
  * "bbbab"
  * Output:
  * 4
  * One possible longest palindromic subsequence is "bbbb".
  * Example 2:
  * Input:
- *
  * "cbbd"
  * Output:
  * 2
  * One possible longest palindromic subsequence is "bb".
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestPalindromicSubsequence {
 
     /**

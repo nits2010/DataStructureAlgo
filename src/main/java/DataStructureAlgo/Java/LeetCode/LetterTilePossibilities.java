@@ -10,6 +10,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 18/09/19
+ * Question Title: Letter Tile Possibilities
+ * Link: https://leetcode.com/problems/letter-tile-possibilities/
+ * Description:
  * Description: https://leetcode.com/problems/letter-tile-possibilities/
  * 1079. Letter Tile Possibilities [Medium]
  * You have a set of tiles, where each tile has one letter tiles[i] printed on it.  Return the number of possible non-empty sequences of letters you can make.
@@ -30,7 +33,26 @@ import java.util.Set;
  * <p>
  * Best solution {@link LetterTilePossibilitiesBackTrackingCounting}
  * https://leetcode.com/problems/letter-tile-possibilities/discuss/385144/3-solution-or-Optimisations-or-Java-or-Thought-Process
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LetterTilePossibilities {
 
     public static void main(String[] args) {

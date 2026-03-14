@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-18
+ * Question Title: Two Sum2Sum
+ * Link: https://leetcode.com/problems/two-sum/
+ * Description:
  * Description: https://leetcode.com/problems/two-sum/
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
  * <p>
@@ -16,7 +19,26 @@ import java.util.*;
  * <p>
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TwoSum2Sum {
 
 

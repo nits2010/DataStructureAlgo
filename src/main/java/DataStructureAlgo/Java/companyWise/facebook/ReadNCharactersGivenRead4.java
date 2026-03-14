@@ -3,8 +3,11 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-19
+ * Question Title: Read N Characters Given Read4
+ * Link: https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/
+ * Description:
  * Description:https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/
- https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/
+ * https://cheonhyangzhang.wordpress.com/2016/12/22/158-leetcode-java-read-n-characters-given-read4-ii-call-multiple-times-add-to-list-questioneditorial-solution-hard/
  * Problem:
  * The API: int read4(char *buf) reads 4 characters at a time from a file.
  * The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters
@@ -31,8 +34,6 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * 0, buf = ""
  * 0, buf = ""
  * 0, buf = ""
- *
- *
  * Input:
  * "abcdef"
  * read(1)
@@ -40,10 +41,28 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * Output:
  * 1, buf = "a"
  * 5, buf = "bcdef"
- *
  * https://aonecode.com/facebook-phone-interview-questions-2019
- [Facebook] [LinkedIn] [Amazon] [Google]
+ * [Facebook] [LinkedIn] [Amazon] [Google]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReadNCharactersGivenRead4 {
 
     static String str = null;

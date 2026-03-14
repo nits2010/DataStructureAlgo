@@ -6,8 +6,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 10/11/19
+ * Question Title: K Difference
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KDifference {
 
     public static int kDifference(List<Integer> arr, int k) {

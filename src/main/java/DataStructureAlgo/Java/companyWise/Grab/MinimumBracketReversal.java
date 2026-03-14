@@ -7,6 +7,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-23
+ * Question Title: Minimum Bracket Reversal
+ * Link: https://www.geeksforgeeks.org/minimum-number-of-bracket-reversals-needed-to-make-an-expression-balanced/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-number-of-bracket-reversals-needed-to-make-an-expression-balanced/
  * <p>
  * Given an expression with only ‘}’ and ‘{‘. The expression may not be balanced. Find minimum number of bracket reversals to make the expression balanced.
@@ -30,9 +33,27 @@ import java.util.Stack;
  * <p>
  * Input:  exp = "}{{}}{{{"
  * Output: 3 {{{}}}{}
- *
  * similar {@link DataStructureAlgo.Java.LeetCode.LongestValidParentheses}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumBracketReversal {
 
 

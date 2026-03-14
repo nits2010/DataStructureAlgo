@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Number Islands II
+ * Link: http://leetcode.liangjiateng.cn/leetcode/number-of-islands-ii/description
+ * Description:
  * Description: http://leetcode.liangjiateng.cn/leetcode/number-of-islands-ii/description
  * 305.Number of Islands II
  * A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns
@@ -51,7 +54,26 @@ import java.util.*;
  * Can you do it in time complexity O(k log mn), where k is the length of the positions?
  * <p>
  * {@link NumberIslands}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberIslandsII {
 
     public static void main(String[] args) {

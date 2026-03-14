@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-04
+ * Question Title: Maximum Minimum Values Of Expression
+ * Link: https://www.geeksforgeeks.org/minimum-maximum-values-expression/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/minimum-maximum-values-expression/
  * <p>
@@ -21,7 +24,26 @@ import java.util.List;
  * Maximum evaluated value = (1 + 2)*(3 + 4)*5 = 105
  * <p>
  * **********SAME AS MATRIX CHAIN MULTIPLICATION
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumMinimumValuesOfExpression {
 
     public static void main(String []args) {

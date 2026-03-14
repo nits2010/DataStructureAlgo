@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-30
+ * Question Title: Maximum Difference In Index
+ * Link: https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
+ * Description:
  * Description: https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
  * Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
  * Given an array arr[], find the maximum j – i such that arr[j] > arr[i].
@@ -23,7 +26,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Output: -1
  * <p>
  * Asked in: [Amazon], [Google], [VMWare] [Microsoft]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumDifferenceInIndex {
     public static void main(String[] args) {
         test(new int[]{34, 8, 10, 3, 2, 80, 30, 33, 1}, 6);

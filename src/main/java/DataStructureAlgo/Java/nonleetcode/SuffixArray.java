@@ -8,10 +8,32 @@ import java.util.Comparator;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: Suffix Array
+ * Link: https://discuss.codechef.com/t/a-tutorial-on-suffix-arrays/2950
+ * Description:
  * Description:
  * <p>
  * https://discuss.codechef.com/t/a-tutorial-on-suffix-arrays/2950
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SuffixArray {
 
     public static void main(String[] args) {

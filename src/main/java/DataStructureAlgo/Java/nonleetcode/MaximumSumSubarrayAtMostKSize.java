@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-27
+ * Question Title: Maximum Sum Subarray At Most K Size
+ * Link: https://www.geeksforgeeks.org/maximum-sum-of-non-overlapping-subarrays-of-length-atmost-k/
+ * Description:
  * Description:https://www.geeksforgeeks.org/maximum-sum-of-non-overlapping-subarrays-of-length-atmost-k/
  * Given an integer array ‘arr’ of length N and an integer ‘k’, select some non-overlapping subarrays such that each sub-array if of length at most ‘k’, no two sub-arrays are adjacent and sum of all the elements of the selected sub-arrays are maximum.
  * <p>
@@ -17,7 +20,26 @@ import java.util.Arrays;
  * <p>
  * Input :arr[] = {1, 1, 1, 1, 1}, k = 1
  * Output : 3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumSubarrayAtMostKSize {
 
     public static void main(String []args) {

@@ -13,8 +13,8 @@ import java.util.List;
  * Date: 8/13/2024
  * Question Title: 257. Binary Tree Paths
  * Link: https://leetcode.com/problems/binary-tree-paths/
+ * Description:
  * Description: https://leetcode.com/problems/binary-tree-paths/description/
- *
  * <p>
  * Given the root of a binary tree, return all root-to-leaf paths in any order.
  * <p>
@@ -46,11 +46,29 @@ import java.util.List;
  * <p>
  * Tags
  * -----
- *
  * @easy <p>
  * Company Tags
  * -----
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreePaths_257 {
 
     public static void main(String[] args) {

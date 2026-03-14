@@ -10,8 +10,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Date: 7/31/2024
  * Question Title: 82. Remove Duplicates from Sorted List II [ medium ]
  * Link: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii-medium/
+ * Description:
  * Description:https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
- *
  * <p>
  * Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
  * <p>
@@ -43,7 +43,6 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * <p>
  * Tags
  * -----
- *
  * @medium
  * @LinkedList
  * @TwoPointers <p>
@@ -52,7 +51,26 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * @Amazon
  * @Microsoft
  * @Facebook
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveDuplicatesFromSortedListII_82 {
     public static void main(String[] args) {
         boolean testResult = true;

@@ -8,12 +8,32 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: A_And_B_To Zero
+ * Link: https://leetcode.com/discuss/interview-experience/133715/Adobe-MTS-1
+ * Description:
  * Description: https://leetcode.com/discuss/interview-experience/133715/Adobe-MTS-1
  * Finding total number pair of elements (say, a and b) from elements in an array such that a (AND) b is 0. ( use brute force approach)
  * {@link AndSumToZero}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
- *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class A_And_B_ToZero {
 
     public static void main(String[] args) {

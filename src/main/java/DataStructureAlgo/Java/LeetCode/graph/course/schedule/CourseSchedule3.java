@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: Course Schedule3
+ * Link: https://leetcode.com/problems/course-schedule-iii/
+ * Description:
  * Description: https://leetcode.com/problems/course-schedule-iii/
  * <p>
  * There are n different online courses numbered from 1 to n. Each course has some duration(course length) t and closed on dth day.
@@ -34,7 +37,26 @@ import java.util.*;
  * <p>
  * Explanation: https://leetcode.com/articles/course-schedule-iii/
  * https://leetcode.com/problems/course-schedule-iii/discuss/363735/Recursive-or-DP-Top-Down-or-Dp-Bottom-Up-or-Greedy-or-Greedy-Optimised
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CourseSchedule3 {
 
     public static void main(String[] args) {

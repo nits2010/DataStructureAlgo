@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Combination Sum III
+ * Link: https://leetcode.com/problems/combination-sum-iii/
+ * Description:
  * Description: https://leetcode.com/problems/combination-sum-iii/
  * <p>
  * 216. Combination Sum III
@@ -29,7 +32,26 @@ import java.util.List;
  * Similar to {@link CombinationSumII}, only difference is that instead of an explicit array, we are restricted to
  * 1. numbers from 1 to 9 {this is nothing but candidate array}
  * 2. Total k numbers at max
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CombinationSumIII {
 
     public static void main(String[] args) {

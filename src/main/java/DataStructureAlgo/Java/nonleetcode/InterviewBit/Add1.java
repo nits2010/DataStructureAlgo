@@ -7,8 +7,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-05-20
+ * Question Title: Add1
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Add1 {
     public static void main(String []args) {
         ArrayList<Integer> inp = new ArrayList<>();

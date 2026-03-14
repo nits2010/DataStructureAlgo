@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Valid Parentheses Balanced Parentheses Expression
+ * Link: https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
+ * Description:
  * Description: https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
  * <p>
  * Given an expression string exp , write a program to examine whether the pairs and the orders of “{“,”}”,”(“,”)”,”[“,”]” are correct in exp.
@@ -23,7 +26,26 @@ import java.util.Stack;
  * <p>
  * [Amazon] [Adobe] [Linkdin} {facebook} [microsoft] [bloomberg]
  * {@link ValidParentheses_20}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidParenthesesBalancedParenthesesExpression {
 
     public static void main(String[] args) {

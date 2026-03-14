@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 19/09/19
+ * Question Title: Insert Delete Get Random Duplicates O1
+ * Link: https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/
+ * Description:
  * Description: https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/
  * 381. Insert Delete GetRandom O(1) - Duplicates allowed [Hard]
  * <p>
@@ -38,7 +41,26 @@ import java.util.*;
  * collection.getRandom();
  * <p>
  * Extension of {@link InsertDeleteGetRandomO1}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class InsertDeleteGetRandomDuplicatesO1 {
     public static void main(String[] args) {
         test1();

@@ -5,11 +5,33 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-07
+ * Question Title: Reverse Gear Reverse Edges In Graph Path
+ * Link: https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/
+ * Description:
  * Description:https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/
  * <p>
  * Given a directed graph and a source node and destination node, we need to find how many edges we need to
  * reverse in order to make at least 1 path from source node to destination node.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReverseGearReverseEdgesInGraphPath {
 
     public static void main(String[] args) throws Exception {

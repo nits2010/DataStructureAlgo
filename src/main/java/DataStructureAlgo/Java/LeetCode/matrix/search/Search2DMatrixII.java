@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Search2D Matrix II
+ * Link: https://leetcode.com/problems/search-a-2d-matrix-ii/
+ * Description:
  * Description:https://leetcode.com/problems/search-a-2d-matrix-ii/
  * 240. Search a 2D Matrix II
  * Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
@@ -25,7 +28,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Given target = 5, return true.
  * <p>
  * Given target = 20, return false.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Search2DMatrixII {
 
     public static void main(String[] args) {

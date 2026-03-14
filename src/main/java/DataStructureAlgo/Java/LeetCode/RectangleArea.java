@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
+ * Question Title: Rectangle Area
+ * Link: https://leetcode.com/problems/rectangle-area/
+ * Description:
  * Description: https://leetcode.com/problems/rectangle-area/
  * https://leetcode.com/problems/rectangle-area/discuss/337710/Intuitive-draw-solution
  * Find the total area covered by two rectilinear rectangles in a 2D plane.
@@ -15,7 +18,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * Input: A = -3, B = 0, C = 3, D = 4, E = 0, F = -1, G = 9, H = 2
  * Output: 45
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RectangleArea {
 
     public static void main(String []args) {

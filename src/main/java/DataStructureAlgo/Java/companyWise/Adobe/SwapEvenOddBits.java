@@ -3,12 +3,34 @@ package DataStructureAlgo.Java.companyWise.Adobe;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: Swap Even Odd Bits
+ * Link: https://www.geeksforgeeks.org/swap-all-odd-and-even-bits/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/swap-all-odd-and-even-bits/
  * Given an unsigned integer, swap all odd bits with even bits. For example, if the given number is 23 (00010111),
  * it should be converted to 43 (00101011). Every even position bit is swapped with adjacent bit on right side (even position
  * bits are highlighted in binary representation of 23), and every odd position bit is swapped with adjacent on left side..
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SwapEvenOddBits {
 
     public static void main(String[] args) {

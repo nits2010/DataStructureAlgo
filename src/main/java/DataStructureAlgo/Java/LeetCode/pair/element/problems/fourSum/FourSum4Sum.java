@@ -9,6 +9,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Four Sum4Sum
+ * Link: https://leetcode.com/problems/4sum/
+ * Description:
  * Description: https://leetcode.com/problems/4sum/
  * Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target?
  * Find all unique quadruplets in the array which gives the sum of target.
@@ -28,7 +31,26 @@ import java.util.*;
  * <p>
  * https://leetcode.com/problems/4sum/discuss/359397/Optimisations-or-Thought-Process-or-Java-or-4ms
  * https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FourSum4Sum {
 
     public static void main(String[] args) {

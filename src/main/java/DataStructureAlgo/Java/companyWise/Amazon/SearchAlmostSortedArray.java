@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.Amazon;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
+ * Question Title: Search Almost Sorted Array
+ * Link: https://www.geeksforgeeks.org/search-almost-sorted-array/#_=_
+ * Description:
  * Description: https://www.geeksforgeeks.org/search-almost-sorted-array/#_=_
  * Given an array which is sorted, but after sorting some elements are moved to either of the adjacent positions, i.e.,
  * arr[i] may be present at arr[i+1] or arr[i-1]. Write an efficient function to search an element in this array.
@@ -19,9 +22,27 @@ package DataStructureAlgo.Java.companyWise.Amazon;
  * Input: arr[] =  {10, 3, 40, 20, 50, 80, 70}, key = 90
  * Output: -1
  * -1 is returned to indicate element is not present
- *
  * [AMAZON - AWS]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SearchAlmostSortedArray {
 
     public static void main(String []args) {

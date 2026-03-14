@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Diagonal Matrix Downward Right
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Matrix:
  * [1,2,3]
@@ -21,7 +24,26 @@ import java.util.List;
  * [9,10,11,12]
  * [13,14,15,16]
  * 4, 3, 8, 2, 7, 12, 1, 6, 11, 16, 5, 10, 15, 9, 14, 13
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiagonalMatrixDownwardRight {
 
     public static void main(String[] args) {

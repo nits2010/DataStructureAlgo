@@ -5,11 +5,33 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Word Break
+ * Link: https://leetcode.com/problems/word-break/
+ * Description:
  * Description:
  * 139. Word Break https://leetcode.com/problems/word-break/
  * &
  * 140. Word Break II https://leetcode.com/problems/word-break-ii/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WordBreak {
 
     public static void main(String []args) {

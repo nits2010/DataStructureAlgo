@@ -11,8 +11,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: List To Binary Search Tree
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ListToBinarySearchTree {
 
     private static int height(int n) {

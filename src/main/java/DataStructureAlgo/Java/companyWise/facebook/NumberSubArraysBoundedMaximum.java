@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-21
+ * Question Title: Number Sub Arrays Bounded Maximum
+ * Link: https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
+ * Description:
  * Description: https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
  * <p>
  * https://aonecode.com/aplusplus/interviewctrl/getInterview/7243247199135871999
@@ -22,7 +25,26 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * L, R  and A[i] will be an integer in the range [0, 10^9].
  * The length of A will be in the range of [1, 50000].
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberSubArraysBoundedMaximum {
 
     public static void main(String []args) {

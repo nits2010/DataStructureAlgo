@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-19
+ * Question Title: Merge Intervals
+ * Link: https://aonecode.com/aplusplus/interviewctrl/getInterview/7798119161075951615
+ * Description:
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/7798119161075951615
  * # There's a room with a TV and people are coming in and out to watch it. The TV is on only when there's at least a person in the room.
  * # For each person that comes in, we record the start and end time. We want to know for how long the TV has been on. In other words:
@@ -20,6 +23,24 @@ import java.util.*;
  * # > 11
  * <p>
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class MergeIntervals {

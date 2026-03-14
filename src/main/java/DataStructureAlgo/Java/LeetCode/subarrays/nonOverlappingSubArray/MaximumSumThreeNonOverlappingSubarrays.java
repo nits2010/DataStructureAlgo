@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-14
+ * Question Title: Maximum Sum Three Non Overlapping Subarrays
+ * Link: https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
+ * Description:
  * Description: https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
  * In a given array nums of positive integers, find three non-overlapping subarrays with maximum sum.
  * <p>
@@ -26,7 +29,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * nums.length will be between 1 and 20000.
  * nums[i] will be between 1 and 65535.
  * k will be between 1 and floor(nums.length / 3).
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumThreeNonOverlappingSubarrays {
 
     public static void main(String[] args) {

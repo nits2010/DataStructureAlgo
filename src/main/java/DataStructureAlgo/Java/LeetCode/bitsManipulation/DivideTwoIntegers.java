@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-03
+ * Question Title: Divide Two Integers
+ * Link: https://leetcode.com/problems/divide-two-integers/
+ * Description:
  * Description: https://leetcode.com/problems/divide-two-integers/
  * 29. Divide Two Integers
  * Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
@@ -25,7 +28,26 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
  * The divisor will never be 0.
  * Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
  * For the purpose of this problem, assume that your function returns 2^31 − 1 when the division result overflows.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DivideTwoIntegers {
 
     public static void main(String[] args) {

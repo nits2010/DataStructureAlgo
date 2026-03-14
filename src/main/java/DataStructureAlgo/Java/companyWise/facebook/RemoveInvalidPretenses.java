@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-19
+ * Question Title: Remove Invalid Pretenses
+ * Link: https://leetcode.com/problems/remove-invalid-parentheses/
+ * Description:
  * Description: https://leetcode.com/problems/remove-invalid-parentheses/
  * https://www.geeksforgeeks.org/remove-invalid-parentheses/
  * <p>
@@ -26,7 +29,26 @@ import java.util.*;
  * Output: [""]
  * <p>
  * Solutions : {@link RemoveInvalidPretensesBackTrackingBFS} & {@link RemoveInvalidPretensesBackTrackingEfficientDFS}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveInvalidPretenses {
 
 

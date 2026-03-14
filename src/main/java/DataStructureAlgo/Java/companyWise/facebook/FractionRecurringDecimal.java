@@ -6,6 +6,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-30
+ * Question Title: Fraction Recurring Decimal
+ * Link: https://leetcode.com/problems/fraction-to-recurring-decimal/
+ * Description:
  * Description: https://leetcode.com/problems/fraction-to-recurring-decimal/
  * Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.
  * <p>
@@ -25,7 +28,26 @@ import java.util.Map;
  * Output: "0.(6)"
  * <p>
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FractionRecurringDecimal {
 
     public static void main(String []args) {

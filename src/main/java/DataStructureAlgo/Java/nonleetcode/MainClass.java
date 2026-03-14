@@ -12,16 +12,30 @@ import java.util.Queue;
 
 /**
  * Author: Nitin Gupta
- * * Date: 11/04/19
- * * Description:
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
- * }
+ * Date: 2026-03-14
+ * Question Title: Main Class
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 class Solution2 {
 
 

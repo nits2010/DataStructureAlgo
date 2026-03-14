@@ -3,14 +3,35 @@ package DataStructureAlgo.Java.companyWise.Adobe;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Amend The Sentence
+ * Link: https://www.geeksforgeeks.org/adobe-interview-experience-set-24-on-campus-for-mts/
+ * Description:
  * Description: https://www.geeksforgeeks.org/adobe-interview-experience-set-24-on-campus-for-mts/
  * Given an array of characters which is basically a sentence. However there is no space between different words and the first letter of every word is in uppercase. You need to print this sentence after following amendments:
  * (i) Put a single space between these words
  * (ii) Convert the uppercase letters to lowercase.
- *
  * Example: “MyNameIsRam ” , you need to convert this to “my name is ram”
  * Example: “MyNameIsKhansKhanRam ” , you need to convert this to “my name is ram”
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AmendTheSentence {
 
     public static void main(String[] args) {

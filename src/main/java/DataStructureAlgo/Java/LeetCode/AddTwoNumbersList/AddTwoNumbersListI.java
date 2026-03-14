@@ -7,6 +7,9 @@ import  DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-11
+ * Question Title: Add Two Numbers List I
+ * Link: https://leetcode.com/problems/add-two-numbers/
+ * Description:
  * Description: https://leetcode.com/problems/add-two-numbers/
  * 2. Add Two Numbers
  * <p>
@@ -19,7 +22,26 @@ import  DataStructureAlgo.Java.helpers.templates.ListNode;
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AddTwoNumbersListI {
 
     public static void main(String[] args) {

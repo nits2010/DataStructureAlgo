@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Special Sub String Start With Vowel End With Consonant
+ * Link: https://leetcode.com/discuss/interview-question/125520/Special-Subsequence
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/125520/Special-Subsequence
  * <p>
  * Consider a string, s = "abc". An alphabetically-ordered sequence of substrings of s would be {"a", "ab", "abc", "b", "bc", "c"}.
@@ -62,7 +65,26 @@ import java.util.*;
  * Explanation 3
  * There are 4830 substrings of s, but only 676 of them start with a vowel and end with a consonant. When ordered alphabetically,
  * the first substring is "aaop" and the last substring is "utyrulqaeuouiecodjlmjeaummaoqkexylwaaopnfvlbiiiidyckzfh".
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SpecialSubStringStartWithVowelEndWithConsonant {
 
     public static void main(String[] args) {

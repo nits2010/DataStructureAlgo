@@ -5,8 +5,30 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-06
+ * Question Title: Orderly Queue Smallest String Rotation K First Character
+ * Link: https://leetcode.com/problems/orderly-queue/
+ * Description:
  * Description: https://leetcode.com/problems/orderly-queue/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class OrderlyQueueSmallestStringRotationKFirstCharacter {
 
     public static void main (String []args){

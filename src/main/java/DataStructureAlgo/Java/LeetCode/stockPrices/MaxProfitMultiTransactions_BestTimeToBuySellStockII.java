@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.stockPrices;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Max Profit Multi Transactions_Best Time To Buy Sell Stock II
+ * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+ * Description:
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * Say you have an array for which the ith element is the price of a given stock on day i.
  * <p>
@@ -16,7 +19,26 @@ package DataStructureAlgo.Java.LeetCode.stockPrices;
  * Output: 7
  * Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
  * Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaxProfitMultiTransactions_BestTimeToBuySellStockII {
 
     public static void main(String []args) {

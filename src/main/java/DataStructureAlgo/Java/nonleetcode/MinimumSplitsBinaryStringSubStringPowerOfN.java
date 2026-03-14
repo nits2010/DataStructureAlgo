@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-07
+ * Question Title: Minimum Splits Binary String Sub String Power Of N
+ * Link: https://www.geeksforgeeks.org/minimum-splits-in-a-binary-string-such-that-every-substring-is-a-power-of-4-or-6/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-splits-in-a-binary-string-such-that-every-substring-is-a-power-of-4-or-6/
  * Given a string S composed of 0 and 1. Find the minimum splits such that the substring is a binary representation of the power of 4 or 6 with no leading zeros. Print -1 if no such partitioning is possible.
  * <p>
@@ -17,7 +20,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * Input : 00000
  * Output : -1
  * 0 is not a power of  4 or 6.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumSplitsBinaryStringSubStringPowerOfN {
 
     public static void main(String []args) {

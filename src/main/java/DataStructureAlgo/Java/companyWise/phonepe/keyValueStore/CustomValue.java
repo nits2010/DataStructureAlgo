@@ -6,8 +6,30 @@ import java.util.Objects;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-12
+ * Question Title: Custom Value
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CustomValue<T> implements Serializable {
 
     private T value;

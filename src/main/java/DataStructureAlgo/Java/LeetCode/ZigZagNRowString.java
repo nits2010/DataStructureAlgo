@@ -6,6 +6,11 @@ import java.util.List;
 
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Zig Zag N Row String
+ * Link: https://leetcode.com/problems/zigzag-conversion/
+ * Description:
  * https://leetcode.com/problems/zigzag-conversion/
  * 6. ZigZag Conversion
  * <p>
@@ -59,7 +64,26 @@ import java.util.List;
  * in every row. We get "GSGSEKFREKEOE"
  * <p>
  * https://www.geeksforgeeks.org/print-concatenation-of-zig-zag-string-form-in-n-rows/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ZigZagNRowString {
 
     static class ZigZagConversion {

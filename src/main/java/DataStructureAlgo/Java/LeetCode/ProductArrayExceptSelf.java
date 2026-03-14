@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-14
+ * Question Title: Product Array Except Self
+ * Link: https://leetcode.com/problems/product-of-array-except-self/
+ * Description:
  * Description: https://leetcode.com/problems/product-of-array-except-self/
  * Given an array nums of n integers where n > 1,  return an array output such that output[i]
  * is equal to the product of all the elements of nums except nums[i].
@@ -17,9 +20,27 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * Follow up:
  * Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
- *
  * [Facebook]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ProductArrayExceptSelf {
     public static void main(String[] args) {
         test(new int[]{1, 0});

@@ -8,6 +8,9 @@ import  DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-12
+ * Question Title: Reverse Linked List
+ * Link: https://leetcode.com/problems/reverse-linked-list/
+ * Description:
  * Description: https://leetcode.com/problems/reverse-linked-list/
  * 206. Reverse Linked List
  * Reverse a singly linked list.
@@ -19,8 +22,25 @@ import  DataStructureAlgo.Java.helpers.templates.ListNode;
  * Follow up:
  * <p>
  * A linked list can be reversed either iteratively or recursively. Could you implement both?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class ReverseLinkedList {
 

@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 14/09/19
+ * Question Title: Reorder Data Log Files
+ * Link: https://leetcode.com/problems/reorder-data-in-log-files/
+ * Description:
  * Description: https://leetcode.com/problems/reorder-data-in-log-files/
  * 937. Reorder Data in Log Files
  * You have an array of logs.  Each log is a space delimited string of words.
@@ -40,7 +43,26 @@ import java.util.List;
  * logs[i] is guaranteed to have an identifier, and a word after the identifier.
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReorderDataLogFiles {
 
     public static void main(String[] args) {

@@ -3,6 +3,32 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.backtrackings.permutation
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Permutation Sequence
+ * Link: https://leetcode.com/problems/permutation-sequence/
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class PermutationSequence_60 {
     private int factorial(int n) {
         if (n <= 1) {

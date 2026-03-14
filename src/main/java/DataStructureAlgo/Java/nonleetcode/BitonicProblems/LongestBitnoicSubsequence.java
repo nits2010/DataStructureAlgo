@@ -7,13 +7,14 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-22
+ * Question Title: Longest Bitnoic Subsequence
+ * Link: https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15/
  * Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first strictly increasing,
  * then strictly decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence.
- *
  * A sequence, sorted in increasing order, is considered Bitonic with the decreasing part as empty.
  * Similarly, a decreasing order sequence is considered Bitonic with the increasing part as empty.
- *
  * <p>
  * Input arr[] = {1, 11, 2, 10, 4, 5, 2, 1};
  * Output: 6 (A Longest Bitonic Subsequence of length 6 is 1, 2, 10, 4, 2, 1)
@@ -23,7 +24,26 @@ import java.util.Arrays;
  * <p>
  * Input arr[] = {80, 60, 30, 40, 20, 10}
  * Output: 5 (A Longest Bitonic Subsequence of length 5 is 80, 60, 30, 20, 10)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestBitnoicSubsequence {
 
     public static void main(String[] args) {

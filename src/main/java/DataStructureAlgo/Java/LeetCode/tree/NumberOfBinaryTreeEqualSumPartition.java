@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-11
+ * Question Title: Number Of Binary Tree Equal Sum Partition
+ * Link: https://www.geeksforgeeks.org/number-of-ways-to-divide-a-binary-tree-into-two-halves/
+ * Description:
  * Description: https://www.geeksforgeeks.org/number-of-ways-to-divide-a-binary-tree-into-two-halves/
  * Number of ways to divide a Binary tree into two halves
  * <p>
@@ -42,7 +45,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * *                 -1
  * Output: 2
  * Extension of {@link BinaryTreeEqualPartition}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberOfBinaryTreeEqualSumPartition {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-31
+ * Question Title: Cars And Dispensers
+ * Link: https://leetcode.com/discuss/interview-question/algorithms/124747/find-maximum-waiting-time
+ * Description:
  * Description:
  * https://leetcode.com/discuss/interview-question/algorithms/124747/find-maximum-waiting-time
  * <p>
@@ -16,7 +19,26 @@ import java.util.*;
  * X=7, Y=11, Z=3
  * <p>
  * For more info: see image
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CarsAndDispensers {
 
     public static void main(String[] args) {

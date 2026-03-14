@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Four Sum4Sum II
+ * Link: https://leetcode.com/problems/4sum-ii/
+ * Description:
  * Description: 4Sum II
  * https://leetcode.com/problems/4sum-ii/
  * Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are
@@ -27,7 +30,26 @@ import java.util.*;
  * The two tuples are:
  * 1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
  * 2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FourSum4SumII {
 
     public static void main(String[] args) {

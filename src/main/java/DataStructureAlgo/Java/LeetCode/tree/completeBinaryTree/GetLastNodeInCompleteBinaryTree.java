@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-13
+ * Question Title: Get Last Node In Complete Binary Tree
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
  * Given a complete binary tree, you need find a node at which the next node need to be inserted, in the least time complexity.
@@ -19,7 +22,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * <p>
  * {@link CountNodesInCompleteBinaryTree}
  * {@link IsCompleteBinaryTree}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GetLastNodeInCompleteBinaryTree {
     public static void main(String[] args) {
 

@@ -9,6 +9,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Longest Consecutive Sequence
+ * Link: https://leetcode.com/problems/longest-consecutive-sequence/
+ * Description:
  * Description: https://leetcode.com/problems/longest-consecutive-sequence/
  * https://www.geeksforgeeks.org/longest-consecutive-subsequence/
  * <p>
@@ -21,7 +24,26 @@ import java.util.Set;
  * Input: [100, 4, 200, 1, 3, 2]
  * Output: 4
  * Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestConsecutiveSequence {
 
     public static void main(String []args) {

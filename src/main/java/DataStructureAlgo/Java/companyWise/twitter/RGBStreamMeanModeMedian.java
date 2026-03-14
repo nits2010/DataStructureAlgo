@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: RGB Stream Mean Mode Median
+ * Link: https://leetcode.com/discuss/interview-question/336848/Twitter-or-Phone-Screen-or-RGB-Stream
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/336848/Twitter-or-Phone-Screen-or-RGB-Stream
  * You have a set of users visiting your website. Each user picks a color represented by RGB. R, G, B can take values between 0 and 255.
  * <p>
@@ -19,7 +22,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * (0, 0, 0),        (0, 0, 0)              (0, 0, 0)
  * (34, 232, 9), (17, 116, 4.5)   (17, 116, 4.5)
  * (43, 21, 34), (77/3, .., ..)        (34, 21, 9)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RGBStreamMeanModeMedian {
 
     public static void main(String[] args) {

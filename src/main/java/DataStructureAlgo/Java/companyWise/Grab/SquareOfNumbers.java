@@ -8,13 +8,35 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-23
+ * Question Title: Square Of Numbers
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Given an array of integer in sorted manner, find the resultant array which contains squares of input array in sorted manner.
  * input
  * (-4, -3, 0, 2, 5, 7}
  * output:
  * {0, 4, 9, 16, 25, 49}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SquareOfNumbers {
 
     private static List<Integer> squares(List<Integer> in) {

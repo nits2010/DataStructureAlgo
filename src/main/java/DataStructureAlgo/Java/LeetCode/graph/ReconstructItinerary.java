@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Reconstruct Itinerary
+ * Link: https://leetcode.com/problems/reconstruct-itinerary/
+ * Description:
  * Description: https://leetcode.com/problems/reconstruct-itinerary/
  * Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order.
  * All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
@@ -48,7 +51,6 @@ import java.util.*;
  * <p>
  * Important:
  * If all nodes in graph have odd degree than it's not possible to build Eulerian Path, as for coming and going from/to a node we require even degree for some of the node.
- *
  * <p>
  * Must Watch:
  * Eulerian Path - Intro to Algorithms: https://www.youtube.com/watch?v=ycRuO-u6rt8
@@ -59,7 +61,26 @@ import java.util.*;
  * @Amazon
  * @Twitter
  * @Editorial <a href="https://leetcode.com/problems/reconstruct-itinerary/solutions/359942/Awesome-question-or-new-algo-to-learn-or-Full-explanation-or-Code">...</a>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReconstructItinerary {
 
     public static void main(String[] args) {

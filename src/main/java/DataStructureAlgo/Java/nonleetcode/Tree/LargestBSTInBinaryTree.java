@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.nonleetcode.Tree;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-26
+ * Question Title: Largest BST In Binary Tree
+ * Link: https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description
+ * Description:
  * Description: Similar to 1373. Maximum Sum BST in Binary Tree https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LargestBSTInBinaryTree {
 
     private final static class LargestBSTHelper {

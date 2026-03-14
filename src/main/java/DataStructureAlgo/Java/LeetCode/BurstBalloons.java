@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-28
+ * Question Title: Burst Balloons
+ * Link: https://leetcode.com/problems/burst-balloons/
+ * Description:
  * Description:
  * https://leetcode.com/problems/burst-balloons/
  * Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.
@@ -23,7 +26,26 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
  * coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
  * <p>
  * Video help:https://www.youtube.com/watch?v=IFNibRVgFBo
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BurstBalloons {
 
     public static void main(String[] args) {

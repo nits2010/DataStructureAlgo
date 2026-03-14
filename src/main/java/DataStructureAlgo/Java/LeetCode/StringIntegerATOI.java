@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-02
+ * Question Title: String Integer ATOI
+ * Link: https://leetcode.com/problems/string-to-integer-atoi/
+ * Description:
  * Description: https://leetcode.com/problems/string-to-integer-atoi/
  * Implement atoi which converts a string to an integer.
  * <p>
@@ -45,7 +48,26 @@ package DataStructureAlgo.Java.LeetCode;
  * Output: -2147483648
  * Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
  * Thefore INT_MIN (−231) is returned.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringIntegerATOI {
     public static void main(String[] args) {
         System.out.println(myAtoi("42"));

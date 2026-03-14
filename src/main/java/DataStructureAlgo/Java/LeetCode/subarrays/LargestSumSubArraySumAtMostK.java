@@ -5,6 +5,9 @@ import java.util.TreeSet;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Largest Sum Sub Array Sum At Most K
+ * Link: https://www.geeksforgeeks.org/maximum-sum-subarray-sum-less-equal-given-sum/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-sum-subarray-sum-less-equal-given-sum/
  * https://stackoverflow.com/questions/39084147/largest-sum-of-contiguous-subarray-no-larger-than-k
  * Given an array of integers A and an integer k,
@@ -12,9 +15,27 @@ import java.util.TreeSet;
  * {2,2,-1},
  * when k = 0, return -1.
  * when k = 3, return 3.
- *
  * Similar problems: https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LargestSumSubArraySumAtMostK {
 
     public static void main(String []args) {

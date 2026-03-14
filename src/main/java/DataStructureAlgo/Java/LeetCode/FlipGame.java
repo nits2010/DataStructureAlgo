@@ -7,13 +7,35 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-23
+ * Question Title: Flip Game
+ * Link: https://www.programcreek.com/2014/04/leetcode-flip-game-java/
+ * Description:
  * Description:
  * You are playing the following Flip Game with your friend: Given a string that contains only these two characters: + and -,
  * you and your friend take turns to flip two consecutive "++" into "--".
  * The game ends when a person can no longer make a move and therefore the other person will be the winner.
  * <p>
  * https://www.programcreek.com/2014/04/leetcode-flip-game-java/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FlipGame {
 }
 

@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-05
+ * Question Title: Minimum Number I And D
+ * Link: https://www.geeksforgeeks.org/form-minimum-number-from-given-sequence/
+ * Description:
  * Description: https://www.geeksforgeeks.org/form-minimum-number-from-given-sequence/
  * <p>
  * Given a pattern containing only I’s and D’s. I for increasing and D for decreasing. Devise an algorithm to print the minimum number following that pattern. Digits from 1-9 and digits can’t repeat.
@@ -18,7 +21,26 @@ import java.util.Stack;
  * Input: DIDI     Output: 21435
  * Input: IIDDD    Output: 126543
  * Input: DDIDDIID Output: 321654798
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumNumberIAndD {
 
     public static void main(String arg[]) {

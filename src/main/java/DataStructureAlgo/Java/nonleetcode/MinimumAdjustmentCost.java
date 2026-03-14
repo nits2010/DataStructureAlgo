@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-06
+ * Question Title: Minimum Adjustment Cost
+ * Link: https://www.geeksforgeeks.org/find-minimum-adjustment-cost-of-an-array/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-minimum-adjustment-cost-of-an-array/
  * Given an array of positive integers, replace each element in the array such that the difference between adjacent elements in the array is less than or equal to a given target. We need to minimize the adjustment cost, that is the sum of differences between new and old values. We basically need to minimize &Sum;|A[i] – Anew[i]| where 0 ≤ i ≤ n-1, n is size of A[] and Anew[] is the array with adjacent difference less that or equal to target.
  * <p>
@@ -27,7 +30,26 @@ import java.util.Arrays;
  * Output: Minimum adjustment cost is 75
  * Explanation: One of the possible solutions is
  * [55, 62, 52, 49, 39, 29, 30, 40, 49, 47]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumAdjustmentCost {
 
     public static void main(String []args) {

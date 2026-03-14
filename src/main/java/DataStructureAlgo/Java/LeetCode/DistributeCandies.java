@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Distribute Candies
+ * Link: https://leetcode.com/problems/distribute-candies/
+ * Description:
  * Description: https://leetcode.com/problems/distribute-candies/
  * Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister. Return the maximum number of kinds of candies the sister could gain.
  * Example 1:
@@ -25,7 +28,26 @@ import java.util.*;
  * <p>
  * The length of the given array is in range [2, 10,000], and will be even.
  * The number in given array is in range [-100,000, 100,000].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DistributeCandies {
     public static void main(String[] args) {
         test(new int[]{1, 1, 2, 3});

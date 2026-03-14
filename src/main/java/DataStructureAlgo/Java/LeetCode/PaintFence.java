@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 24/09/19
+ * Question Title: Paint Fence
+ * Link: https://leetcode.com/problems/paint-fence
+ * Description:
  * Description: https://leetcode.com/problems/paint-fence
  * http://leetcode.liangjiateng.cn/leetcode/paint-fence/description
  * 276.Paint Fence [EASY]
@@ -32,7 +35,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * https://www.youtube.com/watch?v=deh7UpSRaEY
  * https://www.geeksforgeeks.org/painting-fence-algorithm/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PaintFence {
 
     public static void main(String[] args) {

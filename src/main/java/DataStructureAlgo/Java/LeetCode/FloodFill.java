@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 13/09/19
+ * Question Title: Flood Fill
+ * Link: https://leetcode.com/problems/flood-fill/
+ * Description:
  * Description: https://leetcode.com/problems/flood-fill/
  * 733. Flood Fill [EASY]
  * <p>
@@ -34,9 +37,27 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * The length of image and image[0] will be in the range [1, 50].
  * The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
  * The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
- *
  * https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FloodFill {
 
     public static void main(String[] args) {

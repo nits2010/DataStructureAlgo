@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-31
+ * Question Title: Graph Divide Two Sets Or Bipartite Graph
+ * Link: https://www.geeksforgeeks.org/bipartite-graph/
+ * Description:
  * Description: https://www.geeksforgeeks.org/bipartite-graph/
  * <p>
  * Given a random graph (undirected/directed /tree anything). You need to find that we can divide this graph in two different sets of
@@ -19,7 +22,26 @@ import java.util.*;
  * 4. Coloring Problem
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.IsGraphBipartite}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GraphDivideTwoSetsOrBipartiteGraph {
 
     public static void main(String[] args) {

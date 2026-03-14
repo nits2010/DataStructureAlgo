@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: House Robber I
+ * Link: https://leetcode.com/problems/house-robber/
+ * Description:
  * Description: https://leetcode.com/problems/house-robber/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed,
  * the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will
@@ -45,7 +48,26 @@ import java.util.Arrays;
  * <p>
  * Input : arr[] = {1, 20, 3}
  * Output : 20
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class HouseRobberI {
 
     public static void main(String[] args) {

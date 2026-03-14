@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-29
+ * Question Title: Maximum Subset Sum No Two Elements Common Digits
+ * Link: https://www.geeksforgeeks.org/maximum-subset-sum-such-that-no-two-elements-in-set-have-same-digit-in-them/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/maximum-subset-sum-such-that-no-two-elements-in-set-have-same-digit-in-them/
  * https://stackoverflow.com/questions/56302111/maximum-sum-of-array-with-no-repeating-digits
@@ -22,7 +25,26 @@ import java.util.Arrays;
  * <p>
  * Input : array[] = {1, 21, 32, 4, 5 }
  * Output : 42
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSubsetSumNoTwoElementsCommonDigits {
 
     public static void main(String []args) {

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-04
+ * Question Title: Unique Paths
+ * Link: https://www.techiedelight.com/find-total-number-unique-paths-maze-source-destination/
+ * Description:
  * Description:
  * *
  * * A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
@@ -34,7 +37,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * *
  * * Extension of {@link UniquePathsII} here we allow 4 direction
  * https://www.techiedelight.com/find-total-number-unique-paths-maze-source-destination/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class UniquePaths {
 
     public static void main(String[] args) {

@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-23
+ * Question Title: Zig Zag Traversal Binary Tree
+ * Link: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+ * Description:
  * Description: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  * <p>
  * Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
@@ -28,7 +31,26 @@ import java.util.*;
  * ]
  * <p>
  * https://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ZigZagTraversalBinaryTree {
     public static void main(String[] args) {
         TreeNode tree = new TreeNode(1);

@@ -6,8 +6,30 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-05-20
+ * Question Title: Dominoes Arrangement Problem
+ * Link: TODO: Add Link
+ * Description:
  * Description: see screen shot for question
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DominoesArrangementProblem {
 
 

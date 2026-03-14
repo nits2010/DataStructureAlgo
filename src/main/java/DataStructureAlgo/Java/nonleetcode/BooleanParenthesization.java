@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Boolean Parenthesization
+ * Link: https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/
+ * Description:
  * Description: https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/
  * Given a boolean expression with following symbols.
  * <p>
@@ -24,7 +27,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * Output: 2
  * The given expression is "T ^ F & T", it evaluates true
  * in two ways "((T ^ F) & T)" and "(T ^ (F & T))"
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BooleanParenthesization {
 
     public static void main(String []args) {

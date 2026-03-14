@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.companyWise.Amazon.BinaryPeriod;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-07
+ * Question Title: Binary Period
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryPeriod {
     public static void main(String []args) {
         SolutionBinaryPeriod sol = new SolutionBinaryPeriod();

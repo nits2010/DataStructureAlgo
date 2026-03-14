@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-07
+ * Question Title: Shortest Common Super Sequence
+ * Link: https://leetcode.com/problems/shortest-common-supersequence/
+ * Description:
  * Description: https://leetcode.com/problems/shortest-common-supersequence/
  * Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences.  If multiple answers exist, you may return any of them.
  * <p>
@@ -33,7 +36,26 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
  * <p>
  * <p>
  * https://www.geeksforgeeks.org/shortest-common-supersequence/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestCommonSuperSequence {
 
     public static void main(String[] args) {

@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-19
+ * Question Title: Interval Working On Multi Tasking
+ * Link: https://leetcode.com/discuss/interview-experience/301164/Facebook-onsite-interview-experience-2019
+ * Description:
  * Description: https://leetcode.com/discuss/interview-experience/301164/Facebook-onsite-interview-experience-2019
  * <p>
  * You are given a schedule of tasks to work on. Each tasks has a start and an end time [start, end] where end > start. Find out for the given schedule:
@@ -22,8 +25,25 @@ import java.util.*;
  * <p>
  * https://leetcode.com/discuss/interview-question/338948/facebook-onsite-schedule-of-tasks/309123
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class IntervalWorkingOnMultiTasking {
 

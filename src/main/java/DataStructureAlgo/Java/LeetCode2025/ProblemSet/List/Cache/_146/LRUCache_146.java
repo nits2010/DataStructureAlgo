@@ -9,6 +9,7 @@ import java.util.Map;
  * Date: 8/3/2024
  * Question Title: 146. LRU Cache [ medium ]
  * Link: https://leetcode.com/problems/lru-cache
+ * Description:
  * Description: https://leetcode.com/problems/lru-cache
  * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
  * <p>
@@ -49,7 +50,6 @@ import java.util.Map;
  * 0 <= value <= 105
  * At most 2 * 105 calls will be made to get and put.
  * <p>
- *
  * <p>
  * File reference
  * -----------
@@ -59,7 +59,6 @@ import java.util.Map;
  * <p>
  * Tags
  * -----
- *
  * @medium
  * @HashTable
  * @LinkedList
@@ -73,7 +72,26 @@ import java.util.Map;
  * @Microsoft
  * @Apple
  * @Bloomberg
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LRUCache_146 {
     public static void main(String[] args) {
         boolean testResult =

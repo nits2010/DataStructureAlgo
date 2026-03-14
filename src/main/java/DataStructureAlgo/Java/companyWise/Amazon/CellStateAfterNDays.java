@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Cell State After N Days
+ * Link: https://aonecode.com/amazon-online-assessment-oa2-cell-state-after-n-days
+ * Description:
  * Description: https://aonecode.com/amazon-online-assessment-oa2-cell-state-after-n-days
  * <p>
  * Eight houses, represented as cells, are arranged in a straight line.
@@ -53,7 +56,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * otherwise the cell becomes active.
  * <p>
  * It just reverse of above.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CellStateAfterNDays {
     public static void main(String[] args) {
         CommonMethods.print(cellAfterNDays(new int[]{1, 0, 0, 0, 0, 1, 0, 0}, 1));

@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Split Array Largest Sum
+ * Link: https://leetcode.com/problems/split-array-largest-sum/
+ * Description:
  * Description: https://leetcode.com/problems/split-array-largest-sum/
  * <p>
  * Given an array which consists of non-negative integers and an integer m, you can split the array into m non-empty continuous subarrays. Write an algorithm to minimize the largest sum among these m subarrays.
@@ -31,7 +34,26 @@ import  DataStructureAlgo.Java.nonleetcode.PainterPartitionProblem;
  * Similar to these
  * {@link PainterPartitionProblem}
  * {@link DataStructureAlgo.Java.companyWise.Google.ChocolateSweetnessChunk}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SplitArrayLargestSum {
     public static void main(String[] args) {
         SplitArrayLargestSumSolution solution = new SplitArrayLargestSumSolution();

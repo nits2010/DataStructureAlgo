@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Word Wrap Problem
+ * Link: https://www.geeksforgeeks.org/word-wrap-problem-dp-19/
+ * Description:
  * Description: https://www.geeksforgeeks.org/word-wrap-problem-dp-19/
  * <p>
  * Given a sequence of words, and a limit on the number of characters that can be put
@@ -19,9 +22,27 @@ package DataStructureAlgo.Java.nonleetcode;
  * <p>
  * The total extra spaces in line 1, line 2 and line 3 are 0, 2 and 3 respectively.
  * So optimal value of total cost is 0 + 2*2 + 3*3 = 13
- *
  * Similar problem {@link DataStructureAlgo.Java.LeetCode.TextJustification}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WordWrapProblem {
 
     public static void main(String[] args) {

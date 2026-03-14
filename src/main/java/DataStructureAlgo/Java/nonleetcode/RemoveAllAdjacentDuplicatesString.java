@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Remove All Adjacent Duplicates String
+ * Link: https://www.geeksforgeeks.org/recursively-remove-adjacent-duplicates-given-string/
+ * Description:
  * Description: https://www.geeksforgeeks.org/recursively-remove-adjacent-duplicates-given-string/
  * Given a string, recursively remove adjacent duplicate characters from the string. The output string
  * should not have any adjacent duplicates. See following examples.
@@ -31,7 +34,26 @@ import java.util.Stack;
  * <p>
  * Similar to {@link DataStructureAlgo.Java.LeetCode.RemoveAll2AdjacentDuplicatesString}
  * Instead of two, we need to remove all if duplicate and adjacent
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveAllAdjacentDuplicatesString {
     public static void main(String[] args) {
         test("abbaca", "ca");

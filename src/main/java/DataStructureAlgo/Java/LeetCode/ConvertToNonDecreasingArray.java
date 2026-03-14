@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-08
+ * Question Title: Convert To Non Decreasing Array
+ * Link: https://leetcode.com/problems/non-decreasing-array/
+ * Description:
  * Description: https://leetcode.com/problems/non-decreasing-array/
  * Given an array with n integers, your task is to check if it could become non-decreasing by modifying at most 1 element.
  * <p>
@@ -21,7 +24,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Output: False
  * Explanation: You can't get a non-decreasing array by modify at most one element.
  * Note: The n belongs to [1, 10,000].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ConvertToNonDecreasingArray {
 
     public static void main(String[] args) {

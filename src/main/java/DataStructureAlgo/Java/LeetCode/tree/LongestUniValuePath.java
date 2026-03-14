@@ -11,6 +11,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-27
+ * Question Title: Longest Uni Value Path
+ * Link: https://leetcode.com/problems/longest-univalue-path/
+ * Description:
  * Description: https://leetcode.com/problems/longest-univalue-path/
  * <p>
  * Given a binary tree, find the length of the longest path where each node in the path has the same value.
@@ -47,7 +50,26 @@ import java.util.Queue;
  * <p>
  * <p>
  * Note: The given binary tree has not more than 10000 nodes. The height of the tree is not more than 1000.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestUniValuePath {
 
 

@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-01
+ * Question Title: Next Smallest Palindrome
+ * Link: https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/
+ * Description:
  * Description:https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/
  * Given a number, find the next smallest palindrome
  * Given a number, find the next smallest palindrome larger than this number. For example, if the input number is “2 3 5 4 5”, the output should be “2 3 6 3 2”.
@@ -18,7 +21,26 @@ import java.util.Arrays;
  * 2) The input number is not palindrome. For example “1 2 3 4”. Output should be “1 3 3 1”
  * 3) The input number is palindrome and doesn’t have all 9s. For example “1 2 2 1”. Output should be “1 3 3 1”
  * [Amazon]  [MakeMyTrip] [Microsoft]  [Yahoo]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NextSmallestPalindrome {
 
     public static void main(String[] args) {

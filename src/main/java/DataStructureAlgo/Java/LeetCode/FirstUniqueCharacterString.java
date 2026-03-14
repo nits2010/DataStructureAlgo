@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-23
+ * Question Title: First Unique Character String
+ * Link: https://leetcode.com/problems/first-unique-character-in-a-string/
+ * Description:
  * Description: https://leetcode.com/problems/first-unique-character-in-a-string/
  * <p>
  * Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
@@ -16,7 +19,26 @@ package DataStructureAlgo.Java.LeetCode;
  * return 2.
  * Note: You may assume the string contain only lowercase letters.
  * https://leetcode.com/problems/first-unique-character-in-a-string/discuss/365135/Three-variation-or-Explanation-or-100-100-or-LEETCODE-platform-fast
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FirstUniqueCharacterString {
 
     public int firstUniqChar(String s) {

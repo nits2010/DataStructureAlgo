@@ -6,6 +6,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Maximum Sum Sub Array At Least K Elements
+ * Link: https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
+ * Description:
  * Description: https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
  * <p>
  * Given an array, find the subarray (containing at least k numbers) which has the largest sum.
@@ -21,9 +24,27 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * k = 2
  * Output : 6
  * The sub array is {1, 1, 1, 1, 1, 1}
- *
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumSubArrayAtLeastKElements {
 
     public static void main(String[] args) {

@@ -4,6 +4,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-02
+ * Question Title: Egg Drop Problem
+ * Link: https://leetcode.com/problems/super-egg-drop/
+ * Description:
  * Description: https://leetcode.com/problems/super-egg-drop/
  * You are given K eggs, and you have access to a building with N floors from 1 to N.
  * <p>
@@ -41,7 +44,26 @@ package DataStructureAlgo.Java.LeetCode;
  * References: https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/ , https://www.geeksforgeeks.org/eggs-dropping-puzzle-binomial-coefficient-and-binary-search-solution/
  * <p>
  * Logic: https://leetcode.com/articles/super-egg-drop/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class EggDropProblem {
     public static void main(String[] args) {
         test(2, 10);

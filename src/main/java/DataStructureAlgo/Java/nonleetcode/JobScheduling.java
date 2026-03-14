@@ -8,8 +8,29 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Job Scheduling
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 class Job {

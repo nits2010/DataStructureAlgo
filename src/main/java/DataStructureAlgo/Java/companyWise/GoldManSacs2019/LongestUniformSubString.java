@@ -1,21 +1,39 @@
 package DataStructureAlgo.Java.companyWise.GoldManSacs2019;
 
+import java.util.*;
+
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-01
+ * Question Title: Longest Uniform Sub String
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * LongestUniformSubString
  * return start and length
- *
  * input: 10000111
  * output 0000 [ 1, 4 ]
- *
  * input: aabbbbbCdAA
  * output: bbbbb [ 2 , 5 ]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
- *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-import java.util.*;
 
 public class LongestUniformSubString {
 

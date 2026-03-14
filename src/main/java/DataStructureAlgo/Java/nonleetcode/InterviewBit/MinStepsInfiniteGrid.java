@@ -5,9 +5,31 @@ import java.util.ArrayList;
 /**
  * Author: Nitin Gupta
  * Date: 2019-05-20
+ * Question Title: Min Steps Infinite Grid
+ * Link: https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
+ * Description:
  * Description:
  * https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinStepsInfiniteGrid {
 
     public static void main(String arg[]) {

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-21
+ * Question Title: Minimum Jump To Reach Last Jump Game
+ * Link: https://leetcode.com/problems/jump-game/
+ * Description:
  * Description:
  * https://leetcode.com/problems/jump-game/
  * https://leetcode.com/problems/jump-game-ii/
@@ -35,7 +38,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Output: false
  * Explanation: You will always arrive at index 3 no matter what. Its maximum
  * jump length is 0, which makes it impossible to reach the last index.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumJumpToReachLastJumpGame {
 
 

@@ -1,6 +1,32 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._131;
 import java.util.*;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Palindrome Partitioning
+ * Link: https://leetcode.com/problems/palindrome-partitioning/
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 public class PalindromePartitioning_131 {
     public static List<List<String>> partition(String s) {
         final List<List<String>> result = new LinkedList<>();

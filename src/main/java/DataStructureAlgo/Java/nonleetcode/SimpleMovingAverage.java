@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-14
+ * Question Title: Simple Moving Average
+ * Link: https://www.geeksforgeeks.org/program-find-simple-moving-average/
+ * Description:
  * Description: https://www.geeksforgeeks.org/program-find-simple-moving-average/
  * <p>
  * Simple Moving Average is the average obtained from the data for some t period of time . In normal mean,
@@ -23,7 +26,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * * New number added is 8.0, SMA = 6.333333333333333
  * <p>
  * {@link DataStructureAlgo.Java.companyWise.facebook.MovingAverage}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SimpleMovingAverage {
 
     public static void main(String[] args) {

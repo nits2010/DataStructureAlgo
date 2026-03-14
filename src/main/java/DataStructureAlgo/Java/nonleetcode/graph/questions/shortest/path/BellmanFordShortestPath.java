@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-08
+ * Question Title: Bellman Ford Shortest Path
+ * Link: https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/">...</a>
+ * Description:
  * Description:
  * <a href="https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/">...</a>
  * <a href="https://leetcode.com/discuss/study-guide/4811631/Bellman-Ford-Algorithm">...</a>
@@ -29,7 +32,26 @@ import java.util.*;
  * Time Complexity: O(V*E)
  * Negative Cycle: https://www.dyclassroom.com/graph/detecting-negative-cycle-using-bellman-ford-algorithm
  * Bellman Ford Problems : https://leetcode.com/problem-list/aju0qcxh/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BellmanFordShortestPath implements IShortestPath {
 
 

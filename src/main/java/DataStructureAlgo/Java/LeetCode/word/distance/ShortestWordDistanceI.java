@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Shortest Word Distance I
+ * Link: https://leetcode.com/problems/shortest-word-distance/
+ * Description:
  * Description: https://leetcode.com/problems/shortest-word-distance/
  * http://leetcode.liangjiateng.cn/leetcode/shortest-word-distance/description
  * 243.Shortest Word Distance
@@ -22,7 +25,26 @@ import java.util.List;
  * You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
  * <p>
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.4.html
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestWordDistanceI {
 
 

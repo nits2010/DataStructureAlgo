@@ -3,9 +3,31 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-31
+ * Question Title: Contiguous Sum
+ * Link: TODO: Add Link
+ * Description:
  * Description: You’re given an array of integer and a number "sum", find does any subarray exist which sum up to given "sum".
  * Facebook 2019
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ContiguousSum {
     public static void main(String[] args) {
         System.out.println(contiguousSum(new int[]{3, 5, 6, 3}, 11));

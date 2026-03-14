@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 11/12/18
+ * Question Title: Chain Matrix Multiplication
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
  * Matrix chain multiplication without memorization;
@@ -10,8 +13,25 @@ package DataStructureAlgo.Java.nonleetcode;
  * <p>
  * M[i][j] = 0 ; if i == j => No operation required to multiply the same matrix
  * *       = minimum ( M[i][k] + M[k+1][j] + p[i-1]*p[k]+p[j] ) for any k from i to j.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class ChainMatrixMultiplication {
 

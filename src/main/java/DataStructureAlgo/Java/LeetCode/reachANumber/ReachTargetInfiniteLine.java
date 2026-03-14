@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.reachANumber;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-12
+ * Question Title: Reach Target Infinite Line
+ * Link: https://leetcode.com/problems/reach-a-number/
+ * Description:
  * Description: https://leetcode.com/problems/reach-a-number/
  * ou are standing at position 0 on an infinite number line. There is a goal at position target.
  * <p>
@@ -25,10 +28,27 @@ package DataStructureAlgo.Java.LeetCode.reachANumber;
  * On the third move we step from -1 to 2.
  * Note:
  * target will be a non-zero integer in the range [-10^9, 10^9].
- *
  * For full solution: https://leetcode.com/problems/reach-a-number/discuss/357047/With-Full-explanation-and-approach-to-reach-solution
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReachTargetInfiniteLine {
 
     public static void main(String[] args) {

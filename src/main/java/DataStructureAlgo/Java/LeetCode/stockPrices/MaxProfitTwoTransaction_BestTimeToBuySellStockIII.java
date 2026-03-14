@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.LeetCode.stockPrices;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Max Profit Two Transaction_Best Time To Buy Sell Stock III
+ * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
+ * Description:
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaxProfitTwoTransaction_BestTimeToBuySellStockIII {
     public static void main(String []args) {
 

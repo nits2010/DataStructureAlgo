@@ -6,8 +6,8 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._460;
  * Date: 8/3/2024
  * Question Title: 460. LFU Cache
  * Link: https://leetcode.com/problems/lfu-cache
+ * Description:
  * Description: https://leetcode.com/problems/lfu-cache/description/
- *
  * <p>
  * Design and implement a data structure for a Least Frequently Used (LFU) cache.
  * <p>
@@ -69,14 +69,11 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._460;
  * <p>
  * Tags
  * -----
- *
  * @hard
  * @HashTable
  * @LinkedList
  * @Design
  * @Doubly-LinkedList
- *
- *
  * <p>
  * Company Tags
  * -----
@@ -85,9 +82,27 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._460;
  * @Google
  * @Snapchat
  * @LinkedIn
- *
  * {@link DataStructureAlgo.Java.LeetCode2025.ProblemSet.List.Cache._460.LFUCache_460}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LFUCache_460{
 
 }

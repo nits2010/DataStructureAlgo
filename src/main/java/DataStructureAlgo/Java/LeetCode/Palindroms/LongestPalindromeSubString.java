@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.Palindroms;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Longest Palindrome Sub String
+ * Link: https://leetcode.com/problems/longest-palindromic-substring/
+ * Description:
  * Description: https://leetcode.com/problems/longest-palindromic-substring/
  * 5. Longest Palindromic Substring
  * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.LeetCode.Palindroms;
  * Output: "bb"
  * Explanations: https://leetcode.com/articles/longest-palindromic-substring/
  * https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestPalindromeSubString {
 
     public static void main(String str[]) {

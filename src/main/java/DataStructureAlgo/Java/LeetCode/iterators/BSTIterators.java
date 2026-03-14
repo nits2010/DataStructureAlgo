@@ -11,6 +11,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-26
+ * Question Title: BST Iterators
+ * Link: https://leetcode.com/problems/binary-search-tree-iterator/
+ * Description:
  * Description: https://leetcode.com/problems/binary-search-tree-iterator/
  * <p>
  * If you go with Pre-Cached there are following things
@@ -19,7 +22,26 @@ import java.util.Stack;
  * Its fail safe iterator, means andy modification in actual tree won't affect this [ use in concurent system]
  * It consume lot of memory as we need to cache whole tree (O(n))
  * next() and hashNext() is constant time.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BSTIterators {
 
     private static TreeNode getTree() {

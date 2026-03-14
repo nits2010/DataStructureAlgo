@@ -10,6 +10,9 @@ import java.util.Collections;
 /**
  * Author: Nitin Gupta
  * Date: 27/09/19
+ * Question Title: Encode N Ary Tree To Binary Tree
+ * Link: http://leetcode.liangjiateng.cn/leetcode/encode-n-ary-tree-to-binary-tree/description
+ * Description:
  * Description: http://leetcode.liangjiateng.cn/leetcode/encode-n-ary-tree-to-binary-tree/description
  * 431.Encode N-ary Tree to Binary Tree [Hard]
  * Design an algorithm to encode an N-ary tree into a binary tree and decode the binary tree to get the original N-ary tree. An N-ary tree is a rooted tree in which each node has no more than N children. Similarly, a binary tree is a rooted tree in which each node has no more than 2 children. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that an N-ary tree can be encoded to a binary tree and this binary tree can be decoded to the original N-nary tree structure.
@@ -20,7 +23,26 @@ import java.util.Collections;
  * <p>
  * https://www.cnblogs.com/grandyang/p/9945345.html
  * http://examradar.com/converting-m-ary-tree-general-tree-binary-tree/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class EncodeNAryTreeToBinaryTree {
 
     static NArrayTreeNode getTree() {

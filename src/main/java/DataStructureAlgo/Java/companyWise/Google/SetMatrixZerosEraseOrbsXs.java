@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 12/04/19
+ * Question Title: Set Matrix Zeros Erase Orbs Xs
+ * Link: https://www.careercup.com/question?id=5763748409638912
+ * Description:
  * Description: https://www.careercup.com/question?id=5763748409638912
  * <p>
  * There are orbs on an NxM board ('O' denotes orb. 'X' denotes empty slot).
@@ -55,6 +58,24 @@ import java.util.*;
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.SetMatrixZeroes}
  * *
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class SetMatrixZerosEraseOrbsXs {

@@ -1,13 +1,34 @@
 package DataStructureAlgo.Java.LeetCode.flatten.tree;
 
+import  DataStructureAlgo.Java.helpers.templates.TreeNode;
+
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Binary Tree To Singly List
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Driver {@link DataStructureAlgo.Java.LeetCode.flatten.tree.BinaryTreeToList}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
-import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
  * One of the variation to convert BT to Singly list is {@link FlattenBinaryTreeLinkedList},

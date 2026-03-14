@@ -7,8 +7,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-09
+ * Question Title: Repeted Missing
+ * Link: https://www.interviewbit.com/problems/repeat-and-missing-number-array/
+ * Description:
  * Description:https://www.interviewbit.com/problems/repeat-and-missing-number-array/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RepetedMissing {
 
     // DO NOT MODIFY THE LIST. IT IS READ ONLY

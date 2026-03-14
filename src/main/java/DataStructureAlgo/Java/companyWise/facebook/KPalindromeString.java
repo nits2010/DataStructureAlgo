@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.EditDistance;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-16
+ * Question Title: K Palindrome String
+ * Link: https://www.geeksforgeeks.org/find-if-string-is-k-palindrome-or-not/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-if-string-is-k-palindrome-or-not/
  * <p>
  * Given a string, find out if the string is K-Palindrome or not. A k-palindrome string transforms into a palindrome on removing at most k characters from it.
@@ -25,7 +28,26 @@ import  DataStructureAlgo.Java.nonleetcode.EditDistance;
  * Output : No
  * String can not become palindrome by
  * removing only one character.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KPalindromeString {
 
 

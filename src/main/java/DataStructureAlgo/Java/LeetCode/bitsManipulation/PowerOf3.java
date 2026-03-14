@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Power Of3
+ * Link: https://leetcode.com/problems/power-of-three/
+ * Description:
  * Description: https://leetcode.com/problems/power-of-three/
  * Given an integer, write a function to determine if it is a power of three.
  * <p>
@@ -28,7 +31,26 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
  * <p>
  * <p>
  * Read: https://leetcode.com/articles/power-of-three/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PowerOf3 {
 
     public boolean isPowerOfThree(int n) {

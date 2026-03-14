@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Binary Tree To List
+ * Link: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
+ * Description:
  * Description: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
  * <p>
  * http://leetcode.liangjiateng.cn/leetcode/convert-binary-search-tree-to-sorted-doubly-linked-list/description
@@ -35,7 +38,26 @@ import java.util.List;
  * Specifically, we want to do the transformation in place. After the transformation, the left pointer of the tree node should point to its predecessor, and the right pointer should point to its successor. We should return the pointer to the first element of the linked list.
  * <p>
  * The figure below shows the transformed BST. The solid line indicates the successor relationship, while the dashed line means the predecessor relationship.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeToList {
 
     public static void main(String[] args) {

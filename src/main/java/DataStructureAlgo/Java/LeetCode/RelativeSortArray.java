@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Relative Sort Array
+ * Link: https://leetcode.com/problems/relative-sort-array/
+ * Description:
  * Description:https://leetcode.com/problems/relative-sort-array/
  * https://www.geeksforgeeks.org/sort-array-according-order-defined-another-array/
  * <p>
@@ -29,7 +32,26 @@ import java.util.*;
  * 0 <= arr1[i], arr2[i] <= 1000
  * Each arr2[i] is distinct.
  * Each arr2[i] is in arr1.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RelativeSortArray {
 
     public static void main(String[] args) {

@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Longest Common Increasing Sub Sequence
+ * Link: https://www.geeksforgeeks.org/longest-common-increasing-subsequence-lcs-lis/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-common-increasing-subsequence-lcs-lis/
  * <p>
  * Given two arrays, find length of the longest common increasing sub sequence [LCIS] and
@@ -20,7 +23,26 @@ import java.util.List;
  * arr2[] = {5, 3, 8, 9, 10, 2, 1}
  * <p>
  * Our answer would be {3, 9} as this is the longest common subsequence which is increasing also.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestCommonIncreasingSubSequence {
 
     public static void main(String[] args) {

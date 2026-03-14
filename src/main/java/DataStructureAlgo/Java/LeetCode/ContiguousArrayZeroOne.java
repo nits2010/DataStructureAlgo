@@ -9,6 +9,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-06
+ * Question Title: Contiguous Array Zero One
+ * Link: https://leetcode.com/problems/contiguous-array/
+ * Description:
  * Description: https://leetcode.com/problems/contiguous-array/
  * Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
  * <p>
@@ -33,9 +36,27 @@ import java.util.Map;
  * <p>
  * Input: arr[] = {0, 0, 1, 1, 0}
  * Output: 0 to 3 Or 1 to 4
- *
  * https://leetcode.com/articles/contiguous-array/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ContiguousArrayZeroOne {
     public static void main(String[] args) {
 

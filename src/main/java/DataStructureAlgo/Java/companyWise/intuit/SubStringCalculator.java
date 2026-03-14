@@ -6,15 +6,36 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 15/09/19
+ * Question Title: Sub String Calculator
+ * Link: TODO: Add Link
+ * Description:
  * Description: Given a String s, a sub-string is defined as a non-empty string that can be obtained by applying following operation
  * 1. Remove zero or 1 character from left side of s
  * 2. Remove zero or 1 character from right side of s
  * 3. Remove zero or 1 character from left & right side of s
  * Find how many distinct sub-string possible.
- *
  * Characters in string are [a-z]
  * String length can be up to 10^5
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubStringCalculator {
 
     public static void main(String[] args) {

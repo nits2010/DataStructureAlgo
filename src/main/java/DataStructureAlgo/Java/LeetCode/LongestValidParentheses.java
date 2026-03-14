@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-24
+ * Question Title: Longest Valid Parentheses
+ * Link: https://leetcode.com/problems/longest-valid-parentheses/
+ * Description:
  * Description: https://leetcode.com/problems/longest-valid-parentheses/
  * <p>
  * Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
@@ -19,9 +22,27 @@ import java.util.Stack;
  * Input: ")()())"
  * Output: 4
  * Explanation: The longest valid parentheses substring is "()()"
- *
  * Similar {@link DataStructureAlgo.Java.companyWise.Grab.MinimumBracketReversal}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestValidParentheses {
 
 

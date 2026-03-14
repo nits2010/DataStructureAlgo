@@ -10,6 +10,9 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Merge K Sorted Lists
+ * Link: https://leetcode.com/problems/merge-k-sorted-lists/
+ * Description:
  * Description: https://leetcode.com/problems/merge-k-sorted-lists/
  * <p>
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
@@ -25,7 +28,26 @@ import java.util.PriorityQueue;
  * Output: 1->1->2->3->4->4->5->6
  * <p>
  * Extension of {@link DataStructureAlgo.Java.LeetCode.MergeTwoSortedLists}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MergeKSortedLists {
 
     public static void main(String[] args) {

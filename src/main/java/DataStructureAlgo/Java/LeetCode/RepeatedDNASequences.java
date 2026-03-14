@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-12
+ * Question Title: Repeated DNA Sequences
+ * Link: https://leetcode.com/problems/repeated-dna-sequences/
+ * Description:
  * Description: https://leetcode.com/problems/repeated-dna-sequences/
  * 187. Repeated DNA Sequences
  * All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: "ACGAATTCCG".
@@ -19,7 +22,26 @@ import java.util.*;
  * Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
  * <p>
  * Output: ["AAAAACCCCC", "CCCCCAAAAA"]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RepeatedDNASequences {
 
     public static void main(String[] args) {

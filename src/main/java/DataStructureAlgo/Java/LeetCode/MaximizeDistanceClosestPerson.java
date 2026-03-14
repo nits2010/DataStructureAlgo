@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-07
+ * Question Title: Maximize Distance Closest Person
+ * Link: https://leetcode.com/problems/maximize-distance-to-closest-person/
+ * Description:
  * Description:https://leetcode.com/problems/maximize-distance-to-closest-person/
  * n a row of seats, 1 represents a person sitting in that seat, and 0 represents that the seat is empty.
  * <p>
@@ -27,7 +30,26 @@ package DataStructureAlgo.Java.LeetCode;
  * Explanation:
  * If Alex sits in the last seat, the closest person is 3 seats away.
  * This is the maximum distance possible, so the answer is 3.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximizeDistanceClosestPerson {
 
     public static void main(String []args) {

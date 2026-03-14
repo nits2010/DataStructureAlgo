@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: Node Exists Complete Tree
+ * Link: https://leetcode.com/discuss/interview-question/236898
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/236898
  * <p>
  * Given a complete (virtual) binary tree, return true/false if the given target node exists in the tree or not. Here, the virtual means the tree nodes are numbered assuming the tree is a complete binary tree.
@@ -24,10 +27,28 @@ import java.util.Stack;
  * *
  * doesNodeExist(root, 4); // true
  * doesNodeExist(root, 7); // false, given the node on #7 is a null node
- *
  * Follow-up:
  * https://leetcode.com/problems/count-complete-tree-nodes -> {@link CountNodesInCompleteBinaryTree}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NodeExistsCompleteTree {
 
     public static void main(String[] args) {

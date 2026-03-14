@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Longest Repeating Non Overlapping Sub String
+ * Link: https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/
  * <p>
  * Given a string str, find the longest repeating non-overlapping substring in it. In other words find 2 identical substrings of maximum length which do not overlap. If there exists more than one such substring return any of them.
@@ -24,7 +27,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * Input : str = "banana"
  * Output : an
  * or na
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestRepeatingNonOverlappingSubString {
 
     public static void main(String[] args) {

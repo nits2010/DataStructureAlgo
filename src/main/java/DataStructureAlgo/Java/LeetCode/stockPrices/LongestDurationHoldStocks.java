@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.companyWise.Amazon.MaximumDifferenceInIndex;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-30
+ * Question Title: Longest Duration Hold Stocks
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Given stocks value for each day, find the longest duration at which you can hold the stocks such that you don't incur any loss.
  * Provided that
@@ -18,7 +21,26 @@ import  DataStructureAlgo.Java.companyWise.Amazon.MaximumDifferenceInIndex;
  * <p>
  * input [8,5,8,3,9,1,6]
  * output: 5 { you can have the stock at 1th index v=5 and hold till 6th index v=6}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestDurationHoldStocks {
 
     /**

@@ -15,76 +15,28 @@ import java.util.Set;
 
 /**
  * Author: Nitin Gupta
- * Date:16/08/24
- * Question Title: 1650. Lowest Common Ancestor of a Binary Tree III
- * Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/
- * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/
- * https://leetcode.ca/all/1650.html
- * <p>
- * Given two nodes of a binary tree p and q, return their lowest common ancestor (LCA).
- * <p>
- * Each node will have a reference to its parent node. The definition for Node is below:
- * <p>
- * class Node {
- * public int val;
- * public Node left;
- * public Node right;
- * public Node parent;
- * }
- * According to the definition of LCA on Wikipedia: "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow a node to be a descendant of itself)."
- * <p>
- * <p>
- * <p>
- * Example 1:
- * <p>
- * <p>
- * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
- * Output: 3
- * Explanation: The LCA of nodes 5 and 1 is 3.
- * Example 2:
- * <p>
- * <p>
- * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
- * Output: 5
- * Explanation: The LCA of nodes 5 and 4 is 5 since a node can be a descendant of itself according to the LCA definition.
- * Example 3:
- * <p>
- * Input: root = [1,2], p = 1, q = 2
- * Output: 1
- * <p>
- * <p>
- * Constraints:
- * <p>
- * The number of nodes in the tree is in the range [2, 105].
- * -109 <= Node.val <= 109
- * All Node.val are unique.
- * p != q
- * p and q exist in the tree.
- * <p>
+ * Date: 2026-03-14
+ * Question Title: Lowest Common Ancestor Of A Binary Tree III
+ * Link: https://leetcode.com/problems/lowest-common-ancestor-of-abinary-tree-iii/
+ * Description:
  * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link}
- * extension {@link LowestCommonAncestorOfABinaryTree_236} {@link LowestCommonAncestorOfABinaryTreeII_1644}
- * <p>
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
  * Tags
  * -----
- * @medium
- * @Tree
- * @Depth-FirstSearch
- * @BinaryTree
- * @PremiumQuestion
- * @LeetCodeLockedProblem
  *
- *
+ <p><p>
  * Company Tags
  * -----
- * @Facebook
- * @LinkedIn
- * @Microsoft
- *
- *
- * @Editorial <a href="https://leetcode.ca/2020-06-06-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III">...</a>
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class LowestCommonAncestorOfABinaryTreeIII_1650 {

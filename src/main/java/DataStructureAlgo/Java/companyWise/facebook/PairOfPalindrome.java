@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 03/04/19
+ * Question Title: Pair Of Palindrome
+ * Link: https://leetcode.com/problems/palindrome-pairs/
+ * Description:
  * Description: https://leetcode.com/problems/palindrome-pairs/
  * 336. Palindrome Pairs
  * Given a list of unique words, find all pairs of distinct indices (i, j) in the given list,
@@ -39,8 +42,25 @@ import java.util.*;
  * "keeg", "bc"}
  * Output : Yes
  * There is a pair "abc" and "xyxcba"
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class PairOfPalindrome {

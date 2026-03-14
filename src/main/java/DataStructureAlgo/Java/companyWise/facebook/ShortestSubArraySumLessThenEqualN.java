@@ -6,6 +6,9 @@ import java.util.LinkedList;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-17
+ * Question Title: Shortest Sub Array Sum Less Then Equal N
+ * Link: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
+ * Description:
  * Description: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
  * Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
  * <p>
@@ -25,7 +28,26 @@ import java.util.LinkedList;
  * <p>
  * Input: A = [2,-1,2], K = 3
  * Output: 3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestSubArraySumLessThenEqualN {
 
     public static void main(String []args) {

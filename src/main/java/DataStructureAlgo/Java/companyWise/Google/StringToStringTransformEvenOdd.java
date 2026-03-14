@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 13/04/19
+ * Question Title: String To String Transform Even Odd
+ * Link: https://www.careercup.com/question?id=6316920860049408
+ * Description:
  * Description:
  * https://www.careercup.com/question?id=6316920860049408
  * <p>
@@ -24,9 +27,27 @@ import java.util.stream.Collectors;
  * <p>
  * Given: s="abcd" ,x="abcdcd"
  * x length to big so will never be equals
- *
  * [Google]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringToStringTransformEvenOdd {
 
     public static void main(String []args) {
