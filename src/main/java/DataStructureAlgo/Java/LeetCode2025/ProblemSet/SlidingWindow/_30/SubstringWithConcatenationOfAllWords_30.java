@@ -9,7 +9,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 5/2/2025
  * Question Title: 30. Substring with Concatenation of All Words
- * Link:
+ * Link: https://leetcode.com/problems/substring-with-concatenation-of-all-words/
  * Description:
  * File reference
  * -----------

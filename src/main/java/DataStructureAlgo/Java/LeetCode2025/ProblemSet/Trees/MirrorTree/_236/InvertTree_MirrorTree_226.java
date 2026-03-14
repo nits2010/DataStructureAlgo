@@ -10,7 +10,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category: 226. Invert Binary Tree
+ * Question Title: 226. Invert Binary Tree
+ * Link: https://leetcode.com/problems/invert-binary-tree/
  * Description: https://leetcode.com/problems/invert-binary-tree/description/
  * <p>
  * Given the root of a binary tree, invert the tree, and return its root.

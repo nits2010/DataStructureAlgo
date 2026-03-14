@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/23/2024
- * Question Category:687. Longest Univalue Path
+ * Question Title: 687. Longest Univalue Path
+ * Link: https://leetcode.com/problems/longest-univalue-path/
  * Description: https://leetcode.com/problems/longest-univalue-path/description
  * Given the root of a binary tree, return the length of the longest path, where each node in the path has the same value. This path may or may not pass through the root.
  *

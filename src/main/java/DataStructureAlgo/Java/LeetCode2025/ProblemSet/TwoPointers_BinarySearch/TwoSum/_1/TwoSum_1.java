@@ -9,7 +9,8 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 7/14/2024
- * Question Category: 1. Two Sum [easy]
+ * Question Title: 1. Two Sum
+ * Link: https://leetcode.com/problems/two-sum/
  * Description: https://leetcode.com/problems/two-sum/description/
  * <p>
  * 1. Two Sum

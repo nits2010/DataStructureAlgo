@@ -8,8 +8,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/19/2024
- * Question Title:
- * Link:
+ * Question Title: 221 Maximal Square
+ * Link: https://leetcode.com/problems/maximal-square/
  * Description:
  * File reference
  * -----------

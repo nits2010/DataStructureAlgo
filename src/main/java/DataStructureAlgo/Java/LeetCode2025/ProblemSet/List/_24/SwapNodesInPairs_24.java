@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-28
- * Question Category: 24. Swap Nodes in Pairs [medium] | Pairwise Swap Nodes of a given Linked List [medium]
+ * Question Title: 24. Swap Nodes in Pairs [medium] | Pairwise Swap Nodes of a given Linked List
+ * Link: https://leetcode.com/problems/swap-nodes-in-pairs-medium-pairwise-swap-nodes-of-a-given-linked-list/
  * Description: https://leetcode.com/problems/swap-nodes-in-pairs
  * Given a linked list, swap every two adjacent nodes and return its head.
  * You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)

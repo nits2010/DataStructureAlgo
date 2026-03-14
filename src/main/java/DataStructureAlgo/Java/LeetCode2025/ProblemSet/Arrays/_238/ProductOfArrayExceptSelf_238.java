@@ -7,7 +7,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date:  7/22/2024
- * Question Category: 238. Product of Array Except Self [ medium ]
+ * Question Title: 238. Product of Array Except Self [ medium ]
+ * Link: https://leetcode.com/problems/product-of-array-except-self-medium/
  * Description: https://leetcode.com/problems/product-of-array-except-self/description/
  *
  *  Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].

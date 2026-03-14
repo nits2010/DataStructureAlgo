@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
- * Question Category: 409. Longest Palindrome
+ * Question Title: 409. Longest Palindrome
  * Description:
  * Given a string s which consists of lowercase or uppercase letters, return the length of the longest
  * palindrome

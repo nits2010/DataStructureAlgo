@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:13/11/24
- * Question Category: 2070. Most Beautiful Item for Each Query
+ * Question Title: 2070. Most Beautiful Item for Each Query
+ * Link: https://leetcode.com/problems/most-beautiful-item-for-each-query/
  * Description: https://leetcode.com/problems/most-beautiful-item-for-each-query/description/
  * You are given a 2D integer array items where items[i] = [pricei, beautyi] denotes the price and beauty of an item respectively.
  * <p>

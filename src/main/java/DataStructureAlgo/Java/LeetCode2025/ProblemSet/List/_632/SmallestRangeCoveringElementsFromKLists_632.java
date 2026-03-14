@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/13/2024
- * Question Category: 632. Smallest Range Covering Elements from K Lists
+ * Question Title: 632. Smallest Range Covering Elements from K Lists
  * Description: You have k lists of sorted integers in non-decreasing order. Find the smallest range that includes at least one number from each of the k lists.
  * <p>
  * We define the range [a, b] is smaller than range [c, d] if b - a < d - c or a < c if b - a == d - c.

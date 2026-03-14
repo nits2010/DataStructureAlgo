@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/30/2024
- * Question Category: 941. Valid Mountain Array
+ * Question Title: 941. Valid Mountain Array
+ * Link: https://leetcode.com/problems/valid-mountain-array/
  * Description: https://leetcode.com/problems/valid-mountain-array/description/
  * Given an array of integers arr, return true if and only if it is a valid mountain array.
  * <p>

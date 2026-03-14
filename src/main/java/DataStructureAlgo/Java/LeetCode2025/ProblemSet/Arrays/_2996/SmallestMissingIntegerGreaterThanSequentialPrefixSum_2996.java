@@ -7,7 +7,8 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date:  7/22/2024
- * Question Category: 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum [easy]
+ * Question Title: 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum
+ * Link: https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/
  * Description: https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/description/
  * You are given a 0-indexed array of integers nums.
  * <p>

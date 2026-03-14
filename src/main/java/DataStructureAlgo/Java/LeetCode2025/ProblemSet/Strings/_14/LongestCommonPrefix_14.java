@@ -4,7 +4,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 7/19/2024
- * Question Category: 14. Longest Common Prefix [easy]
+ * Question Title: 14. Longest Common Prefix
+ * Link: https://leetcode.com/problems/longest-common-prefix/
  * Description: https://leetcode.com/problems/longest-common-prefix/description/
  *  * <p>
  *  * Write a function to find the longest common prefix string amongst an array of strings.

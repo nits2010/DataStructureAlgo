@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/30/2024
- * Question Category: 845. Longest Mountain in Array
+ * Question Title: 845. Longest Mountain in Array
+ * Link: https://leetcode.com/problems/longest-mountain-in-array/
  * Description: https://leetcode.com/problems/longest-mountain-in-array/description/
  * You may recall that an array arr is a mountain array if and only if:
  * <p>

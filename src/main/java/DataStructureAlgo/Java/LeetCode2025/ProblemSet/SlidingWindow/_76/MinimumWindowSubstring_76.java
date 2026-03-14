@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/8/2024
- * Question Category: 76. Minimum Window Substring
+ * Question Title: 76. Minimum Window Substring
+ * Link: https://leetcode.com/problems/minimum-window-substring/
  * Description: https://leetcode.com/problems/minimum-window-substring/description/
  * Given two strings s and t of lengths m and n respectively, return the minimum window
  * substring

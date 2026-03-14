@@ -11,7 +11,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 2130. Maximum Twin Sum of a Linked List [Medium]
+ * Question Title: 2130. Maximum Twin Sum of a Linked List
+ * Link: https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
  * Description: https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list
  * In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 <= i <= (n / 2) - 1.
  *

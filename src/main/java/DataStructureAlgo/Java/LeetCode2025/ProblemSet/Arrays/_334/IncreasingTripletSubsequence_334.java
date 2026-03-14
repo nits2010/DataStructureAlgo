@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/1/2024
- * Question Category: 334. Increasing Triplet Subsequence
+ * Question Title: 334. Increasing Triplet Subsequence
+ * Link: https://leetcode.com/problems/increasing-triplet-subsequence/
  * Description: https://leetcode.com/problems/increasing-triplet-subsequence/description/
  * Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
  * <p>

@@ -6,7 +6,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 8/8/2024
- * Question Category: 2289. Steps to Make Array Non-decreasing @medium
+ * Question Title: 2289. Steps to Make Array Non-decreasing @medium
+ * Link: https://leetcode.com/problems/steps-to-make-array-non-decreasing-medium/
  * Description: https://leetcode.com/problems/steps-to-make-array-non-decreasing
  * You are given a 0-indexed integer array nums. In one step, remove all elements nums[i] where nums[i - 1] > nums[i] for all 0 < i < nums.length.
  * <p>

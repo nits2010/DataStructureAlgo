@@ -9,7 +9,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date:08/08/24
- * Question Category: 84. Largest Rectangle in Histogram @hard
+ * Question Title: 84. Largest Rectangle in Histogram @hard
+ * Link: https://leetcode.com/problems/largest-rectangle-in-histogram-hard/
  * Description: https://leetcode.com/problems/largest-rectangle-in-histogram
  * https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
  * <p>

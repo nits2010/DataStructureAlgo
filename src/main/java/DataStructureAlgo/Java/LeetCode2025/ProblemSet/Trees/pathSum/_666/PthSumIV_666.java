@@ -8,17 +8,24 @@ import java.util.Objects;
 /**
  * Author: Nitin Gupta
  * Date: 8/24/2024
- * Question Category: 666 - Path Sum IV
- * Description: https://leetcode.com/problems/path-sum-iv/ && https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
+ * Question Title: 666 - Path Sum IV
+ * Link: https://leetcode.com/problems/path-sum-iv/ &&
+ * https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
+ * Description:
  * <p>
- * If the depth of a tree is smaller than 5, then this tree can be represented by an array of three-digit integers. For each integer in this array:
+ * If the depth of a tree is smaller than 5, then this tree can be represented
+ * by an array of three-digit integers. For each integer in this array:
  * <p>
  * The hundreds digit represents the depth d of this node where 1 <= d <= 4.
- * The tens digit represents the position p of this node in the level it belongs to where 1 <= p <= 8. The position is the same as that in a full binary tree.
+ * The tens digit represents the position p of this node in the level it belongs
+ * to where 1 <= p <= 8. The position is the same as that in a full binary tree.
  * The units digit represents the value v of this node where 0 <= v <= 9.
- * Given an array of ascending three-digit integers nums representing a binary tree with a depth smaller than 5, return the sum of all paths from the root towards the leaves.
+ * Given an array of ascending three-digit integers nums representing a binary
+ * tree with a depth smaller than 5, return the sum of all paths from the root
+ * towards the leaves.
  * <p>
- * It is guaranteed that the given array represents a valid connected binary tree.
+ * It is guaranteed that the given array represents a valid connected binary
+ * tree.
  * <p>
  * <p>
  * <p>
@@ -61,21 +68,21 @@ import java.util.Objects;
  * @Tree
  * @DepthFirstSearch
  * @LeetCodeLockedProblem
- * @PremiumQuestion <p>
- * <p>
- * Company Tags
- * -----
+ * @PremiumQuestion
+ *                  <p>
+ *                  <p>
+ *                  Company Tags
+ *                  -----
  * @Alibaba
  * @Editorial
  */
 public class PthSumIV_666 {
 
-
     public static void main(String[] args) {
 
         boolean test = true;
-        test &= test(new int[]{113, 215, 221}, 12);
-        test &= test(new int[]{113, 221}, 4);
+        test &= test(new int[] { 113, 215, 221 }, 12);
+        test &= test(new int[] { 113, 221 }, 4);
         System.out.println((test ? "All passed" : "Something Failed"));
     }
 
@@ -101,8 +108,10 @@ public class PthSumIV_666 {
 
             @Override
             public boolean equals(Object o) {
-                if (this == o) return true;
-                if (o == null || getClass() != o.getClass()) return false;
+                if (this == o)
+                    return true;
+                if (o == null || getClass() != o.getClass())
+                    return false;
                 Pair pair = (Pair) o;
                 return depth == pair.depth &&
                         position == pair.position;
@@ -136,7 +145,7 @@ public class PthSumIV_666 {
                 Pair pair = new Pair(depth - 1, position - 1); // to make it 0 based indexed
                 depthPositionVsValue.put(pair, value);
             }
-            int[] total = {0};
+            int[] total = { 0 };
             dfs(depthPositionVsValue, 0, 0, 0, total);
             return total[0];
 
@@ -152,7 +161,7 @@ public class PthSumIV_666 {
             Integer leftChild = map.get(new Pair(depth + 1, pos * 2));
             Integer rightChild = map.get(new Pair(depth + 1, pos * 2 + 1));
 
-            //left and right exist, go deep
+            // left and right exist, go deep
             if (leftChild != null && rightChild != null) {
 
                 dfs(map, depth + 1, pos * 2, currentSum + root, total);

@@ -9,7 +9,8 @@ import java.util.Objects;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-15
- * Question Category: 13. Roman to Integer [easy]
+ * Question Title: 13. Roman to Integer
+ * Link: https://leetcode.com/problems/roman-to-integer/
  * Description: https://leetcode.com/problems/roman-to-integer/
  * <p>
  Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

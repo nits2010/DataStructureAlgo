@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/27/2024
- * Question Category: 114. Flatten Binary Tree to Linked List
+ * Question Title: 114. Flatten Binary Tree to Linked List
+ * Link: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
  * Description: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
  * Given the root of a binary tree, flatten the tree into a "linked list":
  * <p>

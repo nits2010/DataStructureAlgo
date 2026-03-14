@@ -10,7 +10,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 7/28/2024
- * Question Category: 234. Palindrome Linked List [easy]
+ * Question Title: 234. Palindrome Linked List
+ * Link: https://leetcode.com/problems/palindrome-linked-list
  * Description: https://leetcode.com/problems/palindrome-linked-list/description
  * Given the head of a singly linked list, return true if it is a
  * palindrome or false otherwise.

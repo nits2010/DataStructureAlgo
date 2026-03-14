@@ -9,7 +9,8 @@ import java.util.Random;
 /**
  * Author: Nitin Gupta
  * Date: 9/2/2024
- * Question Category: 973. K Closest Points to Origin
+ * Question Title: 973. K Closest Points to Origin
+ * Link: https://leetcode.com/problems/k-closest-points-to-origin/
  * Description: https://leetcode.com/problems/k-closest-points-to-origin/description/
  * Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
  * <p>

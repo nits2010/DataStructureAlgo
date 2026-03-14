@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/24/2024
- * Question Category: [easy | medium | hard ]
+ * Question Title: [easy | medium | hard ]
  * Description:
  * <p>
  * File reference

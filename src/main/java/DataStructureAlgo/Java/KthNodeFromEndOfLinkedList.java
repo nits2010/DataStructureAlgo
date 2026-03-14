@@ -5,7 +5,7 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 8/1/2024
- * Question Category: [easy | medium | hard ]
+ * Question Title: [easy | medium | hard ]
  * Description:
  *
  * <p>

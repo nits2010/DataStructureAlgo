@@ -11,7 +11,8 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 7/30/2024
- * Question Category: 138. Copy List with Random Pointer [medium]
+ * Question Title: 138. Copy List with Random Pointer
+ * Link: https://leetcode.com/problems/copy-list-with-random-pointer/
  * Description: https://leetcode.com/problems/copy-list-with-random-pointer/description/
  *
  * <p>

@@ -3,7 +3,8 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Arrays._9;
 /**
  * Author: Nitin Gupta
  * Date: 7/14/2024
- * Question Category: 9. Palindrome Number [easy]
+ * Question Title: 9. Palindrome Number
+ * Link: https://leetcode.com/problems/palindrome-number/
  * Description: https://leetcode.com/problems/palindrome-number/description/
  * Given an integer x, return true if x is a
  * palindrome and false otherwise.

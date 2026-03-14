@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/5/2024
- * Question Category: 567. Permutation in String
+ * Question Title: 567. Permutation in String
+ * Link: https://leetcodethehardway.com/solutions/0500-0599/permutation-in-string-medium
  * Description: https://leetcode.com/problems/permutation-in-string
  * Given two strings s1 and s2, return true if s2 contains a
  * permutation

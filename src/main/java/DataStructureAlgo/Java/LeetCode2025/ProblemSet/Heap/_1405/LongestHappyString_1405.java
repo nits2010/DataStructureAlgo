@@ -8,7 +8,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date:16/10/24
- * Question Category: 1405. Longest Happy String
+ * Question Title: 1405. Longest Happy String
+ * Link: https://leetcode.com/problems/longest-happy-string/
  * Description: https://leetcode.com/problems/longest-happy-string/description
  * A string s is called happy if it satisfies the following conditions:
  * <p>

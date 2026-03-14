@@ -11,7 +11,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/11/2024
- * Question Category: 133. Clone Graph
+ * Question Title: 133. Clone Graph
+ * Link: https://leetcode.com/problems/clone-graph/
  * Description: https://leetcode.com/problems/clone-graph/description/
  * Given a reference of a node in a connected undirected graph.
  * <p>

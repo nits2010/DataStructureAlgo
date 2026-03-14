@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/30/2024
- * Question Category: 300. Longest Increasing Subsequence
+ * Question Title: 300. Longest Increasing Subsequence
+ * Link: https://leetcode.com/problems/longest-increasing-subsequence/
  * Description: https://leetcode.com/problems/longest-increasing-subsequence/description/
  * Given an integer array nums, return the length of the longest strictly increasing subsequence
  * Example 1:

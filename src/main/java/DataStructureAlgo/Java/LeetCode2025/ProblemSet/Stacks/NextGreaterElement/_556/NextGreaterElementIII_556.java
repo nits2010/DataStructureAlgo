@@ -3,7 +3,8 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Stacks.NextGreaterElement
 /**
  * Author: Nitin Gupta
  * Date: 8/6/2024
- * Question Category: 556. Next Greater Element III @medium
+ * Question Title: 556. Next Greater Element III @medium
+ * Link: https://leetcode.com/problems/next-greater-element-iii-medium/
  * Description: https://leetcode.com/problems/next-greater-element-iii/description/
  *
  * <p>

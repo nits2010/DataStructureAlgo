@@ -11,7 +11,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 11/7/2024
- * Question Category: 2036 - Maximum Alternating Subarray Sum
+ * Question Title: 2036 - Maximum Alternating Subarray Sum
+ * Link: https://leetcode.com/problems/2036-maximum-alternating-subarray-sum/
  * Description: https://leetcode.com/problems/maximum-alternating-subarray-sum/description/
  * https://leetcode.ca/2021-10-20-2036-Maximum-Alternating-Subarray-Sum/
  * A subarray of a 0-indexed integer array is a contiguous non-empty sequence of elements within an array.

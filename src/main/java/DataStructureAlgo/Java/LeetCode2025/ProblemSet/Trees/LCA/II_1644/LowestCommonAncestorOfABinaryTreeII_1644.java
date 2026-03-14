@@ -11,7 +11,7 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category: 1644. Lowest Common Ancestor of a Binary Tree II
+ * Question Title: 1644. Lowest Common Ancestor of a Binary Tree II
  * Description:
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/
  * https://leetcode.ca/all/1644.html

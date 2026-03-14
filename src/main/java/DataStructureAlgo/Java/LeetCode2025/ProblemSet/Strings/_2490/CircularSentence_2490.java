@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/3/2024
- * Question Category: 2490. Circular Sentence
+ * Question Title: 2490. Circular Sentence
+ * Link: https://leetcode.com/problems/circular-sentence/
  * Description: https://leetcode.com/problems/circular-sentence/description/
  * A sentence is a list of words that are separated by a single space with no leading or trailing spaces.
  * <p>

@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date:21/08/24
- * Question Category: 530. Minimum Absolute Difference in BST
+ * Question Title: 530. Minimum Absolute Difference in BST
+ * Link: https://leetcode.com/problems/minimum-absolute-difference-in-bst/
  * Description: https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/
  * Given the root of a Binary Search Tree (BST), return the minimum absolute difference between the values of any two different nodes in the tree.
  * <p>

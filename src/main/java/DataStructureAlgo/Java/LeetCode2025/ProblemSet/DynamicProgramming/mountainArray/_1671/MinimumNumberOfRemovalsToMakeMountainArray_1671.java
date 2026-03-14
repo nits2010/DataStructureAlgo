@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._basePr
 /**
  * Author: Nitin Gupta
  * Date: 10/30/2024
- * Question Category: 1671. Minimum Number of Removals to Make Mountain Array
+ * Question Title: 1671. Minimum Number of Removals to Make Mountain Array
+ * Link: https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/
  * Description: https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/
  * You may recall that an array arr is a mountain array if and only if:
  * <p>

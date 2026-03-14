@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 7/13/2025
-Question Title:
-Link:
+Question Title: 31 Next Permutation
+Link: https://leetcode.com/problems/next-permutation/
 Description:
 File reference
 -----------

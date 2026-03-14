@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/3/2024
- * Question Category: 796. Rotate String
+ * Question Title: 796. Rotate String
+ * Link: https://leetcode.com/problems/rotate-string/
  * Description:https://leetcode.com/problems/rotate-string/description/
  * Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
  * <p>

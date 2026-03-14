@@ -10,7 +10,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category: 101. Symmetric Tree
+ * Question Title: 101. Symmetric Tree
+ * Link: https://leetcode.com/problems/symmetric-tree/
  * Description: https://leetcode.com/problems/symmetric-tree/description/
  * <p>
  *

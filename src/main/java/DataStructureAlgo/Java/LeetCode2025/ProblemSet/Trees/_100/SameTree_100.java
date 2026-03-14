@@ -9,7 +9,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/12/2024
- * Question Category: 100. Same Tree
+ * Question Title: 100. Same Tree
+ * Link: https://leetcode.com/problems/same-tree/
  * Description: https://leetcode.com/problems/same-tree/description/
  *
  * <p>

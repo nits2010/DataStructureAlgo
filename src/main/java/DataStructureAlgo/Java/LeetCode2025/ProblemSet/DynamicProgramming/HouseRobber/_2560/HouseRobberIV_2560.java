@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/24/2024
- * Question Category: 2560. House Robber IV
+ * Question Title: 2560. House Robber IV
+ * Link: https://leetcode.com/problems/house-robber-iv/
  * Description: https://leetcode.com/problems/house-robber-iv/description/
  * There are several consecutive houses along a street, each of which has some money inside. There is also a robber, who wants to steal money from the homes, but he refuses to steal from adjacent homes.
  * <p>

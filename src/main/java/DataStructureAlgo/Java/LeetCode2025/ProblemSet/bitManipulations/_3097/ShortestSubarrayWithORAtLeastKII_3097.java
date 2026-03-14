@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/10/2024
- * Question Category: 3097. Shortest Subarray With OR at Least K II
+ * Question Title: 3097. Shortest Subarray With OR at Least K II
+ * Link: https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/
  * Description: https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/?envType=daily-question&envId=2024-11-10
  * You are given an array nums of non-negative integers and an integer k.
  * <p>

@@ -8,7 +8,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/22/2024
- * Question Category: 2050. Parallel Courses III
+ * Question Title: 2050. Parallel Courses III
+ * Link: https://leetcode.com/problems/parallel-courses-iii/
  * Description: https://leetcode.com/problems/parallel-courses-iii/description/
  * You are given an integer n, which indicates that there are n courses labeled from 1 to n. You are also given a 2D integer array relations where relations[j] = [prevCoursej, nextCoursej] denotes that course prevCoursej has to be completed before course nextCoursej (prerequisite relationship). Furthermore, you are given a 0-indexed integer array time where time[i] denotes how many months it takes to complete the (i+1)th course.
  * <p>

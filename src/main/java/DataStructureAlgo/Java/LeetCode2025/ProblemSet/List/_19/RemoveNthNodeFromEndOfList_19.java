@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date:  2024-07-28
- * Question Category: 19. Remove Nth Node From End of List [ medium ]
+ * Question Title: 19. Remove Nth Node From End of List [ medium ]
+ * Link: https://leetcode.com/problems/remove-nth-node-from-end-of-list-medium/
  * Description:https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
  *
  * <p>

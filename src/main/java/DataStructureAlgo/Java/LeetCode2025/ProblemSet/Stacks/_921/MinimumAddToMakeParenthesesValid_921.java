@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:09/10/24
- * Question Category: 921. Minimum Add to Make Parentheses Valid
+ * Question Title: 921. Minimum Add to Make Parentheses Valid
+ * Link: https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/
  * Description: https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/?envType=daily-question&envId=2024-10-09
  * A parentheses string is valid if and only if:
  *

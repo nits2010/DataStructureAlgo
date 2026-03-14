@@ -5,7 +5,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date:09/08/24
- * Question Category: 155. Min Stack @medium
+ * Question Title: 155. Min Stack @medium
+ * Link: https://leetcode.com/problems/min-stack-medium/
  * Description: https://leetcode.com/problems/min-stack/description
  * <p>
  * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.

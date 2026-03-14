@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:17/10/24
- * Question Category: 670. Maximum Swap
+ * Question Title: 670. Maximum Swap
+ * Link: https://leetcode.com/problems/maximum-swap/
  * Description: https://leetcode.com/problems/maximum-swap/description
  * You are given an integer num. You can swap two digits at most once to get the maximum valued number.
  * <p>

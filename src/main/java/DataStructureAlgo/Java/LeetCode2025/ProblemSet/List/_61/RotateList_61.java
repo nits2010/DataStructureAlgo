@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 61. Rotate List [medium]
+ * Question Title: 61. Rotate List
+ * Link: https://leetcode.com/problems/rotate-list/
  * Description: https://leetcode.com/problems/rotate-list
  * <p>
  *Given the head of a linked list, rotate the list to the right by k places.

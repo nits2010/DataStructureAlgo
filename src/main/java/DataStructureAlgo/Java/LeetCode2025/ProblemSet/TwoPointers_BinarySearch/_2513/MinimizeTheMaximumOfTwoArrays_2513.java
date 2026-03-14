@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:14/11/24
- * Question Category: 2513. Minimize the Maximum of Two Arrays
+ * Question Title: 2513. Minimize the Maximum of Two Arrays
+ * Link: https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/
  * Description: https://leetcode.com/problems/minimize-the-maximum-of-two-arrays/description
  * We have two arrays arr1 and arr2 which are initially empty. You need to add positive integers to them such that they satisfy all the following conditions:
  * <p>

@@ -9,7 +9,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/17/2024
- * Question Category: 862. Shortest Subarray with Sum at Least K
+ * Question Title: 862. Shortest Subarray with Sum at Least K
+ * Link: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
  * Description: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/?envType=daily-question&envId=2024-11-17
  * https://www.geeksforgeeks.org/smallest-subarray-from-a-given-array-with-sum-greater-than-or-equal-to-k/
  * Given an integer array nums and an integer k, return the length of the shortest non-empty subarray of nums with a sum of at least k. If there is no such subarray, return -1.

@@ -9,7 +9,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 08/01/2024
- * Question Category: 328. Odd Even Linked List [medium]
+ * Question Title: 328. Odd Even Linked List
+ * Link: https://leetcode.com/problems/odd-even-linked-list/
  * Description:https://leetcode.com/problems/odd-even-linked-list
  * <p>
  * Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.

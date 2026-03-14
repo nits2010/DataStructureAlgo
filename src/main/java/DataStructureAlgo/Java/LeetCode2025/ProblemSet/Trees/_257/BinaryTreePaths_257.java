@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/13/2024
- * Question Category: 257. Binary Tree Paths
+ * Question Title: 257. Binary Tree Paths
+ * Link: https://leetcode.com/problems/binary-tree-paths/
  * Description: https://leetcode.com/problems/binary-tree-paths/description/
  *
  * <p>

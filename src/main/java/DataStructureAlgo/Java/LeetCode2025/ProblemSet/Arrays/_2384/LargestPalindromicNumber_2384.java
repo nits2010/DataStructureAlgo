@@ -5,7 +5,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
- * Question Category: 2384. Largest Palindromic Number
+ * Question Title: 2384. Largest Palindromic Number
  * Description: 2384. Largest Palindromic Number
  * <p>
  * You are given a string num consisting of digits only.

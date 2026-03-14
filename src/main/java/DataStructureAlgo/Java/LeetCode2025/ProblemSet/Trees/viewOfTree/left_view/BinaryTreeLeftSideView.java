@@ -13,7 +13,8 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 8/19/2024
- * Question Category: Binary Tree left Side View
+ * Question Title: Binary Tree left Side View
+ * Link: https://leetcode.com/problems/binary-tree-left-side-view/
  * Description: https://takeuforward.org/data-structure/right-left-view-of-binary-tree/
  * The Right View of a Binary Tree is a list of nodes that can be seen when the tree is viewed from the right side.
  * The Left View of a Binary Tree is a list of nodes that can be seen when the tree is viewed from the left side.

@@ -8,7 +8,8 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 8/19/2024
- * Question Category: 117. Populating Next Right Pointers in Each Node II
+ * Question Title: 117. Populating Next Right Pointers in Each Node II
+ * Link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii
  * Description: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/
  * Given a binary tree
  * <p>

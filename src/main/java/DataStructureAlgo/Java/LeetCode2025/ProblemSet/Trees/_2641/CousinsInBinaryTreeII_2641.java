@@ -10,7 +10,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/23/2024
- * Question Category: 2641. Cousins in Binary Tree II
+ * Question Title: 2641. Cousins in Binary Tree II
+ * Link: https://leetcode.com/problems/cousins-in-binary-tree-ii/
  * Description: https://leetcode.com/problems/cousins-in-binary-tree-ii/description/?envType=daily-question&envId=2024-10-23
  * Given the root of a binary tree, replace the value of each node in the tree with the sum of all its cousins' values.
  * <p>

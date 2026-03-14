@@ -9,8 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: ${DATE}
- * Question Title:
- * Link: 
+ * Question Title: Class
+ * Link: https://leetcode.com/problems/class/
  * Description:
  * <p><p>
  * File reference

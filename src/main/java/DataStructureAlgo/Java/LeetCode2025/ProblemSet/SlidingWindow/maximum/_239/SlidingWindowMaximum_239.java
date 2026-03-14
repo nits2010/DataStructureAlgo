@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/1/2024
- * Question Category: 239. Sliding Window Maximum
+ * Question Title: 239. Sliding Window Maximum
  * Description:
  * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window.
  * Each time the sliding window moves right by one position.

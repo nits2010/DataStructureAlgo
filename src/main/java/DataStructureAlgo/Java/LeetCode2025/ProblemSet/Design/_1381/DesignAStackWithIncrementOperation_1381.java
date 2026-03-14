@@ -8,7 +8,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 10/1/2024
- * Question Category: 1381. Design a Stack With Increment Operation
+ * Question Title: 1381. Design a Stack With Increment Operation
+ * Link: https://leetcode.com/problems/design-a-stack-with-increment-operation/
  * Description: https://leetcode.com/problems/design-a-stack-with-increment-operation/description/?envType=daily-question&envId=2024-09-30
  * Design a stack that supports increment operations on its elements.
  *

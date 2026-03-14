@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/2/2024
- * Question Category: 1497. Check If Array Pairs Are Divisible by k
+ * Question Title: 1497. Check If Array Pairs Are Divisible by k
+ * Link: https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/
  * Description: https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/description/
  * Given an array of integers arr of even length n and an integer k.
  * <p>

@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/5/2024
- * Question Category: 487. Max Consecutive Ones II
+ * Question Title: 487. Max Consecutive Ones II
+ * Link: https://leetcode.com/problems/max-consecutive-ones-ii/
  * Description: https://leetcode.com/problems/max-consecutive-ones-ii/description/
  * https://leetcode.ca/all/487.html
  * <p>

@@ -10,33 +10,52 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/27/2024
- * Question Category: Startup | Phone Screen | Stretch Binary Tree by Stretching Factor K
- * Description: https://leetcode.com/discuss/interview-question/967604/Startup-or-Phone-Screen-or-Stretch-Binary-Tree-by-Stretching-Factor-K
- * Replace the nodes of a binary tree with 'k' nodes of 1/k of N original node's value. The replaced node(s) of N should extend from their parent in the same direction
- * that N extends from its parent. Root node is a special case and treat its streched clones by extending towards the left. Must use recursion with optimal solution.
+ * Question Title: Startup | Phone Screen | Stretch Binary Tree by Stretching
+ * Factor K
+ * Link:
+ * https://leetcode.com/discuss/post/967604/startup-phone-screen-stretch-binary-tree-ky38/
+ * Description:
+ * Replace the nodes of a binary tree with 'k' nodes of 1/k of N original node's
+ * value. The replaced node(s) of N should extend from their parent in the same
+ * direction
+ * that N extends from its parent. Root node is a special case and treat its
+ * streched clones by extending towards the left. Must use recursion with
+ * optimal solution.
  * <p>
  * Detailed question:
  * Problem Explanation:
- * You have a binary tree where each node contains a value N. You are asked to replace each node with k nodes, where the following rules apply:
+ * You have a binary tree where each node contains a value N. You are asked to
+ * replace each node with k nodes, where the following rules apply:
  * <p>
  * For any node N:
  * <p>
- * The k new nodes that replace N will have the value 1/k of the original node's value N.
- * These new nodes will be inserted in a chain-like manner, following the direction of the original node.
- * If N is the left child of its parent, then the k nodes will be linked on the left side of their parent.
- * If N is the right child of its parent, then the k nodes will be linked on the right side of their parent.
+ * The k new nodes that replace N will have the value 1/k of the original node's
+ * value N.
+ * These new nodes will be inserted in a chain-like manner, following the
+ * direction of the original node.
+ * If N is the left child of its parent, then the k nodes will be linked on the
+ * left side of their parent.
+ * If N is the right child of its parent, then the k nodes will be linked on the
+ * right side of their parent.
  * For the root node:
  * <p>
- * Regardless of the original structure, the root node's k clones will always extend towards the left of the root.
+ * Regardless of the original structure, the root node's k clones will always
+ * extend towards the left of the root.
  * Recursive Requirement:
  * <p>
- * The problem should be solved recursively, meaning that for each node in the tree, the same logic should be applied to its children after handling the current node.
+ * The problem should be solved recursively, meaning that for each node in the
+ * tree, the same logic should be applied to its children after handling the
+ * current node.
  * Visualization
- * For example, suppose we have a binary tree with root node 10, left child 20, and right child 30. If k = 3, the transformation would look like this:
+ * For example, suppose we have a binary tree with root node 10, left child 20,
+ * and right child 30. If k = 3, the transformation would look like this:
  * <p>
- * The root node 10 is replaced by three nodes, each with the value 10 / 3. These nodes will extend towards the left.
- * The node 20 is replaced by three nodes, each with the value 20 / 3, extending to the left if 20 is the left child of its parent.
- * The node 30 is replaced by three nodes, each with the value 30 / 3, extending to the right if 30 is the right child of its parent.
+ * The root node 10 is replaced by three nodes, each with the value 10 / 3.
+ * These nodes will extend towards the left.
+ * The node 20 is replaced by three nodes, each with the value 20 / 3, extending
+ * to the left if 20 is the left child of its parent.
+ * The node 30 is replaced by three nodes, each with the value 30 / 3, extending
+ * to the right if 30 is the right child of its parent.
  * <p>
  *
  *
@@ -48,14 +67,16 @@ import java.util.List;
  * <p>
  * Tags
  * -----
+ * 
  * @medium
  * @Tree
  *
  * @Tree
- * @BinaryTree <p>
- * <p>
- * Company Tags
- * -----
+ * @BinaryTree
+ *             <p>
+ *             <p>
+ *             Company Tags
+ *             -----
  * @Editorial
  */
 public class StretchBinaryTreeByStretchingFactorK {
