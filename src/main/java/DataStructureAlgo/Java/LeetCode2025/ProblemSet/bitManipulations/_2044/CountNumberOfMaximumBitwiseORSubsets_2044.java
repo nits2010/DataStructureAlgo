@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:18/10/24
- * Question Category: 2044. Count Number of Maximum Bitwise-OR Subsets
+ * Question Title: 2044. Count Number of Maximum Bitwise-OR Subsets
+ * Link: https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/
  * Description: https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/description/?envType=daily-question&envId=2024-10-18
  * Given an integer array nums, find the maximum possible bitwise OR of a subset of nums and return the number of different non-empty subsets with the maximum bitwise OR.
  * <p>

@@ -5,12 +5,15 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:09/08/24
- * Question Category:
+ * Question Title: 150. Evaluate Reverse Polish Notation
+ * Link: https://leetcode.com/problems/evaluate-reverse-polish-notation/
  * Description: 150. Evaluate Reverse Polish Notation @medium
  * <p>
- * You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation.
+ * You are given an array of strings tokens that represents an arithmetic
+ * expression in a Reverse Polish Notation.
  * <p>
- * Evaluate the expression. Return an integer that represents the value of the expression.
+ * Evaluate the expression. Return an integer that represents the value of the
+ * expression.
  * <p>
  * Note that:
  * <p>
@@ -18,8 +21,10 @@ import java.util.*;
  * Each operand may be an integer or another expression.
  * The division between two integers always truncates toward zero.
  * There will not be any division by zero.
- * The input represents a valid arithmetic expression in a reverse polish notation.
- * The answer and all the intermediate calculations can be represented in a 32-bit integer.
+ * The input represents a valid arithmetic expression in a reverse polish
+ * notation.
+ * The answer and all the intermediate calculations can be represented in a
+ * 32-bit integer.
  * <p>
  * <p>
  * Example 1:
@@ -48,7 +53,8 @@ import java.util.*;
  * Constraints:
  * <p>
  * 1 <= tokens.length <= 104
- * tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
+ * tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the
+ * range [-200, 200].
  * File reference
  * -----------
  * Duplicate {@link}
@@ -61,9 +67,10 @@ import java.util.*;
  * @medium
  * @Array
  * @Math
- * @Stack <p>
- * Company Tags
- * -----
+ * @Stack
+ *        <p>
+ *        Company Tags
+ *        -----
  * @Google
  * @LinkedIn
  * @Amazon
@@ -75,9 +82,9 @@ import java.util.*;
 public class EvaluateReversePolishNotation_150 {
     public static void main(String[] args) {
         boolean test = true;
-        test &= test(new String[]{"2", "1", "+", "3", "*"}, 9);
-        test &= test(new String[]{"4", "13", "5", "/", "+"}, 6);
-        test &= test(new String[]{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}, 22);
+        test &= test(new String[] { "2", "1", "+", "3", "*" }, 9);
+        test &= test(new String[] { "4", "13", "5", "/", "+" }, 6);
+        test &= test(new String[] { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" }, 22);
         System.out.println(test ? " All passed" : "Something failed");
 
     }
@@ -98,13 +105,13 @@ class EvaluateReversePolishNotation {
 
         public int evalRPN(String[] tokens) {
             if (tokens == null || tokens.length == 0)
-                return -1; //invalid
+                return -1; // invalid
 
             final Stack<Integer> stack = new Stack<>();
 
             for (String token : tokens) {
 
-                if(isAirthmaticOperator(token))
+                if (isAirthmaticOperator(token))
                     stack.push(performAirthmaticOperation(stack.pop(), stack.pop(), token));
                 else
                     stack.push(Integer.parseInt(token));
@@ -137,13 +144,13 @@ class EvaluateReversePolishNotation {
 
         public int evalRPN(String[] tokens) {
             if (tokens == null || tokens.length == 0)
-                return -1; //invalid
+                return -1; // invalid
 
             final Deque<Integer> stack = new ArrayDeque<>();
 
             for (String token : tokens) {
 
-                if(isAirthmaticOperator(token))
+                if (isAirthmaticOperator(token))
                     stack.push(performAirthmaticOperation(stack.pop(), stack.pop(), token));
                 else
                     stack.push(Integer.parseInt(token));

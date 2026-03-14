@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/13/2024
- * Question Category: 112. Path Sum
+ * Question Title: 112. Path Sum
+ * Link: https://leetcode.com/problems/path-sum/
  * Description: https://leetcode.com/problems/path-sum/description/
  * Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
  *

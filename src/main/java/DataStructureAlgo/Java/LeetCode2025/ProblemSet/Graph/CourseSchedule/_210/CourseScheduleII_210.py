@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 8/19/2025
-Question Title:
-Link:
+Question Title: 210 Course ScheduleII
+Link: https://leetcode.com/problems/course-scheduleii/
 Description:
 File reference
 -----------

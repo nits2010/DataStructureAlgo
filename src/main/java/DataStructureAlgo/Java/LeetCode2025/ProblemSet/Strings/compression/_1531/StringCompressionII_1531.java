@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/4/2024
- * Question Category: 1531. String Compression II
+ * Question Title: 1531. String Compression II
+ * Link: https://leetcode.com/problems/string-compression-ii/
  * Description: https://leetcode.com/problems/string-compression-ii/description/
  * Run-length encoding is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string "aabccc" we replace "aa" by "a2" and replace "ccc" by "c3". Thus the compressed string becomes "a2bc3".
  * <p>

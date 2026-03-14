@@ -7,7 +7,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-26
- * Question Category: 160. Intersection of Two Linked Lists [easy]
+ * Question Title: 160. Intersection of Two Linked Lists
+ * Link: https://leetcode.com/problems/intersection-of-two-linked-lists/
  * Description: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
  * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
  * <p>

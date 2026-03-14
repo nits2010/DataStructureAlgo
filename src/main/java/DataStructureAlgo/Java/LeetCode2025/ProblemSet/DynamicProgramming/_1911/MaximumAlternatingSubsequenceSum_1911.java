@@ -9,7 +9,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/6/2024
- * Question Category: 1911. Maximum Alternating Subsequence Sum
+ * Question Title: 1911. Maximum Alternating Subsequence Sum
+ * Link: https://leetcode.com/problems/maximum-alternating-subsequence-sum/
  * Description: https://leetcode.com/problems/maximum-alternating-subsequence-sum/description/
  * The alternating sum of a 0-indexed array is defined as the sum of the elements at even indices minus the sum of the elements at odd indices.
  * <p>

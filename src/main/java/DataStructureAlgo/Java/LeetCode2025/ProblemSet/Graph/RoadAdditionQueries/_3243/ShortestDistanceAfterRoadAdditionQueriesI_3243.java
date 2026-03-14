@@ -11,7 +11,7 @@ import DataStructureAlgo.Java.nonleetcode.graph.questions.shortest.path.Dijkstra
  * Author: Nitin Gupta
  * Date: 11/27/2024
  * Question Title: 3243. Shortest Distance After Road Addition Queries I
- * Link:
+ * Link: https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/
  * Description: You are given an integer n and a 2D integer array queries.
  * <p>
  * There are n cities numbered from 0 to n - 1. Initially, there is a unidirectional road from city i to city i + 1 for all 0 <= i < n - 1.

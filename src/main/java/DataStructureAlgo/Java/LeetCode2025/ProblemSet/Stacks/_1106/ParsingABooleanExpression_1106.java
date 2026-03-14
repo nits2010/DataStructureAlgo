@@ -7,7 +7,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 10/20/2024
- * Question Category: 1106. Parsing A Boolean Expression
+ * Question Title: 1106. Parsing A Boolean Expression
+ * Link: https://leetcode.com/problems/parsing-a-boolean-expression/
  * Description: https://leetcode.com/problems/parsing-a-boolean-expression
  * A boolean expression is an expression that evaluates to either true or false. It can be in one of the following shapes:
  * <p>

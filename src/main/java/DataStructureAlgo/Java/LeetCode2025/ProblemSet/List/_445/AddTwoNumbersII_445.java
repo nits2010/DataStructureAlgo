@@ -10,7 +10,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 08/01/2024
- * Question Category: 445. Add Two Numbers II [medium]
+ * Question Title: 445. Add Two Numbers II
+ * Link: https://leetcode.com/problems/add-two-numbers-ii/
  * Description: https://leetcode.com/problems/add-two-numbers-ii/description/
  * <p>
  * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.

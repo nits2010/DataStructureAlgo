@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/6/2024
- * Question Category: 734 - Sentence Similarity
+ * Question Title: 734 - Sentence Similarity
+ * Link: https://leetcode.com/problems/734-sentence-similarity/
  * Description: https://leetcode.com/problems/sentence-similarity/description/
  * https://leetcode.ca/2017-12-03-734-Sentence-Similarity/
  * We can represent a sentence as an array of words, for example, the sentence "I am happy with leetcode" can be represented as arr = ["I","am",happy","with","leetcode"].

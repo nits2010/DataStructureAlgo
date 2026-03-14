@@ -7,8 +7,10 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/7/2024
- * Question Category: 53. Maximum Subarray https://leetcode.com/problems/maximum-subarray/description
- * Description: Given an integer array nums, find the subarray with the largest sum, and return its sum.
+ * Question Title: 53. Maximum Subarray
+ * Link: https://leetcode.com/problems/maximum-subarray/description
+ * Description: Given an integer array nums, find the subarray with the largest
+ * sum, and return its sum.
  *
  *
  *
@@ -35,7 +37,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * -104 <= nums[i] <= 104
  *
  *
- * Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+ * Follow up: If you have figured out the O(n) solution, try coding another
+ * solution using the divide and conquer approach, which is more subtle.
  * <p>
  * File reference
  * -----------
@@ -43,40 +46,47 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Similar {@link}
  * extension {@link }
  * DP-BaseProblem {@link }
- * <p><p>
+ * <p>
+ * <p>
  * Tags
  * -----
+ * 
  * @KadensAlgorithm
  * @medium
  * @Array
  * @DivideandConquer
- * @DynamicProgramming <p><p>
- * Company Tags
- * -----
+ * @DynamicProgramming
+ *                     <p>
+ *                     <p>
+ *                     Company Tags
+ *                     -----
  * @LinkedIn
  * @Amazon
  * @Apple
  * @Microsoft
- * @Adobe <p>
- * -----
- * @Editorial <p><p>
- * -----
+ * @Adobe
+ *        <p>
+ *        -----
+ * @Editorial
+ *            <p>
+ *            <p>
+ *            -----
  * @OptimalSoltuion
  */
 public class MaximumSubarray_53 {
 
     public static void main(String[] args) {
         List<Boolean> tests = new ArrayList<>();
-        //add tests cases here
-        tests.add(test(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}, 6));
-        tests.add(test(new int[]{1}, 1));
-        tests.add(test(new int[]{5, 4, -1, 7, 8}, 23));
+        // add tests cases here
+        tests.add(test(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }, 6));
+        tests.add(test(new int[] { 1 }, 1));
+        tests.add(test(new int[] { 5, 4, -1, 7, 8 }, 23));
         CommonMethods.printAllTestOutCome(tests);
     }
 
     private static boolean test(int[] nums, int expected) {
-        //add print here
-        CommonMethods.printTest(new String[]{"Nums", "Expected"}, true, nums, expected);
+        // add print here
+        CommonMethods.printTest(new String[] { "Nums", "Expected" }, true, nums, expected);
 
         int output;
         boolean pass, finalPass = true;
@@ -85,8 +95,7 @@ public class MaximumSubarray_53 {
         output = kadensAlgorithm.maxSubArray(nums);
         pass = output == expected;
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"kadensAlgorithm", "Expected"}, false, output, pass ? "Pass" : "Fail");
-
+        CommonMethods.printTest(new String[] { "kadensAlgorithm", "Expected" }, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
 
@@ -150,7 +159,7 @@ public class MaximumSubarray_53 {
                     }
                 }
 
-                return new int[]{maxSum, start, end};
+                return new int[] { maxSum, start, end };
 
             }
         }

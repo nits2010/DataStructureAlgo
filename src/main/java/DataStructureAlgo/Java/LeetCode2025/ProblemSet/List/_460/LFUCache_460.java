@@ -4,7 +4,8 @@ package DataStructureAlgo.Java.LeetCode2025.ProblemSet.List._460;
 /**
  * Author: Nitin Gupta
  * Date: 8/3/2024
- * Question Category: 460. LFU Cache [hard]
+ * Question Title: 460. LFU Cache
+ * Link: https://leetcode.com/problems/lfu-cache
  * Description: https://leetcode.com/problems/lfu-cache/description/
  *
  * <p>

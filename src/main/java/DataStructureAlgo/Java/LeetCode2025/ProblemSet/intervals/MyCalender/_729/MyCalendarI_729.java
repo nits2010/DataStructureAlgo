@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/27/2024
- * Question Category: 729. My Calendar I
+ * Question Title: 729. My Calendar I
+ * Link: https://leetcode.com/problems/my-calendar-i/
  * Description: https://leetcode.com/problems/my-calendar-i/description/
  * You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking.
  * <p>

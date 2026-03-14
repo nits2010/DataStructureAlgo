@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 141. Linked List Cycle [easy ]
+ * Question Title: 141. Linked List Cycle [easy ]
+ * Link: https://leetcode.com/problems/linked-list-cycle-easy/
  * Description: https://leetcode.com/problems/linked-list-cycle
  *
  * <p>

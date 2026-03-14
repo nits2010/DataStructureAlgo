@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 11/2/2024
- * Question Category: 2291. Maximum Profit From Trading Stocks
+ * Question Title: 2291. Maximum Profit From Trading Stocks
+ * Link: https://leetcode.com/problems/maximum-profit-from-trading-stocks/
  * Description: https://leetcode.com/problems/maximum-profit-from-trading-stocks/description/
  * https://leetcode.ca/2022-07-02-2291-Maximum-Profit-From-Trading-Stocks/
  * You are given two 0-indexed integer arrays of the same length present and future where present[i] is the current price of the ith stock and future[i] is the price of the ith stock a year in the future. You may buy each stock at most once. You are also given an integer budget representing the amount of money you currently have.

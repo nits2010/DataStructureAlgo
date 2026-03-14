@@ -10,7 +10,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:08/08/24
- * Question Category: 23. Merge k Sorted Lists @hard
+ * Question Title: 23. Merge k Sorted Lists @hard
+ * Link: https://leetcode.com/problems/merge-k-sorted-lists-hard/
  * Description: https://leetcode.com/problems/merge-k-sorted-lists
  * <p>
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.

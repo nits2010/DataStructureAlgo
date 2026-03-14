@@ -9,7 +9,8 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 9/14/2024
- * Question Category: 130. Surrounded Regions
+ * Question Title: 130. Surrounded Regions
+ * Link: https://leetcode.com/problems/surrounded-regions/
  * Description: https://leetcode.com/problems/surrounded-regions/description/
  * You are given an m x n matrix board containing letters 'X' and 'O', capture regions that are surrounded:
  *

@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 2074. Reverse Nodes in Even Length Groups [Medium]
+ * Question Title: 2074. Reverse Nodes in Even Length Groups
+ * Link: https://leetcode.com/problems/reverse-nodes-in-even-length-groups/
  * Description: https://leetcode.com/problems/reverse-nodes-in-even-length-groups/description/
  * <p>
  * You are given the head of a linked list.

@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/5/2024
- * Question Category: 42. Trapping Rain Water
+ * Question Title: 42. Trapping Rain Water
+ * Link: https://leetcode.com/problems/trapping-rain-water/
  * Description: https://leetcode.com/problems/trapping-rain-water/description/
  * Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
  * <p>

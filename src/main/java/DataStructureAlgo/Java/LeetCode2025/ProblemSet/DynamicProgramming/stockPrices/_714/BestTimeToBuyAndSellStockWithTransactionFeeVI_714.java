@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 11/2/2024
- * Question Category: 714. Best Time to Buy and Sell Stock with Transaction Fee
+ * Question Title: 714. Best Time to Buy and Sell Stock with Transaction Fee
+ * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
  * You are given an array prices where prices[i] is the price of a given stock on the ith day, and an integer fee representing a transaction fee.
  * <p>

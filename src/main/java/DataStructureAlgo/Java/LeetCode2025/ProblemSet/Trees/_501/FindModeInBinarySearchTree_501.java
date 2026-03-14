@@ -8,7 +8,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/24/2024
- * Question Category: 501. Find Mode in Binary Search Tree
+ * Question Title: 501. Find Mode in Binary Search Tree
+ * Link: https://leetcode.com/problems/find-mode-in-binary-search-tree/
  * Description: https://leetcode.com/problems/find-mode-in-binary-search-tree/description/
  * Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it.
  * <p>

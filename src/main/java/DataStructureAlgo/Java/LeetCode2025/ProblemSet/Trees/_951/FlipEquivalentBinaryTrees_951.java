@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.nonleetcode.Tree.traversal.TreeTraversalRecursive;
 /**
  * Author: Nitin Gupta
  * Date:24/10/24
- * Question Category: 951. Flip Equivalent Binary Trees
+ * Question Title: 951. Flip Equivalent Binary Trees
+ * Link: https://leetcode.com/problems/flip-equivalent-binary-trees/
  * Description: https://leetcode.com/problems/flip-equivalent-binary-trees/description/
  * For a binary tree T, we can define a flip operation as follows: choose any node, and swap the left and right child subtrees.
  * <p>

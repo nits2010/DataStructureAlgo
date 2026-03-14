@@ -6,7 +6,8 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 8/19/2024
- * Question Category: 116. Populating Next Right Pointers in Each Node
+ * Question Title: 116. Populating Next Right Pointers in Each Node
+ * Link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
  * Description: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
  * You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
  * <p>

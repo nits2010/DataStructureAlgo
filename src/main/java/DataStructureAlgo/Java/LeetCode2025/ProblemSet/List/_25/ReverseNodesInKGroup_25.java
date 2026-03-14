@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/28/2024
- * Question Category:  25. Reverse Nodes in k-Group [hard]
+ * Question Title: 25. Reverse Nodes in k-Group
+ * Link: https://leetcode.com/problems/reverse-nodes-in-k-group/
  * Description: https://leetcode.com/problems/reverse-nodes-in-k-group/description/
  *
  * <p>

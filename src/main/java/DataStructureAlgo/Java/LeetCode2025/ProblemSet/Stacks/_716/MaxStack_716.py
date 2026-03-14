@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 3/2/2026
-Question Title:
-Link: https://leetcode.com/problems/max-stack/description/
+Question Title: 716 Max Stack
+Link: https://leetcode.com/problems/max-stack/
 https://www.hellointerview.com/community/questions/max-stack/cm5eguhac02ka838o22vxy5fk
 https://github.com/doocs/leetcode/blob/main/Solution1/0700-0799/0716.Max%20Stack/README_EN.md
 https://leetcode.ca/all/716.html

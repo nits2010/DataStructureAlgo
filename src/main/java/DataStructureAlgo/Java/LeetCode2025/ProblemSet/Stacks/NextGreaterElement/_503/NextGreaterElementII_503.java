@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/5/2024
- * Question Category: 503. Next Greater Element II @medium
+ * Question Title: 503. Next Greater Element II @medium
+ * Link: https://leetcode.com/problems/next-greater-element-ii-medium/
  * Description: https://leetcode.com/problems/next-greater-element-ii/description/
  *
  * <p>

@@ -6,7 +6,7 @@ from typing import List
 
 class UnDirectedGraphCycleDetection:
 
-    """ Cycle can be detect by two ways 
+    """ Cycle can be detect by three ways 
         1. DFS
         2. BFS 
         3. Union Find

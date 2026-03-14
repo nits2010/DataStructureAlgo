@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
- * Question Category: 1047. Remove All Adjacent Duplicates In String
+ * Question Title: 1047. Remove All Adjacent Duplicates In String
+ * Link: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
  * Description: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/
  * You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.
  *

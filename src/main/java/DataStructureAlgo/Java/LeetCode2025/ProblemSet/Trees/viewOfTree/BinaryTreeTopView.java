@@ -12,10 +12,12 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/19/2024
- * Question Category: Top view of a Binary Tree
- * Description: https://takeuforward.org/data-structure/top-view-of-a-binary-tree/
+ * Question Title: Top view of a Binary Tree
+ * Link: https://takeuforward.org/data-structure/top-view-of-a-binary-tree/
+ * Description:
  * <p>
- * Given a Binary Tree, return its Top View. The Top View of a Binary Tree is the set of nodes visible when we see the tree from the top.
+ * Given a Binary Tree, return its Top View. The Top View of a Binary Tree is
+ * the set of nodes visible when we see the tree from the top.
  * File reference
  * -----------
  * Duplicate {@link}
@@ -29,11 +31,12 @@ import java.util.*;
  * @Tree
  * @Depth-FirstSearch
  * @Breadth-FirstSearch
- * @BinaryTree <p>
- * <p>
- * <p>
- * Company Tags
- * -----
+ * @BinaryTree
+ *             <p>
+ *             <p>
+ *             <p>
+ *             Company Tags
+ *             -----
  * @Facebook
  * @Amazon
  * @Bloomberg

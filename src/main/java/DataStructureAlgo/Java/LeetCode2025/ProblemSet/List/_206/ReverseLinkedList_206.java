@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date:  2024-07-26
- * Question Category: 206. Reverse Linked List [easy]
+ * Question Title: 206. Reverse Linked List
+ * Link: https://leetcode.com/problems/reverse-linked-list/
  * Description:  https://leetcode.com/problems/reverse-linked-list/
  *
  * Reverse a singly linked list.

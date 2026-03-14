@@ -8,7 +8,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date:05/11/24
- * Question Category: 2914. Minimum Number of Changes to Make Binary String Beautiful
+ * Question Title: 2914. Minimum Number of Changes to Make Binary String Beautiful
+ * Link: https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/
  * Description: https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/description/
  * You are given a 0-indexed binary string s having an even length.
  * <p>

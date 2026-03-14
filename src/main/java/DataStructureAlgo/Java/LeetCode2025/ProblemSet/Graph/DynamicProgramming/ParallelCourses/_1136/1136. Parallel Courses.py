@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 8/27/2025
-Question Title:
-Link:
+Question Title: 1136.  Parallel  Courses
+Link: https://leetcode.com/problems/parallel-courses/
 Description:
 File reference
 -----------

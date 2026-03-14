@@ -8,10 +8,15 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 10/21/2024
- * Question Category: 1593. Split a String Into the Max Number of Unique Substrings
- * Description: Given a string s, return the maximum number of unique substrings that the given string can be split into.
+ * Question Title: 1593. Split a String Into the Max Number of Unique Substrings
+ * Link:
+ * https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/
+ * Description: Given a string s, return the maximum number of unique substrings
+ * that the given string can be split into.
  * <p>
- * You can split string s into any list of non-empty substrings, where the concatenation of the substrings forms the original string. However, you must split the substrings such that all of them are unique.
+ * You can split string s into any list of non-empty substrings, where the
+ * concatenation of the substrings forms the original string. However, you must
+ * split the substrings such that all of them are unique.
  * <p>
  * A substring is a contiguous sequence of characters within a string.
  * <p>
@@ -21,7 +26,9 @@ import java.util.Set;
  * <p>
  * Input: s = "ababccc"
  * Output: 5
- * Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc']. Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a' and 'b' multiple times.
+ * Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc'].
+ * Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a'
+ * and 'b' multiple times.
  * Example 2:
  * <p>
  * Input: s = "aba"
@@ -39,9 +46,12 @@ import java.util.Set;
  * 1 <= s.length <= 16
  * <p>
  * s contains only lower case English letters.
- * Given a string s, return the maximum number of unique substrings that the given string can be split into.
+ * Given a string s, return the maximum number of unique substrings that the
+ * given string can be split into.
  * <p>
- * You can split string s into any list of non-empty substrings, where the concatenation of the substrings forms the original string. However, you must split the substrings such that all of them are unique.
+ * You can split string s into any list of non-empty substrings, where the
+ * concatenation of the substrings forms the original string. However, you must
+ * split the substrings such that all of them are unique.
  * <p>
  * A substring is a contiguous sequence of characters within a string.
  * <p>
@@ -51,7 +61,9 @@ import java.util.Set;
  * <p>
  * Input: s = "ababccc"
  * Output: 5
- * Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc']. Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a' and 'b' multiple times.
+ * Explanation: One way to split maximally is ['a', 'b', 'ab', 'c', 'cc'].
+ * Splitting like ['a', 'b', 'a', 'b', 'c', 'cc'] is not valid as you have 'a'
+ * and 'b' multiple times.
  * Example 2:
  * <p>
  * Input: s = "aba"
@@ -75,20 +87,26 @@ import java.util.Set;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p><p>
+ * <p>
+ * <p>
  * Tags
  * -----
+ * 
  * @medium
  * @HashTable
  * @String
- * @Backtracking <p><p>
- * Company Tags
- * -----
- * @Google <p>
- * -----
+ * @Backtracking
+ *               <p>
+ *               <p>
+ *               Company Tags
+ *               -----
+ * @Google
+ *         <p>
+ *         -----
  * @Editorial https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/editorial
- * <p><p>
- * -----
+ *            <p>
+ *            <p>
+ *            -----
  * @OptimalSoltuion
  */
 public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings_1593 {

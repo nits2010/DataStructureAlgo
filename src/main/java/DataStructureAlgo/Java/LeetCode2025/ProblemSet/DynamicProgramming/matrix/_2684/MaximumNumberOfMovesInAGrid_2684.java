@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/29/2024
- * Question Category: 2684. Maximum Number of Moves in a Grid
+ * Question Title: 2684. Maximum Number of Moves in a Grid
+ * Link: https://leetcode.com/problems/maximum-number-of-moves-in-a-grid/
  * Description: https://leetcode.com/problems/maximum-number-of-moves-in-a-grid/description/
  * You are given a 0-indexed m x n matrix grid consisting of positive integers.
  * <p>

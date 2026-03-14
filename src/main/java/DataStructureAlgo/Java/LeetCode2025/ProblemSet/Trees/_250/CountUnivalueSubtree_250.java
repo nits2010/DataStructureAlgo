@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/23/2024
- * Question Category: 250. Count Univalue Subtrees
+ * Question Title: 250. Count Univalue Subtrees
+ * Link: https://leetcode.com/problems/count-univalue-subtrees/
  * Description: https://leetcode.com/problems/count-univalue-subtrees/description/
  * https://leetcode.ca/all/250.html , https://www.geeksforgeeks.org/find-count-of-singly-subtrees/
  * Given a binary tree, count the number of uni-value subtrees.

@@ -8,7 +8,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date:06/11/24
- * Question Category: 3011. Find if Array Can Be Sorted
+ * Question Title: 3011. Find if Array Can Be Sorted
+ * Link: https://leetcode.com/problems/find-if-array-can-be-sorted/
  * Description: https://leetcode.com/problems/find-if-array-can-be-sorted/description/
  * ou are given a 0-indexed array of positive integers nums.
  * <p>

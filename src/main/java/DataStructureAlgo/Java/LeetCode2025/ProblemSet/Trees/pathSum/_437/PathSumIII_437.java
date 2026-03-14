@@ -9,7 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/14/2024
- * Question Category: 437. Path Sum III
+ * Question Title: 437. Path Sum III
+ * Link: https://leetcode.com/problems/path-sum-iii/
  * Description: https://leetcode.com/problems/path-sum-iii/description/
  * Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum.
  * <p>

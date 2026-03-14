@@ -15,7 +15,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/12/2024
- * Question Category: 559. Maximum Depth of N-ary Tree
+ * Question Title: 559. Maximum Depth of N-ary Tree
+ * Link: https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
  * Description: https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
  *
  * <p>

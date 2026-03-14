@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/19/2024
- * Question Category: 746. Min Cost Climbing Stairs
+ * Question Title: 746. Min Cost Climbing Stairs
+ * Link: https://leetcode.com/problems/min-cost-climbing-stairs
  * Description: https://leetcode.com/problems/min-cost-climbing-stairs/description/
  * You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
  * <p>

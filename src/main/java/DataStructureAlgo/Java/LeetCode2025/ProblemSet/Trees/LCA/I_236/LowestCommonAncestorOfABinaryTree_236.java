@@ -12,7 +12,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category: 236. Lowest Common Ancestor of a Binary Tree
+ * Question Title: 236. Lowest Common Ancestor of a Binary Tree
+ * Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
  * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
  * <p>
  * <p>

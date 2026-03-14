@@ -7,7 +7,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/8/2024
- * Question Category: 151. Reverse Words in a String
+ * Question Title: 151. Reverse Words in a String
+ * Link: https://leetcode.com/problems/reverse-words-in-a-string/
  * Description: https://leetcode.com/problems/reverse-words-in-a-string/description/
  * Given an input string s, reverse the order of the words.
  * <p>

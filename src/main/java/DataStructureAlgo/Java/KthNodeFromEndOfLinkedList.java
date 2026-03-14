@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 8/1/2024
- * Question Category: [easy | medium | hard ]
+ * Question Title: Kth from End of Linked List
+ * Link: https://www.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1
  * Description:
  *
  * <p>
@@ -21,9 +22,9 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * -----
  *
  * @easy @medium @hard
- * <p>
- * Company Tags
- * -----
+ *       <p>
+ *       Company Tags
+ *       -----
  */
 public class KthNodeFromEndOfLinkedList {
 

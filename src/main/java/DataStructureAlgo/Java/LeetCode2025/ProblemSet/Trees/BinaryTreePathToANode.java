@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category:
+ * Question Title: Binary Tree Path ToA Node
+ * Link: https://takeuforward.org/data-structure/print-root-to-node-path-in-a-binary-tree
  * Description:
  * <p>
  * File reference
@@ -22,15 +23,16 @@ import java.util.List;
  * <p>
  * Tags
  * -----
+ * 
  * @Tree
  * @Backtracking
  * @Depth-FirstSearch
  * @BinaryTree
  *
  *
- * <p>
- * Company Tags
- * -----
+ *             <p>
+ *             Company Tags
+ *             -----
  *
  * @Editorial
  */

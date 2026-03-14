@@ -9,7 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/21/2024
- * Question Category: 207. Course Schedule
+ * Question Title: 207. Course Schedule
+ * Link: https://leetcode.com/problems/course-schedule/
  * Description: https://leetcode.com/problems/course-schedule/description/?envType=study-plan-v2&envId=top-interview-150
  * There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
  * <p>

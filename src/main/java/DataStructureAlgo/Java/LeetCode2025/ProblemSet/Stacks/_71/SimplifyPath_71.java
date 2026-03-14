@@ -5,7 +5,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date:09/08/24
- * Question Category: 71. Simplify Path @medium
+ * Question Title: 71. Simplify Path @medium
+ * Link: https://leetcode.com/problems/simplify-path-medium/
  * Description: https://leetcode.com/problems/simplify-path/description
  * <p>
  *

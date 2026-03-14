@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 9/2/2024
- * Question Category: 1779. Find Nearest Point That Has the Same X or Y Coordinate
+ * Question Title: 1779. Find Nearest Point That Has the Same X or Y Coordinate
+ * Link: https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/
  * Description: https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/description/
  * You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.
  * <p>

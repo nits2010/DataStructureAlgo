@@ -9,8 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: ${DATE}
- * Question Title:
- * Link: 
+ * Question Title: Class
+ * Link: https://discuss.python.org/t/why-does-leetcode-use-solution-class-does-the-class-ever-help/13916
  * Description:
  * <p><p>
  * File reference

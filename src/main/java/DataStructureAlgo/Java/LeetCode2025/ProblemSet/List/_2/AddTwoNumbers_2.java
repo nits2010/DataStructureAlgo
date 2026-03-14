@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 08/01/2024
- * Question Category: 2. Add Two Numbers [medium]
+ * Question Title: 2. Add Two Numbers
+ * Link: https://leetcode.com/problems/add-two-numbers/
  * Description: https://leetcode.com/problems/add-two-numbers
  * <p>
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.

@@ -1,8 +1,9 @@
 """
 Author: Nitin Gupta
 Date: 6/20/2025
-Question Category: 666 - Path Sum IV
-Description: https://leetcode.com/problems/path-sum-iv/ && https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
+Question Title: 666 - Path Sum IV
+Link: https://leetcode.com/problems/path-sum-iv/  https://leetcode.ca/2017-09-26-666-Path-Sum-IV/
+Description: 
 Description:
 File reference
 -----------

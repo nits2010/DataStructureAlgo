@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category:876. Middle of the Linked List [easy]
+ * Question Title: 876. Middle of the Linked List
+ * Link: https://leetcode.com/problems/middle-of-the-linked-list/
  * Description: https://leetcode.com/problems/middle-of-the-linked-list/description/
  * <p>
  * Given the head of a singly linked list, return the middle node of the linked list.

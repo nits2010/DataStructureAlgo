@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/10/2024
- * Question Category: 2497. Maximum Star Sum of a Graph
+ * Question Title: 2497. Maximum Star Sum of a Graph
+ * Link: https://leetcode.com/problems/maximum-star-sum-of-a-graph/
  * Description: https://leetcode.com/problems/maximum-star-sum-of-a-graph/description/
  * There is an undirected graph consisting of n nodes numbered from 0 to n - 1. You are given a 0-indexed integer array vals of length n where vals[i] denotes the value of the ith node.
  *

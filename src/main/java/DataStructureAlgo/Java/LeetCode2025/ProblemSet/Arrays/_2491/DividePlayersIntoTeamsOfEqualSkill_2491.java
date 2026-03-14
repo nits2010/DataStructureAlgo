@@ -7,8 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/4/2024
- * Question Category: 2491 Divide Players Into Teams of Equal Skill
+ * Question Title: 2491 Divide Players Into Teams of Equal Skill
  * <p>
+ * Link: https://leetcode.com/problems/2491-divide-players-into-teams-of-equal-skill/
  * Description: https://leetcode.com/problems/divide-players-into-teams-of-equal-skill
  * You are given a positive integer array skill of even length n where skill[i] denotes the skill of the ith player. Divide the players into n / 2 teams of size 2 such that the total skill of each team is equal.
  * <p>

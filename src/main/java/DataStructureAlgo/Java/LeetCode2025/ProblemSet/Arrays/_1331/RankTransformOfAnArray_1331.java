@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/2/2024
- * Question Category: 1331. Rank Transform of an Array
+ * Question Title: 1331. Rank Transform of an Array
+ * Link: https://leetcode.com/problems/rank-transform-of-an-array/
  * Description: https://leetcode.com/problems/rank-transform-of-an-array
  * Given an array of integers arr, replace each element with its rank.
  *

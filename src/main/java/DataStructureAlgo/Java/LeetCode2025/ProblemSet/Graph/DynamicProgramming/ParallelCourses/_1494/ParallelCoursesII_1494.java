@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/22/2024
- * Question Category: 1494. Parallel Courses II
+ * Question Title: 1494. Parallel Courses II
+ * Link: https://leetcode.com/problems/parallel-courses-ii/
  * Description:https://leetcode.com/problems/parallel-courses-ii/description/
  * <p>
  * You are given an integer n, which indicates that there are n courses labeled from 1 to n.

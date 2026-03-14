@@ -7,7 +7,8 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 8/3/2024
- * Question Category: 146. LRU Cache [ medium ]
+ * Question Title: 146. LRU Cache [ medium ]
+ * Link: https://leetcode.com/problems/lru-cache
  * Description: https://leetcode.com/problems/lru-cache
  * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
  * <p>

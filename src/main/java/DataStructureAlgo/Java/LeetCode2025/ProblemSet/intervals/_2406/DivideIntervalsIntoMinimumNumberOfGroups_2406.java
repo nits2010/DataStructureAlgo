@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/13/2024
- * Question Category: 2406. Divide Intervals Into Minimum Number of Groups
+ * Question Title: 2406. Divide Intervals Into Minimum Number of Groups
+ * Link: https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/
  * Description: https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/description/?envType=daily-question&envId=2024-10-12
  * You are given a 2D integer array intervals where intervals[i] = [lefti, righti] represents the inclusive interval [lefti, righti].
  * <p>

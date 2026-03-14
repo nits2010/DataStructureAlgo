@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:09/09/24
- * Question Category: 1791. Find Center of Star Graph
+ * Question Title: 1791. Find Center of Star Graph
+ * Link: https://leetcode.com/problems/find-center-of-star-graph/
  * Description: https://leetcode.com/problems/find-center-of-star-graph/description/
  * <p>
  * There is an undirected star graph consisting of n nodes labeled from 1 to n. A star graph is a graph where there is one center node and exactly n - 1 edges that connect the center node with every other node.

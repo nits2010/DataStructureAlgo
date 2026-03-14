@@ -5,16 +5,19 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
- * Question Category: 2384. Largest Palindromic Number
+ * Question Title: 2384. Largest Palindromic Number
+ * Link: https://leetcode.com/problems/largest-palindromic-number/
  * Description: 2384. Largest Palindromic Number
  * <p>
  * You are given a string num consisting of digits only.
  * <p>
- * Return the largest palindromic integer (in the form of a string) that can be formed using digits taken from num. It should not contain leading zeroes.
+ * Return the largest palindromic integer (in the form of a string) that can be
+ * formed using digits taken from num. It should not contain leading zeroes.
  * <p>
  * Notes:
  * <p>
- * You do not need to use all the digits of num, but you must use at least one digit.
+ * You do not need to use all the digits of num, but you must use at least one
+ * digit.
  * The digits can be reordered.
  * <p>
  * <p>
@@ -23,14 +26,17 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Input: num = "444947137"
  * Output: "7449447"
  * Explanation:
- * Use the digits "4449477" from "444947137" to form the palindromic integer "7449447".
- * It can be shown that "7449447" is the largest palindromic integer that can be formed.
+ * Use the digits "4449477" from "444947137" to form the palindromic integer
+ * "7449447".
+ * It can be shown that "7449447" is the largest palindromic integer that can be
+ * formed.
  * Example 2:
  * <p>
  * Input: num = "00009"
  * Output: "9"
  * Explanation:
- * It can be shown that "9" is the largest palindromic integer that can be formed.
+ * It can be shown that "9" is the largest palindromic integer that can be
+ * formed.
  * Note that the integer returned should not contain leading zeroes.
  * <p>
  * <p>
@@ -43,7 +49,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p><p>
+ * <p>
+ * <p>
  * Tags
  * -----
  *
@@ -51,10 +58,13 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * @HashTable
  * @String
  * @Greedy
- * @Counting <p><p>
- * Company Tags
- * -----
- * <p><p>
+ * @Counting
+ *           <p>
+ *           <p>
+ *           Company Tags
+ *           -----
+ *           <p>
+ *           <p>
  * @Editorial
  */
 public class LargestPalindromicNumber_2384 {

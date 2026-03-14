@@ -9,7 +9,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 9/1/2024
- * Question Category: 295. Find Median from Data Stream
+ * Question Title: 295. Find Median from Data Stream
+ * Link: https://leetcode.com/problems/find-median-from-data-stream
  * Description: https://leetcode.com/problems/find-median-from-data-stream/description/
  * The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
  *

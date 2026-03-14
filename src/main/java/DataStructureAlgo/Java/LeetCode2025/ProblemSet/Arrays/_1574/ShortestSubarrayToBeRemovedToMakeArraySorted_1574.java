@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/15/2024
- * Question Category: 1574. Shortest Subarray to be Removed to Make Array Sorted
+ * Question Title: 1574. Shortest Subarray to be Removed to Make Array Sorted
+ * Link: https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/
  * Description: https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description
  * Given an integer array arr, remove a subarray (can be empty) from arr such that the remaining elements in arr are non-decreasing.
  * <p>

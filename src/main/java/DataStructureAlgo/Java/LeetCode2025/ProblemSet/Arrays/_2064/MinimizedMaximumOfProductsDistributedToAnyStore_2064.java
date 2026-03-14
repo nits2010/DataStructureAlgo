@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:14/11/24
- * Question Category: 2064. Minimized Maximum of Products Distributed to Any Store
+ * Question Title: 2064. Minimized Maximum of Products Distributed to Any Store
+ * Link: https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/
  * Description: https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/description/
  * You are given an integer n indicating there are n specialty retail stores. There are m product types of varying amounts, which are given as a 0-indexed integer array quantities, where quantities[i] represents the number of products of the ith product type.
  * <p>

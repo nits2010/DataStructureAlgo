@@ -10,7 +10,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/20/2024
- * Question Category: 213. House Robber II
+ * Question Title: 213. House Robber II
+ * Link: https://leetcode.com/problems/house-robber-ii/
  * Description: https://leetcode.com/problems/house-robber-ii/description/
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.
  * <p>
@@ -87,6 +88,7 @@ public class HouseRobberII_213 {
         Solution_TwoArraysDP solutionTwoArraysDP = new Solution_TwoArraysDP();
         Solution_TwoPassLinear solutionTwoPassLinear = new Solution_TwoPassLinear();
         Solution_OnePassLinear solutionOnePassLinear = new Solution_OnePassLinear();
+        Solution_OnePassLinearV2 solutionOnePassLinearV2 = new Solution_OnePassLinearV2();
 
         output = solutionTwoArraysDP.rob(nums);
         pass = output == expected;
@@ -99,6 +101,11 @@ public class HouseRobberII_213 {
         finalPass &= pass;
 
         output = solutionOnePassLinear.rob(nums);
+        pass = output == expected;
+        finalPass &= pass;
+        System.out.println("One Pass Linear: " + output + " Pass: " + (pass ? "Pass" : "Fail"));
+
+        output = solutionOnePassLinearV2.rob(nums);
         pass = output == expected;
         finalPass &= pass;
         System.out.println("One Pass Linear: " + output + " Pass: " + (pass ? "Pass" : "Fail"));
@@ -234,6 +241,43 @@ public class HouseRobberII_213 {
 
         }
 
+
+    }
+
+    /**
+     * Using {@link HouseRobberI_198.SolutionLinear#robV2(int[])}
+     * as subroutine to solve the problem and same as {@link Solution_TwoArraysDP}
+     */
+    static class Solution_OnePassLinearV2 {
+        public int rob(int[] nums) {
+            int n = nums.length;
+
+            if (n == 1)
+                return nums[0];
+
+            if (n == 2)
+                return Math.max(nums[0], nums[1]);
+
+            /// imagine array as 2 different array [0,n-1] excluding last element and [1,n] excluding first element 
+            int first_a = nums[0] , second_a = Math.max(nums[0], nums[1]);
+            int first_b = nums[1], second_b = Math.max(nums[1], nums[2]);
+
+            int a = 2, b = 3; // first and second array index
+            int max = 0 ;
+            while (a < n-1 && b < n) {
+                max = Math.max(nums[a] + first_a, second_a);
+                first_a = second_a;
+                second_a = max;
+                a++;
+
+                max = Math.max(nums[b] + first_b, second_b);
+                first_b = second_b;
+                second_b = max;
+                b++;
+            }
+
+            return Math.max(second_a, second_b);
+        }
 
     }
 

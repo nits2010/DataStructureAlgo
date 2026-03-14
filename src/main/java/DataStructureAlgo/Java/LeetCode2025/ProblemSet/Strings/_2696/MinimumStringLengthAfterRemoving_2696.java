@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/7/2024
- * Question Category: 2696. Minimum String Length After Removing
+ * Question Title: 2696. Minimum String Length After Removing
+ * Link: https://leetcode.com/problems/minimum-string-length-after-removing/
  * Description: https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/?envType=daily-question&envId=2024-10-07
  * You are given a string s consisting only of uppercase English letters.
  *

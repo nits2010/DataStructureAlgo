@@ -7,7 +7,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date:10/10/24
- * Question Category: 962. Maximum Width Ramp
+ * Question Title: 962. Maximum Width Ramp
+ * Link: https://leetcode.com/problems/maximum-width-ramp/
  * Description: https://leetcode.com/problems/maximum-width-ramp/description/?envType=daily-question&envId=2024-10-10
  * A ramp in an integer array nums is a pair (i, j) for which i < j and nums[i] <= nums[j]. The width of such a ramp is j - i.
  * <p>

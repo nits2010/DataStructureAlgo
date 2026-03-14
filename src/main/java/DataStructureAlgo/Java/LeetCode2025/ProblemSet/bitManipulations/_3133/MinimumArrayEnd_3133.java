@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/9/2024
- * Question Category: 3133. Minimum Array End
+ * Question Title: 3133. Minimum Array End
+ * Link: https://leetcode.com/problems/minimum-array-end/
  * Description: https://leetcode.com/problems/minimum-array-end/description/?envType=daily-question&envId=2024-11-09
  * You are given two integers n and x. You have to construct an array of positive integers nums of size n where for every 0 <= i < n - 1, nums[i + 1] is greater than nums[i], and the result of the bitwise AND operation between all elements of nums is x.
  * <p>

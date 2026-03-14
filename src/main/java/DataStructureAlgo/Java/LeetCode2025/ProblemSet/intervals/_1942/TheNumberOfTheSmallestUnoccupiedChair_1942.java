@@ -9,7 +9,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 10/13/2024
- * Question Category: 1942. The Number of the Smallest Unoccupied Chair
+ * Question Title: 1942. The Number of the Smallest Unoccupied Chair
+ * Link: https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/
  * Description: https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/description/
  * There is a party where n friends numbered from 0 to n - 1 are attending. There is an infinite number of chairs in this party that are numbered from 0 to infinity. When a friend arrives at the party, they sit on the unoccupied chair with the smallest number.
  * <p>

@@ -9,7 +9,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/16/2024
- * Question Category: 3254. Find the Power of K-Size Subarrays I
+ * Question Title: 3254. Find the Power of K-Size Subarrays I
+ * Link: https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/
  * Description: https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/description/?envType=daily-question&envId=2024-11-16
  * You are given an array of integers nums of length n and a positive integer k.
  * <p>

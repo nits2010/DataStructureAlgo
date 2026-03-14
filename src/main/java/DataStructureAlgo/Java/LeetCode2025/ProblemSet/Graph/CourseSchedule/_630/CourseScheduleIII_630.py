@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 8/23/2025
-Question Title:
-Link:
+Question Title: 630 Course ScheduleIII
+Link: https://zxi.mytechroad.com/blog/greedy/leetcode-630-course-schedule-iii/
 Description:
 File reference
 -----------

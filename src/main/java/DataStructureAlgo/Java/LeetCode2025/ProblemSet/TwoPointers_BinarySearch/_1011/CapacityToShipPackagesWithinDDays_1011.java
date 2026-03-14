@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:24/10/24
- * Question Category: 1011. Capacity To Ship Packages Within D Days
+ * Question Title: 1011. Capacity To Ship Packages Within D Days
+ * Link: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
  * Description: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days
  * A conveyor belt has packages that must be shipped from one port to another within days days.
  * <p>

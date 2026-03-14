@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 142. Linked List Cycle II [ medium ]
+ * Question Title: 142. Linked List Cycle II [ medium ]
+ * Link: https://leetcode.com/problems/linked-list-cycle-ii-medium/
  * Description: https://leetcode.com/problems/linked-list-cycle-ii
  * <p>
  * Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.

@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 02/08/24
- * Question Category: 2095. Delete the Middle Node of a Linked List [Medium]
+ * Question Title: 2095. Delete the Middle Node of a Linked List
+ * Link: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
  * Description: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list
  * <p>
  * You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.

@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/4/2024
- * Question Category: 3163. String Compression III
+ * Question Title: 3163. String Compression III
+ * Link: https://leetcode.com/problems/string-compression-iii/
  * Description: https://leetcode.com/problems/string-compression-iii/description/?envType=daily-question&envId=2024-11-04
  * Given a string word, compress it using the following algorithm:
  * <p>

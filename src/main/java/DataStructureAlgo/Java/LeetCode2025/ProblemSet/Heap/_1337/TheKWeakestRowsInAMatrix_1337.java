@@ -8,7 +8,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 8/31/2024
- * Question Category: 1337. The K Weakest Rows in a Matrix
+ * Question Title: 1337. The K Weakest Rows in a Matrix
+ * Link: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix
  * Description: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/description/
  * You are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
  * <p>

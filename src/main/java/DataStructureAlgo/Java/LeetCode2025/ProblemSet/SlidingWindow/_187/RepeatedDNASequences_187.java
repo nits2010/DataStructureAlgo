@@ -9,7 +9,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 5/14/2025
  * Question Title: 187. Repeated DNA Sequences
- * Link:
+ * Link: https://leetcode.com/problems/repeated-dna-sequences/
  * Description: The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.
  * <p>
  * For example, "ACGAATTCCG" is a DNA sequence.

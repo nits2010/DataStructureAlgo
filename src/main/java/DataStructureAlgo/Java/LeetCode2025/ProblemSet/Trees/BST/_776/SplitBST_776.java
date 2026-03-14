@@ -12,7 +12,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/20/2024
- * Question Category: 776. Split BST
+ * Question Title: 776. Split BST
+ * Link: https://leetcode.com/problems/split-bst/
  * Description: https://leetcode.com/problems/split-bst/
  * https://leetcode.ca/all/776.html
  *

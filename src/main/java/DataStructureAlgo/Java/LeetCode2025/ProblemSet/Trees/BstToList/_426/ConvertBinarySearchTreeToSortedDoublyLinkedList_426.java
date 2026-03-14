@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/24/2024
- * Question Category: 426. Convert Binary Search Tree to Sorted Doubly Linked List
+ * Question Title: 426. Convert Binary Search Tree to Sorted Doubly Linked List
+ * Link: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/
  * Description: https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
  * https://leetcode.ca/all/426.html
  * Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.
