@@ -3,9 +3,30 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Power Of2
+ * Link: https://leetcode.com/problems/power-of-two/
+ * Description:
  * Description: https://leetcode.com/problems/power-of-two/
  * <p>
  * //power of 2 has only one bit set and rest is zero
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class PowerOf2 {

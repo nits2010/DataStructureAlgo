@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-29
+ * Question Title: Brace Expansion II
+ * Link: https://leetcode.com/problems/brace-expansion-ii/
+ * Description:
  * Description:https://leetcode.com/problems/brace-expansion-ii/
  * https://leetcode.com/problems/brace-expansion-ii/discuss/322741/Explanation-and-thought-process-to-solve-Using-stacks-java
  * <p>
@@ -56,7 +59,26 @@ import java.util.*;
  * {@link BraceExpansionI} has
  * 1. There are no nested curly brackets. [ But this question has ]
  * 2. All characters inside a pair of consecutive opening and ending curly brackets are different.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BraceExpansionII {
 
 

@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Find All Anagrams String
+ * Link: https://leetcode.com/problems/find-all-anagrams-in-a-string/
+ * Description:
  * Description: 438. Find All Anagrams in a String
  * https://leetcode.com/problems/find-all-anagrams-in-a-string/
  * Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
@@ -41,7 +44,26 @@ import java.util.List;
  * The substring with start index = 2 is "ab", which is an anagram of "ab".
  * <p>
  * {@link DataStructureAlgo.Java.companyWise.facebook.AnagramPermutationSearch} extension of above
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FindAllAnagramsString {
 
 

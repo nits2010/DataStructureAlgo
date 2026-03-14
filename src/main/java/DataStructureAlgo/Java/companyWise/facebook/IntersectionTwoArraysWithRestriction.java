@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Intersection Two Arrays With Restriction
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Similar to this {@link IntersectionTwoArrays}, added restriction
  * Then they ask you to solve it under these constraints:
@@ -21,7 +24,26 @@ import java.util.*;
  * [Facebook]
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.intersection.arrays.IntersectionTwoArraysII}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IntersectionTwoArraysWithRestriction {
 
     public static void main(String[] args) {

@@ -4,6 +4,32 @@ package DataStructureAlgo.Java.nonleetcode.BitonicProblems;/* package whatever; 
 //non-dual:  {20, 4, 1, 2, 3, 4, 2, 10} : start with increasing only
 
 //MaximumLengthBitonicSubarray
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Maximum Length Bitonic Sub Array With Dual
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class MLBitonicSA{
 	private int i;
 	private int j;

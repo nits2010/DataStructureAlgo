@@ -5,6 +5,32 @@ import java.util.LinkedList;
 import java.util.List;
 
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Permutation
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 public class Permutation {
     public static void main(String[] args) throws Exception {
         System.out.println("\n Recursion " + PermutationRecursion.generatePermutation("ABC"));

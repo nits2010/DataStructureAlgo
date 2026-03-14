@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-12
+ * Question Title: Zig Zag Or Cycle Iterators
+ * Link: https://leetcode.com/problems/zigzag-iterator
+ * Description:
  * Description: https://leetcode.com/problems/zigzag-iterator
  * Zigzag Iterator
  * Given two 1d vectors, implement an iterator to return their elements alternately.
@@ -30,7 +33,26 @@ import java.util.*;
  * [8,9]
  * <p>
  * Output: [1,4,8,2,5,9,3,6,7].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ZigZagOrCycleIterators {
 
 

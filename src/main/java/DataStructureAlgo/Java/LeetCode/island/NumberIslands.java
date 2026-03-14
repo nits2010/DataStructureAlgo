@@ -8,6 +8,9 @@ import static DataStructureAlgo.Java.helpers.CommonMethods.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Number Islands
+ * Link: https://leetcode.com/problems/number-of-islands/
+ * Description:
  * Description: https://leetcode.com/problems/number-of-islands/
  * 200. Number of Islands
  * Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water
@@ -35,9 +38,27 @@ import static DataStructureAlgo.Java.helpers.CommonMethods.*;
  * <p>
  * Count with Size : {@link IslandsSizeCount}
  * https://leetcode.com/problems/number-of-islands/discuss/363021/2-ms46.96-to-1ms-100-or-Explanation-or-Optimisation-or-Bonus-Question
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberIslands {
 
 

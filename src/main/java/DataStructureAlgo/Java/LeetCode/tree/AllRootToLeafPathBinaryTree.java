@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: All Root To Leaf Path Binary Tree
+ * Link: https://leetcode.com/problems/binary-tree-paths/
+ * Description:
  * Description: https://leetcode.com/problems/binary-tree-paths/
  * Given a binary tree, return all root-to-leaf paths.
  * <p>
@@ -26,7 +29,26 @@ import java.util.List;
  * Output: ["1->2->5", "1->3"]
  * <p>
  * Explanation: All root-to-leaf paths are: 1->2->5, 1->3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AllRootToLeafPathBinaryTree {
 
     public static void main(String []args) {

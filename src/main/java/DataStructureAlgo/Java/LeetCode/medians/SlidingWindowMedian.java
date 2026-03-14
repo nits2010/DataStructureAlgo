@@ -6,6 +6,9 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-08
+ * Question Title: Sliding Window Median
+ * Link: https://leetcode.com/problems/sliding-window-median/
+ * Description:
  * Description: 480. Sliding Window Median https://leetcode.com/problems/sliding-window-median/
  * Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
  * <p>
@@ -33,7 +36,26 @@ import java.util.PriorityQueue;
  * You may assume k is always valid, ie: k is always smaller than input array's size for non-empty array.
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.SlidingWindowMaximum}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SlidingWindowMedian {
 
     public static void main(String []args) {

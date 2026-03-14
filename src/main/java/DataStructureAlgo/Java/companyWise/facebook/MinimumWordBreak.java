@@ -6,6 +6,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 04/04/19
+ * Question Title: Minimum Word Break
+ * Link: https://www.geeksforgeeks.org/minimum-word-break/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-word-break/
  * <p>
  * Given a string s, break s such that every substring of the partition can be found in the dictionary. Return the minimum break needed.
@@ -34,7 +37,26 @@ import java.util.Map;
  * 2.1 if it hit a leaf node in trie, and pattern still remaining that means we have to cut the pattern here at least, increment the count and
  * recursively apply this on rest of the pattern
  * 2.2 if it hit the leaf node in trie and pattern is exhaust then return the min cut so far.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumWordBreak {
 
 

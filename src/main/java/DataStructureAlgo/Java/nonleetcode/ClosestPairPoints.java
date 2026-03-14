@@ -8,8 +8,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 01/04/19
+ * Question Title: Closest Pair Points
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ClosestPairPoints {
 
     static class Point {

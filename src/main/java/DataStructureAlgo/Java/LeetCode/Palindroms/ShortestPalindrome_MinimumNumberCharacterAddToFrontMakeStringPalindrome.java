@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: Shortest Palindrome_Minimum Number Character Add To Front Make String Palindrome
+ * Link: https://leetcode.com/problems/shortest-palindrome/
+ * Description:
  * Description: https://leetcode.com/problems/shortest-palindrome/
  * https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/
  * Given a string s, you are allowed to convert it to a palindrome by adding characters in front of it.
@@ -18,7 +21,26 @@ import  DataStructureAlgo.Java.nonleetcode.KMP_KnuthMorrisPratt;
  * <p>
  * Input: "abcd"
  * Output: "dcbabcd"
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestPalindrome_MinimumNumberCharacterAddToFrontMakeStringPalindrome {
 
     public static void main(String[] args) {

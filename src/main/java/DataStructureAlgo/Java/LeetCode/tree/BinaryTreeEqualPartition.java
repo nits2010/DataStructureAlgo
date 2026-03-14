@@ -10,6 +10,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-11
+ * Question Title: Binary Tree Equal Partition
+ * Link: https://leetcode.com/articles/equal-tree-partition/
+ * Description:
  * Description: https://leetcode.com/articles/equal-tree-partition/
  * http://leetcode.liangjiateng.cn/leetcode/equal-tree-partition/description
  * 663. Equal Tree Partition
@@ -55,7 +58,26 @@ import java.util.Stack;
  * 1 <= n <= 10000
  * <p>
  * close to {@link BinaryTreeTwoHalvesSameSize}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeEqualPartition {
 
     public static void main(String[] args) {

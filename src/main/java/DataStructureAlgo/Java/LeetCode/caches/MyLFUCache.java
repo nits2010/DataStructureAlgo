@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-26
+ * Question Title: My LFU Cache
+ * Link: https://leetcode.com/problems/lfu-cache/
+ * Description:
  * Description: https://leetcode.com/problems/lfu-cache/
  * Design and implement a data structure for Least Frequently Used (LFU) cache.
  * It should support the following operations: get and put.
@@ -27,7 +30,26 @@ import java.util.*;
  * cache.get(1);       // returns -1 (not found)
  * cache.get(3);       // returns 3
  * cache.get(4);       // returns 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MyLFUCache {
 
 

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 13/10/19
+ * Question Title: Find Pivot Index
+ * Link: https://leetcode.com/problems/find-pivot-index/
+ * Description:
  * Description: 724. Find Pivot Index https://leetcode.com/problems/find-pivot-index/
  * 724. Find Pivot Index
  * Given an array of integers nums, write a method that returns the "pivot" index of this array.
@@ -36,7 +39,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * The length of nums will be in the range [0, 10000].
  * Each element nums[i] will be an integer in the range [-1000, 1000].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FindPivotIndex {
 
     public static void main(String[] args) {

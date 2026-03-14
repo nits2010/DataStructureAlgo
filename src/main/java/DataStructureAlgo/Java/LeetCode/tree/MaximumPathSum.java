@@ -6,8 +6,30 @@ import DataStructureAlgo.Java.Pair;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Maximum Path Sum
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumPathSum {
 
     public static int maximumPathSum(TreeNode root) {

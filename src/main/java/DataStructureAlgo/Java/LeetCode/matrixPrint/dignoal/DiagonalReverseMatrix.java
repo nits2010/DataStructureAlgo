@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Diagonal Reverse Matrix
+ * Link: https://www.geeksforgeeks.org/reverse-diagonal-elements-matrix/
+ * Description:
  * Description: https://www.geeksforgeeks.org/reverse-diagonal-elements-matrix/
  * Reverse Diagonal elements of matrix
  * Given a square matrix of order n*n, we have to reverse the elements of both diagonals.
@@ -37,7 +40,26 @@ import java.util.Arrays;
  * 5, 11, 10, 8,
  * 9, 7,  6,  12,
  * 4, 14, 15, 1}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiagonalReverseMatrix {
 
     public static void main(String[] args) {

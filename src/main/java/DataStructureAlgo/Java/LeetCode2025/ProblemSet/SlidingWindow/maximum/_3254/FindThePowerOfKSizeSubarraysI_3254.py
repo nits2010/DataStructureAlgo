@@ -1,7 +1,29 @@
 """
 Author: Nitin Gupta
 Date: 7/6/2025
+Question Title: Find The Power Of K Size Subarrays I
+Link: https://leetcode.com/problems/find-the-power-of-ksize-subarrays-i/
+Description:
 extension {@link SlidingWindowMaximum_239 }
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
 """
 
 from collections import deque

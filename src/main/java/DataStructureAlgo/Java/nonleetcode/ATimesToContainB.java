@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 11/04/19
+ * Question Title: A Times To Contain B
+ * Link: https://stackoverflow.com/questions/46832383/algorithm-to-find-how-many-times-a-string-a-needs-to-be-stated-such-that-it-cont
+ * Description:
  * Description:
  * https://stackoverflow.com/questions/46832383/algorithm-to-find-how-many-times-a-string-a-needs-to-be-stated-such-that-it-cont
  * <p>
@@ -37,7 +40,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * String A = abcd
  * String B = cdb
  * Should return -1, it doesn't matter how many times we state A, there is no way we can produce B.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ATimesToContainB {
 
     public static void main(String []args) {

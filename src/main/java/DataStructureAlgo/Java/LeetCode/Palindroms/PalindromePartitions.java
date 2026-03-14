@@ -4,6 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Palindrome Partitions
+ * Link: https://leetcode.com/problems/palindrome-partitioning/
+ * Description:
  * https://leetcode.com/problems/palindrome-partitioning/
  * Given a string s, partition s such that every substring of the partition is a palindrome.
  * <p>
@@ -17,10 +22,27 @@ import java.util.List;
  * ["aa","b"],
  * ["a","a","b"]
  * ]
- *
- *
  * {@link PalindromePartitioning}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 class PalindromePartitions {
 
     public static void main(String[] args) {

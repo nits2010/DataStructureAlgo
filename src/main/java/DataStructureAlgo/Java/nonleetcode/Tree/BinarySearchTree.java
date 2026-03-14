@@ -5,8 +5,30 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 26/12/18
+ * Question Title: Binary Search Tree
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinarySearchTree implements IBinarySearchTree {
 
     List<TreeNode<Integer>> nodes = new LinkedList<>();

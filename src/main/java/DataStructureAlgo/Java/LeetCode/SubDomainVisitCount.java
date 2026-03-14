@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Sub Domain Visit Count
+ * Link: https://leetcode.com/problems/subdomain-visit-count/
+ * Description:
  * Description: https://leetcode.com/problems/subdomain-visit-count/
  * A website domain like "discuss.leetcode.com" consists of various subdomains. At the top level,
  * we have "com", at the next level, we have "leetcode.com", and at the lowest level, "discuss.leetcode.com".
@@ -41,7 +44,26 @@ import java.util.*;
  * Each address will have either 1 or 2 "." characters.
  * The input count in any count-paired domain will not exceed 10000.
  * The answer output can be returned in any order.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubDomainVisitCount {
 
     public static void main(String[] args) {

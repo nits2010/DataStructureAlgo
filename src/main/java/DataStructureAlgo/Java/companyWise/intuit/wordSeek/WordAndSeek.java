@@ -7,9 +7,31 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-07
+ * Question Title: Word And Seek
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Same as {@link BoggleSearchWordSearchII}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WordAndSeek {
 
     public static void main(String[] args) {

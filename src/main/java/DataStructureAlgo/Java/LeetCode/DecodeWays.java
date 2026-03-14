@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 26/04/19
+ * Question Title: Decode Ways
+ * Link: https://leetcode.com/problems/decode-ways
+ * Description:
  * Description: https://leetcode.com/problems/decode-ways
  * 91. Decode Ways [Medium]
  * <p>
@@ -28,7 +31,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Explanation: It could be decode as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DecodeWays {
 
 

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumSubarrayKadens
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Max Product Sub Array
+ * Link: https://leetcode.com/problems/maximum-product-subarray/submissions/
+ * Description:
  * Description: https://leetcode.com/problems/maximum-product-subarray/submissions/
  * Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
  * <p>
@@ -18,7 +21,26 @@ import DataStructureAlgo.Java.LeetCode.subarrays.LargestMaximumSumSubarrayKadens
  * Input: [-2,0,-1]
  * Output: 0
  * Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaxProductSubArray {
 
     public static void main(String []args) {

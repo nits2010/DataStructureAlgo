@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-06
+ * Question Title: Maximum Absolute Difference Two Contiguous Sub Arrays
+ * Link: https://www.geeksforgeeks.org/maximum-absolute-difference-between-sum-of-two-contiguous-sub-arrays/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-absolute-difference-between-sum-of-two-contiguous-sub-arrays/
  * Maximum absolute difference between sum of two contiguous sub-arrays
  * Given an array of integers, find two non-overlapping contiguous sub-arrays such that the absolute difference between the sum of two sub-arrays is maximum.
@@ -18,7 +21,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Input: [2, -1, -2, 1, -4, 2, 8]
  * Output: 16
  * Two subarrays are [-1, -2, 1, -4] and [2, 8]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumAbsoluteDifferenceTwoContiguousSubArrays {
 
     public static void main(String []args) {

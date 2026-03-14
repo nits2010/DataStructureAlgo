@@ -3,6 +3,32 @@ package DataStructureAlgo.Java.nonleetcode.BitonicProblems;/* package whatever; 
 import DataStructureAlgo.Java.helpers.CommonMethods;
 
 //MaximumLengthBitonicSubarray
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Maximum Length Bitonic Sub Array
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class MaximumLengthBitonicSubArrayHelper {
     private int i;
     private int j;

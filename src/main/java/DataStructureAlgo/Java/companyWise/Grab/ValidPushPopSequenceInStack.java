@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Valid Push Pop Sequence In Stack
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * 1. Given push and pop sequence for a stack, need to tell that given pop sequence is valid or not.
  * Example:
@@ -13,7 +16,26 @@ import java.util.Stack;
  * pop:  {88, 2, 9, 44, 66, 32 } Not valid
  * Stack push and pop
  * Sequence is valid or not`
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidPushPopSequenceInStack {
 
     public static void main(String []args) {

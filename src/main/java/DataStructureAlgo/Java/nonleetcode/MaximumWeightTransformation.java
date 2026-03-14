@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-24
+ * Question Title: Maximum Weight Transformation
+ * Link: https://www.geeksforgeeks.org/maximum-weight-transformation-of-a-given-string/
+ * Description:
  * Description:https://www.geeksforgeeks.org/maximum-weight-transformation-of-a-given-string/
  * <p>
  * Given a string consisting of only A’s and B’s. We can transform the given string to another string by toggling any character. Thus many transformations of the given string are possible. The task is to find Weight of the maximum weight transformation.
@@ -33,7 +36,26 @@ import java.util.Arrays;
  * "BBA", "BAB" and "BAA"
  * Maximum weight is of original string 4+1 (One Pair + 1
  * character)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumWeightTransformation {
 
     public static void main(String []args) {

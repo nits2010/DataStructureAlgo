@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Three Sum3Sum Multiplicity
+ * Link: https://leetcode.com/problems/3sum-with-multiplicity/
+ * Description:
  * Description: https://leetcode.com/problems/3sum-with-multiplicity/
  * <p>
  * Given an integer array A, and an integer target, return the number of tuples i, j, k  such that i < j < k and A[i] + A[j] + A[k] == target.
@@ -43,7 +46,26 @@ import java.util.*;
  * 0 <= target <= 300
  * <p>
  * Extension of {@link ThreeSum3Sum}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ThreeSum3SumMultiplicity {
     public static void main(String[] args) {
 

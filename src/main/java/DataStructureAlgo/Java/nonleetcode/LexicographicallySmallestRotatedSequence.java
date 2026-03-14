@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-06
+ * Question Title: Lexicographically Smallest Rotated Sequence
+ * Link: https://www.geeksforgeeks.org/lexicographically-smallest-rotated-sequence-set-2/
+ * Description:
  * Description: https://www.geeksforgeeks.org/lexicographically-smallest-rotated-sequence-set-2/
  * <p>
  * Write code to find lexicographic minimum in a circular array, e.g. for the array BCABDADAB, the lexicographic minimum is ABBCABDAD
@@ -23,7 +26,26 @@ import java.util.List;
  * <p>
  * Input :  CAPABCQ
  * Output : ABCQCAP
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LexicographicallySmallestRotatedSequence {
 
     public static void main(String []args) {

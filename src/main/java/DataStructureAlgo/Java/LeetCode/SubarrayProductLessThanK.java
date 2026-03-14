@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Subarray Product Less Than K
+ * Link: https://leetcode.com/problems/subarray-product-less-than-k/
+ * Description:
  * Description: https://leetcode.com/problems/subarray-product-less-than-k/
  * Your are given an array of positive integers nums.
  * <p>
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.LeetCode;
  * 0 < nums.length <= 50000.
  * 0 < nums[i] < 1000.
  * 0 <= k < 10^6.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubarrayProductLessThanK {
 
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.word.boggle;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-04
+ * Question Title: Boggle Search Word Search I
+ * Link: https://leetcode.com/problems/word-search/
+ * Description:
  * Description:79. Word Search https://leetcode.com/problems/word-search/
  * <p>
  * Given a 2D board and a word, find if the word exists in the grid.
@@ -21,7 +24,26 @@ package DataStructureAlgo.Java.LeetCode.word.boggle;
  * Given word = "ABCCED", return true.
  * Given word = "SEE", return true.
  * Given word = "ABCB", return false.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BoggleSearchWordSearchI {
 
     public static void main(String []args) {

@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: Maximize Sum Selected Numbers From Array Make Empty
+ * Link: https://www.geeksforgeeks.org/maximize-sum-selected-numbers-performing-following-operation/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximize-sum-selected-numbers-performing-following-operation/
  * Maximize the sum of selected numbers from an array to make it empty
  * Given an array of N numbers, we need to maximize the sum of selected numbers. At each step, you need to select a number Ai, delete one occurrence of it and delete all occurrences of Ai-1 and Ai+1 (if they exist) in the array. Repeat these steps until the array gets empty. The problem is to maximize the sum of the selected numbers.
@@ -111,7 +114,26 @@ import java.util.*;
  * ------------
  * 1,1,1,1,1,1,2,2,2,2,2, 3
  * choose all 2 -> 10
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximizeSumSelectedNumbersFromArrayMakeEmpty {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-06
+ * Question Title: Dungeon Game
+ * Link: https://leetcode.com/problems/dungeon-game/
+ * Description:
  * Description:https://leetcode.com/problems/dungeon-game/
  * 174. Dungeon Game[Hard]
  * The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
@@ -32,9 +35,27 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Note:
  * The knight's health has no upper bound.
  * Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
- *
  * https://leetcode.com/problems/dungeon-game/discuss/376060/Java-or-100-or-Dp-or-Top-Down-or-Bottom-Up-or-Space-optimzied
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DungeonGame {
 
     public static void main(String[] args) {

@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Meeting Room I
+ * Link: https://leetcode.com/problems/meeting-rooms/
+ * Description:
  * Description: Leetcode: Meeting Rooms
  * https://leetcode.com/problems/meeting-rooms/
  * Meeting
@@ -21,8 +24,25 @@ import java.util.List;
  * http://buttercola.blogspot.com/2015/08/leetcode-meeting-rooms.html
  * <p>
  * [FACEBOOK], [GOOGLE] , [SNAPCHAT], [UBER]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class MeetingRoomI {
     public static void main(String []args) {

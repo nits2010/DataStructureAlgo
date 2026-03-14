@@ -8,6 +8,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Number Sub Arrays Sum Exactly K
+ * Link: https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
+ * Description:
  * Description: https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
  * <p>
  * Given an unsorted array of integers, find the number of sub Arrays having sum exactly equal to a given number k.
@@ -25,7 +28,26 @@ import java.util.Map;
  * Output : 2
  * Subarrays : arr[0...2], arr[2...4] have sum
  * exactly equal to 33.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NumberSubArraysSumExactlyK {
 
     public static void main(String[] args) {

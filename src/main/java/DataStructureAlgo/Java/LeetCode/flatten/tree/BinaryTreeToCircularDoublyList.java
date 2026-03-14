@@ -5,9 +5,31 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Binary Tree To Circular Doubly List
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Driver {@link DataStructureAlgo.Java.LeetCode.flatten.tree.BinaryTreeToList}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeToCircularDoublyList {
 
 

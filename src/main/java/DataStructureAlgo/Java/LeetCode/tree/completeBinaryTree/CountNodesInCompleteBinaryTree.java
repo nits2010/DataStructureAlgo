@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-13
+ * Question Title: Count Nodes In Complete Binary Tree
+ * Link: https://leetcode.com/problems/count-complete-tree-nodes/
+ * Description:
  * Description: https://leetcode.com/problems/count-complete-tree-nodes/
  * <p>
  * Given a complete binary tree, count the number of nodes.
@@ -24,7 +27,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * * 4  5 6
  * <p>
  * Output: 6
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CountNodesInCompleteBinaryTree {
 
 

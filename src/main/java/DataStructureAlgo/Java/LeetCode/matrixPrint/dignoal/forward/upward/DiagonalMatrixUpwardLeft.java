@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Diagonal Matrix Upward Left
+ * Link: https://www.geeksforgeeks.org/zigzag-or-diagonal-traversal-of-matrix/
+ * Description:
  * Description:
  * <p>
  * https://www.geeksforgeeks.org/zigzag-or-diagonal-traversal-of-matrix/
@@ -29,7 +32,26 @@ import java.util.List;
  * 18    15    12
  * 19    16
  * 20
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiagonalMatrixUpwardLeft {
 
     public static void main(String[] args) {

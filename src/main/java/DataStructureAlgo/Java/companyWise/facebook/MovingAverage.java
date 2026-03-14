@@ -6,11 +6,33 @@ import  DataStructureAlgo.Java.nonleetcode.SimpleMovingAverage;
 /**
  * Author: Nitin Gupta
  * Date: 03/04/19
+ * Question Title: Moving Average
+ * Link: https://www.careercup.com/question?id=6313643925831680
+ * Description:
  * Description: https://www.careercup.com/question?id=6313643925831680
  * Calculate a moving average that considers the last N values.
  * <p>
  * {@link SimpleMovingAverage}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MovingAverage {
 
     static class MovingAverageHolder {

@@ -7,13 +7,35 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Subarray Product Less Than Equal K
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Extension of {@link DataStructureAlgo.Java.LeetCode.SubarrayProductLessThanK}
  * <p>
  * Your are given an array of positive integers nums.
  * <p>
  * Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than equal to k.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubarrayProductLessThanEqualK {
     public static void main(String[] args) {
 

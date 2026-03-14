@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Compress Checker
+ * Link: https://www.geeksforgeeks.org/facebook-nyc-onsite-interview-experience/
+ * Description:
  * Description: https://www.geeksforgeeks.org/facebook-nyc-onsite-interview-experience/
  * there’s some function that can “compress” strings like FACEBOOK -> F6K or
  * FACEBOOK -> F2E2OK or INTERNATIONALIZATION -> I18N. The compression mechanism can delete arbitrarily
@@ -10,7 +13,26 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * a compressed string and a plaintext string and determines if the compressed string is valid for the plaintext string
  * <p>
  * [FACEBOOK]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CompressChecker {
 
     public static void main(String []args) {

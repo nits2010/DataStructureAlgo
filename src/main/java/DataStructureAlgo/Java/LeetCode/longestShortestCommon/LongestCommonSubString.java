@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Longest Common Sub String
+ * Link: https://www.geeksforgeeks.org/longest-common-substring-dp-29/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-common-substring-dp-29/
  * Given two strings ‘X’ and ‘Y’, find the length of the longest common substring.
  * Examples :
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
  * Input : X = “zxabcdezy”, y = “yzabcdezx”
  * Output : 6
  * The longest common substring is “abcdez” and is of length 6.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestCommonSubString {
 
     public static void main(String[] args) {

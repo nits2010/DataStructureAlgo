@@ -8,6 +8,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-26
+ * Question Title: Partition Array Three Parts With Equal Sum
+ * Link: https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
+ * Description:
  * Description:https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
  * Given an array A of integers, return true if and only if we can partition the array into three non-empty parts with equal sums.
  * <p>
@@ -30,7 +33,26 @@ import java.util.Map;
  * Input: [3,3,6,5,-2,2,5,1,-9,4]
  * Output: true
  * Explanation: 3 + 3 = 6 = 5 - 2 + 2 + 5 + 1 - 9 + 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PartitionArrayThreePartsWithEqualSum {
     public static void main(String[] args) {
         test(new int[]{0, 2, 1, -6, 6, -7, 9, 1, 2, 0, 1}, true);

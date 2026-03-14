@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Split BST
+ * Link: https://leetcode.com/problems/split-bst
+ * Description:
  * Description:https://leetcode.com/problems/split-bst
  * http://leetcode.liangjiateng.cn/leetcode/split-bst/description
  * <p>
@@ -26,7 +29,6 @@ import java.util.*;
  * Note that root, output[0], and output[1] are TreeNode objects, not arrays.
  * <p>
  * The given tree [4,2,6,1,3,5,7] is represented by the following diagram:
- *
  * <p>
  * *           4
  * *         /   \
@@ -52,6 +54,24 @@ import java.util.*;
  * [FACEBOOK]
  * https://aonecode.com/aplusplus/interviewctrl/getInterview/8713158291562499583
  * * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 class BSTNode {

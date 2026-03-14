@@ -6,56 +6,70 @@ import java.util.Arrays;
  * Date: 7/19/2024
  * Question Title: 14. Longest Common Prefix
  * Link: https://leetcode.com/problems/longest-common-prefix/
+ * Description:
  * Description: https://leetcode.com/problems/longest-common-prefix/description/
- *  * <p>
- *  * Write a function to find the longest common prefix string amongst an array of strings.
- *  *
- *  * If there is no common prefix, return an empty string "".
- *  *
- *  *
- *  *
- *  * Example 1:
- *  *
- *  * Input: strs = ["flower","flow","flight"]
- *  * Output: "fl"
- *  * Example 2:
- *  *
- *  * Input: strs = ["dog","racecar","car"]
- *  * Output: ""
- *  * Explanation: There is no common prefix amongst the input strings.
- *  *
- *  * Input: {“geeksforgeeks”, “geeks”, “geek”, “geezer”}
- *  * Output: “gee”
- *  *
- *  * Input: {“apple”, “ape”, “april”}
- *  * Output: “ap”
- *  *
- *  * Constraints:
- *  *
- *  * 1 <= strs.length <= 200
- *  * 0 <= strs[i].length <= 200
- *  * strs[i] consists of only lowercase English letters.
- *
+ * * <p>
+ * * Write a function to find the longest common prefix string amongst an array of strings.
+ * *
+ * * If there is no common prefix, return an empty string "".
+ * *
+ * *
+ * *
+ * * Example 1:
+ * *
+ * * Input: strs = ["flower","flow","flight"]
+ * * Output: "fl"
+ * * Example 2:
+ * *
+ * * Input: strs = ["dog","racecar","car"]
+ * * Output: ""
+ * * Explanation: There is no common prefix amongst the input strings.
+ * *
+ * * Input: {“geeksforgeeks”, “geeks”, “geek”, “geezer”}
+ * * Output: “gee”
+ * *
+ * * Input: {“apple”, “ape”, “april”}
+ * * Output: “ap”
+ * *
+ * * Constraints:
+ * *
+ * * 1 <= strs.length <= 200
+ * * 0 <= strs[i].length <= 200
+ * * strs[i] consists of only lowercase English letters.
  * <p>
- *
  * <p>
  * File reference
  * -----------
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- *
  * Tags
  * -----
  * @easy
  * @String
  * @Trie
- *
  * Company Tags
  * -----
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
- *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestCommonPrefix_14 {
 
     public static void main(String[] args) {

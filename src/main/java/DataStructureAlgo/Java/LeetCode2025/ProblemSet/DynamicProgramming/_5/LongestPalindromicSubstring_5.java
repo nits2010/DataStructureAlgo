@@ -1,5 +1,31 @@
 package DataStructureAlgo.Java.LeetCode2025.ProblemSet.DynamicProgramming._5;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Longest Palindromic Substring
+ * Link: https://leetcode.com/problems/longest-palindromic-substring/
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 public class LongestPalindromicSubstring_5 {
     
     

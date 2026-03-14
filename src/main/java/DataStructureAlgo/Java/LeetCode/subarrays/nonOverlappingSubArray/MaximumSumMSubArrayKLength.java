@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-14
+ * Question Title: Maximum Sum M Sub Array K Length
+ * Link: https://www.geeksforgeeks.org/max-sum-of-m-non-overlapping-subarrays-of-size-k/
+ * Description:
  * Description:
  * {@link MaximumSumTwoNonOverlappingSubarrays}
  * {@link MaximumSumThreeNonOverlappingSubarrays}
@@ -26,7 +29,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * arr[] = {3, 2, 100, 1};
  * Output:  106
  * Explanation: subsets are: (3, 2), (100, 1) 2 subsets of size 2
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumMSubArrayKLength {
 
     public static void main(String[] args) {

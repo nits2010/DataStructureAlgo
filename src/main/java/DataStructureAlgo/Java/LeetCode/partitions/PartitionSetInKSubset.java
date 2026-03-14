@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-25
+ * Question Title: Partition Set In K Subset
+ * Link: https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
+ * Description:
  * Description:https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
  * https://www.geeksforgeeks.org/count-number-of-ways-to-partition-a-set-into-k-subsets/
  * Given two numbers n and k where n represents number of elements in a set, find number of ways to partition the set into k subsets.
@@ -20,7 +23,26 @@ import java.util.Arrays;
  * Input: n = 3, k = 1
  * Output: 1
  * Explanation: There is only one way {{1, 2, 3}}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PartitionSetInKSubset {
 
     public static void main(String []args) {

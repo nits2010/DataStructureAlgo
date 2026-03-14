@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-12
+ * Question Title: Prison Cells After N Days
+ * Link: https://leetcode.com/problems/prison-cells-after-n-days/
+ * Description:
  * Description:https://leetcode.com/problems/prison-cells-after-n-days/
  * <p>
  * There are 8 prison cells in a row, and each cell is either occupied or vacant.
@@ -49,7 +52,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * 1 <= N <= 10^9
  * <p>
  * https://aonecode.com/amazon-online-assessment-oa2-cell-state-after-n-days
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PrisonCellsAfterNDays {
 
     public static void main(String []args) {

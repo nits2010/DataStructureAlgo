@@ -7,6 +7,9 @@ import  DataStructureAlgo.Java.nonleetcode.Tree.FlipTreeUpSideDown;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Binary Tree Upside Down
+ * Link: https://leetcode.com/problems/binary-tree-upside-down
+ * Description:
  * Description:
  * https://leetcode.com/problems/binary-tree-upside-down
  * http://leetcode.liangjiateng.cn/leetcode/binary-tree-upside-down/description
@@ -56,7 +59,26 @@ import  DataStructureAlgo.Java.nonleetcode.Tree.FlipTreeUpSideDown;
  * * https://www.geeksforgeeks.org/flip-binary-tree/
  * * https://medium.com/@jimdaosui/binary-tree-upside-down-77af203c79af
  * {@link FlipTreeUpSideDown}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryTreeUpsideDown {
 
     public static void main(String[] args) {

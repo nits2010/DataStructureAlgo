@@ -5,9 +5,15 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+//  Definition for a binary tree node.
+
+
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Trim Binary Search Tree
+ * Link: https://leetcode.com/problems/trim-a-binary-search-tree/
+ * Description:
  * Description:  https://leetcode.com/problems/trim-a-binary-search-tree/
  * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
  * 2.3 Trim the tree
@@ -47,11 +53,25 @@ import java.util.List;
  * *    2
  * *   /
  * *  1
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
-
-//  Definition for a binary tree node.
-
 
 public class TrimBinarySearchTree {
     public static void main(String []args) {

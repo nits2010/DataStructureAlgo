@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 20/12/18
+ * Question Title: Prime Sum
+ * Link: https://www.geeksforgeeks.org/prime-numbers-after-prime-p-with-sum-s/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/prime-numbers-after-prime-p-with-sum-s/
  * Prime numbers after prime P with sum S
@@ -35,7 +38,26 @@ import java.util.*;
  * 7 11 17 19
  * Explanation : All are prime numbers and
  * their sum is 54
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PrimeSum {
 
     public static void main(String[] args) {

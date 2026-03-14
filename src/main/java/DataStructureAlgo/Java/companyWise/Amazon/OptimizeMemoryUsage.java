@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Optimize Memory Usage
+ * Link: https://aonecode.com/amazon-online-assessment-oa2-optimize-memory-usage
+ * Description:
  * Description:https://aonecode.com/amazon-online-assessment-oa2-optimize-memory-usage
  * <p>
  * Give a computer with total K memory space, and an array of foreground tasks and background tasks the computer need to do.
@@ -96,7 +99,26 @@ import java.util.*;
  * Similarly, Shipping Route ID#3 from forwardShippingRouteList requires 7000 miles travelled, and
  * Shipping Route ID#2 from returnShippingRouteList requires 3000 miles travelled. These also add up to 10000 miles travelled. Therefore,
  * the pairs of forward and return shipping routes that optimally utilize the aircraft are [2,4] and [3,2].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class OptimizeMemoryUsage {
 
     public static void main(String[] args) {

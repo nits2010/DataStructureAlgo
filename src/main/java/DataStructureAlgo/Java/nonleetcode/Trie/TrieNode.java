@@ -4,11 +4,33 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Trie Node
+ * Link: TODO: Add Link
+ * Description:
  * Java.Trie Node
- * 
  * @author iitgu
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
  *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TrieNode {
 
 	private char value;

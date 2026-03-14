@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-21
+ * Question Title: Text Justification
+ * Link: https://leetcode.com/problems/text-justification/
+ * Description:
  * Description: https://leetcode.com/problems/text-justification/
  * Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
  * <p>
@@ -63,9 +66,27 @@ import java.util.List;
  * ]
  * <p>
  * For finding the optimal solution see {@link WordWrapProblem}
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class TextJustification {
 
     public static void main(String[] args) {

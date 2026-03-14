@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-04
+ * Question Title: Unique Paths II
+ * Link: https://leetcode.com/problems/unique-paths-ii/
+ * Description:
  * Description:https://leetcode.com/problems/unique-paths-ii/
  * <p>
  * 63. Unique Paths II
@@ -39,7 +42,26 @@ import java.util.Arrays;
  * 2. Down -> Down -> Right -> Right
  * <p>
  * Extension of {@link UniquePathsI}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class UniquePathsII {
 
     public static void main(String[] args) {

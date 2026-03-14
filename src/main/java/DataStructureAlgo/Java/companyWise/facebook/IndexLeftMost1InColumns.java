@@ -7,9 +7,31 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Index Left Most1In Columns
+ * Link: https://aonecode.com/facebook-phone-interview-questions-2019
+ * Description:
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Question 1.2 Given a 2d array sorted row and column of 0 and 1, find the indexes of left most 1 in columns
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IndexLeftMost1InColumns {
 
     public static void main(String []args) {

@@ -1,32 +1,45 @@
 """
-
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: longest Substring With At Most Two Distinct Characters_
+Link: https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
+Description:
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 https://neetcode.io/problems/longest-substring-with-at-most-two-distinct-characters?list=allNC
-
 You are given a string s, return the length of the longest substring that contains at most two distinct characters.
-
 Note: A substring is a contiguous non-empty sequence of characters within a string.
-
 Example 1:
-
 Input: s = "eceba"
-
 Output: 3
 Explanation: The substring is "ece" which its length is 3.
-
 Example 2:
-
 Input: s = "ccaabbb"
-
 Output: 5
 Explanation: The substring is "aabbb" which its length is 5.
-
 Constraints:
-
 0 <= s.length <= 1,00,000
 s consists of English letters.
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
 
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
 """
+
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
         char_freq = {}

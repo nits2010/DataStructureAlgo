@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Strobogrammatic Number II
+ * Link: https://leetcode.com/problems/strobogrammatic-number-ii
+ * Description:
  * Description: https://leetcode.com/problems/strobogrammatic-number-ii
  * 247.Strobogrammatic Number II
  * A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
@@ -29,7 +32,26 @@ import java.util.List;
  * {@link StrobogrammaticNumberI}
  * https://www.geeksforgeeks.org/strobogrammatic-number/
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.5.html
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StrobogrammaticNumberII {
 
     public static void main(String[] args) {

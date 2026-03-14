@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: Group Shifted String
+ * Link: https://leetcode.com/problems/group-shifted-strings/
+ * Description:
  * Description:
  * https://leetcode.com/problems/group-shifted-strings/
  * * 249.Group Shifted Strings
@@ -48,7 +51,26 @@ import java.util.*;
  * meoqs [12345] and bedfh [12345] But they are not shifted string
  * <p>
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GroupShiftedString {
 
     public static void main(String[] args) {

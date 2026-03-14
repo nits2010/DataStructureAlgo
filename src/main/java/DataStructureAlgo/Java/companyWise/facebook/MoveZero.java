@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Move Zero
+ * Link: https://leetcode.com/problems/move-zeroes/
+ * Description:
  * Description: https://leetcode.com/problems/move-zeroes/
  * <p>
  * https://www.geeksforgeeks.org/move-zeroes-end-array/
@@ -18,7 +21,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * You must do this in-place without making a copy of the array.
  * Minimize the total number of operations.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MoveZero {
     public static void main(String[] args) {
         System.out.println("\nTest1");

@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 22/09/19
+ * Question Title: Reverse Diagonal Order
+ * Link: TODO: Add Link
+ * Description:
  * Description: Print the array element in reverse Diagonal manner. Up to down
  * [1,2,3]
  * [4,5,6]
@@ -30,7 +33,26 @@ import java.util.List;
  * 4
  * 8
  * 7
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReverseDiagonalOrder {
     public static void main(String[] args) {
 

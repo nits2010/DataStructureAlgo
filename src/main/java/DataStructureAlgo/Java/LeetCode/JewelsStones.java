@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-16
+ * Question Title: Jewels Stones
+ * Link: https://leetcode.com/problems/jewels-and-stones/
+ * Description:
  * Description: https://leetcode.com/problems/jewels-and-stones/
  * <p>
  * You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
@@ -21,7 +24,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * S and J will consist of letters and have length at most 50.
  * The characters in J are distinct.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class JewelsStones {
 
     /**

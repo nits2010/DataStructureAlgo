@@ -5,8 +5,30 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-26
+ * Question Title: Longest Increasing Path
+ * Link: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+ * Description:
  * Description:https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestIncreasingPath {
 
     public static void main(String []args) {

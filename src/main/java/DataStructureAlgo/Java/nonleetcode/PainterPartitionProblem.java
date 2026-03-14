@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-06
+ * Question Title: Painter Partition Problem
+ * Link: https://www.geeksforgeeks.org/painters-partition-problem/
+ * Description:
  * Description: https://www.geeksforgeeks.org/painters-partition-problem/
  * The painter’s partition problem
  * We have to paint n boards of length {A1, A2…An}. There are k painters available and each takes 1 unit time to paint 1 unit of board. The problem is to find the minimum time to get
@@ -28,7 +31,26 @@ import java.util.Arrays;
  * second painter.
  * <p>
  * another variation: {@link DataStructureAlgo.Java.LeetCode.MinimizeMaxDistanceGasStation}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PainterPartitionProblem {
 
     public static void main(String[] args) {

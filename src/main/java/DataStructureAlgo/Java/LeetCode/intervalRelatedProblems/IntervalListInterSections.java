@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.intervalRelatedProblems;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Interval List Inter Sections
+ * Link: https://leetcode.com/problems/interval-list-intersections/
+ * Description:
  * Description: https://leetcode.com/problems/interval-list-intersections/
  * <p>
  * Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
@@ -13,7 +16,26 @@ package DataStructureAlgo.Java.LeetCode.intervalRelatedProblems;
  * Example 1:
  * Input: A = [[0,2],[5,10],[13,23],[24,25]], B = [[1,5],[8,12],[15,24],[25,26]]
  * Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IntervalListInterSections {
 
     public static void main(String []args) {

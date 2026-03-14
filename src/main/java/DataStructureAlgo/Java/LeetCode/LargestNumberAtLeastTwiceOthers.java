@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 13/10/19
+ * Question Title: Largest Number At Least Twice Others
+ * Link: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
+ * Description:
  * Description: https://leetcode.com/problems/largest-number-at-least-twice-of-others/
  * 747. Largest Number At Least Twice of Others
  * In a given integer array nums, there is always exactly one largest element.
@@ -32,7 +35,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * nums will have a length in the range [1, 50].
  * Every nums[i] will be an integer in the range [0, 99].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LargestNumberAtLeastTwiceOthers {
 
     public static void main(String[] args) {

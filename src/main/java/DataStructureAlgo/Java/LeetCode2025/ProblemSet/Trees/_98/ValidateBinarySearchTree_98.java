@@ -8,6 +8,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 8/24/2024
+ * Question Title: Validate Binary Search Tree
+ * Link: https://leetcode.com/problems/validate-binary-search-tree/
+ * Description:
  * Question Category: 98. Validate Binary Search Tree
  * Description:
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
@@ -75,7 +78,26 @@ import java.util.Arrays;
  * @WalmartLabs
  * @Yandex
  * @Editorial
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidateBinarySearchTree_98 {
 
     public static void main(String[] args) {

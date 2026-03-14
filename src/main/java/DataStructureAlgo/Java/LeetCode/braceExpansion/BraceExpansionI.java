@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-13
+ * Question Title: Brace Expansion I
+ * Link: https://leetcode.com/problems/brace-expansion
+ * Description:
  * Description:
  * https://leetcode.com/problems/brace-expansion
  * http://leetcode.liangjiateng.cn/leetcode/brace-expansion/description
@@ -33,7 +36,26 @@ import java.util.List;
  * 1 <= S.length <= 50
  * There are no nested curly brackets.
  * All characters inside a pair of consecutive opening and ending curly brackets are different.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BraceExpansionI {
 
     public static void main(String[] args) {

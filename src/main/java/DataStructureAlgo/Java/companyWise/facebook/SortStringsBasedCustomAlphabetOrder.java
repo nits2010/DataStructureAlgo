@@ -5,13 +5,34 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Sort Strings Based Custom Alphabet Order
+ * Link: https://aonecode.com/facebook-phone-interview-questions-2019
+ * Description:
  * Description: https://aonecode.com/facebook-phone-interview-questions-2019
  * Sort the given sentence order defined by alphabet.
  * <p>
  * Note: if alphabet not found, then sort in there lexicographical manner
- *
  * similar to this {@link WordOrdering}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortStringsBasedCustomAlphabetOrder {
 
     public static void main(String []args) {

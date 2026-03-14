@@ -5,6 +5,9 @@ import java.text.DecimalFormat;
 /**
  * Author: Nitin Gupta
  * Date: 19/09/19
+ * Question Title: Integer To English Words
+ * Link: https://leetcode.com/problems/integer-to-english-words/
+ * Description:
  * Description: https://leetcode.com/problems/integer-to-english-words/
  * 273. Integer to English Words [HARD]
  * Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
@@ -25,7 +28,26 @@ import java.text.DecimalFormat;
  * <p>
  * Input: 1234567891
  * Output: "One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One"
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IntegerToEnglishWords {
 
 

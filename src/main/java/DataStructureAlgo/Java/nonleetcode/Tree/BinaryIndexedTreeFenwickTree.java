@@ -5,9 +5,31 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-14
+ * Question Title: Binary Indexed Tree Fenwick Tree
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Binary Indexed Tree or Fenwick Tree
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryIndexedTreeFenwickTree {
 
 

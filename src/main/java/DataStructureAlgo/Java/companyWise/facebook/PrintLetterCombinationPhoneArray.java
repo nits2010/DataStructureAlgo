@@ -12,9 +12,31 @@ import java.util.stream.Collectors;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-26
+ * Question Title: Print Letter Combination Phone Array
+ * Link: https://aonecode.com/aplusplus/interviewctrl/getInterview/602
+ * Description:
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/602
  * Question: Given an integer array, output all combinations of cell phone text-ing letters with the given numbers.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PrintLetterCombinationPhoneArray {
     static String[] map = {"", "", "abc", "def", "ghi", "jkl",
             "mno", "pqrs", "tuv", "wxyz"};

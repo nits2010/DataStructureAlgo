@@ -10,6 +10,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-19
+ * Question Title: Combination Sum
+ * Link: https://aonecode.com/aplusplus/interviewctrl/getInterview/8817620605028273663
+ * Description:
  * Description: https://aonecode.com/aplusplus/interviewctrl/getInterview/8817620605028273663
  * Given many coins of 3 different face values, print the combination sums of the coins up to 1000. Must be printed in order.
  * <p>
@@ -26,7 +29,26 @@ import java.util.Set;
  * .
  * .
  * 1000
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CombinationSum {
 
     public static void main(String []args) {

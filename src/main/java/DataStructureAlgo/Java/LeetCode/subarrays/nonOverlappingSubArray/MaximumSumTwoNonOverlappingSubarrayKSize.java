@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-09
+ * Question Title: Maximum Sum Two Non Overlapping Subarray K Size
+ * Link: https://www.geeksforgeeks.org/maximum-sum-two-non-overlapping-subarrays-of-given-size/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-sum-two-non-overlapping-subarrays-of-given-size/
  * Given an array, we need to find two subarrays with a specific length K such that sum of these subarrays is maximum among all possible choices of subarrays.
  * Examples:
@@ -22,7 +25,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * K = 3
  * Output : 3 15 30
  * 40 4 50
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumTwoNonOverlappingSubarrayKSize {
 
     public static void main(String[] args) {

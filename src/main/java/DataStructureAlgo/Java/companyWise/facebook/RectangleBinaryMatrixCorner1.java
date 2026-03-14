@@ -8,6 +8,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-16
+ * Question Title: Rectangle Binary Matrix Corner1
+ * Link: https://www.geeksforgeeks.org/find-rectangle-binary-matrix-corners-1/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-rectangle-binary-matrix-corners-1/
  * Find if there is a rectangle in binary matrix with corners as 1
  * <p>
@@ -26,7 +29,26 @@ import java.util.Set;
  * 1 0 1
  * 0 1 0
  * 1 0 1
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RectangleBinaryMatrixCorner1 {
 
     public static void main(String []args) {

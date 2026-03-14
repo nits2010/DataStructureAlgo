@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-07
+ * Question Title: Re Cycled Pair
+ * Link: https://www.geeksforgeeks.org/number-recycled-pairs-array/
+ * Description:
  * Description: https://www.geeksforgeeks.org/number-recycled-pairs-array/
  * Given an array of integers arr[], find the number of recycled pairs in the array. A recycled pair of two numbers {a, b} has the following properties :
  * <p>
@@ -28,7 +31,26 @@ import java.util.*;
  * Note that if rotation id done further, rotating 1212 again output is 1212
  * which is given number and 2121 which has been already counted.
  * So discard both of these results.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReCycledPair {
 
     public static void main(String[] args) {

@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-02
+ * Question Title: Is Valid Integer
+ * Link: https://leetcode.com/problems/valid-number/submissions/
+ * Description:
  * Description: https://leetcode.com/problems/valid-number/submissions/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IsValidInteger {
 
 

@@ -3,8 +3,11 @@ package DataStructureAlgo.Java.LeetCode.Palindroms;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-22
+ * Question Title: Palindrome Partitioning
+ * Link: https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/
+ * Description:
  * Description:https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/
- * 132. Palindrome Partitioning II 
+ * 132. Palindrome Partitioning II
  * https://leetcode.com/problems/palindrome-partitioning-ii/description/
  * <p>
  * Given a string, a partitioning of the string is a palindrome partitioning if every substring of the partition is a palindrome.
@@ -14,7 +17,26 @@ package DataStructureAlgo.Java.LeetCode.Palindroms;
  * If a string of length n containing all different characters, then minimum n-1 cuts are needed.
  * <p>
  * {@link PalindromePartitions}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class PalindromePartitioning {
 
 

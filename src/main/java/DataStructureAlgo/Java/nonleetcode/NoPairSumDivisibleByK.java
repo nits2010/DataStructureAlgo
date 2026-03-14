@@ -7,10 +7,32 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: No Pair Sum Divisible By K
+ * Link: https://www.geeksforgeeks.org/subset-no-pair-sum-divisible-k/
+ * Description:
  * Description: https://www.geeksforgeeks.org/subset-no-pair-sum-divisible-k/
  * Description of problems are below
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NoPairSumDivisibleByK {
 
 

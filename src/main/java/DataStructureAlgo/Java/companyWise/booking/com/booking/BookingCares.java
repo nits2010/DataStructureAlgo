@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-31
+ * Question Title: Booking Cares
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * 1 1481122000 1481122020
  * 3 1481122000 1481122020
@@ -13,7 +16,26 @@ import java.util.*;
  * 3 1481122040 1481122060
  * 1 1481122050 1481122060
  * 3 1481122070 1481122090
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BookingCares {
 
 

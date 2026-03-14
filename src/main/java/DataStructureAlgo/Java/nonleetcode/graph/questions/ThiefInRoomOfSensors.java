@@ -6,11 +6,33 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 13/04/19
+ * Question Title: Thief In Room Of Sensors
+ * Link: https://www.careercup.com/question?id=6266160824188928
+ * Description:
  * Description: https://www.careercup.com/question?id=6266160824188928
  * Given a room with thief on left side of the room with finite number of sensors.
  * He has to reach on right side missing the sensors. Each sensor is placed at any random point in the room and has its coverage in the radius r.
  * Find out if the thief can reach to the right side without touching the range of any sensor.?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ThiefInRoomOfSensors {
 
     static class Subsets {

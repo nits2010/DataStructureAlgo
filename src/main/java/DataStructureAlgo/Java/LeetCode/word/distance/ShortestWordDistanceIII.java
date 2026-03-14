@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Shortest Word Distance III
+ * Link: https://leetcode.com/problems/shortest-word-distance-iii/
+ * Description:
  * Description: https://leetcode.com/problems/shortest-word-distance-iii/
  * 245.Shortest Word Distance III
  * Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
@@ -23,11 +26,28 @@ import java.util.*;
  * <p>
  * http://leetcode.liangjiateng.cn/leetcode/shortest-word-distance-iii/description
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.4.html
- *
- *
  * <p>
  * {@link ShortestWordDistanceI}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestWordDistanceIII {
 
 

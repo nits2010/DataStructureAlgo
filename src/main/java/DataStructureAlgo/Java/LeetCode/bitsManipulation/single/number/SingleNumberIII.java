@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-28
+ * Question Title: Single Number III
+ * Link: https://leetcode.com/problems/single-number-iii/
+ * Description:
  * Description:https://leetcode.com/problems/single-number-iii/
  * <p>
  * Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
@@ -19,7 +22,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?
  * <p>
  * {@link DataStructureAlgo.Java.companyWise.Grab.MissingElements}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SingleNumberIII {
 
     public static void main(String[] args) {

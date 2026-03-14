@@ -5,6 +5,32 @@ import  DataStructureAlgo.Java.helpers.templates.Interval;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Employee Free Time Merge K Interval List
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 public class EmployeeFreeTimeMergeKIntervalList {
 
     private static List<List<Interval>> buildInput1() {

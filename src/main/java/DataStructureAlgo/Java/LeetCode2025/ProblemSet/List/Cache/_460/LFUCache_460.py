@@ -1,8 +1,33 @@
 """
- * T/S :
- * get -> O(log(n))
- * put -> O(log(n))
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: LFU Cache
+Link: https://leetcode.com/problems/lfucache/
+Description:
+* T/S :
+* get -> O(log(n))
+* put -> O(log(n))
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
 """
+
 from sortedcontainers import SortedList
 
 """

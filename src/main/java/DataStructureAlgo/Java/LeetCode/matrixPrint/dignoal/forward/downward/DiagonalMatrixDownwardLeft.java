@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Diagonal Matrix Downward Left
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * [1,2,3,4]
  * [5,6,7,8]
@@ -17,7 +20,26 @@ import java.util.List;
  * <p>
  * expected:
  * [1, 2, 5, 3, 6, 9, 4, 7, 10, 13, 8, 11, 14, 12, 15, 16]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiagonalMatrixDownwardLeft {
 
     public static void main(String[] args) {

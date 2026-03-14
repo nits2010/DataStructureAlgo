@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Generate Valid Parenthesis
+ * Link: https://leetcode.com/problems/generate-parentheses/
+ * Description:
  * Description: https://leetcode.com/problems/generate-parentheses/
  * <p>
  * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -19,7 +22,26 @@ import java.util.*;
  * "()()()"
  * ]
  * {@link ValidParenthesesBalancedParenthesesExpression}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GenerateValidParenthesis {
 
     public static void main(String []args) {

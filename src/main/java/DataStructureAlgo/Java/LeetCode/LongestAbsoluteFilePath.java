@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Longest Absolute File Path
+ * Link: https://leetcode.com/problems/longest-absolute-file-path/
+ * Description:
  * Description: https://leetcode.com/problems/longest-absolute-file-path/
  * 388. Longest Absolute File Path [Medium]
  * <p>
@@ -43,7 +46,26 @@ import java.util.Stack;
  * Time complexity required: O(n) where n is the size of the input string.
  * <p>
  * Notice that a/aa/aaa/file1.txt is not the longest file path, if there is another path aaaaaaaaaaaaaaaaaaaaa/sth.png.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestAbsoluteFilePath {
 
     public static void main(String[] args) {

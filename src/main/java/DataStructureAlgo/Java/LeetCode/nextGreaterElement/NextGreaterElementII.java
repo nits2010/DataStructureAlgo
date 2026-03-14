@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 24/09/19
+ * Question Title: Next Greater Element II
+ * Link: https://leetcode.com/problems/next-greater-element-ii/
+ * Description:
  * Description: https://leetcode.com/problems/next-greater-element-ii/
  * 503. Next Greater Element II [Medium]
  * Given a circular array (the next element of the last element is the first element of the array),
@@ -28,7 +31,26 @@ import java.util.Stack;
  * Note: The length of given array won't exceed 10000.
  * <p>
  * Check solution {@link NextGreaterElementII1Scan}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NextGreaterElementII {
 
     public static void main(String[] args) {

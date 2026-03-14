@@ -6,6 +6,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Flatten Nested List Iterator
+ * Link: https://leetcode.com/problems/flatten-nested-list-iterator/
+ * Description:
  * Description: https://leetcode.com/problems/flatten-nested-list-iterator/
  * Facebook asked
  * <p>
@@ -25,8 +28,25 @@ import java.util.*;
  * Output: [1,4,6]
  * Explanation: By calling next repeatedly until hasNext returns false,
  * the order of elements returned by next should be: [1,4,6].
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class FlattenNestedListIterator {
 

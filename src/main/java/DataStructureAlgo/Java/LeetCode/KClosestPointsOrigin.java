@@ -9,6 +9,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 15/09/19
+ * Question Title: K Closest Points Origin
+ * Link: https://leetcode.com/problems/k-closest-points-to-origin/
+ * Description:
  * Description: https://leetcode.com/problems/k-closest-points-to-origin/
  * 973. K Closest Points to Origin[Medium]
  * <p>
@@ -43,7 +46,26 @@ import java.util.*;
  * -10000 < points[i][1] < 10000
  * <p>
  * Prefer solution {@link KClosestPointsOriginPriorityQueueOptimized} and {@link KClosestPointsOriginPartition}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KClosestPointsOrigin {
 
     public static void main(String[] args) {

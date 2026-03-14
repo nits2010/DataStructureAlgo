@@ -10,6 +10,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-29
+ * Question Title: Recover Binary Search Tree
+ * Link: https://leetcode.com/problems/recover-binary-search-tree/
+ * Description:
  * Description: 99. Recover Binary Search Tree
  * https://leetcode.com/problems/recover-binary-search-tree/
  * <p>
@@ -55,7 +58,26 @@ import java.util.List;
  * <p>
  * A solution using O(n) space is pretty straight forward.
  * Could you devise a constant space solution?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RecoverBinarySearchTree {
 
 

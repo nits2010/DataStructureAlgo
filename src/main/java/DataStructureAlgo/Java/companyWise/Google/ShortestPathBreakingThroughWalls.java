@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 21/09/19
+ * Question Title: Shortest Path Breaking Through Walls
+ * Link: https://leetcode.com/discuss/interview-question/353827/Google-or-Onsite-or-Shortest-Path-Breaking-Through-Walls/
+ * Description:
  * Description:https://leetcode.com/discuss/interview-question/353827/Google-or-Onsite-or-Shortest-Path-Breaking-Through-Walls/
  * Given a 2D grid of size r * c. 0 is walkable, and 1 is a wall. You can move up, down, left or right at a time.
  * Now you are allowed to break at most 1 wall, what is the minimum steps to walk from the upper left corner (0, 0) to the lower right corner (r-1, c-1)?
@@ -63,7 +66,26 @@ import java.util.*;
  * Similar  {@link DataStructureAlgo.Java.companyWise.thoughtspot.ShortestPathRoadFlightAtMostNFlight}
  * <p>
  * Explanation: https://medium.com/@jeantimex/3-dimensional-breadth-first-search-62a54596f74a
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestPathBreakingThroughWalls {
 
     public static void main(String[] args) {

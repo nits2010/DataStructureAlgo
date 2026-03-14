@@ -5,8 +5,30 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 26/04/19
+ * Question Title: Expression Evaluator
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ExpressionEvaluator {
 
     public static void main(String []args) {

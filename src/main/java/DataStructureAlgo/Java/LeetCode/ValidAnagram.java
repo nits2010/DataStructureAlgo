@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Valid Anagram
+ * Link: https://leetcode.com/problems/valid-anagram/
+ * Description:
  * Description: https://leetcode.com/problems/valid-anagram/
  * 242. Valid Anagram
  * Given two strings s and t , write a function to determine if t is an anagram of s.
@@ -20,7 +23,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * Follow up:
  * What if the inputs contain unicode characters? How would you adapt your solution to such case?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidAnagram {
 
     public static void main(String[] args) {

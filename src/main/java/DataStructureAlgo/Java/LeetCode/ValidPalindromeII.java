@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Valid Palindrome II
+ * Link: https://leetcode.com/problems/valid-palindrome-ii/
+ * Description:
  * Description: https://leetcode.com/problems/valid-palindrome-ii/
  * Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
  * <p>
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.LeetCode;
  * Note:
  * <p>
  * The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ValidPalindromeII {
     public static void main(String []args) {
         SolutionValidPalindromeII sol = new SolutionValidPalindromeII();

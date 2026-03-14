@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-24
+ * Question Title: Wiggle Sub Sequence Or Longest Zig Zag Sub Sequence
+ * Link: https://leetcode.com/problems/wiggle-subsequence/
+ * Description:
  * Description: https://leetcode.com/problems/wiggle-subsequence/
  * https://www.geeksforgeeks.org/longest-zig-zag-subsequence/
  * <p>
@@ -38,7 +41,26 @@ import java.util.Arrays;
  * Output: 2
  * Follow up:
  * Can you do it in O(n) time?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WiggleSubSequenceOrLongestZigZagSubSequence {
 
     public static void main(String[] args) {

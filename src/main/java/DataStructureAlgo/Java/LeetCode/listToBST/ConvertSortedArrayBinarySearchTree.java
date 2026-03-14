@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-01
+ * Question Title: Convert Sorted Array Binary Search Tree
+ * Link: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+ * Description:
  * Description: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
  * Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
  * <p>
@@ -27,7 +30,26 @@ import java.util.List;
  * *  -10  5
  * <p>
  * {@link ConvertSortedSinglyListBinarySearchTree}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ConvertSortedArrayBinarySearchTree {
 
 

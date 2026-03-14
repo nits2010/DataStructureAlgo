@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Odd Length Palindrome Sub Sequence Around Centre
+ * Link: https://www.geeksforgeeks.org/total-number-of-odd-length-palindrome-sub-sequence-around-each-centre/
+ * Description:
  * Description: https://www.geeksforgeeks.org/total-number-of-odd-length-palindrome-sub-sequence-around-each-centre/
  * Given a string str, the task is to find the number of odd length palindromic sub-sequences around of str with str[i] as centre i.e. every index will be considered as the centre one by one.
  * <p>
@@ -24,7 +27,26 @@ import java.util.List;
  * Input: str = “aaaa”
  * Output: 1 3 3 1
  * https://leetcode.com/discuss/interview-question/389314/Amazon-or-Total-number-of-odd-length-palindrome-sub-sequence-around-each-centre
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class OddLengthPalindromeSubSequenceAroundCentre {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-26
+ * Question Title: Maximum Sum Subsequence At Least K Distant
+ * Link: https://www.geeksforgeeks.org/maximum-sum-subsequence-least-k-distant-elements/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-sum-subsequence-least-k-distant-elements/
  * Given an array and a number k, find a subsequence such that
  * <p>
@@ -26,7 +29,26 @@ import  DataStructureAlgo.Java.nonleetcode.LongestIncreasingSubSequence;
  * Explanation: There are 10 elements and k = 2.
  * If you select 2, 5, and 9 you get a total
  * value of 230, which is the maximum possible.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumSubsequenceAtLeastKDistant {
     public static void main(String[] args) {
         System.out.println(MaximumSumSubsequenceAtLeastKDistantDP.maximumSumSubsequenceAtLeastKDistantDP(

@@ -9,6 +9,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-10
+ * Question Title: Maximum Width Binary Tree
+ * Link: https://leetcode.com/problems/maximum-width-of-binary-tree/
+ * Description:
  * Description: https://leetcode.com/problems/maximum-width-of-binary-tree/
  * 662. Maximum Width of Binary Tree
  * <p>
@@ -68,7 +71,26 @@ import java.util.*;
  * <p>
  * <p>
  * Note: Answer will in the range of 32-bit signed integer.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumWidthBinaryTree {
     public static void main(String[] args) {
         /**

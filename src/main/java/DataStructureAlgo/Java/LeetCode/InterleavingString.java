@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-02
+ * Question Title: Interleaving String
+ * Link: https://leetcode.com/problems/interleaving-string/
+ * Description:
  * Description: https://leetcode.com/problems/interleaving-string/
  * Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
  * <p>
@@ -14,7 +17,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
  * Output: false
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class InterleavingString {
 
     public static void main(String []args) {

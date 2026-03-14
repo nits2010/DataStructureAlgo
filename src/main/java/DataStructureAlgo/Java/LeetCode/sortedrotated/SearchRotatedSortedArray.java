@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
+ * Question Title: Search Rotated Sorted Array
+ * Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * Description:
  * Description:33. Search in Rotated Sorted Array https://leetcode.com/problems/search-in-rotated-sorted-array/
  * <p>
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -23,7 +26,26 @@ package DataStructureAlgo.Java.LeetCode.sortedrotated;
  * <p>
  * Input: nums = [4,5,6,7,0,1,2], target = 3
  * Output: -1
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SearchRotatedSortedArray {
 
     public static void main(String []args) {

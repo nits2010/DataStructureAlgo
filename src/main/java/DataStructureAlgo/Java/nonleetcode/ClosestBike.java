@@ -3,12 +3,34 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-10
+ * Question Title: Closest Bike
+ * Link: https://www.careercup.com/question?id=5664498449907712
+ * Description:
  * Description:https://www.careercup.com/question?id=5664498449907712
  * <p>
  * there is a 2d array and gbikes are located in that location. there is a person and he wants to know the nearest
  * location of the bike which is available for him(there can be more than 1 nearest bike).
  * person can only move left ,right , up or down. output should be the distance in int.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ClosestBike {
 
     // bikes are 1s in the parkingLot

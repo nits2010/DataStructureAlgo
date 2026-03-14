@@ -12,8 +12,8 @@ import java.util.TreeMap;
  * Date: 8/3/2024
  * Question Title: 460. LFU Cache
  * Link: https://leetcode.com/problems/lfu-cache/
+ * Description:
  * Description: https://leetcode.com/problems/lfu-cache/description/
- *
  * <p>
  * Design and implement a data structure for a Least Frequently Used (LFU) cache.
  * <p>
@@ -75,13 +75,11 @@ import java.util.TreeMap;
  * <p>
  * Tags
  * -----
- *
  * @hard
  * @HashTable
  * @LinkedList
  * @Design
  * @Doubly-LinkedList
- *
  * <p>
  * Company Tags
  * -----
@@ -90,7 +88,26 @@ import java.util.TreeMap;
  * @Google
  * @Snapchat
  * @LinkedIn
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LFUCache_460 {
 
     public static void main(String[] args) {

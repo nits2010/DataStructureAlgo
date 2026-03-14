@@ -5,6 +5,9 @@ import java.util.Scanner;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-07
+ * Question Title: Apple Orchard
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * I need some help to grow apples in my friends's orchard.
  * <p>
@@ -17,7 +20,26 @@ import java.util.Scanner;
  * For any given cell (M,N(, i get the cell only if N/M
  * <p>
  * Could you let me know a piece of land of AxB, how many cells do i get to grow apples ?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AppleOrchard {
 
     /*

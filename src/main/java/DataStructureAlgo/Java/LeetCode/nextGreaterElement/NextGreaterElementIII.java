@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-03
+ * Question Title: Next Greater Element III
+ * Link: https://leetcode.com/problems/next-greater-element-iii/
+ * Description:
  * Description: https://leetcode.com/problems/next-greater-element-iii/
  * 556. Next Greater Element III [Medium]
  * Given a positive 32-bit integer n, you need to find the smallest 32-bit integer which has exactly the
@@ -15,7 +18,26 @@ import java.util.Arrays;
  * <p>
  * Input: 21
  * Output: -1
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NextGreaterElementIII {
 
 

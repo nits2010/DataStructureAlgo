@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.operatorBasedQuestions;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-07
+ * Question Title: Game24
+ * Link: https://leetcode.com/problems/24-game/
+ * Description:
  * Description: https://leetcode.com/problems/24-game/
  * You have 4 cards each containing a number from 1 to 9. You need to judge whether they could operated through *, /, +, -, (, ) to get the value of 24.
  * <p>
@@ -20,7 +23,26 @@ package DataStructureAlgo.Java.LeetCode.operatorBasedQuestions;
  * The division operator / represents real division, not integer division. For example, 4 / (1 - 2/3) = 12.
  * Every operation done is between two numbers. In particular, we cannot use - as a unary operator. For example, with [1, 1, 1, 1] as input, the expression -1 - 1 - 1 - 1 is not allowed.
  * You cannot concatenate numbers together. For example, if the input is [1, 2, 1, 2], we cannot write this as 12 + 12.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Game24 {
 
 

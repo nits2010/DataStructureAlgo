@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 04/04/19
+ * Question Title: Maximum Value By Placing Plus Mul Operator
+ * Link: https://www.geeksforgeeks.org/calculate-maximum-value-using-sign-two-numbers-string/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/calculate-maximum-value-using-sign-two-numbers-string/
  * Given a string of numbers, the task is to find the maximum value from the string, you can add a ‘+’ or ‘*’ sign between any two numbers.
@@ -27,7 +30,26 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * b. Similarly we know if we put * between any number to 1 then max value can't be obtained as + gives max value
  * <p>
  * So, if you see a number as 0 / 1 use plus otherwise *
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumValueByPlacingPlusMulOperator {
 
     public static void main(String ars[]) {

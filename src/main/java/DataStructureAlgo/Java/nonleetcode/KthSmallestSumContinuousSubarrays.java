@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-18
+ * Question Title: Kth Smallest Sum Continuous Subarrays
+ * Link: https://www.geeksforgeeks.org/kth-smallest-sum-of-continuous-subarrays-of-positive-numbers/
+ * Description:
  * Description:https://www.geeksforgeeks.org/kth-smallest-sum-of-continuous-subarrays-of-positive-numbers/
  * <p>
  * Given an sorted array of positive numbers our tasks is to find the kth smallest sum of continuous subarray.
@@ -17,7 +20,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * Input : a[] = {1, 2, 3, 4, 5, 6}
  * k = 13
  * Output: 10
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KthSmallestSumContinuousSubarrays {
 
     public static void main(String []args) {

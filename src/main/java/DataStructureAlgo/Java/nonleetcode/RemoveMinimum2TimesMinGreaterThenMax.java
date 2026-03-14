@@ -8,6 +8,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Remove Minimum2Times Min Greater Then Max
+ * Link: https://www.geeksforgeeks.org/remove-minimum-elements-either-side-2min-max/
+ * Description:
  * Description: https://www.geeksforgeeks.org/remove-minimum-elements-either-side-2min-max/
  * Given an unsorted array, trim the array such that twice of minimum is greater than maximum in the trimmed array. Elements should be removed either end of the array.
  * <p>
@@ -37,7 +40,26 @@ import java.util.Arrays;
  * like 20, 4, 1 or 4, 1, 3 or 20, 3, 1 or 20, 4, 1
  * <p>
  * Best solution : {@link RemoveMinimum2TimesMinGreaterThenMaxIterate}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveMinimum2TimesMinGreaterThenMax {
 
     public static void main(String[] args) {

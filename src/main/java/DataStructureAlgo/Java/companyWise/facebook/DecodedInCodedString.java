@@ -5,11 +5,13 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 04/04/19
+ * Question Title: Decoded In Coded String
+ * Link: https://leetcode.com/problems/decode-string/
+ * Description:
  * Description:  https://leetcode.com/problems/decode-string/
  * 394. Decode String [Medium]
  * https://www.geeksforgeeks.org/decode-string-recursively-encoded-count-followed-substring/
  * An encoded string (s) is given, the task is to decode it. The pattern in which the strings are encoded is as follows.
- *
  * <count>[sub_str] ==> The substring 'sub_str' appears 'count' times.
  * Input : str[] = "1[b]"
  * Output : b
@@ -22,9 +24,27 @@ import java.util.Stack;
  * <p>
  * https://aonecode.com/facebook-phone-interview-questions-2019
  * My explanation: https://leetcode.com/problems/decode-string/discuss/341115/Full-thought-process-2-Algorithm-%3A-beat-100100-Explanation
- *
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DecodedInCodedString {
 
     public static void main(String[] args) {

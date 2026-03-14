@@ -5,7 +5,28 @@ import java.text.DecimalFormat;
 /**
  * Author: Nitin Gupta
  * Date: 15/03/19
+ * Question Title: Convert Number To Words
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class ConvertNumberToWords {

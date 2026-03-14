@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 14/09/19
+ * Question Title: Unique Paths III
+ * Link: https://leetcode.com/problems/unique-paths-iii/
+ * Description:
  * Description:https://leetcode.com/problems/unique-paths-iii/
  * 980. Unique Paths III
  * On a 2-dimensional grid, there are 4 types of squares:
@@ -38,7 +41,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * Similar to {@link UniquePaths}
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class UniquePathsIII {
     public static void main(String[] args) {
         test(new int[][]{{1, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 2, -1}}, 2);

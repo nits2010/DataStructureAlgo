@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Maximum Sum Non Overlapping Subarrays Length Atmost K
+ * Link: https://www.geeksforgeeks.org/maximum-sum-of-non-overlapping-subarrays-of-length-atmost-k/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-sum-of-non-overlapping-subarrays-of-length-atmost-k/
  * <p>
  * Given an integer array ‘arr’ of length N and an integer ‘k’,
@@ -20,7 +23,26 @@ import java.util.Arrays;
  * <p>
  * Input :arr[] = {1, 1, 1, 1, 1}, k = 1
  * Output : 3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumNonOverlappingSubarraysLengthAtmostK {
 
     public static void main(String[] args) {

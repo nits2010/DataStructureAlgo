@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Anti Spiral Matrix
+ * Link: https://www.geeksforgeeks.org/print-matrix-antispiral-form/
+ * Description:
  * Description: https://www.geeksforgeeks.org/print-matrix-antispiral-form/
  * Print matrix in antispiral form
  * Given a 2D array, the task is to print matrix in anti spiral form:
@@ -31,7 +34,26 @@ import java.util.List;
  * Output : 11 10 9 8 7 13 14 15 16 17 18 12 6 5 4 3 2 1
  * <p>
  * Same as {@link SpiralMatrixI}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AntiSpiralMatrix {
 
     public static void main(String[] args) {

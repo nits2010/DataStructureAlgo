@@ -6,13 +6,35 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-20
+ * Question Title: Closest Binary Search Tree Value
+ * Link: https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
+ * Description:
  * Description:https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
  * 270. Closest Binary Search Tree Value
  * Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
  * Note:
  * Given target value is a floating point.
  * You are guaranteed to have only one unique value in the BST that is closest to the target.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ClosestBinarySearchTreeValue {
 
     public static void main(String []args) {

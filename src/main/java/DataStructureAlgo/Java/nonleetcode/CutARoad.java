@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 11/12/18
+ * Question Title: Cut A Road
+ * Link: https://www.geeksforgeeks.org/cutting-a-rod-dp-13/
+ * Description:
  * Description: https://www.geeksforgeeks.org/cutting-a-rod-dp-13/
  * Given a rod of length n inches and an array of prices that contains prices of all pieces of size smaller than n. Determine the maximum value obtainable by cutting up the rod and selling the pieces. For example, if length of the rod is 8 and the values of different pieces are given as following, then the maximum obtainable value is 22 (by cutting in two pieces of lengths 2 and 6)
  * <p>
@@ -15,13 +18,31 @@ package DataStructureAlgo.Java.nonleetcode;
  * length   | 1   2   3   4   5   6   7   8
  * --------------------------------------------
  * price    | 3   5   8   9  10  17  17  20
- *
  * <p>
  * Revenue[i] = is the maximum revenue we can get by cutting a road of i size.
  * <p>
  * Revenue[i]   =     0    ;i=0 // If no cut made, then total revenue 0
  * *             =     Max{p[j] + Revenue[i-j-1]}     ;i>0   where 0<=j<i
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CutARoad {
 
 

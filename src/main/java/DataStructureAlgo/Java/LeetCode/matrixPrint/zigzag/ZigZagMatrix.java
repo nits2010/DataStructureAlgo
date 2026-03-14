@@ -5,8 +5,30 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Zig Zag Matrix
+ * Link: TODO: Add Link
+ * Description:
  * Description: Build & print a matrix formed in zig-zag fashioned[See image for more info]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ZigZagMatrix {
 
     public static int[][] build(int n) {

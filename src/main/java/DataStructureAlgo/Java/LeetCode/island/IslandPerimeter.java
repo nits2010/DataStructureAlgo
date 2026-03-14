@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-12
+ * Question Title: Island Perimeter
+ * Link: https://leetcode.com/problems/island-perimeter/
+ * Description:
  * Description: https://leetcode.com/problems/island-perimeter/
  * 463. Island Perimeter
  * You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
@@ -27,7 +30,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Output: 16
  * <p>
  * Explanation: The perimeter is the 16 yellow stripes in the image below:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IslandPerimeter {
 
     public static void main(String[] args) {

@@ -12,6 +12,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: Course Schedule1
+ * Link: https://leetcode.com/problems/course-schedule/
+ * Description:
  * Description: https://leetcode.com/problems/course-schedule/
  * There are a total of n courses you have to take, labeled from 0 to n-1.
  * <p>
@@ -38,7 +41,26 @@ import java.util.Queue;
  * You may assume that there are no duplicate edges in the input prerequisites.
  * <p>
  * {@link AlienLanguageOrder}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CourseSchedule1 {
 
 

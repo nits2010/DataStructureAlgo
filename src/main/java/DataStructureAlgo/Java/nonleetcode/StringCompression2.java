@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-30
+ * Question Title: String Compression2
+ * Link: http://javabypatel.blogspot.com/2016/07/string-compression-in-place-run-length-encoding-program.html
+ * Description:
  * Description:http://javabypatel.blogspot.com/2016/07/string-compression-in-place-run-length-encoding-program.html
  * Compress a given string "aacccddd" to "a2c3d3"
  * Constraint: Inplace compression, no extra space to be used.
@@ -10,9 +13,27 @@ package DataStructureAlgo.Java.nonleetcode;
  * Example: input:"acc" output: "a1c2" buffer overflow, because output size length is 4 and input size length is 3. Such inputs will not be given
  * aacccddd ->a2c3d3
  * acc -> a1c2
- *
  * {@link DataStructureAlgo.Java.LeetCode.StringCompressionRunLengthEncoding}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringCompression2 {
 
     private static final char SPACE = ' ';

@@ -5,22 +5,40 @@ import DataStructureAlgo.Java.Pair;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-18
+ * Question Title: Missing Elements
+ * Link: https://www.geeksforgeeks.org/find-two-missing-numbers-set-2-xor-based-solution/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-two-missing-numbers-set-2-xor-based-solution/
  * Given an array of n unique integers where each element in the array is in range [1, n].
  * The array has all distinct elements and size of array is (n-2).
  * Hence Two numbers from the range are missing from this array. Find the two missing numbers.
- *
  * Examples:
- *
  * Input  : arr[] = {1, 3, 5, 6}, n = 6
  * Output : 2 4
- *
  * Input : arr[] = {1, 2, 4}, n = 5
  * Output : 3 5
- *
  * Input : arr[] = {1, 2}, n = 4
  * Output : 3 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MissingElements {
     public static void main (String []args){
 

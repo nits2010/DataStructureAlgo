@@ -8,6 +8,9 @@ import java.util.Comparator;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-30
+ * Question Title: Maximum Distance In Arrays
+ * Link: https://leetcode.com/problems/maximum-distance-in-arrays/
+ * Description:
  * Description:https://leetcode.com/problems/maximum-distance-in-arrays/
  * http://leetcode.liangjiateng.cn/leetcode/maximum-distance-in-arrays/description
  * <p>
@@ -25,9 +28,27 @@ import java.util.Comparator;
  * Each given array will have at least 1 number. There will be at least two non-empty arrays.
  * The total number of the integers in all the m arrays will be in the range of [2, 10000].
  * The integers in the m arrays will be in the range of [-10000, 10000].
- *
  * Article: https://leetcode.com/articles/maximum-distance-in-array/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumDistanceInArrays {
 
     public static void main(String[] args) {

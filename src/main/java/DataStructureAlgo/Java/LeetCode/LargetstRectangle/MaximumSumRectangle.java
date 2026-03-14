@@ -7,13 +7,35 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-26
+ * Question Title: Maximum Sum Rectangle
+ * Link: https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/
  * Given a 2D array, find the maximum sum subarray in it. For example, in the following 2D array,
  * the maximum sum subarray is highlighted with blue rectangle and sum of this subarray is 29.
  * <p>
  * <p>
  * This problem is mainly an extension of the Largest Sum Contiguous Subarray for 1D array.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumRectangle {
 
     public static void main(String []args) {

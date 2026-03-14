@@ -10,26 +10,17 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Date: 7/31/2024
  * Question Title: 61. Rotate List
  * Link: https://leetcode.com/problems/rotate-list/
+ * Description:
  * Description: https://leetcode.com/problems/rotate-list
  * <p>
- *Given the head of a linked list, rotate the list to the right by k places.
- *
- *
- *
+ * Given the head of a linked list, rotate the list to the right by k places.
  * Example 1:
- *
- *
  * Input: head = [1,2,3,4,5], k = 2
  * Output: [4,5,1,2,3]
  * Example 2:
- *
- *
  * Input: head = [0,1,2], k = 4
  * Output: [2,0,1]
- *
- *
  * Constraints:
- *
  * The number of nodes in the list is in the range [0, 500].
  * -100 <= Node.val <= 100
  * 0 <= k <= 2 * 109
@@ -40,19 +31,36 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
  * Similar {@link RemoveNthNodeFromEndOfList_19}
  * extension {@link }
  * <p>
- *
  * Tags
  * -----
  * @medium
  * @LinkedList
  * @TwoPointers
- *
  * <p>
  * Company Tags
  * -----
  * @Microsoft
  * @Bloomberg
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RotateList_61 {
 
     public static void main(String[] args) {

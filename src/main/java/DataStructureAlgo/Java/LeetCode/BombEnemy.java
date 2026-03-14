@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-25
+ * Question Title: Bomb Enemy
+ * Link: https://leetcode.com/problems/bomb-enemy
+ * Description:
  * Description: https://leetcode.com/problems/bomb-enemy
  * http://leetcode.liangjiateng.cn/leetcode/bomb-enemy/description
  * <p>
@@ -28,7 +31,26 @@ import java.util.Arrays;
  * Placing a bomb at (1,1) kills 3 enemies.
  * <p>
  * similar idea {@link DataStructureAlgo.Java.LeetCode.LargetstRectangle.MaximumSizeSquareMatrix} to cache row and column
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BombEnemy {
 
 

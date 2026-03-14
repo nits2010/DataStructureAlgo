@@ -7,25 +7,43 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 02/04/19
+ * Question Title: All Interpretation Of Sequence
+ * Link: https://www.geeksforgeeks.org/find-all-possible-interpretations/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/find-all-possible-interpretations/
- *
  * Consider a coding system for alphabets to integers where ‘a’ is represented as 1, ‘b’ as 2, .. ‘z’ as 26.
  * Given an array of digits (1 to 9) as input, write a function that prints all valid interpretations of input array.
  * Examples
- *
  * Input: {1, 1}
  * Output: ("aa", 'k")
  * [2 interpretations: aa(1, 1), k(11)]
- *
  * Input: {1, 2, 1}
  * Output: ("aba", "au", "la")
  * [3 interpretations: aba(1,2,1), au(1,21), la(12,1)]
- *
  * Input: {9, 1, 8}
  * Output: {"iah", "ir"}
  * [2 interpretations: iah(9,1,8), ir(9,18)]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AllInterpretationOfSequence {
 
     private static final String[] alphabet = {"", "a", "b", "c", "d", "e",

@@ -5,6 +5,11 @@ import  DataStructureAlgo.Java.helpers.templates.Interval;
 import java.util.*;
 
 /**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Meeting Room II
+ * Link: https://leetcode.com/problems/meeting-rooms-ii/
+ * Description:
  * https://leetcode.com/problems/meeting-rooms-ii/
  * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei),
  * find the minimum number of conference rooms required.
@@ -27,6 +32,24 @@ import java.util.*;
  * output : 3
  * http://www.learn4master.com/algorithms/leetcode-meeting-rooms-ii-java
  * [FACEBOOK], [GOOGLE] , [SNAPCHAT], [UBER]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 public class MeetingRoomII {

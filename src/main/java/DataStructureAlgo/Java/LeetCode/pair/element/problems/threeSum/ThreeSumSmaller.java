@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Three Sum Smaller
+ * Link: https://leetcode.com/problems/3sum-smaller/
+ * Description:
  * Description: https://leetcode.com/problems/3sum-smaller/
  * http://leetcode.liangjiateng.cn/leetcode/3sum-smaller/description
  * https://www.geeksforgeeks.org/count-triplets-with-sum-smaller-that-a-given-value/
@@ -26,7 +29,26 @@ import java.util.Arrays;
  * {5, 1, 3, 4, 7}
  * sum = 12.
  * Output : 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ThreeSumSmaller {
     public static void main(String[] args) {
 

@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Sort Dates
+ * Link: https://www.geeksforgeeks.org/sort-an-array-of-string-of-dates-in-ascending-order/
+ * Description:
  * Description: https://www.geeksforgeeks.org/sort-an-array-of-string-of-dates-in-ascending-order/
  * Given an array of strings dates[], the task is to sort these dates in ascending order.
  * Note: Each date is of the form dd mmm yyyy where:
@@ -25,7 +28,26 @@ import java.util.*;
  * 04 Jan 2017
  * 02 Jan 2018
  * 03 Jan 2018
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortDates {
 
     //01 Mar 2015

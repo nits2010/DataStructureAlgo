@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-23
+ * Question Title: Minimise The Maximum Difference Between Heights Tower
+ * Link: https://www.interviewbit.com/problems/minimise-the-maximum-difference-between-the-heights/
+ * Description:
  * Description:
  * <p>
  * Question: https://www.interviewbit.com/problems/minimise-the-maximum-difference-between-the-heights/
@@ -20,7 +23,26 @@ import java.util.Arrays;
  * Note: It is mandatory to either increase or decrease the height of every tower.
  * <p>
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimiseTheMaximumDifferenceBetweenHeightsTower {
 
     public static void main(String[] args) {

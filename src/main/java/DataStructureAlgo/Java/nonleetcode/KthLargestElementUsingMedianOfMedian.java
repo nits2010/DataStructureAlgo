@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 02/04/19
+ * Question Title: Kth Largest Element Using Median Of Median
+ * Link: https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/
+ * Description:
  * Description: https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/
  * Time->O(n)
  * Input: arr[] = {7, 10, 4, 3, 20, 15}
@@ -14,7 +17,26 @@ import java.util.Arrays;
  * Input: arr[] = {7, 10, 4, 3, 20, 15}
  * k = 4
  * Output: 10
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KthLargestElementUsingMedianOfMedian {
 
     public static void test1() {

@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 20/09/19
+ * Question Title: Combination Sum Product
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
  * <p>
@@ -37,7 +40,26 @@ import java.util.Arrays;
  * Answer = 6
  * <p>
  * Extension of {@link DataStructureAlgo.Java.LeetCode.combination.sum.CombinationSumIV}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CombinationSumProduct {
 
     public static void main(String[] args) {

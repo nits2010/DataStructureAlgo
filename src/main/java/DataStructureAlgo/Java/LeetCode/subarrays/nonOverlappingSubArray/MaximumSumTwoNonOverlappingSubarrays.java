@@ -6,6 +6,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-09
+ * Question Title: Maximum Sum Two Non Overlapping Subarrays
+ * Link: https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
+ * Description:
  * Description: https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
  * Given an array A of non-negative integers, return the maximum sum of elements in two non-overlapping (contiguous) subarrays, which have lengths L and M.  (For clarification, the L-length subarray could occur before or after the M-length subarray.)
  * <p>
@@ -38,7 +41,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * M >= 1
  * L + M <= A.length <= 1000
  * 0 <= A[i] <= 1000
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumTwoNonOverlappingSubarrays {
 
     public static void main(String[] args) {

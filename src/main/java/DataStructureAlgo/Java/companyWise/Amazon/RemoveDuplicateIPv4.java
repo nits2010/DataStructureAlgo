@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Remove Duplicate I Pv4
+ * Link: https://aonecode.com/aplusplus/interviewctrl/getInterview/5416219315773457606
+ * Description:
  * Description:https://aonecode.com/aplusplus/interviewctrl/getInterview/5416219315773457606
  * <p>
  * You are given a huge Array and each element in the array contains a string representing an IPv4 address.
@@ -12,7 +15,26 @@ import java.util.*;
  * Assume removing any IPv4 from list take at most O(1) time.
  * <p>
  * Try to optimize memory and time
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveDuplicateIPv4 {
     public static void main(String[] args) {
 

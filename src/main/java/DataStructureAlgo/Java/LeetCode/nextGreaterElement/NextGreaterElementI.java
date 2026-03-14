@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 24/09/19
+ * Question Title: Next Greater Element I
+ * Link: https://leetcode.com/problems/next-greater-element-i/
+ * Description:
  * Description: https://leetcode.com/problems/next-greater-element-i/
  * 496. Next Greater Element I [Easy]
  * You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
@@ -31,7 +34,26 @@ import java.util.*;
  * All elements in nums1 and nums2 are unique.
  * The length of both nums1 and nums2 would not exceed 1000.
  * <p>
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NextGreaterElementI {
 
     public static void main(String[] args) {

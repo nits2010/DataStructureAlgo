@@ -9,6 +9,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Sorted Sequence Size K
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Given an array of n integers, find the k elements such that
  * a[0] < a[1] .... < a[k-1] and indices are in increasing order
@@ -31,7 +34,26 @@ import java.util.Arrays;
  * <p>
  * This is generalization of below question
  * {@link SortedSubSequenceSize3}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortedSequenceSizeK {
 
     public static void main(String[] args) {

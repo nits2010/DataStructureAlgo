@@ -6,8 +6,30 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-19
+ * Question Title: Smallest Missing Number
+ * Link: https://leetcode.com/problems/first-missing-positive/
+ * Description:
  * Description: https://leetcode.com/problems/first-missing-positive/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SmallestMissingNumber {
 
 

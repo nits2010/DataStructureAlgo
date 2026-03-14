@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-15
+ * Question Title: Optimal Game Strategy
+ * Link: https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/
+ * Description:
  * Description: https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/
  * <p>
  * Problem statement: Consider a row of n coins of values v1 . . . vn, where n is even. We play a game against an opponent by alternating turns. In each turn, a player selects either the first or last coin from the row, removes it from the row permanently, and receives the value of the coin. Determine the maximum possible amount of money we can definitely win if we move first.
@@ -12,7 +15,26 @@ import  DataStructureAlgo.Java.nonleetcode.InterviewBit.MatrixChainMultiplicatio
  * Let us understand the problem with few examples:
  * 1. 5, 3, 7, 10 : The user collects maximum value as 15(10 + 5)
  * 2. 8, 15, 3, 7 : The user collects maximum value as 22(7 + 15)
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class OptimalGameStrategy {
 
     public static void main(String[] args) {

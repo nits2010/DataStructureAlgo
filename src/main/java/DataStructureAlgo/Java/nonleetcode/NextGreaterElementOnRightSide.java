@@ -8,6 +8,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Next Greater Element On Right Side
+ * Link: https://www.geeksforgeeks.org/next-greater-element/
+ * Description:
  * Description: https://www.geeksforgeeks.org/next-greater-element/
  * Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
  * <p>
@@ -29,7 +32,26 @@ import java.util.Stack;
  * 6       -->     12
  * 12      -->     -1
  * similar {@link SmallerElementOnLeftSide}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NextGreaterElementOnRightSide {
 
 

@@ -3,10 +3,32 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-21
+ * Question Title: Coin Change Problem
+ * Link: https://leetcode.com/problems/coin-change/
+ * Description:
  * Description:
  * https://leetcode.com/problems/coin-change/
  * https://leetcode.com/problems/coin-change-2/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CoinChangeProblem {
 
 

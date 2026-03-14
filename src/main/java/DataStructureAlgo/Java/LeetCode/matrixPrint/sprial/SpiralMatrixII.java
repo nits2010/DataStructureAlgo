@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 22/09/19
+ * Question Title: Spiral Matrix II
+ * Link: https://leetcode.com/problems/spiral-matrix-ii/
+ * Description:
  * Description: https://leetcode.com/problems/spiral-matrix-ii/
  * 59. Spiral Matrix II
  * Given a positive integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
@@ -20,7 +23,26 @@ import java.util.Arrays;
  * [ 8, 9, 4 ],
  * [ 7, 6, 5 ]
  * ]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SpiralMatrixII {
 
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.intuit;
 /**
  * Author: Nitin Gupta
  * Date: 15/09/19
+ * Question Title: Consecutive Sum
+ * Link: https://www.geeksforgeeks.org/count-ways-express-number-sum-consecutive-numbers/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/count-ways-express-number-sum-consecutive-numbers/
  * Given a number N, find the number of ways to represent this number as a sum of 2 or more consecutive natural numbers.
@@ -24,7 +27,26 @@ package DataStructureAlgo.Java.companyWise.intuit;
  * https://math.stackexchange.com/questions/139842/in-how-many-ways-can-a-number-be-expressed-as-a-sum-of-consecutive-numbers
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.ConsecutiveSum}; just reduce 1 from final output
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ConsecutiveSum {
 
 }

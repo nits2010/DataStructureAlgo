@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-04
+ * Question Title: Unique Paths I
+ * Link: https://leetcode.com/problems/unique-paths/
+ * Description:
  * Description: https://leetcode.com/problems/unique-paths/
  * 62. Unique Paths [Medium]
  * <p>
@@ -38,7 +41,26 @@ import java.util.Arrays;
  * https://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/
  * https://www.geeksforgeeks.org/find-paths-given-source-destination/
  * https://www.geeksforgeeks.org/number-of-paths-from-source-to-destination-in-a-directed-acyclic-graph/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class UniquePathsI {
     public static void main(String[] args) {
         test(2, 2, 2);

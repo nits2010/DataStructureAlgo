@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-08
+ * Question Title: Dijkstra Shortest Path
+ * Link: https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
+ * Description:
  * Description: https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
  * <p>
  * 1) Create a Min Heap of size V where V is the number of vertices in the given graph.
@@ -17,7 +20,7 @@ import java.util.*;
  * 3) While Min Heap is not empty, do following
  * …..a) Extract the vertex with minimum distance value node from Min Heap. Let the extracted vertex be u.
  * …..b) For every adjacent vertex v of u, check if v is in Min Heap. If v is in Min Heap and distance value is more
- *  than the weight of u-v plus distance value of u, then update the distance value of v.
+ * than the weight of u-v plus distance value of u, then update the distance value of v.
  * <p>
  * Time Complexity: O(E*log(V))
  * The time complexity of the above code/algorithm looks O(V^2) as there are two nested while loops.
@@ -25,61 +28,54 @@ import java.util.*;
  * The inner loop has decreaseKey() operation which takes O(LogV) time. So overall time complexity is O(E+V)*O(LogV) which is O((E+V)*LogV) = O(ELogV)
  * Space Complexity: O(V)
  * <p>
- * 
- * 
  * Excellent question. This is senior-level nuance.
-
----
-
-## 1️⃣ When to Use `visited`
-
-Use `visited` when:
-
-* You only care about the **first time a node is finalized**
-* After popping from heap, cost is guaranteed minimal
-* You don’t need to relax nodes multiple times
-
-Typical:
-
-* Classic Dijkstra with no need to update better paths later
-
-`visited` = finalization marker
-
----
-
-## 2️⃣ When to Use `dist` (Distance Map)
-
-Use `dist` when:
-
-* A node might be reached multiple times with **better cost later**
-* You must compare `newCost < dist[node]`
-* You want standard Dijkstra relaxation
-
-Typical:
-
-* Sum-based shortest path
-* Graphs with many alternative paths
-
-`dist` = best-known cost tracker
-
----
-
-### Key Distinction
-
-If correctness depends on comparing old vs new costs → use `dist`.
-
-If first pop guarantees optimal → `visited` alone is enough.
-
----
-
-Now sharp test:
-
-In THIS problem, could a cell ever be reached later with a strictly smaller cost than the first time it is popped?
-
-Yes or no?
-
- * 
+ * ---
+ * ## 1️⃣ When to Use `visited`
+ * Use `visited` when:
+ * You only care about the **first time a node is finalized**
+ * After popping from heap, cost is guaranteed minimal
+ * You don’t need to relax nodes multiple times
+ * Typical:
+ * Classic Dijkstra with no need to update better paths later
+ * `visited` = finalization marker
+ * ---
+ * ## 2️⃣ When to Use `dist` (Distance Map)
+ * Use `dist` when:
+ * A node might be reached multiple times with **better cost later**
+ * You must compare `newCost < dist[node]`
+ * You want standard Dijkstra relaxation
+ * Typical:
+ * Sum-based shortest path
+ * Graphs with many alternative paths
+ * `dist` = best-known cost tracker
+ * ---
+ * ### Key Distinction
+ * If correctness depends on comparing old vs new costs → use `dist`.
+ * If first pop guarantees optimal → `visited` alone is enough.
+ * ---
+ * Now sharp test:
+ * In THIS problem, could a cell ever be reached later with a strictly smaller cost than the first time it is popped?
+ * Yes or no?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DijkstraShortestPath implements IShortestPath {
 
 

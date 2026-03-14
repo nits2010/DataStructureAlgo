@@ -6,6 +6,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
+ * Question Title: Set Matrix Zeroes
+ * Link: https://leetcode.com/problems/set-matrix-zeroes/
+ * Description:
  * Description: https://leetcode.com/problems/set-matrix-zeroes/
  * Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.
  * <p>
@@ -42,9 +45,27 @@ import java.util.Queue;
  * A straight forward solution using O(mn) space is probably a bad idea.
  * A simple improvement uses O(m + n) space, but still not the best solution.
  * Could you devise a constant space solution?
- *
  * {@link GameOfLife}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SetMatrixZeroes {
 
     public static void main(String []args) {

@@ -8,11 +8,12 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 16/04/19
+ * Question Title: String Rotation Match
+ * Link: https://www.careercup.com/question?id=5747832811159552
+ * Description:
  * Description: https://www.careercup.com/question?id=5747832811159552
- *
  * You are given an array of strings. For example, ["AB", "BC", "FOO", "ZA", "BAZ"]
  * - Output strings where you can get from one to the other using any ROT transformation.
- *
  * ROT_1(AB) = BC
  * ROT_1(BC) = CD
  * ROT_25(AB) = ZA
@@ -25,9 +26,27 @@ import java.util.Map;
  * AB,BC because you can go from one to the other using ROT_1
  * AB,ZA because you can go from one to the other using ROT_25
  * Do not return FOO, BAZ you can’t get from one to the other.
- *
  * [Google]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringRotationMatch {
 
     static class Pair {

@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.LargetstRectangle;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-26
+ * Question Title: Maximum Sum Sub Square Of Size K
+ * Link: https://www.geeksforgeeks.org/print-maximum-sum-square-sub-matrix-of-given-size/
+ * Description:
  * Description:https://www.geeksforgeeks.org/print-maximum-sum-square-sub-matrix-of-given-size/
  * <p>
  * Given an N x N matrix, find a k x k submatrix where k <= N and k >= 1, such that sum of all the elements in
@@ -10,7 +13,26 @@ package DataStructureAlgo.Java.LeetCode.LargetstRectangle;
  * <p>
  * For example consider below matrix, if k = 3, then output should print the sub-matrix enclosed in blue.
  * rectangle
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumSubSquareOfSizeK {
     public static void main(String []args) {
 

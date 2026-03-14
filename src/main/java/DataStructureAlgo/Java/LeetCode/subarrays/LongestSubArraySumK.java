@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Longest Sub Array Sum K
+ * Link: https://www.geeksforgeeks.org/longest-sub-array-sum-k/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-sub-array-sum-k/
  * <p>
  * Given an array arr[] of size n containing integers. The problem is to find the length of the longest subarray having a sum equal to the given value k.
@@ -21,7 +24,26 @@ import java.util.*;
  * Input : arr[] = {-5, 8, -14, 2, 4, 12},
  * k = -5
  * Output : 5
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestSubArraySumK {
 
 

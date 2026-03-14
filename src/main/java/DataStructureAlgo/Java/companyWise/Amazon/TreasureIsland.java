@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Treasure Island
+ * Link: https://leetcode.com/discuss/interview-question/347457/Amazon-or-OA-2019-or-Treasure-Island
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/347457/Amazon-or-OA-2019-or-Treasure-Island
  * You have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs.
  * Other areas are safe to sail in. There are other explorers trying to find the treasure. So you must figure out a shortest
@@ -27,13 +30,29 @@ import java.util.*;
  * ['X', 'D', 'D', 'O']]
  * <p>
  * Output: 5 & (0, 0), (0, 1), (1, 1), (2, 1), (2, 0), (3, 0)
- *
  * <p>
  * Similar {@link DataStructureAlgo.Java.LeetCode.island.NumberIslands}
- * Similar {@link RemoveObstacleRobotMinimumDistance} 
- In current question we need to find the path as well.
+ * Similar {@link RemoveObstacleRobotMinimumDistance}
+ * In current question we need to find the path as well.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
-
 
 public class TreasureIsland {
 

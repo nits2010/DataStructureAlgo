@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Combination Sum IV
+ * Link: https://leetcode.com/problems/combination-sum-iv/
+ * Description:
  * Description: https://leetcode.com/problems/combination-sum-iv/
  * <p>
  * 377. Combination Sum IV
@@ -42,7 +45,26 @@ import java.util.Arrays;
  * Explanation: https://leetcode.com/problems/combination-sum-iv/discuss/372950/TLE-to-100-beat-or-Optimisation-or-step-by-step-or-7-solutions
  * <p>
  * Variation {@link DataStructureAlgo.Java.companyWise.thoughtspot.CombinationSumProduct}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class CombinationSumIV {
 
 

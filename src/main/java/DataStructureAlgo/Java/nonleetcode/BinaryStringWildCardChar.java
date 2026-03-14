@@ -7,6 +7,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-09
+ * Question Title: Binary String Wild Card Char
+ * Link: https://www.geeksforgeeks.org/generate-all-binary-strings-from-given-pattern/
+ * Description:
  * Description:https://www.geeksforgeeks.org/generate-all-binary-strings-from-given-pattern/
  * <p>
  * Given a string containing of ‘0’, ‘1’ and ‘?’ wildcard characters, generate all binary strings
@@ -23,7 +26,26 @@ import java.util.Queue;
  * 11001101
  * 11100101
  * 11101101
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryStringWildCardChar {
 
     public static void main(String []args) {

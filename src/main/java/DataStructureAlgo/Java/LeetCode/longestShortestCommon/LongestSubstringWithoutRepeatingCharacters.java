@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-31
+ * Question Title: Longest Substring Without Repeating Characters
+ * Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ * Description:
  * Description:
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  * 3. Longest Substring Without Repeating Characters [ Medium ]
@@ -27,7 +30,26 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {

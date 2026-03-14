@@ -3,9 +3,31 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-09
+ * Question Title: Hamming Distance
+ * Link: https://leetcode.com/problems/hamming-distance/
+ * Description:
  * https://leetcode.com/problems/hamming-distance/
  * https://leetcode.com/problems/total-hamming-distance/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class HammingDistance {
 }
 

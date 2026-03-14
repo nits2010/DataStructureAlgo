@@ -6,6 +6,9 @@ import java.util.LinkedList;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-29
+ * Question Title: Sliding Window Maximum
+ * Link: https://leetcode.com/problems/sliding-window-maximum/
+ * Description:
  * Description:https://leetcode.com/problems/sliding-window-maximum/
  * <p>
  * Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
@@ -29,7 +32,26 @@ import java.util.LinkedList;
  * <p>
  * Follow up:
  * Could you solve it in linear time?
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SlidingWindowMaximum {
 
     public static void main(String[] args) {

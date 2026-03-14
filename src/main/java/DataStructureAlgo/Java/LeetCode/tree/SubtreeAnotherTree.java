@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
 /**
  * Author: Nitin Gupta
  * Date: 22/09/19
+ * Question Title: Subtree Another Tree
+ * Link: https://leetcode.com/problems/subtree-of-another-tree/
+ * Description:
  * Description: https://leetcode.com/problems/subtree-of-another-tree/
  * 572. Subtree of Another Tree [Easy]
  * Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node's descendants. The tree s could also be considered as a subtree of itself.
@@ -38,7 +41,26 @@ import  DataStructureAlgo.Java.helpers.templates.TreeNode;
  * https://www.geeksforgeeks.org/check-binary-tree-subtree-another-binary-tree-set-2/
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubtreeAnotherTree {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-25
+ * Question Title: Maximum Subarray Sum Flipping Signs At Most K Elements
+ * Link: https://www.geeksforgeeks.org/maximum-subarray-sum-by-flipping-signs-of-at-most-k-array-elements/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-subarray-sum-by-flipping-signs-of-at-most-k-array-elements/
  * Given an array arr[] of N integers and an integer K. The task is to find the maximum sub-array sum by flipping signs of at most K array elements.
  * <p>
@@ -21,7 +24,26 @@ import java.util.Arrays;
  * Input: {1, 2, 100, 10}, k = 1
  * Output: 113
  * We do not need to flip any elements
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSubarraySumFlippingSignsAtMostKElements {
 
     public static void main(String[] args) {

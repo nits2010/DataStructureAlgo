@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-31
+ * Question Title: Divisor Game
+ * Link: https://leetcode.com/problems/divisor-game/
+ * Description:
  * Description:https://leetcode.com/problems/divisor-game/
  * <p>
  * Alice and Bob take turns playing a game, with Alice starting first.
@@ -32,7 +35,26 @@ package DataStructureAlgo.Java.LeetCode;
  * Note:
  * <p>
  * 1 <= N <= 1000
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DivisorGame {
 
 

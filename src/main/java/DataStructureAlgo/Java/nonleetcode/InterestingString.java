@@ -8,6 +8,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-09
+ * Question Title: Interesting String
+ * Link: https://leetcode.com/discuss/interview-question/350312/google-onsite-interesting-string
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/350312/google-onsite-interesting-string
  * Given a string s consisting of digits 0-9 and lowercase English letters a-z.
  * <p>
@@ -27,7 +30,26 @@ import java.util.Queue;
  * <p>
  * Input: "31ba2a"
  * Output: false
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class InterestingString {
     public static void main(String[] args) {
         test("12345", false);

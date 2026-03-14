@@ -3,9 +3,31 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 09/04/19
+ * Question Title: Longest Possible Chunked Palindrome
+ * Link: https://www.geeksforgeeks.org/longest-possible-chunked-palindrome/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/longest-possible-chunked-palindrome/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestPossibleChunkedPalindrome {
 
     public static void main(String []args) {

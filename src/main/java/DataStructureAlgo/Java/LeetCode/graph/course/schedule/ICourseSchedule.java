@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.LeetCode.graph.course.schedule;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: I Course Schedule
+ * Link: TODO: Add Link
  * Description:
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public interface ICourseSchedule {
 
     //https://leetcode.com/problems/course-schedule/

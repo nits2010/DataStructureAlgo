@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.pattern.match;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-23
+ * Question Title: Wildcard Matching
+ * Link: https://www.geeksforgeeks.org/wildcard-pattern-matching/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/wildcard-pattern-matching/
  * https://www.geeksforgeeks.org/dynamic-programming-wildcard-pattern-matching-linear-time-constant-space/
@@ -53,7 +56,26 @@ package DataStructureAlgo.Java.LeetCode.pattern.match;
  * s = "acdcb"
  * p = "a*c?b"
  * Output: false
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WildcardMatching {
 
 

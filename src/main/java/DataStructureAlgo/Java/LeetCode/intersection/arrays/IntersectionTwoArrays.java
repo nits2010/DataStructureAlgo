@@ -10,6 +10,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Intersection Two Arrays
+ * Link: https://leetcode.com/problems/intersection-of-two-arrays/
+ * Description:
  * Description: https://leetcode.com/problems/intersection-of-two-arrays/
  * 349. Intersection of Two Arrays
  * Given two arrays, write a function to compute their intersection.
@@ -26,7 +29,26 @@ import java.util.Set;
  * <p>
  * Each element in the result must be unique.
  * The result can be in any order.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IntersectionTwoArrays {
 
     public static void main(String[] args) {

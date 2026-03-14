@@ -6,8 +6,30 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-21
+ * Question Title: Matrix Chain Multiplication
+ * Link: https://www.interviewbit.com/problems/matrix-chain-multiplication/
+ * Description:
  * Description: https://www.interviewbit.com/problems/matrix-chain-multiplication/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MatrixChainMultiplication {
 
 

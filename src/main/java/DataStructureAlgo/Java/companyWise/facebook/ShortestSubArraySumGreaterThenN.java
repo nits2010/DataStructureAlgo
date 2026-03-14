@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-17
+ * Question Title: Shortest Sub Array Sum Greater Then N
+ * Link: https://www.geeksforgeeks.org/minimum-length-subarray-sum-greater-given-value/
+ * Description:
  * Description: https://www.geeksforgeeks.org/minimum-length-subarray-sum-greater-given-value/
  * <p>
  * Given an array of integers and a number x, find the smallest subarray with sum greater than the given value.
@@ -27,7 +30,26 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * x = 8
  * Output : Not Possible
  * Whole array sum is smaller than 8.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ShortestSubArraySumGreaterThenN {
 
     public static void main(String []args) {

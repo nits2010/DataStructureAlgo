@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Longest Common Sub Sequence
+ * Link: https://leetcode.com/problems/longest-common-subsequence/
+ * Description:
  * Description: https://leetcode.com/problems/longest-common-subsequence/
  * Given two strings text1 and text2, return the length of their longest common subsequence.
  * <p>
@@ -34,7 +37,26 @@ package DataStructureAlgo.Java.LeetCode.longestShortestCommon;
  * 1 <= text1.length <= 1000
  * 1 <= text2.length <= 1000
  * The input strings consist of lowercase English characters only.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestCommonSubSequence {
 
     public static void main(String[] args) {

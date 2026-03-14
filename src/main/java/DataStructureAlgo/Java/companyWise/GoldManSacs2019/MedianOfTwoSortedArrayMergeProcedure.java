@@ -5,6 +5,9 @@ import  DataStructureAlgo.Java.LeetCode.medians.MedianOfTwoSortedArray;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-01
+ * Question Title: Median Of Two Sorted Array Merge Procedure
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
  * <p>
@@ -29,9 +32,27 @@ import  DataStructureAlgo.Java.LeetCode.medians.MedianOfTwoSortedArray;
  * B -> 2, 3 5 11 -> y = 4
  * <p>
  * 2 2 3 4 5 7 8 9 11 -> 5
- *
  * {@link MedianOfTwoSortedArray}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MedianOfTwoSortedArrayMergeProcedure {
 
 

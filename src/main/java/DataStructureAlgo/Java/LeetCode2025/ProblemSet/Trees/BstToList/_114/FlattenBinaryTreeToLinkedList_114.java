@@ -10,80 +10,30 @@ import java.util.List;
 
 /**
  * Author: Nitin Gupta
- * Date: 8/27/2024
- * Question Title: 114. Flatten Binary Tree to Linked List
+ * Date: 2026-03-14
+ * Question Title: Flatten Binary Tree To Linked List
  * Link: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
- * Description: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
- * Given the root of a binary tree, flatten the tree into a "linked list":
- * <p>
- * The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
- * The "linked list" should be in the same order as a pre-order traversal of the binary tree.
- * <p>
- * <p>
- * For example, given the following tree:
- * Input: root = [1,2,5,3,4,null,6]
- * Output: [1,null,2,null,3,null,4,null,5,null,6]
- * <p>
- * *     1
- * *    / \
- * *   2   5
- * *  / \   \
- * * 3   4   6
- * The flattened tree should look like:
- * <p>
- * * 1
- * *  \
- * *   2
- * *    \
- * *     3
- * *      \
- * *       4
- * *        \
- * *         5
- * *          \
- * *           6
- * <p>
- * <p>
- * Constraints:
- * <p>
- * The number of nodes in the tree is in the range [0, 2000].
- * -100 <= Node.val <= 100
- * <p>
- * <p>
- * Follow up: Can you flatten the tree in-place (with O(1) extra space)?
+ * Description:
  * File reference
  * -----------
- * Duplicate {@link DataStructureAlgo.Java.LeetCode.flatten.tree.FlattenBinaryTreeLinkedList}
+ * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p>
+ * DP-BaseProblem {@link }
+ * <p><p>
  * Tags
  * -----
  *
- * @medium
- * @LinkedList
- * @Stack
- * @Tree
- * @Depth-FirstSearch
- * @BinaryTree <p>
+ <p><p>
  * Company Tags
  * -----
- * @Facebook
- * @Amazon
- * @Microsoft
- * @Salesforce
- * @Adobe
- * @Apple
- * @Bloomberg
- * @Coupang
- * @Databricks
- * @Google
- * @Nvidia
- * @Oracle
- * @Uber
- * @Yahoo <a href="https://walkccc.me/LeetCode/problems/114/">...</a>
- * @Editorial <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/solutions/372251/3variation-fastest-100-long-short-code-o-1-solution-java-full-explanation/">...</a>
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FlattenBinaryTreeToLinkedList_114 {
 
     public static void main(String[] args) {

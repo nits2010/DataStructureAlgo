@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-09
+ * Question Title: Min Capacity Of Ship Minimum Number Pages Student
+ * Link: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+ * Description:
  * Description:
  * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
  * same as : https://www.geeksforgeeks.org/allocate-minimum-number-pages/
@@ -47,7 +50,26 @@ package DataStructureAlgo.Java.LeetCode;
  * 2nd day: 2
  * 3rd day: 3
  * 4th day: 1, 1
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinCapacityOfShipMinimumNumberPagesStudent {
 
     public static void main(String []args) {

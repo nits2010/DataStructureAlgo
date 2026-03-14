@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 01/04/19
+ * Question Title: Contact Cleaner
+ * Link: https://www.careercup.com/question?id=5630954857562112
+ * Description:
  * Description: https://www.careercup.com/question?id=5630954857562112
  * Given a list of Contacts, where each contact consists of a contact ID and a list of email IDs.
  * Output a unique list of contacts by removing duplicates.
@@ -35,7 +38,26 @@ import java.util.*;
  * contact[0] is same as contact[3] because they both have same
  * e-mail address.
  * Therefore, contact[0] and contact[2] are also same.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ContactCleaner {
 
 

@@ -3,10 +3,32 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-19
+ * Question Title: KMP_Knuth Morris Pratt
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * <p>
  * Pattern matching algorithm; Find pattern in string
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class KMP_KnuthMorrisPratt {
 }
 

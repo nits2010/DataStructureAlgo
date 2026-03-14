@@ -8,8 +8,30 @@ import java.util.Random;
 /**
  * Author: Nitin Gupta
  * Date: 8/31/2024
+ * Question Title: Quick Sort3Way Partitioning
+ * Link: TODO: Add Link
+ * Description:
  * Q
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class QuickSort3WayPartitioning implements Sort {
 
     Random random = new Random();

@@ -9,6 +9,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 23/09/19
+ * Question Title: Diagonal Matrix Upward Right
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Matrix:
  * [1,2,3]
@@ -26,7 +29,26 @@ import java.util.List;
  * <p>
  * expected:
  * [4, 8, 3, 12, 7, 2, 16, 11, 6, 1, 15, 10, 5, 14, 9, 13]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DiagonalMatrixUpwardRight {
 
     public static void main(String[] args) {

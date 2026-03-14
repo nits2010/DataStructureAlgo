@@ -3,13 +3,13 @@ package DataStructureAlgo.Java.nonleetcode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-09
+ * Question Title: Max A
+ * Link: https://www.geeksforgeeks.org/how-to-print-maximum-number-of-a-using-given-four-keys/
+ * Description:
  * Description:https://www.geeksforgeeks.org/how-to-print-maximum-number-of-a-using-given-four-keys/
- *
  * https://massivealgorithms.blogspot.com/2017/07/leetcode-651-4-keys-keyboard.html
- *
  * O(1) solution https://leetcode.com/articles/4-keys-keyboard/
  * <p>
- *
  * <p>
  * Below is the problem statement.
  * <p>
@@ -44,7 +44,26 @@ package DataStructureAlgo.Java.nonleetcode;
  * following key sequence.
  * A, A, A, Ctrl A, Ctrl C, Ctrl V, Ctrl V, Ctrl A,
  * Ctrl C, Ctrl V, Ctrl V
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaxA {
 
     public static void main(String []args) {

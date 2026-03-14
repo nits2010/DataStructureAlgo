@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-04
+ * Question Title: Nth Item In Sum Of Two Arrays
+ * Link: https://www.geeksforgeeks.org/find-nth-item-set-formed-sum-two-arrays/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-nth-item-set-formed-sum-two-arrays/
  * Given two sorted arrays, we can get a set of sums(add one element from the first and one from second).
  * Find the N’th element in the elements of the formed set considered in sorted order.
@@ -30,7 +33,26 @@ import java.util.*;
  * We get following elements set of sums.
  * 21(1+20), 23(1+22 or 20+3), 24(20+4), 25(22+3)...
  * Fourth element is 25.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class NthItemInSumOfTwoArrays {
 
     public static void main(String[] args) {

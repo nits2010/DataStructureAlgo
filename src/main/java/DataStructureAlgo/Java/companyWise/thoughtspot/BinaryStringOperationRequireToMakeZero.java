@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.companyWise.thoughtspot;
 /**
  * Author: Nitin Gupta
  * Date: 20/09/19
+ * Question Title: Binary String Operation Require To Make Zero
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Given a binary string of size N and a positive integer K, calculate the number of operations required to convert this string to
  * zero string by applying the following operation any number of times.
@@ -23,7 +26,26 @@ package DataStructureAlgo.Java.companyWise.thoughtspot;
  * Step-9: 000000000000000
  * <p>
  * Operations = 9
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinaryStringOperationRequireToMakeZero {
 
     public static void main(String[] args) {

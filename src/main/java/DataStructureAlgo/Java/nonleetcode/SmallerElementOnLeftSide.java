@@ -7,6 +7,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Smaller Element On Left Side
+ * Link: https://www.geeksforgeeks.org/find-the-nearest-smaller-numbers-on-left-side-in-an-array/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-the-nearest-smaller-numbers-on-left-side-in-an-array/
  * <p>
  * Given an array of integers, find the nearest smaller number for every element such that the smaller element is on left side.
@@ -23,7 +26,26 @@ import java.util.Stack;
  * Output:        {_, 1, _, 0, 2}
  * <p>
  * similar {@link NextGreaterElementOnRightSide}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SmallerElementOnLeftSide {
 
 

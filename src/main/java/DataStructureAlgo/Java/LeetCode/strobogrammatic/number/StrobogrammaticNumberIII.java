@@ -6,6 +6,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-09
+ * Question Title: Strobogrammatic Number III
+ * Link: https://leetcode.com/problems/strobogrammatic-number-iii
+ * Description:
  * Description: https://leetcode.com/problems/strobogrammatic-number-iii
  * http://leetcode.liangjiateng.cn/leetcode/strobogrammatic-number-iii/description
  * 248.Strobogrammatic Number III
@@ -21,7 +24,26 @@ import java.util.*;
  * Note:
  * Because the range might be a large number, the low and high numbers are represented as string.
  * http://tiancao.me/Leetcode-Unlocked/LeetCode%20Locked/c1.5.html
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StrobogrammaticNumberIII {
 
     public static void main(String[] args) {

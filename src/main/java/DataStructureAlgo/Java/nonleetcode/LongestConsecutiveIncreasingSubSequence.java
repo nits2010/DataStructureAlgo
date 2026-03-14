@@ -6,6 +6,9 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-08
+ * Question Title: Longest Consecutive Increasing Sub Sequence
+ * Link: https://www.geeksforgeeks.org/longest-increasing-consecutive-subsequence/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-increasing-consecutive-subsequence/
  * Given N elements, write a program that prints the length of the longest increasing subsequence whose adjacent element difference is one.
  * <p>
@@ -20,7 +23,26 @@ import java.util.Map;
  * Explanation: 6, 7, 8, 9, 10 is the longest increasing subsequence
  * <p>
  * Similar to this {@link LongestIncreasingSubSequence}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestConsecutiveIncreasingSubSequence {
 
     public static void main(String[] args) {

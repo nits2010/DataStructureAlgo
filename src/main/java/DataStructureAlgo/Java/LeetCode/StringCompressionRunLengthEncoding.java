@@ -6,6 +6,9 @@ import  DataStructureAlgo.Java.nonleetcode.StringCompression2;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-30
+ * Question Title: String Compression Run Length Encoding
+ * Link: https://leetcode.com/problems/string-compression/
+ * Description:
  * Description: https://leetcode.com/problems/string-compression/
  * 443. String Compression [EASY]
  * Given an array of characters, compress it in-place.
@@ -64,7 +67,26 @@ import  DataStructureAlgo.Java.nonleetcode.StringCompression2;
  * 1 <= len(chars) <= 1000.
  * <p>
  * First part of it from {@link StringCompression2}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class StringCompressionRunLengthEncoding {
 
 

@@ -6,6 +6,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 18/04/19
+ * Question Title: Product
+ * Link: https://www.geeksforgeeks.org/count-numbers-in-range-such-that-digits-in-it-and-its-product-with-q-are-unequal/
+ * Description:
  * Description: https://www.geeksforgeeks.org/count-numbers-in-range-such-that-digits-in-it-and-its-product-with-q-are-unequal/
  * <p>
  * Given a range of numbers [l, r] and an integer q. The task is to count all such number in the given range such that any digit of
@@ -21,7 +24,26 @@ import java.util.Set;
  * <p>
  * Input : l = 5, r = 15, q = 2
  * Output : 9
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Product {
 
     static boolean areInDigitInX(int n, int from) {

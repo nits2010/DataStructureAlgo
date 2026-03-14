@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-15
+ * Question Title: Find Complete Prefixes
+ * Link: TODO: Add Link
+ * Description:
  * Description: Given List of names and list of query.
  * Find count corresponding to each query for which there is prefix available names list.
  * Names: ["Nitin", "NitinGupta", "Adarsh", "AdarshK"]
@@ -13,7 +16,26 @@ import java.util.List;
  * <p>
  * Ans: [1, 1]
  * As "Nitin" is prefix of both "Nitin", "NitinGupta" but "Nitin" will be discarded as its a complete string.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FindCompletePrefixes {
 
     public static void main(String[] args) {

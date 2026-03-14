@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-27
+ * Question Title: Maximum Sum No Three Elements Are Adjacent
+ * Link: https://www.geeksforgeeks.org/maximum-subsequence-sum-such-that-no-three-are-consecutive/
+ * Description:
  * Description: https://www.geeksforgeeks.org/maximum-subsequence-sum-such-that-no-three-are-consecutive/
  * Given a sequence of positive numbers, find the maximum sum that can be formed which has no three consecutive elements present.
  * <p>
@@ -32,7 +35,26 @@ import java.util.Arrays;
  * Output: 27
  * <p>
  * Extension of {@link HouseRobberI}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumSumNoThreeElementsAreAdjacent {
 
     public static void main(String[] args) {

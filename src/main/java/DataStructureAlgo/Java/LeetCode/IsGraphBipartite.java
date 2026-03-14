@@ -7,6 +7,9 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-01
+ * Question Title: Is Graph Bipartite
+ * Link: https://leetcode.com/problems/is-graph-bipartite/
+ * Description:
  * Description: https://leetcode.com/problems/is-graph-bipartite/
  * <p>
  * Given an undirected graph, return true if and only if it is bipartite.
@@ -46,7 +49,26 @@ import java.util.Queue;
  * <p>
  * {@link DataStructureAlgo.Java.companyWise.facebook.GraphDivideTwoSetsOrBipartiteGraph}
  * In this question, the input is in different form only.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class IsGraphBipartite {
     public static void main(String[] args) {
         System.out.println("DFS......\n");

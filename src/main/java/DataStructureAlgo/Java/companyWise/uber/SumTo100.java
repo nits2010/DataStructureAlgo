@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-14
+ * Question Title: Sum To100
+ * Link: https://leetcode.com/discuss/interview-question/357345/uber-phone-screen-sum-to-100/324193
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/357345/uber-phone-screen-sum-to-100/324193
  * Add the mathematical operators + or - before any of the digits in the decimal numeric string 123456789 such that the resulting mathematical expression adds up to 100. Return all possible solutions.
  * <p>
@@ -26,7 +29,26 @@ import java.util.List;
  * <p>
  * [UBER]
  * Similar {@link DataStructureAlgo.Java.LeetCode.operatorBasedQuestions.AddOperatorsPlusMinusMultiply}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SumTo100 {
 
     public static void main(String[] args) {

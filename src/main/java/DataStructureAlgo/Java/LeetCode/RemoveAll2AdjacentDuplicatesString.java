@@ -7,6 +7,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-20
+ * Question Title: Remove All2Adjacent Duplicates String
+ * Link: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+ * Description:
  * Description:https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
  * <p>
  * Given a string S of lowercase letters, a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
@@ -29,9 +32,27 @@ import java.util.Stack;
  * <p>
  * 1 <= S.length <= 20000
  * S consists only of English lowercase letters.
- *
  * {@link RemoveAllAdjacentDuplicatesString}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RemoveAll2AdjacentDuplicatesString {
 
     public static void main(String[] args) {

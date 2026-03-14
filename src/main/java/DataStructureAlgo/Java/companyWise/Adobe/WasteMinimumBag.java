@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-24
+ * Question Title: Waste Minimum Bag
+ * Link: https://www.geeksforgeeks.org/adobe-interview-experience-set-26-on-campus-for-mts-1/#targetText=A%20CEO%20of%20a%20company,much%20cookies%20one%20person%20needs.
+ * Description:
  * Description: https://www.geeksforgeeks.org/adobe-interview-experience-set-26-on-campus-for-mts-1/#targetText=A%20CEO%20of%20a%20company,much%20cookies%20one%20person%20needs.
  * You are given the waste at certain positions with values between x and y and you can carry atmost y kg at one time.
  * You had to tell the minimum number of bags required to carry the waste.
@@ -18,7 +21,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * 1.40 1.70 1.50 1.50
  * Output
  * 3
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WasteMinimumBag {
 
     public static void main(String[] args) {

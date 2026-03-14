@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-22
+ * Question Title: Delete Operation Two Strings
+ * Link: https://leetcode.com/problems/delete-operation-for-two-strings/
+ * Description:
  * Description:https://leetcode.com/problems/delete-operation-for-two-strings/
  * <p>
  * Given two words word1 and word2, find the minimum number of steps required to make word1 and word2 the same, where in each step you can delete one character in either string.
@@ -16,7 +19,26 @@ package DataStructureAlgo.Java.LeetCode;
  * <p>
  * The length of given words won't exceed 500.
  * Characters in given words can only be lower-case letters.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DeleteOperationTwoStrings {
 
     public static void main(String []args) {

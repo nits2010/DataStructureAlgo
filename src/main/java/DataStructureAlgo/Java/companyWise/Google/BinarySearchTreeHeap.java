@@ -8,6 +8,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-29
+ * Question Title: Binary Search Tree Heap
+ * Link: https://leetcode.com/discuss/interview-question/363945/google-special-binary-tree
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/363945/google-special-binary-tree
  * <p>
  * A binary tree has the binary search tree property (BST property) if,
@@ -40,7 +43,26 @@ import java.util.*;
  * * 	 /          \
  * *  (1, 4)       (10, -1)
  * You can assume that a solution always exists.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BinarySearchTreeHeap {
 
     public static void main(String[] args) {

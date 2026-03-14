@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-04
+ * Question Title: Minimum Path Sum
+ * Link: https://leetcode.com/problems/minimum-path-sum/
+ * Description:
  * Description: https://leetcode.com/problems/minimum-path-sum/
  * <p>
  * 64. Minimum Path Sum
@@ -25,7 +28,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.graph.unique.paths.UniquePathsI}
  * {@link DataStructureAlgo.Java.LeetCode.graph.unique.paths.UniquePathsII}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MinimumPathSum {
 
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.pattern.match;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-08
+ * Question Title: Regular Expression Match
+ * Link: https://leetcode.com/problems/regular-expression-matching/
+ * Description:
  * Description: https://leetcode.com/problems/regular-expression-matching/
  * Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
  * <p>
@@ -52,7 +55,26 @@ package DataStructureAlgo.Java.LeetCode.pattern.match;
  * My Explanation: https://leetcode.com/problems/regular-expression-matching/discuss/354099/100-Pure-explanation-and-derivation-to-DP-with-lot-of-example-or-JAVA-or-Beat-96-and-100
  * https://leetcode.com/problems/regular-expression-matching/discuss/5651/Easy-DP-Java-Solution-with-detailed-Explanation
  * https://youtu.be/l3hda49XcDE
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class RegularExpressionMatch {
 
     public static void main(String[] args) {

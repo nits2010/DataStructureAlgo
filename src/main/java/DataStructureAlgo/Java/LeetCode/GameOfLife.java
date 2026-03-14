@@ -10,6 +10,9 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-01
+ * Question Title: Game Of Life
+ * Link: https://leetcode.com/problems/game-of-life/
+ * Description:
  * Description: https://leetcode.com/problems/game-of-life/
  * <p>
  * According to the Wikipedia's article: "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
@@ -49,7 +52,26 @@ import java.util.Set;
  * <p>
  * {@link SetMatrixZeroes}
  * [Amazon] [Dropbox]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GameOfLife {
 
 

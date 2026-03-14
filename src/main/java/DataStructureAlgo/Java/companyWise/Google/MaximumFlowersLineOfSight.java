@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-26
+ * Question Title: Maximum Flowers Line Of Sight
+ * Link: TODO: Add Link
+ * Description:
  * Description:
  * Given a 2D array with F for Flowers and R for Rocks and Blank for empty spaces. If you were to stand at a spot,
  * find the max possible flowers visible in your line of sight. Image rocks are too high and obstruct line of vision.
@@ -22,7 +25,26 @@ import java.util.Arrays;
  * At the position X your field of vision has 3 neighboring flowers. Flowers only count if its in top, left,down, right directions
  * <p>
  * Similar to {@link DataStructureAlgo.Java.LeetCode.BombEnemy}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaximumFlowersLineOfSight {
 
     public static void main(String[] args) {

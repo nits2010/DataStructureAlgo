@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-02
+ * Question Title: Find First Last Position Element Sorted Array
+ * Link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ * Description:
  * Description: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
  * 34. Find First and Last Position of Element in Sorted Array
  * Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
@@ -23,7 +26,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Output: [-1,-1]
  * <p>
  * {@link FirstBadVersion}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FindFirstLastPositionElementSortedArray {
 
     public static void main(String[] args) {

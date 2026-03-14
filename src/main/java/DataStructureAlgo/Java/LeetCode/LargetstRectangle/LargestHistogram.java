@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-27
+ * Question Title: Largest Histogram
+ * Link: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+ * Description:
  * Description: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
  * https://leetcode.com/problems/largest-rectangle-in-histogram
  * Area = width * height;
@@ -15,7 +18,26 @@ import java.util.Stack;
  * possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)
  * Input: [2,1,5,6,2,3]
  * Output: 10
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LargestHistogram {
 
     public static void main(String []args) {

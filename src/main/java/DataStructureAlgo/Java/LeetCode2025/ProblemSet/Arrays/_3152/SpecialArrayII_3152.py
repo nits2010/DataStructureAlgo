@@ -2,7 +2,27 @@
 Author: Nitin Gupta
 Date: 7/6/2025
 Question Title: 3152. Special Array II
-Link:  https://leetcode.com/problems/special-array-ii/description
+Link: https://leetcode.com/problems/special-array-ii/description
+Description:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
 """
 
 from collections import deque

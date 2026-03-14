@@ -6,13 +6,33 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-10
+ * Question Title: Connect Nodes Next
+ * Link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/submissions/
+ * Description:
  * Description:
  * 1.Perfect tree: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/submissions/
  * 2. General tree:  https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
  * <p>
  * https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/discuss/331784/A-intersting-solution%3A-iterative-simple-JAVA
- *
  * https://www.geeksforgeeks.org/connect-nodes-at-same-level-with-o1-extra-space/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 class Node {

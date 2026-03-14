@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-06
+ * Question Title: Add Operators Plus Minus Multiply
+ * Link: https://leetcode.com/problems/expression-add-operators/
+ * Description:
  * Description: https://leetcode.com/problems/expression-add-operators/
  * Given a string that contains only digits 0-9 and a target value, return all possibilities to add binary operators (not unary) +, -, or * between the digits so they evaluate to the target value.
  * <p>
@@ -30,11 +33,29 @@ import java.util.List;
  * <p>
  * Input: num = "3456237490", target = 9191
  * Output: []
- *
  * https://leetcode.com/problems/expression-add-operators/discuss/352605/Explanation-and-way-to-make-it-efficient-from-134-ms-to-11-ms
  * http://codinghelmet.com/exercises/expression-from-numbers
  * https://leetcode.com/discuss/interview-question/351147/google-onsite-arithmetic-expression-to-construct-a-value
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AddOperatorsPlusMinusMultiply {
     public static void main(String[] args) {
 

@@ -3,8 +3,10 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-22
+ * Question Title: Clone List Random Pointer
+ * Link: https://leetcode.com/problems/copy-list-with-random-pointer/
  * Description:
- *
+ * Description:
  * https://leetcode.com/problems/copy-list-with-random-pointer/
  * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
  * <p>
@@ -13,12 +15,27 @@ package DataStructureAlgo.Java.LeetCode;
  * https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
  * https://www.geeksforgeeks.org/clone-linked-list-next-arbit-pointer-set-2/
  * https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/
- *
- *
  * All
  * https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree
- *
  * @Editorial https://leetcode.com/problems/copy-list-with-random-pointer/solutions/5558157/easy-multiple-solution-with-3-pass-and-without-space/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
 
 class Node {

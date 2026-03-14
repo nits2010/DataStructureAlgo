@@ -7,13 +7,35 @@ import java.util.ListIterator;
 /**
  * Author: Nitin Gupta
  * Date: 02/04/19
+ * Question Title: Interleaved List Of List
+ * Link: https://www.careercup.com/question?id=5156596605779968
+ * Description:
  * Description:https://www.careercup.com/question?id=5156596605779968
  * <p>
  * Interleave list of lists in Java
  * Example:
  * input = [[1,2,3], [9, 0], [5], [-4,-5,-2,-3,-1]];
  * output = [1,9,5,-4,2,0,-5,3,-2,-3,-1]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class InterleavedListOfList {
 
     static class Helper {

@@ -7,6 +7,32 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+/**
+ * Author: Nitin Gupta
+ * Date: 2026-03-14
+ * Question Title: Print All Possible Words From Phone Digits
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
+ */
+
 class PrintAllPossibleWordsFromPhoneDigits {
     public static String[][] a = new String[10][];
     public static int[] n;

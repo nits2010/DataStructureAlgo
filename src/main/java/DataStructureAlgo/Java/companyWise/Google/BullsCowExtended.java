@@ -3,13 +3,15 @@ package DataStructureAlgo.Java.companyWise.Google;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Bulls Cow Extended
+ * Link: https://leetcode.com/discuss/interview-question/349416/goolge-onsite-guess-pin-code
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/349416/goolge-onsite-guess-pin-code
  * <p>
  * Given 2 strings pin and guess. Write a function to provide a hint that indicates how digits in guess match the pin. Use:
  * * - to indicate a number in the correct position.
  * o - to indicate that a number is present in the pin code but in a different possition.
  * _ - to indicate that there's no such number in the pin code.
- *
  * <p>
  * Example 1:
  * <p>
@@ -44,7 +46,26 @@ package DataStructureAlgo.Java.companyWise.Google;
  * pin.length == input.length
  * The input strings contain only digits 0-9.
  * similar to {@link DataStructureAlgo.Java.LeetCode.BullsCow}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BullsCowExtended {
 
     public static void main(String[] args) {

@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-08
+ * Question Title: Whac A Mole
+ * Link: https://leetcode.com/discuss/interview-question/350139/Google-or-Phone-Screen-or-Whac-A-Mole
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/350139/Google-or-Phone-Screen-or-Whac-A-Mole
  * Given an int array holes where 1 means there is a mole, 0 means no mole. Find out the max number of moles you can hit with a mallet of width w.
  * <p>
@@ -23,7 +26,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Explanation: 0(10011)0(11001)0
  * <p>
  * {GOOGLE}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class WhacAMole {
 
     public static void main(String[] args) {

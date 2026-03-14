@@ -7,6 +7,9 @@ import  DataStructureAlgo.Java.nonleetcode.SmallerElementOnLeftSide;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-11
+ * Question Title: Sorted Sub Sequence Size3
+ * Link: https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/
+ * Description:
  * Description: https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/
  * Given an array of n integers, find the 3 elements such that a[i] < a[j] < a[k] and i < j < k in 0(n) time. If there are multiple such triplets, then print any one of them.
  * Examples:
@@ -21,7 +24,26 @@ import  DataStructureAlgo.Java.nonleetcode.SmallerElementOnLeftSide;
  * Output: No such triplet
  * <p>
  * [Amazon]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SortedSubSequenceSize3 {
     public static void main(String[] args) {
         test(new int[]{12, 11, 10, 5, 6, 2, 30});

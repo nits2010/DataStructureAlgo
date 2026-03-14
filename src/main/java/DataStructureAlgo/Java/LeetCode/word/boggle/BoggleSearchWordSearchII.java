@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 04/04/19
+ * Question Title: Boggle Search Word Search II
+ * Link: https://leetcode.com/problems/word-search-ii/
+ * Description:
  * Description: https://leetcode.com/problems/word-search-ii/
  * <p>
  * Given a 2D board and a list of words from the dictionary, find all words in the board.
@@ -34,7 +37,26 @@ import java.util.*;
  * <p>
  * All inputs are consist of lowercase letters a-z.
  * The values of words are distinct.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class BoggleSearchWordSearchII {
 
     public static void main(String[] args) {

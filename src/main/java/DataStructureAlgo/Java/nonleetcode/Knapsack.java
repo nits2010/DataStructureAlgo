@@ -7,10 +7,32 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: Knapsack
+ * Link: https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
  * https://www.geeksforgeeks.org/fractional-knapsack-problem/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class Knapsack {
 
     public static void main(String[] args) {

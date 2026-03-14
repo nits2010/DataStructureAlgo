@@ -4,58 +4,30 @@ import java.util.*;
 
 /**
  * Author: Nitin Gupta
- * Date: 2019-07-04
- * Description: https://leetcode.com/discuss/interview-question/algorithms/125080/generate-a-binary-tree-from-parent-child-relationship
+ * Date: 2026-03-14
+ * Question Title: Generate Binary Tree Parent Child Relationship
+ * Link: TODO: Add Link
+ * Description:
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
  * <p>
- * This was asked in Java.companyWise.LinkedIn Interview
- * Given a list of child->parent relationships, build a binary tree out of it. All the element Ids inside the tree are unique.
- * <p>
- * Example:
- * <p>
- * Given the following relationships:
- * <p>
- * Child Parent IsLeft
- * 15 20 true
- * 19 80 true
- * 17 20 false
- * 16 80 false
- * 80 50 false
- * 50 null false
- * 20 50 true
- * <p>
- * You should return the following tree:
- * <p>
- * 50
- * /  \
- * 20   80
- * / \   / \
- * 15 17 19 16
- * Function Signature
- * <p>
- * <p>
- * Represents a pair relation between one parent node and one child node inside a binary tree
- * If the _parent is null, it represents the ROOT node
- * <p>
- * <p>
- * <p>
- * * class Relation {
- * *    int parent;
- * *    int child;
- * *    bool isLeft;
- * * };
- * <p>
- * Represents a single Node inside a binary tree
- * <p>
- * * class Node {
- * *     int id;
- * *     Node *left;
- * *     Node *right;
- * * }
- * Implement a method to build a tree from a list of parent-child relationships
- * And return the root Node of the tree
- * <p>
- * *     Node buildTree(List<Relation> data){}
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GenerateBinaryTreeParentChildRelationship {
 
     static Node root = null;

@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation.single.number;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-28
+ * Question Title: Single Number
+ * Link: https://leetcode.com/problems/single-number/
+ * Description:
  * Description: https://leetcode.com/problems/single-number/
  * Given a non-empty array of integers, every element appears twice except for one. Find that single one.
  * <p>
@@ -18,7 +21,26 @@ package DataStructureAlgo.Java.LeetCode.bitsManipulation.single.number;
  * <p>
  * Input: [4,1,2,1,2]
  * Output: 4
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SingleNumber {
 
     public static void main(String[] args) {

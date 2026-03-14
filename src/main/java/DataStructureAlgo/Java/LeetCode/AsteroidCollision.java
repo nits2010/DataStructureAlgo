@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-03
+ * Question Title: Asteroid Collision
+ * Link: https://leetcode.com/problems/asteroid-collision/
+ * Description:
  * Description: https://leetcode.com/problems/asteroid-collision/
  * 735. Asteroid Collision
  * We are given an array asteroids of integers representing asteroids in a row.
@@ -50,9 +53,27 @@ import java.util.Stack;
  * <p>
  * The length of asteroids will be at most 10000.
  * Each asteroid will be a non-zero integer in the range [-1000, 1000]..
- *
  * https://leetcode.com/problems/asteroid-collision/discuss/374043/Java-or-Full-thought-process-or-Brute-force-to-100-beat-or-Various-solutions
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AsteroidCollision {
 
     public static void main(String[] args) {

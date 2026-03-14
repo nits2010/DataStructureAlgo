@@ -8,6 +8,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-22
+ * Question Title: Activate Fountains
+ * Link: https://leetcode.com/discuss/interview-question/363036/walmart-oa-2019-activate-fountains
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/363036/walmart-oa-2019-activate-fountains
  * Min number of fountains needed to water the array:
  * <p>
@@ -19,7 +22,26 @@ import java.util.Arrays;
  * fountain at 2 has range of 1 to 3 and fountain at 3 has range of 2 to 3 So only fountain 2 is enough to be activated to cover the whole
  * garden
  * [Google]
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ActivateFountains {
 
     public static void main(String[] args) {

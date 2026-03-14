@@ -8,10 +8,32 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-21
+ * Question Title: Graph Clone
+ * Link: https://leetcode.com/problems/clone-graph/
+ * Description:
  * Description:
  * https://leetcode.com/problems/clone-graph/
  * https://leetcode.com/problems/clone-graph/discuss/341276/Clone-single-Graph-multi-component-graph.-Clone-List-.-Clone-Binary-Tree
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class GraphClone {
 
     /**

@@ -8,6 +8,9 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-31
+ * Question Title: Anagram Permutation Search
+ * Link: https://www.geeksforgeeks.org/anagram-substring-search-search-permutations/
+ * Description:
  * Description: https://www.geeksforgeeks.org/anagram-substring-search-search-permutations/
  * Given a text txt[0..n-1] and a pattern pat[0..m-1], write a function search(char pat[], char txt[]) that prints
  * all occurrences of pat[] and its permutations (or anagrams) in txt[]. You may assume that n > m.
@@ -25,7 +28,26 @@ import java.util.List;
  * Found at Index 4
  * <p>
  * {@link DataStructureAlgo.Java.LeetCode.FindAllAnagramsString}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AnagramPermutationSearch {
 
     public static void main(String []args) {

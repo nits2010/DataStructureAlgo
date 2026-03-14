@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-08-05
+ * Question Title: Chocolate Sweetness Chunk
+ * Link: https://leetcode.com/discuss/interview-question/350800/google-onsite-chocolate-sweetness
+ * Description:
  * Description: https://leetcode.com/discuss/interview-question/350800/google-onsite-chocolate-sweetness
  * Given an array chocolate of n non-negative integers, where the values are sweetness levels of the chocolate. You are also given a value k which denotes the number of friends you will share this chocolate with. Your friends are greedy so they will always take the highest sweetness chunk. Find out what is the maximum sweetness level you could get.
  * <p>
@@ -25,7 +28,26 @@ import java.util.Arrays;
  * Your other two friends will take the sweetest chunk, so they will take 12 and 10. The maximum sweetness level you could get is 9.
  * <p>
  * Similar to {@link PainterPartitionProblem}
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ChocolateSweetnessChunk {
 
     public static void main(String[] args) {

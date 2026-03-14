@@ -1,7 +1,31 @@
 """
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: Copy List With Random Pointer
+Link: https://leetcode.com/problems/copy-list-with-random-pointer/
+Description:
 # Definition for a Node.
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
 
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
 """
+
 from typing import Optional
 
 

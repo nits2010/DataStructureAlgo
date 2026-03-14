@@ -9,6 +9,9 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 24/09/19
+ * Question Title: Daily Temperatures
+ * Link: https://leetcode.com/problems/daily-temperatures/
+ * Description:
  * Description: https://leetcode.com/problems/daily-temperatures/
  * 739. Daily Temperatures
  * Given a list of daily temperatures T, return a list such that, for each day in the input,
@@ -20,7 +23,26 @@ import java.util.Stack;
  * <p>
  * Similar to {@link NextGreaterElementOnRightSide}
  * @Editorial https://leetcode.com/problems/daily-temperatures/discuss/389422/3-solution-or-Explanation-or-100-beat-or-Java
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class DailyTemperatures {
 
     public static void main(String[] args) {

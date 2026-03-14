@@ -5,11 +5,33 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 20/04/19
+ * Question Title: Sub Arrays
+ * Link: TODO: Add Link
+ * Description:
  * Question:
  * given array of integer count number of
  * sub array such that it has at most k odd elements and two sub array  differ if only
  * when they have at least one member differ
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class SubArrays {
 
 

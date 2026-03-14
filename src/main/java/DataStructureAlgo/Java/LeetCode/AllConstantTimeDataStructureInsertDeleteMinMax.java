@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-01
+ * Question Title: All Constant Time Data Structure Insert Delete Min Max
+ * Link: https://leetcode.com/problems/all-oone-data-structure/
+ * Description:
  * Description:
  * https://leetcode.com/problems/all-oone-data-structure/
  * <p>
@@ -17,7 +20,26 @@ import java.util.*;
  * GetMaxKey() - Returns one of the keys with maximal value. If no element exists, return an empty string "".
  * GetMinKey() - Returns one of the keys with minimal value. If no element exists, return an empty string "".
  * Challenge: Perform all these in O(1) time complexity.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class AllConstantTimeDataStructureInsertDeleteMinMax {
 
 

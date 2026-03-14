@@ -6,9 +6,31 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 07/01/19
+ * Question Title: Form Minimum Number From Given Sequence
+ * Link: https://www.geeksforgeeks.org/form-minimum-number-from-given-sequence/
+ * Description:
  * Description:
  * https://www.geeksforgeeks.org/form-minimum-number-from-given-sequence/
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class FormMinimumNumberFromGivenSequence {
 
     private static void print(int[] out) {

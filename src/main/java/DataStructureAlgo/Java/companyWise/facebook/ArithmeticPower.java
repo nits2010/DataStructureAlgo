@@ -3,8 +3,30 @@ package DataStructureAlgo.Java.companyWise.facebook;
 /**
  * Author: Nitin Gupta
  * Date: 2019-07-31
+ * Question Title: Arithmetic Power
+ * Link: TODO: Add Link
+ * Description:
  * Description: Given two integers x and n, write a function to compute x^n. Overflow can happen.
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ArithmeticPower {
     public static void main(String[] args) {
 

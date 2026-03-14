@@ -5,6 +5,9 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-12
+ * Question Title: Max Area Island
+ * Link: https://leetcode.com/problems/max-area-of-island/
+ * Description:
  * Description: https://leetcode.com/problems/max-area-of-island/
  * 695. Max Area of Island [Medium]
  * <p>
@@ -32,7 +35,26 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Note: The length of each dimension in the given grid does not exceed 50.
  * <p>
  * Same as {@link DataStructureAlgo.Java.companyWise.GroupOn.IslandsSizeCount}, here we build size
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class MaxAreaIsland {
 
     public static void main(String[] args) {

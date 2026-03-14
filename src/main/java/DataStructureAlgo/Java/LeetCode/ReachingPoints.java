@@ -3,6 +3,9 @@ package DataStructureAlgo.Java.LeetCode;
 /**
  * Author: Nitin Gupta
  * Date: 2019-09-04
+ * Question Title: Reaching Points
+ * Link: https://leetcode.com/problems/reaching-points/
+ * Description:
  * Description: https://leetcode.com/problems/reaching-points/
  * 780. Reaching Points [hard]
  * <p>
@@ -30,7 +33,26 @@ package DataStructureAlgo.Java.LeetCode;
  * sx, sy, tx, ty will all be integers in the range [1, 10^9].
  * <p>
  * Full explanation : https://leetcode.com/problems/reaching-points/discuss/375429/Detailed-explanation.-or-full-through-process-or-Java-100-beat
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class ReachingPoints {
 
     public static void main(String[] args) {

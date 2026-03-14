@@ -7,6 +7,9 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 2019-06-21
+ * Question Title: Longest Increasing Sub Sequence
+ * Link: https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
+ * Description:
  * Description: https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
  * <p>
  * We have discussed Overlapping Subproblems and Optimal Substructure properties.
@@ -31,7 +34,26 @@ import java.util.Arrays;
  * <p>
  * https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
  * Longest increasing subsequence in O(nlogn) time
+ * File reference
+ * -----------
+ * Duplicate {@link}
+ * Similar {@link}
+ * extension {@link }
+ * DP-BaseProblem {@link }
+ * <p><p>
+ * Tags
+ * -----
+ *
+ <p><p>
+ * Company Tags
+ * -----
+ * <p>
+ * -----
+ * @Editorial <p><p>
+ * -----
+ * @OptimalSolution {@link }
  */
+
 public class LongestIncreasingSubSequence {
 
 
