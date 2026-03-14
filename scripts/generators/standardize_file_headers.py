@@ -37,7 +37,8 @@ try:
     )
 except ImportError:
     import os
-    REPO_ROOT = Path(__file__).resolve().parent
+    # Repository root (go up 2 levels from scripts/generators/)
+    REPO_ROOT = Path(__file__).resolve().parent.parent.parent
     IGNORE_FOLDERS = {"helpers", "sorts", "python", ".idea*", "fileTemplates*"}
     CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
 
@@ -82,7 +83,7 @@ class TemplateStandardizer:
     
     def _load_java_template(self) -> str:
         """Load Java template and extract the comment structure."""
-        template_path = REPO_ROOT / "fileTemplate.java"
+        template_path = REPO_ROOT / "scripts" / "templates" / "fileTemplate.java"
         if not template_path.exists():
             return self._get_default_java_template()
         
@@ -95,7 +96,7 @@ class TemplateStandardizer:
     
     def _load_python_template(self) -> str:
         """Load Python template and extract the docstring structure."""
-        template_path = REPO_ROOT / "fileTemplate.py"
+        template_path = REPO_ROOT / "scripts" / "templates" / "fileTemplate.py"
         if not template_path.exists():
             return self._get_default_python_template()
         

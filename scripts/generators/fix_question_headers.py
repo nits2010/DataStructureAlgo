@@ -55,7 +55,8 @@ try:
     )
 except ImportError:
     import os
-    REPO_ROOT = Path(__file__).resolve().parent
+    # Repository root (go up 2 levels from scripts/generators/)
+    REPO_ROOT = Path(__file__).resolve().parent.parent.parent
     IGNORE_FOLDERS = {"helpers", "sorts", "python", ".idea*", "fileTemplates*"}
     CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
 
@@ -240,7 +241,7 @@ def _leetcode_url_from_slug(slug: str) -> str:
 
 # LeetCode API: map frontend_question_id -> {"slug": str, "title": str}; avoids search entirely for files with _NUMBER
 LEETCODE_API_URL = "https://leetcode.com/api/problems/all/"
-CACHE_PATH = REPO_ROOT / "tmp" / "leetcode_problems_cache.json"
+CACHE_PATH = REPO_ROOT / "scripts" / "tmp" / "leetcode_problems_cache.json"
 CACHE_MAX_AGE_SEC = 86400  # 24 hours
 
 
@@ -496,7 +497,7 @@ def main():
                 (path, content, parsed["title"], parsed["link"], query, is_py))
 
     # Report similar-template (do not override)
-    report_path = REPO_ROOT / "tmp" / "FilesWithSimilarTemplate_Report.md"
+    report_path = REPO_ROOT / "scripts" / "tmp" / "FilesWithSimilarTemplate_Report.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_lines = [
         "# Files with similar template (not modified)",
@@ -518,7 +519,7 @@ def main():
         f"Report (similar template, not modified): {len(similar_template)} files -> {report_path}")
 
     # Identify: list to fix
-    fix_list_path = REPO_ROOT / "tmp" / "FilesNeedingFix_List.md"
+    fix_list_path = REPO_ROOT / "scripts" / "tmp" / "FilesNeedingFix_List.md"
     list_lines = [
         "# Files needing fix (missing/placeholder title or link)",
         "",
@@ -593,7 +594,7 @@ def main():
             f"  {'[dry-run] ' if args.dry_run else ''}Updated: {path.relative_to(REPO_ROOT)} -> {url[:70]}...")
     print(f"Fixed: {fixed} files")
     if not_found:
-        nf_path = REPO_ROOT / "tmp" / "FilesNotFixed_NoLinkFound.md"
+        nf_path = REPO_ROOT / "scripts" / "tmp" / "FilesNotFixed_NoLinkFound.md"
         nf_lines = ["# Files not updated (no link found)", ""]
         for path, q in not_found:
             nf_lines.append(f"- {path.relative_to(REPO_ROOT)} (query: {q})")

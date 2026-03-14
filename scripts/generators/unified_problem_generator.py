@@ -1,25 +1,35 @@
 #!/usr/bin/env python3
 """
-Scan repo for coding questions with company tags and generate a markdown table.
+Unified Problem Set Generator
 
-Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+Generates a comprehensive markdown list of all coding problems in the repository.
+Each entry includes question title, link, file name, difficulty, and company tags (if any).
 
 Features:
+- Single comprehensive output: ProblemsList.md with all files in repository
 - Incremental updates: Only processes files created/modified since last run
-- Timestamp tracking: Maintains .last_company_list_run file with timestamp
-- Configurable sort order: Sort by creation date (newest first or oldest first)
+- Timestamp tracking: Maintains .last_run timestamp
+- Configurable sort order: Sort by creation date (newest first or oldest first) 
 - GitHub file links: Uses current git branch for file links
+- Advanced parsing: Extracts question titles, links, difficulty, and company tags from comments
+- Global configuration: Uses .problem_generator_config for all settings
 
 Usage:
-  python3 build_company_question_list.py                     # Incremental updates (newest first)
-  python3 build_company_question_list.py --force-full        # Full scan ignoring timestamp
-  python3 build_company_question_list.py --sort-order oldest # Sort oldest files first
-  python3 build_company_question_list.py --sort-order newest # Sort newest files first (default)
+  python3 unified_problem_generator.py                               # Generate ProblemsList.md (default)
+  python3 unified_problem_generator.py --force-full                  # Full scan ignoring timestamps  
+  python3 unified_problem_generator.py --sort-order oldest           # Sort oldest files first
+  python3 unified_problem_generator.py --sort-order newest           # Sort newest files first (default)
+  python3 unified_problem_generator.py --show-config                 # Display current configuration
 
-Priority: 1) LeetCode2025  2) CompanyWise  3) Other
-Ignore folders: helpers, sorts, python
-Skip: helper-only files (Node, Pair, ListNode, etc.). Include only files that have a "Company Tags" section in comments.
-Company tags are read from the comment block after "Company Tags" (e.g. @Amazon, @Google) until @Editorial/@OptimalSolution.
+Output Format:
+- File: ProblemsList.md
+- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- All files included, company tags column shows "-" if no tags found
+
+Configuration:
+- Configuration file: .problem_generator_config (in repository root)
+- Supports ignore folders, file extensions, helper files, and non-company tags
+- Easily customizable without modifying code
 """
 
 import os
@@ -28,27 +38,77 @@ import subprocess
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Set
+from collections import defaultdict
+import configparser
+
+
+def load_config() -> Dict[str, Set[str]]:
+    """Load configuration from .problem_generator_config file."""
+    config_file = REPO_ROOT / "scripts" / "config" / ".problem_generator_config"
+    
+    # Default configuration (fallback)
+    default_config = {
+        "ignore_folders": {"helpers", "sorts", "python", ".idea*", "fileTemplates*", "cpp", "venv", "target", "build", "out", "node_modules"},
+        "file_extensions": {".py", ".java", ".js", ".ts", ".tsx"},
+        "helper_files": {"node", "pair", "listnode", "doublylistnode", "treenode", "listbuilder", "treebuilder", "commonmethods", "nestedinteger", "nestedintegervalue", "customkey", "user", "split", "expensetype", "percentexpense", "main", "keyvaluestore"},
+        "non_company_tags": {"easy", "medium", "hard", "editorial", "optimalsolution", "array", "string", "hashtable", "dynamicprogramming", "linkedlist", "tree", "graph", "binarysearch", "twopointers", "stack", "heap", "backtracking", "slidingwindow", "design", "math", "recursion", "dfs", "bfs", "greedy", "sorting", "binarytree", "matrix", "leetcodelockedproblem", "premiumquestion", "duplicate", "similar", "extension", "dpbaseproblem", "baseproblem", "ref", "link", "p", "pp"}
+    }
+    
+    if not config_file.exists():
+        print(f"Config file not found at {config_file}. Using default configuration.")
+        return default_config
+    
+    try:
+        config = configparser.ConfigParser()
+        config.read(config_file)
+        
+        loaded_config = {}
+        for section_name in default_config.keys():
+            if section_name in config:
+                # Parse the section values (one per line, ignoring comments)
+                section_values = set()
+                for key in config[section_name]:
+                    value = config[section_name][key].strip()
+                    if value and not value.startswith('#'):
+                        section_values.add(value)
+                
+                # If section is empty, fall back to default
+                if section_values:
+                    loaded_config[section_name] = section_values
+                else:
+                    loaded_config[section_name] = default_config[section_name]
+            else:
+                loaded_config[section_name] = default_config[section_name]
+        
+        print(f"✅ Configuration loaded from {config_file}")
+        return loaded_config
+        
+    except Exception as e:
+        print(f"⚠️ Error reading config file {config_file}: {e}")
+        print("Using default configuration.")
+        return default_config
+
 
 def get_current_git_branch():
+    """Get the current git branch name."""
     try:
-        # Run the 'git branch' command and capture its output
         result = subprocess.run(["git", "branch", "--show-current"],
                                 stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE,
                                 text=True,
                                 check=True)
-        # Return the branch name
         return result.stdout.strip()
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError:
         return "main"  # Default fallback
 
 
 def get_last_run_timestamp() -> float:
     """Get the last run timestamp from file, or 0 if not found."""
+    timestamp_file = REPO_ROOT / "scripts" / "config" / ".last_problems_run"
     try:
-        if TIMESTAMP_FILE.exists():
-            return float(TIMESTAMP_FILE.read_text().strip())
+        if timestamp_file.exists():
+            return float(timestamp_file.read_text().strip())
     except (ValueError, FileNotFoundError):
         pass
     return 0.0
@@ -56,61 +116,47 @@ def get_last_run_timestamp() -> float:
 
 def save_current_timestamp() -> None:
     """Save current timestamp to file."""
+    timestamp_file = REPO_ROOT / "scripts" / "config" / ".last_problems_run"
     current_time = time.time()
-    TIMESTAMP_FILE.write_text(str(current_time))
+    timestamp_file.write_text(str(current_time))
     print(f"Timestamp saved: {datetime.fromtimestamp(current_time).strftime('%Y-%m-%d %H:%M:%S')}")
 
 
-# Folders to ignore (exact segment name in path)
-IGNORE_FOLDERS = {"helpers", "sorts", "python"}
+# Repo root = directory containing this script (go up 2 levels since we're in scripts/generators/)
+_script_dir = Path(__file__).resolve().parent
+REPO_ROOT = _script_dir.parent.parent
 
-# File base names that are helpers only (no question) - skip these
-HELPER_FILE_NAMES = {
-    "node", "pair", "listnode", "doublylistnode", "treenode",
-    "listbuilder", "treebuilder", "commonmethods", "nestedinteger",
-    "nestedintegervalue", "customkey", "user", "split", "expensetype",
-    "percentexpense", "main", "keyvaluestore",
-}
+# Load configuration from file
+CONFIG = load_config()
+IGNORE_FOLDERS = CONFIG["ignore_folders"]
+CODE_EXTENSIONS = CONFIG["file_extensions"] 
+HELPER_FILE_NAMES = CONFIG["helper_files"]
+NON_COMPANY_TAGS = CONFIG["non_company_tags"]
 
 # Difficulty tags (case-insensitive)
 DIFFICULTY_PATTERN = re.compile(r"@(easy|medium|hard)\b", re.I)
-
-# Tags that are NOT company names (topic/difficulty/meta only)
-NON_COMPANY_TAGS = {
-    "easy", "medium", "hard", "editorial", "optimalsolution",
-    "array", "string", "hashtable", "dynamicprogramming", "linkedlist",
-    "tree", "graph", "binarysearch", "twopointers", "stack", "heap",
-    "backtracking", "slidingwindow", "design", "math", "recursion",
-    "dfs", "bfs", "greedy", "sorting", "binarytree", "matrix",
-    "leetcodelockedproblem", "premiumquestion", "duplicate", "similar",
-    "extension", "dpbaseproblem", "baseproblem", "ref", "link", "p", "pp",
-}
-
-# Repo root = directory containing this script (so it works when script is at repo root or in GsheetTrackers)
-_script_dir = Path(__file__).resolve().parent
-# If script is inside GsheetTrackers, repo root is its parent; else repo root is script dir
-REPO_ROOT = _script_dir.parent if _script_dir.name == "GsheetTrackers" else _script_dir
-CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
 
 # GitHub URL generation
 branch = get_current_git_branch()
 BASE_URL = f"https://github.com/nits2010/DataStructureAlgo/blob/{branch}"
 
-# Timestamp tracking for incremental updates
-TIMESTAMP_FILE = REPO_ROOT / ".last_company_list_run"
-
-# Scan entire repository for all files
-
 
 def path_should_ignore(rel_path: Path) -> bool:
+    """Check if path should be ignored based on IGNORE_FOLDERS."""
     parts = rel_path.parts
     for p in parts:
-        if p in IGNORE_FOLDERS:
-            return True
+        # Handle wildcard patterns like .idea*
+        for ignore_pattern in IGNORE_FOLDERS:
+            if ignore_pattern.endswith("*"):
+                if p.startswith(ignore_pattern[:-1]):
+                    return True
+            elif p == ignore_pattern:
+                return True
     return False
 
 
 def is_helper_file(base_name: str) -> bool:
+    """Check if file is a helper file (for company mode filtering)."""
     name_lower = base_name.lower()
     if name_lower in HELPER_FILE_NAMES:
         return True
@@ -122,11 +168,13 @@ def is_helper_file(base_name: str) -> bool:
 
 
 def normalize_tag(tag: str) -> str:
+    """Normalize a tag by removing @ prefix and whitespace."""
     t = tag.strip().lstrip("@").strip()
     return t
 
 
 def is_company_tag(tag: str) -> bool:
+    """Check if tag is a company name (not a topic/difficulty tag)."""
     if not tag or len(tag) < 2:
         return False
     t = tag.lower()
@@ -166,23 +214,23 @@ def extract_company_tags_from_section(lines: List[str], start_idx: int) -> Tuple
     return companies, i
 
 
-def extract_question_info(file_path: Path, content: str) -> Optional[dict]:
+def extract_question_info(file_path: Path, content: str) -> dict:
     """
     Parse file content for question title, link, and company tags.
-    Returns dict with keys: title, link, file_name, github_link, create_time, mod_time, companies; or None if no company tags.
+    Returns dict with keys: title, link, file_name, github_link, create_time, mod_time, companies, difficulty
+    Always returns information for all files, with empty companies list if no company tags found.
     """
     file_name = file_path.name
     base_name = file_path.stem
-    if is_helper_file(base_name):
-        return None
 
     title = ""
     link = ""
     companies = []
     difficulty = ""
 
-    # Python: docstring """ ... """
+    # Parse content based on file extension
     if file_path.suffix == ".py":
+        # Python: docstring """ ... """
         doc_match = re.search(r'"""([\s\S]*?)"""', content)
         if doc_match:
             block = doc_match.group(1)
@@ -190,8 +238,7 @@ def extract_question_info(file_path: Path, content: str) -> Optional[dict]:
             lines = block.split("\n")
             for i, line in enumerate(lines):
                 if re.match(r"Question Title:\s*", line, re.I):
-                    title = re.sub(r"Question Title:\s*", "",
-                                   line, flags=re.I).strip()
+                    title = re.sub(r"Question Title:\s*", "", line, flags=re.I).strip()
                 if re.match(r"Link:\s*", line, re.I):
                     link = re.sub(r"Link:\s*", "", line, flags=re.I).strip()
                 if "Company Tags" in line:
@@ -206,15 +253,11 @@ def extract_question_info(file_path: Path, content: str) -> Optional[dict]:
             difficulty = extract_difficulty(block)
             lines = block.split("\n")
             for i, line in enumerate(lines):
-                # Java: * Question Category: 21. Merge Two Sorted Lists [EASY] or Description: https://...
                 if not title and re.search(r"Question Category:\s*", line, re.I):
-                    title = re.sub(
-                        r"^[\s*]*Question Category:\s*", "", line, flags=re.I).strip()
-                    title = re.sub(r"\s*\[EASY\]\s*$", "",
-                                   title, flags=re.I).strip()
+                    title = re.sub(r"^[\s*]*Question Category:\s*", "", line, flags=re.I).strip()
+                    title = re.sub(r"\s*\[EASY\]\s*$", "", title, flags=re.I).strip()
                 if not title and re.search(r"Question Title:\s*", line, re.I):
-                    title = re.sub(r"^[\s*]*Question Title:\s*",
-                                   "", line, flags=re.I).strip()
+                    title = re.sub(r"^[\s*]*Question Title:\s*", "", line, flags=re.I).strip()
                 if not link and (re.search(r"Description:\s*https://leetcode", line, re.I) or re.search(r"Link:\s*https://", line, re.I)):
                     m = re.search(r"https://[^\s\)\]]+", line)
                     if m:
@@ -228,14 +271,12 @@ def extract_question_info(file_path: Path, content: str) -> Optional[dict]:
                     companies = comps
                     break
 
-    # Only include if we have at least one company tag
-    if not companies:
-        return None
-
+    # Set default title if not found
     if not title:
         title = base_name
+        
+    # Try to infer LeetCode link from filename
     if not link and "_" in base_name:
-        # Try to infer LeetCode link from filename like CoinChange_322 or _322
         num_match = re.search(r"_(\d+)$", base_name)
         if num_match:
             link = f"https://leetcode.com/problems/ (see #{num_match.group(1)})"
@@ -266,8 +307,6 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
     Group multiple solutions (Java/Python) for the same problem and merge them.
     Groups by question link and title, combining file information.
     """
-    from collections import defaultdict
-    
     # Group rows by problem identity (link + title as fallback)
     groups = defaultdict(list)
     for row in rows:
@@ -278,7 +317,6 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
         # Create a normalized key for grouping
         if link and link != "(no link)":
             # Extract problem number from link if possible for better matching
-            import re
             prob_num_match = re.search(r'/problems/[^/]+', link)
             if prob_num_match:
                 key = link  # Use full link as key
@@ -304,9 +342,7 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
 
 
 def merge_problem_solutions(solutions: List[dict]) -> dict:
-    """
-    Merge multiple solutions for the same problem into a single row.
-    """
+    """Merge multiple solutions for the same problem into a single row."""
     if len(solutions) == 1:
         return solutions[0]
     
@@ -351,10 +387,7 @@ def merge_problem_solutions(solutions: List[dict]) -> dict:
 
 
 def choose_best_title(titles: List[str]) -> str:
-    """
-    Choose the best title from a list of titles for the same problem.
-    Prefer more complete or generic titles.
-    """
+    """Choose the best title from a list of titles for the same problem."""
     if not titles:
         return ""
     
@@ -393,11 +426,17 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
     """
     out = []
     root_str = str(root)
-    for dirpath, _dirnames, filenames in os.walk(root):
-        rel = Path(dirpath).relative_to(
-            root) if dirpath != root_str else Path(".")
+    for dirpath, dirnames, filenames in os.walk(root):
+        # Filter out ignored directories in-place to prevent walking them
+        dirnames[:] = [d for d in dirnames if not any(
+            d.startswith(ignore[:-1]) if ignore.endswith("*") else d == ignore
+            for ignore in IGNORE_FOLDERS
+        )]
+        
+        rel = Path(dirpath).relative_to(root) if dirpath != root_str else Path(".")
         if path_should_ignore(rel):
             continue
+            
         for f in filenames:
             p = Path(dirpath) / f
             if p.suffix not in CODE_EXTENSIONS:
@@ -406,9 +445,7 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
             # Check if file was created/modified after the given timestamp
             try:
                 file_stat = p.stat()
-                # Use creation time (birthtime on macOS, ctime on other systems)
                 file_create_time = getattr(file_stat, 'st_birthtime', file_stat.st_ctime)
-                # For incremental updates, check both creation and modification time
                 file_mod_time = file_stat.st_mtime
                 latest_time = max(file_create_time, file_mod_time)
                 
@@ -427,7 +464,8 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
             else:
                 priority = 2
             out.append((priority, p))
-    # Deduplicate by resolved path (e.g. symlinks or same file via different rel path)
+            
+    # Deduplicate by resolved path
     seen = set()
     unique = []
     for pri, p in out:
@@ -439,32 +477,14 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
     return unique
 
 
-def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: str = "newest") -> str:
-    if output_md is None:
-        output_md = REPO_ROOT / "CompanyQuestionList.md"
+def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "newest", incremental: bool = True, since_timestamp: float = 0.0) -> str:
+    """Generate ProblemsList.md with all files in the repository using company question list format."""
+    output_md = REPO_ROOT / "scripts" / "generated" / "ProblemsList.md"
     
-    # Get last run timestamp for incremental updates
-    last_timestamp = get_last_run_timestamp() if incremental else 0.0
-    
-    if incremental and last_timestamp > 0:
-        print(f"Incremental update since: {datetime.fromtimestamp(last_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
-    else:
-        print("Full scan (no previous timestamp found or incremental disabled)")
+    print(f"Processing {len(files)} files for ProblemsList.md...")
     
     rows = []
-    seen_paths = set()  # resolved path to avoid duplicate files
-
-    files = collect_files(REPO_ROOT, since_timestamp=last_timestamp)
-    
-    if not files:
-        if incremental and last_timestamp > 0:
-            print("No files modified since last run. No update needed.")
-            return str(output_md)
-        else:
-            print("No files found matching criteria.")
-            return str(output_md)
-    
-    print(f"Processing {len(files)} files...")
+    seen_paths = set()
     
     for _priority, path in files:
         try:
@@ -474,12 +494,12 @@ def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: 
             content = path.read_text(encoding="utf-8", errors="replace")
         except Exception:
             continue
+        
         info = extract_question_info(path, content)
-        if info is None:
-            continue
         seen_paths.add(resolved)
         rows.append(info)
-    # Deduplicate rows by (title, link, file_name, github_link) in case same file was scanned twice
+    
+    # Deduplicate rows by (title, link, file_name, github_link)
     seen_row = set()
     unique_rows = []
     for r in rows:
@@ -495,30 +515,30 @@ def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: 
     # Sort by creation time based on sort_order
     reverse_sort = sort_order.lower() == "newest"
     rows.sort(key=lambda x: x["create_time"], reverse=reverse_sort)
-    # Build markdown table with unified structure
+    
+    # Generate markdown content
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     sort_desc = "newest first" if sort_order.lower() == "newest" else "oldest first"
+    
     md_lines = [
-        "# Company-based question list",
+        "# Problems List",
         "",
         f"**Generated on:** {current_time}",
         f"**Sort order:** {sort_desc}",
     ]
     
-    if incremental and last_timestamp > 0:
-        md_lines.append(f"**Incremental update since:** {datetime.fromtimestamp(last_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
+    if incremental and since_timestamp > 0:
+        md_lines.append(f"**Incremental update since:** {datetime.fromtimestamp(since_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
     else:
         md_lines.append("**Mode:** Full scan")
     
-    md_lines.append("")
-    
-    # Table headers with new structure
     md_lines.extend([
+        "",
         "| # | Question Title | Question Link | File Name | Difficulty | Company Tags |",
         "|---|----------------|---------------|-----------|------------|--------------|",
     ])
     
-    # Generate table rows with new format
+    # Generate table rows
     for idx, r in enumerate(rows, 1):
         # Escape pipe characters for markdown
         title_esc = r["title"].replace("|", "\\|").strip()
@@ -528,7 +548,7 @@ def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: 
         if question_link and question_link != "(no link)":
             link_esc = f"[Link]({question_link})".replace("|", "\\|")
         else:
-            link_esc = "(no link)"
+            link_esc = "-"
         
         # File name with GitHub link (handle combined files)
         if r['github_link']:
@@ -541,8 +561,11 @@ def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: 
         # Difficulty
         diff = r.get("difficulty", "").title() if r.get("difficulty") else "-"
         
-        # Company tags
-        tags_esc = ", ".join(r["companies"]).replace("|", "\\|")
+        # Company tags - show "-" if no company tags
+        if r["companies"]:
+            tags_esc = ", ".join(r["companies"]).replace("|", "\\|")
+        else:
+            tags_esc = "-"
         
         md_lines.append(f"| {idx} | {title_esc} | {link_esc} | {file_link} | {diff} | {tags_esc} |")
     
@@ -550,20 +573,74 @@ def run(output_md: Optional[Path] = None, incremental: bool = True, sort_order: 
     md_content = "\n".join(md_lines)
     output_md.write_text(md_content, encoding="utf-8")
     
+    print(f"Generated ProblemsList.md with {len(rows)} entries (sorted by creation date, {sort_desc})")
+    return str(output_md)
+
+
+def show_config() -> None:
+    """Display current configuration."""
+    print("📋 Current Problem Generator Configuration:")
+    print(f"   Config file: {REPO_ROOT / 'scripts' / 'config' / '.problem_generator_config'}")
+    print(f"   Output file: {REPO_ROOT / 'scripts' / 'generated' / 'ProblemsList.md'}")
+    print(f"   Ignore folders: {sorted(IGNORE_FOLDERS)}")
+    print(f"   File extensions: {sorted(CODE_EXTENSIONS)}")
+    print(f"   Helper files: {sorted(HELPER_FILE_NAMES)}")
+    print(f"   Non-company tags: {len(NON_COMPANY_TAGS)} tags")
+    print()
+
+
+def run(incremental: bool = True, sort_order: str = "newest") -> str:
+    """
+    Main function to generate comprehensive problems list.
+    
+    Args:
+        incremental: Use timestamp-based incremental updates
+        sort_order: "newest" or "oldest"
+    
+    Returns:
+        Generated file path
+    """
+    # Get last run timestamp
+    last_timestamp = get_last_run_timestamp() if incremental else 0.0
+    
+    if incremental and last_timestamp > 0:
+        print(f"Incremental update since: {datetime.fromtimestamp(last_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
+    else:
+        print("Full scan (no previous timestamp found or incremental disabled)")
+    
+    # Collect files based on timestamp
+    files = collect_files(REPO_ROOT, since_timestamp=last_timestamp)
+    
+    if not files:
+        if incremental and last_timestamp > 0:
+            print("No files modified since last run. No update needed.")
+            return str(REPO_ROOT / "scripts" / "generated" / "ProblemsList.md")
+        else:
+            print("No files found matching criteria.")
+            return str(REPO_ROOT / "scripts" / "generated" / "ProblemsList.md")
+    
+    # Generate the comprehensive problems list
+    result_path = generate_problems_list(files, sort_order, incremental, last_timestamp)
+    
     # Save timestamp after successful completion
     save_current_timestamp()
     
-    sort_desc = "newest first" if sort_order.lower() == "newest" else "oldest first"
-    print(f"Generated {len(rows)} entries (sorted by creation date, {sort_desc})")
-    return output_md
+    return result_path
 
 
 if __name__ == "__main__":
     import sys
+    
+    # Check for config display request
+    if "--show-config" in sys.argv:
+        show_config()
+        sys.exit(0)
+    
+    # Parse command line arguments
     incremental = "--force-full" not in sys.argv  # Use --force-full to disable incremental
+    sort_order = "newest"  # default
     
     # Parse sort order argument
-    sort_order = "newest"  # default
     for i, arg in enumerate(sys.argv):
         if arg == "--sort-order" and i + 1 < len(sys.argv):
             next_arg = sys.argv[i + 1].lower()
@@ -574,8 +651,15 @@ if __name__ == "__main__":
                 sys.exit(1)
             break
     
-    out = run(incremental=incremental, sort_order=sort_order)
-    
-    update_desc = "incremental" if incremental else "full scan"
-    sort_desc = "newest first" if sort_order == "newest" else "oldest first"
-    print(f"Mode: FULL ({update_desc}, {sort_desc}). Wrote: {out}")
+    # Run the generator
+    try:
+        generated_file = run(incremental=incremental, sort_order=sort_order)
+        
+        update_desc = "incremental" if incremental else "full scan"
+        sort_desc = "newest first" if sort_order == "newest" else "oldest first"
+        print(f"\n✅ COMPLETED: Update={update_desc}, Sort={sort_desc}")
+        print(f"   Generated: {generated_file}")
+            
+    except Exception as e:
+        print(f"❌ ERROR: {e}")
+        sys.exit(1)

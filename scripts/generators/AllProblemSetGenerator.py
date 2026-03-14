@@ -17,13 +17,12 @@ def get_current_git_branch():
 
 # Define the base path of your local repository and GitHub URL
 branch = get_current_git_branch()
-# import os
-base_path = os.path.dirname(os.path.abspath(__file__))
-# base_path = r"E:\Study\DataStructureAlgo"
+# Repository root (go up 2 levels from scripts/generators/)
+base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 base_url = "https://github.com/nits2010/DataStructureAlgo/blob/" + branch
 
-# Path for the Markdown file
-md_file_path = 'AllProblems.md'
+# Path for the Markdown file (output to scripts/generated/)
+md_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "generated", "AllProblems.md")
 
 # Step 1: Collect file details along with their creation time
 file_details = []

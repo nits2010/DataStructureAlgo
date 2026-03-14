@@ -1,0 +1,86 @@
+# Problem Generator Configuration
+# This file controls which folders and files to ignore when generating problem lists
+# Format: key = value (one per line)
+
+[ignore_folders]
+# Folders to ignore during scanning (supports wildcards with *)
+1 = helpers
+2 = sorts  
+3 = python
+4 = .idea*
+5 = fileTemplates*
+6 = cpp
+7 = venv
+8 = target
+9 = build
+10 = out
+11 = node_modules
+
+[file_extensions]
+# File extensions to include in scanning
+1 = .py
+2 = .java
+3 = .js
+4 = .ts
+5 = .tsx
+
+[helper_files]
+# File base names that are helpers only (no actual problems) - skip these in company mode
+1 = node
+2 = pair
+3 = listnode
+4 = doublylistnode
+5 = treenode
+6 = listbuilder
+7 = treebuilder
+8 = commonmethods
+9 = nestedinteger
+10 = nestedintegervalue
+11 = customkey
+12 = user
+13 = split
+14 = expensetype
+15 = percentexpense
+16 = main
+17 = keyvaluestore
+
+[non_company_tags]
+# Tags that are NOT company names (topic/difficulty/meta tags only)
+1 = easy
+2 = medium
+3 = hard
+4 = editorial
+5 = optimalsolution
+6 = array
+7 = string
+8 = hashtable
+9 = dynamicprogramming
+10 = linkedlist
+11 = tree
+12 = graph
+13 = binarysearch
+14 = twopointers
+15 = stack
+16 = heap
+17 = backtracking
+18 = slidingwindow
+19 = design
+20 = math
+21 = recursion
+22 = dfs
+23 = bfs
+24 = greedy
+25 = sorting
+26 = binarytree
+27 = matrix
+28 = leetcodelockedproblem
+29 = premiumquestion
+30 = duplicate
+31 = similar
+32 = extension
+33 = dpbaseproblem
+34 = baseproblem
+35 = ref
+36 = link
+37 = p
+38 = pp
