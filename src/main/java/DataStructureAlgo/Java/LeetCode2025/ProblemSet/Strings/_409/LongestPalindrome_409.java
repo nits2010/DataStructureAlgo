@@ -9,8 +9,10 @@ import java.util.Map;
  * Author: Nitin Gupta
  * Date: 10/7/2024
  * Question Title: 409. Longest Palindrome
+ * Link: https://leetcode.com/problems/longest-palindrome/
  * Description:
- * Given a string s which consists of lowercase or uppercase letters, return the length of the longest
+ * Given a string s which consists of lowercase or uppercase letters, return the
+ * length of the longest
  * palindrome
  * that can be built with those letters.
  * <p>
@@ -22,12 +24,14 @@ import java.util.Map;
  * <p>
  * Input: s = "abccccdd"
  * Output: 7
- * Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
+ * Explanation: One longest palindrome that can be built is "dccaccd", whose
+ * length is 7.
  * Example 2:
  * <p>
  * Input: s = "a"
  * Output: 1
- * Explanation: The longest palindrome that can be built is "a", whose length is 1.
+ * Explanation: The longest palindrome that can be built is "a", whose length is
+ * 1.
  * <p>
  * <p>
  * Constraints:
@@ -39,17 +43,21 @@ import java.util.Map;
  * Duplicate {@link}
  * Similar {@link}
  * extension {@link }
- * <p><p>
+ * <p>
+ * <p>
  * Tags
  * -----
  *
  * @easy
  * @HashTable
  * @String
- * @Greedy <p><p>
- * Company Tags
- * -----
- * <p><p>
+ * @Greedy
+ *         <p>
+ *         <p>
+ *         Company Tags
+ *         -----
+ *         <p>
+ *         <p>
  * @Editorial https://leetcode.com/problems/longest-palindrome/editorial/
  *
  */

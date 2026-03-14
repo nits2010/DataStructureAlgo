@@ -8,8 +8,11 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 9/1/2024
  * Question Title: 239. Sliding Window Maximum
+ * Link: https://leetcode.com/problems/sliding-window-maximum/
  * Description:
- * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window.
+ * You are given an array of integers nums, there is a sliding window of size k
+ * which is moving from the very left of the array to the very right. You can
+ * only see the k numbers in the window.
  * Each time the sliding window moves right by one position.
  * <p>
  * Return the max sliding window.
@@ -20,15 +23,16 @@ import java.util.*;
  * <p>
  * Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
  * Output: [3,3,5,5,6,7]
- * Explanation: https://leetcode.com/problems/sliding-window-maximum/description/
- * Window position                Max
- * ---------------               -----
- * [1  3  -1] -3  5  3  6  7       3
- * 1 [3  -1  -3] 5  3  6  7       3
- * 1  3 [-1  -3  5] 3  6  7       5
- * 1  3  -1 [-3  5  3] 6  7       5
- * 1  3  -1  -3 [5  3  6] 7       6
- * 1  3  -1  -3  5 [3  6  7]      7
+ * Explanation:
+ * https://leetcode.com/problems/sliding-window-maximum/description/
+ * Window position Max
+ * --------------- -----
+ * [1 3 -1] -3 5 3 6 7 3
+ * 1 [3 -1 -3] 5 3 6 7 3
+ * 1 3 [-1 -3 5] 3 6 7 5
+ * 1 3 -1 [-3 5 3] 6 7 5
+ * 1 3 -1 -3 [5 3 6] 7 6
+ * 1 3 -1 -3 5 [3 6 7] 7
  * Example 2:
  * <p>
  * Input: nums = [1], k = 1
@@ -53,13 +57,13 @@ import java.util.*;
  * @Array
  * @Queue
  * @SlidingWindow
- * [https://leetcode.com/tag/sliding-window/}
+ *                [https://leetcode.com/tag/sliding-window/}
  * @Heap(PriorityQueue)
- * @MonotonicQueue
+ *                      @MonotonicQueue
  *
- * <p>
- * Company Tags
- * -----
+ *                      <p>
+ *                      Company Tags
+ *                      -----
  * @Adobe
  * @Alibaba
  * @Amazon
@@ -81,14 +85,18 @@ import java.util.*;
  * @Wish
  * @Yelp
  * @Zenefits
- * @Salesforce <p>
+ * @Salesforce
+ *             <p>
  *
- * <p>
+ *             <p>
  * @Editorial
- * 1. https://leetcode.com/problems/sliding-window-maximum/solutions/871317/clear-thinking-process-with-picture-brute-force-to-mono-deque-python-java-javascript
- * 2. https://leetcode.com/problems/sliding-window-maximum/solutions/65881/o-n-solution-in-java-with-two-simple-pass-in-the-array
- * 3. https://leetcode.com/problems/sliding-window-maximum/solutions/458121/java-all-solutions-b-f-pq-deque-dp-with-explanation-and-complexity-
- * 4. https://algo.monster/problems/sliding_window_maximum
+ *            1.
+ *            https://leetcode.com/problems/sliding-window-maximum/solutions/871317/clear-thinking-process-with-picture-brute-force-to-mono-deque-python-java-javascript
+ *            2.
+ *            https://leetcode.com/problems/sliding-window-maximum/solutions/65881/o-n-solution-in-java-with-two-simple-pass-in-the-array
+ *            3.
+ *            https://leetcode.com/problems/sliding-window-maximum/solutions/458121/java-all-solutions-b-f-pq-deque-dp-with-explanation-and-complexity-
+ *            4. https://algo.monster/problems/sliding_window_maximum
  *
  *
  */

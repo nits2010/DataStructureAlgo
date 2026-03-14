@@ -12,10 +12,9 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date:16/08/24
  * Question Title: 1644. Lowest Common Ancestor of a Binary Tree II
- * Description:
- * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/
+ * Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/
  * https://leetcode.ca/all/1644.html
- *
+ * Description: 
  *
  * Given the root of a binary tree, return the lowest common ancestor (LCA) of two given nodes, p and q. If either node p or q does not exist in the tree, return null. All values of the nodes in the tree are unique.
  * <p>
