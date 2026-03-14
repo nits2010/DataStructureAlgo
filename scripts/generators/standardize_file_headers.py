@@ -530,7 +530,7 @@ def main():
         return
     
     standardizer = TemplateStandardizer()
-    files = collect_files(REPO_ROOT, poc=False)
+    files = collect_files(REPO_ROOT, since_timestamp=0.0)
     
     needs_standardization = []
     already_standard = []
@@ -557,8 +557,8 @@ def main():
             already_standard.append(path)
     
     # Create output directory
-    output_dir = REPO_ROOT / "tmp"
-    output_dir.mkdir(exist_ok=True)
+    output_dir = REPO_ROOT / "scripts" / "tmp"
+    output_dir.mkdir(parents=True, exist_ok=True)
     
     # Report analysis results
     analysis_report = output_dir / "HeaderStandardizationAnalysis.md"

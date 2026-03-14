@@ -69,7 +69,7 @@ except ImportError:
             "listbuilder", "treebuilder", "commonmethods", "main",
         }
 
-    def collect_files(root: Path, poc: bool):
+    def collect_files(root: Path, since_timestamp: float = 0.0):
         out = []
         root_str = str(root)
         for dirpath, _dirnames, filenames in os.walk(root):
@@ -466,7 +466,7 @@ def main():
         print("\nUse --identify to list files, or --fix to update (optionally with --dry-run).")
         return
 
-    files = collect_files(REPO_ROOT, poc=False)
+    files = collect_files(REPO_ROOT, since_timestamp=0.0)
     to_fix = []
     similar_template = []
 
