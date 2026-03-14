@@ -92,54 +92,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Optional, Tuple, Dict, Set
 from collections import defaultdict
-import configparser
 
-
-def load_config() -> Dict[str, Set[str]]:
-    """Load configuration from .problem_generator_config file."""
-    config_file = REPO_ROOT / "scripts" / "config" / ".problem_generator_config"
-    
-    # Default configuration (fallback)
-    default_config = {
-        "ignore_folders": {"helpers", "sorts", "python", ".idea*", "fileTemplates*", "cpp", "venv", "target", "build", "out", "node_modules"},
-        "file_extensions": {".py", ".java", ".js", ".ts", ".tsx"},
-        "helper_files": {"node", "pair", "listnode", "doublylistnode", "treenode", "listbuilder", "treebuilder", "commonmethods", "nestedinteger", "nestedintegervalue", "customkey", "user", "split", "expensetype", "percentexpense", "main", "keyvaluestore"},
-        "non_company_tags": {"easy", "medium", "hard", "editorial", "optimalsolution", "array", "string", "hashtable", "dynamicprogramming", "linkedlist", "tree", "graph", "binarysearch", "twopointers", "stack", "heap", "backtracking", "slidingwindow", "design", "math", "recursion", "dfs", "bfs", "greedy", "sorting", "binarytree", "matrix", "leetcodelockedproblem", "premiumquestion", "duplicate", "similar", "extension", "dpbaseproblem", "baseproblem", "ref", "link", "p", "pp"}
-    }
-    
-    if not config_file.exists():
-        print(f"Config file not found at {config_file}. Using default configuration.")
-        return default_config
-    
-    try:
-        config = configparser.ConfigParser()
-        config.read(config_file)
-        
-        loaded_config = {}
-        for section_name in default_config.keys():
-            if section_name in config:
-                # Parse the section values (one per line, ignoring comments)
-                section_values = set()
-                for key in config[section_name]:
-                    value = config[section_name][key].strip()
-                    if value and not value.startswith('#'):
-                        section_values.add(value)
-                
-                # If section is empty, fall back to default
-                if section_values:
-                    loaded_config[section_name] = section_values
-                else:
-                    loaded_config[section_name] = default_config[section_name]
-            else:
-                loaded_config[section_name] = default_config[section_name]
-        
-        print(f"✅ Configuration loaded from {config_file}")
-        return loaded_config
-        
-    except Exception as e:
-        print(f"⚠️ Error reading config file {config_file}: {e}")
-        print("Using default configuration.")
-        return default_config
+# Import unified configuration management
+from unified_config import config, REPO_ROOT, path_should_ignore as unified_path_should_ignore
 
 
 def get_current_git_branch():
@@ -174,16 +129,11 @@ def save_current_timestamp() -> None:
     print(f"Timestamp saved: {datetime.fromtimestamp(current_time).strftime('%Y-%m-%d %H:%M:%S')}")
 
 
-# Repo root = directory containing this script (go up 2 levels since we're in scripts/generators/)
-_script_dir = Path(__file__).resolve().parent
-REPO_ROOT = _script_dir.parent.parent
-
-# Load configuration from file
-CONFIG = load_config()
-IGNORE_FOLDERS = CONFIG["ignore_folders"]
-CODE_EXTENSIONS = CONFIG["file_extensions"] 
-HELPER_FILE_NAMES = CONFIG["helper_files"]
-NON_COMPANY_TAGS = CONFIG["non_company_tags"]
+# Configuration from unified config
+IGNORE_FOLDERS = config.ignore_folders
+CODE_EXTENSIONS = config.file_extensions 
+HELPER_FILE_NAMES = config.helper_files
+NON_COMPANY_TAGS = config.non_company_tags
 
 # Difficulty tags (case-insensitive)
 DIFFICULTY_PATTERN = re.compile(r"@(easy|medium|hard)\b", re.I)
@@ -194,17 +144,8 @@ BASE_URL = f"https://github.com/nits2010/DataStructureAlgo/blob/{branch}"
 
 
 def path_should_ignore(rel_path: Path) -> bool:
-    """Check if path should be ignored based on IGNORE_FOLDERS."""
-    parts = rel_path.parts
-    for p in parts:
-        # Handle wildcard patterns like .idea*
-        for ignore_pattern in IGNORE_FOLDERS:
-            if ignore_pattern.endswith("*"):
-                if p.startswith(ignore_pattern[:-1]):
-                    return True
-            elif p == ignore_pattern:
-                return True
-    return False
+    """Check if path should be ignored based on unified configuration."""
+    return unified_path_should_ignore(rel_path)
 
 
 def is_helper_file(base_name: str) -> bool:
@@ -631,14 +572,11 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
 
 def show_config() -> None:
     """Display current configuration."""
-    print("📋 Current Problem Generator Configuration:")
-    print(f"   Config file: {REPO_ROOT / 'scripts' / 'config' / '.problem_generator_config'}")
+    from unified_config import print_config_summary
+    print("📋 Unified Problem Generator Configuration:")
     print(f"   Output file: {REPO_ROOT / 'scripts' / 'generated' / 'ProblemsList.md'}")
-    print(f"   Ignore folders: {sorted(IGNORE_FOLDERS)}")
-    print(f"   File extensions: {sorted(CODE_EXTENSIONS)}")
-    print(f"   Helper files: {sorted(HELPER_FILE_NAMES)}")
-    print(f"   Non-company tags: {len(NON_COMPANY_TAGS)} tags")
     print()
+    print_config_summary()
 
 
 def run(incremental: bool = True, sort_order: str = "newest") -> str:
