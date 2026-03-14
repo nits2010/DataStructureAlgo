@@ -1,5 +1,57 @@
 #!/usr/bin/env python3
 """
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: unified_problem_generator
+Link: TODO: Add Link
+Description:
+Unified Problem Set Generator
+Generates a comprehensive markdown list of all coding problems in the repository.
+Each entry includes question title, link, file name, difficulty, and company tags (if any).
+Features:
+- Single comprehensive output: ProblemsList.md with all files in repository
+- Incremental updates: Only processes files created/modified since last run
+- Timestamp tracking: Maintains .last_run timestamp
+- Configurable sort order: Sort by creation date (newest first or oldest first)
+- GitHub file links: Uses current git branch for file links
+- Advanced parsing: Extracts question titles, links, difficulty, and company tags from comments
+- Global configuration: Uses .problem_generator_config for all settings
+Usage:
+python3 unified_problem_generator.py                               # Generate ProblemsList.md (default)
+python3 unified_problem_generator.py --force-full                  # Full scan ignoring timestamps
+python3 unified_problem_generator.py --sort-order oldest           # Sort oldest files first
+python3 unified_problem_generator.py --sort-order newest           # Sort newest files first (default)
+python3 unified_problem_generator.py --show-config                 # Display current configuration
+Output Format:
+- File: ProblemsList.md
+- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- All files included, company tags column shows "-" if no tags found
+Configuration:
+- Configuration file: .problem_generator_config (in repository root)
+- Supports ignore folders, file extensions, helper files, and non-company tags
+- Easily customizable without modifying code
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
+"""
 Unified Problem Set Generator
 
 Generates a comprehensive markdown list of all coding problems in the repository.

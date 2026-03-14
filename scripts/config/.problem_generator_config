@@ -15,6 +15,10 @@
 9 = build
 10 = out
 11 = node_modules
+12 = scripts
+13 = DSA_Pattern
+14 = .*
+
 
 [file_extensions]
 # File extensions to include in scanning

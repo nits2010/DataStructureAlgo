@@ -1,12 +1,48 @@
 #!/usr/bin/env python3
 """
-Standardize file headers to match the standard templates.
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: standardize_file_headers
+Link: TODO: Add Link
+Description:
+Standardize file headers to match the standard templates using unified configuration.
+This script ensures all Java and Python files follow the standard template format:
+- Java: /** */ comment block with standard fields
+- Python:
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
+"""
+Standardize file headers to match the standard templates using unified configuration.
 
 This script ensures all Java and Python files follow the standard template format:
 - Java: /** */ comment block with standard fields
 - Python: """ """ docstring with standard fields
 
-1. Scans all .java and .py files (excluding ignored folders)
+Configuration: Uses scripts/config/.problem_generator_config for:
+- ignore_folders: Which directories to skip during scanning
+- file_extensions: Which file types to process (.py, .java, etc.)
+- helper_files: Base names of helper files to skip
+
+1. Scans all configured file types (excluding ignored folders)
 2. Checks if files have the proper header format matching templates
 3. Updates ONLY the header comment to match template (preserves rest of file)
 4. Maintains existing Question Title and Link if they exist and are valid
@@ -16,42 +52,106 @@ Usage:
   python3 standardize_file_headers.py --fix        # Update file headers to standard format
   python3 standardize_file_headers.py --fix --dry-run  # Show what would be changed
 
-Templates: fileTemplate.py (Python), fileTemplate.java (Java)
+Templates: scripts/templates/fileTemplate.py (Python), scripts/templates/fileTemplate.java (Java)
 """
 
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Set
 
-# Reuse logic from existing script
+# Repository root (go up 2 levels from scripts/generators/)
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+CONFIG_FILE = REPO_ROOT / "scripts" / "config" / ".problem_generator_config"
+
+
+def parse_unified_config(config_path: Path) -> Dict[str, any]:
+    """Parse the unified configuration file."""
+    config = {
+        "ignore_folders": set(),
+        "file_extensions": set(), 
+        "helper_files": set(),
+        "non_company_tags": set()
+    }
+    
+    if not config_path.exists():
+        print(f"Warning: Config file not found at {config_path}, using defaults")
+        return {
+            "ignore_folders": {"helpers", "sorts", "python", ".idea*", "fileTemplates*"},
+            "file_extensions": {".py", ".java", ".js", ".ts", ".tsx"},
+            "helper_files": {"node", "pair", "listnode", "doublylistnode", "treenode", 
+                           "listbuilder", "treebuilder", "commonmethods", "main"},
+            "non_company_tags": set()
+        }
+    
+    current_section = None
+    
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                
+                # Skip empty lines and comments
+                if not line or line.startswith('#'):
+                    continue
+                
+                # Section headers
+                if line.startswith('[') and line.endswith(']'):
+                    current_section = line[1:-1]
+                    continue
+                
+                # Key-value pairs
+                if '=' in line and current_section:
+                    _, value = line.split('=', 1)
+                    value = value.strip()
+                    
+                    if current_section in config:
+                        config[current_section].add(value)
+    
+    except Exception as e:
+        print(f"Error reading config file: {e}")
+        return parse_unified_config(Path("nonexistent"))  # Return defaults
+    
+    return config
+
+
+# Load configuration
+config = parse_unified_config(CONFIG_FILE)
+IGNORE_FOLDERS = config["ignore_folders"]
+CODE_EXTENSIONS = config["file_extensions"] 
+HELPER_FILES = config["helper_files"]
+
+
+def path_should_ignore(rel_path: Path) -> bool:
+    """Check if path should be ignored based on configuration."""
+    for part in rel_path.parts:
+        for ignore_pattern in IGNORE_FOLDERS:
+            if ignore_pattern.endswith('*'):
+                # Wildcard pattern
+                if part.startswith(ignore_pattern[:-1]):
+                    return True
+            else:
+                # Exact match
+                if part == ignore_pattern:
+                    return True
+    return False
+
+
+def is_helper_file(base_name: str) -> bool:
+    """Check if file is a helper file based on configuration."""
+    return base_name.lower() in HELPER_FILES
+
+
+# Try to import from build_company_question_list, otherwise use local functions
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
-    from build_company_question_list import (
-        REPO_ROOT,
-        path_should_ignore,
-        is_helper_file,
-        collect_files,
-        CODE_EXTENSIONS,
-    )
+    from build_company_question_list import collect_files
 except ImportError:
     import os
-    # Repository root (go up 2 levels from scripts/generators/)
-    REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-    IGNORE_FOLDERS = {"helpers", "sorts", "python", ".idea*", "fileTemplates*"}
-    CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
-
-    def path_should_ignore(rel_path: Path) -> bool:
-        return any(p in IGNORE_FOLDERS for p in rel_path.parts)
-
-    def is_helper_file(base_name: str) -> bool:
-        return base_name.lower() in {
-            "node", "pair", "listnode", "doublylistnode", "treenode",
-            "listbuilder", "treebuilder", "commonmethods", "main",
-        }
-
-    def collect_files(root: Path, poc: bool):
+    
+    def collect_files(root: Path, since_timestamp: float = 0.0):
+        """Collect files for processing using unified configuration."""
         out = []
         root_str = str(root)
         for dirpath, _dirnames, filenames in os.walk(root):
@@ -465,16 +565,20 @@ Company Tags
         return True
 
     def replace_header(self, content: str, is_python: bool, filename: str = "") -> str:
-        """Add standardized header at the top of file, preserving all existing content."""
-        # Extract existing info for intelligent merging
+        """Replace existing header with standardized version, preserving valuable content."""
+        
+        # Extract existing info for intelligent merging BEFORE removing headers
         existing_info = self.extract_existing_info(content, is_python)
         
-        # Generate merged header that preserves valuable content
-        new_header = self.generate_merged_header(is_python, existing_info, filename)
-        
         if is_python:
-            # SIMPLE APPROACH FOR PYTHON: Always add header at the very top
-            lines = content.split('\n')
+            # PYTHON: Remove existing docstring first, then generate and add new header
+            content_without_header = self._remove_existing_python_header(content)
+            
+            # Force new header generation since we removed existing headers
+            existing_info["has_standard_template"] = False
+            new_header = self.generate_merged_header(is_python, existing_info, filename)
+            
+            lines = content_without_header.split('\n')
             
             # Find insertion point (after shebang only)
             insert_pos = 0
@@ -487,8 +591,14 @@ Company Tags
             
             return '\n'.join(lines)
         else:
-            # SIMPLE APPROACH FOR JAVA: Add header after package/imports
-            lines = content.split('\n')
+            # JAVA: Remove existing comments first, then generate and add new header
+            content_without_header = self._remove_existing_java_header(content)
+            
+            # Force new header generation since we removed all existing headers
+            existing_info["has_standard_template"] = False
+            new_header = self.generate_merged_header(is_python, existing_info, filename)
+            
+            lines = content_without_header.split('\n')
             
             # Find insertion point after package/imports
             insert_pos = 0
@@ -507,12 +617,132 @@ Company Tags
             lines.insert(insert_pos + 1, '')  # Add blank line after header
             
             return '\n'.join(lines)
+    
+    def _remove_existing_python_header(self, content: str) -> str:
+        """Remove existing Python docstring at file level."""
+        lines = content.split('\n')
+        start_idx = 0
+        
+        # Skip shebang
+        if lines and lines[0].startswith('#!'):
+            start_idx = 1
+        
+        # Skip comments and empty lines at the beginning
+        while start_idx < len(lines):
+            line = lines[start_idx].strip()
+            if not line or line.startswith('#'):
+                start_idx += 1
+            elif line.startswith('"""'):
+                # Found docstring - remove it
+                return self._remove_docstring_from_position(content, start_idx)
+            else:
+                break
+        
+        return content
+    
+    def _remove_existing_java_header(self, content: str) -> str:
+        """Remove ALL existing Java /** */ comments at file level."""
+        lines = content.split('\n')
+        
+        # Skip package/import lines to find where comments can be removed from
+        skip_until = 0
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if (stripped.startswith('package ') or 
+                stripped.startswith('import ') or
+                stripped == '' or
+                stripped.startswith('//')):
+                skip_until = i + 1
+            else:
+                break
+        
+        # Remove ALL /** */ comment blocks after package/imports
+        i = skip_until
+        while i < len(lines):
+            line = lines[i].strip()
+            
+            if line.startswith('/**'):
+                # Found start of comment block - find end and remove
+                comment_start = i
+                comment_end = -1
+                
+                # Check if single line comment
+                if '*/' in line:
+                    comment_end = i
+                else:
+                    # Multi-line comment - find end
+                    for j in range(i + 1, len(lines)):
+                        if '*/' in lines[j]:
+                            comment_end = j
+                            break
+                
+                if comment_end != -1:
+                    # Remove the comment block (inclusive)
+                    del lines[comment_start:comment_end + 1]
+                    
+                    # Remove following empty lines
+                    while (comment_start < len(lines) and 
+                           lines[comment_start].strip() == ''):
+                        del lines[comment_start]
+                    
+                    # Continue from current position (don't increment i)
+                    continue
+            
+            elif line and not line.startswith('//'):
+                # Reached actual code - stop removing comments
+                break
+            
+            i += 1
+        
+        return '\n'.join(lines)
+    
+    def _remove_docstring_from_position(self, content: str, start_pos: int) -> str:
+        """Remove docstring starting at given line position."""
+        lines = content.split('\n')
+        
+        if start_pos >= len(lines) or not lines[start_pos].strip().startswith('"""'):
+            return content
+        
+        # Find end of docstring
+        if lines[start_pos].count('"""') >= 2:
+            # Single line docstring
+            del lines[start_pos]
+        else:
+            # Multi-line docstring
+            end_pos = start_pos + 1
+            while end_pos < len(lines):
+                if '"""' in lines[end_pos]:
+                    break
+                end_pos += 1
+            
+            if end_pos < len(lines):
+                # Remove from start_pos to end_pos (inclusive)
+                del lines[start_pos:end_pos + 1]
+        
+        # Remove following empty lines
+        while (start_pos < len(lines) and 
+               lines[start_pos].strip() == ''):
+            del lines[start_pos]
+        
+        return '\n'.join(lines)
+
+
+def print_config_summary():
+    """Print a summary of the loaded configuration."""
+    print("📁 Configuration loaded from:", CONFIG_FILE)
+    print(f"   ✅ Ignore folders: {len(IGNORE_FOLDERS)} items")
+    print(f"      {', '.join(sorted(list(IGNORE_FOLDERS)))}")
+    print(f"   ✅ File extensions: {len(CODE_EXTENSIONS)} items")
+    print(f"      {', '.join(sorted(CODE_EXTENSIONS))}")  
+    print(f"   ✅ Helper files: {len(HELPER_FILES)} items")
+    print(f"      {', '.join(sorted(list(HELPER_FILES)))}")
+    print()
 
 
 def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description="Standardize file headers to match templates")
+    parser = argparse.ArgumentParser(description="Standardize file headers using unified configuration")
     parser.add_argument("--analyze", action="store_true", 
                        help="Show files that need standardization")
     parser.add_argument("--fix", action="store_true",
@@ -521,12 +751,19 @@ def main():
                        help="With --fix: show what would be changed without writing")
     parser.add_argument("--limit", type=int, default=0,
                        help="Limit number of files to process (0 = all)")
+    parser.add_argument("--show-config", action="store_true",
+                       help="Show loaded configuration and exit")
     
     args = parser.parse_args()
+    
+    if args.show_config:
+        print_config_summary()
+        return
     
     if not args.analyze and not args.fix:
         parser.print_help()
         print("\nUse --analyze to list files needing standardization, or --fix to update headers.")
+        print("Use --show-config to see loaded configuration.")
         return
     
     standardizer = TemplateStandardizer()

@@ -1,5 +1,58 @@
 #!/usr/bin/env python3
 """
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: fix_question_headers
+Link: https://leetcode.com/api/problems/all/
+Description:
+Identify and fix question files with missing/invalid title or link.
+1. Identifies files that have Company Tags but missing/placeholder title or link
+(or don't follow the standard file template).
+2. For each such file: builds search query from class name / filename, searches
+(LeetCode first, then GeeksforGeeks, then other), updates only the header
+(Question Title + Link) without overriding the rest.
+3. Does NOT override files that already have a similar template (proper title +
+full URL). Those are reported in a separate .md file.
+Usage:
+python fix_question_headers.py --identify     # Only list files needing fix + report similar-template
+python fix_question_headers.py --fix          # Run search and update files (requires duckduckgo-search)
+python fix_question_headers.py --fix --dry-run # Show what would be updated, no writes
+python fix_question_headers.py --fix --limit 50  # Fix only first 50 files
+python fix_question_headers.py --fix --browser    # Open Google search in browser for each query; paste URL when prompted (or Enter for fallback)
+Outputs (in tmp/):
+- FilesNeedingFix_List.md: files with missing/placeholder title or link
+- FilesWithSimilarTemplate_Report.md: files not modified (already have template + full URL)
+- FilesNotFixed_NoLinkFound.md: (when using --fix) files for which no link was found
+Templates: fileTemplate.py (Python), fileTemplate.java (Java)
+Resolving links (no search needed for most files):
+- LeetCode API: For filenames ending with _NUMBER (e.g. MaximumSubarray_53), the script fetches the official
+LeetCode problem list (https://leetcode.com/api/problems/all/) and uses the exact problem slug. Cached under
+tmp/leetcode_problems_cache.json (24h). This fixes the "search not working" issue for standard
+LeetCode problems.
+- For files without _NUMBER: tries Google (googlesearch-python) then DuckDuckGo; if both return 0 results,
+uses a slug built from the filename. Use --fix --browser to open Google in the browser and paste the URL.
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
+"""
 Identify and fix question files with missing/invalid title or link.
 
 1. Identifies files that have Company Tags but missing/placeholder title or link

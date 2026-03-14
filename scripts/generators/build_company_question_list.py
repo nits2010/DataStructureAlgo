@@ -1,5 +1,48 @@
 #!/usr/bin/env python3
 """
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: build_company_question_list
+Link: TODO: Add Link
+Description:
+Scan repo for coding questions with company tags and generate a markdown table.
+Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+Features:
+- Incremental updates: Only processes files created/modified since last run
+- Timestamp tracking: Maintains .last_company_list_run file with timestamp
+- Configurable sort order: Sort by creation date (newest first or oldest first)
+- GitHub file links: Uses current git branch for file links
+Usage:
+python3 build_company_question_list.py                     # Incremental updates (newest first)
+python3 build_company_question_list.py --force-full        # Full scan ignoring timestamp
+python3 build_company_question_list.py --sort-order oldest # Sort oldest files first
+python3 build_company_question_list.py --sort-order newest # Sort newest files first (default)
+Priority: 1) LeetCode2025  2) CompanyWise  3) Other
+Ignore folders: helpers, sorts, python
+Skip: helper-only files (Node, Pair, ListNode, etc.). Include only files that have a "Company Tags" section in comments.
+Company tags are read from the comment block after "Company Tags" (e.g. @Amazon, @Google) until @Editorial/@OptimalSolution.
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
+"""
 Scan repo for coding questions with company tags and generate a markdown table.
 
 Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags

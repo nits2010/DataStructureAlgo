@@ -1,5 +1,35 @@
 #!/usr/bin/env python3
 """
+Author: Nitin Gupta
+Date: 2026-03-14
+Question Title: generate_problems
+Link: TODO: Add Link
+Description:
+Shortcut script to run the unified problem generator.
+This is a convenience script that forwards all arguments to the main generator
+located in scripts/generators/unified_problem_generator.py
+File reference
+-----------
+Duplicate {@link}
+Similar {@link}
+extension {@link }
+DP-BaseProblem {@link }
+<p><p>
+Tags
+-----
+
+<p><p>
+Company Tags
+-----
+<p>
+-----
+
+@Editorial <p><p>
+-----
+@OptimalSolution {@link }
+"""
+
+"""
 Shortcut script to run the unified problem generator.
 
 This is a convenience script that forwards all arguments to the main generator
