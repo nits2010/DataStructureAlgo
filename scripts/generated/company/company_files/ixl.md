@@ -1,4 +1,4 @@
-# Ixl Interview Questions
+# IXL Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

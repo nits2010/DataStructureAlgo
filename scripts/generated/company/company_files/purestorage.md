@@ -1,4 +1,4 @@
-# Purestorage Interview Questions
+# PureStorage Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

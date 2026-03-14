@@ -1,4 +1,4 @@
-# Pramp Interview Questions
+# pramp Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

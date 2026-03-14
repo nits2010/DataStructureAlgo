@@ -1,6 +1,5 @@
 import os
 import collections
-import string
 
 
 def split_md_by_company(input_file, output_folder):
@@ -11,35 +10,37 @@ def split_md_by_company(input_file, output_folder):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    # Dictionary to hold: { 'company_slug': [ [Tags, Title, Link, File, Diff], ... ] }
+    # Dictionary to hold the row data
     company_data = collections.defaultdict(list)
-
-    # Store the original casing of the company name for the header
+    # Dictionary to hold the "proper" name for the title
     company_names = {}
 
     with open(input_file, 'r', encoding='utf-8') as f:
-        for line in f:
-            clean_line = line.strip()
+        lines = f.readlines()
 
-            # Skip empty lines, main headers, or separators
-            if not clean_line or clean_line.startswith('#') or '---' in clean_line or 'Company Tags' in clean_line:
-                continue
+    for line in lines:
+        raw_line = line.strip()
 
-            # Extract columns (ignoring the original row number in cols[0])
-            cols = [c.strip() for c in clean_line.split('|') if c.strip()]
+        # Skip everything that isn't a data row
+        if not raw_line.startswith('|') or '---' in raw_line or 'Company Tags' in raw_line:
+            continue
 
-            if len(cols) >= 2:
-                tags_raw = cols[1]
-                remaining_cols = cols[1:]
+        # Split by pipe, but keep the whitespace intact for the inner columns
+        # [0] is empty (before first |), [1] is #, [2] is Tags, [3...] are the rest
+        parts = line.split('|')
 
-                tags = [t.strip() for t in tags_raw.split(',')]
-                for tag in tags:
-                    # Slug for filename (google_cloud)
-                    file_slug = tag.lower().replace(" ", "_")
-                    # Proper name for header (Google Cloud)
-                    company_names[file_slug] = string.capwords(tag)
+        if len(parts) >= 3:
+            tags_column = parts[2].strip()
+            # Everything from 'Company Tags' onwards
+            remaining_content_list = parts[2:]
 
-                    company_data[file_slug].append(remaining_cols)
+            tags = [t.strip() for t in tags_column.split(',')]
+            for tag in tags:
+                if not tag:
+                    continue
+                file_slug = tag.lower().replace(" ", "_")
+                company_names[file_slug] = tag
+                company_data[file_slug].append(remaining_content_list)
 
     # Generate the files
     for slug, rows in company_data.items():
@@ -47,20 +48,22 @@ def split_md_by_company(input_file, output_folder):
         display_name = company_names[slug]
 
         with open(file_path, 'w', encoding='utf-8') as out_f:
-            # 1. Top level Header
+            # Header matching your screenshot style
             out_f.write(f"# {display_name} Interview Questions\n\n")
-
-            # 2. Table Header
             out_f.write(
                 "| # | Company Tags | Question Title | Question Link | File Name | Difficulty |\n")
             out_f.write("|---|---|---|---|---|---|\n")
 
-            # 3. Data Rows with new numbering
-            for idx, data_cols in enumerate(rows, start=1):
-                row_content = " | ".join(data_cols)
-                out_f.write(f"| {idx} | {row_content} |\n")
+            for idx, content_list in enumerate(rows, start=1):
+                # Rebuild: | New Index | Original Tags | Original Title | etc...
+                # We use content_list which preserved the original spacing/newlines
+                row_str = "|".join(content_list)
+                out_f.write(f"| {idx} |{row_str}")
+                # Ensure the line ends with a newline
+                if not row_str.endswith('\n'):
+                    out_f.write('\n')
 
-        print(f"Generated: {file_path} ({len(rows)} entries)")
+        print(f"Generated: {file_path}")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# Aristanetworks Interview Questions
+# AristaNetworks Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

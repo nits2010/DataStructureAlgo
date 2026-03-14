@@ -1,4 +1,4 @@
-# Servicenow Interview Questions
+# ServiceNow Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

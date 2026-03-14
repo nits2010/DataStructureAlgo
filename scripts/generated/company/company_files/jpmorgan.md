@@ -1,4 +1,4 @@
-# Jpmorgan Interview Questions
+# JPMorgan Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

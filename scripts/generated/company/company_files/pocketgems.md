@@ -1,4 +1,4 @@
-# Pocketgems Interview Questions
+# PocketGems Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|

@@ -1,4 +1,4 @@
-# Irbnb Interview Questions
+# irbnb Interview Questions
 
 | # | Company Tags | Question Title | Question Link | File Name | Difficulty |
 |---|---|---|---|---|---|
