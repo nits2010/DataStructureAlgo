@@ -2,7 +2,7 @@
 Author: Nitin Gupta
 Date: 2026-03-14
 Question Title: 785
-Link: TODO: Add Link
+Link: https://leetcode.com/problems/785/
 Description:
 File reference
 -----------

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Gear Selection_submited
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/gear-selection_submited/
  * Description:
  * File reference
  * -----------

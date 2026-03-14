@@ -9,7 +9,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-07-23
  * Question Title: Square Of Numbers
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/square-of-numbers/
  * Description:
  * Description:
  * Given an array of integer in sorted manner, find the resultant array which contains squares of input array in sorted manner.

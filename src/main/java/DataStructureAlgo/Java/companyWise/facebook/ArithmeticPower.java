@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.companyWise.facebook;
  * Author: Nitin Gupta
  * Date: 2019-07-31
  * Question Title: Arithmetic Power
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/arithmetic-power/
  * Description:
  * Description: Given two integers x and n, write a function to compute x^n. Overflow can happen.
  * File reference

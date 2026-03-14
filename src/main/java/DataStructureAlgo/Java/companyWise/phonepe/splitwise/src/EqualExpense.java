@@ -6,7 +6,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Equal Expense
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/equal-expense/
  * Description:
  * File reference
  * -----------

@@ -10,7 +10,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-09-08
  * Question Title: Minimum Spanning Tree Test
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/minimum-spanning-tree-test/
  * Description:
  * Description:
  * File reference

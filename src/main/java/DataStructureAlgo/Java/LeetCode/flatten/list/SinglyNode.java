@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.LeetCode.flatten.list;
  * Author: Nitin Gupta
  * Date: 2019-08-31
  * Question Title: Singly Node
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/singly-node/
  * Description:
  * Description:
  * File reference

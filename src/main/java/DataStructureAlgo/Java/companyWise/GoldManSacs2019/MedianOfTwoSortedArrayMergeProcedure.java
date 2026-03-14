@@ -6,7 +6,7 @@ import  DataStructureAlgo.Java.LeetCode.medians.MedianOfTwoSortedArray;
  * Author: Nitin Gupta
  * Date: 2019-07-01
  * Question Title: Median Of Two Sorted Array Merge Procedure
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/median-of-two-sorted-array-merge-procedure/
  * Description:
  * Description:
  * <p>

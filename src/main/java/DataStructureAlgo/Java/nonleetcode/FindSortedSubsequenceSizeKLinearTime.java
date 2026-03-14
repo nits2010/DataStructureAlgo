@@ -3,7 +3,7 @@ package DataStructureAlgo.Java.nonleetcode;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Find Sorted Subsequence Size K Linear Time
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/find-sorted-subsequence-size-k-linear-time/
  * Description:
  * File reference
  * -----------

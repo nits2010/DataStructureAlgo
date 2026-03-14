@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.companyWise.GoldManSacs2019;
  * Author: Nitin Gupta
  * Date: 18/04/19
  * Question Title: Secure Channel
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/secure-channel/
  * Description:
  * Description:
  * Carer cup Persons A and B uses an encryption based system for their conversation.

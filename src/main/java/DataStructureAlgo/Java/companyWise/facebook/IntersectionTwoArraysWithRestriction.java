@@ -9,7 +9,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-09-02
  * Question Title: Intersection Two Arrays With Restriction
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/intersection-two-arrays-with-restriction/
  * Description:
  * Description:
  * Similar to this {@link IntersectionTwoArrays}, added restriction

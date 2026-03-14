@@ -9,7 +9,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Peeking Iterators
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/peeking-iterators/
  * Description:
  * File reference
  * -----------

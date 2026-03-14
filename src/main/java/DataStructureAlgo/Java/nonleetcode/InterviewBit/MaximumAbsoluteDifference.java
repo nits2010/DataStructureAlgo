@@ -7,7 +7,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-05-20
  * Question Title: Maximum Absolute Difference
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/maximum-absolute-difference/
  * Description:
  * Description:
  * File reference

@@ -6,7 +6,7 @@ import java.util.Stack;
  * Author: Nitin Gupta
  * Date: 2019-07-18
  * Question Title: Valid Push Pop Sequence In Stack
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/valid-push-pop-sequence-in-stack/
  * Description:
  * Description:
  * 1. Given push and pop sequence for a stack, need to tell that given pop sequence is valid or not.

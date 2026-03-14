@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Maximum Distance
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/maximum-distance/
  * Description:
  * File reference
  * -----------

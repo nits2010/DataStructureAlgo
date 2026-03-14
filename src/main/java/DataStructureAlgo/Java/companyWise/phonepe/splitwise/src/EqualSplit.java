@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.companyWise.phonepe.splitwise.src;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Equal Split
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/equal-split/
  * Description:
  * File reference
  * -----------

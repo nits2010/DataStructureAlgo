@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date: 2019-08-25
  * Question Title: X Power Y Greater Than Y Power X
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/x-power-y-greater-than-y-power-x/
  * Description:
  * Description:
  * Find number of pairs (x, y) in an array such that x^y > y^x
