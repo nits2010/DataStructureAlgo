@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 11/1/2024
- * Question Category: 2463. Minimum Total Distance Traveled
+ * Question Title: 2463. Minimum Total Distance Traveled
+ * Link: https://leetcode.com/problems/minimum-total-distance-traveled/
  * Description: https://leetcode.com/problems/minimum-total-distance-traveled/description/?envType=daily-question&envId=2024-10-31
  * There are some robots and factories on the X-axis. You are given an integer array robot where robot[i] is the position of the ith robot. You are also given a 2D integer array factory where factory[j] = [positionj, limitj] indicates that positionj is the position of the jth factory and that the jth factory can repair at most limitj robots.
  * <p>

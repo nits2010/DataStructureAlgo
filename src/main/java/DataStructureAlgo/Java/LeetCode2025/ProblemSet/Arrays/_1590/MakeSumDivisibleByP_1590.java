@@ -9,7 +9,8 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date:03/10/24
- * Question Category: 1590. Make Sum Divisible by P
+ * Question Title: 1590. Make Sum Divisible by P
+ * Link: https://leetcode.com/problems/make-sum-divisible-by-p/
  * Description: https://leetcode.com/problems/make-sum-divisible-by-p
  * Given an array of positive integers nums, remove the smallest subarray (possibly empty) such that the sum of the remaining elements is divisible by p. It is not allowed to remove the whole array.
  *

@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/4/2024
- * Question Category: 443. String Compression
+ * Question Title: 443. String Compression
+ * Link: https://leetcode.com/problems/string-compression
  * Description: https://leetcode.com/problems/string-compression/description/
  * Given an array of characters chars, compress it using the following algorithm:
  * <p>

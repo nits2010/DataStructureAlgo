@@ -9,7 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 10/27/2024
- * Question Category: 2458. Height of Binary Tree After Subtree Removal Queries
+ * Question Title: 2458. Height of Binary Tree After Subtree Removal Queries
+ * Link: https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/
  * Description: https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/description/?envType=daily-question&envId=2024-10-26
  * You are given the root of a binary tree with n nodes. Each node is assigned a unique value from 1 to n. You are also given an array queries of size m.
  * <p>

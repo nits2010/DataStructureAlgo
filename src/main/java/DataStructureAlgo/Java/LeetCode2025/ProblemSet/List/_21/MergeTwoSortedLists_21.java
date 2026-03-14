@@ -9,7 +9,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-27
- * Question Category: 21. Merge Two Sorted Lists [EASY]
+ * Question Title: 21. Merge Two Sorted Lists
+ * Link: https://leetcode.com/problems/merge-two-sorted-lists
  * Description: https://leetcode.com/problems/merge-two-sorted-lists
  *  *
  *  * Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.

@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 9/29/2024
- * Question Category: 432. All O`one Data Structure
+ * Question Title: 432. All O`one Data Structure
+ * Link: https://leetcode.com/problems/all-oone-data-structure/
  * Description: https://leetcode.com/problems/all-oone-data-structure/description/
  * Design a data structure to store the strings' count with the ability to return the strings with minimum and maximum counts.
  *

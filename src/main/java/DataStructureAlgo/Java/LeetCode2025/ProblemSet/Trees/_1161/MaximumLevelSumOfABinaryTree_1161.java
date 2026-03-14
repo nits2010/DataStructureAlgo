@@ -9,7 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/13/2024
- * Question Category: 1161. Maximum Level Sum of a Binary Tree
+ * Question Title: 1161. Maximum Level Sum of a Binary Tree
+ * Link: https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
  * Description: https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/
  *
  * <p>

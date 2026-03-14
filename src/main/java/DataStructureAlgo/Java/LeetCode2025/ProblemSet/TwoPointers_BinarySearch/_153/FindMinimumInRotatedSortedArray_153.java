@@ -9,7 +9,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 5/19/2025
  * Question Title: 153. Find Minimum in Rotated Sorted Array
- * Link:
+ * Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * Description: Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
  * <p>
  * [4,5,6,7,0,1,2] if it was rotated 4 times.

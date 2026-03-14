@@ -15,7 +15,8 @@ import java.util.Set;
 /**
  * Author: Nitin Gupta
  * Date:25/10/24
- * Question Category: 1233. Remove Sub-Folders from the Filesystem
+ * Question Title: 1233. Remove Sub-Folders from the Filesystem
+ * Link: https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/
  * Description: https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/description
  * Given a list of folders folder, return the folders after removing all sub-folders in those folders. You may return the answer in any order.
  * <p>

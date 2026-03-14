@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 92. Reverse Linked List II [ medium ]
+ * Question Title: 92. Reverse Linked List II [ medium ]
+ * Link: https://leetcode.com/problems/reverse-linked-list-ii-medium/
  * Description: https://leetcode.com/problems/reverse-linked-list-ii
  * Given the head of a singly linked list and two integers left and right where left <= right,
  * reverse the nodes of the list from position left to position right, and return the reversed list.

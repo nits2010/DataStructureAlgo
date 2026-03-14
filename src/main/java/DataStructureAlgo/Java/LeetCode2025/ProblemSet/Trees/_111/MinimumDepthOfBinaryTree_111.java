@@ -9,7 +9,8 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 8/12/2024
- * Question Category: 111. Minimum Depth of Binary Tree
+ * Question Title: 111. Minimum Depth of Binary Tree
+ * Link: https://leetcode.com/problems/minimum-depth-of-binary-tree/
  * Description: https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
  *
  * <p>

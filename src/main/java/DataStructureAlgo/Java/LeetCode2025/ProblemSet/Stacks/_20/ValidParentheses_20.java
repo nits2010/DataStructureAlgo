@@ -7,7 +7,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 2024-07-23
- * Question Category: 20. Valid Parentheses [easy]
+ * Question Title: 20. Valid Parentheses
+ * Link: https://leetcode.com/problems/valid-parentheses/
  * Description: https://leetcode.com/problems/valid-parentheses/description/
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
  * <p>

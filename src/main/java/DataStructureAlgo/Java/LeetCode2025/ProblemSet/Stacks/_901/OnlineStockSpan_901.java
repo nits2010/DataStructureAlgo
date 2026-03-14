@@ -6,7 +6,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 901. Online Stock Span [medium]
+ * Question Title: 901. Online Stock Span
+ * Link: https://leetcode.com/problems/online-stock-span/
  * Description: https://leetcode.com/problems/online-stock-span
  * <p>
  * Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.

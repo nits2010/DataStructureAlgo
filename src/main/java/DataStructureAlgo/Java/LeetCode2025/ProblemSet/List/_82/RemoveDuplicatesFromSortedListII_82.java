@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 82. Remove Duplicates from Sorted List II [ medium ]
+ * Question Title: 82. Remove Duplicates from Sorted List II [ medium ]
+ * Link: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii-medium/
  * Description:https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
  *
  * <p>

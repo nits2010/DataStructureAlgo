@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 10/19/2024
- * Question Category: 70. Climbing Stairs
+ * Question Title: 70. Climbing Stairs
+ * Link: https://leetcode.com/problems/climbing-stairs/
  * Description: https://leetcode.com/problems/climbing-stairs/description/
  * You are climbing a staircase. It takes n steps to reach the top.
  * <p>

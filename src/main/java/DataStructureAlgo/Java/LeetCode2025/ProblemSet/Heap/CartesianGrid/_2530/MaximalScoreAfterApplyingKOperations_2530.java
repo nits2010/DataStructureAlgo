@@ -7,7 +7,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date:14/10/24
- * Question Category: 2530. Maximal Score After Applying K Operations
+ * Question Title: 2530. Maximal Score After Applying K Operations
+ * Link: https://leetcode.com/problems/maximal-score-after-applying-k-operations/
  * Description: https://leetcode.com/problems/maximal-score-after-applying-k-operations/description/?envType=daily-question&envId=2024-10-14
  * You are given a 0-indexed integer array nums and an integer k. You have a starting score of 0.
  *

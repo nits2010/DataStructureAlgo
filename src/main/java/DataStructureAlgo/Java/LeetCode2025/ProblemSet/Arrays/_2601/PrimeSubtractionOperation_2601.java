@@ -7,7 +7,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/11/2024
- * Question Category:2601. Prime Subtraction Operation
+ * Question Title: 2601. Prime Subtraction Operation
  * Description:
  * You are given a 0-indexed integer array nums of length n.
  * <p>

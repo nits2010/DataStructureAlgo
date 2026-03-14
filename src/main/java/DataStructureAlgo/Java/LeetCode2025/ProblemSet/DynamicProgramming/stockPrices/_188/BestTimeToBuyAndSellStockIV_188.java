@@ -11,7 +11,8 @@ import DataStructureAlgo.Java.nonleetcode.Knapsack;
 /**
  * Author: Nitin Gupta
  * Date: 11/1/2024
- * Question Category: 188. Best Time to Buy and Sell Stock IV
+ * Question Title: 188. Best Time to Buy and Sell Stock IV
+ * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/
  * You are given an integer array prices where prices[i] is the price of a given stock on the ith day, and an integer k.
  * <p>

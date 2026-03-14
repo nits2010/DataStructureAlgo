@@ -8,7 +8,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:13/11/24
- * Question Category: 2563. Count the Number of Fair Pairs
+ * Question Title: 2563. Count the Number of Fair Pairs
+ * Link: https://leetcode.com/problems/count-the-number-of-fair-pairs/
  * Description: https://leetcode.com/problems/count-the-number-of-fair-pairs/description/
  * Given a 0-indexed integer array nums of size n and two integers lower and upper, return the number of fair pairs.
  * <p>

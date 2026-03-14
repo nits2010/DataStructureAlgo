@@ -9,7 +9,8 @@ import java.util.Random;
 /**
  * Author: Nitin Gupta
  * Date: 8/31/2024
- * Question Category: 215. Kth Largest Element in an Array
+ * Question Title: 215. Kth Largest Element in an Array
+ * Link: https://leetcode.com/problems/kth-largest-element-in-an-array/
  * Description: https://leetcode.com/problems/kth-largest-element-in-an-array/description/
  * Given an integer array nums and an integer k, return the kth largest element in the array.
  * <p>

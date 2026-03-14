@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * Author: Nitin Gupta
  * Date: 9/14/2024
- * Question Category: 286. Walls and Gates
+ * Question Title: 286. Walls and Gates
  * Description:
  * https://leetcode.com/problems/walls-and-gates/ ,
  * https://leetcode.ca/all/286.html

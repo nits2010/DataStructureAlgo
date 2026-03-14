@@ -1,6 +1,5 @@
 package DataStructureAlgo.Java.LeetCode2025.Discuss_Section._SegregateOddAndEvenNodesInList;
 
-
 import DataStructureAlgo.Java.helpers.CommonMethods;
 import DataStructureAlgo.Java.helpers.ListBuilder;
 import DataStructureAlgo.Java.helpers.templates.ListNode;
@@ -11,8 +10,39 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 08/01/2024
- * Question Category: Segregate Odd And Even Nodes In List
- * Description:https://leetcode.com/discuss/interview-question/2059848/segregate-even-and-odd-nodes-in-a-link-list-using-c-solution-timeon-spaceo1
+ * Question Title: Segregate Odd And Even Nodes In List
+ * Link: https://leetcode.com/problems/odd-even-linked-list/description/
+ * Description:Given the head of a singly linked list, group all the nodes with
+ * odd indices together followed by the nodes with even indices, and return the
+ * reordered list.
+ * 
+ * The first node is considered odd, and the second node is even, and so on.
+ * 
+ * Note that the relative order inside both the even and odd groups should
+ * remain as it was in the input.
+ * 
+ * You must solve the problem in O(1) extra space complexity and O(n) time
+ * complexity.
+ * 
+ * 
+ * 
+ * Example 1:
+ * 
+ * 
+ * Input: head = [1,2,3,4,5]
+ * Output: [1,3,5,2,4]
+ * Example 2:
+ * 
+ * 
+ * Input: head = [2,1,3,5,6,4,7]
+ * Output: [2,3,6,7,1,5,4]
+ * 
+ * 
+ * Constraints:
+ * 
+ * The number of nodes in the linked list is in the range [0, 104].
+ * -106 <= Node.val <= 106
+ * 
  * <p>
  * Segregate even and odd nodes in a Link List
  * <p>
@@ -30,28 +60,28 @@ import java.util.List;
  *
  * @medium
  * @LinkedList Company Tags
- * -----
+ *             -----
  * @Google
- * @Editorial <a href="https://leetcode.com/problems/odd-even-linked-list/solutions/5568483/simple-solution/">...</a>
+ * @Editorial <a href=
+ *            "https://leetcode.com/problems/odd-even-linked-list/solutions/5568483/simple-solution/">...</a>
  */
 public class SegregateOddAndEvenNodesInList {
 
     public static void main(String[] args) {
-        boolean testResult = true;
         List<Boolean> tests = new ArrayList<>();
 
-        tests.add(test(new Integer[]{17, 15, 8, 9, 2, 4, 6}, new Integer[]{8, 2, 4, 6, 17, 15, 9}));
-        tests.add(test(new Integer[]{17, 2}, new Integer[]{2, 17}));
-        tests.add(test(new Integer[]{17}, new Integer[]{17}));
-        tests.add(test(new Integer[]{2}, new Integer[]{2}));
-        tests.add(test(new Integer[]{2, 4, 6, 8}, new Integer[]{2, 4, 6, 8}));
-        tests.add(test(new Integer[]{1, 3, 5, 7}, new Integer[]{1, 3, 5, 7}));
+        tests.add(test(new Integer[] { 17, 15, 8, 9, 2, 4, 6 }, new Integer[] { 8, 2, 4, 6, 17, 15, 9 }));
+        tests.add(test(new Integer[] { 17, 2 }, new Integer[] { 2, 17 }));
+        tests.add(test(new Integer[] { 17 }, new Integer[] { 17 }));
+        tests.add(test(new Integer[] { 2 }, new Integer[] { 2 }));
+        tests.add(test(new Integer[] { 2, 4, 6, 8 }, new Integer[] { 2, 4, 6, 8 }));
+        tests.add(test(new Integer[] { 1, 3, 5, 7 }, new Integer[] { 1, 3, 5, 7 }));
         CommonMethods.printAllTestOutCome(tests);
     }
 
     private static boolean test(Integer[] input, Integer[] expected) {
-        //add print here
-        CommonMethods.printTest(new String[]{"input", "Expected"}, true, input, expected);
+        // add print here
+        CommonMethods.printTest(new String[] { "input", "Expected" }, true, input, expected);
 
         ListNode head = ListBuilder.arrayToSinglyList(input);
         ListNode expectedList = ListBuilder.arrayToSinglyList(expected);
@@ -63,20 +93,21 @@ public class SegregateOddAndEvenNodesInList {
         output = solution1.segregateOddAndEvenNodesInList(ListBuilder.arrayToSinglyList(input));
         pass = CommonMethods.equalsValues(expectedList, output);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"InList", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[] { "InList", "Pass" }, false, output, pass ? "Pass" : "Fail");
 
         Solution2 solution2 = new Solution2();
         output = solution2.segregateOddAndEvenNodesInListSepList(ListBuilder.arrayToSinglyList(input));
         pass = CommonMethods.equalsValues(expectedList, output);
         finalPass &= pass;
-        CommonMethods.printTest(new String[]{"Sep-List", "Pass"}, false, output, pass ? "Pass" : "Fail");
+        CommonMethods.printTest(new String[] { "Sep-List", "Pass" }, false, output, pass ? "Pass" : "Fail");
 
         return finalPass;
     }
 
     static class Solution1 {
         /**
-         * Since we need not maintain order, we can simply scan the list if the current node is odd, simply append at the end, however, if its even, skip it.
+         * Since we need not maintain order, we can simply scan the list if the current
+         * node is odd, simply append at the end, however, if its even, skip it.
          * Maintain the pointer, especially when the odd node is b/w the nodes.
          *
          * @param head
@@ -99,7 +130,7 @@ public class SegregateOddAndEvenNodesInList {
             int i = 1;
             while (temp != null && i <= length) {
 
-                //cache next node
+                // cache next node
                 ListNode next = temp.next;
                 if (temp.val % 2 != 0) {
                     if (temp == finalHead)
@@ -107,11 +138,11 @@ public class SegregateOddAndEvenNodesInList {
 
                     temp.next = null;
 
-                    //add at the end and update OddTail
+                    // add at the end and update OddTail
                     tail.next = temp;
                     tail = temp;
 
-                    //if this node is in b/w then detach it from prev node as well
+                    // if this node is in b/w then detach it from prev node as well
                     if (prev != null)
                         prev.next = next;
                 } else {
@@ -128,8 +159,10 @@ public class SegregateOddAndEvenNodesInList {
     static class Solution2 {
 
         /**
-         * Keep tracking the list, if you encounter a even node, then add it in even list otherwise add in odd list.
-         * While adding in list, we can add both type of node in its list at tail. Keep track of oddHead and oddTail while keep track evenTail.
+         * Keep tracking the list, if you encounter a even node, then add it in even
+         * list otherwise add in odd list.
+         * While adding in list, we can add both type of node in its list at tail. Keep
+         * track of oddHead and oddTail while keep track evenTail.
          * At last join both list.
          *
          * @param head
@@ -139,30 +172,27 @@ public class SegregateOddAndEvenNodesInList {
             if (head == null || head.next == null)
                 return head;
 
-
             ListNode evenTail = null;
             ListNode oddHead = null;
             ListNode oddTail = null;
             ListNode current = head;
             ListNode finalHead = head;
 
-
             while (current != null) {
 
                 ListNode next = current.next;
-                current.next = null; //we are adding at tail, hence need to disconnect node.
+                current.next = null; // we are adding at tail, hence need to disconnect node.
                 if (current.val % 2 != 0) {
-                    //detach lists
+                    // detach lists
 
-
-                    //add node to tail
+                    // add node to tail
                     if (oddTail != null)
                         oddTail.next = current;
 
-                    //updated tail
+                    // updated tail
                     oddTail = current;
 
-                    //if oddHead found
+                    // if oddHead found
                     if (oddHead == null) {
                         oddHead = oddTail;
                     }
@@ -171,11 +201,11 @@ public class SegregateOddAndEvenNodesInList {
                     if (evenTail == null)
                         finalHead = current;
 
-                    //add node to tail
+                    // add node to tail
                     if (evenTail != null)
                         evenTail.next = current;
 
-                    //updated tail
+                    // updated tail
                     evenTail = current;
                 }
                 current = next;

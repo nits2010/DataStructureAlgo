@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 8/22/2024
- * Question Category: 863. All Nodes Distance K in Binary Tree
+ * Question Title: 863. All Nodes Distance K in Binary Tree
+ * Link: https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
  * Description: https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description
  * Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.
  * <p>

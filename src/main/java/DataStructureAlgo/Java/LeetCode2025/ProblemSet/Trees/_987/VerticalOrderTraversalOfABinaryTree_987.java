@@ -9,7 +9,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/18/2024
- * Question Category: 987. Vertical Order Traversal of a Binary Tree
+ * Question Title: 987. Vertical Order Traversal of a Binary Tree
+ * Link: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
  * Description: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
  * Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
  * <p>

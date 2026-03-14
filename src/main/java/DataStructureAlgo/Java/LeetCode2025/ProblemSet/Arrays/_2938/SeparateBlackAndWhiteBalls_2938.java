@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:15/10/24
- * Question Category: 2938. Separate Black and White Balls
+ * Question Title: 2938. Separate Black and White Balls
+ * Link: https://leetcode.com/problems/separate-black-and-white-balls/
  * Description: https://leetcode.com/problems/separate-black-and-white-balls/description/?envType=daily-question&envId=2024-10-15
  * There are n balls on a table, each ball has a color black or white.
  * <p>

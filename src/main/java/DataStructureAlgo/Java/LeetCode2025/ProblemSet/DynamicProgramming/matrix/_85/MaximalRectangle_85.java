@@ -10,7 +10,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/17/2024
- * Question Category: 85. Maximal Rectangle
+ * Question Title: 85. Maximal Rectangle
+ * Link: https://leetcode.com/problems/maximal-rectangle/
  * Description:https://leetcode.com/problems/maximal-rectangle/description/
  * Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
  * <p>

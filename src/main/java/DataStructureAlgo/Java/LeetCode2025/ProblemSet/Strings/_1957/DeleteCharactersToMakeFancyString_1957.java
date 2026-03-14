@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/1/2024
- * Question Category: 1957.md. Delete Characters to Make Fancy String
+ * Question Title: 1957.md. Delete Characters to Make Fancy String
+ * Link: https://leetcode.com/problems/md-delete-characters-to-make-fancy-string/
  * Description: https://leetcode.com/problems/delete-characters-to-make-fancy-string/description/?envType=daily-question&envId=2024-11-01
  * A fancy string is a string where no three consecutive characters are equal.
  * <p>

@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/8/2024
- * Question Category: 1963. Minimum Number of Swaps to Make the String Balanced
+ * Question Title: 1963. Minimum Number of Swaps to Make the String Balanced
+ * Link: https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/
  * Description: https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/
  * You are given a 0-indexed string s of even length n. The string consists of exactly n / 2 opening brackets '[' and n / 2 closing brackets ']'.
  *

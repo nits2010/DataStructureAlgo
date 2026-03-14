@@ -8,7 +8,8 @@ import DataStructureAlgo.Java.helpers.templates.ListNode;
 /**
  * Author: Nitin Gupta
  * Date: 7/31/2024
- * Question Category: 1721. Swapping Nodes in a Linked List [medium]
+ * Question Title: 1721. Swapping Nodes in a Linked List
+ * Link: https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
  * Description: https://leetcode.com/problems/swapping-nodes-in-a-linked-list
  *
  * You are given the head of a linked list, and an integer k.

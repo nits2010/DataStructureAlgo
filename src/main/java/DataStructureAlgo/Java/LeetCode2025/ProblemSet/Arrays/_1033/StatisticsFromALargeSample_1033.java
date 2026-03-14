@@ -7,7 +7,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 9/2/2024
- * Question Category: 1093. Statistics from a Large Sample
+ * Question Title: 1093. Statistics from a Large Sample
+ * Link: https://leetcode.com/problems/statistics-from-a-large-sample/
  * Description: https://leetcode.com/problems/statistics-from-a-large-sample/description/
  * You are given a large sample of integers in the range [0, 255]. Since the sample is so large, it is represented by an array count where count[k] is the number of times that k appears in the sample.
  * <p>

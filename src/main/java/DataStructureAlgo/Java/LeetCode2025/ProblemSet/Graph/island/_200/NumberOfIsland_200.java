@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 9/11/2024
- * Question Category: 200. Number of Islands
+ * Question Title: 200. Number of Islands
+ * Link: https://leetcode.com/problems/number-of-islands/
  * Description: https://leetcode.com/problems/number-of-islands/description
  * Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
  *

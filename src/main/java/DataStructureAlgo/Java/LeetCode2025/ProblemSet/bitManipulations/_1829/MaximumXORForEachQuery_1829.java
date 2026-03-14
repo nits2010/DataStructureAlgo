@@ -7,7 +7,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 11/9/2024
- * Question Category: 1829. Maximum XOR for Each Query
+ * Question Title: 1829. Maximum XOR for Each Query
+ * Link: https://leetcode.com/problems/maximum-xor-for-each-query/
  * Description: https://leetcode.com/problems/maximum-xor-for-each-query/description/
  * You are given a sorted array nums of n non-negative integers and an integer maximumBit. You want to perform the following query n times:
  * <p>

@@ -8,7 +8,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 9/5/2024
- * Question Category: 1004. Max Consecutive Ones III
+ * Question Title: 1004. Max Consecutive Ones III
+ * Link: https://leetcode.com/problems/max-consecutive-ones-iii/
  * Description:https://leetcode.com/problems/max-consecutive-ones-iii/description/
  * Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
  * <p>

@@ -1,8 +1,8 @@
 """
 Author: Nitin Gupta
 Date: 8/29/2025
-Question Title:
-Link:
+Question Title: 2050.  Parallel  Courses III
+Link: https://leetcode.com/problems/parallel-courses-iii/
 Description:
 File reference
 -----------

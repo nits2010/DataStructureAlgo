@@ -10,7 +10,8 @@ import java.util.TreeMap;
 /**
  * Author: Nitin Gupta
  * Date: 8/3/2024
- * Question Category: 460. LFU Cache [hard]
+ * Question Title: 460. LFU Cache
+ * Link: https://leetcode.com/problems/lfu-cache/
  * Description: https://leetcode.com/problems/lfu-cache/description/
  *
  * <p>

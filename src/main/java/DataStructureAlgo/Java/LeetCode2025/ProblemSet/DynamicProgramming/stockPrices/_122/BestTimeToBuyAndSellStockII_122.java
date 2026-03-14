@@ -10,7 +10,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date: 10/14/2024
- * Question Category: 122. Best Time to Buy and Sell Stock II
+ * Question Title: 122. Best Time to Buy and Sell Stock II
+ * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
  * You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
  * <p>

@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/20/2024
- * Question Category: 1137. N-th Tribonacci Number
+ * Question Title: 1137. N-th Tribonacci Number
+ * Link: https://leetcode.com/problems/n-th-tribonacci-number/
  * Description: https://leetcode.com/problems/n-th-tribonacci-number/description/
  * The Tribonacci sequence Tn is defined as follows:
  * <p>

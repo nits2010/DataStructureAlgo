@@ -7,7 +7,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date:07/11/24
- * Question Category: 2275. Largest Combination With Bitwise AND Greater Than Zero
+ * Question Title: 2275. Largest Combination With Bitwise AND Greater Than Zero
+ * Link: https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/
  * Description: https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/description/?envType=daily-question&envId=2024-11-07
  * The bitwise AND of an array nums is the bitwise AND of all integers in nums.
  * <p>

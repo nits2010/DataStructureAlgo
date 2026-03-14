@@ -13,7 +13,8 @@ import java.util.List;
 /**
  * Author: Nitin Gupta
  * Date:16/08/24
- * Question Category: 235. Lowest Common Ancestor of a Binary Search Tree
+ * Question Title: 235. Lowest Common Ancestor of a Binary Search Tree
+ * Link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
  * <p>
  * Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.

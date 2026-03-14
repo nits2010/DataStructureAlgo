@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/6/2024
- * Question Category: 1813. Sentence Similarity III
+ * Question Title: 1813. Sentence Similarity III
+ * Link: https://leetcode.com/problems/sentence-similarity-iii/
  * Description: https://leetcode.com/problems/sentence-similarity-iii/description/?envType=daily-question&envId=2024-10-06
  * You are given two strings sentence1 and sentence2, each representing a sentence composed of words. A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of only uppercase and lowercase English characters.
  *

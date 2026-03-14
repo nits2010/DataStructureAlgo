@@ -10,7 +10,8 @@ import java.util.*;
 /**
  * Author: Nitin Gupta
  * Date: 8/19/2024
- * Question Category: [easy | medium | hard ]
+ * Question Title: [easy | medium | hard ]
+ * Link: https://leetcode.com/problems/easy-medium-hard/
  * Description:  https://www.geeksforgeeks.org/vertical-sum-in-a-given-binary-tree/
  * Given a Binary Tree, find the vertical sum of the nodes that are in the same vertical line. Print all sums through different vertical lines.
  * <p>

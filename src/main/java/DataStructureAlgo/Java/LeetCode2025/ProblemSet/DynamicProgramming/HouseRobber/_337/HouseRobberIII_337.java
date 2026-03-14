@@ -11,7 +11,8 @@ import java.util.Arrays;
 /**
  * Author: Nitin Gupta
  * Date: 10/22/2024
- * Question Category: 337. House Robber III
+ * Question Title: 337. House Robber III
+ * Link: https://leetcode.com/problems/house-robber-iii/
  * Description: https://leetcode.com/problems/house-robber-iii/
  * The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.
  * <p>

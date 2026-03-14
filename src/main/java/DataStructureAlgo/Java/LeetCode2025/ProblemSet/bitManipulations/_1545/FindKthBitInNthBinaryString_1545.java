@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 10/19/2024
- * Question Category: 1545. Find Kth Bit in Nth Binary String
+ * Question Title: 1545. Find Kth Bit in Nth Binary String
+ * Link: https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/
  * Description: https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/description/
  * Given two positive integers n and k, the binary string Sn is formed as follows:
  * <p>

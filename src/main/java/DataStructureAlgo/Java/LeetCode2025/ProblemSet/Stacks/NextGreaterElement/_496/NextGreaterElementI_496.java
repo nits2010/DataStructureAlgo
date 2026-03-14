@@ -10,7 +10,8 @@ import java.util.Map;
 /**
  * Author: Nitin Gupta
  * Date: 8/5/2024
- * Question Category: 496. Next Greater Element I @easy
+ * Question Title: 496. Next Greater Element I @easy
+ * Link: https://leetcode.com/problems/next-greater-element-i-easy/
  * Description: https://leetcode.com/problems/next-greater-element-i/description/
  *
  * <p>

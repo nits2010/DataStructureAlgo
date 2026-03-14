@@ -9,7 +9,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 8/31/2024
- * Question Category: 1046. Last Stone Weight
+ * Question Title: 1046. Last Stone Weight
+ * Link: https://leetcode.com/problems/last-stone-weight/
  * Description: https://leetcode.com/problems/last-stone-weight/description/
  * You are given an array of integers stones where stones[i] is the weight of the ith stone.
  * <p>

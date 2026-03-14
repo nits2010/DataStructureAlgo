@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 /**
  * Author: Nitin Gupta
  * Date: 9/22/2024
- * Question Category: 1136. Parallel Courses
+ * Question Title: 1136. Parallel Courses
  * Description:
  * https://leetcode.com/problems/parallel-courses/description/
  * https://leetcode.ca/all/1136.html

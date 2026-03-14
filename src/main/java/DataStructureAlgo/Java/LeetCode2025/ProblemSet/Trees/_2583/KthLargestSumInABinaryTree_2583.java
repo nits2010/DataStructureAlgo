@@ -17,7 +17,8 @@ import java.util.Random;
 /**
  * Author: Nitin Gupta
  * Date:22/10/24
- * Question Category: 2583. Kth Largest Sum in a Binary Tree
+ * Question Title: 2583. Kth Largest Sum in a Binary Tree
+ * Link: https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/
  * Description: https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/description/
  * You are given the root of a binary tree and a positive integer k.
  * <p>

@@ -5,7 +5,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date: 9/5/2024
- * Question Category: 485. Max Consecutive Ones
+ * Question Title: 485. Max Consecutive Ones
+ * Link: https://leetcode.com/problems/max-consecutive-ones/
  * Description:https://leetcode.com/problems/max-consecutive-ones/description/
  * Given a binary array nums, return the maximum number of consecutive 1's in the array.
  * <p>

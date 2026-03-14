@@ -12,7 +12,8 @@ import java.util.Stack;
 /**
  * Author: Nitin Gupta
  * Date:07/08/24
- * Question Category:2487. Remove Nodes From Linked List @medium
+ * Question Title: 2487. Remove Nodes From Linked List @medium
+ * Link: https://leetcode.com/problems/remove-nodes-from-linked-list-medium/
  * Description: https://leetcode.com/problems/remove-nodes-from-linked-list
  * <p>
  * You are given the head of a linked list.

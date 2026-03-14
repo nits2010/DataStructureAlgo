@@ -6,7 +6,8 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
 /**
  * Author: Nitin Gupta
  * Date:24/10/24
- * Question Category: 1283. Find the Smallest Divisor Given a Threshold
+ * Question Title: 1283. Find the Smallest Divisor Given a Threshold
+ * Link: https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
  * Description: https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/description/?envType=problem-list-v2&envId=o2pr208d
  * Given an array of integers nums and an integer threshold, we will choose a positive integer divisor, divide all the array by it, and sum the division's result. Find the smallest divisor such that the result mentioned above is less than or equal to threshold.
  * <p>

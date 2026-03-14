@@ -10,7 +10,8 @@ import java.util.PriorityQueue;
 /**
  * Author: Nitin Gupta
  * Date: 8/31/2024
- * Question Category: 703. Kth Largest Element in a Stream
+ * Question Title: 703. Kth Largest Element in a Stream
+ * Link: https://leetcode.com/problems/kth-largest-element-in-a-stream/
  * Description: https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
  * You are part of a university admissions office and need to keep track of the kth highest test score from applicants in real-time. This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
  * <p>

@@ -2,7 +2,7 @@
 Author: Nitin Gupta
 Date: 7/1/2025
 Question Title: 1373. Maximum Sum BST in Binary Tree
- * Link: https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/description
+* Link: https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/
  * Description: Given a binary tree root, return the maximum sum of all keys of any sub-tree which is also a Binary Search Tree (BST).
  *
  * Assume a BST is defined as follows:
