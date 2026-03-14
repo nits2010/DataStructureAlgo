@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.companyWise.thoughtspot;
  * Author: Nitin Gupta
  * Date: 20/09/19
  * Question Title: Binary String Operation Require To Make Zero
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/binary-string-operation-require-to-make-zero/
  * Description:
  * Description:
  * Given a binary string of size N and a positive integer K, calculate the number of operations required to convert this string to

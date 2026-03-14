@@ -7,7 +7,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Shortest Word Distance II
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/shortest-word-distance-ii/
  * Description:
  * File reference
  * -----------

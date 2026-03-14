@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Sum Game2
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/sum-game2/
  * Description:
  * File reference
  * -----------

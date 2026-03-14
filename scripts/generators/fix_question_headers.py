@@ -96,54 +96,19 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 
-# Reuse repo root and collect logic from build_company_question_list
+# Import unified configuration management
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-try:
-    from build_company_question_list import (
-        REPO_ROOT,
-        path_should_ignore,
-        is_helper_file,
-        collect_files,
-        CODE_EXTENSIONS,
-    )
-except ImportError:
-    import os
-    # Repository root (go up 2 levels from scripts/generators/)
-    REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-    IGNORE_FOLDERS = {"helpers", "sorts", "python", ".idea*", "fileTemplates*"}
-    CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
+from unified_config import (
+    config,
+    REPO_ROOT, 
+    path_should_ignore, 
+    is_helper_file, 
+    collect_files,
+    print_config_summary as print_config_summary_base
+)
 
-    def path_should_ignore(rel_path: Path) -> bool:
-        return any(p in IGNORE_FOLDERS for p in rel_path.parts)
-
-    def is_helper_file(base_name: str) -> bool:
-        return base_name.lower() in {
-            "node", "pair", "listnode", "doublylistnode", "treenode",
-            "listbuilder", "treebuilder", "commonmethods", "main",
-        }
-
-    def collect_files(root: Path, since_timestamp: float = 0.0):
-        out = []
-        root_str = str(root)
-        for dirpath, _dirnames, filenames in os.walk(root):
-            rel = Path(dirpath).relative_to(
-                root) if dirpath != root_str else Path(".")
-            if path_should_ignore(rel):
-                continue
-            for f in filenames:
-                p = Path(dirpath) / f
-                if p.suffix not in CODE_EXTENSIONS:
-                    continue
-                rel_str = str(p.relative_to(root)).replace("\\", "/")
-                if "LeetCode2025" in rel_str:
-                    priority = 0
-                elif "companyWise" in rel_str or "CompanyWise" in rel_str:
-                    priority = 1
-                else:
-                    priority = 2
-                out.append((priority, p))
-        out.sort(key=lambda x: (x[0], str(x[1])))
-        return out
+# For backward compatibility
+CODE_EXTENSIONS = config.file_extensions
 
 
 # Placeholder link patterns (need fix)
@@ -512,14 +477,20 @@ def main():
                     help="With --fix: show updates, do not write")
     ap.add_argument("--limit", type=int, default=0,
                     help="With --fix: limit number of files to update (0 = all)")
+    ap.add_argument("--show-config", action="store_true",
+                    help="Show current configuration and exit")
     args = ap.parse_args()
+
+    if args.show_config:
+        print_config_summary_base()
+        return
 
     if not args.identify and not args.fix:
         ap.print_help()
         print("\nUse --identify to list files, or --fix to update (optionally with --dry-run).")
         return
 
-    files = collect_files(REPO_ROOT, since_timestamp=0.0)
+    files = collect_files(since_timestamp=0.0)
     to_fix = []
     similar_template = []
 

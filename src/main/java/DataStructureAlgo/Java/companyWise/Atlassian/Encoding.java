@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Author: Nitin Gupta
  * Date: 13/04/19
  * Question Title: Encoding
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/encoding/
  * Description:
  * Description:
  * File reference

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date: 2019-08-21
  * Question Title: Knapsack
- * Link: https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+ * Link: https://leetcode.com/problems/knapsack/
  * Description:
  * Description:
  * https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/

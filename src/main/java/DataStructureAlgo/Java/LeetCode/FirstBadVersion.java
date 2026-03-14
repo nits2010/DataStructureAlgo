@@ -6,7 +6,7 @@ import  DataStructureAlgo.Java.nonleetcode.BinarySearch;
  * Author: Nitin Gupta
  * Date: 2019-09-02
  * Question Title: First Bad Version
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/first-bad-version/
  * Description:
  * Description: 278. First Bad Version
  * <p>

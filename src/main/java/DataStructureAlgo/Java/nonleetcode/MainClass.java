@@ -14,7 +14,7 @@ import java.util.Queue;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Main Class
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/main-class/
  * Description:
  * File reference
  * -----------

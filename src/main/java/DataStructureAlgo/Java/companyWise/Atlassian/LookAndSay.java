@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Author: Nitin Gupta
  * Date: 13/04/19
  * Question Title: Look And Say
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/look-and-say/
  * Description:
  * Description:
  * File reference

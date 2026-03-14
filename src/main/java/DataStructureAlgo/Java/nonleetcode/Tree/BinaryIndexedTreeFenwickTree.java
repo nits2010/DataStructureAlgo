@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Author: Nitin Gupta
  * Date: 2019-06-14
  * Question Title: Binary Indexed Tree Fenwick Tree
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/binary-indexed-tree-fenwick-tree/
  * Description:
  * Description:
  * Binary Indexed Tree or Fenwick Tree

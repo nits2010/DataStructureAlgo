@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.companyWise.Amazon.BinaryPeriod;
  * Author: Nitin Gupta
  * Date: 2019-07-07
  * Question Title: Binary Period
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/binary-period/
  * Description:
  * Description:
  * File reference

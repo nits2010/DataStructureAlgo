@@ -2,7 +2,7 @@
 Author: Nitin Gupta
 Date: 2026-03-14
 Question Title: Untitled-1
-Link: TODO: Add Link
+Link: https://leetcode.com/problems/untitled-1/
 Description:
 File reference
 -----------

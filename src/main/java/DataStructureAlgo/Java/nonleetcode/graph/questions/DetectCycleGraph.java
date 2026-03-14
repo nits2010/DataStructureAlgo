@@ -13,7 +13,7 @@ import java.util.Queue;
  * Author: Nitin Gupta
  * Date: 2019-08-23
  * Question Title: Detect Cycle Graph
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/detect-cycle-graph/
  * Description:
  * Description:
  * File reference

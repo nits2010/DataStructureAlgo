@@ -6,7 +6,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Author: Nitin Gupta
  * Date: 14/09/19
  * Question Title: Binary Search
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/binary-search/
  * Description:
  * Description:
  * File reference

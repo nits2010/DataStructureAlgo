@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.nonleetcode;
  * Author: Nitin Gupta
  * Date: 11/12/18
  * Question Title: Chain Matrix Multiplication
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/chain-matrix-multiplication/
  * Description:
  * Description:
  * <p>

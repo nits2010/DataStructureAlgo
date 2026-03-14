@@ -4,7 +4,7 @@ package DataStructureAlgo.Java.nonleetcode.Tree;
  * Author: Nitin Gupta
  * Date: 27/12/18
  * Question Title: Min Max Object
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/min-max-object/
  * Description:
  * Description:
  * File reference

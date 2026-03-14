@@ -6,7 +6,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-07-01
  * Question Title: Longest Uniform Sub String
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/longest-uniform-sub-string/
  * Description:
  * Description:
  * LongestUniformSubString

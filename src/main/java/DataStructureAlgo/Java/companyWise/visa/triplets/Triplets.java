@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Author: Nitin Gupta
  * Date: 10/11/19
  * Question Title: Triplets
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/triplets/
  * Description:
  * Description:
  * File reference

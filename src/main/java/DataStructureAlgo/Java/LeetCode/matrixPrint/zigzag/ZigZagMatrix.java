@@ -6,7 +6,7 @@ import DataStructureAlgo.Java.helpers.CommonMethods;
  * Author: Nitin Gupta
  * Date: 2019-08-11
  * Question Title: Zig Zag Matrix
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/zig-zag-matrix/
  * Description:
  * Description: Build & print a matrix formed in zig-zag fashioned[See image for more info]
  * File reference

@@ -9,7 +9,7 @@ import java.util.Random;
  * Author: Nitin Gupta
  * Date: 8/31/2024
  * Question Title: Quick Sort3Way Partitioning
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/quick-sort3way-partitioning/
  * Description:
  * Q
  * File reference

@@ -7,7 +7,7 @@ import  DataStructureAlgo.Java.companyWise.Amazon.MaximumDifferenceInIndex;
  * Author: Nitin Gupta
  * Date: 2019-08-30
  * Question Title: Longest Duration Hold Stocks
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/longest-duration-hold-stocks/
  * Description:
  * Description:
  * Given stocks value for each day, find the longest duration at which you can hold the stocks such that you don't incur any loss.

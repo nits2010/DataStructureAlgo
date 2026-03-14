@@ -9,7 +9,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-09-08
  * Question Title: I Minimum Spanning Tree
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/i-minimum-spanning-tree/
  * Description:
  * Description:
  * File reference

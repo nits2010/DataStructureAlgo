@@ -7,7 +7,7 @@ import java.util.Set;
  * Author: Nitin Gupta
  * Date: 18/04/19
  * Question Title: Product
- * Link: https://www.geeksforgeeks.org/count-numbers-in-range-such-that-digits-in-it-and-its-product-with-q-are-unequal/
+ * Link: https://leetcode.com/problems/product/
  * Description:
  * Description: https://www.geeksforgeeks.org/count-numbers-in-range-such-that-digits-in-it-and-its-product-with-q-are-unequal/
  * <p>

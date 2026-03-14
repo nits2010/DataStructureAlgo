@@ -7,7 +7,7 @@ import java.util.List;
  * Author: Nitin Gupta
  * Date: 2019-08-10
  * Question Title: Math Homework
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/math-homework/
  * Description:
  * Description:
  * File reference

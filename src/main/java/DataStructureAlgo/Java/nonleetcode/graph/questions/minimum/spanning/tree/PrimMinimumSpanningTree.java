@@ -9,7 +9,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-09-08
  * Question Title: Prim Minimum Spanning Tree
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/prim-minimum-spanning-tree/
  * Description:
  * Description:
  * [minimum spanning tree (MST) doesn't apply to directed graphs]

@@ -71,7 +71,10 @@ import subprocess
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
+
+# Import unified configuration management
+from unified_config import REPO_ROOT, config, path_should_ignore as unified_path_should_ignore
 
 def get_current_git_branch():
     try:
@@ -104,35 +107,21 @@ def save_current_timestamp() -> None:
     print(f"Timestamp saved: {datetime.fromtimestamp(current_time).strftime('%Y-%m-%d %H:%M:%S')}")
 
 
-# Folders to ignore (exact segment name in path)
-IGNORE_FOLDERS = {"helpers", "sorts", "python"}
+# Import unified configuration management
+from unified_config import config
 
 # File base names that are helpers only (no question) - skip these
-HELPER_FILE_NAMES = {
-    "node", "pair", "listnode", "doublylistnode", "treenode",
-    "listbuilder", "treebuilder", "commonmethods", "nestedinteger",
-    "nestedintegervalue", "customkey", "user", "split", "expensetype",
-    "percentexpense", "main", "keyvaluestore",
-}
+HELPER_FILE_NAMES = config.helper_files
 
 # Difficulty tags (case-insensitive)
 DIFFICULTY_PATTERN = re.compile(r"@(easy|medium|hard)\b", re.I)
 
-# Tags that are NOT company names (topic/difficulty/meta only)
-NON_COMPANY_TAGS = {
-    "easy", "medium", "hard", "editorial", "optimalsolution",
-    "array", "string", "hashtable", "dynamicprogramming", "linkedlist",
-    "tree", "graph", "binarysearch", "twopointers", "stack", "heap",
-    "backtracking", "slidingwindow", "design", "math", "recursion",
-    "dfs", "bfs", "greedy", "sorting", "binarytree", "matrix",
-    "leetcodelockedproblem", "premiumquestion", "duplicate", "similar",
-    "extension", "dpbaseproblem", "baseproblem", "ref", "link", "p", "pp",
-}
+# Tags configuration loaded from unified config below
 
-# Repo root = directory containing this script (go up 2 levels from scripts/generators/)
-_script_dir = Path(__file__).resolve().parent
-REPO_ROOT = _script_dir.parent.parent
-CODE_EXTENSIONS = {".py", ".java", ".js", ".ts", ".tsx"}
+# For backward compatibility with scripts that import from this module
+CODE_EXTENSIONS = config.file_extensions
+IGNORE_FOLDERS = config.ignore_folders
+NON_COMPANY_TAGS = config.non_company_tags
 
 # GitHub URL generation
 branch = get_current_git_branch()
@@ -145,11 +134,8 @@ TIMESTAMP_FILE = REPO_ROOT / "scripts" / "config" / ".last_company_list_run"
 
 
 def path_should_ignore(rel_path: Path) -> bool:
-    parts = rel_path.parts
-    for p in parts:
-        if p in IGNORE_FOLDERS:
-            return True
-    return False
+    """Check if path should be ignored based on unified configuration."""
+    return unified_path_should_ignore(rel_path)
 
 
 def is_helper_file(base_name: str) -> bool:

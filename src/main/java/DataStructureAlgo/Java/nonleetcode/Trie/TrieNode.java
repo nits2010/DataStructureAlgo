@@ -7,7 +7,7 @@ import java.util.Map;
  * Author: Nitin Gupta
  * Date: 2026-03-14
  * Question Title: Trie Node
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/trie-node/
  * Description:
  * Java.Trie Node
  * @author iitgu

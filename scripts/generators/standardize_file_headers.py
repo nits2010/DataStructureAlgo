@@ -61,117 +61,15 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 
-# Repository root (go up 2 levels from scripts/generators/)
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-CONFIG_FILE = REPO_ROOT / "scripts" / "config" / ".problem_generator_config"
-
-
-def parse_unified_config(config_path: Path) -> Dict[str, any]:
-    """Parse the unified configuration file."""
-    config = {
-        "ignore_folders": set(),
-        "file_extensions": set(), 
-        "helper_files": set(),
-        "non_company_tags": set()
-    }
-    
-    if not config_path.exists():
-        print(f"Warning: Config file not found at {config_path}, using defaults")
-        return {
-            "ignore_folders": {"helpers", "sorts", "python", ".idea*", "fileTemplates*"},
-            "file_extensions": {".py", ".java", ".js", ".ts", ".tsx"},
-            "helper_files": {"node", "pair", "listnode", "doublylistnode", "treenode", 
-                           "listbuilder", "treebuilder", "commonmethods", "main"},
-            "non_company_tags": set()
-        }
-    
-    current_section = None
-    
-    try:
-        with open(config_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                
-                # Skip empty lines and comments
-                if not line or line.startswith('#'):
-                    continue
-                
-                # Section headers
-                if line.startswith('[') and line.endswith(']'):
-                    current_section = line[1:-1]
-                    continue
-                
-                # Key-value pairs
-                if '=' in line and current_section:
-                    _, value = line.split('=', 1)
-                    value = value.strip()
-                    
-                    if current_section in config:
-                        config[current_section].add(value)
-    
-    except Exception as e:
-        print(f"Error reading config file: {e}")
-        return parse_unified_config(Path("nonexistent"))  # Return defaults
-    
-    return config
-
-
-# Load configuration
-config = parse_unified_config(CONFIG_FILE)
-IGNORE_FOLDERS = config["ignore_folders"]
-CODE_EXTENSIONS = config["file_extensions"] 
-HELPER_FILES = config["helper_files"]
-
-
-def path_should_ignore(rel_path: Path) -> bool:
-    """Check if path should be ignored based on configuration."""
-    for part in rel_path.parts:
-        for ignore_pattern in IGNORE_FOLDERS:
-            if ignore_pattern.endswith('*'):
-                # Wildcard pattern
-                if part.startswith(ignore_pattern[:-1]):
-                    return True
-            else:
-                # Exact match
-                if part == ignore_pattern:
-                    return True
-    return False
-
-
-def is_helper_file(base_name: str) -> bool:
-    """Check if file is a helper file based on configuration."""
-    return base_name.lower() in HELPER_FILES
-
-
-# Try to import from build_company_question_list, otherwise use local functions
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-try:
-    from build_company_question_list import collect_files
-except ImportError:
-    import os
-    
-    def collect_files(root: Path, since_timestamp: float = 0.0):
-        """Collect files for processing using unified configuration."""
-        out = []
-        root_str = str(root)
-        for dirpath, _dirnames, filenames in os.walk(root):
-            rel = Path(dirpath).relative_to(root) if dirpath != root_str else Path(".")
-            if path_should_ignore(rel):
-                continue
-            for f in filenames:
-                p = Path(dirpath) / f
-                if p.suffix not in CODE_EXTENSIONS:
-                    continue
-                rel_str = str(p.relative_to(root)).replace("\\", "/")
-                if "LeetCode2025" in rel_str:
-                    priority = 0
-                elif "companyWise" in rel_str or "CompanyWise" in rel_str:
-                    priority = 1
-                else:
-                    priority = 2
-                out.append((priority, p))
-        out.sort(key=lambda x: (x[0], str(x[1])))
-        return out
+# Import unified configuration management
+from unified_config import (
+    config, 
+    REPO_ROOT, 
+    path_should_ignore, 
+    is_helper_file, 
+    collect_files,
+    print_config_summary as print_config_summary_base
+)
 
 
 class TemplateStandardizer:
@@ -729,14 +627,7 @@ Company Tags
 
 def print_config_summary():
     """Print a summary of the loaded configuration."""
-    print("📁 Configuration loaded from:", CONFIG_FILE)
-    print(f"   ✅ Ignore folders: {len(IGNORE_FOLDERS)} items")
-    print(f"      {', '.join(sorted(list(IGNORE_FOLDERS)))}")
-    print(f"   ✅ File extensions: {len(CODE_EXTENSIONS)} items")
-    print(f"      {', '.join(sorted(CODE_EXTENSIONS))}")  
-    print(f"   ✅ Helper files: {len(HELPER_FILES)} items")
-    print(f"      {', '.join(sorted(list(HELPER_FILES)))}")
-    print()
+    print_config_summary_base()
 
 
 def main():
@@ -767,7 +658,7 @@ def main():
         return
     
     standardizer = TemplateStandardizer()
-    files = collect_files(REPO_ROOT, since_timestamp=0.0)
+    files = collect_files(since_timestamp=0.0)
     
     needs_standardization = []
     already_standard = []

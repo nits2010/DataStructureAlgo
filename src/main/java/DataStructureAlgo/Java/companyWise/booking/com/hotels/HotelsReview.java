@@ -6,7 +6,7 @@ import java.util.*;
  * Author: Nitin Gupta
  * Date: 2019-08-31
  * Question Title: Hotels Review
- * Link: TODO: Add Link
+ * Link: https://leetcode.com/problems/hotels-review/
  * Description:
  * Description:
  * File reference
