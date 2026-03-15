@@ -3,9 +3,11 @@ Author: Nitin Gupta
 Date: 2025-06-20
 Description: Common utility methods for testing and debugging
 """
+import collections
 import json
-from typing import Any, List, TypeVar, Type, Dict, Optional, Union, Tuple
+import queue
 import sys
+from typing import Any, List, TypeVar, Type, Dict, Optional, Union, Tuple
 
 T = TypeVar('T')
 
@@ -29,7 +31,8 @@ class CommonMethods:
             print("-" * 20)
 
         if len(prefixConsoles) != len(args):
-            raise ValueError("Number of prefixConsoles and arguments must be equal.")
+            raise ValueError(
+                "Number of prefixConsoles and arguments must be equal.")
 
         console = []
         i = 0
@@ -42,8 +45,8 @@ class CommonMethods:
             else:
                 output = str(arg)
 
-            console.append(prefixConsoles[i].strip() + ": " + output);
-            i+=1
+            console.append(prefixConsoles[i].strip() + ": " + output)
+            i += 1
 
         print(console)
 
@@ -73,6 +76,8 @@ class CommonMethods:
         elif isinstance(item, tuple):
             return tuple(CommonMethods.normalize(e) for e in item)
 
+        elif isinstance(item, collections.deque):
+            return CommonMethods.normalize(list(item))
         else:
             return item
 
@@ -94,7 +99,6 @@ class CommonMethods:
             expected = CommonMethods.normalize(expected)
 
         return actual == expected
-
 
     @staticmethod
     def print_all_test_results(test_results: List[bool]) -> None:

@@ -25,12 +25,13 @@ Company Tags
 @OptimalSolution {@link }
 """
 
-
 from collections import defaultdict, deque
 import heapq
 from typing import List, Optional, Dict, Any
 
+from helpers.TreeBuilder import TreeBuilder
 from helpers.common_methods import CommonMethods
+
 
 def test(input_data, expected):
     """
@@ -41,7 +42,8 @@ def test(input_data, expected):
     output = None
 
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Output", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["Output", "Pass"], False,
+                             output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
     return final_pass

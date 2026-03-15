@@ -1,10 +1,10 @@
-package DataStructureAlgo.Java.LeetCode;
+package DataStructureAlgo.Java.LeetCode2025.ProblemSet.Trees._270;
 
 import DataStructureAlgo.Java.helpers.templates.TreeNode;
 
 /**
  * Author: Nitin Gupta
- * Date: 2019-07-20
+ * Date: 14/03/2026
  * Question Title: 270. Closest Binary Search Tree Value
  * Link: https://leetcode.com/problems/closest-binary-search-tree-value/
  * https://medium.com/algorithms-and-leetcode/solving-tree-problems-on-leetcode-d0b7a9b4a7a4
@@ -19,7 +19,8 @@ import DataStructureAlgo.Java.helpers.templates.TreeNode;
  * to the target.
  * File reference
  * -----------
- * Duplicate {@link}
+ * 
+ * Duplicate {@link ClosestBinarySearchTreeValue.java}
  * Similar {@link}
  * extension {@link }
  * DP-BaseProblem {@link }
@@ -27,6 +28,9 @@ import DataStructureAlgo.Java.helpers.templates.TreeNode;
  * <p>
  * Tags
  * -----
+ * @easy
+ * @BinarySearchTree
+ * @BinaryTree
  *
  * <p>
  * <p>
@@ -49,7 +53,7 @@ import DataStructureAlgo.Java.helpers.templates.TreeNode;
  * @OptimalSolution {@link }
  */
 
-public class ClosestBinarySearchTreeValue {
+public class ClosestBinarySearchTreeValue_270 {
 
     public static void main(String[] args) {
         TreeNode bst = getBST();
