@@ -20,7 +20,7 @@ python3 unified_problem_generator.py --sort-order newest           # Sort newest
 python3 unified_problem_generator.py --show-config                 # Display current configuration
 Output Format:
 - File: ProblemsList.md
-- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- Columns: # | Company Tags | Question Title (linked) | File Name | Difficulty
 - All files included, company tags column shows "-" if no tags found
 Configuration:
 - Configuration file: .problem_generator_config (in repository root)
@@ -50,7 +50,7 @@ Usage:
 
 Output Format:
 - File: ProblemsList.md
-- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- Columns: # | Company Tags | Question Title (linked) | File Name | Difficulty
 - All files included, company tags column shows "-" if no tags found
 
 Configuration:
@@ -511,8 +511,8 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
 
     md_lines.extend([
         "",
-        "| # | Company Tags   | Question Title | Question Link | File Name | Difficulty|",
-        "|---|----------------|---------------|-----------|------------|--------------|",
+        "| # | Company Tags   | Question Title | File Name | Difficulty|",
+        "|---|----------------|---------------|------------|--------------|",
     ])
 
     # Generate table rows
@@ -520,12 +520,13 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
         # Escape pipe characters for markdown
         title_esc = r["title"].replace("|", "\\|").strip()
 
-        # Handle question link formatting
-        question_link = r['link']
+        # Embed question link into the title column to save space.
+        # If link isn't available, keep the title as plain text.
+        question_link = r["link"]
         if question_link and question_link != "(no link)":
-            link_esc = f"[Link]({question_link})".replace("|", "\\|")
+            title_link_esc = f"[{title_esc}]({question_link})".replace("|", "\\|")
         else:
-            link_esc = "-"
+            title_link_esc = title_esc
 
         # File name with GitHub link (handle combined files)
         if r['github_link']:
@@ -546,7 +547,7 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
             tags_esc = "-"
 
         md_lines.append(
-            f"| {idx} | {tags_esc} | {title_esc} | {link_esc} | {file_link} | {diff} |")
+            f"| {idx} | {tags_esc} | {title_link_esc} | {file_link} | {diff} |")
 
     md_lines.append("")
     md_content = "\n".join(md_lines)
