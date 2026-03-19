@@ -2,7 +2,7 @@
 Author: Nitin Gupta
 Date: 19/03/2026
 Question Title: 152. Maximum Product Subarray
-Link: https://leetcode.com/problems/file-template/
+Link: https://leetcode.com/problems/maximum-product-subarray/description/
 Description: Given an integer array nums, find a subarray that has the largest product, and return the product.
 
 The test cases are generated so that the answer will fit in a 32-bit integer.
