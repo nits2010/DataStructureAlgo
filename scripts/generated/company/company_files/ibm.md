@@ -1,0 +1,6 @@
+# IBM Interview Questions
+
+| # | Company Tags | Question Title | File Name | Difficulty |
+|---|---|---|---|---|
+| 1 | Google, IBM, Mathworks | [259. 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/description/) | [Three3SumSmaller_259.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/ThreeSum/_259/Three3SumSmaller_259.java) | Medium |
+| 2 | Adobe, AkunaCapital, Alibaba, Amazon, Apple, Baidu, Bloomberg, ByteDance, Cisco, Citadel, Coursera, DoorDash, Expedia, Facebook, GoldmanSachs, Google, Groupon, IBM, Mathworks, Microsoft, Oracle, Paypal, Postmates, Qualtrics, Quora, Salesforce, Snapchat, Splunk, Square, Tencent, Uber, Visa, WalmartLabs, WorksApplications, Yahoo, Yandex, eBay | [Three Sum3Sum](https://leetcode.com/problems/3sum/) | [Three3Sum_15.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/TwoPointers_BinarySearch/ThreeSum/_15/Three3Sum_15.java) \ | [ThreeSum3Sum.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode/pair/element/problems/threeSum/ThreeSum3Sum.java) |

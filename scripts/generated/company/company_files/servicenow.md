@@ -1,0 +1,6 @@
+# ServiceNow Interview Questions
+
+| # | Company Tags | Question Title | File Name | Difficulty |
+|---|---|---|---|---|
+| 1 | Amazon, Facebook, Microsoft, ServiceNow, Twitter | [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [MinimumAddToMakeParenthesesValid_921.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/Stacks/_921/MinimumAddToMakeParenthesesValid_921.java) | Medium |
+| 2 | Adobe, Airbnb, Alibaba, Amazon, Apple, Baidu, Bloomberg, Cisco, Facebook, GoDaddy, Google, Huawei, Mathworks, Microsoft, Oracle, PureStorage, Roblox, SAP, Samsung, ServiceNow, Tencent, Uber, VMware, WalmartLabs, Wayfair, Yahoo, Yandex, caMorgan, eBay | [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/) | [LongestPalindromicSubstring_5.py](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/DynamicProgramming/_5/LongestPalindromicSubstring_5.py) | Medium |

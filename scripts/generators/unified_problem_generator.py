@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 """
-Author: Nitin Gupta
-Date: 2026-03-14
-Question Title: unified_problem_generator
-Link: TODO: Add Link
 Description:
 Unified Problem Set Generator
 Generates a comprehensive markdown list of all coding problems in the repository.
@@ -24,34 +20,13 @@ python3 unified_problem_generator.py --sort-order newest           # Sort newest
 python3 unified_problem_generator.py --show-config                 # Display current configuration
 Output Format:
 - File: ProblemsList.md
-- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- Columns: # | Company Tags | Question Title (linked) | File Name | Difficulty
 - All files included, company tags column shows "-" if no tags found
 Configuration:
 - Configuration file: .problem_generator_config (in repository root)
 - Supports ignore folders, file extensions, helper files, and non-company tags
 - Easily customizable without modifying code
-File reference
------------
-Duplicate {@link}
-Similar {@link}
-extension {@link }
-DP-BaseProblem {@link }
-<p><p>
-Tags
------
 
-<p><p>
-Company Tags
------
-<p>
------
-
-@Editorial <p><p>
------
-@OptimalSolution {@link }
-"""
-
-"""
 Unified Problem Set Generator
 
 Generates a comprehensive markdown list of all coding problems in the repository.
@@ -75,7 +50,7 @@ Usage:
 
 Output Format:
 - File: ProblemsList.md
-- Columns: # | Question Title | Question Link | File Name | Difficulty | Company Tags
+- Columns: # | Company Tags | Question Title (linked) | File Name | Difficulty
 - All files included, company tags column shows "-" if no tags found
 
 Configuration:
@@ -126,12 +101,13 @@ def save_current_timestamp() -> None:
     timestamp_file = REPO_ROOT / "scripts" / "config" / ".last_problems_run"
     current_time = time.time()
     timestamp_file.write_text(str(current_time))
-    print(f"Timestamp saved: {datetime.fromtimestamp(current_time).strftime('%Y-%m-%d %H:%M:%S')}")
+    print(
+        f"Timestamp saved: {datetime.fromtimestamp(current_time).strftime('%Y-%m-%d %H:%M:%S')}")
 
 
 # Configuration from unified config
 IGNORE_FOLDERS = config.ignore_folders
-CODE_EXTENSIONS = config.file_extensions 
+CODE_EXTENSIONS = config.file_extensions
 HELPER_FILE_NAMES = config.helper_files
 NON_COMPANY_TAGS = config.non_company_tags
 
@@ -231,7 +207,8 @@ def extract_question_info(file_path: Path, content: str) -> dict:
             lines = block.split("\n")
             for i, line in enumerate(lines):
                 if re.match(r"Question Title:\s*", line, re.I):
-                    title = re.sub(r"Question Title:\s*", "", line, flags=re.I).strip()
+                    title = re.sub(r"Question Title:\s*", "",
+                                   line, flags=re.I).strip()
                 if re.match(r"Link:\s*", line, re.I):
                     link = re.sub(r"Link:\s*", "", line, flags=re.I).strip()
                 if "Company Tags" in line:
@@ -247,10 +224,13 @@ def extract_question_info(file_path: Path, content: str) -> dict:
             lines = block.split("\n")
             for i, line in enumerate(lines):
                 if not title and re.search(r"Question Category:\s*", line, re.I):
-                    title = re.sub(r"^[\s*]*Question Category:\s*", "", line, flags=re.I).strip()
-                    title = re.sub(r"\s*\[EASY\]\s*$", "", title, flags=re.I).strip()
+                    title = re.sub(
+                        r"^[\s*]*Question Category:\s*", "", line, flags=re.I).strip()
+                    title = re.sub(r"\s*\[EASY\]\s*$", "",
+                                   title, flags=re.I).strip()
                 if not title and re.search(r"Question Title:\s*", line, re.I):
-                    title = re.sub(r"^[\s*]*Question Title:\s*", "", line, flags=re.I).strip()
+                    title = re.sub(r"^[\s*]*Question Title:\s*",
+                                   "", line, flags=re.I).strip()
                 if not link and (re.search(r"Description:\s*https://leetcode", line, re.I) or re.search(r"Link:\s*https://", line, re.I)):
                     m = re.search(r"https://[^\s\)\]]+", line)
                     if m:
@@ -267,7 +247,7 @@ def extract_question_info(file_path: Path, content: str) -> dict:
     # Set default title if not found
     if not title:
         title = base_name
-        
+
     # Try to infer LeetCode link from filename
     if not link and "_" in base_name:
         num_match = re.search(r"_(\d+)$", base_name)
@@ -277,12 +257,12 @@ def extract_question_info(file_path: Path, content: str) -> dict:
     # Generate GitHub link
     relative_path = file_path.relative_to(REPO_ROOT).as_posix()
     github_link = f"{BASE_URL}/{relative_path}"
-    
+
     # Get file creation time (preferred) or modification time as fallback
     file_stat = file_path.stat()
     create_time = getattr(file_stat, 'st_birthtime', file_stat.st_ctime)
     mod_time = file_stat.st_mtime
-    
+
     return {
         "title": title,
         "link": link or "(no link)",
@@ -306,7 +286,7 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
         # Use question link as primary key, fall back to title if no link
         link = row["link"]
         title = row["title"]
-        
+
         # Create a normalized key for grouping
         if link and link != "(no link)":
             # Extract problem number from link if possible for better matching
@@ -317,9 +297,9 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
                 key = f"title:{title}"
         else:
             key = f"title:{title}"
-        
+
         groups[key].append(row)
-    
+
     # Merge groups that have multiple solutions
     merged_rows = []
     for group_key, group_rows in groups.items():
@@ -330,7 +310,7 @@ def deduplicate_problems(rows: List[dict]) -> List[dict]:
             # Multiple solutions for same problem, merge them
             merged_row = merge_problem_solutions(group_rows)
             merged_rows.append(merged_row)
-    
+
     return merged_rows
 
 
@@ -338,36 +318,36 @@ def merge_problem_solutions(solutions: List[dict]) -> dict:
     """Merge multiple solutions for the same problem into a single row."""
     if len(solutions) == 1:
         return solutions[0]
-    
+
     # Sort solutions by create_time to use the most recent for base info
     solutions.sort(key=lambda x: x["create_time"], reverse=True)
     base_solution = solutions[0]
-    
+
     # Combine file names and GitHub links, avoiding duplicates
     file_entries = []
     seen_files = set()
     all_companies = set()
     difficulties = set()
-    
+
     for sol in solutions:
         file_key = sol['file_name']  # Use filename as key for deduplication
-        
+
         if file_key not in seen_files:
             seen_files.add(file_key)
             file_entries.append(f"[{sol['file_name']}]({sol['github_link']})")
-        
+
         # Collect companies and difficulties
         all_companies.update(sol["companies"])
         if sol.get("difficulty"):
             difficulties.add(sol["difficulty"])
-    
+
     # Choose best title (prefer more generic or complete titles)
     title = choose_best_title([sol["title"] for sol in solutions])
-    
+
     # Create merged row
     merged = {
         "title": title,
-        "link": base_solution["link"], 
+        "link": base_solution["link"],
         "file_name": " | ".join(file_entries),  # Combined file links
         "github_link": "",  # Not used since we have combined links in file_name
         "create_time": base_solution["create_time"],  # Use most recent
@@ -375,7 +355,7 @@ def merge_problem_solutions(solutions: List[dict]) -> dict:
         "companies": sorted(list(all_companies)),
         "difficulty": list(difficulties)[0] if difficulties else base_solution.get("difficulty", "")
     }
-    
+
     return merged
 
 
@@ -383,30 +363,30 @@ def choose_best_title(titles: List[str]) -> str:
     """Choose the best title from a list of titles for the same problem."""
     if not titles:
         return ""
-    
+
     if len(titles) == 1:
         return titles[0]
-    
+
     # Remove duplicates while preserving order
     unique_titles = []
     for title in titles:
         if title not in unique_titles:
             unique_titles.append(title)
-    
+
     if len(unique_titles) == 1:
         return unique_titles[0]
-    
+
     # Prefer titles that don't contain implementation-specific terms
     non_specific = []
     for title in unique_titles:
         title_lower = title.lower()
         if not any(term in title_lower for term in ["recursive", "iterative", "solution", "approach"]):
             non_specific.append(title)
-    
+
     if non_specific:
         # Return the longest non-specific title (usually most complete)
         return max(non_specific, key=len)
-    
+
     # If all are specific, return the longest one
     return max(unique_titles, key=len)
 
@@ -425,28 +405,30 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
             d.startswith(ignore[:-1]) if ignore.endswith("*") else d == ignore
             for ignore in IGNORE_FOLDERS
         )]
-        
-        rel = Path(dirpath).relative_to(root) if dirpath != root_str else Path(".")
+
+        rel = Path(dirpath).relative_to(
+            root) if dirpath != root_str else Path(".")
         if path_should_ignore(rel):
             continue
-            
+
         for f in filenames:
             p = Path(dirpath) / f
             if p.suffix not in CODE_EXTENSIONS:
                 continue
-            
+
             # Check if file was created/modified after the given timestamp
             try:
                 file_stat = p.stat()
-                file_create_time = getattr(file_stat, 'st_birthtime', file_stat.st_ctime)
+                file_create_time = getattr(
+                    file_stat, 'st_birthtime', file_stat.st_ctime)
                 file_mod_time = file_stat.st_mtime
                 latest_time = max(file_create_time, file_mod_time)
-                
+
                 if latest_time <= since_timestamp:
                     continue  # Skip files not created/modified since last run
             except OSError:
                 continue  # Skip if can't get file stats
-            
+
             rel_path = p.relative_to(root)
             rel_str = str(rel_path).replace("\\", "/")
 
@@ -457,7 +439,7 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
             else:
                 priority = 2
             out.append((priority, p))
-            
+
     # Deduplicate by resolved path
     seen = set()
     unique = []
@@ -473,12 +455,12 @@ def collect_files(root: Path, since_timestamp: float = 0.0) -> List[Tuple[int, P
 def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "newest", incremental: bool = True, since_timestamp: float = 0.0) -> str:
     """Generate ProblemsList.md with all files in the repository using company question list format."""
     output_md = REPO_ROOT / "scripts" / "generated" / "ProblemsList.md"
-    
+
     print(f"Processing {len(files)} files for ProblemsList.md...")
-    
+
     rows = []
     seen_paths = set()
-    
+
     for _priority, path in files:
         try:
             resolved = path.resolve()
@@ -487,11 +469,11 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
             content = path.read_text(encoding="utf-8", errors="replace")
         except Exception:
             continue
-        
+
         info = extract_question_info(path, content)
         seen_paths.add(resolved)
         rows.append(info)
-    
+
     # Deduplicate rows by (title, link, file_name, github_link)
     seen_row = set()
     unique_rows = []
@@ -501,72 +483,78 @@ def generate_problems_list(files: List[Tuple[int, Path]], sort_order: str = "new
             seen_row.add(key)
             unique_rows.append(r)
     rows = unique_rows
-    
+
     # Group and merge multiple solutions for the same problem
     rows = deduplicate_problems(rows)
-    
+
     # Sort by creation time based on sort_order
     reverse_sort = sort_order.lower() == "newest"
-    rows.sort(key=lambda x: x["create_time"], reverse=reverse_sort)
-    
+    rows.sort(key=lambda x: (x["create_time"]), reverse=reverse_sort)
+    rows.sort(key=lambda x: (x["companies"]), reverse=True)
+
     # Generate markdown content
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     sort_desc = "newest first" if sort_order.lower() == "newest" else "oldest first"
-    
+
     md_lines = [
         "# Problems List",
         "",
         f"**Generated on:** {current_time}",
         f"**Sort order:** {sort_desc}",
     ]
-    
+
     if incremental and since_timestamp > 0:
-        md_lines.append(f"**Incremental update since:** {datetime.fromtimestamp(since_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
+        md_lines.append(
+            f"**Incremental update since:** {datetime.fromtimestamp(since_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
     else:
         md_lines.append("**Mode:** Full scan")
-    
+
     md_lines.extend([
         "",
-        "| # | Question Title | Question Link | File Name | Difficulty | Company Tags |",
-        "|---|----------------|---------------|-----------|------------|--------------|",
+        "| # | Company Tags   | Question Title | File Name | Difficulty|",
+        "|---|----------------|---------------|------------|--------------|",
     ])
-    
+
     # Generate table rows
     for idx, r in enumerate(rows, 1):
         # Escape pipe characters for markdown
         title_esc = r["title"].replace("|", "\\|").strip()
-        
-        # Handle question link formatting
-        question_link = r['link']
+
+        # Embed question link into the title column to save space.
+        # If link isn't available, keep the title as plain text.
+        question_link = r["link"]
         if question_link and question_link != "(no link)":
-            link_esc = f"[Link]({question_link})".replace("|", "\\|")
+            title_link_esc = f"[{title_esc}]({question_link})".replace("|", "\\|")
         else:
-            link_esc = "-"
-        
+            title_link_esc = title_esc
+
         # File name with GitHub link (handle combined files)
         if r['github_link']:
             # Single file
-            file_link = f"[{r['file_name']}]({r['github_link']})".replace("|", "\\|")
+            file_link = f"[{r['file_name']}]({r['github_link']})".replace(
+                "|", "\\|")
         else:
             # Combined files (already formatted)
             file_link = r['file_name'].replace("|", "\\|")
-        
+
         # Difficulty
         diff = r.get("difficulty", "").title() if r.get("difficulty") else "-"
-        
+
         # Company tags - show "-" if no company tags
         if r["companies"]:
             tags_esc = ", ".join(r["companies"]).replace("|", "\\|")
         else:
             tags_esc = "-"
-        
-        md_lines.append(f"| {idx} | {title_esc} | {link_esc} | {file_link} | {diff} | {tags_esc} |")
-    
+
+        md_lines.append(
+            f"| {idx} | {tags_esc} | {title_link_esc} | {file_link} | {diff} |")
+
     md_lines.append("")
     md_content = "\n".join(md_lines)
     output_md.write_text(md_content, encoding="utf-8")
-    
-    print(f"Generated ProblemsList.md with {len(rows)} entries (sorted by creation date, {sort_desc})")
+
+    print(
+        f"Generated ProblemsList.md with {len(rows)} entries (sorted by creation date, {sort_desc})")
     return str(output_md)
 
 
@@ -574,7 +562,8 @@ def show_config() -> None:
     """Display current configuration."""
     from unified_config import print_config_summary
     print("📋 Unified Problem Generator Configuration:")
-    print(f"   Output file: {REPO_ROOT / 'scripts' / 'generated' / 'ProblemsList.md'}")
+    print(
+        f"   Output file: {REPO_ROOT / 'scripts' / 'generated' / 'ProblemsList.md'}")
     print()
     print_config_summary()
 
@@ -582,25 +571,26 @@ def show_config() -> None:
 def run(incremental: bool = True, sort_order: str = "newest") -> str:
     """
     Main function to generate comprehensive problems list.
-    
+
     Args:
         incremental: Use timestamp-based incremental updates
         sort_order: "newest" or "oldest"
-    
+
     Returns:
         Generated file path
     """
     # Get last run timestamp
     last_timestamp = get_last_run_timestamp() if incremental else 0.0
-    
+
     if incremental and last_timestamp > 0:
-        print(f"Incremental update since: {datetime.fromtimestamp(last_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
+        print(
+            f"Incremental update since: {datetime.fromtimestamp(last_timestamp).strftime('%Y-%m-%d %H:%M:%S')}")
     else:
         print("Full scan (no previous timestamp found or incremental disabled)")
-    
+
     # Collect files based on timestamp
     files = collect_files(REPO_ROOT, since_timestamp=last_timestamp)
-    
+
     if not files:
         if incremental and last_timestamp > 0:
             print("No files modified since last run. No update needed.")
@@ -608,28 +598,30 @@ def run(incremental: bool = True, sort_order: str = "newest") -> str:
         else:
             print("No files found matching criteria.")
             return str(REPO_ROOT / "scripts" / "generated" / "ProblemsList.md")
-    
+
     # Generate the comprehensive problems list
-    result_path = generate_problems_list(files, sort_order, incremental, last_timestamp)
-    
+    result_path = generate_problems_list(
+        files, sort_order, incremental, last_timestamp)
+
     # Save timestamp after successful completion
     save_current_timestamp()
-    
+
     return result_path
 
 
 if __name__ == "__main__":
     import sys
-    
+
     # Check for config display request
     if "--show-config" in sys.argv:
         show_config()
         sys.exit(0)
-    
+
     # Parse command line arguments
-    incremental = "--force-full" not in sys.argv  # Use --force-full to disable incremental
+    # Use --force-full to disable incremental
+    incremental = "--force-full" not in sys.argv
     sort_order = "newest"  # default
-    
+
     # Parse sort order argument
     for i, arg in enumerate(sys.argv):
         if arg == "--sort-order" and i + 1 < len(sys.argv):
@@ -637,19 +629,20 @@ if __name__ == "__main__":
             if next_arg in ["newest", "oldest"]:
                 sort_order = next_arg
             else:
-                print(f"Invalid sort order: {sys.argv[i + 1]}. Use 'newest' or 'oldest'.")
+                print(
+                    f"Invalid sort order: {sys.argv[i + 1]}. Use 'newest' or 'oldest'.")
                 sys.exit(1)
             break
-    
+
     # Run the generator
     try:
         generated_file = run(incremental=incremental, sort_order=sort_order)
-        
+
         update_desc = "incremental" if incremental else "full scan"
         sort_desc = "newest first" if sort_order == "newest" else "oldest first"
         print(f"\n✅ COMPLETED: Update={update_desc}, Sort={sort_desc}")
         print(f"   Generated: {generated_file}")
-            
+
     except Exception as e:
         print(f"❌ ERROR: {e}")
         sys.exit(1)

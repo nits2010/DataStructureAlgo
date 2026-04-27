@@ -1,0 +1,5 @@
+# Reddit Interview Questions
+
+| # | Company Tags | Question Title | File Name | Difficulty |
+|---|---|---|---|---|
+| 1 | Amazon, Apple, Bloomberg, Facebook, Google, LinkedIn, Microsoft, Nutanix, Reddit, Snapchat, Uber, WalmartLabs | [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/description/) | [CombinationSumII_40.py](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/LeetCode2025/ProblemSet/backtrackings/combinationalSum/_40/CombinationSumII_40.py) | Medium |

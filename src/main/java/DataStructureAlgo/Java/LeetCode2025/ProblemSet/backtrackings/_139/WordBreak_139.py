@@ -90,25 +90,194 @@ Company Tags
 """
 
 from collections import deque
-from typing import List, Optional, Dict, Any
+from typing import collections, List, Optional, Dict, Any
 
 from helpers.common_methods import CommonMethods
 
 
-class Solution_memo:
+class Trie: 
+    """
+    Build the trie of dict to avoid substring slicing completely 
+    Time: O(M*L) + O(n^2)
+    Space: O(M*L + n)
+    """
+    
+    class TrieNode:
+        def __init__(self):
+            self.children = {} # char -> TriNode
+            self.is_word = False
+    
+    
+    #O(M*L) M -> length of Dict, L->Maximum length of a word
+    def build_trie(self, wordDict: List[str]) -> TrieNode:
+        root: Trie.TrieNode = Trie.TrieNode()
+        
+        crawl = root
+        for word in wordDict:
+            crawl = root
+            
+            for char in word:
+                if char not in crawl.children:
+                    crawl.children[char] = Trie.TrieNode()
+                
+                crawl = crawl.children[char]
+            
+            crawl.is_word = True
+            
+        
+        return root
+            
+    
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        if not s :
+            return True
+
+        if not wordDict:
+            return False
+
+        
+        root: Trie.TrieNode = self.build_trie(wordDict)
+        
+        dp = [False] * (len(s) + 1)
+        dp[0] = True
+        
+        for i in range(len(s)+1): #O(n)
+            # If we haven't reached this index with previous words,
+            # we can't start a new word here.
+            if not dp[i]: # substring from [0..i] should be present already in wordDict
+                continue
+                
+            # check for [i...n-1] substring is present or not
+            crawl: Trie.TrieNode = root
+            for j in range(i,len(s)): # O(n)
+                
+                if s[j] not in crawl.children:
+                    break # no substring possible 
+                
+                crawl = crawl.children[s[j]]
+                
+                if crawl.is_word:
+                    dp[j+1] = True # substring [i..j] (including j) can be segmented. 
+        
+        return dp[len(s)]
+                
+            
+                
+        
+
+
+class Bottom_Up: 
+    
+    class Solution_WordLength:
+        """
+         Instead of blindly check all substring, limit the substring check with word length bound.
+         
+         Time:
+            Total state * work per state
+            
+            Total State: 
+                1. There will be total substring match  O(n) -> the outer loop
+            
+            Work per state:
+                1. We run the innner loop at max L times where L is max length of a word in Dict. 
+                2. For each check we slice the string which can be at max O(L) 
+            => O(L^2)
+        
+        => O(n*L^2)
+        
+        Space: 
+            O(n)
+            
+            
+        Best practice in interviews:
+            State the complexity as O(n * k²) and mention: "This is better than O(n²) when k < √n, which is typically true for natural language text."
+            Does this clarify the comparison? 
+         
+         
+        """
+
+        def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+            length = len(s)
+            word_dict = set(wordDict)
+            max_len = max(len(word) for word in wordDict)
+            min_len = min(len(word) for word in wordDict)
+            
+            dp = [False] * (length + 1)
+            dp[0] = True
+            
+            for i in range(1, length+1): # O(n)
+                
+                # choose a substring of [min_len, max_len] bound
+                for j in range(max(0, i-max_len), i - min_len + 1): # O(L)
+                    if dp[j] and s[j:i] in word_dict:  # O(L) due to slice
+                        dp[i] = True
+                        break
+                    
+            return dp[len(s)]
+        
+    class Solution_Substring:
+        """
+                Try each substring of given string and check does s[i:j] exists in dict or not.
+                If found, then try further string and do same.
+                If not found, then try next substring.
+
+                Complexity:
+                Time : O(n^3) where n is length of str
+                    a. O(n) for first iteration, assuming dict check is O(1) => O(n)
+                    b. O(n) for second iteration, assuming dict check is O(1) => O(n)
+                        c. for each we slice string O(n) and check in dict O(1) => O(n)
+
+                Space: O(n)
+            """
+        def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+
+            length = len(s)
+
+            # convert list to set for faster lookup
+            word_dict = set(wordDict)
+
+            # cache to check does till this character word can be broken or not
+            dp: List[bool] = [False] * (length + 1)
+            dp[0] = True
+
+            # try each index for possible break
+            for i in range(1, length + 1): # O(n)
+
+                for j in range(i):  # O(n)
+
+                    if dp[j] and s[j:i] in word_dict:  # O(n) due to slice
+                        dp[i] = True
+                        break
+
+            return dp[len(s)]
+
+
+class Solution_TopDown:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        """
+            Save the repeative work of bruteForce in memo. 
+        
+            Complexity: 
+                Dynamic programming Complexity = Total_state * work_per_state
+                M = len(dict)
+                L = len(longest_word_in_dict)
+                n = len(s)
+                
+                Total State:
+                    There will be 'n' total substring that will be stored in memo. As we check against such substring in memo and store it. 
+                
+                Work Per State:
+                    We can all the word in dict: O(M)
+                    For each state, we compare that current substring is start with choose dict word or not. O(L) ( substring match algorithm )
+                        then for each such case, we slice the substring to the length that can be at max O(n)
+                        Hence this takes O(n+L) cost
+                    
+                    So total work per state = O(M * (n+L))
+                
+                Time: O(n * (M*(n+L))) = O(n*M*n) = O(n^2*M)
+                Space: O(n)
 
         """
-            We will scan the dictorary as in real-life the dictorary would be very small as compare the different sentences could exists.
-
-            We will try recursively each word from the dict and see if our current character start with dict word, if so, we will check does the substring
-            of length word matches with current word from dict or not, if so, then we move ahead and solve for remaining substring.
-
-            Due to recursive natrure, to avoid solve same string again n again, we will cache it [DP]
-
-        """
-
-        length = len(s)
         memo = {}  # str vs True/False
 
         def dfs(subs: str) -> bool:
@@ -134,92 +303,31 @@ class Solution_memo:
 
         return dfs(s[::])
 
-
-class Solution_Optimized:
+class BruteForce : 
+    """
+    Idea: Try every possible way to split the string and check if all parts are in the dictionary.
+    Time: O(2^n) - for each position, we try to split or not split
+    Space: O(n) - recursion stack depth
+    """
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        def dfs(subs: str) -> bool:
+            if len(subs) == 0:
+                return True
 
-        """
-            Try each substring of given string and check does s[i:j] exists in dict or not.
-            If found, then try further string and do same.
-            If not found, then try next substring.
+            # scan all word from dict
+            for word in wordDict:
 
-            Complexity:
-            Time : O(n^2) where n is length of str
-                a. O(n) for first iteration, assuming dict check is O(1)
-                b. O(n) for second iteration, assuming dict check is O(1)
+                # if this word is starting point of
+                if subs.startswith(word):
 
-            Space: O(n)
-        """
-
-        length = len(s)
-
-        # convert list to set for faster lookup
-        wordDict = set(wordDict)
-
-        # cache to check does till this character word can be broken or not
-        cache: List[bool] = [False] * (length + 1)
-        cache[0] = True
-
-        # try each index for possible break
-        for i in range(1, length + 1):
-
-            for j in range(i):
-
-                if cache[j] and s[j:i] in wordDict:
-                    cache[i] = True
-                    break
-
-        return cache[len(s)]
-
-
-class Solution_Substring:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-
-        """
-            Try each substring of given string and check does s[i:j] exists in dict or not.
-            If found, then try further string and do same.
-            If not found, then try next substring.
-
-            Complexity:
-            Time : O(n^2) where n is length of str
-                a. O(n) for first iteration, assuming dict check is O(1)
-                b. O(n) for second iteration, assuming dict check is O(1)
-
-            Space: O(n)
-        """
-
-        length = len(s)
-
-        # convert list to set for faster lookup
-        wordDict = set(wordDict)
-
-        # cache to check does till this character word can be broken or not
-        cache: List[bool] = [False] * (length + 1)
-
-        # try each index for possible break
-        for i in range(length + 1):
-
-            if not cache[i] and s[0:i] in wordDict:
-                cache[i] = True
-
-            # did we able to break it ?
-            if cache[i]:
-
-                # is it last ?
-                if i == length:
-                    return True
-
-                # try further
-                for j in range(i + 1, length + 1):
-
-                    if not cache[j] and s[i:j] in wordDict:
-                        cache[j] = True
-
-                    if cache[j] and j == length:
+                    # lets modify the remaining string to solve further
+                    if dfs(subs[len(word):]):
                         return True
 
-        return False
+            return False
 
+        return dfs(s)
+    
 
 def test(input_data, wordDict,expected):
     """
@@ -227,22 +335,38 @@ def test(input_data, wordDict,expected):
     """
     CommonMethods.print_test(["Input", "WordDict", "Expected"], True, input_data,  wordDict, expected)
     pass_test, final_pass = True, True
-
-    output = Solution_Substring().wordBreak(input_data, wordDict)
+    
+    output = BruteForce().wordBreak(input_data, wordDict)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Solution_Substring", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["BruteForce", "Pass"],
+                             False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
-
-    output = Solution_Optimized().wordBreak(input_data, wordDict)
+    output = Solution_TopDown().wordBreak(input_data, wordDict)
     pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Solution_Optimized", "Pass"], False, output, "PASS" if pass_test else "FAIL")
+    CommonMethods.print_test(["Solution_TopDown", "Pass"],
+                             False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Bottom_Up.Solution_Substring().wordBreak(input_data, wordDict)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Bottom_Up.Solution_Substring", "Pass"],
+                             False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Bottom_Up.Solution_WordLength().wordBreak(input_data, wordDict)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Bottom_Up.Solution_WordLength", "Pass"],
+                             False, output, "PASS" if pass_test else "FAIL")
+    final_pass &= pass_test
+    
+    output = Trie().wordBreak(input_data, wordDict)
+    pass_test = CommonMethods.compare_result(output, expected, True)
+    CommonMethods.print_test(["Trie", "Pass"],
+                             False, output, "PASS" if pass_test else "FAIL")
     final_pass &= pass_test
 
-    output = Solution_memo().wordBreak(input_data, wordDict)
-    pass_test = CommonMethods.compare_result(output, expected, True)
-    CommonMethods.print_test(["Solution_memo", "Pass"], False, output, "PASS" if pass_test else "FAIL")
-    final_pass &= pass_test
+    
 
     return final_pass
 
