@@ -54,6 +54,20 @@ Tags
 <p><p>
 Company Tags
 -----
+@Amazon 
+@Apple 
+@Audible 
+@Bloomberg 
+@Dropbox 
+@Facebook 
+@Google 
+@Microsoft 
+@Oracle 
+@Pinterest 
+@Snapchat 
+@Twitter 
+@Uber 
+@Zillow
 <p>
 -----
 
@@ -73,7 +87,31 @@ class Solution:
         """
         We will follow what we did in WordBreak I.
         We will scan all the word from Dict and see if the current str is start with that word, if that is possible, then we will recurse for next substring
-        if the string becomes empty then we will add the resulant string in our result set otherwise we will try next dict word
+        if the string becomes empty then we will add the resulant string in our result set otherwise we will try next dict word.
+        
+        M = len(dict)
+        L = max(len(word for word in wordDict))
+        n = len(s)
+        R = valid sentences
+        
+        Numbe of unique substring: n
+            => dfs run O(n)
+        For each string
+            Outer loop : O(M)
+            starts with check: O(L)
+            Sentence formation: O(n*R), at max each character breaks in single word
+        
+        O(n*M * L * n*R) = O(n^2 * M * R * L)
+        
+        in Worst case: R = 2^n 
+       
+        In pathological cases:
+        s = "aaaaaaa..."
+        wordDict = ["a", "aa", "aaa", ...]
+        
+        
+        Time: O(n * 2^n)
+        Space: O(n * 2^n)
         """
 
         memo = {}  # holds key: string , value:List[str] ; value represent that how many ways we can divide the key using dict
