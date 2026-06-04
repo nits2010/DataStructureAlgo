@@ -179,3 +179,5 @@ def prims(n, adj):
 ### Common Interview "Twist":
 
 If the interviewer says, "What if some edges **must** be included in the MST?", the answer is simple: Start your algorithm by adding those edges first (Union them in Kruskal's or add them to the MST set in Prim's) and then proceed normally.
+
+- [Next Chapter: SCC](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/KeyConcepts/DS/Graph/6.%20SCC/Strongly%20Connected%20Components.md)
