@@ -103,4 +103,4 @@ In both DFS and BFS, the algorithm explores the graph systematically.
 | **Directed** | Back Edge (node in current stack) | DFS with Recursion Stack |
 | **Directed** | Inability to complete Topo-sort | Kahn's Algorithm (BFS) |
 
-Would you like me to show you how to implement the **Union-Find** version for undirected graphs? It's often more efficient for "on-the-fly" cycle detection!
+- [Next Chapter](https://github.com/nits2010/DataStructureAlgo/tree/preparation-2025/KeyConcepts/DS/Graph/7.%20Eulerian%20Path%20%26%20Cycle.md)
