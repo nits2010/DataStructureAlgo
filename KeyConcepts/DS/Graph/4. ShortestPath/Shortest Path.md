@@ -242,3 +242,6 @@ def bellman_ford(vertices, edges, start):
 2. **Weighted?** Dijkstra (Priority Queue).
 3. **Heuristic available?** A* (Priority Queue + Heuristic).
 4. **Negative Edges?** Bellman-Ford.
+
+
+- [Next chapter](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/KeyConcepts/DS/Graph/5.%20MST/Minimum%20Spanning%20Tree.md)
