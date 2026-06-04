@@ -190,8 +190,8 @@ class Bottom_Up:
             
             
         Best practice in interviews:
-            State the complexity as O(n * k²) and mention: "This is better than O(n²) when k < √n, which is typically true for natural language text."
-            Does this clarify the comparison? 
+            State the complexity as O(n * L²) and mention: "This is better than O(n²) when L < √n, which is typically true for natural language text."
+           
          
          
         """
