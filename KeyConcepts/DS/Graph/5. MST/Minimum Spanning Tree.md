@@ -40,7 +40,7 @@ Kruskal’s is an **edge-centric** approach. You sort *all* edges in the entire 
 * **Time Complexity:** ```O(E \log E)```
 
 ### Implementations: 
-- KruskalMinimumSpanningTree.java
+- [KruskalMinimumSpanningTree.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/minimum/spanning/tree/KruskalMinimumSpanningTree.java)
 
 
 **The Logic:**
