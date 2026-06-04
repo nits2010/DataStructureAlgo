@@ -17,7 +17,7 @@ The key to winning is choosing the right algorithm based on two factors: **Edge 
 
 ---
 For Java implementations; check here 
-- IShortestPath.java
+- [IShortestPath.java](https://github.com/nits2010/DataStructureAlgo/blob/preparation-2025/src/main/java/DataStructureAlgo/Java/nonleetcode/graph/questions/shortest/path/IShortestPath.java)
 
 ## 2. Unweighted: Breadth-First Search (BFS)
 
