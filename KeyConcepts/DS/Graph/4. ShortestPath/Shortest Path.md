@@ -176,9 +176,8 @@ def a_star(grid, start, goal):
 A heuristic is simply a "best guess" of the cost to get to the goal. For that guess to be accurate, the algorithm needs to know the **geometry** of your graph.
 
 * **On a Grid:** Your graph is geometric by nature. Each node has a position in space, so we can use mathematical distance formulas like:
-* **Manhattan Distance:** ```$h(n) = |x_{curr} - x_{goal}| + |y_{curr} - y_{goal}|``` (Used for 4-directional movement).
-* **Euclidean Distance:** ```h(n) = sqrt{(x_{curr} - x_{goal})^2 + (y_{curr} - y_{goal})^2}``` (Used for 8-directional or "as the crow flies" movement).
-
+    - **Manhattan Distance:** ```$h(n) = |x_{curr} - x_{goal}| + |y_{curr} - y_{goal}|``` (Used for 4-directional movement).
+    - **Euclidean Distance:** ```h(n) = sqrt{(x_{curr} - x_{goal})^2 + (y_{curr} - y_{goal})^2}``` (Used for 8-directional or "as the crow flies" movement).
 
 * **In an Abstract Graph:** If your nodes are just IDs (like `'A'`, `'B'`, `'NYC'`, `'London'`), they have no inherent geometric distance to a goal. **You cannot use Manhattan or Euclidean distance because the nodes don't exist in a 2D plane.**
 
