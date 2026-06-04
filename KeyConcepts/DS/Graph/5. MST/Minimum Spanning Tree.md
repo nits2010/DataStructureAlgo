@@ -85,7 +85,7 @@ def kruskals(n, edges):
     return mst_weight
 
 ```
-
+- In a graph context, it is mathematically impossible to have $n-1$ edges without cycles and not have collected all $n$ vertices.
 ---
 
 
